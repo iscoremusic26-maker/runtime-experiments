@@ -1,0 +1,27 @@
+{
+  "tag": "v2.0.3",
+  "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "matching_git_blobs": 19366,
+  "different_or_missing": [
+    "platforms/android/gradlew.bat"
+  ],
+  "gitlinks": [
+    {
+      "path": "extern/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be"
+    },
+    {
+      "path": "extern/borealis",
+      "commit": "4ac5e7052a8c49a122f8d57f626b5c75c5ca6968"
+    },
+    {
+      "path": "mods/cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc"
+    },
+    {
+      "path": "mods/randomizer",
+      "commit": "1f24e81303536db4b77f49d057a8ec1f11162000"
+    }
+  ],
+  "android_bat_eol_only_difference": true
+}
