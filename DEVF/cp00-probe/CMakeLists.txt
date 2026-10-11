@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.25)
 project(devf_cp00_probe LANGUAGES CXX)
+message(STATUS "CP00 compiler: ${CMAKE_CXX_COMPILER_ID} ${CMAKE_CXX_COMPILER_VERSION}")
+message(STATUS "CP00 Windows SDK: ${CMAKE_VS_WINDOWS_TARGET_PLATFORM_VERSION}")
 if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
   message(FATAL_ERROR "CP00 requires Windows x64 with MSVC or clang-cl and Windows SDK")
 endif()
