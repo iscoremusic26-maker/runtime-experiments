@@ -1,0 +1,109 @@
+# DEVF_CP01 — Implementación de ActorService y StageService
+
+**AUTORIZACIÓN:** Inicia y completa exclusivamente DEVF_CP01 conforme al handoff maestro `DEVF_HANDOFF_MAESTRO_2.0.3_REVISADO_2026-10-11`.
+
+## 1. Recuperación del estado
+
+CP00 ha concluido con GO técnico:
+
+- Checkpoint Windows: commit `747ecc4`, tag `DEVF_CP00_WINDOWS`.
+- Checkpoint original: commit `8a14628`, tag `DEVF_CP00`.
+- Compilación Windows verificada mediante GitHub Actions con MSVC 19.51.36260.0 y Windows SDK 10.0.26100.0.
+- Verificados DLL AMD64, exports, paquete `.dusk`, enlace y versiones requeridas de servicios.
+- Pruebas runtime dentro de Dusklight 2.0.3 DX12: NOT_TESTED.
+
+Recupera el checkpoint más reciente y sus informes del repositorio `Mods-Duskligh`. Conserva los checkpoints anteriores, el historial Git y el PR existente.
+
+No repitas CP00 ni reconstruyas investigaciones ya completadas. Reutiliza el workflow Windows que ya funciona.
+
+## 2. Objetivo de CP01
+
+Implementa una demostración funcional y aislada del ciclo de vida de actores personalizados mediante ActorService y StageService.
+
+La implementación debe basarse en `mods/custom_actor_demo/` del código fuente exacto de Dusklight 2.0.3, aprovechando sus servicios y patrones originales.
+
+Implementa y verifica, hasta donde permita el entorno:
+
+1. Registro de un perfil de actor personalizado con identificador único y sin colisiones.
+2. Creación e inicialización segura de la instancia.
+3. Gestión de recursos y colisión conforme a las APIs verificadas.
+4. Actualización del actor mediante su callback de ejecución.
+5. Dibujo mediante los mecanismos originales, sin alterar globalmente recursos de otros actores.
+6. Gestión correcta de sala, capa y cambios de escenario.
+7. Integración de StageService para registrar una aparición en una ubicación de prueba segura y verificada.
+8. Destrucción, liberación de recursos y limpieza al finalizar el ciclo de vida.
+9. Manejo de fallos tempranos, rollback y eliminación de registros al desactivar el mod cuando la API lo permita.
+
+Distingue claramente los spawns runtime de ActorService y los registros de aparición gestionados por StageService. Evita duplicaciones.
+
+Documenta expresamente si las modificaciones de StageService requieren recargar la sala para surtir efecto.
+
+## 3. Requisitos técnicos obligatorios
+
+- Compatibilidad exclusiva con Dusklight 2.0.3, Windows x64 y DX12.
+- Utilizar como autoridad el SDK y el código fuente exactos de 2.0.3.
+- Mantener el ejecutable original intacto.
+- No utilizar offsets, ABI ni adaptaciones de Dusklight 1.3.1 o 2.0.2.
+- Priorizar los servicios nativos antes de introducir hooks.
+- No reemplazar perfiles retail ni modificar enemigos existentes.
+- No copiar estructuras o vtables sin garantías verificadas.
+- No conservar referencias inválidas tras destruir un actor.
+- No introducir dependencias adicionales sin una necesidad demostrada.
+- Mantener el código modular y preparado para CP02, sin implementar anticipadamente su funcionalidad.
+
+Si no existe una ubicación segura y verificable para la prueba de StageService, documenta el bloqueo. No inventes identificadores de escenarios, salas ni coordenadas.
+
+## 4. Compilación y pruebas
+
+Utiliza GitHub Actions para compilar el mod nativo Windows x64 con MSVC y Windows SDK, reutilizando el entorno validado en CP00.
+
+Comprueba:
+
+- Compilación y enlace correctos.
+- Exportaciones y versiones de servicios.
+- Integridad y estructura del `.dusk`.
+- Registro y destrucción de actores mediante pruebas de laboratorio cuando sea técnicamente posible.
+- Gestión de errores, limpieza y rollback.
+- Ausencia de modificaciones al código fuente y ejecutable originales.
+
+Incluye pruebas específicas del ciclo de vida, no solamente el smoke test del SDK de CP00.
+
+Distingue rigurosamente PASS, FAIL y NOT_TESTED.
+
+No declares como verificadas la aparición visible, colisión, dibujo, cambios de sala ni limpieza dentro del juego si no existe evidencia real de ejecución.
+
+Si las pruebas lo permiten, genera un paquete `DEVF_CP01_TEST.dusk`, claramente identificado como experimental.
+
+No lo instales ni ejecutes automáticamente en el PC del usuario.
+
+## 5. Checkpoint y entregables
+
+Genera:
+
+- `DEVF_CP01_HANDOFF.md`
+- `CHANGES.md`
+- `TEST_RESULTS.md`
+- `GO_NO_GO.md`
+- `RESUME_INSTRUCTIONS.md`
+- Código fuente completo y proyecto de compilación.
+- Workflow Windows y resultados verificables.
+- Artefacto `.dusk` TEST, únicamente si supera las validaciones posibles.
+- SHA256 de los binarios generados.
+
+Crea un commit y tag `DEVF_CP01`, preservando los checkpoints anteriores.
+
+Publica los cambios en una rama separada y prepara o actualiza un Pull Request en borrador, sin merge automático.
+
+Facilita los enlaces a los logs de GitHub Actions, al checkpoint y al paquete TEST cuando corresponda.
+
+## 6. Condición de finalización
+
+Solo declara GO técnico para CP01 cuando la implementación y las pruebas de laboratorio correspondientes demuestren el cumplimiento de los criterios verificables.
+
+Si faltan pruebas dentro del juego, mantenlas expresamente como NOT_TESTED e incluye instrucciones seguras de instalación, prueba y reversión para Dusklight 2.0.3 DX12.
+
+Si aparece un bloqueo real, investiga su causa y corrígelo dentro del alcance de CP01. No marques como PASS una funcionalidad sin evidencia.
+
+**DETENTE AL FINALIZAR CP01. NO INICIES CP02.**
+
+Presenta un resumen preciso de lo implementado, lo verificado, lo pendiente de prueba dentro del juego y si corresponde GO o NO-GO para avanzar a CP02.

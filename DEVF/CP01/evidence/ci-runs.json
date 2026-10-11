@@ -1,0 +1,26 @@
+{
+  "repository": "iscoremusic26-maker/codex-cp00-inputs",
+  "pr": 2,
+  "preserved_cp00_pr": 1,
+  "runs": [
+    {
+      "id": 38185661092,
+      "job": 114607308000,
+      "result": "FAIL_PACKAGE_VERIFICATION",
+      "build": "PASS",
+      "lab_cases": 16,
+      "lab": "PASS",
+      "reason": "Windows checkout converted safety policy to CRLF; fixed CP01 attributes"
+    },
+    {
+      "id": 38185763365,
+      "job": 114607617580,
+      "commit": "8d1cb5889e59d6f2e89d3ee4e104d1caefb4936c",
+      "result": "PASS_BUILD_AND_SYNTHETIC_LAB",
+      "lab_cases": 16
+    }
+  ],
+  "gate": "NO_GO_TO_CP02",
+  "runtime": "NOT_TESTED",
+  "cp02": "NOT_STARTED"
+}
