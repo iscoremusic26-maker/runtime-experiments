@@ -1,0 +1,7 @@
+work/
+build*/
+*.dusk
+*.dll
+*.so
+*.lib
+__pycache__/

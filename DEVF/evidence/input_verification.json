@@ -1,0 +1,110 @@
+{
+  "input_commit": "72b61382d8518a9f727a974e18fae97ec44887fc",
+  "archives": [
+    {
+      "name": "dusklight-2.0.3.zip",
+      "bytes": 43245269,
+      "sha256": "9dbdc0b068df24c3fbb680c87be25e904978f04b315e2051e3c6203476516008",
+      "expected_sha256": "9dbdc0b068df24c3fbb680c87be25e904978f04b315e2051e3c6203476516008",
+      "entries": 19861,
+      "crc_check": "PASS (testzip previously executed in this task)",
+      "extracted_files_compared": 19367,
+      "extracted_mismatches": []
+    },
+    {
+      "name": "Dusklight-v2.0.3-win32-x86_64.zip",
+      "bytes": 56037777,
+      "sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf",
+      "expected_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf",
+      "entries": 63,
+      "crc_check": "PASS (testzip previously executed in this task)",
+      "members": [
+        {
+          "path": "dusklight.exe",
+          "bytes": 52309504,
+          "sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049"
+        },
+        {
+          "path": "sdk/windows-amd64.lib",
+          "bytes": 9400986,
+          "sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4"
+        }
+      ],
+      "pe_machine": "0x8664",
+      "pe_optional_magic": "0x20b",
+      "pe_file_version": "2.0.3.0",
+      "bundled_mods": [
+        {
+          "path": "mods/cosmetics.dusk",
+          "manifest": {
+            "id": "dev.twilitrealm.cosmetics",
+            "name": "Cosmetics",
+            "version": "1.0.0",
+            "author": "Twilit Realm",
+            "description": "Customize the colors of Link\u2019s outfits, equipment, companions, and more."
+          },
+          "native_members": [
+            "lib/",
+            "lib/windows-amd64/",
+            "lib/windows-amd64/mod.dll"
+          ]
+        },
+        {
+          "path": "mods/luau_runtime.dusk",
+          "manifest": {
+            "id": "dev.twilitrealm.luau",
+            "name": "Luau Support",
+            "version": "1.0.0",
+            "author": "Twilit Realm",
+            "description": "Luau script runtime for mods"
+          },
+          "native_members": [
+            "lib/",
+            "lib/windows-amd64/",
+            "lib/windows-amd64/mod.dll"
+          ]
+        },
+        {
+          "path": "mods/randomizer.dusk",
+          "manifest": {
+            "id": "dev.twilitrealm.randomizer",
+            "name": "Dusklight Randomizer",
+            "version": "1.0.6",
+            "author": "Twilit Realm",
+            "description": "Shuffles items and equipment all over the game, giving you countless new ways to enjoy Dusklight."
+          },
+          "native_members": [
+            "lib/",
+            "lib/windows-amd64/",
+            "lib/windows-amd64/mod.dll"
+          ]
+        }
+      ],
+      "pe_version_validation": "VS_FIXEDFILEINFO signature plus structure version 0x00010000; matching FileVersion/ProductVersion strings",
+      "export_import_comparison": {
+        "exe_named_exports": 30042,
+        "short_import_objects": 30042,
+        "import_machines": [
+          "0x8664"
+        ],
+        "import_dlls": [
+          "dusklight.exe"
+        ],
+        "missing_in_exe": [],
+        "limits": "Symbol presence only; no runtime service, ABI layout, hook or DX12 certification."
+      }
+    }
+  ],
+  "tools": {
+    "g++": "/usr/bin/g++",
+    "cl": null,
+    "clang-cl": null,
+    "lld-link": null,
+    "x86_64-w64-mingw32-g++": null,
+    "wine": null,
+    "cmake": null,
+    "ninja": null,
+    "cmake_configured_path": "/workspace/setup-support/tools/bin/cmake",
+    "ninja_configured_path": "/workspace/setup-support/tools/bin/ninja"
+  }
+}

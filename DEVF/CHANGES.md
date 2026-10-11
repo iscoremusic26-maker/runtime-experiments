@@ -1,0 +1,2 @@
+# Cambios CP00
+Solo archivos nuevos DEVF: documentación, evidencia, probe Win64 mínimo sin operaciones sobre actores y copia del handoff para continuidad. Repositorio inicialmente vacío. Originales ZIP, fuente extraída, distribución, prueba Linux previa, EXE/ROM/saves/otros mods preservados. Sin descargas, instalación, hooks, spawns, commits remotos ni CP01. Miembros EXE/.lib extraídos únicamente a /workspace/work/cp00 para lectura.
