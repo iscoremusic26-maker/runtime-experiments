@@ -1,5 +1,6 @@
-# Reanudar CP00
-1. Leer DEVF_CP00_HANDOFF.md, GO_NO_GO.md y evidence/input_verification.json; no rehacer investigación de 2.0.2 ni prueba Linux.
-2. Mantener ZIP fuente/Windows con hashes documentados y fuente extraída verificada. Usar sdk/windows-amd64.lib exacta.
-3. Ejecutar exclusivamente build Win64 del probe según BUILD_ENV.md en toolchain compatible; registrar package/imports/hash y resultados reales. No probar ni instalar en el PC sin encargo correspondiente.
-4. Actualizar la puerta con evidencia, checkpoint Git y handoff. CP01 requiere autorización posterior; no implementar framework, IA o editor durante CP00.
+# Reanudar tras CP00 Windows
+1. Recuperar rama checkpoint/devf-cp00-windows-20261011 o tag DEVF_CP00_WINDOWS del repo Mods-Duskligh. El tag DEVF_CP00 original sigue apuntando a 8a14628.
+2. Leer handoff, GO_NO_GO, TEST_RESULTS y evidence/windows-verification.json. CP00 tiene GO técnico; Windows juego/DX12 permanecen NOT_TESTED. CP01 no autorizado por este checkpoint.
+3. Para repetir build Windows, usar PR #1/rama cp00-ci/windows-msvc-20261011 en codex-cp00-inputs, workflow_dispatch o nueva actualización de PR. Mantener hashes ZIP, Aurora 3227d76..., MSVC/Windows SDK y target _package. No necesitar token entre repositorios. Confirmar que copia del probe coincide con su CP00_SOURCE.json.
+4. Artifact final: run 38184306482 / artifact 11718469244, retención 14 días (vence 2026-10-25). Hashes propios y log durable también en repo principal. No instalar como TEST ni ejecutar el juego sin encargo.
+5. Si se autoriza CP01, partir de custom_actor_demo según handoff y verificar loader/ciclo de vida seguro. No repetir smoke Linux, análisis 2.0.2 ni modificar originales.

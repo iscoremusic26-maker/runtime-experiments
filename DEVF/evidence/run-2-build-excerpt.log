@@ -1,0 +1,130 @@
+##[group]Run $work = "$env:RUNNER_TEMP/cp00"
+2026-10-11T23:22:00.5134170Z [36;1m$work = "$env:RUNNER_TEMP/cp00"[0m
+2026-10-11T23:22:00.5134630Z [36;1m$vswhere = "${env:ProgramFiles(x86)}/Microsoft Visual Studio/Installer/vswhere.exe"[0m
+2026-10-11T23:22:00.5135598Z [36;1m$vs = & $vswhere -latest -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -format json | ConvertFrom-Json[0m
+2026-10-11T23:22:00.5136314Z [36;1mif (-not $vs) { throw 'MSVC x64 toolchain unavailable' }[0m
+2026-10-11T23:22:00.5136711Z [36;1m$major = [int]($vs[0].installationVersion.Split('.')[0])[0m
+2026-10-11T23:22:00.5137154Z [36;1m$generators = @{17='Visual Studio 17 2022'; 18='Visual Studio 18 2026'}[0m
+2026-10-11T23:22:00.5137528Z [36;1m$generator = $generators[$major][0m
+2026-10-11T23:22:00.5137907Z [36;1mif (-not $generator) { throw "Unsupported Visual Studio major: $major" }[0m
+2026-10-11T23:22:00.5139229Z [36;1mcmake -S DEVF/cp00-probe -B "$work/build" -G $generator -A x64 "-DCMAKE_GENERATOR_INSTANCE=$($vs[0].installationPath)" "-DDUSK_DIR=$work/dusklight-2.0.3" "-DDUSK_GAME_EXE=$work/windows-amd64.lib" "-DDUSK_AURORA_DIR=$env:GITHUB_WORKSPACE/.cp00-deps/aurora" 2>&1 | Tee-Object "$work/evidence/configure.log"[0m
+2026-10-11T23:22:00.5140432Z [36;1mif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }[0m
+2026-10-11T23:22:00.5141126Z [36;1mcmake --build "$work/build" --config RelWithDebInfo --target devf_cp00_probe_package --parallel 2 --verbose 2>&1 | Tee-Object "$work/evidence/build.log"[0m
+2026-10-11T23:22:00.5141818Z [36;1mif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }[0m
+2026-10-11T23:22:00.5214843Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-11T23:22:00.5215204Z ##[endgroup]
+2026-10-11T23:22:12.7277277Z -- The CXX compiler identification is MSVC 19.51.36260.0
+2026-10-11T23:22:12.8427161Z -- Detecting CXX compiler ABI info
+2026-10-11T23:22:14.0259777Z -- Detecting CXX compiler ABI info - done
+2026-10-11T23:22:14.0869893Z -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+2026-10-11T23:22:14.0874723Z -- Detecting CXX compile features
+2026-10-11T23:22:14.0876455Z -- Detecting CXX compile features - done
+2026-10-11T23:22:14.1626256Z -- CP00 compiler: MSVC 19.51.36260.0
+2026-10-11T23:22:14.1627159Z -- CP00 Windows SDK: 10.0.26100.0
+2026-10-11T23:22:14.1810830Z -- Configuring done (12.2s)
+2026-10-11T23:22:14.2564474Z -- Generating done (0.1s)
+2026-10-11T23:22:14.2641932Z -- Build files have been written to: D:/a/_temp/cp00/build
+2026-10-11T23:22:14.3707659Z Change Dir: 'D:/a/_temp/cp00/build'
+2026-10-11T23:22:14.4129083Z 
+2026-10-11T23:22:14.4312558Z Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" devf_cp00_probe_package.vcxproj /p:Configuration=RelWithDebInfo /p:Platform=x64 /p:VisualStudioVersion=18.0 /m:2 /v:n
+2026-10-11T23:22:14.4839161Z MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+2026-10-11T23:22:14.5333648Z Build started 10/11/2026 11:22:14 PM.
+2026-10-11T23:22:14.5334390Z 
+2026-10-11T23:22:14.8008726Z      1>Project "D:\a\_temp\cp00\build\devf_cp00_probe_package.vcxproj" on node 1 (default targets).
+2026-10-11T23:22:14.8014798Z      1>Project "D:\a\_temp\cp00\build\devf_cp00_probe_package.vcxproj" (1) is building "D:\a\_temp\cp00\build\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
+2026-10-11T23:22:14.8147987Z      2>PrepareForBuild:
+2026-10-11T23:22:14.8345075Z          Creating directory "x64\RelWithDebInfo\ZERO_CHECK\".
+2026-10-11T23:22:14.8406289Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-11T23:22:14.8504053Z          Creating directory "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\".
+2026-10-11T23:22:14.8530897Z        InitializeBuildStatus:
+2026-10-11T23:22:14.8885484Z          Creating "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-11T23:22:14.8893877Z          Touching "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+2026-10-11T23:22:15.0421440Z        CustomBuild:
+2026-10-11T23:22:15.0676084Z          1>Checking Build System
+2026-10-11T23:22:15.2358071Z        FinalizeBuildStatus:
+2026-10-11T23:22:15.2529426Z          Deleting file "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+2026-10-11T23:22:15.2605338Z          Touching "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+2026-10-11T23:22:15.2656109Z      2>Done Building Project "D:\a\_temp\cp00\build\ZERO_CHECK.vcxproj" (default targets).
+2026-10-11T23:22:15.3994279Z      1>Project "D:\a\_temp\cp00\build\devf_cp00_probe_package.vcxproj" (1) is building "D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj" (3) on node 2 (default targets).
+2026-10-11T23:22:15.4057816Z      3>PrepareForBuild:
+2026-10-11T23:22:15.4069691Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-11T23:22:15.4077576Z          Creating directory "D:\a\_temp\cp00\build\RelWithDebInfo\".
+2026-10-11T23:22:15.4142252Z          Creating directory "devf_cp00_probe.dir\RelWithDebInfo\devf_cp00_probe.tlog\".
+2026-10-11T23:22:15.4249551Z        InitializeBuildStatus:
+2026-10-11T23:22:15.4491155Z          Creating "devf_cp00_probe.dir\RelWithDebInfo\devf_cp00_probe.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-11T23:22:15.4811608Z          Touching "devf_cp00_probe.dir\RelWithDebInfo\devf_cp00_probe.tlog\unsuccessfulbuild".
+2026-10-11T23:22:15.5203483Z        CustomBuild:
+2026-10-11T23:22:15.5204720Z          Building Custom Rule D:/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/cp00-probe/CMakeLists.txt
+2026-10-11T23:22:15.6126622Z        ComputeStdModulesCompileInputs:
+2026-10-11T23:22:15.6138334Z          Reading library manifest file 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\modules.json' which provides data for library 'microsoft/STL'.
+2026-10-11T23:22:15.6147809Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-11T23:22:15.6155106Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-11T23:22:15.6179343Z        MakeDirsForCl:
+2026-10-11T23:22:15.6183365Z          Creating directory "D:\a\_temp\cp00\build\devf_cp00_probe.dir\RelWithDebInfo\microsoft\STL".
+2026-10-11T23:22:15.6197336Z        SetModuleDependencies:
+2026-10-11T23:22:15.6200645Z          Creating directory "devf_cp00_probe.dir\RelWithDebInfo\devf_cp00_probe_MD.tlog\".
+2026-10-11T23:22:16.6084278Z        ClCompile:
+2026-10-11T23:22:16.6095015Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\CL.exe /c /I"D:\a\_temp\cp00\dusklight-2.0.3\sdk\include" /I"D:\a\_temp\cp00\dusklight-2.0.3\include" /I"D:\a\_temp\cp00\dusklight-2.0.3\assets\GZ2E01" /I"D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include" /I"D:\a\_temp\cp00\dusklight-2.0.3\extern\aurora\include\dolphin" /I"D:\a\_temp\cp00\dusklight-2.0.3\extern\aurora\include" /I"D:\a\codex-cp00-inputs\codex-cp00-inputs\.cp00-deps\aurora\include" /I"D:\a\codex-cp00-inputs\codex-cp00-inputs\.cp00-deps\aurora\include\dolphin" /Zi /nologo /W1 /WX- /diagnostics:column /O2 /Ob1 /D _WINDLL /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D DUSK_MOD_FEATURE_GAME=1 /D TARGET_PC=1 /D WIDESCREEN_SUPPORT=1 /D AVOID_UB=1 /D VERSION=0 /D MTX_USE_PS=1 /D PARTIAL_DEBUG=1 /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D devf_cp00_probe_EXPORTS /EHsc /MD /std:c++20 /Fo"devf_cp00_probe.dir\RelWithDebInfo\\" /Fd"devf_cp00_probe.dir\RelWithDebInfo\vc145.pdb" /external:W1 /TP /FIglobal.h /errorReport:queue  /bigobj /utf-8 "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\cp00-probe\src\mod.cpp" "D:\a\_temp\cp00\dusklight-2.0.3\sdk\src\game_feature.cpp"
+2026-10-11T23:22:16.6102187Z          mod.cpp
+2026-10-11T23:22:18.1777477Z      3>D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.1787266Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/cp00-probe/src/mod.cpp')
+2026-10-11T23:22:18.1793143Z          
+2026-10-11T23:22:18.1799864Z      3>D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.1808478Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/cp00-probe/src/mod.cpp')
+2026-10-11T23:22:18.1814189Z          
+2026-10-11T23:22:18.1826595Z      3>D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.1833119Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/cp00-probe/src/mod.cpp')
+2026-10-11T23:22:18.1836440Z          
+2026-10-11T23:22:18.1839695Z      3>D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.1843816Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/cp00-probe/src/mod.cpp')
+2026-10-11T23:22:18.1846231Z          
+2026-10-11T23:22:18.7431601Z      3>C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440: '=': cannot convert from 'int' to '_Ty' [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.7455403Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440:         with [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.7479897Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440:         [ [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.7529187Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440:             _Ty=std::_Iterator_base12 * [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.7587911Z C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440:         ] [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:18.7611741Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/cp00-probe/src/mod.cpp')
+2026-10-11T23:22:18.7635383Z              C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42):
+2026-10-11T23:22:18.7659575Z              Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+2026-10-11T23:22:18.7669329Z              C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42):
+2026-10-11T23:22:18.7673634Z              the template instantiation context (the oldest one first) is
+2026-10-11T23:22:18.7674699Z                  C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\xmemory(1399,29):
+2026-10-11T23:22:18.7677298Z                  see reference to function template instantiation '_Ty *std::exchange<std::_Iterator_base12*,int>(_Ty &,_Other &&) noexcept(false)' being compiled
+2026-10-11T23:22:18.7678658Z                  with
+2026-10-11T23:22:18.7679145Z                  [
+2026-10-11T23:22:18.7679668Z                      _Ty=std::_Iterator_base12 *,
+2026-10-11T23:22:18.7680261Z                      _Other=int
+2026-10-11T23:22:18.7680907Z                  ]
+2026-10-11T23:22:18.7681363Z          
+2026-10-11T23:22:18.7682292Z          game_feature.cpp
+2026-10-11T23:22:19.2141707Z          Generating Code...
+2026-10-11T23:22:19.3082479Z      3>Done Building Project "D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj" (default targets) -- FAILED.
+2026-10-11T23:22:19.3150864Z      1>Done Building Project "D:\a\_temp\cp00\build\devf_cp00_probe_package.vcxproj" (default targets) -- FAILED.
+2026-10-11T23:22:19.3209989Z 
+2026-10-11T23:22:19.3231046Z Build FAILED.
+2026-10-11T23:22:19.3257011Z 
+2026-10-11T23:22:19.3298320Z        "D:\a\_temp\cp00\build\devf_cp00_probe_package.vcxproj" (default target) (1) ->
+2026-10-11T23:22:19.3325130Z        "D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj" (default target) (3) ->
+2026-10-11T23:22:19.3367274Z        (ClCompile target) -> 
+2026-10-11T23:22:19.3393817Z          D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3432359Z          D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3435645Z          D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3439228Z          D:\a\_temp\cp00\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3441301Z 
+2026-10-11T23:22:19.3442830Z 
+2026-10-11T23:22:19.3444229Z        "D:\a\_temp\cp00\build\devf_cp00_probe_package.vcxproj" (default target) (1) ->
+2026-10-11T23:22:19.3445917Z        "D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj" (default target) (3) ->
+2026-10-11T23:22:19.3446587Z        (ClCompile target) -> 
+2026-10-11T23:22:19.3447915Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440: '=': cannot convert from 'int' to '_Ty' [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3450740Z        C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440:         with [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3452702Z        C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440:         [ [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3454738Z        C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440:             _Ty=std::_Iterator_base12 * [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3456940Z        C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831,42): error C2440:         ] [D:\a\_temp\cp00\build\devf_cp00_probe.vcxproj]
+2026-10-11T23:22:19.3458368Z 
+2026-10-11T23:22:19.3458496Z     4 Warning(s)
+2026-10-11T23:22:19.3458795Z     1 Error(s)
+2026-10-11T23:22:19.3458979Z 
+2026-10-11T23:22:19.3459117Z Time Elapsed 00:00:04.78
+2026-10-11T23:22:19.3459327Z 
+2026-10-11T23:22:19.3690726Z ##[error]Process completed with exit code 1.
+2026-10-11T23:22:19.3948873Z 

@@ -20,3 +20,6 @@ src/dusk/mods/svc/actor.cpp: create_actor llama a fopAcM_create, devuelve solici
 src/dusk/mods/svc/stage.cpp admite record_size 0x20/0x23 y registra copias por propietario; procesadas al cargar escenario, sin spawn inmediato garantizado. remove_actor_edit elimina registro, no demuestra eliminación de actor ya creado. Sin escritura de .dzs/.dzr originales.
 
 mods/custom_actor_demo registra wrock/mine y los añade por StageService en F_SP108; shutdown solo registra log y confía en detach. Patrón de referencia, no prueba de enemigo nativo ni rollback suficiente para DEVF. CP01 deberá verificar errores, ciclo de vida y limpieza antes de producir TEST.
+
+## Comprobación nativa Windows en CP00
+El run final verifica en la DLL los ModMetaImport requeridos: tamaño 80 bytes, kind=2, flags=0, y major/min_minor Actor 1.0, Stage 1.0, Resource 1.1, Host 2.2, Log 1.0, Game 2.0. Exports lifecycle/mod_meta y el import real dusklight.exe/fopAcM_SearchByID confirmados por dumpbin. No se ha ejecutado el loader ni comparado tablas runtime del host: registro del requerimiento en el binario no acredita resolución real del servicio.

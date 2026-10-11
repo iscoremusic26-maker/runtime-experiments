@@ -1,0 +1,34 @@
+{
+  "repository": "iscoremusic26-maker/codex-cp00-inputs",
+  "pr": 1,
+  "base_commit_unchanged": "72b61382d8518a9f727a974e18fae97ec44887fc",
+  "runs": [
+    {
+      "id": 38183814814,
+      "job": 114601779234,
+      "result": "FAIL",
+      "reason": "VS2022 absent on rolling windows-latest image"
+    },
+    {
+      "id": 38183965513,
+      "job": 114602226910,
+      "result": "FAIL",
+      "reason": "Aurora __cplusplus compatibility; fixed /Zc:__cplusplus"
+    },
+    {
+      "id": 38184111122,
+      "job": 114602663047,
+      "result": "PASS",
+      "reason": "MSVC build/native package/link verification"
+    },
+    {
+      "id": 38184306482,
+      "job": 114603251667,
+      "commit": "fd97763510b7db06cb0c773581bad108604128c1",
+      "result": "PASS",
+      "reason": "Final binary required-service versions and hashes included"
+    }
+  ],
+  "original_checkpoint": "8a146281e236e715b94c173b8cb9f309396bb75b",
+  "original_tag": "DEVF_CP00"
+}

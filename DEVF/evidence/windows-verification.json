@@ -1,0 +1,56 @@
+{
+  "compiler_id": "MSVC",
+  "compiler_version": "19.51.36260.0",
+  "configuration": "RelWithDebInfo",
+  "cp01": "NOT_STARTED",
+  "dll_sha256": "d282c24fdcebdd18964e64619d2aa0f5df063da7370795a85874a5845c3cbc85",
+  "dusk_sha256": "9a161865fe763c5f83d701ca5085c337ca7165eb7225712c0728c5718ccd92ea",
+  "dx12": "NOT_TESTED",
+  "native_link": "dusklight.exe / fopAcM_SearchByID",
+  "package_members": [
+    "mod.json",
+    "lib/windows-amd64/mod.dll"
+  ],
+  "platform": "Windows x64",
+  "runtime_game": "NOT_TESTED",
+  "service_records": {
+    "actor": {
+      "kind": "required_import",
+      "major": 1,
+      "minimum_minor": 0,
+      "record_size": 80
+    },
+    "game": {
+      "kind": "required_import",
+      "major": 2,
+      "minimum_minor": 0,
+      "record_size": 80
+    },
+    "host": {
+      "kind": "required_import",
+      "major": 2,
+      "minimum_minor": 2,
+      "record_size": 80
+    },
+    "log": {
+      "kind": "required_import",
+      "major": 1,
+      "minimum_minor": 0,
+      "record_size": 80
+    },
+    "resource": {
+      "kind": "required_import",
+      "major": 1,
+      "minimum_minor": 1,
+      "record_size": 80
+    },
+    "stage": {
+      "kind": "required_import",
+      "major": 1,
+      "minimum_minor": 0,
+      "record_size": 80
+    }
+  },
+  "status": "PASS",
+  "windows_sdk": "10.0.26100.0"
+}
