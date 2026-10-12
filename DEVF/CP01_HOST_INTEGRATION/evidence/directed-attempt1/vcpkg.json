@@ -1,0 +1,14 @@
+{
+  "phase": "vcpkg",
+  "command": [
+    "D:\\a\\codex-cp00-inputs\\codex-cp00-inputs/baseline-vcpkg/vcpkg.exe",
+    "install",
+    "freetype:x64-windows",
+    "zstd:x64-windows"
+  ],
+  "started_at_utc": "2026-10-12T14:55:39.324717+00:00",
+  "state": "PASS",
+  "finished_at_utc": "2026-10-12T14:58:34.147103+00:00",
+  "elapsed_seconds": 174.812,
+  "exit_code": 0
+}

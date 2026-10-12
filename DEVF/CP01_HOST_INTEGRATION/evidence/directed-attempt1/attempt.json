@@ -1,0 +1,13 @@
+{
+  "run_id": 38266308440,
+  "job_id": 114869241679,
+  "ci_commit": "d160e765a14c4b92ffb6d1f45130c7a1ed8d22f6",
+  "artifact_id": 11755157378,
+  "artifact_bytes": 12680,
+  "artifact_sha256": "92ccd2ead033728a0e0531cf882fefb2cc22abfb3f64868692b77a715fba2840",
+  "verification": "downloaded actual ZIP; SHA256/CRC/exact eight textual member allowlist PASS",
+  "cause": "directed driver copied /Yu from effective host compile command, but configure-only job had no cmake_pch.pch; C1083",
+  "classification": "TEST_DRIVER_CONFIGURATION_ERROR; no original/experimental host source change",
+  "test_execution": "NOT_TESTED",
+  "correction": "remove /Yu,/Yc,/Fp for directed driver only; retain /FI header and ABI/preprocessor flags; native retry only, no host rebuild"
+}
