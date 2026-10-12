@@ -1,0 +1,16 @@
+{
+  "phase": "build",
+  "command": [
+    "cmake",
+    "--build",
+    "--preset",
+    "x-windows-ci-msvc",
+    "--parallel",
+    "2"
+  ],
+  "started_at_utc": "2026-10-12T13:40:30.017394+00:00",
+  "state": "PASS",
+  "finished_at_utc": "2026-10-12T14:13:50.395196+00:00",
+  "elapsed_seconds": 2000.406,
+  "exit_code": 0
+}
