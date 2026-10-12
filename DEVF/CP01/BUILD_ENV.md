@@ -1,27 +1,26 @@
-# CP01 — build Windows reproducible
-Reutiliza el entorno validado CP00: fuente ZIP exacta 2.0.3, import library exacta y Aurora headers 3227d76c60e1e782ca576610bce61c9e7744d8be. No se repitió la build SDK Linux ni el probe CP00. Los ZIP se verifican en el nuevo runner por integridad, sin cambios a originales.
+# CP01 — build incremental de revisión de bloqueos
+Se reutiliza el pipeline Windows validado; sin build SDK Linux, sin probe CP00, sin recompilar motor ni cambiar ZIP/EXE. Los insumos exactos y Aurora gitlink permanecen fijados. MSVC 19.51.36260.0 / Windows SDK 10.0.26100.0, Visual Studio 2026, Windows Server 2025, RelWithDebInfo x64.
 
-MSVC 19.51.36260.0, Windows SDK 10.0.26100.0, Visual Studio 2026/generador 18, Windows Server 2025. Configuración RelWithDebInfo x64, C++20, /MD, /Zc:__cplusplus y flags game ABI oficiales. Actor lab sin FEATURES game para ejecutar pruebas aisladas de Controller/ResourceLifecycle; DLL real con FEATURES game y enlace al EXE. Sin dependencias adicionales ni rebuild de motor/Aurora/Borealis.
-
-Workflow: ci/cp01-windows.yml aquí; activo en .github/workflows/devf-cp01-windows.yml del repo privado codex-cp00-inputs, rama cp01-ci/windows-msvc-20261011, PR #2 en borrador contra rama CI de CP00. El PR #1 se conserva. Checkout head SHA exacto y LFS, contents:read, persist-credentials:false. No credencial entre repos privados: CI está junto a sus insumos. CI original y main no cambiaron.
+Código principal ejecutado en CI: 745b06dc264032e6b669dd1cad376238b5135d47, mirror CI 63f211d24c9d20c7af2b4b33c66740a1b5dea9ad. Provenance por hash en DEVF/CP01_SOURCE.json. Rama principal existente checkpoint/devf-cp01-20261011 y CI cp01-ci/windows-msvc-20261011; PR #2 existente sin merge. CP00 y CP01 original/tags/PR #1 preservados.
 
 ```powershell
-python DEVF/ci/verify_windows.py prepare --root . --work "$env:RUNNER_TEMP/cp01"
-# vswhere selecciona instalación MSVC x64 y generador VS17/2022 o VS18/2026 disponible.
+# Tras el mismo checkout LFS e integridad/preparación exacta del nuevo runner:
 cmake -S DEVF/CP01 -B "$env:RUNNER_TEMP/cp01/build" -G 'Visual Studio 18 2026' -A x64 "-DCMAKE_GENERATOR_INSTANCE=C:/Program Files/Microsoft Visual Studio/18/Enterprise" "-DDUSK_DIR=$env:RUNNER_TEMP/cp01/dusklight-2.0.3" "-DDUSK_GAME_EXE=$env:RUNNER_TEMP/cp01/windows-amd64.lib" "-DDUSK_AURORA_DIR=$env:GITHUB_WORKSPACE/.cp00-deps/aurora"
-cmake --build "$env:RUNNER_TEMP/cp01/build" --config RelWithDebInfo --target devf_cp01_package devf_cp01_lifecycle_lab --parallel 2 --verbose
+cmake --build "$env:RUNNER_TEMP/cp01/build" --config RelWithDebInfo --target devf_cp01_package devf_cp01_safety_lab --parallel 2 --verbose
 ctest --test-dir "$env:RUNNER_TEMP/cp01/build" -C RelWithDebInfo --output-on-failure --verbose
 python DEVF/CP01/ci/verify_cp01.py --root . --work "$env:RUNNER_TEMP/cp01"
 ```
 
-CI final head: 8d1cb5889e59d6f2e89d3ee4e104d1caefb4936c; código principal compilado: 9aeca7c (provenance y hashes en DEVF/CP01_SOURCE.json del repo CI). Los informes añadidos después no cambian ese código compilado.
+CMake genera un include temporal con cinco funciones de cleanup exactas del source verificado. El lab usa sustitutos explícitos de colas/slot, no un ABI de producción. Dos DLLs propias mínimas prueban FreeLibrary/PIN real en Windows sin cargar el EXE del juego. Esas fixtures no se instalan ni se usan como hooks o como PIN del mod.
 
-Run final: https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38185763365
-Artefacto: https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38185763365/artifacts/11719761096
-Retención: 14 días, vence 2026-10-25. Contenido permitido: logs, verificaciones, dumpbin de DLL propia, mod.dll y DEVF_CP01_BUILD_ONLY.dusk. No binarios originales, ZIP, EXE retail, .lib original, fuentes extraídas ni credenciales. En Git solo evidencia textual, fuente y hashes. No se afirma determinismo binario.
+El run anterior 38187694002 ejecutó CP01_affected_regression (--affected, nueve casos) y CP01_new_safety (14 casos). El run final 38189000074 ejecuta únicamente CP01_collision_ownership (--collision-only, seis casos) con DEVF_CP01_TEST_SCOPE=collision por defecto; no repite las suites anteriores. Para cambios futuros que sí las afecten existe la selección incremental explícita. El exe original mantiene opción sin selección para compatibilidad histórica, pero el pipeline de esta revisión no ejecuta sus 16 casos completos.
 
-SHA256 DLL: 68d76960e3b8d2d3491814fe3dcf934dfa53c90f0fbb4dd02ed7c488996a655a
-SHA256 BUILD_ONLY.dusk: be4d7be38e003b955a4301cc2294917ea2870277e8fcf83f9babef99e9b88dc1
-SHA256 EXE de laboratorio ejecutado: 6cf87290501e0e938a92410300a5208ea100d9901f9140c0e66b3322c66282dc
+Verificación de paquete: mod.json, DLL AMD64 y DISARMED_NO_REGISTRATION exacto. Servicios/versiones y imports de modelo/colisión del EXE verificados estáticamente, sin invocar el juego. Artefactos: logs, metadata/funciones-hash/dumpbin propio, mod.dll y DEVF_CP01_BUILD_ONLY.dusk. No include con cuerpo de fuente original ni binarios originales en artifact, ni credenciales. Los hashes/metadata y extractos de logs se conservan en Git.
 
-Runtime del juego y DX12 NOT_TESTED. No paquete TEST aprobado por los bloqueos de ubicación/unload; ver GO_NO_GO y RUNTIME_TEST_PLAN.
+Run final: https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38189000074
+Artifact: https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38189000074/artifacts/11720474171
+Retención 14 días (26 de octubre UTC; 25 de octubre local, America/Panama). Hash DLL: 6d688d58782b2792a4a16fa58688fb98a4d465f5bbe8bcf96fb85c982e975415
+Hash .dusk BUILD ONLY: 4c1978292620fa4ea8f4eb1e3758e29ae1d4477c222fd0bac31dbc08abcbcfde
+Hash EXE de seguridad: 1530815210aa924c0fad7be0c354c85d32c98e5cdbc330f86d427e7359554605
+
+Build y lógica seleccionada PASS; ubicación NOT_VERIFIED, juego/DX12 NOT_TESTED, TEST de actor no aprobado. Los informes históricos del checkpoint 092c1e6 siguen disponibles por tag.

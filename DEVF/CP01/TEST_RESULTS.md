@@ -1,26 +1,32 @@
-# CP01 — resultados verificables
-| Área | Resultado | Alcance |
+# CP01 — matriz incremental de seguridad
+Resultados originales 16 PASS/build Windows conservados en tag DEVF_CP01 (092c1e6) y evidence/windows-verification.json. Esta revisión no ejecuta la suite completa original.
+
+| Área | Estado actual | Evidencia/límite |
 |---|---|---|
-| Build MSVC/Windows SDK y enlace del actor real | PASS | DLL AMD64 con imports del EXE, modelo/colisión del juego |
-| Paquete .dusk / exports / versiones de servicios | PASS | manifiesto, DLL y safety-policy exacta; seis required imports con record_size=80 |
-| Laboratorio Windows compartido con implementación | PASS | 16 casos; Controller y ResourceLifecycle reales, tablas/actor/operaciones simulados |
-| Recursos pendientes/completos y errores parciales | PASS laboratorio | no heap prematuro, terminal error, colisión solo si propia, release ordenado/idempotente |
-| Registro, conflicto, Stage add y rollback | PASS laboratorio | handles y orden de llamadas; sin host real |
-| Fallos de retirada y reintento | PASS laboratorio | ownership conservado, no nuevo start con cleanup pendiente |
-| Orden modDeactivating antes de shutdown | PASS laboratorio + fuente | distingue perfil ya retirado y MOD_UNAVAILABLE; no valida DLL unload real |
-| Stage vs runtime y duplicados | PASS laboratorio | exclusión mutua, un request por activación, ID no retenido |
-| Callbacks create/execute/draw/delete | PASS simulados | no prueba de callbacks del Rock en el motor |
-| Constructor/solid heap/J3D/Bgsp reales | NOT_TESTED | compilados/enlazados, sin ejecución dentro de Dusklight |
-| Aparición Stage, sala/capa/escena, suelo, dibujo, colisión | NOT_TESTED | ninguna ubicación real segura acreditada |
-| Limpieza de actor activo o pendiente y unload | NOT_TESTED / BLOCKED | loader descarga aun con error; cobertura de pending queue no demostrada |
-| Host version gate, carga de servicios/política dentro del juego | NOT_TESTED | guardas implementadas, no host ejecutado |
-| Windows DX12 / coexistencia retail | NOT_TESTED | no se ejecutó el juego ni se modificaron actores retail |
-| CP02 | NOT_STARTED | fuera de alcance |
+| Binarios de escenario/suelo/modelo disponibles | BLOCKED | Inventario: cero .dzs/.dzr/.arc/.dzb/.bmd en los ZIP; assets son encabezados e imágenes |
+| Stage/room/layer/XYZ seguros | NOT_VERIFIED | Referencia demo no acredita suelo/eventos; guía LOCATION_EVIDENCE lista capturas y archivos exactos |
+| Funciones de cierre exactas del host | PASS auditoría/reproducción acotada | Cinco cuerpos sin modificar compilados con colas/slots/backends simulados; hashes en exact-host-functions.json |
+| Guardas de activación antes de registro | PASS laboratorio | Falta de cada requisito/default no produce llamadas de registro; cierre repetido sin ownership |
+| Propiedad de slot de colisión tras scene teardown/reutilización | PASS lógica propia, seis casos | No retira slot ajeno; referencia propia única exige índice/actor correctos; tabla sin referencia propia solo retira ID local; adaptador nativo compilado/enlazado, no ejecutado en motor |
+| Retirada de colisión fallida | PASS lógica propia | No libera archivo ni referencias; ready=false y estado closing; retry ordenado/idempotente |
+| Liberación de archivo fallida/pendiente | PASS lógica propia | No borra referencias ni reinicia load; solo release nativo phase.id==2; pending real no ejecutado |
+| Cancelación y callbacks de actor en cierre | PASS lógica propia | UNK3 terminal; no execute/draw hasta ready; no reactivación tras intento de destroy |
+| Callback opcional en request runtime | PASS laboratorio | Rechazado antes de create_actor; no puntero extra sin lifetime token |
+| Request antes del primer callback en unregister | PASS reproducción de limitación | Cuerpo exacto devuelve OK sin drenar una cola pendiente no inspeccionada; no prueba de crash real |
+| Force-delete ignora fallo de callback | PASS reproducción de limitación | actor_delete exacto devuelve 1 con forceDelete aunque deleteFunction retorna 0 |
+| Retirada con actor restante | PASS reproducción | MOD_UNAVAILABLE conserva slot; no barrera del loader por ese retorno |
+| FreeLibrary tras shutdown fallido | PASS Windows real, DLL fixture propia | La fixture se descarga; nunca se invoca un puntero después del unload |
+| PIN de imagen DLL | PASS Windows real, DLL fixture propia | Conserva imagen propia hasta salir; no preserva slot/contexto del host; no aplicado en producción |
+| MSVC, SDK, PE, imports/exports, paquete/servicios | PASS | Run final 38189000074, metadata y hashes nuevos |
+| Aparición, recursos/mount, J3D, colisión, room/layer y cleanup real | NOT_TESTED | No se ejecutó Dusklight ni se conectó perfil/actor |
+| DX12 y progreso/save | NOT_TESTED | Ninguna prueba de juego ni modificación de partida |
+| TEST de actor | NOT_APPROVED | Bloqueos de ubicación y host persisten |
+| CP02 | NOT_STARTED | Fuera de alcance |
 
-Run 1, 38185661092: build y 16 casos PASS; verificación de paquete FAIL por CRLF introducido en safety-policy.txt por checkout Windows. Corrección únicamente en .gitattributes nuevo de CP01 para mantener LF y preservar comparación exacta en runtime.
+Run 38187449685: PASS de la primera revisión incremental (11 casos nuevos + 9 regresiones). La auditoría posterior descubrió el contrato específico de dComIfG_resDelete en fase pendiente; se corrigió y añadieron tres casos de archivo/cierre.
 
-Run final 38185763365: build, laboratorio y verificación final PASS. MSVC 19.51.36260.0 / Windows SDK 10.0.26100.0 / Visual Studio 2026 / Windows Server 2025 / RelWithDebInfo x64. Actor: 14 advertencias y 0 errores; laboratorio: 0 advertencias y 0 errores. C4805/C4806 y pragmas C4068 de headers SDK; C4291 del placement new fopAcM_ct conservado del patrón oficial (no matching delete si constructor lanza). No se ocultan; no se acredita recuperación de una excepción real del constructor.
+Run de recursos/cierre 38187694002: 14 casos nuevos + 9 regresiones afectadas PASS. Regresiones seleccionadas: seis casos de recursos y tres de runtime que usan el lifecycle modificado. No se ejecutaron los siete casos originales de Stage/registro/rollback/orden de pre-hook no afectados. La ejecución del grupo de seguridad final verifica el programa incrementado y sus fixtures de cierre; no se declara ejecución del motor.
 
-16 casos individuales y códigos de salida conservados en evidence/run-2-build-and-lab.log. No se usó assert desactivable por NDEBUG. Hashes en evidence/windows-verification.json y BUILD_ENV.md. Las fixtures LABONLY, callbacks y constantes de fase del laboratorio son simulación explícita, nunca registros de producción ni prueba del juego.
+Compilador MSVC 19.51.36260.0 / Windows SDK 10.0.26100.0, x64 RelWithDebInfo. Warnings originales de headers/placement new se conservan en logs, no se ocultan ni se convierten en prueba de recuperación de excepción de constructor. Ver safety-review-build-and-tests.log; los hashes binarios finales están en collision-review-verification.json.
 
-No hay DEVF_CP01_TEST.dusk aprobado. Solo DEVF_CP01_BUILD_ONLY.dusk con NO_AUTOMATIC_SPAWNS; no instalarlo como TEST. NO-GO a CP02 según GO_NO_GO.md.
+Run final 38189000074: seis casos nuevos de propiedad de colisión PASS, sin repetir las suites 14/9/16. Ver collision-review-build-and-tests.log y collision-review-verification.json. El laboratorio usa una tabla simulada para demostrar la política; no certifica la ejecución del adaptador cBgS en una sala real. Total de esta revisión: 20 casos nuevos distintos y nueve regresiones afectadas.

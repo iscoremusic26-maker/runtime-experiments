@@ -1,0 +1,32 @@
+{
+  "source": "dusklight-2.0.3/src/dusk/mods/svc/actor.cpp",
+  "source_sha256": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3",
+  "functions": [
+    {
+      "name": "actor_delete",
+      "line": 46,
+      "sha256": "cfc40f04dde39d256b33659d61a056f149df19b035bc83a98626ffd5e3dcf3c4"
+    },
+    {
+      "name": "request_delete_all_actors_of_name",
+      "line": 146,
+      "sha256": "738033a358710e31506b5516252da7ed120d02096d44aa359960360c096c9c70"
+    },
+    {
+      "name": "finish_delete_all_actors_of_name",
+      "line": 159,
+      "sha256": "b7ed93faad3a326eff251f61fd8bdafef9d2e5134f92b94c9ebccdff60e1dda5"
+    },
+    {
+      "name": "has_actor_of_name",
+      "line": 180,
+      "sha256": "09956c6e68dad53e35eab76f0a8866c3c1d1a1af9a27b1e938dbff7de86efad2"
+    },
+    {
+      "name": "unregister_actor",
+      "line": 193,
+      "sha256": "4af2b32144b96d10931f1d3c403484e1444cc2334557fea1613fc11290c56091"
+    }
+  ],
+  "execution": "exact function bodies with synthetic queues, slot and deletion backends; NOT the real engine"
+}

@@ -1,0 +1,67 @@
+{
+  "automatic_spawns": false,
+  "compiler_id": "MSVC",
+  "compiler_version": "19.51.36260.0",
+  "configuration": "RelWithDebInfo",
+  "cp02": "NOT_STARTED",
+  "dll_sha256": "6d688d58782b2792a4a16fa58688fb98a4d465f5bbe8bcf96fb85c982e975415",
+  "dusk_sha256": "4c1978292620fa4ea8f4eb1e3758e29ae1d4477c222fd0bac31dbc08abcbcfde",
+  "dx12": "NOT_TESTED",
+  "new_collision_ownership_cases": 6,
+  "package_members": [
+    "mod.json",
+    "lib/windows-amd64/mod.dll",
+    "res/safety-policy.txt"
+  ],
+  "previously_passed_suites_not_rerun": [
+    "original_16",
+    "affected_regression_9",
+    "safety_14"
+  ],
+  "profiles_registered": false,
+  "release_classification": "DISARMED_BUILD_ONLY_NOT_APPROVED_FOR_TEST",
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38189000074",
+  "runtime_game": "NOT_TESTED",
+  "safe_location": "NOT_VERIFIED",
+  "safety_lab_exe_sha256": "1530815210aa924c0fad7be0c354c85d32c98e5cdbc330f86d427e7359554605",
+  "service_records": {
+    "actor": {
+      "major": 1,
+      "minimum_minor": 0,
+      "record_size": 80,
+      "required": true
+    },
+    "game": {
+      "major": 2,
+      "minimum_minor": 0,
+      "record_size": 80,
+      "required": true
+    },
+    "host": {
+      "major": 2,
+      "minimum_minor": 2,
+      "record_size": 80,
+      "required": true
+    },
+    "log": {
+      "major": 1,
+      "minimum_minor": 0,
+      "record_size": 80,
+      "required": true
+    },
+    "resource": {
+      "major": 1,
+      "minimum_minor": 1,
+      "record_size": 80,
+      "required": true
+    },
+    "stage": {
+      "major": 1,
+      "minimum_minor": 0,
+      "record_size": 80,
+      "required": true
+    }
+  },
+  "status": "PASS_BUILD_AND_SYNTHETIC_LAB",
+  "windows_sdk": "10.0.26100.0"
+}

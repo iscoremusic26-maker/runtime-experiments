@@ -18,9 +18,40 @@
       "commit": "8d1cb5889e59d6f2e89d3ee4e104d1caefb4936c",
       "result": "PASS_BUILD_AND_SYNTHETIC_LAB",
       "lab_cases": 16
+    },
+    {
+      "id": 38187449685,
+      "job": 114612745908,
+      "commit": "4254f31d3d0e9920d566feb0a57ba3c7d7c8232f",
+      "result": "PASS_INCREMENTAL",
+      "new_safety_cases": 11,
+      "affected_regression_cases": 9
+    },
+    {
+      "id": 38187694002,
+      "job": 114613501543,
+      "commit": "577f056671173d3915594da42d151ee769fa2ee8",
+      "result": "PASS_INCREMENTAL_RESOURCE_CLOSE",
+      "new_safety_cases": 14,
+      "affected_regression_cases": 9,
+      "unaffected_original_cases_not_rerun": 7
+    },
+    {
+      "id": 38189000074,
+      "job": 114617462606,
+      "commit": "63f211d24c9d20c7af2b4b33c66740a1b5dea9ad",
+      "source_commit": "745b06dc264032e6b669dd1cad376238b5135d47",
+      "result": "PASS_INCREMENTAL_COLLISION_FINAL",
+      "new_collision_ownership_cases": 6,
+      "previously_passed_suites_not_rerun": [
+        "original_16",
+        "affected_regression_9",
+        "safety_14"
+      ]
     }
   ],
   "gate": "NO_GO_TO_CP02",
   "runtime": "NOT_TESTED",
-  "cp02": "NOT_STARTED"
+  "cp02": "NOT_STARTED",
+  "latest_policy": "DISARMED_NO_REGISTRATION"
 }

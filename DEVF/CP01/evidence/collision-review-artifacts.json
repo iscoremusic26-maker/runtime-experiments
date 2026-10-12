@@ -1,0 +1,23 @@
+{
+  "artifacts": [
+    {
+      "id": 11720474171,
+      "name": "DEVF_CP01_BUILD_ONLY_38189000074_1",
+      "size_in_bytes": 44343,
+      "url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/11720474171",
+      "archive_download_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/11720474171/zip",
+      "expired": false,
+      "created_at": "2026-10-12T00:43:12Z",
+      "expires_at": "2026-10-26T00:43:11Z",
+      "updated_at": "2026-10-12T00:43:12Z",
+      "digest": "sha256:c000e4e729c6358e873d9ac84f8053a22aa34c250d21ffc8bf1e1f555bc8226d",
+      "workflow_run": {
+        "id": 38189000074,
+        "repository_id": 1414830645,
+        "head_repository_id": 1414830645,
+        "head_branch": "cp01-ci/windows-msvc-20261011",
+        "head_sha": "63f211d24c9d20c7af2b4b33c66740a1b5dea9ad"
+      }
+    }
+  ]
+}

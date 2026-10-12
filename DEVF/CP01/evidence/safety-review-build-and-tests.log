@@ -1,0 +1,438 @@
+##[group]Run $work = "$env:RUNNER_TEMP/cp01"
+2026-10-12T00:22:22.3168428Z [36;1m$work = "$env:RUNNER_TEMP/cp01"[0m
+2026-10-12T00:22:22.3168886Z [36;1m$vswhere = "${env:ProgramFiles(x86)}/Microsoft Visual Studio/Installer/vswhere.exe"[0m
+2026-10-12T00:22:22.3169678Z [36;1m$vs = & $vswhere -latest -products '*' -requires Microsoft.VisualStudio.Component.VC.Tools.x86.x64 -format json | ConvertFrom-Json[0m
+2026-10-12T00:22:22.3170364Z [36;1mif (-not $vs) { throw 'MSVC x64 toolchain unavailable' }[0m
+2026-10-12T00:22:22.3170756Z [36;1m$major = [int]($vs[0].installationVersion.Split('.')[0])[0m
+2026-10-12T00:22:22.3171190Z [36;1m$generators = @{17='Visual Studio 17 2022'; 18='Visual Studio 18 2026'}[0m
+2026-10-12T00:22:22.3171556Z [36;1m$generator = $generators[$major][0m
+2026-10-12T00:22:22.3171927Z [36;1mif (-not $generator) { throw "Unsupported Visual Studio major: $major" }[0m
+2026-10-12T00:22:22.3173210Z [36;1mcmake -S DEVF/CP01 -B "$work/build" -G $generator -A x64 "-DCMAKE_GENERATOR_INSTANCE=$($vs[0].installationPath)" "-DDUSK_DIR=$work/dusklight-2.0.3" "-DDUSK_GAME_EXE=$work/windows-amd64.lib" "-DDUSK_AURORA_DIR=$env:GITHUB_WORKSPACE/.cp00-deps/aurora" 2>&1 | Tee-Object "$work/evidence/configure.log"[0m
+2026-10-12T00:22:22.3174408Z [36;1mif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }[0m
+2026-10-12T00:22:22.3175566Z [36;1mcmake --build "$work/build" --config RelWithDebInfo --target devf_cp01_package devf_cp01_lifecycle_lab devf_cp01_safety_lab --parallel 2 --verbose 2>&1 | Tee-Object "$work/evidence/build.log"[0m
+2026-10-12T00:22:22.3176577Z [36;1mif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }[0m
+2026-10-12T00:22:22.3247727Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-12T00:22:22.3248078Z ##[endgroup]
+2026-10-12T00:22:34.0362715Z -- The CXX compiler identification is MSVC 19.51.36260.0
+2026-10-12T00:22:34.1503060Z -- Detecting CXX compiler ABI info
+2026-10-12T00:22:35.3003127Z -- Detecting CXX compiler ABI info - done
+2026-10-12T00:22:35.3449955Z -- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+2026-10-12T00:22:35.3501589Z -- Detecting CXX compile features
+2026-10-12T00:22:35.3544139Z -- Detecting CXX compile features - done
+2026-10-12T00:22:35.3902186Z -- CP01 compiler: MSVC 19.51.36260.0
+2026-10-12T00:22:35.3910971Z -- CP01 Windows SDK: 10.0.26100.0
+2026-10-12T00:22:35.4742808Z Extracted five exact cleanup functions; engine queues/allocator are explicit laboratory substitutes
+2026-10-12T00:22:35.4804264Z -- Configuring done (11.7s)
+2026-10-12T00:22:35.5559847Z -- Generating done (0.1s)
+2026-10-12T00:22:35.5561391Z -- Build files have been written to: D:/a/_temp/cp01/build
+2026-10-12T00:22:35.6318890Z Change Dir: 'D:/a/_temp/cp01/build'
+2026-10-12T00:22:35.6319649Z 
+2026-10-12T00:22:35.6321375Z Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" devf_cp01_package.vcxproj /p:Configuration=RelWithDebInfo /p:Platform=x64 /p:VisualStudioVersion=18.0 /m:2 /v:n && 
+2026-10-12T00:22:35.7169896Z MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+2026-10-12T00:22:35.7657138Z Build started 10/12/2026 12:22:35 AM.
+2026-10-12T00:22:35.7657924Z 
+2026-10-12T00:22:36.0116025Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_package.vcxproj" on node 1 (default targets).
+2026-10-12T00:22:36.0258861Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_package.vcxproj" (1) is building "D:\a\_temp\cp01\build\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
+2026-10-12T00:22:36.0287778Z      2>PrepareForBuild:
+2026-10-12T00:22:36.0332091Z          Creating directory "x64\RelWithDebInfo\ZERO_CHECK\".
+2026-10-12T00:22:36.0418941Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:36.0548324Z          Creating directory "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\".
+2026-10-12T00:22:36.0645960Z        InitializeBuildStatus:
+2026-10-12T00:22:36.0699168Z          Creating "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:36.0727170Z          Touching "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+2026-10-12T00:22:36.0752976Z        PreBuildEvent:
+2026-10-12T00:22:36.0817718Z          Checking File Globs
+2026-10-12T00:22:36.0853689Z          setlocal
+2026-10-12T00:22:36.0881356Z          "C:\Program Files\CMake\bin\cmake.exe" -P D:/a/_temp/cp01/build/CMakeFiles/VerifyGlobs.cmake
+2026-10-12T00:22:36.1009587Z          if %errorlevel% neq 0 goto :cmEnd
+2026-10-12T00:22:36.1076433Z          :cmEnd
+2026-10-12T00:22:36.1197315Z          endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+2026-10-12T00:22:36.1230569Z          :cmErrorLevel
+2026-10-12T00:22:36.1259632Z          exit /b %1
+2026-10-12T00:22:36.1290232Z          :cmDone
+2026-10-12T00:22:36.1346488Z          if %errorlevel% neq 0 goto :VCEnd
+2026-10-12T00:22:36.1405884Z          :VCEnd
+2026-10-12T00:22:36.3384338Z        CustomBuild:
+2026-10-12T00:22:36.3718434Z          1>Checking Build System
+2026-10-12T00:22:36.6019612Z        FinalizeBuildStatus:
+2026-10-12T00:22:36.6024360Z          Deleting file "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+2026-10-12T00:22:36.6027692Z          Touching "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+2026-10-12T00:22:36.6030049Z      2>Done Building Project "D:\a\_temp\cp01\build\ZERO_CHECK.vcxproj" (default targets).
+2026-10-12T00:22:36.6501672Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_package.vcxproj" (1) is building "D:\a\_temp\cp01\build\devf_cp01.vcxproj" (3) on node 2 (default targets).
+2026-10-12T00:22:36.6532688Z      3>PrepareForBuild:
+2026-10-12T00:22:36.6562855Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:36.6593752Z          Creating directory "D:\a\_temp\cp01\build\RelWithDebInfo\".
+2026-10-12T00:22:36.6607404Z          Creating directory "devf_cp01.dir\RelWithDebInfo\devf_cp01.tlog\".
+2026-10-12T00:22:36.6649860Z        InitializeBuildStatus:
+2026-10-12T00:22:36.6674336Z          Creating "devf_cp01.dir\RelWithDebInfo\devf_cp01.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:36.6714263Z          Touching "devf_cp01.dir\RelWithDebInfo\devf_cp01.tlog\unsuccessfulbuild".
+2026-10-12T00:22:36.7731650Z        CustomBuild:
+2026-10-12T00:22:36.7732707Z          Building Custom Rule D:/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/CMakeLists.txt
+2026-10-12T00:22:36.8477789Z        ComputeStdModulesCompileInputs:
+2026-10-12T00:22:36.8479689Z          Reading library manifest file 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\modules.json' which provides data for library 'microsoft/STL'.
+2026-10-12T00:22:36.8482169Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:36.8484600Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:36.8521009Z        MakeDirsForCl:
+2026-10-12T00:22:36.8521976Z          Creating directory "D:\a\_temp\cp01\build\devf_cp01.dir\RelWithDebInfo\microsoft\STL".
+2026-10-12T00:22:36.8523033Z        SetModuleDependencies:
+2026-10-12T00:22:36.8523896Z          Creating directory "devf_cp01.dir\RelWithDebInfo\devf_cp01_MD.tlog\".
+2026-10-12T00:22:36.9281216Z        ClCompile:
+2026-10-12T00:22:36.9290582Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\CL.exe /c /I"D:\a\_temp\cp01\dusklight-2.0.3\sdk\include" /I"D:\a\_temp\cp01\dusklight-2.0.3\include" /I"D:\a\_temp\cp01\dusklight-2.0.3\assets\GZ2E01" /I"D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include" /I"D:\a\_temp\cp01\dusklight-2.0.3\extern\aurora\include\dolphin" /I"D:\a\_temp\cp01\dusklight-2.0.3\extern\aurora\include" /I"D:\a\codex-cp00-inputs\codex-cp00-inputs\.cp00-deps\aurora\include" /I"D:\a\codex-cp00-inputs\codex-cp00-inputs\.cp00-deps\aurora\include\dolphin" /Zi /nologo /W1 /WX- /diagnostics:column /O2 /Ob1 /D _WINDLL /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D DUSK_MOD_FEATURE_GAME=1 /D TARGET_PC=1 /D WIDESCREEN_SUPPORT=1 /D AVOID_UB=1 /D VERSION=0 /D MTX_USE_PS=1 /D PARTIAL_DEBUG=1 /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D devf_cp01_EXPORTS /EHsc /MD /std:c++20 /Fo"devf_cp01.dir\RelWithDebInfo\\" /Fd"devf_cp01.dir\RelWithDebInfo\vc145.pdb" /external:W1 /TP /FIglobal.h /errorReport:queue  /bigobj /utf-8 /Zc:__cplusplus "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src\mod.cpp" "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src\controller.cpp" "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src\rock.cpp" "D:\a\_temp\cp01\dusklight-2.0.3\sdk\src\game_feature.cpp"
+2026-10-12T00:22:36.9876479Z          mod.cpp
+2026-10-12T00:22:39.4048904Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:39.4061064Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/mod.cpp')
+2026-10-12T00:22:39.4067615Z          
+2026-10-12T00:22:39.4075281Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:39.4082232Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/mod.cpp')
+2026-10-12T00:22:39.4089826Z          
+2026-10-12T00:22:39.4102728Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:39.4107232Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/mod.cpp')
+2026-10-12T00:22:39.4109794Z          
+2026-10-12T00:22:39.4112937Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:39.4116955Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/mod.cpp')
+2026-10-12T00:22:39.4118881Z          
+2026-10-12T00:22:39.8133478Z          controller.cpp
+2026-10-12T00:22:40.1839124Z          rock.cpp
+2026-10-12T00:22:40.8286047Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:40.8355155Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:40.8433196Z          
+2026-10-12T00:22:40.8495900Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:40.8557065Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:40.8620180Z          
+2026-10-12T00:22:40.8677642Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:40.8717799Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:40.8803674Z          
+2026-10-12T00:22:40.8809454Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:40.8813209Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:40.8815110Z          
+2026-10-12T00:22:41.3561563Z      3>D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JUtility\JUTTexture.h(79,48): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:41.3569593Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:41.3571087Z          
+2026-10-12T00:22:41.4385271Z      3>D:\a\_temp\cp01\dusklight-2.0.3\include\SSystem\SComponent\c_cc_d.h(235,9): warning C4068: unknown pragma 'push' [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:41.4387615Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:41.4388711Z          
+2026-10-12T00:22:41.4389993Z      3>D:\a\_temp\cp01\dusklight-2.0.3\include\SSystem\SComponent\c_cc_d.h(261,9): warning C4068: unknown pragma 'pop' [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:41.4391834Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:41.4392902Z          
+2026-10-12T00:22:41.6142632Z      3>D:\a\_temp\cp01\dusklight-2.0.3\include\d\d_stage.h(408,9): warning C4068: unknown pragma 'push' [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:41.6154237Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:41.6161122Z          
+2026-10-12T00:22:41.6166261Z      3>D:\a\_temp\cp01\dusklight-2.0.3\include\d\d_stage.h(439,9): warning C4068: unknown pragma 'pop' [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:41.6169547Z          (compiling source file '../../../codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/src/rock.cpp')
+2026-10-12T00:22:41.6171405Z          
+2026-10-12T00:22:41.7160651Z      3>D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src\rock.cpp(45,5): warning C4291: 'void *operator new(size_t,JKRHeapToken,void *) noexcept': no matching operator delete found; memory will not be freed if initialization throws an exception [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:41.7189376Z              D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JKernel\JKRHeap.h(241,14):
+2026-10-12T00:22:41.7192035Z              see declaration of 'operator new'
+2026-10-12T00:22:41.7193404Z          
+2026-10-12T00:22:41.9148066Z          game_feature.cpp
+2026-10-12T00:22:42.2775422Z          Generating Code...
+2026-10-12T00:22:42.6779451Z        Link:
+2026-10-12T00:22:42.6786500Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\link.exe /OUT:"D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01.dll" /INCREMENTAL /ILK:"devf_cp01.dir\RelWithDebInfo\devf_cp01.ilk" /NOLOGO "D:\a\_temp\cp01\windows-amd64.lib" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01.lib" /MACHINE:X64  /machine:x64 /DLL devf_cp01.dir\RelWithDebInfo\mod.obj
+2026-10-12T00:22:42.6792209Z          devf_cp01.dir\RelWithDebInfo\controller.obj
+2026-10-12T00:22:42.6793283Z          devf_cp01.dir\RelWithDebInfo\rock.obj
+2026-10-12T00:22:42.6794138Z          devf_cp01.dir\RelWithDebInfo\game_feature.obj
+2026-10-12T00:22:42.8947861Z             Creating library D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01.lib and object D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01.exp
+2026-10-12T00:22:43.0367723Z          devf_cp01.vcxproj -> D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01.dll
+2026-10-12T00:22:43.0860451Z        FinalizeBuildStatus:
+2026-10-12T00:22:43.0861533Z          Deleting file "devf_cp01.dir\RelWithDebInfo\devf_cp01.tlog\unsuccessfulbuild".
+2026-10-12T00:22:43.0862784Z          Touching "devf_cp01.dir\RelWithDebInfo\devf_cp01.tlog\devf_cp01.lastbuildstate".
+2026-10-12T00:22:43.0887954Z      3>Done Building Project "D:\a\_temp\cp01\build\devf_cp01.vcxproj" (default targets).
+2026-10-12T00:22:43.0967261Z      1>PrepareForBuild:
+2026-10-12T00:22:43.0968275Z          Creating directory "x64\RelWithDebInfo\devf_cp01_package\".
+2026-10-12T00:22:43.0990739Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:43.0993460Z          Creating directory "x64\RelWithDebInfo\devf_cp01_package\devf_cp0.D3ED9ABC.tlog\".
+2026-10-12T00:22:43.1015931Z        InitializeBuildStatus:
+2026-10-12T00:22:43.1019243Z          Creating "x64\RelWithDebInfo\devf_cp01_package\devf_cp0.D3ED9ABC.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:43.1021692Z          Touching "x64\RelWithDebInfo\devf_cp01_package\devf_cp0.D3ED9ABC.tlog\unsuccessfulbuild".
+2026-10-12T00:22:43.1027206Z        ComputeCustomBuildOutput:
+2026-10-12T00:22:43.1029224Z          Creating directory "D:\a\_temp\cp01\build\mods\".
+2026-10-12T00:22:43.1043097Z        CustomBuild:
+2026-10-12T00:22:43.1045868Z          "The build of 'D:\a\_temp\cp01\build\CMakeFiles\8332d12ffdd29d4716b36a420ea09b6d\devf_cp01_package.rule' depends on 'D:\A\_TEMP\CP01\BUILD\MODS\DEVF_CP01.DUSK' which is produced by the build of 'D:\a\_temp\cp01\build\CMakeFiles\0389ff57b918d42bab97889973334c81\devf_cp01.dusk.rule'. The items cannot be built in parallel."
+2026-10-12T00:22:43.1327774Z          Packaging devf_cp01 -> D:/a/_temp/cp01/build/mods/devf_cp01.dusk
+2026-10-12T00:22:43.3588408Z          mod.json
+2026-10-12T00:22:43.3601266Z          lib
+2026-10-12T00:22:43.3601919Z          lib/windows-amd64
+2026-10-12T00:22:43.3603478Z          lib/windows-amd64/mod.dll
+2026-10-12T00:22:43.3604348Z          res
+2026-10-12T00:22:43.3604908Z          res/safety-policy.txt
+2026-10-12T00:22:43.3691392Z          Building Custom Rule D:/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/CMakeLists.txt
+2026-10-12T00:22:43.4252846Z        FinalizeBuildStatus:
+2026-10-12T00:22:43.4255189Z          Deleting file "x64\RelWithDebInfo\devf_cp01_package\devf_cp0.D3ED9ABC.tlog\unsuccessfulbuild".
+2026-10-12T00:22:43.4258302Z          Touching "x64\RelWithDebInfo\devf_cp01_package\devf_cp0.D3ED9ABC.tlog\devf_cp01_package.lastbuildstate".
+2026-10-12T00:22:43.4282398Z      1>Done Building Project "D:\a\_temp\cp01\build\devf_cp01_package.vcxproj" (default targets).
+2026-10-12T00:22:43.4749358Z 
+2026-10-12T00:22:43.4757183Z Build succeeded.
+2026-10-12T00:22:43.4758215Z 
+2026-10-12T00:22:43.4769338Z        "D:\a\_temp\cp01\build\devf_cp01_package.vcxproj" (default target) (1) ->
+2026-10-12T00:22:43.4816373Z        "D:\a\_temp\cp01\build\devf_cp01.vcxproj" (default target) (3) ->
+2026-10-12T00:22:43.4817331Z        (ClCompile target) -> 
+2026-10-12T00:22:43.4818927Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4822502Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4826819Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4832578Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4835169Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4837692Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(28,47): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4840495Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4843079Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JSupport\JSUIosBase.h(29,47): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4845744Z          D:\a\_temp\cp01\dusklight-2.0.3\libs\JSystem\include\JSystem\JUtility\JUTTexture.h(79,48): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4848092Z          D:\a\_temp\cp01\dusklight-2.0.3\include\SSystem\SComponent\c_cc_d.h(235,9): warning C4068: unknown pragma 'push' [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4850279Z          D:\a\_temp\cp01\dusklight-2.0.3\include\SSystem\SComponent\c_cc_d.h(261,9): warning C4068: unknown pragma 'pop' [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4853197Z          D:\a\_temp\cp01\dusklight-2.0.3\include\d\d_stage.h(408,9): warning C4068: unknown pragma 'push' [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4854975Z          D:\a\_temp\cp01\dusklight-2.0.3\include\d\d_stage.h(439,9): warning C4068: unknown pragma 'pop' [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4857504Z          D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src\rock.cpp(45,5): warning C4291: 'void *operator new(size_t,JKRHeapToken,void *) noexcept': no matching operator delete found; memory will not be freed if initialization throws an exception [D:\a\_temp\cp01\build\devf_cp01.vcxproj]
+2026-10-12T00:22:43.4859736Z 
+2026-10-12T00:22:43.4860061Z     14 Warning(s)
+2026-10-12T00:22:43.4860570Z     0 Error(s)
+2026-10-12T00:22:43.4860957Z 
+2026-10-12T00:22:43.4861281Z Time Elapsed 00:00:07.70
+2026-10-12T00:22:43.4904815Z "C:/Program Files/Microsoft Visual Studio/18/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" devf_cp01_lifecycle_lab.vcxproj /p:Configuration=RelWithDebInfo /p:Platform=x64 /p:VisualStudioVersion=18.0 /m:2 /v:n && 
+2026-10-12T00:22:43.5848781Z MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+2026-10-12T00:22:43.6207650Z Build started 10/12/2026 12:22:43 AM.
+2026-10-12T00:22:43.6230872Z 
+2026-10-12T00:22:43.8182915Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_lifecycle_lab.vcxproj" on node 1 (default targets).
+2026-10-12T00:22:43.8185377Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_lifecycle_lab.vcxproj" (1) is building "D:\a\_temp\cp01\build\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
+2026-10-12T00:22:43.8186908Z      2>PrepareForBuild:
+2026-10-12T00:22:43.8188674Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:43.8220194Z        InitializeBuildStatus:
+2026-10-12T00:22:43.8224049Z          Creating "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:43.8227526Z          Touching "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+2026-10-12T00:22:43.8230853Z        PreBuildEvent:
+2026-10-12T00:22:43.8232404Z          Checking File Globs
+2026-10-12T00:22:43.8256310Z          setlocal
+2026-10-12T00:22:43.8257297Z          "C:\Program Files\CMake\bin\cmake.exe" -P D:/a/_temp/cp01/build/CMakeFiles/VerifyGlobs.cmake
+2026-10-12T00:22:43.8258361Z          if %errorlevel% neq 0 goto :cmEnd
+2026-10-12T00:22:43.8259006Z          :cmEnd
+2026-10-12T00:22:43.8259679Z          endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+2026-10-12T00:22:43.8260499Z          :cmErrorLevel
+2026-10-12T00:22:43.8261449Z          exit /b %1
+2026-10-12T00:22:43.8262025Z          :cmDone
+2026-10-12T00:22:43.8262593Z          if %errorlevel% neq 0 goto :VCEnd
+2026-10-12T00:22:43.8263515Z          :VCEnd
+2026-10-12T00:22:43.8936046Z        CustomBuild:
+2026-10-12T00:22:43.8936831Z          All outputs are up-to-date.
+2026-10-12T00:22:43.9296734Z        FinalizeBuildStatus:
+2026-10-12T00:22:43.9298958Z          Deleting file "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+2026-10-12T00:22:43.9301876Z          Touching "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+2026-10-12T00:22:43.9328451Z      2>Done Building Project "D:\a\_temp\cp01\build\ZERO_CHECK.vcxproj" (default targets).
+2026-10-12T00:22:43.9465344Z      1>PrepareForBuild:
+2026-10-12T00:22:43.9467286Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:43.9469679Z          Creating directory "devf_cp01_lifecycle_lab.dir\RelWithDebInfo\devf_cp0.B231B737.tlog\".
+2026-10-12T00:22:43.9491003Z        InitializeBuildStatus:
+2026-10-12T00:22:43.9492687Z          Creating "devf_cp01_lifecycle_lab.dir\RelWithDebInfo\devf_cp0.B231B737.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:43.9495166Z          Touching "devf_cp01_lifecycle_lab.dir\RelWithDebInfo\devf_cp0.B231B737.tlog\unsuccessfulbuild".
+2026-10-12T00:22:44.0178813Z        CustomBuild:
+2026-10-12T00:22:44.0180418Z          Building Custom Rule D:/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/CMakeLists.txt
+2026-10-12T00:22:44.0795034Z        ComputeStdModulesCompileInputs:
+2026-10-12T00:22:44.0796893Z          Reading library manifest file 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\modules.json' which provides data for library 'microsoft/STL'.
+2026-10-12T00:22:44.0799387Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:44.0801837Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:44.0828641Z        MakeDirsForCl:
+2026-10-12T00:22:44.0829679Z          Creating directory "D:\a\_temp\cp01\build\devf_cp01_lifecycle_lab.dir\RelWithDebInfo\microsoft\STL".
+2026-10-12T00:22:44.0830763Z        SetModuleDependencies:
+2026-10-12T00:22:44.0832127Z          Creating directory "devf_cp01_lifecycle_lab.dir\RelWithDebInfo\devf_cp0.B231B737_MD.tlog\".
+2026-10-12T00:22:44.1701381Z        ClCompile:
+2026-10-12T00:22:44.1706306Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\CL.exe /c /I"D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src" /I"D:\a\_temp\cp01\dusklight-2.0.3\sdk\include" /Zi /nologo /W1 /WX- /diagnostics:column /O2 /Ob1 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /EHsc /MD /std:c++20 /Fo"devf_cp01_lifecycle_lab.dir\RelWithDebInfo\\" /Fd"devf_cp01_lifecycle_lab.dir\RelWithDebInfo\vc145.pdb" /external:W1 /TP /errorReport:queue  /Zc:__cplusplus "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\tests\lifecycle_lab.cpp" "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src\controller.cpp"
+2026-10-12T00:22:44.2167995Z          lifecycle_lab.cpp
+2026-10-12T00:22:44.8887063Z          controller.cpp
+2026-10-12T00:22:45.2715898Z          Generating Code...
+2026-10-12T00:22:46.0969899Z        Link:
+2026-10-12T00:22:46.0974979Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\link.exe /OUT:"D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_lifecycle_lab.exe" /INCREMENTAL /ILK:"devf_cp01_lifecycle_lab.dir\RelWithDebInfo\devf_cp01_lifecycle_lab.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_lifecycle_lab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_lifecycle_lab.lib" /MACHINE:X64  /machine:x64 devf_cp01_lifecycle_lab.dir\RelWithDebInfo\lifecycle_lab.obj
+2026-10-12T00:22:46.0981115Z          devf_cp01_lifecycle_lab.dir\RelWithDebInfo\controller.obj
+2026-10-12T00:22:46.2992733Z          devf_cp01_lifecycle_lab.vcxproj -> D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_lifecycle_lab.exe
+2026-10-12T00:22:46.3081238Z        FinalizeBuildStatus:
+2026-10-12T00:22:46.3137945Z          Deleting file "devf_cp01_lifecycle_lab.dir\RelWithDebInfo\devf_cp0.B231B737.tlog\unsuccessfulbuild".
+2026-10-12T00:22:46.3148953Z          Touching "devf_cp01_lifecycle_lab.dir\RelWithDebInfo\devf_cp0.B231B737.tlog\devf_cp01_lifecycle_lab.lastbuildstate".
+2026-10-12T00:22:46.3151742Z      1>Done Building Project "D:\a\_temp\cp01\build\devf_cp01_lifecycle_lab.vcxproj" (default targets).
+2026-10-12T00:22:46.3183541Z 
+2026-10-12T00:22:46.3185186Z Build succeeded.
+2026-10-12T00:22:46.3238355Z     0 Warning(s)
+2026-10-12T00:22:46.3257930Z     0 Error(s)
+2026-10-12T00:22:46.3370848Z 
+2026-10-12T00:22:46.3548265Z Time Elapsed 00:00:02.69
+2026-10-12T00:22:46.3552425Z "C:/Program Files/Microsoft Visual Studio/18/Enterprise/MSBuild/Current/Bin/amd64/MSBuild.exe" devf_cp01_safety_lab.vcxproj /p:Configuration=RelWithDebInfo /p:Platform=x64 /p:VisualStudioVersion=18.0 /m:2 /v:n
+2026-10-12T00:22:46.4209313Z MSBuild version 18.10.1-1.26427.6+3cd27c13e for .NET Framework
+2026-10-12T00:22:46.4558065Z Build started 10/12/2026 12:22:46 AM.
+2026-10-12T00:22:46.4562198Z 
+2026-10-12T00:22:46.7058520Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_safety_lab.vcxproj" on node 1 (default targets).
+2026-10-12T00:22:46.7090739Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_safety_lab.vcxproj" (1) is building "D:\a\_temp\cp01\build\ZERO_CHECK.vcxproj" (2) on node 1 (default targets).
+2026-10-12T00:22:46.7147525Z      2>PrepareForBuild:
+2026-10-12T00:22:46.7413182Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:46.7444673Z        InitializeBuildStatus:
+2026-10-12T00:22:46.7484766Z          Creating "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:46.7487074Z          Touching "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+2026-10-12T00:22:46.7487814Z        PreBuildEvent:
+2026-10-12T00:22:46.7489366Z          Checking File Globs
+2026-10-12T00:22:46.7490691Z          setlocal
+2026-10-12T00:22:46.7492443Z          "C:\Program Files\CMake\bin\cmake.exe" -P D:/a/_temp/cp01/build/CMakeFiles/VerifyGlobs.cmake
+2026-10-12T00:22:46.7493636Z          if %errorlevel% neq 0 goto :cmEnd
+2026-10-12T00:22:46.7495410Z          :cmEnd
+2026-10-12T00:22:46.7496515Z          endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+2026-10-12T00:22:46.7498255Z          :cmErrorLevel
+2026-10-12T00:22:46.7501002Z          exit /b %1
+2026-10-12T00:22:46.7502904Z          :cmDone
+2026-10-12T00:22:46.7504702Z          if %errorlevel% neq 0 goto :VCEnd
+2026-10-12T00:22:46.7506261Z          :VCEnd
+2026-10-12T00:22:46.8070327Z        CustomBuild:
+2026-10-12T00:22:46.8071035Z          All outputs are up-to-date.
+2026-10-12T00:22:46.8410945Z        FinalizeBuildStatus:
+2026-10-12T00:22:46.8412562Z          Deleting file "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\unsuccessfulbuild".
+2026-10-12T00:22:46.8416308Z          Touching "x64\RelWithDebInfo\ZERO_CHECK\ZERO_CHECK.tlog\ZERO_CHECK.lastbuildstate".
+2026-10-12T00:22:46.8449437Z      2>Done Building Project "D:\a\_temp\cp01\build\ZERO_CHECK.vcxproj" (default targets).
+2026-10-12T00:22:46.9182637Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_safety_lab.vcxproj" (1) is building "D:\a\_temp\cp01\build\devf_cp01_pin_fixture.vcxproj" (3) on node 2 (default targets).
+2026-10-12T00:22:46.9184526Z      3>PrepareForBuild:
+2026-10-12T00:22:46.9185929Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:46.9187683Z          Creating directory "devf_cp01_pin_fixture.dir\RelWithDebInfo\devf_cp0.2C753616.tlog\".
+2026-10-12T00:22:46.9188675Z        InitializeBuildStatus:
+2026-10-12T00:22:46.9189870Z          Creating "devf_cp01_pin_fixture.dir\RelWithDebInfo\devf_cp0.2C753616.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:46.9191464Z          Touching "devf_cp01_pin_fixture.dir\RelWithDebInfo\devf_cp0.2C753616.tlog\unsuccessfulbuild".
+2026-10-12T00:22:46.9192436Z        CustomBuild:
+2026-10-12T00:22:46.9193334Z          Building Custom Rule D:/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/CMakeLists.txt
+2026-10-12T00:22:46.9667581Z      1>Project "D:\a\_temp\cp01\build\devf_cp01_safety_lab.vcxproj" (1) is building "D:\a\_temp\cp01\build\devf_cp01_unload_fixture.vcxproj" (4) on node 2 (default targets).
+2026-10-12T00:22:46.9670552Z      4>PrepareForBuild:
+2026-10-12T00:22:46.9672293Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:46.9673953Z          Creating directory "devf_cp01_unload_fixture.dir\RelWithDebInfo\devf_cp0.AC3C662C.tlog\".
+2026-10-12T00:22:46.9675338Z        InitializeBuildStatus:
+2026-10-12T00:22:46.9676539Z          Creating "devf_cp01_unload_fixture.dir\RelWithDebInfo\devf_cp0.AC3C662C.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:46.9678175Z          Touching "devf_cp01_unload_fixture.dir\RelWithDebInfo\devf_cp0.AC3C662C.tlog\unsuccessfulbuild".
+2026-10-12T00:22:46.9887174Z        CustomBuild:
+2026-10-12T00:22:47.7666924Z          Building Custom Rule D:/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/CMakeLists.txt
+2026-10-12T00:22:47.7667774Z        ComputeStdModulesCompileInputs:
+2026-10-12T00:22:47.7669566Z          Reading library manifest file 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\modules.json' which provides data for library 'microsoft/STL'.
+2026-10-12T00:22:47.7673416Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:47.7699218Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:47.7701709Z        MakeDirsForCl:
+2026-10-12T00:22:47.7703601Z          Creating directory "D:\a\_temp\cp01\build\devf_cp01_unload_fixture.dir\RelWithDebInfo\microsoft\STL".
+2026-10-12T00:22:47.7704719Z        SetModuleDependencies:
+2026-10-12T00:22:47.7705591Z          Creating directory "devf_cp01_unload_fixture.dir\RelWithDebInfo\devf_cp0.AC3C662C_MD.tlog\".
+2026-10-12T00:22:47.7706564Z        ClCompile:
+2026-10-12T00:22:47.7709942Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\CL.exe /c /I"D:\a\_temp\cp01\dusklight-2.0.3\sdk\include" /Zi /nologo /W1 /WX- /diagnostics:column /O2 /Ob1 /D _WINDLL /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D devf_cp01_unload_fixture_EXPORTS /EHsc /MD /std:c++20 /Fo"devf_cp01_unload_fixture.dir\RelWithDebInfo\\" /Fd"devf_cp01_unload_fixture.dir\RelWithDebInfo\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\tests\unload_fixture.cpp"
+2026-10-12T00:22:47.7714227Z      3>ComputeStdModulesCompileInputs:
+2026-10-12T00:22:47.7715762Z          Reading library manifest file 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\modules.json' which provides data for library 'microsoft/STL'.
+2026-10-12T00:22:47.7718198Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:47.7720484Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:47.7722489Z        MakeDirsForCl:
+2026-10-12T00:22:47.7723395Z          Creating directory "D:\a\_temp\cp01\build\devf_cp01_pin_fixture.dir\RelWithDebInfo\microsoft\STL".
+2026-10-12T00:22:47.7724417Z        SetModuleDependencies:
+2026-10-12T00:22:47.7725290Z          Creating directory "devf_cp01_pin_fixture.dir\RelWithDebInfo\devf_cp0.2C753616_MD.tlog\".
+2026-10-12T00:22:47.7734841Z        ClCompile:
+2026-10-12T00:22:47.7739130Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\CL.exe /c /I"D:\a\_temp\cp01\dusklight-2.0.3\sdk\include" /Zi /nologo /W1 /WX- /diagnostics:column /O2 /Ob1 /D _WINDLL /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /D devf_cp01_pin_fixture_EXPORTS /EHsc /MD /std:c++20 /Fo"devf_cp01_pin_fixture.dir\RelWithDebInfo\\" /Fd"devf_cp01_pin_fixture.dir\RelWithDebInfo\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\tests\unload_fixture.cpp"
+2026-10-12T00:22:47.7743286Z      4>ClCompile:
+2026-10-12T00:22:47.7754392Z          unload_fixture.cpp
+2026-10-12T00:22:47.7755650Z      3>ClCompile:
+2026-10-12T00:22:47.7756391Z          unload_fixture.cpp
+2026-10-12T00:22:47.7763847Z      4>Link:
+2026-10-12T00:22:47.7769334Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\link.exe /OUT:"D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_unload_fixture.dll" /INCREMENTAL /ILK:"devf_cp01_unload_fixture.dir\RelWithDebInfo\devf_cp01_unload_fixture.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_unload_fixture.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_unload_fixture.lib" /MACHINE:X64  /machine:x64 /DLL devf_cp01_unload_fixture.dir\RelWithDebInfo\unload_fixture.obj
+2026-10-12T00:22:47.7775001Z             Creating library D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_unload_fixture.lib and object D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_unload_fixture.exp
+2026-10-12T00:22:47.7777133Z          devf_cp01_unload_fixture.vcxproj -> D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_unload_fixture.dll
+2026-10-12T00:22:47.7779528Z      3>Link:
+2026-10-12T00:22:47.7785312Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\link.exe /OUT:"D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_pin_fixture.dll" /INCREMENTAL /ILK:"devf_cp01_pin_fixture.dir\RelWithDebInfo\devf_cp01_pin_fixture.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_pin_fixture.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_pin_fixture.lib" /MACHINE:X64  /machine:x64 /DLL devf_cp01_pin_fixture.dir\RelWithDebInfo\unload_fixture.obj
+2026-10-12T00:22:47.7791919Z             Creating library D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_pin_fixture.lib and object D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_pin_fixture.exp
+2026-10-12T00:22:47.7797251Z          devf_cp01_pin_fixture.vcxproj -> D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_pin_fixture.dll
+2026-10-12T00:22:47.7798254Z        FinalizeBuildStatus:
+2026-10-12T00:22:47.7799148Z          Deleting file "devf_cp01_pin_fixture.dir\RelWithDebInfo\devf_cp0.2C753616.tlog\unsuccessfulbuild".
+2026-10-12T00:22:47.7800607Z          Touching "devf_cp01_pin_fixture.dir\RelWithDebInfo\devf_cp0.2C753616.tlog\devf_cp01_pin_fixture.lastbuildstate".
+2026-10-12T00:22:47.7802522Z      3>Done Building Project "D:\a\_temp\cp01\build\devf_cp01_pin_fixture.vcxproj" (default targets).
+2026-10-12T00:22:47.7803579Z      4>FinalizeBuildStatus:
+2026-10-12T00:22:47.7805434Z          Deleting file "devf_cp01_unload_fixture.dir\RelWithDebInfo\devf_cp0.AC3C662C.tlog\unsuccessfulbuild".
+2026-10-12T00:22:47.7808087Z          Touching "devf_cp01_unload_fixture.dir\RelWithDebInfo\devf_cp0.AC3C662C.tlog\devf_cp01_unload_fixture.lastbuildstate".
+2026-10-12T00:22:47.7809553Z      4>Done Building Project "D:\a\_temp\cp01\build\devf_cp01_unload_fixture.vcxproj" (default targets).
+2026-10-12T00:22:47.7810544Z      1>PrepareForBuild:
+2026-10-12T00:22:47.7811838Z          Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
+2026-10-12T00:22:47.7813484Z          Creating directory "devf_cp01_safety_lab.dir\RelWithDebInfo\devf_cp0.B8E42156.tlog\".
+2026-10-12T00:22:47.7814364Z        InitializeBuildStatus:
+2026-10-12T00:22:47.7815465Z          Creating "devf_cp01_safety_lab.dir\RelWithDebInfo\devf_cp0.B8E42156.tlog\unsuccessfulbuild" because "AlwaysCreate" was specified.
+2026-10-12T00:22:47.7817348Z          Touching "devf_cp01_safety_lab.dir\RelWithDebInfo\devf_cp0.B8E42156.tlog\unsuccessfulbuild".
+2026-10-12T00:22:47.7818315Z        CustomBuild:
+2026-10-12T00:22:47.7819375Z          Building Custom Rule D:/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01/CMakeLists.txt
+2026-10-12T00:22:47.7821549Z        ComputeStdModulesCompileInputs:
+2026-10-12T00:22:47.7823058Z          Reading library manifest file 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\modules.json' which provides data for library 'microsoft/STL'.
+2026-10-12T00:22:47.7825974Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:47.7828460Z          Adding module source 'C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\modules\std.compat.ixx' from library 'microsoft/STL' to be built with this project.
+2026-10-12T00:22:47.7830235Z        MakeDirsForCl:
+2026-10-12T00:22:47.7831143Z          Creating directory "D:\a\_temp\cp01\build\devf_cp01_safety_lab.dir\RelWithDebInfo\microsoft\STL".
+2026-10-12T00:22:47.7832153Z        SetModuleDependencies:
+2026-10-12T00:22:47.7833269Z          Creating directory "devf_cp01_safety_lab.dir\RelWithDebInfo\devf_cp0.B8E42156_MD.tlog\".
+2026-10-12T00:22:47.7834269Z        ClCompile:
+2026-10-12T00:22:47.7838385Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\CL.exe /c /I"D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src" /ID:\a\_temp\cp01\build\audit /I"D:\a\_temp\cp01\dusklight-2.0.3\sdk\include" /Zi /nologo /W1 /WX- /diagnostics:column /O2 /Ob1 /D _MBCS /D WIN32 /D _WINDOWS /D NDEBUG /D "CMAKE_INTDIR=\"RelWithDebInfo\"" /EHsc /MD /std:c++20 /Fo"devf_cp01_safety_lab.dir\RelWithDebInfo\\" /Fd"devf_cp01_safety_lab.dir\RelWithDebInfo\vc145.pdb" /external:W1 /TP /errorReport:queue  /Zc:__cplusplus "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\tests\safety_lab.cpp" "D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01\src\controller.cpp"
+2026-10-12T00:22:47.8124165Z          safety_lab.cpp
+2026-10-12T00:22:51.4344766Z          controller.cpp
+2026-10-12T00:22:51.8191446Z          Generating Code...
+2026-10-12T00:22:52.8505225Z        Link:
+2026-10-12T00:22:52.8510067Z          C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\HostX64\x64\link.exe /OUT:"D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_safety_lab.exe" /INCREMENTAL /ILK:"devf_cp01_safety_lab.dir\RelWithDebInfo\devf_cp01_safety_lab.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_safety_lab.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_safety_lab.lib" /MACHINE:X64  /machine:x64 devf_cp01_safety_lab.dir\RelWithDebInfo\safety_lab.obj
+2026-10-12T00:22:52.9085620Z          devf_cp01_safety_lab.dir\RelWithDebInfo\controller.obj
+2026-10-12T00:22:53.0373401Z          devf_cp01_safety_lab.vcxproj -> D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_safety_lab.exe
+2026-10-12T00:22:53.0630207Z        FinalizeBuildStatus:
+2026-10-12T00:22:53.0631475Z          Deleting file "devf_cp01_safety_lab.dir\RelWithDebInfo\devf_cp0.B8E42156.tlog\unsuccessfulbuild".
+2026-10-12T00:22:53.0632961Z          Touching "devf_cp01_safety_lab.dir\RelWithDebInfo\devf_cp0.B8E42156.tlog\devf_cp01_safety_lab.lastbuildstate".
+2026-10-12T00:22:53.0634298Z      1>Done Building Project "D:\a\_temp\cp01\build\devf_cp01_safety_lab.vcxproj" (default targets).
+2026-10-12T00:22:53.0679038Z 
+2026-10-12T00:22:53.0679475Z Build succeeded.
+2026-10-12T00:22:53.0680426Z     0 Warning(s)
+2026-10-12T00:22:53.0681107Z     0 Error(s)
+2026-10-12T00:22:53.0681518Z 
+2026-10-12T00:22:53.0682245Z Time Elapsed 00:00:06.61
+2026-10-12T00:22:53.0817675Z 
+2026-10-12T00:22:53.1484553Z ##[group]Run $work = "$env:RUNNER_TEMP/cp01"
+2026-10-12T00:22:53.1485154Z [36;1m$work = "$env:RUNNER_TEMP/cp01"[0m
+2026-10-12T00:22:53.1486181Z [36;1mctest --test-dir "$work/build" -C RelWithDebInfo --output-on-failure --verbose 2>&1 | Tee-Object "$work/evidence/lifecycle-lab.log"[0m
+2026-10-12T00:22:53.1487131Z [36;1mif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }[0m
+2026-10-12T00:22:53.1557179Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-12T00:22:53.1557526Z ##[endgroup]
+2026-10-12T00:22:54.0375915Z UpdateCTestConfiguration  from :D:/a/_temp/cp01/build/DartConfiguration.tcl
+2026-10-12T00:22:54.1354656Z Test project D:/a/_temp/cp01/build
+2026-10-12T00:22:54.1396305Z Constructing a list of tests
+2026-10-12T00:22:54.1620334Z Done constructing a list of tests
+2026-10-12T00:22:54.1623284Z Updating test list for fixtures
+2026-10-12T00:22:54.1629656Z Added 0 tests to meet fixture requirements
+2026-10-12T00:22:54.1633918Z Checking test dependency graph...
+2026-10-12T00:22:54.1638151Z Checking test dependency graph end
+2026-10-12T00:22:54.1638949Z test 1
+2026-10-12T00:22:54.1697813Z     Start 1: CP01_affected_regression
+2026-10-12T00:22:54.1699182Z 
+2026-10-12T00:22:54.1700082Z 1: Test command: D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_lifecycle_lab.exe "--affected"
+2026-10-12T00:22:54.1701770Z 1: Working Directory: D:/a/_temp/cp01/build
+2026-10-12T00:22:54.1702512Z 1: Test timeout computed to be: 10000000
+2026-10-12T00:22:54.1900886Z 1: PASS resource_pending_ready_owned_cleanup
+2026-10-12T00:22:54.1901891Z 1: PASS resource_partial_failure_0
+2026-10-12T00:22:54.1904121Z 1: PASS resource_partial_failure_1
+2026-10-12T00:22:54.1904629Z 1: PASS resource_partial_failure_2
+2026-10-12T00:22:54.1906742Z 1: PASS resource_partial_failure_3
+2026-10-12T00:22:54.1908595Z 1: PASS cleanup_before_resource_request
+2026-10-12T00:22:54.1910709Z 1: PASS runtime_request_and_synthetic_callbacks
+2026-10-12T00:22:54.1912885Z 1: PASS invalid_runtime_params
+2026-10-12T00:22:54.1915392Z 1: PASS pending_fake_actor_destruction
+2026-10-12T00:22:54.1917867Z 1: CP01_LAB_PASS cases=9 platform=Windows synthetic_services=true real_game=NOT_TESTED
+2026-10-12T00:22:54.1953348Z 1/2 Test #1: CP01_affected_regression .........   Passed    0.02 sec
+2026-10-12T00:22:54.1976499Z test 2
+2026-10-12T00:22:54.1977407Z     Start 2: CP01_new_safety
+2026-10-12T00:22:54.1978103Z 
+2026-10-12T00:22:54.1979575Z 2: Test command: D:\a\_temp\cp01\build\RelWithDebInfo\devf_cp01_safety_lab.exe "D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_unload_fixture.dll" "D:/a/_temp/cp01/build/RelWithDebInfo/devf_cp01_pin_fixture.dll"
+2026-10-12T00:22:54.1981463Z 2: Working Directory: D:/a/_temp/cp01/build
+2026-10-12T00:22:54.1982277Z 2: Test timeout computed to be: 10000000
+2026-10-12T00:22:54.2095392Z 2: PASS guard_closed_missing_each_requirement_no_service_calls
+2026-10-12T00:22:54.2096340Z 2: PASS guard_default_and_repeat_shutdown_no_ownership
+2026-10-12T00:22:54.2115329Z 2: PASS collision_release_failure_retains_archive_and_refs
+2026-10-12T00:22:54.2116244Z 2: PASS collision_release_retry_and_idempotence
+2026-10-12T00:22:54.2116816Z 2: PASS cancelled_phase_terminal_no_more_creation
+2026-10-12T00:22:54.2117982Z 2: PASS archive_release_failure_keeps_references_and_retry_order
+2026-10-12T00:22:54.2118973Z 2: PASS pending_archive_cleanup_failure_never_restarts_load
+2026-10-12T00:22:54.2119639Z 2: PASS failed_collision_cleanup_never_reactivates_callbacks
+2026-10-12T00:22:54.2120640Z 2: PASS runtime_post_callback_rejected_before_request
+2026-10-12T00:22:54.2121318Z 2: PASS exact_upstream_unregister_does_not_drain_pre_callback_requests
+2026-10-12T00:22:54.2122428Z 2: PASS exact_upstream_forced_delete_masks_callback_failure
+2026-10-12T00:22:54.2123125Z 2: PASS exact_upstream_unavailable_keeps_slot_but_has_no_unload_veto
+2026-10-12T00:22:54.2124275Z 2: PASS real_windows_free_library_ignores_failed_shutdown
+2026-10-12T00:22:54.2129534Z 2: PASS real_windows_pin_keeps_code_only_not_host_slot
+2026-10-12T00:22:54.2131616Z 2: CP01_SAFETY_PASS cases=14 platform=Windows exact_upstream_functions=5 engine_runtime=NOT_TESTED
+2026-10-12T00:22:54.2132532Z 2/2 Test #2: CP01_new_safety ..................   Passed    0.01 sec
+2026-10-12T00:22:54.2132963Z 
+2026-10-12T00:22:54.2133124Z 100% tests passed out of 2
+2026-10-12T00:22:54.2133352Z 
+2026-10-12T00:22:54.2137241Z Total Test time (real) =   0.08 sec
+2026-10-12T00:22:54.3295499Z ##[group]Run python DEVF/CP01/ci/verify_cp01.py --root . --work "$env:RUNNER_TEMP/cp01"
+2026-10-12T00:22:54.3296604Z [36;1mpython DEVF/CP01/ci/verify_cp01.py --root . --work "$env:RUNNER_TEMP/cp01"[0m
+2026-10-12T00:22:54.3297405Z [36;1mif ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }[0m
+2026-10-12T00:22:54.3400527Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2026-10-12T00:22:54.3400883Z ##[endgroup]
+2026-10-12T00:22:54.8926960Z {"affected_regression_cases": 9, "automatic_spawns": false, "compiler_id": "MSVC", "compiler_version": "19.51.36260.0", "configuration": "RelWithDebInfo", "cp02": "NOT_STARTED", "dll_sha256": "05116a65a0d7a7bb80e7bbbb33756a338f0fe13a89f590a8b33b1bcb802e373a", "dusk_sha256": "194adec24ff66d5b3f49765e2335ee3ccb168bf6d90ff1f0ddc6967d48b5ddfc", "dx12": "NOT_TESTED", "lab_exe_sha256": "2701649b6f0abe9f4609e36a945f9250e49594e244f028b977685464987acf5d", "new_safety_cases": 14, "package_members": ["mod.json", "lib/windows-amd64/mod.dll", "res/safety-policy.txt"], "profiles_registered": false, "release_classification": "DISARMED_BUILD_ONLY_NOT_APPROVED_FOR_TEST", "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38187694002", "runtime_game": "NOT_TESTED", "safe_location": "NOT_VERIFIED", "service_records": {"actor": {"major": 1, "minimum_minor": 0, "record_size": 80, "required": true}, "game": {"major": 2, "minimum_minor": 0, "record_size": 80, "required": true}, "host": {"major": 2, "minimum_minor": 2, "record_size": 80, "required": true}, "log": {"major": 1, "minimum_minor": 0, "record_size": 80, "required": true}, "resource": {"major": 1, "minimum_minor": 1, "record_size": 80, "required": true}, "stage": {"major": 1, "minimum_minor": 0, "record_size": 80, "required": true}}, "status": "PASS_BUILD_AND_SYNTHETIC_LAB", "unaffected_original_cases_not_rerun": 7, "windows_sdk": "10.0.26100.0"}
+2026-10-12T00:22:55.0314581Z 

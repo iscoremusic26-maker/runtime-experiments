@@ -1,18 +1,12 @@
-# Prueba real y reversión — pendiente, no ejecutada
+# Prueba Windows y reversión — revisión bloqueada
 
-El artefacto actual es BUILD ONLY, no un TEST aprobado: no instalarlo para obtener apariciones. La implementación disponible tiene las apariciones desactivadas. Estas instrucciones describen la prueba siguiente de CP01 cuando se resuelvan los bloqueos; no autorizan CP02.
+**No hay TEST de actor aprobado ni una instalación que autorizar en este checkpoint.** No copiar/activar la build desarmada esperando un actor. Puede obtenerse evidencia de ubicación con el juego original y sin mod, siguiendo LOCATION_EVIDENCE.md.
 
-## Requisitos para habilitar una ubicación
-1. Obtener evidencia en Dusklight 2.0.3 Windows x64/DX12 del stage, room y layer reales, posición/orientación, suelo/colisión, ausencia de solapamiento con scripts/actores retail y disponibilidad de Wrock. La ubicación del demo no basta por sí sola.
-2. Construir el registro con stage_actor_data_class del SDK exacto, revisar el diff y probar una única autoridad Stage. No añadir simultáneamente create_actor runtime. No modificar .dzs/.dzr, ROM ni save.
-3. Resolver o acotar con evidencia de proceso limpio el fallo de unload: nunca desactivar/recargar el mod con actor activo o creando. Probar destrucción por salida normal de escena, incluyendo carga pendiente y recursos fallidos, antes de una aprobación TEST. Si hay callbacks retenidos o MOD_UNAVAILABLE, conservar logs y detener prueba.
-4. Recompilar y superar el laboratorio/paquete del checkpoint revisado antes de etiquetar DEVF_CP01_TEST.dusk. El checkpoint actual no incluye ese paquete.
+Antes de cualquier futura prueba activa, acreditar ubicación/recursos/eventos y una garantía de host que drene pendientes y retenga perfil/contexto/DLL ante fallo; el retorno de shutdown y evitar manualmente Reload no sustituyen esa garantía. Resolver también el archivo async (resDelete no acepta phase 1). No abrir requirements mediante un booleano sin evidencia ni implementar hooks improvisados.
 
-## Instalación futura de un TEST aprobado
-- Cerrar completamente Dusklight. Conservar las versiones originales, partidas y el mod anterior si existiera; no sobrescribirlos.
-- Comprobar hash del TEST aprobado y copiar únicamente ese nuevo .dusk en %APPDATA%\TwilitRealm\Dusklight\mods. No sustituir EXE, DLL retail ni otros mods.
-- Iniciar un proceso nuevo de Dusklight 2.0.3, escoger DX12 y confirmar versión/backend. Activar una sola prueba CP01, sin hot reload. Primero conservar log de imports/registro sin actor; después probar la ubicación verificada conforme a la revisión autorizada.
-- Guardar evidencia de created/ready, callback tick/draw y colisión visible, room/layer, salir/recargar sala sin duplicados y deleted con recursos liberados. Un PASS de laboratorio no sustituye estos resultados. Si aparece crash o limpieza incompleta, cerrar el proceso y conservar log/dump.
+Cuando exista un TEST técnicamente justificado y revisión autorizada:
+1. Cerrar completamente Dusklight, guardar copia de configuración/partida y de cualquier DEVF anterior. Verificar hash de TEST y confirmar host exacto 2.0.3/DX12. Copiar únicamente TEST a %APPDATA%\TwilitRealm\Dusklight\mods, sin sobrescribir EXE/ROM/escenas/otros mods.
+2. Arrancar un proceso nuevo. Usar una única autoridad de aparición en la ubicación/capa verificadas. Registrar create/ready/tick/draw/delete y contexto de sala, preservar vanilla, no guardar progreso como parte de prueba. Capturar render, colisión y salida/reentrada/capa con logs reales; FAIL detiene ejecución.
+3. Solo después de garantías y evidencia, probar el mecanismo de desactivación autorizado. No usar hot reload con actores en un host que sigue sin barrera.
 
-## Reversión
-Cerrar el proceso antes de cualquier retirada. Quitar únicamente el nuevo .dusk TEST de la carpeta de mods y restaurar la copia anterior, si la había. Reiniciar el juego y comprobar baseline. No tocar ROM, partidas, EXE, archivos de escena ni otros mods. No usar Disable/Reload como mecanismo de recuperación con actor vivo mientras el unload permanezca sin certificar.
+Reversión: cerrar proceso; retirar solo nuevo TEST y restaurar copia anterior si existía; reiniciar baseline y conservar logs/dumps. No borrar ROM, saves, EXE o archivos de escenario. No ejecutar estas acciones automáticamente.

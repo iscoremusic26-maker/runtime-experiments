@@ -1,9 +1,12 @@
-# Cambios exclusivos CP01
-- Nuevo proyecto DEVF/CP01, actor Rock adaptado del demo oficial, nombre dvfrock y APIs/flags del SDK 2.0.3.
-- Controller Actor/Stage y ResourceLifecycle con ownership, separación runtime/Stage y tratamiento de errores/cleanup.
-- Module con imports versionados, guardas de host/política y diagnóstico acotado; ninguna aparición automática ni ubicación inventada.
-- Laboratorio Windows de 16 casos, usando Controller/ResourceLifecycle reales y servicios/actor simulados; build CMake y workflow reutilizado de CP00.
-- Verificación de paquete, imports/exports/PE y metadata, hashes y evidencia. .gitattributes de CP01 conserva LF; no cambia atributos/ZIP originales.
-- Informes de etapa y guía futura de instalación/prueba/reversión, con NO-GO explícito. No TEST aprobado; build diagnóstica solamente.
+# Cambios de revisión CP01 desde 092c1e6
+- ActivationRequirements y start_guarded: build desarmada antes de registrar cualquier perfil, edit o actor. Política exacta DISARMED_NO_REGISTRATION, versión diagnóstica 0.1.1.
+- ResourceLifecycle.release devuelve éxito/fallo; conserva archivo/refs ante fallo, pasa a closing y prohíbe nuevas cargas/callbacks. Cancelación UNK3 terminal.
+- Rock comprueba retirada de colisión y fase de archivo antes del destructor, evita refs de heap fallido y no ejecuta transformaciones de un actor no listo. Sin inventar cancelación de mount pendiente.
+- Controller rechaza callbacks opcionales de creación sin token de vida.
+- Laboratorio incremental: nueve regresiones afectadas, 20 casos nuevos distintos en runs separados (14 + 6), cinco funciones upstream exactas con backends simulados y fixtures DLL Windows propias. No suite original de 16 completa ni CP00/SDK Linux.
+- Auditoría dirigida de colas/desregistro/force-delete/archivo/unload, inventario de datos ausentes y guía de captura en Windows mediante vistas nativas.
+- Informes/evidencia/hashes nuevos; PR #2 y ramas existentes actualizadas. Historial/tags originales y sus evidencias preservados.
 
-CP00 y sus informes/tags/PR preservados; ramas nuevas CP01. No motor, EXE retail, ROM, save, .dzs/.dzr, otros mods, overrides de perfil retail, hooks, enemigos o CP02. No se ejecutó el juego, no se instaló en PC y no se repitió SDK Linux/CP00. No binarios originales en logs/artefactos. Licencia CC0 original se conserva como UPSTREAM_LICENSE.md y atribución de rutas en IMPLEMENTATION.md.
+Sin modificaciones de ZIP, source upstream, EXE, ROM, saves, escenarios, otros mods, hooks, PIN del mod, instalación, apariciones o CP02. No TEST aprobado. La build cerrada no aporta proof of life de actor: solo evita generar el estado inseguro mientras faltan garantías.
+
+- Propiedad de colisión: inspección de referencias propias con APIs públicas, comprobación de índice/actor y rechazo de duplicados. Tras limpieza de escena solo retira el ID local si ya no hay referencias propias; nunca retira un slot reutilizado por otra colisión. Seis casos nuevos en el run final; suites previas no repetidas.

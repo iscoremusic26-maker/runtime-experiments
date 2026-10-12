@@ -1,0 +1,210 @@
+{
+  "inventory": {
+    "assets_files": 14879,
+    "assets_extensions": {
+      ".png": 2,
+      ".svg": 1,
+      ".h": 14876
+    },
+    "archive_payload_inventory": [
+      {
+        "archive": "Dusklight-v2.0.3-win32-x86_64.zip",
+        "found_payload_paths": []
+      },
+      {
+        "archive": "dusklight-2.0.3.zip",
+        "found_payload_paths": []
+      }
+    ],
+    "authority": "original verified 2.0.3 inputs; metadata inventory only, no repeated build or hash investigation",
+    "nested_dusk_inventory": [
+      {
+        "bundle": "mods/cosmetics.dusk",
+        "entries": 6,
+        "game_binary_payload_paths": []
+      },
+      {
+        "bundle": "mods/luau_runtime.dusk",
+        "entries": 7,
+        "game_binary_payload_paths": []
+      },
+      {
+        "bundle": "mods/randomizer.dusk",
+        "entries": 17,
+        "game_binary_payload_paths": []
+      }
+    ]
+  },
+  "source_references": [
+    {
+      "file": "src/dusk/mods/svc/actor.cpp",
+      "sha256": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3",
+      "anchors": [
+        {
+          "text": "int actor_delete(",
+          "line": 46
+        },
+        {
+          "text": "void request_delete_all_actors_of_name(",
+          "line": 146
+        },
+        {
+          "text": "ModResult unregister_actor(",
+          "line": 193
+        },
+        {
+          "text": "void actor_remove_mod(",
+          "line": 359
+        }
+      ]
+    },
+    {
+      "file": "src/dusk/mods/loader/loader.cpp",
+      "sha256": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82",
+      "anchors": [
+        {
+          "text": "void ModLoader::deactivate_mod(",
+          "line": 296
+        }
+      ]
+    },
+    {
+      "file": "src/dusk/mods/loader/native_module.cpp",
+      "sha256": "c592f80238e6db8650962a86e5fc28ba3d96a3e7d6cb2150103b748baf805029",
+      "anchors": [
+        {
+          "text": "void pl_dlclose(",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "file": "src/f_op/f_op_actor.cpp",
+      "sha256": "c190ba215061fcbfd71536733a00351c2bad600f1fe0d31d2083e89c60226839",
+      "anchors": [
+        {
+          "text": "static int fopAc_Create(",
+          "line": 443
+        },
+        {
+          "text": "static int fopAc_Delete(",
+          "line": 404
+        }
+      ]
+    },
+    {
+      "file": "src/f_pc/f_pc_stdcreate_req.cpp",
+      "sha256": "fd45dc723ec0856c09e58d8d5826af6b3197ea43f316a33adbd77b01e0977d75",
+      "anchors": [
+        {
+          "text": "int fpcSCtRq_phase_PostMethod(",
+          "line": 99
+        },
+        {
+          "text": "fpc_ProcID fpcSCtRq_Request(",
+          "line": 140
+        }
+      ]
+    },
+    {
+      "file": "src/f_pc/f_pc_create_req.cpp",
+      "sha256": "2863073dc547598cc34934bb84019155240b351e228f6ca919f3f30293df70f0",
+      "anchors": [
+        {
+          "text": "BOOL fpcCtRq_Cancel(",
+          "line": 61
+        },
+        {
+          "text": "BOOL fpcCtRq_Do(",
+          "line": 84
+        }
+      ]
+    },
+    {
+      "file": "src/f_pc/f_pc_profile.cpp",
+      "sha256": "2efa4e6753e542c95235c6388e27518316bafc54f2df62515b6e96e5525c047a",
+      "anchors": [
+        {
+          "text": "process_profile_definition DUSK_CONST* fpcPf_Get(",
+          "line": 24
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_com_inf_game.cpp",
+      "sha256": "a7dc9b5a64489e92c5eec6f3bc097857f66ad3c54f72ba106e14db4acc7c6ce3",
+      "anchors": [
+        {
+          "text": "int dComIfG_resDelete(",
+          "line": 1368
+        },
+        {
+          "text": "int dComIfG_play_c::getLayerNo(",
+          "line": 890
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_bg_s.cpp",
+      "sha256": "32c96f73b2cd4f88f53b2a38611841d4306498f6e49a85d286320090276f0932",
+      "anchors": [
+        {
+          "text": "bool cBgS::Release(",
+          "line": 204
+        },
+        {
+          "text": "void cBgS::Dt(",
+          "line": 265
+        },
+        {
+          "text": "dBgW_Base* cBgS::GetBgWBasePointer(",
+          "line": 375
+        },
+        {
+          "text": "bool cBgS::ChkPolySafe(",
+          "line": 384
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_resorce.cpp",
+      "sha256": "13ecf79461866083bc22c21c27cbfafa77eae7550f0db92bd46cc978bdaccdb3",
+      "anchors": [
+        {
+          "text": "int dRes_control_c::setStageRes(",
+          "line": 1053
+        }
+      ]
+    },
+    {
+      "file": "src/dusk/commands.cpp",
+      "sha256": "1f8e3a94d50c68f0bccb2fd50621aebf4e4038ff9064420eaa90df15aca8f9cb",
+      "anchors": [
+        {
+          "text": "    if (cmd == \"pos\")",
+          "line": 831
+        }
+      ]
+    },
+    {
+      "file": "src/dusk/imgui/ImGuiMenuTools.cpp",
+      "sha256": "46c57a724391edb89b1b98755ce3a3cc0da9c6e368dcfb516576782791187869",
+      "anchors": [
+        {
+          "text": "    void ImGuiMenuTools::ShowPlayerInfo()",
+          "line": 205
+        }
+      ]
+    },
+    {
+      "file": "src/SSystem/SComponent/c_bg_w.cpp",
+      "sha256": "67906f641383912151151b747685558369cc929b4b7db3ec9614da69a7fe55db",
+      "anchors": [
+        {
+          "text": "void cBgW_BgId::Release(",
+          "line": 12
+        }
+      ]
+    }
+  ]
+}
