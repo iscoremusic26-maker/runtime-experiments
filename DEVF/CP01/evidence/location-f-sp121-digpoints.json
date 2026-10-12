@@ -1,0 +1,41 @@
+{
+  "consumer": {
+    "chunk": "ACTR",
+    "index": 5,
+    "name": "Digpl",
+    "parameters": "0xf07ff5ff",
+    "initial_type": 5,
+    "path_index": 7,
+    "switch": 255,
+    "engine_class": "daObjDigpl_c"
+  },
+  "route_semantics": "discrete wolf digging positions, not a continuous actor trajectory",
+  "scope": "one verified consumer; not an exhaustive exclusion of all other consumers",
+  "candidate": [
+    -4806.7346,
+    -6729.480961460304,
+    65135.8281
+  ],
+  "nearest_dig_point": {
+    "index": 8,
+    "position": [
+      -4000.0,
+      -6715.28466796875,
+      65150.0
+    ],
+    "center_distance_xz": 806.8590692226057,
+    "distance_to_model_rectangle_xz": 565.6960562988279
+  },
+  "all_27_points_outside_model_rectangle": true,
+  "all_27_points_distance_to_rectangle_above_500": true,
+  "look_position_radius": 500,
+  "look_position_y_tolerance": 200,
+  "particle_emission_distance_3d": 1000,
+  "separation_above_look_radius": 65.6960562988279,
+  "previous_polyline_distance": 115.61556516274018,
+  "previous_polyline_distance_is_swept_actor_clearance": false,
+  "runtime_point_used_flags": "NOT_VERIFIED",
+  "runtime_game": "NOT_TESTED",
+  "safe_location": "NOT_APPROVED",
+  "policy": "DISARMED_NO_REGISTRATION"
+}

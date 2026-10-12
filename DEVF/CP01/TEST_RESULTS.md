@@ -44,7 +44,7 @@ Run final 38189000074: seis casos nuevos de propiedad de colisión PASS, sin rep
 | Cobertura envolventes del candidato | PASS numérico | Resta semiplanos: área sin soporte0;441 puntos por caja y octree/baricéntrico |
 | KCL paredes/techos en caja del candidato | PASS separación estática | Solo intersecta dos planos de suelo; no colliders externos |
 | Triggers/volúmenes con contrato identificado | PASS separación acotada | No equivale a ausencia de eventos globales |
-| Rutas/event_list/STB inventario estructural | PASS análisis | Ruta7 a115.6156 de caja; efectos de secuencias no certificados |
+| Rutas/event_list/STB inventario estructural | PASS análisis | Polilínea7 a115.6156; consumidor Digpl usa puntos discretos; efectos de secuencias no certificados |
 | Geometría @bg004d / Obj_Board | NOT_TESTED / BLOCKED_INPUT | Recursos no incluidos |
 | Actores vivos, anchura de ruta, scripts y progreso | NOT_VERIFIED | Contexto y evidencia Windows pendientes |
 | Ubicación candidata geométrica | PASS existencia condicionada | Ninguna coordenada aprobada de aparición |
@@ -52,3 +52,5 @@ Run final 38189000074: seis casos nuevos de propiedad de colisión PASS, sin rep
 | Barrera unload / TEST activo / CP02 | NO-GO / NOT_APPROVED / NOT_STARTED | Sin cambios respecto de auditoría de seguridad |
 
 Python estándar, análisis local reproducible (analysis/README). Metadata y referencias exactas en evidence/location-f-sp121-*.json. Sin nuevas suites Windows ni SDK Linux: módulo y política no cambiaron. PASS previos conservados. Los antiguos BLOCKED_ENVIRONMENT de 58c4966 quedan históricos en ese commit.
+
+Comprobación nueva incremental: consumidor ACTR[5]/Digpl y ruta7 PASS por parámetros/fuente; exclusión de sus27 puntos de la caja y radio500 PASS numérico. Mínima distancia caja-punto565.6961. La prueba reutiliza resultados privados sin repetir KCL/WRock/seguridad. Acceso, partículas, puntos usados y otros consumidores NOT_VERIFIED; juego/DX12 NOT_TESTED. Evidencia: location-f-sp121-digpoints.json.

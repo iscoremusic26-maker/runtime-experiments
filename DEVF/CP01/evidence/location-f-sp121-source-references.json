@@ -418,6 +418,42 @@
           "line": 52
         }
       ]
+    },
+    {
+      "file": "src/d/actor/d_a_obj_digplace.cpp",
+      "sha256": "db44f21900afa39f692717a3e57fa8a7cb05e63dae6423f36dbc8931231e86df",
+      "anchors": [
+        {
+          "text": "int daObjDigpl_c::create()",
+          "line": 13
+        },
+        {
+          "text": "dPath_GetRoomPath(",
+          "line": 22
+        },
+        {
+          "text": "int daObjDigpl_c::execute()",
+          "line": 59
+        },
+        {
+          "text": "point_to_plyr_dist =",
+          "line": 116
+        },
+        {
+          "text": "dist_to_player < 250000.0f",
+          "line": 146
+        }
+      ]
+    },
+    {
+      "file": "include/d/actor/d_a_obj_digplace.h",
+      "sha256": "a38993f7aa60652f77cf87d13307e27e01716331363cd556445e54335dce127f",
+      "anchors": [
+        {
+          "text": "dPath* mpDigPoints",
+          "line": 27
+        }
+      ]
     }
   ]
 }

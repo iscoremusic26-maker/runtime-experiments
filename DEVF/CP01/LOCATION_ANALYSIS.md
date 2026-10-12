@@ -79,7 +79,7 @@ mmvbg común más cercano: centro a 4062.1080, parámetro 0x1fe0004d. getArcName
 
 Hay enemigos, vegetación, items y otros actores en capa 6: no se aplica patch/delete/replace a ninguno. Home positions no acreditan posiciones actuales o zonas barridas; tampoco incluyen creaciones de scripts/mods.
 
-RPAT/RPPN usa offsets **relativos a RPPN**, conforme a rpatInfoInit. Sala: 33 rutas/170 puntos; stage: 58/700. Ruta sala 7 (27 puntos) incluye (-4000,-6715.284668,65150), a aproximadamente 58.48 del XZ observado. Para candidato queda a **115.6156 de la caja del modelo**, no del centro. Ruta stage 6 queda a 1479.4209. Falta acreditar consumidor, ancho barrido e inactividad/compatibilidad de ruta 7; separación positiva pequeña no aprueba seguridad.
+RPAT/RPPN usa offsets **relativos a RPPN**, conforme a rpatInfoInit. Sala: 33 rutas/170 puntos; stage: 58/700. Ruta sala 7 (27 puntos) incluye (-4000,-6715.284668,65150), a aproximadamente 58.48 del XZ observado. Para candidato queda a **115.6156 de la caja del modelo**, no del centro. Ruta stage 6 queda a 1479.4209. La revisión incremental siguiente identifica un consumidor de puntos discretos: no interpretar esta polilínea como trayectoria barrida de un actor. La distancia geométrica original se conserva; ver sección Digpl.
 
 event_list sala: MapToolCamera4, R03_gate, MapToolCamera25/35/42. Stage: SMELL_1st, iria_nioi, iria_pouch01. Límites de tablas/event/staff/cut/data y referencias tipadas validados. Paquetes R03_gate.stb, iria_nioi.stb, iria_pouch01.stb existen; bloques STB JFVB/cámara/actores/mensajes/control. No se ejecutaron secuencias ni se certificaron todos sus efectos. BGCheck=3 en datos de cámara impide inferir cero efecto de nueva colisión solo porque no se solape un trigger.
 
@@ -93,8 +93,22 @@ R_Gate depende también de M_RGate00.arc y switches/evento de escolta; faltan AR
 
 Completar colisiones próximas con copias de solo lectura de /res/Object/@bg004d.arc y /res/Object/Obj_Board.arc y SHA256 en repositorio privado. M_RGate00.arc permite completar dependencias puerta/evento si se pretende acreditar su interacción. Si nombres difieren, enviar listado/capitalización real. No ROM completa ni save; no volver a pedir STG/R03/WRock ya verificados.
 
-Ruta 7: identificar consumidor/estado y amplitud barrida; listado de perfiles/IDs y observación de zona. Además verificar contacto sobre pendiente antes de aprobar escala 1. Capturas sin actor no certifican render/colisión DEVF: requerirán prueba posterior autorizada y barrera host resuelta.
+Ruta 7: consumidor Digpl identificado; falta estado de puntos usados e interacción de excavación/acceso en Windows, y excluir otros consumidores si se pretende garantía global. Además verificar contacto sobre pendiente antes de aprobar escala 1. Capturas sin actor no certifican render/colisión DEVF: requerirán prueba posterior autorizada y barrera host resuelta.
 
 **Unload: bloqueo independiente sin cambios, NO-GO**, ver LIFECYCLE_AUDIT.md. Sin TEST activo, host modificado, instalación, aparición, nueva compilación ni CP02.
 
 Reproducción: analysis/README.md. Metadata derivada: evidence/location-f-sp121-summary.json; fuente exacta por hash/ruta/línea: evidence/location-f-sp121-source-references.json. Recursos y registros completos permanecen fuera del repositorio de código.
+
+## Continuación incremental: consumidor Digpl de ruta 7
+
+Se recuperaron todos los resultados y se publicaron inmediatamente en 9224e1c / DEVF_CP01_LOCATION_F_SP121_REVIEW, comprobados por fetch desde GitHub. No se perdieron KCL/PLC, geometría, hashes o scripts; no hubo reconstrucción/repetición de esos análisis. Main del repositorio privado sigue conteniendo únicamente el ZIP F_SP121 y manifiesto nuevos, junto con los insumos originales: @bg004d.arc, Obj_Board.arc y M_RGate00.arc continúan ausentes.
+
+Nuevo hallazgo dirigido: ACTR común [5] es Digpl, parámetro 0xf07ff5ff. create() de daObjDigpl_c extrae tipo inicial5 y route=(param>>20)&0xff=7. Desactiva NOEXEC y obtiene dPath_GetRoomPath(7,room3). No depende de seleccionar ACT0; es registro común, aunque flags/carga real siguen pendientes. Switch=0xff no es un veto de aparición por switch en ese código.
+
+execute() usa la ruta como **27 posiciones discretas de excavación del lobo**, no movimiento interpolado por segmentos. Escoge el punto disponible más próximo en XZ cuando la diferencia Y es menor que200; emite partículas a distancia3D menor que1000; el look target usa distanciaXZ al cuadrado menor que250000 (radio500). Al excavar crea item/tabla, marca el punto usado y, si corresponde, switches. Una ubicación cercana requiere considerar este comportamiento original.
+
+El punto más próximo a la envolvente conjunta del candidato es índice8=(-4000,-6715.284668,65150): centro a806.8591 y caja del modelo a**565.6961 en XZ**. Los27 puntos quedan fuera de la caja y a más de500; margen mínimo sobre ese radio65.6961. Esta exclusión geométrica no acredita su acceso por el jugador, estado mUsedDigFlags, parámetros de atención completos o ausencia de efectos de partículas/cámara. La región de partículas1000 alcanza la zona; no se declara aislada de todo comportamiento.
+
+La medida conservada **115.6156** sigue siendo distancia a segmentos unidos de RPAT, pero **no es una distancia de actor barrido para este consumidor**. Se confirma un consumidor; no se afirma que sea el único posible ni se sustituye por una garantía dinámica global. No se modifica la roca ni se inventa otro lugar. Candidato condicionado y NO-GO permanecen por geometrías externas, contexto/contacto runtime y unload independiente.
+
+Ver evidence/location-f-sp121-digpoints.json y analysis/location_digpoints.py. Esta prueba nueva reutiliza inventory/footprint privados ya calculados y solo analiza el pendiente de puntos de ruta; no ejecuta geometría, host, MSVC o suites de seguridad anteriores. La recuperación final es DEVF_CP01_LOCATION_DIGPOINTS_REVIEW, sin mover el tag del primer checkpoint.

@@ -20,3 +20,13 @@ Candidato en verify_footprint solo entrada de análisis yaw 0/escala 1, nunca co
 No certifican scripts/global callbacks ni geometría dinámica ausente. location_spatial cubre contratos identificados; no simula todos los actores.
 
 No recompilar Windows por estos informes: módulo/política intactos. Evidencia MSVC/seguridad histórica conservada sin repetir suites.
+
+## Solo pendiente incremental de consumidor de ruta7
+
+Si inventory.json y footprint-verification.json siguen en el directorio privado, no ejecutar otra vez las cinco herramientas anteriores. Ejecutar únicamente:
+
+```bash
+python DEVF/CP01/analysis/location_digpoints.py
+```
+
+Usa los resultados conservados y room.dzr para confirmar ACTR[5]/Digpl y medir sus27 puntos. La distancia histórica a segmentos no equivale a trayectoria dinámica de este actor. Solo si se pierde el directorio temporal deben reconstruirse las entradas de análisis necesarias con los scripts iniciales y los mismos hashes privados.

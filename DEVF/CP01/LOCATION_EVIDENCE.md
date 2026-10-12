@@ -81,3 +81,5 @@ Con esa evidencia se podrán cotejar capa, geometría/huella de Wrock, suelo/alt
 ## Revisión desde 58c4966
 
 El fallo previo de entorno queda superado. Integridad y análisis estático ahora PASS en el alcance de LOCATION_ANALYSIS.md. Stage/room/layer/XYZ observados se conservan como datos del usuario; candidato calculado es solo análisis. No son PASS de juego o prueba de seguridad universal.
+
+Actualización incremental de recuperación: 9224e1c publicado y recuperado de GitHub conserva todo el estudio. El consumidor Digpl de ruta7 usa puntos discretos; su punto más próximo queda a565.6961 de caja del modelo, fuera de radio500. La medida115.6156 a segmentos se conserva sin interpretarla como actor barrido. Geometrías externas/contexto runtime pendientes; DISARMED_NO_REGISTRATION y unload/CP02 NO-GO intactos. Checkpoint final DEVF_CP01_LOCATION_DIGPOINTS_REVIEW.
