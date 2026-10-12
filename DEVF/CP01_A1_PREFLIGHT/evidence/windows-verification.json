@@ -1,0 +1,99 @@
+{
+  "run_id": 38297058072,
+  "job_id": 114970558041,
+  "artifact_id": 11768783927,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38297058072",
+  "private_ci_head": "988bafed31e93674082cc926086e56d92728c175",
+  "main_compiled_source_commit": "57a167a6c650ab9473db31c4eac531dba8e6a127",
+  "zip_sha256": "abc8050097518c7f621ff99af93d790f181bf1861e1a664d40ccde27f4e4daca",
+  "zip_bytes": 7686,
+  "github_digest_match": true,
+  "crc_all_pass": true,
+  "text_only_members_pass": true,
+  "own_compiled_code_lf_identical": [
+    "src/core.cpp",
+    "src/core.hpp",
+    "src/mod.cpp",
+    "src/native_reader.cpp",
+    "tests/fake_reader.cpp",
+    "tests/lab.cpp",
+    "ci/audit.py",
+    "ci/run_windows.py",
+    "ci/windows-observer.yml"
+  ],
+  "additional_collection_tools": "Post-build read-only evidence extraction, not part of the module/lab",
+  "files": [
+    {
+      "path": "build.log",
+      "bytes": 2406,
+      "crc32": "f3fc6204",
+      "sha256": "32429c953a64b74f678b46028f269fc40ba011420f4819efd37aeb673315eb7e"
+    },
+    {
+      "path": "cmake-version.log",
+      "bytes": 90,
+      "crc32": "688b1b0c",
+      "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+    },
+    {
+      "path": "compiler.log",
+      "bytes": 1261,
+      "crc32": "cfc76e97",
+      "sha256": "f3be4888a9a016bce8d3fcf0943fd272c90d222a0c890f9d11f1f6023cf312dd"
+    },
+    {
+      "path": "configure.log",
+      "bytes": 823,
+      "crc32": "17757983",
+      "sha256": "1486ecd1e7b89b96d6a556a09efea8ce8d40750633fedd2339d100bcc827e0c0"
+    },
+    {
+      "path": "guard-hidden-mutation.log",
+      "bytes": 158,
+      "crc32": "6e93c1f8",
+      "sha256": "e00bae5d279645e496625a7c2d93c00f3e6d95aeead4970a9bb0a09b1309ca3a"
+    },
+    {
+      "path": "guard-hidden-spawn.log",
+      "bytes": 158,
+      "crc32": "6e93c1f8",
+      "sha256": "e00bae5d279645e496625a7c2d93c00f3e6d95aeead4970a9bb0a09b1309ca3a"
+    },
+    {
+      "path": "guard-mutation.log",
+      "bytes": 158,
+      "crc32": "420efdfc",
+      "sha256": "b173ac6426437f41bc488dd17c69dd9931d21141e68d04dfd1f3fc1c080d2e93"
+    },
+    {
+      "path": "guard-positive.log",
+      "bytes": 11,
+      "crc32": "511d2133",
+      "sha256": "1397fdaa24b39cc0424500c3f61ea79dc1339e7c2b0c25f171fd24d5221aac2e"
+    },
+    {
+      "path": "lab.log",
+      "bytes": 1391,
+      "crc32": "973c2566",
+      "sha256": "f83c34a49ed3abb278729af9db97e92cff5c42c9ddd6c0c9faf569c104266a39"
+    },
+    {
+      "path": "module-exports.log",
+      "bytes": 829,
+      "crc32": "8044db71",
+      "sha256": "7a2d61a510d334c3d996da8376aeae14c1d0b077c8a9ecc2830a01277004d663"
+    },
+    {
+      "path": "module-imports.log",
+      "bytes": 3274,
+      "crc32": "5770bccb",
+      "sha256": "18e7c6b0311184b88efaceccbfa413ae99963cea2cd4fae4b25c339e90f20007"
+    },
+    {
+      "path": "result.json",
+      "bytes": 8977,
+      "crc32": "cefd315d",
+      "sha256": "4872767b8e0772f11088d18d72c03acb797b4faca51cd323ed1f24a57c9a779f"
+    }
+  ]
+}

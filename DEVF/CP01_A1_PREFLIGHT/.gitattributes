@@ -1,0 +1,2 @@
+# Preserve CI text evidence byte-for-byte for its SHA256 ledger (Windows CRLF included).
+evidence/windows-pass/* -text whitespace=cr-at-eol

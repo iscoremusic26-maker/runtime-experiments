@@ -1,0 +1,312 @@
+{
+  "status": "PASS",
+  "started_utc": "2026-10-12T19:21:50.900796+00:00",
+  "run_id": "38297058072",
+  "workflow_sha": "770f0d18daf5b5a53cb01336029795850eeb7cba",
+  "run_attempt": "1",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "policy": "DISARMED_NO_REGISTRATION",
+  "game_executed": false,
+  "host_built": false,
+  "packaged_or_installed": false,
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "D:\\a\\_temp\\a1-observer\\build\\compiler-version.cpp",
+        "/FoD:\\a\\_temp\\a1-observer\\build\\compiler-version.obj"
+      ],
+      "seconds": 2.343,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.797,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "D:\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A1_PREFLIGHT",
+        "-B",
+        "D:\\a\\_temp\\a1-observer\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=D:\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official",
+        "-DDUSK_GAME_EXE=D:\\a\\_temp\\a1-observer\\windows-amd64.lib"
+      ],
+      "seconds": 5.875,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "D:\\a\\_temp\\a1-observer\\build",
+        "--target",
+        "devf_a1_observer",
+        "a1_observer_lab",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 6.625,
+      "exit": 0
+    },
+    {
+      "label": "lab",
+      "command": [
+        "D:\\a\\_temp\\a1-observer\\build\\a1_observer_lab.exe"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "guard-positive",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/ID:\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A1_PREFLIGHT\\src",
+        "/DDEVF_READ_ONLY=1",
+        "D:\\a\\_temp\\a1-observer\\build\\guard.cpp",
+        "/FoD:\\a\\_temp\\a1-observer\\build\\guard.obj"
+      ],
+      "seconds": 0.375,
+      "exit": 0
+    },
+    {
+      "label": "guard-mutation",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/ID:\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A1_PREFLIGHT\\src",
+        "/DDEVF_READ_ONLY=0",
+        "D:\\a\\_temp\\a1-observer\\build\\guard.cpp",
+        "/FoD:\\a\\_temp\\a1-observer\\build\\guard.obj"
+      ],
+      "seconds": 0.359,
+      "exit": 2
+    },
+    {
+      "label": "guard-hidden-spawn",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/ID:\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A1_PREFLIGHT\\src",
+        "/DDEVF_READ_ONLY=1",
+        "/DDEVF_ENABLE_SPAWN=1",
+        "D:\\a\\_temp\\a1-observer\\build\\guard.cpp",
+        "/FoD:\\a\\_temp\\a1-observer\\build\\guard.obj"
+      ],
+      "seconds": 0.36,
+      "exit": 2
+    },
+    {
+      "label": "guard-hidden-mutation",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/ID:\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A1_PREFLIGHT\\src",
+        "/DDEVF_READ_ONLY=1",
+        "/DDEVF_ENABLE_MUTATION=1",
+        "D:\\a\\_temp\\a1-observer\\build\\guard.cpp",
+        "/FoD:\\a\\_temp\\a1-observer\\build\\guard.obj"
+      ],
+      "seconds": 0.375,
+      "exit": 2
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "D:\\a\\_temp\\a1-observer\\build\\devf_a1_observer.dll"
+      ],
+      "seconds": 0.062,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "D:\\a\\_temp\\a1-observer\\build\\devf_a1_observer.dll"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    }
+  ],
+  "dependencies": {
+    "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "import_library_bytes": 9400986,
+    "selected_member_crc32": "70c35731",
+    "archive_verification": "CP00 evidence reused; LFS object identity and selected library checked only",
+    "expected_zip_lfs_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf"
+  },
+  "source_audit": {
+    "native_calls": [
+      "dComIfG_getObjectResInfo",
+      "dComIfGp_getPlayer",
+      "dComIfGp_getStartStageName",
+      "dComIfGp_isEnableNextStage",
+      "fopAcIt_Judge",
+      "fopScnM_SearchByID",
+      "fpcLy_CurrentLayer",
+      "fpcLy_RootLayer",
+      "fpcM_IsCreating",
+      "getLayerNo",
+      "getStatusProcID",
+      "getStayNo"
+    ],
+    "explicit_services": [
+      "Host 2.2",
+      "Log 1.0"
+    ],
+    "automatic_service": "Game epoch 2",
+    "source_surface": "PASS_STATIC"
+  },
+  "own_code": [
+    {
+      "path": "src/core.cpp",
+      "sha256": "73b10c9c981cae4464dcaffbd288c46ceafb436a7fc122c1b434c96a5e503361"
+    },
+    {
+      "path": "src/core.hpp",
+      "sha256": "610b097db243d8741f1cdbb13a20ee7a1c7a2f2a2bd22069c05f308874ebd37b"
+    },
+    {
+      "path": "src/mod.cpp",
+      "sha256": "406770b6ad4d5b617f186236530d5c0ec4236b21e4d0cbe08e216790b38ae251"
+    },
+    {
+      "path": "src/native_reader.cpp",
+      "sha256": "4470bf59af42b3a681af613d5d0434a592d96eb40556aa07f8145676a20987a0"
+    },
+    {
+      "path": "tests/fake_reader.cpp",
+      "sha256": "a74e15feb7cddf5723afdae49a1ec1c906a4efb45d8f73e6f832d193a31344d7"
+    },
+    {
+      "path": "tests/lab.cpp",
+      "sha256": "444680720f22823af6be1bf313e21de2a960bee5826237ee89dae1bf3a2acd99"
+    },
+    {
+      "path": "ci/audit.py",
+      "sha256": "23844ec8bb71defc9a44ea65a068c0317d9048c154f2ef5687f9585e8c01faf6"
+    },
+    {
+      "path": "ci/run_windows.py",
+      "sha256": "aadc7fc4c993f191f441c1367089b74880511a0ef0a2a79c8b142a97bf61cb34"
+    },
+    {
+      "path": "ci/windows-observer.yml",
+      "sha256": "7e4e8acd669fb2e90cac43fbf0d26913e9855236ab9345d2b685a3004b87e67c"
+    }
+  ],
+  "pe_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "?mStayNo@dStage_roomControl_c@@2CA",
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ"
+      ],
+      "VCRUNTIME140.dll": [
+        "memcpy",
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memset"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_initterm",
+        "_initterm_e",
+        "_cexit",
+        "_seh_filter_dll",
+        "_configure_narrow_argv",
+        "_initialize_narrow_environment",
+        "_initialize_onexit_table",
+        "_execute_onexit_table"
+      ],
+      "KERNEL32.dll": [
+        "GetCurrentProcessId",
+        "GetCurrentThreadId",
+        "InitializeSListHead",
+        "DisableThreadLibraryCalls",
+        "GetSystemTimeAsFileTime",
+        "QueryPerformanceCounter"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "PASS_STATIC"
+  },
+  "own_dll": {
+    "bytes": 18432,
+    "sha256": "ba78e5da935cbb1815993c2fc3ad377360ccc23cfe1fa01c259c629375134b4e",
+    "uploaded": false,
+    "executed": false
+  },
+  "official_source_unchanged": true,
+  "lab_summary": "SUMMARY 36 PASS; synthetic observer lifecycle only; no native backend or game execution",
+  "ended_utc": "2026-10-12T19:22:09.002284+00:00"
+}

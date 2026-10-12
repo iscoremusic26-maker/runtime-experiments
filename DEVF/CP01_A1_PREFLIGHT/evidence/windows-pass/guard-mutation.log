@@ -1,0 +1,2 @@
+guard.cpp
+D:\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A1_PREFLIGHT\src\core.hpp(7): fatal error C1189: #error:  "Permanent read-only build required"

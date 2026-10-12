@@ -1,0 +1,303 @@
+{
+  "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "analysis_scope": "incremental E_OC/FILI only; prior ARC/KCL/WRock/Digpl evidence reused",
+  "preserved_inventory_sha256": "f3da7e3f7b7a6b14ee9767ebc6a745f5aa54deb3ed8873f9941a8e7e8722b954",
+  "room_dzr_sha256": "4404905dfa33fe90058c14a670b8a33f6236584d8db0f806f3931368d3068a6e",
+  "stage": "F_SP121",
+  "room": 3,
+  "logical_layer": 6,
+  "authored_records": [
+    {
+      "chunk": "ACT6",
+      "index": 7,
+      "name": "E_oc",
+      "parameters": "0xffffffff",
+      "position": [
+        -50.0,
+        -6201.49169921875,
+        60750.0
+      ],
+      "angle": [
+        296,
+        0,
+        0
+      ],
+      "set_id": 65535,
+      "scale_bytes": null
+    },
+    {
+      "chunk": "ACT6",
+      "index": 8,
+      "name": "E_oc",
+      "parameters": "0xffffffff",
+      "position": [
+        -2700.0,
+        -6763.703125,
+        53000.0
+      ],
+      "angle": [
+        296,
+        0,
+        0
+      ],
+      "set_id": 65535,
+      "scale_bytes": null
+    },
+    {
+      "chunk": "ACT6",
+      "index": 9,
+      "name": "E_oc",
+      "parameters": "0xffffffff",
+      "position": [
+        -2750.0,
+        -6888.34765625,
+        55350.0
+      ],
+      "angle": [
+        296,
+        -32768,
+        0
+      ],
+      "set_id": 65535,
+      "scale_bytes": null
+    },
+    {
+      "chunk": "ACT6",
+      "index": 10,
+      "name": "E_oc",
+      "parameters": "0xffffffff",
+      "position": [
+        -12869.5380859375,
+        -7105.5947265625,
+        61023.34765625
+      ],
+      "angle": [
+        -216,
+        0,
+        0
+      ],
+      "set_id": 65535,
+      "scale_bytes": null
+    },
+    {
+      "chunk": "ACT6",
+      "index": 11,
+      "name": "E_oc",
+      "parameters": "0xffffffff",
+      "position": [
+        -20800.0,
+        -5885.23779296875,
+        56650.0
+      ],
+      "angle": [
+        -236,
+        0,
+        0
+      ],
+      "set_id": 65535,
+      "scale_bytes": null
+    },
+    {
+      "chunk": "ACT6",
+      "index": 12,
+      "name": "E_oc",
+      "parameters": "0xffffffff",
+      "position": [
+        -11550.0,
+        -7226.55029296875,
+        60100.0
+      ],
+      "angle": [
+        296,
+        0,
+        0
+      ],
+      "set_id": 65535,
+      "scale_bytes": null
+    },
+    {
+      "chunk": "ACT6",
+      "index": 21,
+      "name": "E_oc",
+      "parameters": "0xffffffff",
+      "position": [
+        -5100.0,
+        -6976.5869140625,
+        53750.0
+      ],
+      "angle": [
+        281,
+        0,
+        0
+      ],
+      "set_id": 65535,
+      "scale_bytes": null
+    }
+  ],
+  "fili": {
+    "parameters": "0x1fe07fb8",
+    "enemy_appear1": false,
+    "bit_sw": 255,
+    "appearance_switch_gate_disabled_statically": true
+  },
+  "conditional_preset": {
+    "canonical_name": "E_oc",
+    "profile": "fpcNm_E_OC_e",
+    "profile_id": "0x1fe",
+    "argument": -1,
+    "authored_preset_index": 11,
+    "parameters": "0xffffffff",
+    "angle_x_s16": -236,
+    "angle_x_u16": "0xff14",
+    "yaw_s16": 0,
+    "angle_z_s16": 0,
+    "scale": "ACTR implicit (1,1,1); native HIO basic_size 1.5",
+    "native_mode": 0,
+    "defeated_switch": 255,
+    "secondary_switch": 255,
+    "model_archive": "E_OC",
+    "animation_archive": "E_ocb",
+    "move_range": 2000,
+    "placement": "NOT_VERIFIED; authored coordinates occupied by vanilla actors, not available spawn slots"
+  },
+  "source_references": [
+    {
+      "path": "src/d/actor/d_a_e_oc.cpp",
+      "lf_sha256": "e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4",
+      "anchor_lines": [
+        98,
+        350,
+        787,
+        1868,
+        2333,
+        2397,
+        2420,
+        2542,
+        2563,
+        2650,
+        2670,
+        2704,
+        2733,
+        2741,
+        2811,
+        2848
+      ]
+    },
+    {
+      "path": "src/d/d_stage.cpp",
+      "lf_sha256": "b946520ed3813852f61bdff284c0c005bd70afcd194439d39c2557a5ef492095",
+      "anchor_lines": [
+        975
+      ]
+    },
+    {
+      "path": "include/f_pc/f_pc_name.h",
+      "lf_sha256": "300ab19ddf7d86a2d2ff8ba894d3185436e68f24fab31ed9da401afece846041",
+      "anchor_lines": [
+        524
+      ]
+    },
+    {
+      "path": "src/f_op/f_op_actor.cpp",
+      "lf_sha256": "c190ba215061fcbfd71536733a00351c2bad600f1fe0d31d2083e89c60226839",
+      "anchor_lines": [
+        519
+      ]
+    },
+    {
+      "path": "include/d/d_stage.h",
+      "lf_sha256": "dc59d4f57374566c29727bbc3eacdeb21d7b998c8e4f1550220cb840738651ab",
+      "anchor_lines": [
+        1215,
+        1547
+      ]
+    },
+    {
+      "path": "src/f_pc/f_pc_layer.cpp",
+      "lf_sha256": "6f57e793b93cc268a6f5ad0b13f2100243d79473867f88a7bf95646b233c27da",
+      "anchor_lines": [
+        91,
+        105,
+        137
+      ]
+    },
+    {
+      "path": "src/f_pc/f_pc_executor.cpp",
+      "lf_sha256": "321c16edf0e8b2fba1b5cbb8ce70c4e9e1d2f9995504d8987548236f3f36bccd",
+      "anchor_lines": [
+        55,
+        68
+      ]
+    },
+    {
+      "path": "src/f_op/f_op_actor_iter.cpp",
+      "lf_sha256": "37e474e2c77a5c4b740adad6b1a168eaab0bc837cb8d39bda4ee2715a2cb6de9",
+      "anchor_lines": [
+        28
+      ]
+    },
+    {
+      "path": "src/SSystem/SComponent/c_tag_iter.cpp",
+      "lf_sha256": "a6c632efb9f13bb00dedaec7d72dcbd12ad52f2828076ad3663048a4bfe9b45f",
+      "anchor_lines": [
+        13
+      ]
+    },
+    {
+      "path": "src/d/d_com_inf_game.cpp",
+      "lf_sha256": "a7dc9b5a64489e92c5eec6f3bc097857f66ad3c54f72ba106e14db4acc7c6ce3",
+      "anchor_lines": [
+        890
+      ]
+    },
+    {
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "lf_sha256": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82",
+      "anchor_lines": [
+        1237
+      ]
+    },
+    {
+      "path": "sdk/include/mods/svc/host.h",
+      "lf_sha256": "453f1fb64b56139f7ec4b7c7a831e849b2ddeb6c7923e4b4d58d9ed418b434b3",
+      "anchor_lines": [
+        34
+      ]
+    },
+    {
+      "path": "sdk/include/mods/svc/log.h",
+      "lf_sha256": "12fb0b1e17ad4952bf91fadf40a1a8cb76a3e2f8cb50cee52bce971f2a5dcf9e",
+      "anchor_lines": [
+        28
+      ]
+    },
+    {
+      "path": "sdk/include/mods/svc/game.h",
+      "lf_sha256": "23fbe752be5908b6fe41bae9846c38a058bd6597835c24060d149c6dfdc8f4b9",
+      "anchor_lines": [
+        17
+      ]
+    },
+    {
+      "path": "sdk/src/game_feature.cpp",
+      "lf_sha256": "4ad373b45381af47a9910a0833bd2bba809ac60f1bf3e07b8bd710a02696f23f",
+      "anchor_lines": [
+        5
+      ]
+    },
+    {
+      "path": "cmake/GameABIConfig.cmake",
+      "lf_sha256": "a4275736a0d6279c8ecadb68a28a894ff37fab13e5ecf14a6c6e450aaaf7c4ab",
+      "anchor_lines": [
+        36
+      ]
+    },
+    {
+      "path": "cmake/ModSDK.cmake",
+      "lf_sha256": "feff2b222ccadaf70b8ef40fad6d0d078d704bee4e9197addb89be4a899148a4",
+      "anchor_lines": [
+        201
+      ]
+    }
+  ]
+}
