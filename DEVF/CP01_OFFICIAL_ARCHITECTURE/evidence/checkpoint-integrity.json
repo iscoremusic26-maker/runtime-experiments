@@ -1,0 +1,183 @@
+{
+  "base_checkpoint": "765e16dcd86c1eeda45bad80a2c1380129565429",
+  "tested_snapshot": "20efbbf563ad1ec7edb7e22a27128ba07b77c7c7",
+  "windows_run": 38277234930,
+  "cp02": "NO-GO",
+  "policy": "DISARMED_NO_REGISTRATION",
+  "preserved_devf_entries": [
+    {
+      "path": "DEVF/.gitignore",
+      "kind": "blob",
+      "base_git_object": "440ff14a9b4299fb88cfd4215b1489f20f4eb8b1",
+      "current_git_object": "440ff14a9b4299fb88cfd4215b1489f20f4eb8b1",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/BUILD_ENV.md",
+      "kind": "blob",
+      "base_git_object": "fe549cc77e5333e842521a0d848a96a367e15bb4",
+      "current_git_object": "fe549cc77e5333e842521a0d848a96a367e15bb4",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/CHANGES.md",
+      "kind": "blob",
+      "base_git_object": "e4381cfad4fe8804309bb99fd454f7b5519823c2",
+      "current_git_object": "e4381cfad4fe8804309bb99fd454f7b5519823c2",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/CP01",
+      "kind": "tree",
+      "base_git_object": "3f905a1e853db19a6f109b395605ee7b74a91e44",
+      "current_git_object": "3f905a1e853db19a6f109b395605ee7b74a91e44",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/CP01_BASELINE",
+      "kind": "tree",
+      "base_git_object": "2717d7f4a10e17b76e9d3241e1e1470e8998b073",
+      "current_git_object": "2717d7f4a10e17b76e9d3241e1e1470e8998b073",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/CP01_HOST_EXPERIMENT",
+      "kind": "tree",
+      "base_git_object": "e375b94d5071195e7e5ba7311ee23a45adb141e9",
+      "current_git_object": "e375b94d5071195e7e5ba7311ee23a45adb141e9",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/CP01_HOST_INTEGRATION",
+      "kind": "tree",
+      "base_git_object": "7dcc2891ff7596258ab997790d76cdd488e854e6",
+      "current_git_object": "7dcc2891ff7596258ab997790d76cdd488e854e6",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/DEVF_CP00_HANDOFF.md",
+      "kind": "blob",
+      "base_git_object": "3d14765123a600db326b1cbb08f5e13201717d70",
+      "current_git_object": "3d14765123a600db326b1cbb08f5e13201717d70",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/FEASIBILITY_DECISIONS.md",
+      "kind": "blob",
+      "base_git_object": "7d01df3a3a1d4ba54031d4adcd90048fb3654fe8",
+      "current_git_object": "7d01df3a3a1d4ba54031d4adcd90048fb3654fe8",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/GO_NO_GO.md",
+      "kind": "blob",
+      "base_git_object": "037e6126a5f99d1609428a3a054d9a26b825539b",
+      "current_git_object": "037e6126a5f99d1609428a3a054d9a26b825539b",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/RESUME_INSTRUCTIONS.md",
+      "kind": "blob",
+      "base_git_object": "30c9ee461515b2eab1ab47b116e3bab499d21daa",
+      "current_git_object": "30c9ee461515b2eab1ab47b116e3bab499d21daa",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/SERVICE_CAPABILITIES.md",
+      "kind": "blob",
+      "base_git_object": "fe56dcf74852591260bc996be40a7ff96daeb2bb",
+      "current_git_object": "fe56dcf74852591260bc996be40a7ff96daeb2bb",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/SOURCES_AND_VERSIONS.md",
+      "kind": "blob",
+      "base_git_object": "27914d0736352fb44ff7e989ac2e244b8570f793",
+      "current_git_object": "27914d0736352fb44ff7e989ac2e244b8570f793",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/TEST_RESULTS.md",
+      "kind": "blob",
+      "base_git_object": "4690c58d3ef42b49f9065a2c00dce93ce08fe0b0",
+      "current_git_object": "4690c58d3ef42b49f9065a2c00dce93ce08fe0b0",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/ci",
+      "kind": "tree",
+      "base_git_object": "43a9d18b945d0e37b0769187b0f499b662fb65cb",
+      "current_git_object": "43a9d18b945d0e37b0769187b0f499b662fb65cb",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/cp00-probe",
+      "kind": "tree",
+      "base_git_object": "c84cba827e5aab4c9a09e419ab8a89a63171cefd",
+      "current_git_object": "c84cba827e5aab4c9a09e419ab8a89a63171cefd",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/evidence",
+      "kind": "tree",
+      "base_git_object": "5a18ea2a201dbda522615b08707e4238c93b15fa",
+      "current_git_object": "5a18ea2a201dbda522615b08707e4238c93b15fa",
+      "unchanged": true
+    },
+    {
+      "path": "DEVF/references",
+      "kind": "tree",
+      "base_git_object": "a2d0c0428796dbe4a6a0716fcdb41ce3aa6f5921",
+      "current_git_object": "a2d0c0428796dbe4a6a0716fcdb41ce3aa6f5921",
+      "unchanged": true
+    }
+  ],
+  "tested_inputs": [
+    {
+      "path": "DEVF/CP01_OFFICIAL_ARCHITECTURE/CMakeLists.txt",
+      "sha256": "328349c7237e60ba33362e5beacd639bc0118914552041157d8b0336295d0fcc",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": ".github/workflows/devf-cp01-official-architecture.yml",
+      "sha256": "edcf22e7fc235e543eb433ee0ef6433bfedd88a2c6a56d05a19494b50bc10f86",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "DEVF/CP01_OFFICIAL_ARCHITECTURE/ci/run_windows.py",
+      "sha256": "1ef38106e1d23ad5223629032dd67e6cc4d51cb30c34536c652fff6765b37842",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "DEVF/CP01_OFFICIAL_ARCHITECTURE/prototype/game_abi_surface.cpp",
+      "sha256": "0834e00e6bf620e5916f42b13f2e9ca9d34969bebd983bc5f98e9700dabf5b0a",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "DEVF/CP01_OFFICIAL_ARCHITECTURE/prototype/lab.cpp",
+      "sha256": "6fd380a93a190605d4bf55ba4267d9e4d760088253a7be8bf1c6fabcdc2846cb",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "DEVF/CP01_OFFICIAL_ARCHITECTURE/prototype/mod.cpp",
+      "sha256": "69fff7749dd62e953d4da52fc15081bd7a250bd858629acd0d4e815ec887d258",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "DEVF/CP01_OFFICIAL_ARCHITECTURE/prototype/mod.json",
+      "sha256": "1ff2f5808de99dac500797f1b72241b4dcf63c67ddc141bc29a44e8c96ceeeb5",
+      "matches_tested_snapshot": true
+    },
+    {
+      "path": "DEVF/CP01_OFFICIAL_ARCHITECTURE/prototype/placement.hpp",
+      "sha256": "200e5127d4f2902e1dbb136f6ad026e0f89de0c1f77842bf1aa1ebe37c1d25a4",
+      "matches_tested_snapshot": true
+    }
+  ],
+  "original_host_source_checkout": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "no_original_assets_or_binaries_added": true,
+  "published_changes_allowed_paths": [
+    "DEVF/CP01_OFFICIAL_ARCHITECTURE/**",
+    ".github/workflows/devf-cp01-official-architecture.yml"
+  ]
+}

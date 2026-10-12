@@ -1,0 +1,27 @@
+PASS ACTR_exact_32_bytes
+PASS canonical_native_name_and_padding
+PASS BE_actor_specific_switch_sentinel
+PASS BE_float_coordinates
+PASS BE_signed_angles
+PASS setID_sentinel
+PASS TGSC_35_wire_bytes_not_cpp_padded_size
+PASS TGSC_preserves_ACTR_prefix
+PASS reject_empty_stage
+PASS reject_long_stage
+PASS reject_noncanonical_stage
+PASS reject_wildcard_room
+PASS reject_outside_room_table
+PASS reject_wildcard_layer
+PASS reject_outside_layer_nibble
+PASS reject_NaN
+PASS reject_infinity
+PASS reject_zero_scale
+PASS reject_ACTR_unencoded_scale
+PASS reject_unknown_record_kind
+PASS direct_definition_null_callback_no_creation
+PASS hard_disarm_no_Stage_registration
+PASS invalid_plan_has_no_side_effects
+PASS module_rejects_missing_host
+PASS module_rejects_other_version
+PASS module_lifecycle_remains_disarmed
+SUMMARY 26 PASS; no host/game/runtime test

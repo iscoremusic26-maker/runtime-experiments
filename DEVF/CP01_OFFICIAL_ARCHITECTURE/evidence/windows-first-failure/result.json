@@ -1,0 +1,75 @@
+{
+  "started_utc": "2026-10-12T16:22:07.671100+00:00",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "workflow_sha": "49c47a80f16f6a2c3ecd2ad9d1b7c2e6fa93e0b0",
+  "run_id": "38276827345",
+  "run_attempt": "1",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "policy": "DISARMED_NO_REGISTRATION",
+  "game_executed": false,
+  "original_host_built": false,
+  "packaged_or_installed": false,
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "D:\\a\\_temp\\devf-architecture-build\\compiler-version.cpp",
+        "/FoD:\\a\\_temp\\devf-architecture-build\\compiler-version.obj"
+      ],
+      "seconds": 4.61,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 1.5,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "D:\\a\\Mods-Duskligh\\Mods-Duskligh\\DEVF\\CP01_OFFICIAL_ARCHITECTURE",
+        "-B",
+        "D:\\a\\_temp\\devf-architecture-build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=D:\\a\\Mods-Duskligh\\Mods-Duskligh\\official"
+      ],
+      "seconds": 9.297,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "D:\\a\\_temp\\devf-architecture-build",
+        "--target",
+        "devf_official_disarmed",
+        "official_placement_lab",
+        "game_abi_surface",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 5.984,
+      "exit": 2
+    }
+  ],
+  "status": "BLOCKED",
+  "ended_utc": "2026-10-12T16:22:29.492931+00:00"
+}

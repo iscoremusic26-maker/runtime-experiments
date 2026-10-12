@@ -68,8 +68,15 @@ def verify(root):
     for relative, pattern in REFERENCES.items():
         path = root / relative
         data = path.read_bytes()
+        blob = subprocess.check_output(["git", "-C", str(root), "show", f"HEAD:{relative}"])
+        normalized = data.replace(b"\r\n", b"\n")
+        if normalized != blob.replace(b"\r\n", b"\n"):
+            raise SystemExit(f"Checkout differs from pinned Git blob beyond EOL: {relative}")
         entries.append({"path": relative, "sha256": hashlib.sha256(data).hexdigest(),
-                        "bytes": len(data), "upstream_url": f"https://github.com/TwilitRealm/dusklight/blob/{ROOT}/{relative}",
+                        "bytes": len(data), "git_blob_sha256": hashlib.sha256(blob).hexdigest(),
+                        "lf_sha256": hashlib.sha256(normalized).hexdigest(),
+                        "checkout_matches_git_blob_after_eol_normalization": True,
+                        "upstream_url": f"https://github.com/TwilitRealm/dusklight/blob/{ROOT}/{relative}",
                         "anchor_lines": [i for i, line in enumerate(data.decode("utf-8").splitlines(), 1)
                                          if re.search(pattern, line)]})
     return {"official_root": head, "aurora": AURORA, "tracked_source_clean": True,

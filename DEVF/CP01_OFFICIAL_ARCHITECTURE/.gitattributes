@@ -1,0 +1,2 @@
+# Preserve downloaded CI evidence byte-for-byte (including CRLF and diagnostic trailing spaces).
+evidence/windows-*/* -text whitespace=-blank-at-eol,-blank-at-eof,cr-at-eol

@@ -1,0 +1,29 @@
+[1/6] Building CXX object CMakeFiles\devf_official_disarmed.dir\prototype\mod.cpp.obj
+[2/6] Building CXX object CMakeFiles\official_placement_lab.dir\prototype\mod.cpp.obj
+[3/6] Building CXX object CMakeFiles\official_placement_lab.dir\prototype\lab.cpp.obj
+[4/6] Linking CXX shared module devf_official_disarmed.dll
+[5/6] Linking CXX executable official_placement_lab.exe
+[6/6] Building CXX object CMakeFiles\game_abi_surface.dir\prototype\game_abi_surface.cpp.obj
+FAILED: [code=2] CMakeFiles/game_abi_surface.dir/prototype/game_abi_surface.cpp.obj 
+"C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe"  /nologo /TP -DAVOID_UB=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -ID:\a\Mods-Duskligh\Mods-Duskligh\official\include -ID:\a\Mods-Duskligh\Mods-Duskligh\official\assets\GZ2E01 -ID:\a\Mods-Duskligh\Mods-Duskligh\official\libs\JSystem\include -ID:\a\Mods-Duskligh\Mods-Duskligh\official\extern\aurora\include\dolphin -ID:\a\Mods-Duskligh\Mods-Duskligh\official\extern\aurora\include -ID:\a\Mods-Duskligh\Mods-Duskligh\official\sdk\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /bigobj /utf-8 /showIncludes /FoCMakeFiles\game_abi_surface.dir\prototype\game_abi_surface.cpp.obj /FdCMakeFiles\game_abi_surface.dir\ /FS -c D:\a\Mods-Duskligh\Mods-Duskligh\DEVF\CP01_OFFICIAL_ARCHITECTURE\prototype\game_abi_surface.cpp
+D:\a\Mods-Duskligh\Mods-Duskligh\official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+D:\a\Mods-Duskligh\Mods-Duskligh\official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+D:\a\Mods-Duskligh\Mods-Duskligh\official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+D:\a\Mods-Duskligh\Mods-Duskligh\official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+D:\a\Mods-Duskligh\Mods-Duskligh\official\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+D:\a\Mods-Duskligh\Mods-Duskligh\official\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+D:\a\Mods-Duskligh\Mods-Duskligh\official\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831): error C2440: '=': cannot convert from 'int' to '_Ty'
+        with
+        [
+            _Ty=std::_Iterator_base12 *
+        ]
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831): note: Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\utility(831): note: the template instantiation context (the oldest one first) is
+C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\include\xmemory(1399): note: see reference to function template instantiation '_Ty *std::exchange<std::_Iterator_base12*,int>(_Ty &,_Other &&) noexcept(false)' being compiled
+        with
+        [
+            _Ty=std::_Iterator_base12 *,
+            _Other=int
+        ]
+ninja: build stopped: subcommand failed.

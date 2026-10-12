@@ -8,6 +8,9 @@
       "path": "sdk/include/mods/svc/actor.h",
       "sha256": "77c180571664dbaa07026bcbf073c0d459cb6e0e7264ddbca6d18770081082e8",
       "bytes": 4295,
+      "git_blob_sha256": "77c180571664dbaa07026bcbf073c0d459cb6e0e7264ddbca6d18770081082e8",
+      "lf_sha256": "77c180571664dbaa07026bcbf073c0d459cb6e0e7264ddbca6d18770081082e8",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/actor.h",
       "anchor_lines": [
         7,
@@ -22,6 +25,9 @@
       "path": "src/dusk/mods/svc/actor.cpp",
       "sha256": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3",
       "bytes": 13601,
+      "git_blob_sha256": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3",
+      "lf_sha256": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp",
       "anchor_lines": [
         40,
@@ -43,6 +49,9 @@
       "path": "sdk/include/mods/svc/stage.h",
       "sha256": "5f580e28394a33631f37b627e83ca3c6b590605939959edbb67ef05e1218465e",
       "bytes": 1557,
+      "git_blob_sha256": "5f580e28394a33631f37b627e83ca3c6b590605939959edbb67ef05e1218465e",
+      "lf_sha256": "5f580e28394a33631f37b627e83ca3c6b590605939959edbb67ef05e1218465e",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h",
       "anchor_lines": [
         10,
@@ -60,6 +69,9 @@
       "path": "src/dusk/mods/svc/stage.cpp",
       "sha256": "3f1ab649cb49f88fc36ac607a203306a794b0e9df888d3e9e5b09498fc7672f3",
       "bytes": 9753,
+      "git_blob_sha256": "3f1ab649cb49f88fc36ac607a203306a794b0e9df888d3e9e5b09498fc7672f3",
+      "lf_sha256": "3f1ab649cb49f88fc36ac607a203306a794b0e9df888d3e9e5b09498fc7672f3",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/stage.cpp",
       "anchor_lines": [
         23,
@@ -88,6 +100,9 @@
       "path": "src/d/d_stage.cpp",
       "sha256": "b946520ed3813852f61bdff284c0c005bd70afcd194439d39c2557a5ef492095",
       "bytes": 121919,
+      "git_blob_sha256": "b946520ed3813852f61bdff284c0c005bd70afcd194439d39c2557a5ef492095",
+      "lf_sha256": "b946520ed3813852f61bdff284c0c005bd70afcd194439d39c2557a5ef492095",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp",
       "anchor_lines": [
         510,
@@ -123,6 +138,9 @@
       "path": "include/d/d_stage.h",
       "sha256": "dc59d4f57374566c29727bbc3eacdeb21d7b998c8e4f1550220cb840738651ab",
       "bytes": 61600,
+      "git_blob_sha256": "dc59d4f57374566c29727bbc3eacdeb21d7b998c8e4f1550220cb840738651ab",
+      "lf_sha256": "dc59d4f57374566c29727bbc3eacdeb21d7b998c8e4f1550220cb840738651ab",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_stage.h",
       "anchor_lines": [
         228,
@@ -151,6 +169,9 @@
       "path": "include/f_pc/f_pc_name.h",
       "sha256": "300ab19ddf7d86a2d2ff8ba894d3185436e68f24fab31ed9da401afece846041",
       "bytes": 28344,
+      "git_blob_sha256": "300ab19ddf7d86a2d2ff8ba894d3185436e68f24fab31ed9da401afece846041",
+      "lf_sha256": "300ab19ddf7d86a2d2ff8ba894d3185436e68f24fab31ed9da401afece846041",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_name.h",
       "anchor_lines": [
         463,
@@ -161,6 +182,9 @@
       "path": "include/f_op/f_op_actor_mng.h",
       "sha256": "67b3551a7386d5337ef1988f57d5c358e7285a2f39edceb9c1701cf99a3b8cc0",
       "bytes": 32083,
+      "git_blob_sha256": "67b3551a7386d5337ef1988f57d5c358e7285a2f39edceb9c1701cf99a3b8cc0",
+      "lf_sha256": "67b3551a7386d5337ef1988f57d5c358e7285a2f39edceb9c1701cf99a3b8cc0",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor_mng.h",
       "anchor_lines": [
         62,
@@ -181,6 +205,9 @@
       "path": "src/f_op/f_op_actor_mng.cpp",
       "sha256": "4c57494d769800ad0a1dbbfc836a265803036fa2e5b1594c5a82e9d799617845",
       "bytes": 84879,
+      "git_blob_sha256": "4c57494d769800ad0a1dbbfc836a265803036fa2e5b1594c5a82e9d799617845",
+      "lf_sha256": "4c57494d769800ad0a1dbbfc836a265803036fa2e5b1594c5a82e9d799617845",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp",
       "anchor_lines": [
         176,
@@ -211,6 +238,9 @@
       "path": "include/f_op/f_op_actor.h",
       "sha256": "45cbac3b60ea9c47d9583d78f813c69ae38437a7c9b2ea28f1c9c3e26392197c",
       "bytes": 15397,
+      "git_blob_sha256": "45cbac3b60ea9c47d9583d78f813c69ae38437a7c9b2ea28f1c9c3e26392197c",
+      "lf_sha256": "45cbac3b60ea9c47d9583d78f813c69ae38437a7c9b2ea28f1c9c3e26392197c",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor.h",
       "anchor_lines": [
         299,
@@ -224,6 +254,9 @@
       "path": "include/SSystem/SComponent/c_cc_d.h",
       "sha256": "b285e1cf5bfa14e659398cf50396d6ad1c58b24a9160d80e6d9a6ff9bda73d2a",
       "bytes": 24351,
+      "git_blob_sha256": "b285e1cf5bfa14e659398cf50396d6ad1c58b24a9160d80e6d9a6ff9bda73d2a",
+      "lf_sha256": "b285e1cf5bfa14e659398cf50396d6ad1c58b24a9160d80e6d9a6ff9bda73d2a",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/SSystem/SComponent/c_cc_d.h",
       "anchor_lines": [
         251,
@@ -236,6 +269,9 @@
       "path": "include/d/d_cc_d.h",
       "sha256": "d50c4ac43efb747004808987fd51cd88972339ee7c73f475131333d007623ced",
       "bytes": 17731,
+      "git_blob_sha256": "d50c4ac43efb747004808987fd51cd88972339ee7c73f475131333d007623ced",
+      "lf_sha256": "d50c4ac43efb747004808987fd51cd88972339ee7c73f475131333d007623ced",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_cc_d.h",
       "anchor_lines": [
         254,
@@ -255,6 +291,9 @@
       "path": "include/d/d_cc_uty.h",
       "sha256": "c5b0a1db7425b69248b13be4ec5998558f11a3d6a8f8bcccfdf051d716bb5c96",
       "bytes": 1161,
+      "git_blob_sha256": "c5b0a1db7425b69248b13be4ec5998558f11a3d6a8f8bcccfdf051d716bb5c96",
+      "lf_sha256": "c5b0a1db7425b69248b13be4ec5998558f11a3d6a8f8bcccfdf051d716bb5c96",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_cc_uty.h",
       "anchor_lines": [
         27,
@@ -266,6 +305,9 @@
       "path": "include/d/actor/d_a_e_rd.h",
       "sha256": "4167ad79147343e23b9c96cc999dd728e888ed8da9a7aa484f08f7ea1eac6416",
       "bytes": 6446,
+      "git_blob_sha256": "4167ad79147343e23b9c96cc999dd728e888ed8da9a7aa484f08f7ea1eac6416",
+      "lf_sha256": "4167ad79147343e23b9c96cc999dd728e888ed8da9a7aa484f08f7ea1eac6416",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_e_rd.h",
       "anchor_lines": [
         17,
@@ -296,6 +338,9 @@
       "path": "src/f_op/f_op_actor.cpp",
       "sha256": "c190ba215061fcbfd71536733a00351c2bad600f1fe0d31d2083e89c60226839",
       "bytes": 20688,
+      "git_blob_sha256": "c190ba215061fcbfd71536733a00351c2bad600f1fe0d31d2083e89c60226839",
+      "lf_sha256": "c190ba215061fcbfd71536733a00351c2bad600f1fe0d31d2083e89c60226839",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp",
       "anchor_lines": [
         443,
@@ -310,6 +355,9 @@
       "path": "src/d/actor/d_a_e_sb.cpp",
       "sha256": "aa28c57615c12153cfc6f00f9acc43ca8d0fced3ecd4bc2ba83cfe99d7e09831",
       "bytes": 36922,
+      "git_blob_sha256": "aa28c57615c12153cfc6f00f9acc43ca8d0fced3ecd4bc2ba83cfe99d7e09831",
+      "lf_sha256": "aa28c57615c12153cfc6f00f9acc43ca8d0fced3ecd4bc2ba83cfe99d7e09831",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_sb.cpp",
       "anchor_lines": [
         68,
@@ -373,6 +421,9 @@
       "path": "include/d/actor/d_a_e_sb.h",
       "sha256": "eee8b56047cb177a78479aaaabf55a6f7937c55a57715ad27bd1b10d43b7840d",
       "bytes": 3532,
+      "git_blob_sha256": "eee8b56047cb177a78479aaaabf55a6f7937c55a57715ad27bd1b10d43b7840d",
+      "lf_sha256": "eee8b56047cb177a78479aaaabf55a6f7937c55a57715ad27bd1b10d43b7840d",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_e_sb.h",
       "anchor_lines": [
         75,
@@ -383,6 +434,9 @@
       "path": "src/d/actor/d_a_e_rd.cpp",
       "sha256": "8ce8b520e06fdb4b76abc62807147e341e7307a3b3b61e2bc1850c4c87194d7d",
       "bytes": 265155,
+      "git_blob_sha256": "8ce8b520e06fdb4b76abc62807147e341e7307a3b3b61e2bc1850c4c87194d7d",
+      "lf_sha256": "8ce8b520e06fdb4b76abc62807147e341e7307a3b3b61e2bc1850c4c87194d7d",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_rd.cpp",
       "anchor_lines": [
         528,
@@ -464,6 +518,9 @@
       "path": "src/d/actor/d_a_disappear.cpp",
       "sha256": "b837e71d02522b88a8d67a0d422eca14c07e63adeb90dd985b35b57a31a0059c",
       "bytes": 4023,
+      "git_blob_sha256": "b837e71d02522b88a8d67a0d422eca14c07e63adeb90dd985b35b57a31a0059c",
+      "lf_sha256": "b837e71d02522b88a8d67a0d422eca14c07e63adeb90dd985b35b57a31a0059c",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_disappear.cpp",
       "anchor_lines": [
         56,
@@ -480,6 +537,9 @@
       "path": "sdk/include/mods/svc/game.h",
       "sha256": "23fbe752be5908b6fe41bae9846c38a058bd6597835c24060d149c6dfdc8f4b9",
       "bytes": 864,
+      "git_blob_sha256": "23fbe752be5908b6fe41bae9846c38a058bd6597835c24060d149c6dfdc8f4b9",
+      "lf_sha256": "23fbe752be5908b6fe41bae9846c38a058bd6597835c24060d149c6dfdc8f4b9",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h",
       "anchor_lines": [
         10,
@@ -492,6 +552,9 @@
       "path": "cmake/GameABIConfig.cmake",
       "sha256": "a4275736a0d6279c8ecadb68a28a894ff37fab13e5ecf14a6c6e450aaaf7c4ab",
       "bytes": 2915,
+      "git_blob_sha256": "a4275736a0d6279c8ecadb68a28a894ff37fab13e5ecf14a6c6e450aaaf7c4ab",
+      "lf_sha256": "a4275736a0d6279c8ecadb68a28a894ff37fab13e5ecf14a6c6e450aaaf7c4ab",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/GameABIConfig.cmake",
       "anchor_lines": [
         7,
@@ -516,6 +579,9 @@
       "path": "cmake/ModSDK.cmake",
       "sha256": "feff2b222ccadaf70b8ef40fad6d0d078d704bee4e9197addb89be4a899148a4",
       "bytes": 25188,
+      "git_blob_sha256": "feff2b222ccadaf70b8ef40fad6d0d078d704bee4e9197addb89be4a899148a4",
+      "lf_sha256": "feff2b222ccadaf70b8ef40fad6d0d078d704bee4e9197addb89be4a899148a4",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/ModSDK.cmake",
       "anchor_lines": [
         173,
@@ -536,6 +602,9 @@
       "path": "sdk/include/mods/svc/resource.h",
       "sha256": "39b0a7ea3621407b18410a4a64d19bca24dd14656a78e7c5258cd16aabbbb55e",
       "bytes": 1786,
+      "git_blob_sha256": "39b0a7ea3621407b18410a4a64d19bca24dd14656a78e7c5258cd16aabbbb55e",
+      "lf_sha256": "39b0a7ea3621407b18410a4a64d19bca24dd14656a78e7c5258cd16aabbbb55e",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/resource.h",
       "anchor_lines": [
         10,
@@ -553,6 +622,9 @@
       "path": "src/dusk/mods/svc/resource.cpp",
       "sha256": "8466235ea6c7487199fd65284be3744594ca1af22871cd8c58d995dd5c65f63c",
       "bytes": 4152,
+      "git_blob_sha256": "8466235ea6c7487199fd65284be3744594ca1af22871cd8c58d995dd5c65f63c",
+      "lf_sha256": "8466235ea6c7487199fd65284be3744594ca1af22871cd8c58d995dd5c65f63c",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/resource.cpp",
       "anchor_lines": [
         21,
@@ -571,6 +643,9 @@
       "path": "sdk/include/mods/svc/host.h",
       "sha256": "453f1fb64b56139f7ec4b7c7a831e849b2ddeb6c7923e4b4d58d9ed418b434b3",
       "bytes": 4729,
+      "git_blob_sha256": "453f1fb64b56139f7ec4b7c7a831e849b2ddeb6c7923e4b4d58d9ed418b434b3",
+      "lf_sha256": "453f1fb64b56139f7ec4b7c7a831e849b2ddeb6c7923e4b4d58d9ed418b434b3",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/host.h",
       "anchor_lines": [
         15,
@@ -595,6 +670,9 @@
       "path": "sdk/include/mods/svc/file.h",
       "sha256": "68804a59f883eea0b945506110543f17e3190a29aaf15ae5d37987ae5404b552",
       "bytes": 4941,
+      "git_blob_sha256": "68804a59f883eea0b945506110543f17e3190a29aaf15ae5d37987ae5404b552",
+      "lf_sha256": "68804a59f883eea0b945506110543f17e3190a29aaf15ae5d37987ae5404b552",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h",
       "anchor_lines": [
         10,
@@ -631,6 +709,9 @@
       "path": "src/dusk/mods/svc/file.cpp",
       "sha256": "cfcca584a737eb9ec0422f2f4b494fbba7b67478076b7c982b819566c792f309",
       "bytes": 23604,
+      "git_blob_sha256": "cfcca584a737eb9ec0422f2f4b494fbba7b67478076b7c982b819566c792f309",
+      "lf_sha256": "cfcca584a737eb9ec0422f2f4b494fbba7b67478076b7c982b819566c792f309",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp",
       "anchor_lines": [
         640,
@@ -644,6 +725,9 @@
       "path": "src/dusk/mods/loader/loader.cpp",
       "sha256": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82",
       "bytes": 45856,
+      "git_blob_sha256": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82",
+      "lf_sha256": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp",
       "anchor_lines": [
         296,
@@ -661,6 +745,9 @@
       "path": "src/dusk/mods/loader/natives.cpp",
       "sha256": "8a033da1c9eb871358c3fd46fc8e47234f78486452dec72a6e13d73d0b6a24b7",
       "bytes": 23567,
+      "git_blob_sha256": "8a033da1c9eb871358c3fd46fc8e47234f78486452dec72a6e13d73d0b6a24b7",
+      "lf_sha256": "8a033da1c9eb871358c3fd46fc8e47234f78486452dec72a6e13d73d0b6a24b7",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp",
       "anchor_lines": [
         563,
@@ -673,6 +760,9 @@
       "path": "sdk/include/mods/svc/texture.h",
       "sha256": "61212d07340898d1426e653f755ced49c0796281fadc15aa4c04c523e22ee255",
       "bytes": 3387,
+      "git_blob_sha256": "61212d07340898d1426e653f755ced49c0796281fadc15aa4c04c523e22ee255",
+      "lf_sha256": "61212d07340898d1426e653f755ced49c0796281fadc15aa4c04c523e22ee255",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/texture.h",
       "anchor_lines": [
         10,
@@ -695,6 +785,9 @@
       "path": "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
       "sha256": "dcd30412703dbecd9efeaf1e7c008312ae820ef67399bf6d22709487cbf525ae",
       "bytes": 4573,
+      "git_blob_sha256": "dcd30412703dbecd9efeaf1e7c008312ae820ef67399bf6d22709487cbf525ae",
+      "lf_sha256": "dcd30412703dbecd9efeaf1e7c008312ae820ef67399bf6d22709487cbf525ae",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
       "anchor_lines": [
         86,
@@ -707,6 +800,9 @@
       "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
       "sha256": "ad8a35fbb089cb35077d57210117bfa552c123dbbb3d907a8362d9398b4ae8e7",
       "bytes": 19036,
+      "git_blob_sha256": "ad8a35fbb089cb35077d57210117bfa552c123dbbb3d907a8362d9398b4ae8e7",
+      "lf_sha256": "ad8a35fbb089cb35077d57210117bfa552c123dbbb3d907a8362d9398b4ae8e7",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
       "anchor_lines": [
         51,
@@ -727,6 +823,9 @@
       "path": "sdk/include/mods/svc/gfx.h",
       "sha256": "b3fb8300f35d5123d4081c43896af4a0d992a5a533faf0998ce169d6725257c2",
       "bytes": 14460,
+      "git_blob_sha256": "b3fb8300f35d5123d4081c43896af4a0d992a5a533faf0998ce169d6725257c2",
+      "lf_sha256": "b3fb8300f35d5123d4081c43896af4a0d992a5a533faf0998ce169d6725257c2",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/gfx.h",
       "anchor_lines": [
         20,
@@ -766,6 +865,9 @@
       "path": "src/dusk/mods/svc/gfx.cpp",
       "sha256": "b6a264c19323d8cfefb5e4af83c3fb76b8913b1f2f390b72d2bbea2add6f6452",
       "bytes": 51699,
+      "git_blob_sha256": "b6a264c19323d8cfefb5e4af83c3fb76b8913b1f2f390b72d2bbea2add6f6452",
+      "lf_sha256": "b6a264c19323d8cfefb5e4af83c3fb76b8913b1f2f390b72d2bbea2add6f6452",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp",
       "anchor_lines": [
         136,
@@ -783,6 +885,9 @@
       "path": "sdk/include/mods/svc/item.h",
       "sha256": "73f268d5c134195b5476c67d1006733effe70895d77cfe19d238ea18ba79f5dc",
       "bytes": 4186,
+      "git_blob_sha256": "73f268d5c134195b5476c67d1006733effe70895d77cfe19d238ea18ba79f5dc",
+      "lf_sha256": "73f268d5c134195b5476c67d1006733effe70895d77cfe19d238ea18ba79f5dc",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h",
       "anchor_lines": [
         10,
@@ -802,6 +907,9 @@
       "path": "sdk/include/mods/svc/ui.h",
       "sha256": "630b49b31f051ef3f7e80eed226bd153586137d4769849d03d891e6399d54034",
       "bytes": 20765,
+      "git_blob_sha256": "630b49b31f051ef3f7e80eed226bd153586137d4769849d03d891e6399d54034",
+      "lf_sha256": "630b49b31f051ef3f7e80eed226bd153586137d4769849d03d891e6399d54034",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/ui.h",
       "anchor_lines": [
         12,
@@ -829,6 +937,9 @@
       "path": "src/dusk/mods/svc/ui.cpp",
       "sha256": "43e8f1c9580fe7791594547f1fd2780b7fe575bb1e99dbcbff23cf1c3996ecfa",
       "bytes": 83053,
+      "git_blob_sha256": "43e8f1c9580fe7791594547f1fd2780b7fe575bb1e99dbcbff23cf1c3996ecfa",
+      "lf_sha256": "43e8f1c9580fe7791594547f1fd2780b7fe575bb1e99dbcbff23cf1c3996ecfa",
+      "checkout_matches_git_blob_after_eol_normalization": true,
       "upstream_url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/ui.cpp",
       "anchor_lines": [
         215,

@@ -1,0 +1,114 @@
+[
+  {
+    "run_id": 38277234930,
+    "artifact_id": 11759173058,
+    "zip_bytes": 8584,
+    "zip_sha256": "09dcc93a116682146c3b4dfffea02c6f4d7a8998ce83e9987544988ac590bd83",
+    "github_digest_match": true,
+    "crc_all_pass": true,
+    "text_only_allowlist_pass": true,
+    "files": [
+      {
+        "path": "build.log",
+        "bytes": 1617,
+        "crc32": "40372a42",
+        "sha256": "90da4955e78469c5903297f31668e21b4373a919cd888fea864f3c3cf882f24a"
+      },
+      {
+        "path": "cmake-version.log",
+        "bytes": 90,
+        "crc32": "688b1b0c",
+        "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+      },
+      {
+        "path": "compiler.log",
+        "bytes": 1261,
+        "crc32": "cfc76e97",
+        "sha256": "f3be4888a9a016bce8d3fcf0943fd272c90d222a0c890f9d11f1f6023cf312dd"
+      },
+      {
+        "path": "configure.log",
+        "bytes": 829,
+        "crc32": "409054ec",
+        "sha256": "3c1506eef5e32b7f5ca3c1c92cd45dab1a2c97502def28a999d64b638c430c17"
+      },
+      {
+        "path": "lab.log",
+        "bytes": 869,
+        "crc32": "32f2cbee",
+        "sha256": "f3ab8f0de2359c3ff71db4309910d4bddbeac3fd29555391eb76b25d97d9e831"
+      },
+      {
+        "path": "module-exports.log",
+        "bytes": 847,
+        "crc32": "99e08701",
+        "sha256": "8f62ad671263215668f00f47260391b09e0d98ebbe8c82b1174555bdd730231b"
+      },
+      {
+        "path": "module-imports.log",
+        "bytes": 2191,
+        "crc32": "c3b23f37",
+        "sha256": "5770b91e8ca8d3dc731b773a26e20da417d5b300d9805ea9ac386a7e20e4b197"
+      },
+      {
+        "path": "result.json",
+        "bytes": 2870,
+        "crc32": "e0f08143",
+        "sha256": "81a90b1b538524d27a5852cd003214b52937aac45b49d7320d6859da51692c8a"
+      },
+      {
+        "path": "source-references.json",
+        "bytes": 20448,
+        "crc32": "ced2814f",
+        "sha256": "ae34126ebc5c3731be94262be1bbf0685c231953959b0554662d37a46fa1f13a"
+      }
+    ]
+  },
+  {
+    "run_id": 38276827345,
+    "artifact_id": 11758848796,
+    "zip_bytes": 6770,
+    "zip_sha256": "2fab3e4646518e843c50b532a24437694174faefd8dcb40bfb6a7ece678b0dd1",
+    "github_digest_match": true,
+    "crc_all_pass": true,
+    "text_only_allowlist_pass": true,
+    "files": [
+      {
+        "path": "build.log",
+        "bytes": 3623,
+        "crc32": "5ae13cb4",
+        "sha256": "2ac87d4ea014d7fd970886180684d312bc6ba23662652a2d79cea806c89a34ea"
+      },
+      {
+        "path": "cmake-version.log",
+        "bytes": 90,
+        "crc32": "688b1b0c",
+        "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+      },
+      {
+        "path": "compiler.log",
+        "bytes": 1261,
+        "crc32": "cfc76e97",
+        "sha256": "f3be4888a9a016bce8d3fcf0943fd272c90d222a0c890f9d11f1f6023cf312dd"
+      },
+      {
+        "path": "configure.log",
+        "bytes": 829,
+        "crc32": "2f370743",
+        "sha256": "8dbb09b3130a477688a84c65f442a911c8de672d1ffd3c323c40c5e9624c462d"
+      },
+      {
+        "path": "result.json",
+        "bytes": 1928,
+        "crc32": "6b1b7fc3",
+        "sha256": "e17516c3c730907d0596552c4d2d993ba605feb5a2e8aff29b8b556548fb8974"
+      },
+      {
+        "path": "source-references.json",
+        "bytes": 18006,
+        "crc32": "09d05481",
+        "sha256": "b451a504ed5a0899e5230466999e6facfdeb70e2e6a591e4c18c7c380923f016"
+      }
+    ]
+  }
+]

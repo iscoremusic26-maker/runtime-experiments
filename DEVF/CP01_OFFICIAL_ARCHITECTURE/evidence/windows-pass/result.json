@@ -1,0 +1,111 @@
+{
+  "started_utc": "2026-10-12T16:25:45.170918+00:00",
+  "platform": "Windows-2025Server-10.0.26100-SP0",
+  "workflow_sha": "a81e0f007bdb310d48cdd6b49c21854957f25df5",
+  "run_id": "38277234930",
+  "run_attempt": "1",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "policy": "DISARMED_NO_REGISTRATION",
+  "game_executed": false,
+  "original_host_built": false,
+  "packaged_or_installed": false,
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "D:\\a\\_temp\\devf-architecture-build\\compiler-version.cpp",
+        "/FoD:\\a\\_temp\\devf-architecture-build\\compiler-version.obj"
+      ],
+      "seconds": 2.422,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.719,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "D:\\a\\Mods-Duskligh\\Mods-Duskligh\\DEVF\\CP01_OFFICIAL_ARCHITECTURE",
+        "-B",
+        "D:\\a\\_temp\\devf-architecture-build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=D:\\a\\Mods-Duskligh\\Mods-Duskligh\\official"
+      ],
+      "seconds": 5.422,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "D:\\a\\_temp\\devf-architecture-build",
+        "--target",
+        "devf_official_disarmed",
+        "official_placement_lab",
+        "game_abi_surface",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 5.5,
+      "exit": 0
+    },
+    {
+      "label": "lab",
+      "command": [
+        "D:\\a\\_temp\\devf-architecture-build\\official_placement_lab.exe"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "D:\\a\\_temp\\devf-architecture-build\\devf_official_disarmed.dll"
+      ],
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "D:\\a\\_temp\\devf-architecture-build\\devf_official_disarmed.dll"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    }
+  ],
+  "status": "PASS",
+  "own_disarmed_dll": {
+    "bytes": 10752,
+    "sha256": "b2381b7bd38e9bcbd2773b586a9e6d0811f35182c59aeda06c50e46e1629ffba",
+    "uploaded": false,
+    "executed_in_game": false
+  },
+  "source_after": true,
+  "lab_summary": "SUMMARY 26 PASS; no host/game/runtime test",
+  "ended_utc": "2026-10-12T16:26:00.350057+00:00"
+}
