@@ -15,7 +15,7 @@ void fpcLy_CreatedMesg(layer_class*){} // Explicit layer bookkeeping adapter.
 void fpcLy_CreatingMesg(layer_class*){}
 void fpcLy_CancelQTo(process_method_tag_class*){}
 int fpcLy_ToCancelQ(layer_class*,process_method_tag_class*){return 1;}
-BOOL fpcDt_Delete(base_process_class*){return processDeleteOK?TRUE:FALSE;} // Explicit process-delete adapter.
+int fpcDt_Delete(void*){return processDeleteOK?TRUE:FALSE;} // Explicit process-delete adapter.
 void cMl::free(void* p){++freed;std::free(p);} // Explicit heap adapter, actually frees allocated requests.
 #include "real_functions.inc"
 static int good(void*){return 1;}static int bad(void*){return 0;}

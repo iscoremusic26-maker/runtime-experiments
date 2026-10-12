@@ -23,7 +23,7 @@ if a.mode=='preflight':
  r=verify_source();r['tools']={}
  for name,cmd in {'cmake':['cmake','--version'],'ninja':['ninja','--version'],'python':['python','--version'],'git':['git','--version'],'sccache':['sccache','--version'],'vcpkg':[str(a.vcpkg/'vcpkg.exe'),'version']}.items():r['tools'][name]=run(cmd)
  r['msvc_banner']=subprocess.run(['cl'],capture_output=True,text=True).stderr.strip();r['msvc_tools_version']=os.getenv('VCToolsVersion');r['windows_sdk_version']=os.getenv('WindowsSDKVersion');r['target_arch']=os.getenv('VSCMD_ARG_TGT_ARCH');assert r['target_arch']=='x64' or r['target_arch']=='amd64'
- write('source-preflight.json',r);print('PATCHED_HOST_PREFLIGHT_PASS exact root/gitlinks and 12 patched hashes; MSVC x64');raise SystemExit(0)
+ write('patched-source-preflight.json',r);print('PATCHED_HOST_PREFLIGHT_PASS exact root/gitlinks and 12 patched hashes; MSVC x64');raise SystemExit(0)
 r={'source_after':None,'source_verification_error':None,'archives':[],'fetched_git_dependencies':[],'installed_host':[],'phases':{},'status':'PATCHED_HOST_BUILD_BLOCKED','engine_execution':'NOT_TESTED','DEVF':'DISARMED_NO_REGISTRATION','patch_applied':True,'collected_at_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
 try:r['source_after']=verify_source()
 except Exception as e:r['source_verification_error']=str(e)
@@ -53,5 +53,22 @@ exe=a.source/'build/install/Dusklight.exe'
 if exe.exists():
  data=exe.read_bytes();assert data[:2]==b'MZ';pe=struct.unpack_from('<I',data,0x3c)[0];assert data[pe:pe+4]==b'PE\0\0';machine=struct.unpack_from('<H',data,pe+4)[0];dll=bool(struct.unpack_from('<H',data,pe+22)[0]&0x2000);assert machine==0x8664 and not dll
  r['installed_host']=[{'path':'build/install/Dusklight.exe','bytes':len(data),'sha256':sha(exe),'machine':'AMD64','dll':dll,'executed':False}]
+# Observe the full generated graph and actual Ninja include dependencies, metadata only.
+commands=build/'compile_commands.json'
+if commands.exists():
+ entries=json.loads(commands.read_text());patched_cpp={x['path'] for x in manifest['files'] if x['path'].endswith('.cpp')}
+ present={x['path']:sum(e['file'].replace('\\','/').endswith('/'+x['path'])for e in entries)for x in manifest['files']if x['path'].endswith('.cpp')}
+ assert all(present.values()),present
+ r['compile_graph']={'translation_units':len(entries),'patched_cpp_entries':present,'headers_recompiled_together':True,'basis':'fresh runner build; Ninja dependency scan below'}
+ if r['phases'].get('build',{}).get('exit_code')==0:
+  deps=run(['ninja','-t','deps'],build);headers={x['path']:[] for x in manifest['files']if not x['path'].endswith('.cpp')};obj=None
+  for line in deps.splitlines():
+   if not line.startswith(' ') and ': #deps 'in line:obj=line.split(': #deps ',1)[0]
+   elif obj:
+    normalized=line.strip().replace('\\','/')
+    for h in headers:
+     if normalized.endswith('/'+h)or normalized==h:headers[h].append(obj)
+  r['compile_graph']['actual_header_consumers']=headers
+  assert all(headers.values()),headers
 if all(r['phases'].get(k,{}).get('exit_code')==0 for k in ['configure','build'])and r['source_after']and r['installed_host']:r['status']='PATCHED_HOST_BUILD_PASS'
 write('integration-result.json',r);print(r['status']+' engine_execution=NOT_TESTED patch_applied=true')
