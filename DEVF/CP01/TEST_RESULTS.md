@@ -45,7 +45,7 @@ Run final 38189000074: seis casos nuevos de propiedad de colisión PASS, sin rep
 | KCL paredes/techos en caja del candidato | PASS separación estática | Solo intersecta dos planos de suelo; no colliders externos |
 | Triggers/volúmenes con contrato identificado | PASS separación acotada | No equivale a ausencia de eventos globales |
 | Rutas/event_list/STB inventario estructural | PASS análisis | Polilínea7 a115.6156; consumidor Digpl usa puntos discretos; efectos de secuencias no certificados |
-| Geometría @bg004d / Obj_Board | NOT_TESTED / BLOCKED_INPUT | Recursos no incluidos |
+| Geometría @bg004d / Obj_Board | PASS estático | Nuevos ARC íntegros;4 ubicaciones y fases evaluadas; runtime NOT_TESTED |
 | Actores vivos, anchura de ruta, scripts y progreso | NOT_VERIFIED | Contexto y evidencia Windows pendientes |
 | Ubicación candidata geométrica | PASS existencia condicionada | Ninguna coordenada aprobada de aparición |
 | DEVF runtime: aparición/render/colisión/cleanup, DX12 | NOT_TESTED | No se ejecutó juego ni activó mod |
@@ -54,3 +54,22 @@ Run final 38189000074: seis casos nuevos de propiedad de colisión PASS, sin rep
 Python estándar, análisis local reproducible (analysis/README). Metadata y referencias exactas en evidence/location-f-sp121-*.json. Sin nuevas suites Windows ni SDK Linux: módulo y política no cambiaron. PASS previos conservados. Los antiguos BLOCKED_ENVIRONMENT de 58c4966 quedan históricos en ese commit.
 
 Comprobación nueva incremental: consumidor ACTR[5]/Digpl y ruta7 PASS por parámetros/fuente; exclusión de sus27 puntos de la caja y radio500 PASS numérico. Mínima distancia caja-punto565.6961. La prueba reutiliza resultados privados sin repetir KCL/WRock/seguridad. Acceso, partículas, puntos usados y otros consumidores NOT_VERIFIED; juego/DX12 NOT_TESTED. Evidencia: location-f-sp121-digpoints.json.
+
+## Incremento extra-collisions desde 0fe4c16
+
+| Comprobación nueva | Estado | Alcance/límite |
+|---|---|---|
+| ZIP real frente a LFS, SHA256 externo | PASS | 19489 bytes, coincide manifiesto privado |
+| Manifiesto interno, tamaños y CRC3 miembros | PASS | @bg004d19385, Obj_Board440; no corrupción detectada |
+| Yaz0/RARC, DZB/BMD/spec y límites | PASS estático | 6 DZB y2 BMD nuevos; modelos S16 y spec interpretados según2.0.3 |
+| Texture-sharing model1→model0 | PASS estático | Mismo nombre TEX1; imagen embebida fuente, sin dependencia geométrica externa |
+| model1.dzb ausente | PASS interpretación de contrato | Opcional, collider roto nulo; no asumir recurso externo |
+| mmvbg3 ubicaciones: colisión/cilindro/modelos | PASS separación estática | Switches29/120/122, intacto/roto; no engine ejecución |
+| ClearB02, escala(10,1,6), pitch90 | PASS separación estática | Matriz final y carga inicial; switch255 devuelveFALSE |
+| Efectos globales partículas/sonido y progreso | NOT_VERIFIED | IDs identificados, sin datos/ejecución que certifiquen alcance o cero interferencia |
+| Digpl/KCL/WRock anteriores | CONSERVED | No reejecutados;27 puntos y565.6961 intactos |
+| Ubicación segura completa | NOT_VERIFIED | Contexto Windows, contacto/pendiente y efectos/acceso pendientes |
+| Mod runtime/render/colisión/cleanup/DX12 | NOT_TESTED | Ningún TEST activado |
+| Unload / CP02 | BLOCKED / NO-GO | Auditoría previa conservada, sin nueva investigación |
+
+Ver metadata extra-collisions-verification.json, hashes/líneas en extra-collisions-source-references.json y herramienta location_extra_collisions.py. Solo cálculos estructurales/geométricos nuevos con Python estándar; ninguna compilación o suite anterior repetida. Los recursos originales nunca entran en Git/artefactos del repositorio principal.

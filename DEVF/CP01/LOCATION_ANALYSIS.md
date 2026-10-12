@@ -75,7 +75,7 @@ Se usan contratos específicos: scnChg (75/150×escala), noChgRm (100/1000 segú
 
 No son radios universales de seguridad. KY_chg stage tipo 4 llama lógica ambiental global; no se considera inocuo por distancia.
 
-mmvbg común más cercano: centro a 4062.1080, parámetro 0x1fe0004d. getArcName resuelve **@bg004d**, cuyo spec.dat puede crear actor secundario/modelo/colisión. ARC ausente. ClearB capa 6: centro a 4078.1925; necesita **Obj_Board.arc**. Parámetro 0xff41 selecciona ClearB02.dzb y escala adicional XZ. Cull box no certifica collider ausente; distancias al centro no prueban exclusión de ambas geometrías.
+mmvbg común más cercano: centro a 4062.1080, parámetro 0x1fe0004d. getArcName resuelve **@bg004d**, cuyo spec.dat puede crear actor secundario/modelo/colisión. ARC ausente en el checkpoint anterior; ahora analizado en la sección incremental siguiente. ClearB capa 6: centro a 4078.1925; necesita **Obj_Board.arc**. Parámetro 0xff41 selecciona ClearB02.dzb y escala adicional XZ. El checkpoint anterior no certificaba collider por cull box/distancia al centro. La nueva revisión utiliza ambas DZB reales y transformaciones de carga/ejecución.
 
 Hay enemigos, vegetación, items y otros actores en capa 6: no se aplica patch/delete/replace a ninguno. Home positions no acreditan posiciones actuales o zonas barridas; tampoco incluyen creaciones de scripts/mods.
 
@@ -91,7 +91,7 @@ R_Gate depende también de M_RGate00.arc y switches/evento de escolta; faltan AR
 
 **Pendiente para seguridad:** región/plataforma, mods/overlays, progreso/Twilight/override; Player Info y Terrain/Trigger View del punto/candidato; lista completa pos/angle/list con perfiles/posiciones; salida/reentrada sin DEVF. Llegar caminando si accesible, sin teleport/spawn/flags ni activar DEVF.
 
-Completar colisiones próximas con copias de solo lectura de /res/Object/@bg004d.arc y /res/Object/Obj_Board.arc y SHA256 en repositorio privado. M_RGate00.arc permite completar dependencias puerta/evento si se pretende acreditar su interacción. Si nombres difieren, enviar listado/capitalización real. No ROM completa ni save; no volver a pedir STG/R03/WRock ya verificados.
+Las copias @bg004d.arc y Obj_Board.arc y sus hashes ya se recibieron y verificaron; no volver a solicitarlas. Ambas colisiones externas quedan resueltas estáticamente en esta revisión. M_RGate00.arc permite completar dependencias puerta/evento si se pretende acreditar su interacción. Si nombres difieren, enviar listado/capitalización real. No ROM completa ni save; no volver a pedir STG/R03/WRock ya verificados.
 
 Ruta 7: consumidor Digpl identificado; falta estado de puntos usados e interacción de excavación/acceso en Windows, y excluir otros consumidores si se pretende garantía global. Además verificar contacto sobre pendiente antes de aprobar escala 1. Capturas sin actor no certifican render/colisión DEVF: requerirán prueba posterior autorizada y barrera host resuelta.
 
@@ -101,7 +101,7 @@ Reproducción: analysis/README.md. Metadata derivada: evidence/location-f-sp121-
 
 ## Continuación incremental: consumidor Digpl de ruta 7
 
-Se recuperaron todos los resultados y se publicaron inmediatamente en 9224e1c / DEVF_CP01_LOCATION_F_SP121_REVIEW, comprobados por fetch desde GitHub. No se perdieron KCL/PLC, geometría, hashes o scripts; no hubo reconstrucción/repetición de esos análisis. Main del repositorio privado sigue conteniendo únicamente el ZIP F_SP121 y manifiesto nuevos, junto con los insumos originales: @bg004d.arc, Obj_Board.arc y M_RGate00.arc continúan ausentes.
+Se recuperaron todos los resultados y se publicaron inmediatamente en 9224e1c / DEVF_CP01_LOCATION_F_SP121_REVIEW, comprobados por fetch desde GitHub. No se perdieron KCL/PLC, geometría, hashes o scripts; no hubo reconstrucción/repetición de esos análisis. Estado histórico en 0fe4c16: faltaban @bg004d.arc, Obj_Board.arc y M_RGate00.arc. La subida9f95a34 aporta los dos primeros; no se reabre aquí la dependencia de puerta M_RGate00.
 
 Nuevo hallazgo dirigido: ACTR común [5] es Digpl, parámetro 0xf07ff5ff. create() de daObjDigpl_c extrae tipo inicial5 y route=(param>>20)&0xff=7. Desactiva NOEXEC y obtiene dPath_GetRoomPath(7,room3). No depende de seleccionar ACT0; es registro común, aunque flags/carga real siguen pendientes. Switch=0xff no es un veto de aparición por switch en ese código.
 
@@ -112,3 +112,63 @@ El punto más próximo a la envolvente conjunta del candidato es índice8=(-4000
 La medida conservada **115.6156** sigue siendo distancia a segmentos unidos de RPAT, pero **no es una distancia de actor barrido para este consumidor**. Se confirma un consumidor; no se afirma que sea el único posible ni se sustituye por una garantía dinámica global. No se modifica la roca ni se inventa otro lugar. Candidato condicionado y NO-GO permanecen por geometrías externas, contexto/contacto runtime y unload independiente.
 
 Ver evidence/location-f-sp121-digpoints.json y analysis/location_digpoints.py. Esta prueba nueva reutiliza inventory/footprint privados ya calculados y solo analiza el pendiente de puntos de ruta; no ejecuta geometría, host, MSVC o suites de seguridad anteriores. La recuperación final es DEVF_CP01_LOCATION_DIGPOINTS_REVIEW, sin mover el tag del primer checkpoint.
+
+## Revisión incremental de colisiones externas desde 0fe4c16
+
+### Integridad y estructuras — PASS estático
+
+Se recibió main privado en 9f95a34d93810b55250e8b833a2e343757cf8a01 mediante Cloud/Git/LFS. DEVF_CP01_EXTRA_COLLISIONS.zip tiene19489 bytes, firma ZIP real (no puntero LFS), SHA256 **2a4d3e4cbf90d97fd6603f284a826849f37d1c5849ef817e46e9ec1da1011c44**, coincidente con CP01_EXTRA_ZIP_SHA256SUMS.txt. Manifiesto interno y tamaños declarados coinciden; tres miembros pasan CRC32.
+
+| Miembro | Original / comprimido ZIP (bytes) | CRC32 | SHA256 |
+|---|---|---|---|
+| @bg004d.arc | 19385 /18576 | 23549750 | 5c0dc254e5bb4c19a8a44712a89f910c5c1f6b4129b6e87676be7af6cdd46a6a |
+| Obj_Board.arc | 440 /443 | bdc000d2 | dcdbd1e63de5ee0ed485705d00a42119e912bff6e1036341dd65b4fce4b98453 |
+| CP01_EXTRA_SHA256SUMS.txt | 160 /122 | 3c40951c | 17235121a0ddb9abd439833d6c69bc83d5fe0a7b239aa536d498e91281b24caa |
+
+Los ARC son Yaz0/RARC válidos: @bg004d descomprime25056 bytes y Obj_Board2176. Se validan límites de tablas/payloads, indices DZB, grupos identidad, secciones BMD, positions packed S16 y límites de spec/texture-sharing. Los modelos nuevos usan GX_S16 con fracciones5/7; no se fuerza el parser F32 del WRock previamente analizado. No hubo fallo de integridad ni dato original modificado.
+
+@bg004d contiene model0.bmd12864, model1.bmd10656, model0.dzb832 y spec.dat148. Model0:77 posiciones, un joint identidad, TEX1 con imagen128×128 embebida; model1:236 posiciones, un joint identidad y TEX1 sin imagen. spec referencia model1→model0; nombres de textura coinciden conforme a setupShareTexture. No es una textura de ARC externo ni de stage. Model0 DZB tiene13 vértices,22 triángulos,3 grupos y1 atributo; límites locales X[-300,300],Y[0,600],Z[-193.190002,146.380005].
+
+Obj_Board contiene cinco DZB clearb00..04,352 bytes cada una; cada una tiene4 vértices/2 triángulos y límites locales X/Z[-50,50],Y=0. Se valida también el recurso seleccionado02. No BMD, scripts ni referencias a otra geometría. ClearB01 tiene grupo de agua; no se confunde con la variante02 usada. CArcName normaliza nombres solicitados a minúsculas: ClearB02 resuelve clearb02.
+
+### mmvbg → BG_OBJ, estados e interacciones
+
+Se reutilizan los registros del análisis anterior: ACTR[16],[19],[20], todos param0x1fe0004d. getArcName usa16 bits bajos→@bg004d; spec type1 hace que el actor intermediario SET_BG_OBJ solicite BG_OBJ. Pasa position/angle/scale del registro; no se crea ningún actor en esta revisión.
+
+BG_OBJ copia home.angle.x/z como argumentos y switches, y pone pitch/roll a0. Las rotaciones de registro (-1,yaw,-227/-136/-134) **no son inclinaciones de geometría**. initBaseMtx usa traslación y yaw; escala de estos ACTR por defecto(1,1,1). Las tres yaw efectivas:2730,15473,-11832. No movimiento espacial interpolado en el Execute de este tipo: retorna mBgMtx. Se modela geometría en su posición de carga; overlays/intervenciones ajenas siguen sin verificar.
+
+Spec type1/flags0x0002 selecciona cilindro objetivo. Antes de destruir: model0 y model0.dzb. Switches primarios de z:29,120,122; secundarios0xff; arg0=0xff; eventId=(param>>21)&0xff=0xff. checkDestroy acepta ataques bomba/bola de hierro según su contrato y permite cambiar estado/switch. En estado roto usa model1 y retira model0.dzb. **model1.dzb no está presente y CreateHeapType1 solo lo carga si existe**: la colisión rota es nula, no una referencia geométrica externa pendiente. No inventar un model1.dzb.
+
+Cilindro de golpe: radio305.246277, altura601.649231, derivados del joint/model0 mediante settingCullSizeBoxForCo y set_cyl_0. Se comprobó también su separación XZ. initAtt crea Tag_Attp: campos por defecto producen arg0=arg1=3, que deshabilitan lock-on en execute de ese helper para ambas ramas de switch. No se ignora esa creación secundaria ni se usa la distancia al actor intermediario como certificado del BG_OBJ vivo.
+
+Spec incluye seis partículas globales0x89c2..89c7 y sonido0x80016 al destruir, con particle model number0; no se toma la ruta Always/BreakWoodBox.bmd. Sus recursos globales y extensión de efectos no vienen en estos ARC; **NOT_VERIFIED** para cero efectos visuales/sonoros o interacción runtime. No constituyen una geometría externa referenciada en spec. EventId0xff evita orderOtherEventId en esa rama; hay cambios de switch originales y no se declaran irrelevantes para progreso.
+
+### ClearB — transformación y carga
+
+Registro SCO6[3],param0xff41: nameArg1 escala X/Z×10; arg0=4 selecciona ClearB02; switch255. Escala de registro(1,1,0.6) queda(10,1,6). setBaseMtx ejecuta T·Ry·Rx·Rz·S con pitch16384=90°, yaw-30037, roll0. El plano local horizontal se vuelve pared vertical, Y[-6700,-6100]. La caja de cull no se usó para inferir estos límites: se transformaron los4 vértices reales.
+
+MoveBGCreate comienza con matriz de yaw y escala de registro antes de Create; esa geometría inicial también se evaluó por separado. Después de Create/MoveBGExecute usa la matriz completa anterior. Arg0=4 registra cuando isSwitch es falso; dSv_info_c::isSwitch(255,room) retorna FALSE. Por tanto, bajo estas APIs/parámetros, la pared queda registrada; no se necesita editar flags ni suponer switch255 activo/inactivo. No hay eventos o geometría secundaria solicitados por esta variante.
+
+### Separación del candidato — PASS estático acotado
+
+Se reutiliza, sin recalcular KCL/WRock/Digpl, la envolvente conjunta ya publicada: X[-5057.382091,-4565.696056],Y[-6729.480961,-6300.077611],Z[64726.434759,65451.237829]. Candidato, yaw0 y escala1 intactos. Transformación usa orden fuente y cuantización JMath de8192 muestras; trigonometría/cálculos locales aproximan la tabla float, sin ejecutar el host. Se conserva margen numérico1 unidad, muy inferior a separaciones.
+
+| Instancia / estado | Separación mínima conservadora entre AABB (unidades) | Triángulos intersectando caja |
+|---|---|---|
+| mmvbg ACTR[16] intacto | 3343.5612 | 0 |
+| mmvbg ACTR[19] intacto | 21191.1170 | 0 |
+| mmvbg ACTR[20] intacto | 22147.6549 | 0 |
+| ClearB SCO6[3], matriz final | 3242.7126 | 0 |
+| ClearB, fase inicial de carga | 3677.0939 | 0 |
+
+La separación AABB es cota inferior a la distancia real, no distancia exacta entre superficies. SAT triángulo/caja corrobora cero intersecciones. Los cilindros objetivo mmvbg tienen márgenes XZ3422.1526,21197.3085,22230.1631. Cajas de ambos modelos intacto/roto también quedan separadas; estado roto no tiene DZB. Ambas geometrías aportadas no alcanzan la caja ni la vertical del candidato en estos estados/transformaciones: no introducen un suelo alternativo bajo él. No hay que descartar o mover el candidato por estas dos colisiones.
+
+### Qué se cierra y qué sigue pendiente
+
+**Cerrado estáticamente:** dependencia de geometría @bg004d/Obj_Board; formatos, selección/transformaciones/estados de las4 ubicaciones y exclusión de sus colisiones/cilindros. No se precisan otros ARC para completar la geometría directa de estas dos familias. La dependencia de puerta M_RGate00, previamente documentada, no se analiza en esta tarea.
+
+**Ubicación segura: NOT_VERIFIED**, no aprobada ni descartada. Persisten contexto región/plataforma, mods/overlays, progreso/Twilight/layer override y evidencia Windows sin DEVF: Player Info/colisión/triggers, lista de actores reales y salida/reentrada. Contacto de roca sobre pendiente, efectos, acceso a puntos Digpl, cámara y progreso no se certifican estáticamente. Digpl conserva27 puntos discretos y separación565.6961: no se repitió su análisis ni se reinterpretó115.6156 como trayectoria barrida.
+
+**Runtime del mod/DX12: NOT_TESTED. Unload: BLOCKED, sin reinvestigar. CP02: NO-GO.** DISARMED_NO_REGISTRATION intacto; sin registros, TEST activo, host modificado, recompilación o suites anteriores. Siguiente paso mínimo para ubicación: capturas/contexto/listado baseline desde Windows con las vistas nativas ya documentadas, sin instalar/activar DEVF. No pedir de nuevo estos dos ARC. Ni esta separación ni las capturas resuelven el bloqueo independiente de DLL.
+
+Reproducción nueva: analysis/location_extra_collisions.py --inputs <repositorio privado> --prior <directorio privado previo>, con DEVF_CP01_LOCATION_WORK fuera del repositorio de código. Reutiliza los JSON anteriores y solo decodifica el nuevo ZIP. Metadata derivada y referencias fuente: evidence/extra-collisions-verification.json y extra-collisions-source-references.json. Recursos permanecen privados; nuevo checkpoint DEVF_CP01_EXTRA_COLLISIONS_REVIEW.

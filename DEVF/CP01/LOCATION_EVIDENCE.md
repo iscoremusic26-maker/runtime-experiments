@@ -2,7 +2,7 @@
 
 La revisión desde 58c4966 recuperó el ZIP completo por Git LFS y verificó CRC, tamaños y hashes. STG_00.arc, R03_00.arc y WRock.arc ya están analizados: no volver a solicitarlos. LOCATION_ANALYSIS.md contiene el candidato geométrico condicionado, los resultados y límites. Seguridad de ubicación aún NOT_APPROVED; unload bloqueado; DISARMED_NO_REGISTRATION intacto.
 
-Evidencia adicional concreta: Player Info/colisión/triggers, lista completa de actores, contexto y salida/reentrada; copias privadas de @bg004d.arc y Obj_Board.arc, y M_RGate00.arc para completar puerta/evento si corresponde. No instalar DEVF ni activar apariciones. Las instrucciones de consulta nativa siguientes siguen siendo válidas.
+Evidencia adicional concreta: Player Info/colisión/triggers, lista completa de actores, contexto y salida/reentrada; los dos ARC externos ya recibidos no se vuelven a solicitar; M_RGate00.arc queda como dependencia de puerta preexistente, fuera de la revisión de estas dos colisiones. No instalar DEVF ni activar apariciones. Las instrucciones de consulta nativa siguientes siguen siendo válidas.
 
 ## Guía histórica de captura y solicitudes anteriores
 
@@ -83,3 +83,9 @@ Con esa evidencia se podrán cotejar capa, geometría/huella de Wrock, suelo/alt
 El fallo previo de entorno queda superado. Integridad y análisis estático ahora PASS en el alcance de LOCATION_ANALYSIS.md. Stage/room/layer/XYZ observados se conservan como datos del usuario; candidato calculado es solo análisis. No son PASS de juego o prueba de seguridad universal.
 
 Actualización incremental de recuperación: 9224e1c publicado y recuperado de GitHub conserva todo el estudio. El consumidor Digpl de ruta7 usa puntos discretos; su punto más próximo queda a565.6961 de caja del modelo, fuera de radio500. La medida115.6156 a segmentos se conserva sin interpretarla como actor barrido. Geometrías externas/contexto runtime pendientes; DISARMED_NO_REGISTRATION y unload/CP02 NO-GO intactos. Checkpoint final DEVF_CP01_LOCATION_DIGPOINTS_REVIEW.
+
+## Nuevos recursos externos ya verificados
+
+Subida privada9f95a34: DEVF_CP01_EXTRA_COLLISIONS.zip y manifiesto externo, archivos completos por LFS, tamaños/CRC/SHA256 y estructuras PASS. @bg004d.arc19385 y Obj_Board.arc440 están analizados; no volver a solicitarlos. Evidencia derivada: extra-collisions-verification.json. El estado roto de @bg004d no tiene DZB opcional; no pedir model1.dzb como dependencia externa inexistente.
+
+Siguiente evidencia mínima: versión/región/plataforma, mods/overlays, contexto progreso/Twilight/override y Player Info/colisión/triggers del candidato, lista completa de actores/posiciones y observación salida/reentrada baseline. Solo vistas/comandos de consulta ya documentados: sin DEVF, spawn, teleport, edición de flags o partida. Colisiones externas excluidas estáticamente; ubicación completa NOT_VERIFIED; mod/DX12 NOT_TESTED; unload BLOCKED/CP02 NO-GO.

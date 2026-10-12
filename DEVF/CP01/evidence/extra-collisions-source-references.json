@@ -1,0 +1,269 @@
+{
+  "source": "exact Dusklight2.0.3 preserved source; only external-actor contracts inspected",
+  "files": [
+    {
+      "file": "src/d/actor/d_a_set_bgobj.cpp",
+      "sha256": "d9811c90eebb969471bee3476e444312dab76527806af49eed068aab60529deb",
+      "anchors": [
+        {
+          "text": "int daSetBgObj_c::CreateInit()",
+          "line": 14
+        },
+        {
+          "text": "int daSetBgObj_c::create()",
+          "line": 26
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_com_static.cpp",
+      "sha256": "664f0617a2d5d8658fce858dbe1de4665b618cdc1383bf428965d7a0dbe0612e",
+      "anchors": [
+        {
+          "text": "const char* daSetBgObj_c::getArcName",
+          "line": 349
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_bg_obj.cpp",
+      "sha256": "a60b7325544e42c9303baf51f59408d136fbd7aeebf5f82ef22b1493c1affceb",
+      "anchors": [
+        {
+          "text": "bool daBgObj_c::spec_data_c::Set",
+          "line": 122
+        },
+        {
+          "text": "void daBgObj_c::initAtt()",
+          "line": 281
+        },
+        {
+          "text": "void daBgObj_c::initBaseMtx()",
+          "line": 344
+        },
+        {
+          "text": "int daBgObj_c::CreateInitType1()",
+          "line": 449
+        },
+        {
+          "text": "int daBgObj_c::CreateHeapType1()",
+          "line": 586
+        },
+        {
+          "text": "void daBgObj_c::doShareTexture()",
+          "line": 646
+        },
+        {
+          "text": "int daBgObj_c::create1st()",
+          "line": 686
+        },
+        {
+          "text": "void daBgObj_c::set_cyl_0()",
+          "line": 776
+        },
+        {
+          "text": "void daBgObj_c::setParticle()",
+          "line": 881
+        },
+        {
+          "text": "BOOL daBgObj_c::checkDestroy()",
+          "line": 989
+        },
+        {
+          "text": "BOOL daBgObj_c::checkHitAt(",
+          "line": 1008
+        },
+        {
+          "text": "int daBgObj_c::actionOrder()",
+          "line": 1170
+        },
+        {
+          "text": "int daBgObj_c::Execute(Mtx**",
+          "line": 1264
+        }
+      ]
+    },
+    {
+      "file": "include/d/actor/d_a_bg_obj.h",
+      "sha256": "6e0552320963fd03715be809b449bec4430cb4fe370bee24fda00a40bb88298d",
+      "anchors": [
+        {
+          "text": "inline u8 getEvId",
+          "line": 121
+        },
+        {
+          "text": "inline u8 getSwBit",
+          "line": 125
+        },
+        {
+          "text": "inline u8 getObjArg0",
+          "line": 133
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_obj_cboard.cpp",
+      "sha256": "04a7225fb9e3bcbadb677ac658c4be06af8b45aed05dff86f0480354d2608665",
+      "anchors": [
+        {
+          "text": "void daObjBoard_c::setBaseMtx()",
+          "line": 16
+        },
+        {
+          "text": "int daObjBoard_c::Create()",
+          "line": 34
+        },
+        {
+          "text": "int daObjBoard_c::create1st()",
+          "line": 52
+        },
+        {
+          "text": "int daObjBoard_c::Execute(Mtx**",
+          "line": 88
+        }
+      ]
+    },
+    {
+      "file": "include/d/actor/d_a_obj_cboard.h",
+      "sha256": "3adfc7231530437b28d92ca87fdca8b71e17791faff2b04a623099acfaa255ef",
+      "anchors": [
+        {
+          "text": "u8 getNameArg()",
+          "line": 27
+        },
+        {
+          "text": "u8 getArg0()",
+          "line": 28
+        },
+        {
+          "text": "u8 getSwNo()",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_bg_s_movebg_actor.cpp",
+      "sha256": "88a468871441f64fb2830f30f64133bb597f20f8314e05cf4fd4aa06e13f9d46",
+      "anchors": [
+        {
+          "text": "int dBgS_MoveBgActor::MoveBGCreateHeap()",
+          "line": 60
+        },
+        {
+          "text": "int dBgS_MoveBgActor::MoveBGCreate(",
+          "line": 88
+        },
+        {
+          "text": "int dBgS_MoveBgActor::MoveBGExecute()",
+          "line": 138
+        }
+      ]
+    },
+    {
+      "file": "src/m_Do/m_Do_mtx.cpp",
+      "sha256": "c16c15ed9c78e78116f88f0672035c6436ae9ba3187ee203d40e94d62c040ada",
+      "anchors": [
+        {
+          "text": "void mDoMtx_ZXYrotM(",
+          "line": 95
+        }
+      ]
+    },
+    {
+      "file": "libs/JSystem/include/JSystem/JMath/JMATrigonometric.h",
+      "sha256": "2287b3e0854c5e470e2522a17c8fc5398683484db3bcf1c674b72614cbb70547",
+      "anchors": [
+        {
+          "text": "T sinShort(s16",
+          "line": 51
+        },
+        {
+          "text": "TSinCosTable<13, f32> sincosTable_",
+          "line": 144
+        }
+      ]
+    },
+    {
+      "file": "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
+      "sha256": "96752c654eebb3d9d245520d8e526002822f79d648f1dd1d739dddaad37456a9",
+      "anchors": [
+        {
+          "text": "JKRArchive::SDIFileEntry* JKRArchive::findNameResource",
+          "line": 178
+        },
+        {
+          "text": "void JKRArchive::CArcName::store(const char* name)",
+          "line": 226
+        }
+      ]
+    },
+    {
+      "file": "libs/JSystem/src/J3DGraphLoader/J3DModelLoader.cpp",
+      "sha256": "1155063cd83b756b24e01022a22aa453a0980228479416414b2eabd8b61294f4",
+      "anchors": [
+        {
+          "text": "auto StrideForData(",
+          "line": 483
+        },
+        {
+          "text": "void J3DModelLoader::readVertexData(",
+          "line": 531
+        }
+      ]
+    },
+    {
+      "file": "libs/JSystem/include/JSystem/JUtility/JUTTexture.h",
+      "sha256": "c54b532130545c11fe51e020cc6e92eafd8d4ad3d177d85dd6842f90b2a0a010",
+      "anchors": [
+        {
+          "text": "struct ResTIMG",
+          "line": 20
+        }
+      ]
+    },
+    {
+      "file": "src/m_Do/m_Do_ext.cpp",
+      "sha256": "8c96e7e5d27dbfef2c7c84094f4a9e2b143670f9cdbb55fb252331660a352582",
+      "anchors": [
+        {
+          "text": "void mDoExt_setupShareTexture(",
+          "line": 594
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_tag_attention.cpp",
+      "sha256": "d51c7bbd0a583dc98bdf460c9191b7805ceec319b56b61cdadceda5d08f5f2d1",
+      "anchors": [
+        {
+          "text": "int daAttp_c::execute()",
+          "line": 123
+        }
+      ]
+    },
+    {
+      "file": "include/d/actor/d_a_tag_attention.h",
+      "sha256": "7d40d35b16b4790d025b5e3be107d86c737c0fc41c5d2fc3c8012ca811947364",
+      "anchors": [
+        {
+          "text": "static inline u8 getArg0(",
+          "line": 38
+        },
+        {
+          "text": "static inline u8 getArg1(",
+          "line": 41
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_save.cpp",
+      "sha256": "a0879dd588c119b9cccd72cda2c6c1e7ee35ba1487581321363626b625ad19b1",
+      "anchors": [
+        {
+          "text": "BOOL dSv_info_c::isSwitch(",
+          "line": 1621
+        }
+      ]
+    }
+  ]
+}

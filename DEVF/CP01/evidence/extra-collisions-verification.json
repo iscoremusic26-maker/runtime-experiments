@@ -1,0 +1,1198 @@
+{
+  "zip_size": 19489,
+  "zip_sha256": "2a4d3e4cbf90d97fd6603f284a826849f37d1c5849ef817e46e9ec1da1011c44",
+  "integrity": "PASS",
+  "input_commit": "9f95a34d93810b55250e8b833a2e343757cf8a01",
+  "members": [
+    {
+      "name": "@bg004d.arc",
+      "size": 19385,
+      "compressed_size": 18576,
+      "crc32": "23549750",
+      "sha256": "5c0dc254e5bb4c19a8a44712a89f910c5c1f6b4129b6e87676be7af6cdd46a6a"
+    },
+    {
+      "name": "Obj_Board.arc",
+      "size": 440,
+      "compressed_size": 443,
+      "crc32": "bdc000d2",
+      "sha256": "dcdbd1e63de5ee0ed485705d00a42119e912bff6e1036341dd65b4fce4b98453"
+    },
+    {
+      "name": "CP01_EXTRA_SHA256SUMS.txt",
+      "size": 160,
+      "compressed_size": 122,
+      "crc32": "3c40951c",
+      "sha256": "17235121a0ddb9abd439833d6c69bc83d5fe0a7b239aa536d498e91281b24caa"
+    }
+  ],
+  "archives": {
+    "@bg004d.arc": {
+      "compression": "Yaz0",
+      "decoded_size": 25056,
+      "files": [
+        {
+          "index": 5,
+          "id": 5,
+          "path": "bmdr/model0.bmd",
+          "size": 12864,
+          "sha256": "fbfc6a5dab47ce806287f55b6911b4ff2403a388902c7e277d93b1de66d0d186",
+          "model": {
+            "vertex_count": 77,
+            "position_type": "S16",
+            "fractional_bits": 5,
+            "position_bounds": [
+              [
+                -303.40625,
+                0.0,
+                -197.40625
+              ],
+              [
+                305.21875,
+                601.625,
+                150.03125
+              ]
+            ],
+            "joint_count": 1,
+            "joint_identity": true,
+            "joint_bounds": [
+              [
+                -303.4259338378906,
+                -9.999999974752427e-07,
+                -197.43521118164062
+              ],
+              [
+                305.24627685546875,
+                601.6492309570312,
+                150.04812622070312
+              ]
+            ],
+            "textures": [
+              {
+                "name": "I_rock00",
+                "width": 128,
+                "height": 128,
+                "format": "GX_TF_CMPR",
+                "mipmap_count": 1,
+                "image_offset": 32,
+                "embedded_image": true
+              }
+            ],
+            "sections": {
+              "INF1": 64,
+              "VTX1": 1248,
+              "EVP1": 32,
+              "DRW1": 32,
+              "JNT1": 128,
+              "SHP1": 1888,
+              "MAT3": 1152,
+              "TEX1": 8288
+            }
+          }
+        },
+        {
+          "index": 6,
+          "id": 6,
+          "path": "bmdr/model1.bmd",
+          "size": 10656,
+          "sha256": "64c130b275b6986246af949e5e8c122fda64e4e474b2415996dbe58b1553a918",
+          "model": {
+            "vertex_count": 236,
+            "position_type": "S16",
+            "fractional_bits": 7,
+            "position_bounds": [
+              [
+                -165.4453125,
+                -53.34375,
+                -168.6015625
+              ],
+              [
+                162.8671875,
+                18.6015625,
+                132.9375
+              ]
+            ],
+            "joint_count": 1,
+            "joint_identity": true,
+            "joint_bounds": [
+              [
+                -165.44566345214844,
+                -53.34398651123047,
+                -168.60157775878906
+              ],
+              [
+                162.8723602294922,
+                18.60420799255371,
+                132.9451446533203
+              ]
+            ],
+            "textures": [
+              {
+                "name": "I_rock00",
+                "width": 128,
+                "height": 128,
+                "format": "GX_TF_CMPR",
+                "mipmap_count": 1,
+                "image_offset": 0,
+                "embedded_image": false
+              }
+            ],
+            "sections": {
+              "INF1": 64,
+              "VTX1": 3904,
+              "EVP1": 32,
+              "DRW1": 32,
+              "JNT1": 128,
+              "SHP1": 5216,
+              "MAT3": 1152,
+              "TEX1": 96
+            }
+          }
+        },
+        {
+          "index": 9,
+          "id": 9,
+          "path": "dzb/model0.dzb",
+          "size": 832,
+          "sha256": "5e66671757fdcfbff86e39d79d4647f4d1d15f0094bbce79ecfc7d49af496c58",
+          "collision": {
+            "vertices": 13,
+            "triangles": 22,
+            "groups": [
+              {
+                "index": 0,
+                "name": "K_rock02",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 65535,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 1,
+                "name": "A00",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 0,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 2,
+                "name": "YojiKinsi_KageNuke_00",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 1,
+                "room": 65535,
+                "info": "0xff"
+              }
+            ],
+            "info_count": 1,
+            "flags": 0,
+            "bounds": [
+              [
+                -300.0,
+                0.0,
+                -193.19000244140625
+              ],
+              [
+                300.0,
+                600.0,
+                146.3800048828125
+              ]
+            ]
+          }
+        },
+        {
+          "index": 12,
+          "id": 12,
+          "path": "spec/spec.dat",
+          "size": 148,
+          "sha256": "cf275d89f0e76141dcd36501a3cd5026365399fe3049a57c6203ca7b9a7e87ca",
+          "spec": {
+            "type": 1,
+            "flags": "0x2",
+            "target_shape": 2,
+            "attention_fields": [
+              0,
+              0,
+              0
+            ],
+            "extra_target_flag": 0,
+            "particle_ids": [
+              "0x89c2",
+              "0x89c3",
+              "0x89c4",
+              "0x89c5",
+              "0x89c6",
+              "0x89c7"
+            ],
+            "particle_model_numbers": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "sound_ids": [
+              "0x80016"
+            ],
+            "texture_shares": [
+              {
+                "target": "model1.bmd",
+                "source": "model0.bmd"
+              }
+            ],
+            "blocks": [
+              {
+                "type": 1,
+                "offset": 4,
+                "decoded_length": 100
+              },
+              {
+                "type": 2,
+                "offset": 104,
+                "decoded_length": 8
+              },
+              {
+                "type": 3,
+                "offset": 112,
+                "decoded_length": 30
+              }
+            ],
+            "terminator_offset": 142
+          }
+        }
+      ]
+    },
+    "Obj_Board.arc": {
+      "compression": "Yaz0",
+      "decoded_size": 2176,
+      "files": [
+        {
+          "index": 3,
+          "id": 3,
+          "path": "dzb/clearb00.dzb",
+          "size": 352,
+          "sha256": "301855d4f2e3d22c29ee987cd8c5328cac93cd90647936f9e85c957d379636b4",
+          "collision": {
+            "vertices": 4,
+            "triangles": 2,
+            "groups": [
+              {
+                "index": 0,
+                "name": "K_size_cube01",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 65535,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 1,
+                "name": "A00",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 0,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 2,
+                "name": "mdl",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 1,
+                "room": 65535,
+                "info": "0xff"
+              }
+            ],
+            "info_count": 1,
+            "flags": 0,
+            "bounds": [
+              [
+                -50.0,
+                0.0,
+                -50.0
+              ],
+              [
+                50.0,
+                0.0,
+                50.0
+              ]
+            ]
+          }
+        },
+        {
+          "index": 4,
+          "id": 4,
+          "path": "dzb/clearb01.dzb",
+          "size": 352,
+          "sha256": "b0021d8ae5bf395a3373331791e73b363e7d9ffe99c6ad3120914be559e5b498",
+          "collision": {
+            "vertices": 4,
+            "triangles": 2,
+            "groups": [
+              {
+                "index": 0,
+                "name": "K_size_cube01",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 65535,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 1,
+                "name": "Water_00",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 0,
+                "room": 65535,
+                "info": "0x1ff"
+              },
+              {
+                "index": 2,
+                "name": "mdl",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 1,
+                "room": 65535,
+                "info": "0x1ff"
+              }
+            ],
+            "info_count": 1,
+            "flags": 0,
+            "bounds": [
+              [
+                -50.0,
+                0.0,
+                -50.0
+              ],
+              [
+                50.0,
+                0.0,
+                50.0
+              ]
+            ]
+          }
+        },
+        {
+          "index": 5,
+          "id": 5,
+          "path": "dzb/clearb02.dzb",
+          "size": 352,
+          "sha256": "733ccb5376d4a82312e1507362dcfd3491e8dc076c589e87b17394328c217f5a",
+          "collision": {
+            "vertices": 4,
+            "triangles": 2,
+            "groups": [
+              {
+                "index": 0,
+                "name": "K_size_cube01",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 65535,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 1,
+                "name": "A00",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 0,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 2,
+                "name": "mdl",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 1,
+                "room": 65535,
+                "info": "0xff"
+              }
+            ],
+            "info_count": 1,
+            "flags": 0,
+            "bounds": [
+              [
+                -50.0,
+                0.0,
+                -50.0
+              ],
+              [
+                50.0,
+                0.0,
+                50.0
+              ]
+            ]
+          }
+        },
+        {
+          "index": 6,
+          "id": 6,
+          "path": "dzb/clearb03.dzb",
+          "size": 352,
+          "sha256": "ca45f7ac4ba008d4e905fea1b8536593185a98f0fb3b67e561b06dd646adc518",
+          "collision": {
+            "vertices": 4,
+            "triangles": 2,
+            "groups": [
+              {
+                "index": 0,
+                "name": "K_size_cube01",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 65535,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 1,
+                "name": "A00",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 0,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 2,
+                "name": "mdl",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 1,
+                "room": 65535,
+                "info": "0xff"
+              }
+            ],
+            "info_count": 1,
+            "flags": 0,
+            "bounds": [
+              [
+                -50.0,
+                0.0,
+                -50.0
+              ],
+              [
+                50.0,
+                0.0,
+                50.0
+              ]
+            ]
+          }
+        },
+        {
+          "index": 7,
+          "id": 7,
+          "path": "dzb/clearb04.dzb",
+          "size": 352,
+          "sha256": "4c547a1d7a3851a4f95b8f1dfd09e54ef18de5f61b9fd05b2aff86d71e74236c",
+          "collision": {
+            "vertices": 4,
+            "triangles": 2,
+            "groups": [
+              {
+                "index": 0,
+                "name": "K_size_cube01",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 65535,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 1,
+                "name": "A00",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 0,
+                "room": 65535,
+                "info": "0xff"
+              },
+              {
+                "index": 2,
+                "name": "mdl",
+                "scale": [
+                  1.0,
+                  1.0,
+                  1.0
+                ],
+                "angle": [
+                  0,
+                  0,
+                  0
+                ],
+                "translation": [
+                  0.0,
+                  0.0,
+                  0.0
+                ],
+                "parent": 1,
+                "room": 65535,
+                "info": "0xff"
+              }
+            ],
+            "info_count": 1,
+            "flags": 0,
+            "bounds": [
+              [
+                -50.0,
+                0.0,
+                -50.0
+              ],
+              [
+                50.0,
+                0.0,
+                50.0
+              ]
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "instances": [
+    {
+      "chunk": "ACTR",
+      "index": 16,
+      "name": "mmvbg",
+      "parameters": "0x1fe0004d",
+      "position": [
+        -8640.0,
+        -6700.0,
+        66480.0
+      ],
+      "stored_angles": [
+        -1,
+        2730,
+        -227
+      ],
+      "switch": 29,
+      "secondary_switch": 255,
+      "object_arg0": 255,
+      "event_id": 255,
+      "state0_collision": "model0.dzb",
+      "state1_collision": "NONE: optional model1.dzb absent",
+      "physics": {
+        "world_bounds": [
+          [
+            -8979.75113134361,
+            -6700.0,
+            66215.80838667112
+          ],
+          [
+            -8312.352626705633,
+            -6100.0,
+            66698.97353139007
+          ]
+        ],
+        "axis_gaps_xyz": [
+          3254.9705352505553,
+          0,
+          764.570557667219
+        ],
+        "aabb_distance_lower_bound": 3343.5611738086754,
+        "triangle_box_intersections": 0
+      },
+      "target_cylinder": {
+        "radius": 305.24627685546875,
+        "height": 601.6492309570312,
+        "gap_xz": 3422.1526396947024
+      },
+      "attention_helper": "Tag_Attp; arg0=3 and arg1=3 disable lock-on flags",
+      "render_state_boxes": [
+        {
+          "world_bounds": [
+            [
+              -8984.158248353193,
+              -6700.000001,
+              66210.35100842491
+            ],
+            [
+              -8306.336291636595,
+              -6098.350769042969,
+              66703.40275797197
+            ]
+          ],
+          "axis_gaps_xyz": [
+            3248.954200181517,
+            0,
+            759.1131794210087
+          ]
+        },
+        {
+          "world_bounds": [
+            [
+              -8843.414842275793,
+              -6753.3439865112305,
+              66275.01798548004
+            ],
+            [
+              -8448.290705764392,
+              -6681.395792007446,
+              66651.20357066863
+            ]
+          ],
+          "axis_gaps_xyz": [
+            3390.9086143093136,
+            0,
+            823.7801564761321
+          ]
+        }
+      ],
+      "effective_angles": [
+        0,
+        2730,
+        0
+      ],
+      "effective_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chunk": "ACTR",
+      "index": 19,
+      "name": "mmvbg",
+      "parameters": "0x1fe0004d",
+      "position": [
+        -13892.1923828125,
+        -4945.51123046875,
+        45122.7109375
+      ],
+      "stored_angles": [
+        -1,
+        15473,
+        -136
+      ],
+      "switch": 120,
+      "secondary_switch": 255,
+      "object_arg0": 255,
+      "event_id": 255,
+      "state0_collision": "model0.dzb",
+      "state1_collision": "NONE: optional model1.dzb absent",
+      "physics": {
+        "world_bounds": [
+          [
+            -14110.84202521226,
+            -4945.51123046875,
+            44806.98657130998
+          ],
+          [
+            -13720.173915313062,
+            -4345.51123046875,
+            45434.347595576415
+          ]
+        ],
+        "axis_gaps_xyz": [
+          8662.791823857984,
+          1354.5663801614755,
+          19292.08716335913
+        ],
+        "aabb_distance_lower_bound": 21191.116992277937,
+        "triangle_box_intersections": 0
+      },
+      "target_cylinder": {
+        "radius": 305.24627685546875,
+        "height": 601.6492309570312,
+        "gap_xz": 21197.308467904386
+      },
+      "attention_helper": "Tag_Attp; arg0=3 and arg1=3 disable lock-on flags",
+      "render_state_boxes": [
+        {
+          "world_bounds": [
+            [
+              -14115.370187994895,
+              -4945.51123146875,
+              44801.38962105365
+            ],
+            [
+              -13716.061672925309,
+              -4343.861999511719,
+              45438.08076238822
+            ]
+          ],
+          "axis_gaps_xyz": [
+            8658.679581470231,
+            1354.5663791614752,
+            19288.353996547325
+          ]
+        },
+        {
+          "world_bounds": [
+            [
+              -14074.597503238036,
+              -4998.8552169799805,
+              44945.73755604893
+            ],
+            [
+              -13745.532196550448,
+              -4926.907022476196,
+              45299.134074567315
+            ]
+          ],
+          "axis_gaps_xyz": [
+            8688.15010509537,
+            1301.222393650245,
+            19427.30068436823
+          ]
+        }
+      ],
+      "effective_angles": [
+        0,
+        15473,
+        0
+      ],
+      "effective_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chunk": "ACTR",
+      "index": 20,
+      "name": "mmvbg",
+      "parameters": "0x1fe0004d",
+      "position": [
+        -25837.037109375,
+        -5384.1259765625,
+        56005.734375
+      ],
+      "stored_angles": [
+        -1,
+        -11832,
+        -134
+      ],
+      "switch": 122,
+      "secondary_switch": 255,
+      "object_arg0": 255,
+      "event_id": 255,
+      "state0_collision": "model0.dzb",
+      "state1_collision": "NONE: optional model1.dzb absent",
+      "physics": {
+        "world_bounds": [
+          [
+            -26096.505819720136,
+            -5384.1259765625,
+            55652.192305983386
+          ],
+          [
+            -25535.145820358342,
+            -4784.1259765625,
+            56339.49006926759
+          ]
+        ],
+        "axis_gaps_xyz": [
+          20477.763728903265,
+          915.9516340677255,
+          8386.944689667958
+        ],
+        "aabb_distance_lower_bound": 22147.65486367094,
+        "triangle_box_intersections": 0
+      },
+      "target_cylinder": {
+        "radius": 305.24627685546875,
+        "height": 601.6492309570312,
+        "gap_xz": 22230.163145876086
+      },
+      "attention_helper": "Tag_Attp; arg0=3 and arg1=3 disable lock-on flags",
+      "render_state_boxes": [
+        {
+          "world_bounds": [
+            [
+              -26101.278261259693,
+              -5384.1259775625,
+              55647.293048330226
+            ],
+            [
+              -25529.080930025808,
+              -4782.476745605469,
+              56345.795120142255
+            ]
+          ],
+          "axis_gaps_xyz": [
+            20471.69883857073,
+            915.9516330677252,
+            8380.639638793291
+          ]
+        },
+        {
+          "world_bounds": [
+            [
+              -26027.454674438122,
+              -5437.4699630737305,
+              55784.52851696695
+            ],
+            [
+              -25615.39284974035,
+              -5365.521768569946,
+              56209.53630762101
+            ]
+          ],
+          "axis_gaps_xyz": [
+            20558.010758285272,
+            862.6076475564951,
+            8516.898451314533
+          ]
+        }
+      ],
+      "effective_angles": [
+        0,
+        -11832,
+        0
+      ],
+      "effective_scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "chunk": "SCO6",
+      "index": 3,
+      "name": "ClearB",
+      "parameters": "0xff41",
+      "position": [
+        -8650.0,
+        -6400.0,
+        66500.0
+      ],
+      "stored_angles": [
+        16384,
+        -30037,
+        0
+      ],
+      "variant": "clearb02.dzb",
+      "switch": 255,
+      "condition": "arg0=4, switch255: dSv_info_c::isSwitch returns FALSE; registered",
+      "physics": {
+        "world_bounds": [
+          [
+            -9132.995986938477,
+            -6700.0,
+            66370.71396410465
+          ],
+          [
+            -8167.004013061523,
+            -6100.0,
+            66629.28603589535
+          ]
+        ],
+        "axis_gaps_xyz": [
+          3109.6219216064455,
+          0,
+          919.4761351007473
+        ],
+        "aabb_distance_lower_bound": 3242.7125772037166,
+        "triangle_box_intersections": 0
+      },
+      "initial_load_physics": {
+        "world_bounds": [
+          [
+            -8706.056760847569,
+            -6400.0,
+            66458.09163719416
+          ],
+          [
+            -8593.943239152431,
+            -6400.0,
+            66541.90836280584
+          ]
+        ],
+        "axis_gaps_xyz": [
+          3536.5611476973536,
+          0,
+          1006.8538081902516
+        ],
+        "aabb_distance_lower_bound": 3677.0938718599004,
+        "triangle_box_intersections": 0
+      },
+      "effective_angles": [
+        16384,
+        -30037,
+        0
+      ],
+      "effective_scale": [
+        10.0,
+        1.0,
+        6.0
+      ]
+    }
+  ],
+  "policy": "DISARMED_NO_REGISTRATION",
+  "runtime_game": "NOT_TESTED",
+  "safe_location": "NOT_VERIFIED",
+  "host_unload_barrier": "BLOCKED_UNCHANGED",
+  "cp02": "NO_GO",
+  "dependencies": {
+    "texture_sharing": [
+      {
+        "target": "model1.bmd",
+        "source": "model0.bmd"
+      }
+    ],
+    "texture_name_match": "I_rock00",
+    "missing_optional_broken_collision": "model1.dzb",
+    "broken_collision_is_absent_not_external_reference": true,
+    "external_geometry_references": [],
+    "global_particle_ids": [
+      "0x89c2",
+      "0x89c3",
+      "0x89c4",
+      "0x89c5",
+      "0x89c6",
+      "0x89c7"
+    ],
+    "global_sound_ids": [
+      "0x80016"
+    ],
+    "particle_model_dependency": false,
+    "global_effects_extent": "NOT_VERIFIED"
+  },
+  "reused_digpl_distance": 565.6960562988279,
+  "candidate_box": [
+    [
+      -5057.382091455078,
+      -6729.480961460304,
+      64726.434758935546
+    ],
+    [
+      -4565.696056298828,
+      -6300.0776106302255,
+      65451.237829003905
+    ]
+  ],
+  "static_collision_separation": "PASS four placements, all modeled switch states",
+  "numeric_scope": "double calculations; quantized JMath angle grid and rounded sin/cos; not engine execution",
+  "numeric_margin_units": 1,
+  "base_checkpoint": "0fe4c16e6f2c3b34a1a1e95c1fc47efab55ba54c",
+  "reused_inputs": "prior private inventory/footprint/Digpl JSON; original ARC integrity, KCL/PLC, WRock and Digpl not re-executed"
+}
