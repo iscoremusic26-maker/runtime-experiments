@@ -1,0 +1,45 @@
+{
+  "name": "DEVF_CP01_G2_READ_ONLY_windows-amd64_b3ed281cbcb5934b7a8bd7d78b5adcef19b09ad2.dusk",
+  "bytes": 9930,
+  "sha256": "a2baea22c9c28aa519d8bf339e9920f8609d14460ac7bc77c3dba9f94b1cf30c",
+  "compiled_main_commit": "b3ed281cbcb5934b7a8bd7d78b5adcef19b09ad2",
+  "private_ci_head": "2e1cee42c7f3799a4671bee457ce442c6cc6026c",
+  "workflow_run_id": "38302076854",
+  "generated_utc": "2026-10-12T20:07:59.283461+00:00",
+  "status": "G2_PACKAGE_READY_FOR_USER_REVIEW",
+  "execution_authorized": false,
+  "dll_sha256": "1f7821cf05cacf7b0621fcdd782ef55f05e300b5a3be20e90394e7414c30ead9",
+  "module_id": "dev.devf.a1_readonly_preflight",
+  "module_version": "0.0.2",
+  "runtime": "NOT_VERIFIED",
+  "package_members": [
+    {
+      "path": "mod.json",
+      "directory": false,
+      "bytes": 318,
+      "crc32": "0f9d57c1",
+      "sha256": "f8e6a556bd86187d7994690fad9881cfb61f1deeaae3b95b1b1fbe148cc914fd"
+    },
+    {
+      "path": "lib/",
+      "directory": true,
+      "bytes": 0,
+      "crc32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "lib/windows-amd64/",
+      "directory": true,
+      "bytes": 0,
+      "crc32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "lib/windows-amd64/mod.dll",
+      "directory": false,
+      "bytes": 18432,
+      "crc32": "1834c627",
+      "sha256": "1f7821cf05cacf7b0621fcdd782ef55f05e300b5a3be20e90394e7414c30ead9"
+    }
+  ]
+}

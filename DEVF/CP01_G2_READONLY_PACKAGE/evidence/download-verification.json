@@ -1,0 +1,174 @@
+{
+  "status": "PASS_STATIC",
+  "run_id": 38302076854,
+  "job_id": 114987154136,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38302076854",
+  "artifact_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38302076854/artifacts/11771626280",
+  "text_artifact": {
+    "id": 11771686151,
+    "bytes": 10196,
+    "sha256": "e2c15672b693000bf29899b41268245ebc4de4868ae7850acb45956ff9eee317"
+  },
+  "package_artifact": {
+    "id": 11771626280,
+    "bytes": 10628,
+    "sha256": "a0c1533e1a2b1808df3af5b93729fd1fb733f09250e74d34d4147700758b2182",
+    "name": "DEVF_CP01_G2_READ_ONLY_windows-amd64_b3ed281cbcb5934b7a8bd7d78b5adcef19b09ad2",
+    "expires_utc": "2026-10-26T20:08:01Z",
+    "authenticated_github_download_verified": true
+  },
+  "github_digests_match": true,
+  "outer_and_inner_crc_pass": true,
+  "download_manifests_identical": true,
+  "downloaded_dusk": {
+    "name": "DEVF_CP01_G2_READ_ONLY_windows-amd64_b3ed281cbcb5934b7a8bd7d78b5adcef19b09ad2.dusk",
+    "bytes": 9930,
+    "sha256": "a2baea22c9c28aa519d8bf339e9920f8609d14460ac7bc77c3dba9f94b1cf30c",
+    "compiled_main_commit": "b3ed281cbcb5934b7a8bd7d78b5adcef19b09ad2",
+    "private_ci_head": "2e1cee42c7f3799a4671bee457ce442c6cc6026c",
+    "workflow_run_id": "38302076854",
+    "generated_utc": "2026-10-12T20:07:59.283461+00:00",
+    "status": "G2_PACKAGE_READY_FOR_USER_REVIEW",
+    "execution_authorized": false,
+    "dll_sha256": "1f7821cf05cacf7b0621fcdd782ef55f05e300b5a3be20e90394e7414c30ead9",
+    "module_id": "dev.devf.a1_readonly_preflight",
+    "module_version": "0.0.2",
+    "runtime": "NOT_VERIFIED",
+    "package_members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 318,
+        "crc32": "0f9d57c1",
+        "sha256": "f8e6a556bd86187d7994690fad9881cfb61f1deeaae3b95b1b1fbe148cc914fd"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 18432,
+        "crc32": "1834c627",
+        "sha256": "1f7821cf05cacf7b0621fcdd782ef55f05e300b5a3be20e90394e7414c30ead9"
+      }
+    ]
+  },
+  "all_packaged_members_verified": true,
+  "downloaded_dll_pe_audit_identical": true,
+  "compiled_own_files_lf_identical": [
+    "src/core.cpp",
+    "src/core.hpp",
+    "src/mod.cpp",
+    "src/native_reader.cpp",
+    "tests/fake_reader.cpp",
+    "tests/lab.cpp",
+    "ci/audit.py",
+    "ci/collect_review.py",
+    "ci/run_windows.py",
+    "ci/verify_package.py",
+    "ci/verify_review.py",
+    "ci/windows-package.yml",
+    "CMakeLists.txt",
+    "observer.json"
+  ],
+  "native_files_copied_to_git": false,
+  "dll_or_game_executed": false,
+  "text_files": [
+    {
+      "path": "build.log",
+      "bytes": 2406,
+      "crc32": "fa3890f7",
+      "sha256": "e4d7eae8cea6e61f3a62c61ae4e07fd9ff2cc1239047ab0a9d3e102e9664ad31"
+    },
+    {
+      "path": "cmake-version.log",
+      "bytes": 90,
+      "crc32": "688b1b0c",
+      "sha256": "f46066af33a13476fb604a1a1a24bb8d4dbddb6eb5855e0c24f9f7132784c9f0"
+    },
+    {
+      "path": "compiler.log",
+      "bytes": 1261,
+      "crc32": "cfc76e97",
+      "sha256": "f3be4888a9a016bce8d3fcf0943fd272c90d222a0c890f9d11f1f6023cf312dd"
+    },
+    {
+      "path": "configure.log",
+      "bytes": 823,
+      "crc32": "991b3338",
+      "sha256": "a7caa4bc5d7a8683046d6adfc4cc7bf7756024196434989d263a28380262a815"
+    },
+    {
+      "path": "DOWNLOAD_MANIFEST.json",
+      "bytes": 1565,
+      "crc32": "f2657b74",
+      "sha256": "c074fcc92761a080c9601273b186261eab2333211417d59c7a56d4411fbc0b43"
+    },
+    {
+      "path": "guard-hidden-mutation.log",
+      "bytes": 165,
+      "crc32": "55d4484a",
+      "sha256": "66303f92b2c6d36197582eaced39dca7285fdaeecd04e8574f7f0740fe93e12e"
+    },
+    {
+      "path": "guard-hidden-spawn.log",
+      "bytes": 165,
+      "crc32": "55d4484a",
+      "sha256": "66303f92b2c6d36197582eaced39dca7285fdaeecd04e8574f7f0740fe93e12e"
+    },
+    {
+      "path": "guard-mutation.log",
+      "bytes": 165,
+      "crc32": "7949744e",
+      "sha256": "cde675abc3eb6a8b143366a82cabdd6628a2e72555bd5435e519e75dae883b12"
+    },
+    {
+      "path": "guard-positive.log",
+      "bytes": 11,
+      "crc32": "511d2133",
+      "sha256": "1397fdaa24b39cc0424500c3f61ea79dc1339e7c2b0c25f171fd24d5221aac2e"
+    },
+    {
+      "path": "lab.log",
+      "bytes": 1821,
+      "crc32": "3713a8c0",
+      "sha256": "39f79e028d059d756d300c68436982fc263471d6de929598deef0bcdb1e8b115"
+    },
+    {
+      "path": "module-exports.log",
+      "bytes": 829,
+      "crc32": "fecf5cad",
+      "sha256": "d828583c2330eb6ab62e96afb49cff04a98a7657903693fb58ff9e90324be8ba"
+    },
+    {
+      "path": "module-imports.log",
+      "bytes": 3274,
+      "crc32": "ebf71203",
+      "sha256": "e6465ccf0ee478271f446bc90420992fa6c7a277a9cfe55d44e28f2a30f4954b"
+    },
+    {
+      "path": "package.log",
+      "bytes": 150,
+      "crc32": "b58049ed",
+      "sha256": "42d1b83978a540ab79e1bfc673d332d1c281811c911bb7017d6695f3822f64a9"
+    },
+    {
+      "path": "result.json",
+      "bytes": 14825,
+      "crc32": "ef9f6bba",
+      "sha256": "f12288da897bdc4d657d32c4e8285d520eecbd8db451410d5f7bb80d1e3c515b"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[1/11] Building CXX object CMakeFiles\devf_a1_observer.dir\src\core.cpp.obj
+[2/11] Building CXX object CMakeFiles\devf_a1_observer.dir\src\mod.cpp.obj
+[3/11] Building CXX object CMakeFiles\devf_a1_observer.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\.official\sdk\src\game_feature.cpp.obj
+[4/11] Building CXX object CMakeFiles\a1_observer_lab.dir\tests\lab.cpp.obj
+[5/11] Building CXX object CMakeFiles\devf_a1_observer.dir\src\native_reader.cpp.obj
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+D:\a\codex-cp00-inputs\codex-cp00-inputs\.official\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[6/11] Building CXX object CMakeFiles\a1_observer_lab.dir\tests\fake_reader.cpp.obj
+[7/11] Building CXX object CMakeFiles\a1_observer_lab.dir\src\mod.cpp.obj
+[8/11] Building CXX object CMakeFiles\a1_observer_lab.dir\src\core.cpp.obj
+[9/11] Building CXX object CMakeFiles\a1_observer_lab.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\.official\sdk\src\game_feature.cpp.obj
+[10/11] Linking CXX shared module devf_a1_observer.dll
+[11/11] Linking CXX executable a1_observer_lab.exe
