@@ -1,6 +1,6 @@
 # Ubicación — bloqueo preciso y evidencia mínima Windows
 
-## Qué permiten los archivos actuales
+## Inventario histórico de insumos anteriores (checkpoint 1dd539d)
 Inventario dirigido, sin repetir CP00: los dos ZIP no contienen .dzs, .dzr, .arc, .dzb ni .bmd de juego. assets/ contiene 14879 archivos: 14876 encabezados .h, 2 PNG y 1 SVG. WRock.h define índices BMD=4 y DZB=7, pero no su geometría. No hay suelo, volúmenes de eventos, actores de sala ni modelo/collider binarios con los que validar el punto. Detalle y referencias en evidence/targeted-source-audit.json.
 
 El demo oficial especifica F_SP108/room 0/layer -1 y posición (-14324, 0, 341). Esto es un candidato de referencia, no una ubicación declarada segura. Su aparición se registra por add_actor, no prueba ausencia de eventos, espacio suficiente ni disponibilidad de Wrock en la instalación.
@@ -69,3 +69,25 @@ Copiar y completar valores observados, dejando desconocidos como null:
 ```
 
 Con esa evidencia se podrán cotejar capa, geometría/huella de Wrock, suelo/altura, actores existentes y volúmenes/scripts, y limitar una prueba a ese estado de escena. Las capturas no sustituyen los binarios para una auditoría exhaustiva ni las pruebas de aparición/colisión posteriores. Resolver la ubicación no resuelve por sí solo la barrera de descarga del host.
+
+## Revisión de evidencia F_SP121 — 2026-10-11 (America/Panama)
+
+Base: `DEVF_CP01_SAFETY_REVIEW`, commit `1dd539d96750130c4b59344437ec2d6ad6479b58`. Esta revisión es documental y está incompleta por indisponibilidad del entorno; no es un PASS de análisis de assets.
+
+El usuario adjuntó `DEVF_CP01_EVIDENCIA_F_SP121.zip` y declara que contiene `STG_00.arc`, `R03_00.arc`, `WRock.arc` y `SHA256SUMS.txt`, extraídos de su CISO. Los nombres y contenidos son declarados, no inventariados por esta revisión. Se conserva la capitalización indicada; no se ha confirmado el nombre interno de recurso ni su resolución en el loader.
+
+| Dato | Valor comunicado por el usuario |
+|---|---|
+| Versión / backend | Dusklight 2.0.3 / DX12 |
+| Zona | Hyrule Field, antes del puente hacia Kakariko |
+| Stage / Room | F_SP121 / 3 |
+| Layer efectivo / Entry | 6 / -4 |
+| XYZ | (-4056.7346, -6717.1538, 65135.8281) |
+| Ángulo s16 | -24697 |
+| Actores listados | 120 |
+
+Estos datos son un punto de observación del jugador comunicado en chat, no coordenadas aprobadas de aparición de dvfrock. Entry -4 no se convierte en Layer; la capa efectiva comunicada es 6. El número 120 no aporta nombres, posiciones, parámetros, capas ni estado de actores.
+
+El entorno falló durante su aprovisionamiento (`connector_failed`); una actualización posterior informó fallo al consultar capacidades del executor. La llamada de descarga del adjunto devolvió `download_file requires a ready execution workspace`. No se leyeron bytes del ZIP ni de SHA256SUMS.txt. CRC, tamaños y SHA256: **NOT_VERIFIED**; no se afirma corrupción ni integridad. Fuente exacta 2.0.3 y herramientas binarias: no ejecutadas en esta revisión. No se ha comprobado geometría, suelo, colisiones, actores, eventos, triggers, capas internas ni recursos WRock.
+
+**Resultado: LOCATION BLOCKED / NOT_VERIFIED. No hay ubicación candidata fundamentada por esta revisión.** Véase LOCATION_ANALYSIS.md para límites y trabajo pendiente. El bloqueo independiente de unload continúa. Política `DISARMED_NO_REGISTRATION`, NO-GO para TEST de actor y CP02.

@@ -3,7 +3,7 @@ Resultados originales 16 PASS/build Windows conservados en tag DEVF_CP01 (092c1e
 
 | Área | Estado actual | Evidencia/límite |
 |---|---|---|
-| Binarios de escenario/suelo/modelo disponibles | BLOCKED | Inventario: cero .dzs/.dzr/.arc/.dzb/.bmd en los ZIP; assets son encabezados e imágenes |
+| Binarios de escenario/suelo/modelo | NOT_VERIFIED en revisión F_SP121 | Inventario histórico: ausentes en ZIP del host; nuevo adjunto declarado por usuario, bytes inaccesibles |
 | Stage/room/layer/XYZ seguros | NOT_VERIFIED | Referencia demo no acredita suelo/eventos; guía LOCATION_EVIDENCE lista capturas y archivos exactos |
 | Funciones de cierre exactas del host | PASS auditoría/reproducción acotada | Cinco cuerpos sin modificar compilados con colas/slots/backends simulados; hashes en exact-host-functions.json |
 | Guardas de activación antes de registro | PASS laboratorio | Falta de cada requisito/default no produce llamadas de registro; cierre repetido sin ownership |
@@ -30,3 +30,18 @@ Run de recursos/cierre 38187694002: 14 casos nuevos + 9 regresiones afectadas PA
 Compilador MSVC 19.51.36260.0 / Windows SDK 10.0.26100.0, x64 RelWithDebInfo. Warnings originales de headers/placement new se conservan en logs, no se ocultan ni se convierten en prueba de recuperación de excepción de constructor. Ver safety-review-build-and-tests.log; los hashes binarios finales están en collision-review-verification.json.
 
 Run final 38189000074: seis casos nuevos de propiedad de colisión PASS, sin repetir las suites 14/9/16. Ver collision-review-build-and-tests.log y collision-review-verification.json. El laboratorio usa una tabla simulada para demostrar la política; no certifica la ejecución del adaptador cBgS en una sala real. Total de esta revisión: 20 casos nuevos distintos y nueve regresiones afectadas.
+
+## Revisión F_SP121: comprobaciones nuevas
+
+| Comprobación | Resultado | Límite |
+|---|---|---|
+| Lectura de cuatro informes base por GitHub | PASS documental | Ref 1dd539d; no ejecución del código |
+| Descarga del ZIP adjunto | BLOCKED_ENVIRONMENT | download_file exige workspace listo; entorno failed |
+| CRC ZIP, tamaños y SHA256 contra manifiesto | NOT_VERIFIED | No se leyeron bytes ni manifiesto |
+| Geometría/suelo/colisiones y huella WRock | NOT_ANALYZED | Sin extracción ni parseo |
+| Actores/eventos/triggers/capas | NOT_ANALYZED | 120 es solo el conteo comunicado |
+| Análisis mediante fuente exacta 2.0.3 | NOT_EXECUTED | No hay entorno disponible |
+| Ubicación candidata fundamentada | NOT_ESTABLISHED | XYZ comunicado es observación del jugador |
+| Validación DEVF dentro del juego / DX12 | NOT_TESTED | Datos aportados por usuario no son prueba del actor |
+
+No se repitieron CP00, builds ni suites anteriores; los PASS anteriores son históricos. No hay nuevos resultados de tests ejecutables. Véase LOCATION_ANALYSIS.md.
