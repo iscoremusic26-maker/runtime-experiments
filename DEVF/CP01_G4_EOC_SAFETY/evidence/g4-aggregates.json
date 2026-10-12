@@ -1,0 +1,482 @@
+{
+  "actor_sample_aggregates": [
+    {
+      "home_x": 296,
+      "id": 158,
+      "max_sampled_displacement_3d_from_first": 973.973582803972,
+      "min_sampled_center_xz_to_reference": 5886.777769874346,
+      "nearest_line": 1888,
+      "nearest_sample": 22,
+      "sampled_xyz_bounds": [
+        [
+          -585.8,
+          633.9
+        ],
+        [
+          -6285.4,
+          -6048.3
+        ],
+        [
+          59776.7,
+          61415.1
+        ]
+      ]
+    },
+    {
+      "home_x": 296,
+      "id": 159,
+      "max_sampled_displacement_3d_from_first": 985.9618806018838,
+      "min_sampled_center_xz_to_reference": 11555.462602259018,
+      "nearest_line": 1858,
+      "nearest_sample": 3,
+      "sampled_xyz_bounds": [
+        [
+          -3510.5,
+          -2208.0
+        ],
+        [
+          -6908.2,
+          -6695.6
+        ],
+        [
+          52439.7,
+          53749.5
+        ]
+      ]
+    },
+    {
+      "home_x": 296,
+      "id": 160,
+      "max_sampled_displacement_3d_from_first": 825.9732743860435,
+      "min_sampled_center_xz_to_reference": 9372.990502236024,
+      "nearest_line": 1865,
+      "nearest_sample": 7,
+      "sampled_xyz_bounds": [
+        [
+          -3173.1,
+          -2255.5
+        ],
+        [
+          -6932.3,
+          -6822.4
+        ],
+        [
+          54525.6,
+          55906.3
+        ]
+      ]
+    },
+    {
+      "home_x": -216,
+      "id": 161,
+      "max_sampled_displacement_3d_from_first": 799.5532377521872,
+      "min_sampled_center_xz_to_reference": 8602.791426845519,
+      "nearest_line": 1858,
+      "nearest_sample": 3,
+      "sampled_xyz_bounds": [
+        [
+          -13450.3,
+          -12284.3
+        ],
+        [
+          -7180.1,
+          -7006.1
+        ],
+        [
+          60301.9,
+          61651.9
+        ]
+      ]
+    },
+    {
+      "home_x": -236,
+      "id": 162,
+      "max_sampled_displacement_3d_from_first": 749.0845813391202,
+      "min_sampled_center_xz_to_reference": 17464.355900009217,
+      "nearest_line": 1876,
+      "nearest_sample": 14,
+      "sampled_xyz_bounds": [
+        [
+          -21358.5,
+          -20089.3
+        ],
+        [
+          -5946.3,
+          -5824.2
+        ],
+        [
+          56103.6,
+          57306.3
+        ]
+      ]
+    },
+    {
+      "home_x": 296,
+      "id": 163,
+      "max_sampled_displacement_3d_from_first": 830.8034003300677,
+      "min_sampled_center_xz_to_reference": 7791.905018483398,
+      "nearest_line": 1877,
+      "nearest_sample": 15,
+      "sampled_xyz_bounds": [
+        [
+          -11997.9,
+          -10961.6
+        ],
+        [
+          -7230.0,
+          -7200.9
+        ],
+        [
+          59283.6,
+          60408.4
+        ]
+      ]
+    },
+    {
+      "home_x": 281,
+      "id": 172,
+      "max_sampled_displacement_3d_from_first": 1023.850506665892,
+      "min_sampled_center_xz_to_reference": 10677.966601804235,
+      "nearest_line": 1870,
+      "nearest_sample": 10,
+      "sampled_xyz_bounds": [
+        [
+          -5779.9,
+          -4605.5
+        ],
+        [
+          -7118.2,
+          -6905.3
+        ],
+        [
+          53330.9,
+          54502.3
+        ]
+      ]
+    }
+  ],
+  "aurora_commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "cp02": "NO-GO",
+  "distance_limits": "XZ center samples only; no swept envelopes, continuous trajectories, hard movement bounds, or clearance proof",
+  "g2": {
+    "capture_invariants": {
+      "E_OC_registered": "1",
+      "E_ocb_registered": "1",
+      "census": "7",
+      "current": "0",
+      "link_owner": "5",
+      "loaded": "NOT_VERIFIED",
+      "logical": "6",
+      "renderer": "NOT_VERIFIED",
+      "room": "3",
+      "room_child_layer": "6",
+      "room_creates": "0",
+      "room_deletes": "0",
+      "room_node": "102",
+      "room_owner": "5",
+      "stage": "F_SP121",
+      "truncated": "0"
+    },
+    "capture_lines": [
+      1846,
+      1856,
+      1858,
+      1859,
+      1860,
+      1862,
+      1865,
+      1868,
+      1869,
+      1870,
+      1872,
+      1873,
+      1875,
+      1876,
+      1877,
+      1879,
+      1881,
+      1883,
+      1884,
+      1885,
+      1887,
+      1888,
+      1890,
+      1891,
+      1892,
+      1894,
+      1895,
+      1897
+    ],
+    "census_records": 196,
+    "create_request_messages": {
+      "E_OC": [
+        {
+          "id": 158,
+          "line": 1265
+        },
+        {
+          "id": 159,
+          "line": 1269
+        },
+        {
+          "id": 160,
+          "line": 1273
+        },
+        {
+          "id": 161,
+          "line": 1277
+        },
+        {
+          "id": 162,
+          "line": 1281
+        },
+        {
+          "id": 163,
+          "line": 1285
+        },
+        {
+          "id": 172,
+          "line": 1321
+        },
+        {
+          "id": 220,
+          "line": 1513
+        },
+        {
+          "id": 221,
+          "line": 1517
+        }
+      ],
+      "ROOM_SCENE": [
+        {
+          "id": 16,
+          "line": 450
+        },
+        {
+          "id": 102,
+          "line": 982
+        },
+        {
+          "id": 103,
+          "line": 986
+        },
+        {
+          "id": 104,
+          "line": 990
+        },
+        {
+          "id": 265,
+          "line": 1960
+        }
+      ]
+    },
+    "d3d12_marker_lines": [
+      14,
+      18,
+      21,
+      23
+    ],
+    "disc_id": "GZ2E01",
+    "host_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "ids_220_221_origin": "NOT_VERIFIED; create message is not a room/live census",
+    "mod_activation_lines": [
+      67,
+      68
+    ],
+    "outside_context_skip_lines": [
+      82,
+      717,
+      810,
+      2179
+    ],
+    "shutdown_lines": [
+      2181,
+      2182
+    ],
+    "startup_line": 66,
+    "status": "PASS_RUNTIME_OBSERVED; observer scope only",
+    "texture_count_line": 46,
+    "texture_replacement_count": 1867,
+    "valid_capture_count": 28
+  },
+  "g4_decision": "G4_BLOCKED_WITH_EXACT_NEXT_INPUT",
+  "native_resource_payloads": "NOT_VERIFIED; two ARC absent from available inputs",
+  "policy": "DISARMED_NO_REGISTRATION",
+  "position_decision": "NO_SAFE_POSITION_VERIFIED",
+  "primary_log": {
+    "ERROR": 0,
+    "FATAL": 0,
+    "bytes": 183907,
+    "dds_mipmap_warnings": 83,
+    "lines": 2182,
+    "original_unredacted_hash_status": "USER_REPORTED_ONLY; different file not received",
+    "severity_counts": {
+      "DEBUG": 1990,
+      "INFO": 89,
+      "WARNING": 83
+    },
+    "sha256": "d19f2760e695f48f4df59706b791de121ffe77806bdafde8a7539b2cdc2b78b4"
+  },
+  "reference_only": {
+    "min_sampled_link_center_xz": 488.57912218346985,
+    "nearest_link_line": 1888,
+    "nearest_link_sample": 22,
+    "status": "NOT_APPROVED_FOR_E_OC",
+    "xyz": [
+      -4806.7346,
+      -6729.480961460304,
+      65135.8281
+    ],
+    "yaw_s16": 0
+  },
+  "resource_inventories": [
+    {
+      "eoc_arc_entries": [],
+      "member_count": 19861,
+      "name": "dusklight-2.0.3.zip",
+      "nested_mods": []
+    },
+    {
+      "eoc_arc_entries": [],
+      "member_count": 63,
+      "name": "Dusklight-v2.0.3-win32-x86_64.zip",
+      "nested_mods": [
+        {
+          "eoc_arc_entries": [],
+          "member_count": 6,
+          "name": "cosmetics.dusk"
+        },
+        {
+          "eoc_arc_entries": [],
+          "member_count": 7,
+          "name": "luau_runtime.dusk"
+        },
+        {
+          "eoc_arc_entries": [],
+          "member_count": 17,
+          "name": "randomizer.dusk"
+        }
+      ]
+    },
+    {
+      "eoc_arc_entries": [],
+      "member_count": 4,
+      "name": "DEVF_CP01_EVIDENCIA_F_SP121.zip",
+      "nested_mods": []
+    },
+    {
+      "eoc_arc_entries": [],
+      "member_count": 3,
+      "name": "DEVF_CP01_EXTRA_COLLISIONS.zip",
+      "nested_mods": []
+    }
+  ],
+  "resource_inventory_scope": "Central-directory names; nested .dusk member names. Prior ZIP integrity reused, not repeated.",
+  "reused_evidence_sha256": {
+    "extra-collisions-verification.json": "9a15d719d895dcd3ae8ad3511c67ae5eda3f8a087a92e81927ff7b95d8d75b44",
+    "location-f-sp121-digpoints.json": "d8b0733f876dcee4a33df5b9acb674cb974886005fcb927f573586ebd353ceb7",
+    "location-f-sp121-summary.json": "d46b8519e87337c8c64f44f513b1fbb520b7e08478d773cc84dc55337939d364"
+  },
+  "reused_wrock_footprint": {
+    "analysis_only": true,
+    "candidate": [
+      -4806.7346,
+      -6729.480961460304,
+      65135.8281
+    ],
+    "footprints": {
+      "collision": {
+        "barycentric_max_difference": 1.8189894035458565e-12,
+        "contributing_prisms": [
+          2174,
+          2175
+        ],
+        "grid_prisms": [
+          2174,
+          2175
+        ],
+        "grid_samples": 441,
+        "rectangle": [
+          [
+            -5053.604595117187,
+            64729.588109765624
+          ],
+          [
+            -4572.354595117187,
+            64729.588109765624
+          ],
+          [
+            -4572.354595117187,
+            65411.95810488281
+          ],
+          [
+            -5053.604595117187,
+            65411.95810488281
+          ]
+        ],
+        "terrain_height_minmax": [
+          -6767.431856304077,
+          -6711.70045575714
+        ],
+        "uncovered_area_engine_halfplanes": 0
+      },
+      "model_and_collision": {
+        "barycentric_max_difference": 1.8189894035458565e-12,
+        "contributing_prisms": [
+          2174,
+          2175
+        ],
+        "grid_prisms": [
+          2174,
+          2175
+        ],
+        "grid_samples": 441,
+        "rectangle": [
+          [
+            -5057.382091455078,
+            64726.434758935546
+          ],
+          [
+            -4565.696056298828,
+            64726.434758935546
+          ],
+          [
+            -4565.696056298828,
+            65451.237829003905
+          ],
+          [
+            -5057.382091455078,
+            65451.237829003905
+          ]
+        ],
+        "terrain_height_minmax": [
+          -6767.893101342403,
+          -6709.572509088024
+        ],
+        "uncovered_area_engine_halfplanes": 0
+      }
+    },
+    "scale": [
+      1,
+      1,
+      1
+    ],
+    "yaw_s16": 0
+  },
+  "schema": 1,
+  "scope": "G4 offline aggregates only; no game or creation",
+  "source_sha256": {
+    "assets/GZ2E01/res/Object/E_oc.h": "05c7709ae0791c0310571cc56825c4aa05c9271eb5bb07c80d9e0654a6efe9a8",
+    "assets/GZ2E01/res/Object/E_ocb.h": "27a2dcaa1fec067541d9af447352d93d54e73ea059fc534b5d1b97a44b428886",
+    "extern/aurora/lib/dolphin/dvd/dvd.cpp": "cac3b405bd2b55d1b04d1852a6343c4491f069f567ad638ab470bf499c52f16f",
+    "include/d/d_resorce.h": "999d29224d0cf69fe7a9b410b833f8faa7d6e477d2004b96ce7cb47a8b8c277c",
+    "include/f_pc/f_pc_manager.h": "fe69d11984b1894bdded58c8d6f65b7744b6f3d95ad6cee00320a69a901a68f5",
+    "src/d/actor/d_a_e_oc.cpp": "e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4",
+    "src/d/d_resorce.cpp": "13ecf79461866083bc22c21c27cbfafa77eae7550f0db92bd46cc978bdaccdb3",
+    "src/d/d_s_room.cpp": "4b4d148fb04d54ffca91795e57387d10701e597547fe7f7804c11ef90123ffa6",
+    "src/d/d_stage.cpp": "b946520ed3813852f61bdff284c0c005bd70afcd194439d39c2557a5ef492095",
+    "src/dusk/mods/svc/stage.cpp": "3f1ab649cb49f88fc36ac607a203306a794b0e9df888d3e9e5b09498fc7672f3",
+    "src/f_pc/f_pc_node.cpp": "a816131d2a934a38df6f4b1f498656993a5fe43231e3c6917160c9cb4cfc9247",
+    "src/f_pc/f_pc_stdcreate_req.cpp": "fd45dc723ec0856c09e58d8d5826af6b3197ea43f316a33adbd77b01e0977d75"
+  }
+}
