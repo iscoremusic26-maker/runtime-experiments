@@ -59,7 +59,8 @@ jobs:
       - name: Prepare vcpkg and install only official Windows port roots
         shell: pwsh
         run: |
-          "VCPKG_ROOT=$env:GITHUB_WORKSPACE/baseline-vcpkg" | Out-File -FilePath $env:GITHUB_ENV -Append
+          $env:VCPKG_ROOT = "$env:GITHUB_WORKSPACE/baseline-vcpkg"
+          "VCPKG_ROOT=$env:VCPKG_ROOT" | Out-File -FilePath $env:GITHUB_ENV -Append
           & "$env:GITHUB_WORKSPACE/baseline-vcpkg/bootstrap-vcpkg.bat" -disableMetrics
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           python DEVF/CP01_BASELINE/ci/run_phase.py --phase vcpkg --source baseline-vcpkg --evidence "$env:RUNNER_TEMP/baseline-evidence" -- "$env:GITHUB_WORKSPACE/baseline-vcpkg/vcpkg.exe" install freetype:x64-windows zstd:x64-windows
