@@ -1,6 +1,6 @@
 # CP01 — experimento del contrato de cierre del host
 
-Estado: **IMPLEMENTACIÓN EXPERIMENTAL PARCIAL; NO-GO**. Base `5f3a7ef` / `DEVF_CP01_EXTRA_COLLISIONS_REVIEW`. No habilita DEVF. El código del mod conserva `DISARMED_NO_REGISTRATION`.
+Estado: **IMPLEMENTACIÓN EXPERIMENTAL PARCIAL; 25 PASS DE LABORATORIO WINDOWS; NO-GO**. Base `5f3a7ef` / `DEVF_CP01_EXTRA_COLLISIONS_REVIEW`. No habilita DEVF. El código del mod conserva `DISARMED_NO_REGISTRATION`.
 
 La auditoría existente demuestra que SDK 2.2/ActorService 1.0 no proporcionan una barrera de solicitudes y unload. Un `.dusk` no puede impedir que el loader retire sus datos tras un shutdown fallido. Se conserva esa conclusión sin repetir la auditoría. La nueva autorización permite un parche del host en `experiment/devf-cp01-host-lifetime`, separado del mod. No se modifica ni distribuye un ejecutable del juego.
 
@@ -31,15 +31,17 @@ Por la instrucción de detenerse ante una dependencia imprescindible ausente, **
 
 El laboratorio compila cuerpos efectivos del parche, sin transcribir una segunda versión del algoritmo: ownership, solicitudes pendientes, predrenado/desregistro, cierre del loader, dependencias retenidas y retiro nativo. Sus adaptadores de colas, layouts, heap y servicios son **sintéticos**, no declaraciones de ABI. La fixture DLL reutilizada es propia del proyecto CP01; LoadLibrary/FreeLibrary sí se ejecutan en Windows real. Ningún test ejecuta Dusklight.
 
-Se prueban: pre-primer-callback, dos dueños, solicitudes opacas, actor activo, destrucción fallida, cola no retirada, reintento, reentrancia, callback pendiente, perfiles originales, permiso de asignación aceptada, rango sin reciclaje, dependiente retenido, init fallida, excepciones, shutdown incompleto con DLL real, idempotencia y shutdown terminal. El caso de cancelación comprueba el allocator monotónico y retirada de cola, **no** ejecuta `fpcCtRq_Cancel` ni un mount real. El wrapper RAII se adapta en el laboratorio; su integración con los layouts originales sigue pendiente.
+Se prueban: pre-primer-callback, dos dueños, solicitudes opacas, actor activo, destrucción fallida, cola no retirada, reintento, reentrancia, callback pendiente, perfiles originales, permiso de asignación aceptada, rango sin reciclaje, dependiente retenido, init fallida, excepciones, shutdown incompleto con DLL real, idempotencia y shutdown terminal. El caso de cancelación comprueba el allocator monotónico y retirada de cola, **no** ejecuta `fpcCtRq_Cancel` ni un mount real. Se compilan también las declaraciones y definiciones reales de los scopes RAII y los wrappers Create/Execute/Draw/IsDelete/Delete; su integración con los layouts originales sigue pendiente.
 
-No se repiten los 16 casos originales ni las suites de colisión/ubicación. No se construye `.dusk` activo ni el ejecutable del juego. Ver `TEST_RESULTS.md` para resultados y enlaces una vez terminada CI.
+No se repiten los 16 casos originales ni las suites de colisión/ubicación. No se construye `.dusk` activo ni el ejecutable del juego. CI Windows final: 25/25 casos PASS; ver `TEST_RESULTS.md` para compilador, comandos y enlaces. La cancelación se representa como una solicitud marcada que sigue en la cola: se comprueba que su flag no prueba el drenado, sin ejecutar el cancel del motor.
 
 ## Riesgos y garantías pendientes
 
 - Cambios internos en la solicitud estándar alteran layout TARGET_PC: todos sus consumidores deben recompilarse juntos. No es un parche binario ni ABI compatible con un EXE sin reconstruir.
 - El modelo presume APIs Actor/Stage en el hilo del motor. No garantiza mods que guardan pointers crudos, tienen threads sin join, callbacks externos no contabilizados o incumplen shutdown. No hay GO de compatibilidad general.
 - Solicitudes opacas pueden bloquear otros mods temporal o indefinidamente. El agotamiento de nombres limita hot reloads por proceso. Es una política deliberadamente conservadora.
+- Los servicios legacy sin `modDrained` no acreditan aquí la ausencia de callbacks externos. No se certifican HTTP/net/UI/hooks ni la delegación entre providers a partir del laboratorio de Actor/Stage.
+- Un cierre parcial puede dejar dependientes ya drenados inactivos; la operación informa fallo y conserva el paquete anterior. No se acredita rollback atómico de toda la gráfica ni compatibilidad UI en runtime.
 - Faltan integración real de colas/fases, recurso pendiente/error/cancelación, transición de escena, Stage edits ya aplicados, dependencias/delegación, ABI y cierre global real. La retención terminal no autoriza finalizar registros usados aún por el motor.
 - Si un callback devuelve éxito mintiendo sobre sus recursos, el host no puede detectarlo con estas APIs. El contrato exige un destructor honesto. Si delete/shutdown fallan persistentemente, se retiene; no se garantiza unload ni recuperación en esa sesión.
 - Reintentar una operación bloqueada es una petición al loader; el drenado ocurre en frames del motor. No se exige al usuario evitar Reload para conservar memoria. Una solicitud fallida no se transforma silenciosamente en un reload diferido exitoso.

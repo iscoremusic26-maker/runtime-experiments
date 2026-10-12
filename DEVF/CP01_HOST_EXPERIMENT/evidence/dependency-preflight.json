@@ -1,0 +1,25 @@
+{
+  "method": "static file-presence preflight; no full-host configure/compile attempted",
+  "source_archive_sha256": "9dbdc0b068df24c3fbb680c87be25e904978f04b315e2051e3c6203476516008",
+  "required_missing_files": [
+    {
+      "path": "extern/borealis/cmake/DetectVersion.cmake",
+      "exists": false
+    },
+    {
+      "path": "extern/borealis/include/borealis/io.hpp",
+      "exists": false
+    },
+    {
+      "path": "extern/borealis/include/borealis/update.hpp",
+      "exists": false
+    },
+    {
+      "path": "extern/aurora/CMakeLists.txt",
+      "exists": false
+    }
+  ],
+  "gitmodules_sha256": "bc71e970253dd6d90d1b2ad8132d8f66a982449a4c9808e0a570fa018f828947",
+  "known_sdk_only_aurora_pin": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "conclusion": "BLOCKED exact full-host dependency checkout; SDK-only pin does not establish release host gitlinks/transitives"
+}

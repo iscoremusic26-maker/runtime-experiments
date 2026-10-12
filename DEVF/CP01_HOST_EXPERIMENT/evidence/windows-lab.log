@@ -1,0 +1,35 @@
+# Extracto recibido del job Windows 114666409226
+# Run https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38204996509
+# Cuerpos de funciones reales del parche; colas/layouts/servicios sinteticos; fixture DLL propia.
+2026-10-12T04:44:33.5845791Z PATCH_AND_FUNCTION_EXTRACTION_PASS functions=22 exact_scope_bundle=1 host_runtime=NOT_TESTED
+2026-10-12T04:44:33.5849282Z HOST_FULL_BUILD_BLOCKED: exact Borealis/Aurora full submodules absent; lab compiles extracted functions only
+2026-10-12T04:45:04.3504151Z -- The CXX compiler identification is MSVC 19.51.36260.0
+2026-10-12T04:45:05.7039139Z -- HOST_EXPERIMENT compiler=MSVC 19.51.36260.0 sdk=10.0.26100.0
+2026-10-12T04:45:18.7472364Z 1: PASS pending_before_first_callback_blocks_profile_and_unload
+2026-10-12T04:45:18.7476972Z 1: PASS requester_and_profile_owner_both_retained
+2026-10-12T04:45:18.7479135Z 1: PASS closing_profile_owner_blocks_other_requester_before_predrain
+2026-10-12T04:45:18.7481233Z 1: PASS opaque_request_conservatively_blocks
+2026-10-12T04:45:18.7483682Z 1: PASS active_actor_blocks_unregister
+2026-10-12T04:45:18.7485684Z 1: PASS force_delete_preserves_failure
+2026-10-12T04:45:18.7487785Z 1: PASS delete_queue_requires_actual_removal
+2026-10-12T04:45:18.7489848Z 1: PASS failed_delete_retains_then_retry
+2026-10-12T04:45:18.7492126Z 1: PASS callback_reentrancy_blocks_unregister
+2026-10-12T04:45:18.7494130Z 1: PASS callback_on_stack_blocks_teardown
+2026-10-12T04:45:18.7496184Z 1: PASS original_profiles_allowed_closing_custom_denied
+2026-10-12T04:45:18.7498241Z 1: PASS accepted_request_allocation_only_can_drain
+2026-10-12T04:45:18.7500412Z 1: PASS profile_names_never_reused_and_exhaustion_blocks
+2026-10-12T04:45:18.7502877Z 1: PASS cancel_marked_request_blocks_until_actual_queue_removal
+2026-10-12T04:45:18.7505097Z 1: PASS exact_callback_scopes_nested_exception_restore
+2026-10-12T04:45:18.7507239Z 1: PASS exact_accepted_scope_exception_restores_gate
+2026-10-12T04:45:18.7509483Z 1: PASS closing_profile_suppresses_execute_draw_but_drains_create
+2026-10-12T04:45:18.7511434Z 1: PASS pending_context_blocks_provider_collection
+2026-10-12T04:45:18.7513471Z 1: PASS failed_initialization_poison_retains
+2026-10-12T04:45:18.7515467Z 1: PASS prehook_exception_retains_without_repeat
+2026-10-12T04:45:18.7517534Z 1: PASS detach_exception_retains_no_double_shutdown
+2026-10-12T04:45:18.7519619Z 1: PASS shutdown_incomplete_real_windows_fixture_retained
+2026-10-12T04:45:18.7523368Z 1: PASS successful_shutdown_idempotent
+2026-10-12T04:45:18.7527173Z 1: PASS normal_shutdown_drains_registry_after_contexts
+2026-10-12T04:45:18.7528509Z 1: PASS blocked_terminal_quarantine_is_idempotent
+2026-10-12T04:45:18.7533887Z 1: HOST_EXPERIMENT_PASS cases=25 platform=Windows_MSVC synthetic_engine=true engine_runtime=NOT_TESTED DX12=NOT_TESTED
+2026-10-12T04:45:18.7552499Z 100% tests passed out of 1
+

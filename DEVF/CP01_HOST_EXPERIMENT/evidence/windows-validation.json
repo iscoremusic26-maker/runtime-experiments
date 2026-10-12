@@ -1,0 +1,72 @@
+{
+  "project_code_commit": "f627b88d4350bcab5f3e1b05cb9b09757b35ad93",
+  "ci_repository": "iscoremusic26-maker/codex-cp00-inputs",
+  "ci_commit": "b9f03cbe10144c8ea240758dfae0f74917951891",
+  "run_id": 38204996509,
+  "job_id": 114666409226,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38204996509",
+  "compiler": "MSVC 19.51.36260.0",
+  "windows_sdk": "10.0.26100.0",
+  "target": "Windows x64",
+  "cases": 25,
+  "function_bodies": 22,
+  "exact_scope_bundle": true,
+  "status": "PASS_LAB_ONLY",
+  "engine_runtime": "NOT_TESTED",
+  "DX12": "NOT_TESTED",
+  "full_host_compile": "BLOCKED",
+  "code_files": [
+    {
+      "path": "CMakeLists.txt",
+      "sha256": "6a9b8664433283ae61d0326001514924c3df3f20989056ead1d3429e012ad8fc"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "sha256": "e5e72d08a3b9140f6a3298827d138847204c799eb9b9ce0ca54731df37d7292c"
+    },
+    {
+      "path": "host-lifetime.patch",
+      "sha256": "3a6268135dac0d37580342dacfb429bca84428b91b2ad0beec97e88a0a7501d8"
+    },
+    {
+      "path": "tests/host_lifetime_lab.cpp",
+      "sha256": "f092f30d6eee3f6336c100ad054ec1789f067cacb87275cd89ea7986275f4098"
+    },
+    {
+      "path": "ci/prepare_ci.py",
+      "sha256": "bb0490f1f98c8f6d4baa61897d59d168c6351089570a0e948b22f76fd36a3d65"
+    },
+    {
+      "path": "ci/prepare_experiment.py",
+      "sha256": "12604362ecf6071f2077a5dd47826efd0a80a1ccf48bf7e3691923ab14075496"
+    }
+  ],
+  "artifact": {
+    "id": 11727310837,
+    "name": "DEVF_CP01_HOST_LAB_EVIDENCE_38204996509_1",
+    "github_reported_digest": "sha256:dd0f931c76a5ce915452bd67b4f6705fa3fdd0cdf7aeafb984fb938f1a6111f0",
+    "bytes": 5259,
+    "expires_at": "2026-10-26T04:45:19Z",
+    "content_policy": "own logs and function hashes only; no original resources, extracted source bodies or binaries",
+    "downloaded_locally": false
+  },
+  "attempts": [
+    {
+      "run_id": 38204652996,
+      "ci_commit": "1a02f71eb87bd872bedaf6a73407a69bb31d8bac",
+      "result": "FAIL_PREPARE",
+      "cause": "Windows CRLF checkout of patch; source file hashes matched; fixed verified LF stdin apply"
+    },
+    {
+      "run_id": 38204764980,
+      "ci_commit": "569c1d580134fd7ff93bb1bc41b195fb1b3d7d0d",
+      "result": "PASS_20_LAB_CASES_BEFORE_FINAL_INCREMENT"
+    },
+    {
+      "run_id": 38204996509,
+      "ci_commit": "b9f03cbe10144c8ea240758dfae0f74917951891",
+      "result": "PASS_25_FINAL_LAB_CASES"
+    }
+  ],
+  "metadata_provenance": "windows-lab.log fetched from actual job; patched-functions.json regenerated locally using identical tested patch and verified before/after hashes, not a downloaded CI artifact"
+}

@@ -1,0 +1,143 @@
+{
+  "functions": [
+    {
+      "name": "profile_owner",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 403,
+      "sha256": "20940e1825e9c8af6d53f9eae00e92a21ca96eae752dd6b2679f7b4840e92bca"
+    },
+    {
+      "name": "submission_owner",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 408,
+      "sha256": "9715d33b536822fc05d763bd91f3522ce9a7f1764bf5b6ebfefa306aafb4e49f"
+    },
+    {
+      "name": "creation_allowed",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 411,
+      "sha256": "24824a5712222010fea6f77c8c547ddde4d7622a27446bba01b58d88c78f55bd"
+    },
+    {
+      "name": "allocate_profile_name",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 96,
+      "sha256": "be74a3e6b8f2c1ff7b16f0d433a86665aaa6ec9deefdab4b6f85fef4f72aab51"
+    },
+    {
+      "name": "fpcSCtRq_HasPendingForOwner",
+      "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+      "line": 200,
+      "sha256": "570d7dfd0f2dc604380cae3de07436d21214f151b7c8e2139e16755844e9ddf4"
+    },
+    {
+      "name": "owner_of_slot",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 46,
+      "sha256": "8b8ab90ce723300f6bf1c0767c206aaec19dfa49a54bc8cd76ecc4b136e11e24"
+    },
+    {
+      "name": "actor_create",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 60,
+      "sha256": "2bca44c8c7fd3f3be9d99f611dcf6ab9f5de671cd260ddf4529fa33c3d9b1daa"
+    },
+    {
+      "name": "actor_execute",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 66,
+      "sha256": "e00257c4a8e6fa6a2950e4d1799f73b2ac9576f33a2e20ae7939002488f88e36"
+    },
+    {
+      "name": "actor_draw",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 72,
+      "sha256": "42e77693e8c0970973d66ea076c9d2c752bba1505d927a042c181a1e5df6d030"
+    },
+    {
+      "name": "actor_is_delete",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 78,
+      "sha256": "ebe833fc808793dc4dded1f2e97adcdb77d99f8259fb2967b6aa62e0f2eeacf0"
+    },
+    {
+      "name": "actor_delete",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 87,
+      "sha256": "cba74a89c399e62e9312eb43c4ee9bc884539749449024448385d2bdb50c4a8a"
+    },
+    {
+      "name": "request_delete_all_actors_of_name",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 197,
+      "sha256": "738033a358710e31506b5516252da7ed120d02096d44aa359960360c096c9c70"
+    },
+    {
+      "name": "finish_delete_all_actors_of_name",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 210,
+      "sha256": "119b626ddc384782d24efe734205aa54344faf9aaf54f0d91fde6c761a15f996"
+    },
+    {
+      "name": "has_actor_of_name",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 236,
+      "sha256": "09956c6e68dad53e35eab76f0a8866c3c1d1a1af9a27b1e938dbff7de86efad2"
+    },
+    {
+      "name": "unregister_actor",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 249,
+      "sha256": "0c435844417e3c5099f932949afe93312b461ae97a7f48c992007b8bef2b67d2"
+    },
+    {
+      "name": "actor_drain_mod",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 461,
+      "sha256": "e26febfc7123fd9b04defbe406707ab7981cc67420b3bc6af4129610a8694eb6"
+    },
+    {
+      "name": "actor_remove_mod",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line": 481,
+      "sha256": "4344a8298560b46eb2c817736cb7d2f751df0a4de6f8def0773b7f5426d927df"
+    },
+    {
+      "name": "ModLoader::deactivate_mod",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line": 302,
+      "sha256": "5023a5370ada655d536ac05c00b794266d4253ab1ffeada414508a431d8aeb71"
+    },
+    {
+      "name": "ModLoader::collect_lifecycle_set",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line": 609,
+      "sha256": "13cfd1a46762b1205191c7861dd4ad8d3fd6d53dd2e4e2cf73d5eb779be9e1b3"
+    },
+    {
+      "name": "ModLoader::shutdown",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line": 1311,
+      "sha256": "95b1b49567c23b5c38088412a28894c0d038243ed2ce2561bf28bf83a2173d99"
+    },
+    {
+      "name": "ModLoader::unload_native",
+      "path": "src/dusk/mods/loader/natives.cpp",
+      "line": 563,
+      "sha256": "cb33c4b03be09dd4662d0cb06354760a5699d52bfb46a79739a2fa86109a7672"
+    },
+    {
+      "name": "ModLoader::drain_retired_natives",
+      "path": "src/dusk/mods/loader/natives.cpp",
+      "line": 576,
+      "sha256": "8b697b52bd3e62cd8745baa080a657d59b325c4e40fddaa71b9262eab044f780"
+    },
+    {
+      "name": "ownership_scopes_declarations_and_definitions",
+      "sha256": "d90ec554d241a1a5cc0dff287be5b93868c22f968cf1b3723930c62d745ab2ec",
+      "path": "actor.hpp + actor.cpp",
+      "scope": "exact declarations, constructors/destructors and SlotCallbackScope"
+    }
+  ],
+  "scope": "actual patched function bodies with synthetic layout, queues and service backends; NOT host/game runtime"
+}
