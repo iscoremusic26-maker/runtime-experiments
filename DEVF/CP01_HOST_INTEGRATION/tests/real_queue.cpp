@@ -17,6 +17,8 @@ void fpcLy_CancelQTo(process_method_tag_class*){}
 int fpcLy_ToCancelQ(layer_class*,process_method_tag_class*){return 1;}
 int fpcDt_Delete(void*){return processDeleteOK?TRUE:FALSE;} // Explicit process-delete adapter.
 void cMl::free(void* p){++freed;std::free(p);} // Explicit heap adapter, actually frees allocated requests.
+static int deleteCalls=0;static bool failDelete=false;static delete_tag_class* removeDuringCallback=nullptr;
+int fpcDt_deleteMethod(base_process_class*){++deleteCalls;if(removeDuringCallback){fpcDtTg_DeleteQTo(removeDuringCallback);removeDuringCallback=nullptr;}return failDelete?0:1;} // Controlled destructor edge; no heap/process destruction.
 #include "real_functions.inc"
 static int good(void*){return 1;}static int bad(void*){return 0;}
 static create_request_method_class standardMethods{reinterpret_cast<fpcCtRq_phase_handler>(fpcSCtRq_Handler),good,good};
@@ -45,5 +47,15 @@ int main(){
  // This behavior is outside the standard request contract: scanner alone cannot prove generic resources.
  a->base.methods=&standardMethods;cMl::free(a);
  check(g_fpcCtTg_Queue.mpHead==nullptr&&g_fpcCtTg_Queue.mpTail==nullptr,"real queue head/tail empty after cleanup");
+ base_process_class first{},second{};first.name=second.name=30000;
+ fpcDtTg_Init(&first.delete_tag,&first);fpcDtTg_Init(&second.delete_tag,&second);
+ fpcDtTg_ToDeleteQ(&first.delete_tag);failDelete=true;deleteCalls=0;
+ check(!finish_delete_all_actors_of_name(30000)&&g_fpcDtTg_Queue.mSize==1&&deleteCalls==1,"real delete queue requeues callback failure");
+ failDelete=false;check(finish_delete_all_actors_of_name(30000)&&g_fpcDtTg_Queue.mSize==0,"real delete queue drains after callback success");
+ fpcDtTg_Init(&first.delete_tag,&first);fpcDtTg_Init(&second.delete_tag,&second);fpcDtTg_ToDeleteQ(&first.delete_tag);fpcDtTg_ToDeleteQ(&second.delete_tag);deleteCalls=0;removeDuringCallback=&second.delete_tag;
+ check(finish_delete_all_actors_of_name(30000)&&deleteCalls==2,"BLOCKED detached next node revisited by exact traversal");
+ // Objects remain alive deliberately; real fpcBs_Delete can free them. This demonstrates
+ // the stale traversal without intentionally executing undefined use-after-free.
+ std::printf("SAFETY_BLOCKED reentrant_next_node_revisit=observed objects_not_freed=yes runtime=NOT_TESTED\n");
  std::printf("INTEGRATION_TEST_PASS checks=%u game_runtime=NOT_TESTED adapters=profile_owner,phase,layer,heap,process_delete\n",checks);return 0;
 }

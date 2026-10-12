@@ -18,7 +18,9 @@ def function(text,name):
  return text[start:i]
 s=(a.source/'src/f_pc/f_pc_stdcreate_req.cpp').read_text();start=s.index('typedef struct standard_create_request_class {');end=s.index('} standard_create_request_class;',start)+len('} standard_create_request_class;');layout=s[start:end]
 req=(a.source/'src/f_pc/f_pc_create_req.cpp').read_text()
-parts=[layout,function(s,'fpcSCtRq_HasPendingForOwner')]+[function(req,n)for n in ['fpcCtRq_CreateQTo','fpcCtRq_ToCreateQ','fpcCtRq_Delete','fpcCtRq_Cancel']]
+base=(a.source/'src/f_pc/f_pc_base.cpp').read_text();dstart=base.index('base_process_class::~base_process_class() {');dend=base.index('\n}',dstart)+2;destructor=base[dstart:dend]
+actor=(a.source/'src/dusk/mods/svc/actor.cpp').read_text()
+parts=[destructor,layout,function(s,'fpcSCtRq_HasPendingForOwner'),function(actor,'finish_delete_all_actors_of_name')]+[function(req,n)for n in ['fpcCtRq_CreateQTo','fpcCtRq_ToCreateQ','fpcCtRq_Delete','fpcCtRq_Cancel']]
 (a.temp/'real_functions.inc').write_text('\n\n'.join(parts)+'\n')
 def argv_windows(command):
  argc=ctypes.c_int();api=ctypes.windll.shell32.CommandLineToArgvW;api.argtypes=[ctypes.c_wchar_p,ctypes.POINTER(ctypes.c_int)];api.restype=ctypes.POINTER(ctypes.c_wchar_p)
@@ -28,10 +30,10 @@ args=entry.get('arguments')or argv_windows(entry['command']);idx=next(i for i,x 
 for x in args[idx+1:]:
  if x in ['-c','/c'] or x.startswith(('/Fo','/Fd','/Fp')) or x==entry['file']:continue
  flags.append(x)
-units=['src/SSystem/SComponent/c_node.cpp','src/SSystem/SComponent/c_list.cpp','src/SSystem/SComponent/c_tree.cpp','src/SSystem/SComponent/c_tag.cpp','src/f_pc/f_pc_create_tag.cpp','src/f_pc/f_pc_method.cpp']
+units=['src/SSystem/SComponent/c_node.cpp','src/SSystem/SComponent/c_list.cpp','src/SSystem/SComponent/c_tree.cpp','src/SSystem/SComponent/c_tag.cpp','src/f_pc/f_pc_create_tag.cpp','src/f_pc/f_pc_method.cpp','src/f_pc/f_pc_delete_tag.cpp']
 exe=a.temp/'directed_queue.exe'
 cmd=[compiler,*flags,'/Od','/I'+str(a.temp),str(here/'tests/real_queue.cpp'),*[str(a.source/u)for u in units],'/Fe:'+str(exe),'/link','/INCREMENTAL:NO']
-r={'scope':'real engine headers/layouts and six original queue/method translation units; exact extracted scanner/cancel/delete functions; explicit engine-edge adapters; NOT game runtime','command':cmd,'engine_execution':'NOT_TESTED','source_function_sha256':[hashlib.sha256(x.encode()).hexdigest()for x in parts],'original_translation_units':[{'path':u,'sha256':hashlib.sha256((a.source/u).read_bytes()).hexdigest()}for u in units]}
+r={'scope':'real engine headers/layouts and seven original queue/method translation units; exact extracted scanner/cancel/delete functions; explicit engine-edge adapters; NOT game runtime','command':cmd,'engine_execution':'NOT_TESTED','source_function_sha256':[hashlib.sha256(x.encode()).hexdigest()for x in parts],'original_translation_units':[{'path':u,'sha256':hashlib.sha256((a.source/u).read_bytes()).hexdigest()}for u in units]}
 start=time.monotonic();proc=subprocess.run(cmd,cwd=a.temp,capture_output=True,text=True,encoding='utf-8',errors='replace');r['compile_exit']=proc.returncode
 (a.evidence/'directed-compile.log').write_text(proc.stdout+proc.stderr)
 if not proc.returncode:
