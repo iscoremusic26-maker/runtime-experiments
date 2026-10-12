@@ -1,0 +1,11 @@
+{
+  "run_id": 38270210787,
+  "job_id": 114882321243,
+  "ci_commit": "11b763d49810654215aa9dfcd69aa627554e0237",
+  "artifact_id": 11756771324,
+  "artifact_bytes": 13815,
+  "artifact_sha256": "f789724fb808b29dbb2c7a6c11a54a4b9f12a97efd9f77fee9239bfb298183a0",
+  "verification": "downloaded actual ZIP, SHA256/CRC/exact nine textual members PASS; own copied code hashes equal final main files",
+  "diagnostic_safety_result": "BLOCKED: detached next tag revisited in controlled callback test, objects deliberately not freed",
+  "engine_execution": "NOT_TESTED"
+}

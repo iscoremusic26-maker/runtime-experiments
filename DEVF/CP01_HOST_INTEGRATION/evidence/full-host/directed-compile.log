@@ -1,0 +1,22 @@
+cl : Command line warning D9025 : overriding '/O2' with '/Od'
+cl : Command line warning D9026 : options apply to entire command line
+f_pc_create_req.cpp
+cl : Command line warning D9025 : overriding '/O2' with '/Od'
+cl : Command line warning D9026 : options apply to entire command line
+real_queue.cpp
+D:\a\Mods-Duskligh\Mods-Duskligh\official\src\f_pc\f_pc_create_req.cpp: fatal error C1083: Cannot open precompiled header file: 'D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/CMakeFiles/dusklight.dir/cmake_pch.pch': No such file or directory
+D:\a\Mods-Duskligh\Mods-Duskligh\DEVF\CP01_HOST_INTEGRATION\tests\real_queue.cpp: fatal error C1083: Cannot open precompiled header file: 'D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/CMakeFiles/dusklight.dir/cmake_pch.pch': No such file or directory
+c_node.cpp
+c_list.cpp
+D:\a\Mods-Duskligh\Mods-Duskligh\official\src\SSystem\SComponent\c_node.cpp: fatal error C1083: Cannot open precompiled header file: 'D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/CMakeFiles/dusklight.dir/cmake_pch.pch': No such file or directory
+D:\a\Mods-Duskligh\Mods-Duskligh\official\src\SSystem\SComponent\c_list.cpp: fatal error C1083: Cannot open precompiled header file: 'D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/CMakeFiles/dusklight.dir/cmake_pch.pch': No such file or directory
+c_tree.cpp
+c_tag.cpp
+D:\a\Mods-Duskligh\Mods-Duskligh\official\src\SSystem\SComponent\c_tag.cpp: fatal error C1083: Cannot open precompiled header file: 'D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/CMakeFiles/dusklight.dir/cmake_pch.pch': No such file or directory
+D:\a\Mods-Duskligh\Mods-Duskligh\official\src\SSystem\SComponent\c_tree.cpp: fatal error C1083: Cannot open precompiled header file: 'D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/CMakeFiles/dusklight.dir/cmake_pch.pch': No such file or directory
+f_pc_create_tag.cpp
+f_pc_method.cpp
+D:\a\Mods-Duskligh\Mods-Duskligh\official\src\f_pc\f_pc_create_tag.cpp: fatal error C1083: Cannot open precompiled header file: 'D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/CMakeFiles/dusklight.dir/cmake_pch.pch': No such file or directory
+D:\a\Mods-Duskligh\Mods-Duskligh\official\src\f_pc\f_pc_method.cpp: fatal error C1083: Cannot open precompiled header file: 'D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/CMakeFiles/dusklight.dir/cmake_pch.pch': No such file or directory
+cl : Command line warning D9025 : overriding '/O2' with '/Od'
+cl : Command line warning D9026 : options apply to entire command line

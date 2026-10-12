@@ -1,0 +1,13 @@
+{
+  "run_id": 38267208054,
+  "job_id": 114872248799,
+  "ci_commit": "250aa82b0e317fe45ec2308a1d82529f8c4fe69b",
+  "artifact_id": 11754619628,
+  "artifact_bytes": 12588,
+  "artifact_sha256": "be8d32a4260a567258d036c57eac8b39d85c821fe460445d550a1498916a32d2",
+  "verification": "actual ZIP downloaded; SHA256/CRC/text-only eight member allowlist PASS",
+  "result": "eight selected translation units including own driver compiled; diagnostic link LNK2001/LNK1120 GXDestroyTexObj, unused rendering helper emitted by inherited forced header",
+  "classification": "TEST_DRIVER_LINK_CONFIGURATION_ERROR; no host source change",
+  "test_execution": "NOT_TESTED",
+  "correction": "driver-only /Gy,/Zc:inline,/OPT:REF to discard unused forced-header functions; no rendering stub and no renderer validation claim"
+}

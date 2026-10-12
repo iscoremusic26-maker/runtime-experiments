@@ -1,0 +1,274 @@
+-- Found Git: C:/Program Files/Git/bin/git.exe (found version "2.55.0.windows.5")
+-- borealis: application version set to v2.0.3-0-dirty
+-- Build type: RelWithDebInfo
+-- The C compiler identification is MSVC 19.51.36260.0
+-- The CXX compiler identification is MSVC 19.51.36260.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- aurora: Dawn auto-resolved provider: package
+-- aurora: Fetching prebuilt Dawn package from https://github.com/encounter/dawn/releases/download/v20260807.225922/dawn-windows-amd64.tar.gz
+-- aurora: Fetching abseil-cpp (standalone)
+-- Performing Test ABSL_INTERNAL_AT_LEAST_CXX17
+-- Performing Test ABSL_INTERNAL_AT_LEAST_CXX17 - Success
+-- Performing Test ABSL_INTERNAL_AT_LEAST_CXX20
+-- Performing Test ABSL_INTERNAL_AT_LEAST_CXX20 - Success
+-- Found Threads: TRUE
+-- aurora: SDL3 auto-resolved provider: package
+-- aurora: Fetching prebuilt SDL3 package from https://github.com/encounter/sdl3-build/releases/download/v3.4.10/SDL3-windows-amd64.tar.gz
+-- aurora: Using shared SDL3
+CMake Warning at D:/a/Mods-Duskligh/Mods-Duskligh/baseline-vcpkg/scripts/buildsystems/vcpkg.cmake:939 (_find_package):
+  By not providing "FindxxHash.cmake" in CMAKE_MODULE_PATH this project has
+  asked CMake to find a package configuration file provided by "xxHash", but
+  CMake did not find one.
+
+  Could not find a package configuration file provided by "xxHash" with any
+  of the following names:
+
+    xxHash.cps
+    xxhash.cps
+    xxHashConfig.cmake
+    xxhash-config.cmake
+
+  Add the installation prefix of "xxHash" to CMAKE_PREFIX_PATH or set
+  "xxHash_DIR" to a directory containing one of the above files.  If "xxHash"
+  provides a separate development package or SDK, be sure it has been
+  installed.
+Call Stack (most recent call first):
+  extern/aurora/extern/CMakeLists.txt:13 (find_package)
+  extern/aurora/extern/CMakeLists.txt:51 (aurora_find_package_global)
+
+
+-- aurora: Fetching xxhash
+-- xxHash build type: RelWithDebInfo
+-- Architecture: AMD64
+-- aurora: Fetching fmt
+-- {fmt} version: 12.1.0
+-- Build type: RelWithDebInfo
+-- aurora: Using existing libpng
+-- aurora: Using existing Freetype
+-- aurora: Fetching imgui
+-- Could NOT find SQLite3 (missing: SQLite3_LIBRARY SQLite3_INCLUDE_DIR) 
+-- aurora: Fetching sqlite3
+-- aurora: Using existing zstd
+-- aurora: Fetching RmlUi
+-- Found ZLIB: optimized;D:/a/Mods-Duskligh/Mods-Duskligh/baseline-vcpkg/installed/x64-windows/lib/z.lib;debug;D:/a/Mods-Duskligh/Mods-Duskligh/baseline-vcpkg/installed/x64-windows/debug/lib/zd.lib (found version "1.3.2")
+-- Found Freetype::Freetype v2.14.3 - Freetype font engine enabled
+-- Could NOT find Tracy (missing: Tracy_DIR)
+-- aurora: Fetching Tracy
+Parsing public/common/TracyVersion.hpp file
+VERSION 0.14.1
+-- Could NOT find rocprofiler-sdk (missing: rocprofiler-sdk_DIR)
+-- TRACY_ENABLE: OFF
+-- TRACY_ON_DEMAND: ON
+-- TRACY_CALLSTACK: (not set)
+-- TRACY_PLATFORM_HEADER: (not set)
+-- TRACY_NO_CALLSTACK: OFF
+-- TRACY_NO_CALLSTACK_INLINES: OFF
+-- TRACY_ONLY_LOCALHOST: OFF
+-- TRACY_NO_BROADCAST: OFF
+-- TRACY_ONLY_IPV4: OFF
+-- TRACY_NO_CODE_TRANSFER: OFF
+-- TRACY_NO_CONTEXT_SWITCH: OFF
+-- TRACY_NO_EXIT: OFF
+-- TRACY_NO_SAMPLING: OFF
+-- TRACY_NO_WAIT_STACKS: OFF
+-- TRACY_NO_VERIFY: OFF
+-- TRACY_NO_VSYNC_CAPTURE: OFF
+-- TRACY_NO_FRAME_IMAGE: OFF
+-- TRACY_NO_SYSTEM_TRACING: OFF
+-- TRACY_PATCHABLE_NOPSLEDS: OFF
+-- TRACY_MANUAL_LIFETIME: OFF
+-- TRACY_FIBERS: OFF
+-- TRACY_NO_CRASH_HANDLER: OFF
+-- TRACY_TIMER_FALLBACK: OFF
+-- TRACY_DISALLOW_HW_TIMER: OFF
+-- TRACY_LIBUNWIND_BACKTRACE: OFF
+-- TRACY_SYMBOL_OFFLINE_RESOLVE: OFF
+-- TRACY_LIBBACKTRACE_ELF_DYNLOAD_SUPPORT: OFF
+-- TRACY_DEBUGINFOD: OFF
+-- TRACY_IGNORE_MEMORY_FAULTS: OFF
+-- TRACY_OPENGL_AUTO_CALIBRATION: OFF
+-- TRACY_VERBOSE: OFF
+-- TRACY_NO_INTERNAL_MESSAGE: OFF
+-- TRACY_DEMANGLE: OFF
+-- aurora: nod auto-resolved provider: package
+-- aurora: Fetching prebuilt nod package (provider=package, linkage=shared)
+-- borealis::sentry: fetching sentry-native
+-- Sentry SDK version (full): 0.13.6
+-- Sentry SDK version (base): 0.13.6
+-- Sentry SDK version major='0' minor='13' patch='6'
+-- SENTRY_TRANSPORT=winhttp
+-- SENTRY_BACKEND=crashpad
+-- SENTRY_LIBRARY_TYPE=STATIC
+-- SENTRY_SDK_NAME=
+-- SENTRY_HANDLER_STACK_SIZE=64
+-- SENTRY_THREAD_STACK_GUARANTEE_FACTOR=10
+-- SENTRY_THREAD_STACK_GUARANTEE_AUTO_INIT=ON
+-- SENTRY_THREAD_STACK_GUARANTEE_VERBOSE_LOG=OFF
+-- Looking for sys/types.h
+-- Looking for sys/types.h - found
+-- Looking for stdint.h
+-- Looking for stdint.h - found
+-- Looking for stddef.h
+-- Looking for stddef.h - found
+-- Check size of long
+-- Check size of long - done
+-- The ASM_MASM compiler identification is MSVC
+-- Found assembler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/ml64.exe
+-- borealis::http: backend winhttp
+-- Using the multi-header code from D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc/_deps/nlohmann_json-src/include/
+-- dusklight: Fetching miniz
+-- dusklight: Fetching PicoSHA2
+-- dusklight: Fetching funchook
+CMake Warning (deprecated) at build/x-windows-ci-msvc/_deps/funchook-src/CMakeLists.txt:2 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+This warning is for project developers.  Use -Wno-author or -Wno-deprecated
+to suppress it.
+
+-- The ASM compiler identification is MSVC
+CMake Warning (policy) at C:/Program Files/CMake/share/cmake-4.4/Modules/CMakeDetermineASMCompiler.cmake:237 (cmake_policy):
+  Policy CMP0194 is not set: MSVC is not an assembler for language ASM.  Run
+  "cmake --help-policy CMP0194" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/x-windows-ci-msvc/_deps/funchook-src/CMakeLists.txt:4 (project)
+This warning is for project developers.  Use -Wno-author or -Wno-policy to
+suppress it.
+
+-- Found assembler: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe
+-- Performing Test HAVE_FVISIBILITY_HIDDEN
+-- Performing Test HAVE_FVISIBILITY_HIDDEN - Failed
+-- dusklight: Fetching symgen 1.3.6 (symgen-windows-x86_64.exe)
+-- [download 0% complete]
+-- [download 1% complete]
+-- [download 2% complete]
+-- [download 3% complete]
+-- [download 4% complete]
+-- [download 5% complete]
+-- [download 6% complete]
+-- [download 7% complete]
+-- [download 8% complete]
+-- [download 9% complete]
+-- [download 10% complete]
+-- [download 11% complete]
+-- [download 12% complete]
+-- [download 13% complete]
+-- [download 14% complete]
+-- [download 15% complete]
+-- [download 16% complete]
+-- [download 17% complete]
+-- [download 18% complete]
+-- [download 19% complete]
+-- [download 20% complete]
+-- [download 21% complete]
+-- [download 22% complete]
+-- [download 23% complete]
+-- [download 24% complete]
+-- [download 25% complete]
+-- [download 26% complete]
+-- [download 27% complete]
+-- [download 28% complete]
+-- [download 29% complete]
+-- [download 30% complete]
+-- [download 31% complete]
+-- [download 32% complete]
+-- [download 33% complete]
+-- [download 34% complete]
+-- [download 35% complete]
+-- [download 36% complete]
+-- [download 37% complete]
+-- [download 38% complete]
+-- [download 39% complete]
+-- [download 40% complete]
+-- [download 41% complete]
+-- [download 42% complete]
+-- [download 43% complete]
+-- [download 44% complete]
+-- [download 45% complete]
+-- [download 46% complete]
+-- [download 47% complete]
+-- [download 48% complete]
+-- [download 49% complete]
+-- [download 50% complete]
+-- [download 51% complete]
+-- [download 52% complete]
+-- [download 53% complete]
+-- [download 54% complete]
+-- [download 55% complete]
+-- [download 56% complete]
+-- [download 57% complete]
+-- [download 58% complete]
+-- [download 59% complete]
+-- [download 60% complete]
+-- [download 61% complete]
+-- [download 62% complete]
+-- [download 63% complete]
+-- [download 64% complete]
+-- [download 65% complete]
+-- [download 66% complete]
+-- [download 67% complete]
+-- [download 68% complete]
+-- [download 69% complete]
+-- [download 70% complete]
+-- [download 71% complete]
+-- [download 72% complete]
+-- [download 73% complete]
+-- [download 74% complete]
+-- [download 75% complete]
+-- [download 76% complete]
+-- [download 77% complete]
+-- [download 78% complete]
+-- [download 79% complete]
+-- [download 80% complete]
+-- [download 81% complete]
+-- [download 82% complete]
+-- [download 83% complete]
+-- [download 84% complete]
+-- [download 85% complete]
+-- [download 86% complete]
+-- [download 87% complete]
+-- [download 88% complete]
+-- [download 89% complete]
+-- [download 90% complete]
+-- [download 91% complete]
+-- [download 92% complete]
+-- [download 93% complete]
+-- [download 94% complete]
+-- [download 95% complete]
+-- [download 96% complete]
+-- [download 97% complete]
+-- [download 98% complete]
+-- [download 99% complete]
+-- [download 100% complete]
+-- cosmetics: Fetching xxhash
+-- randomizer: Fetching yaml-cpp
+-- randomizer: Fetching base64pp
+-- randomizer: Fetching battery-embed
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR
+-- Performing Test COMPILER_HAS_DEPRECATED_ATTR - Failed
+-- Performing Test COMPILER_HAS_DEPRECATED
+-- Performing Test COMPILER_HAS_DEPRECATED - Success
+-- Generating b::embed() HPP files ...
+-- Generating b::embed() HPP files ... Done
+-- Configuring done (83.9s)
+-- Generating done (1.7s)
+CMake Warning (unused-cli):
+  Manually-specified variables were not used by the project:
+
+    Rust_RUSTUP_INSTALL_MISSING_TARGET
+
+
+-- Build files have been written to: D:/a/Mods-Duskligh/Mods-Duskligh/official/build/x-windows-ci-msvc

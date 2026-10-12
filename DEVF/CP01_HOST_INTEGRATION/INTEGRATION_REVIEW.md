@@ -13,7 +13,9 @@ Esta revisión contrasta el parche conservado con sus consumidores reales. No su
 
 ## Cola y fases reales
 
-La prueba dirigida usa headers del checkout, el typedef estándar extraído sin transcribirlo, el escáner exacto y cuerpos efectivos de fpcCtRq_Cancel/Delete. Enlaza las TUs originales c_node/c_list/c_tree/c_tag/f_pc_create_tag/f_pc_method. Profile ownership, fase, capa, heap y proceso son adaptadores declarados; no ejecuta fpcCtRq_Handler completo, mounts o Dusklight.
+La prueba dirigida usa headers del checkout, el typedef estándar extraído sin transcribirlo, el escáner exacto y cuerpos efectivos de fpcCtRq_Cancel/Delete. Enlaza las TUs originales c_node/c_list/c_tree/c_tag/f_pc_create_tag/f_pc_method. La fixture inicializa mod_owner directamente para probar el escáner antes de cualquier callback; no ejecuta la factoría fpcSCtRq_Request. Profile ownership, fase, capa, heap y proceso son adaptadores declarados; no ejecuta fpcCtRq_Handler completo, mounts o Dusklight.
+
+Evidencia recibida: run38270210787, 17 expectativas PASS. Layout nativo: pointer8, create_request144, standard_request200, mod_owner offset176, tag-data offset24. Los procesos se mantienen vivos deliberadamente durante la prueba reentrante. El callback adaptado retira el siguiente tag: el recorrido exacto vuelve a visitarlo y llama dos veces al destructor controlado. Esto demuestra la fragilidad del recorrido; no ejecuta una liberación doble ni un UAF dentro del juego. El camino público de desregistro entre perfiles distintos y la invalidación de handles se sustentan en revisión estática y no se han ejecutado dentro del host.
 
 Comportamientos que requieren distinguir:
 
@@ -24,7 +26,7 @@ Comportamientos que requieren distinguir:
 
 ## Riesgos graves que bloquean una prueba activa
 
-**R1 — reentrancia durante el recorrido de destrucción (BLOCKED por revisión estática; prueba dirigida ampliada pendiente).** finish_delete_all_actors_of_name conserva NODE_GET_NEXT antes de llamar fpcDtTg_Do, que ejecuta código del mod. unregister_actor comprueba callbacks del perfil objetivo, no de los demás perfiles. Por ello un destructor de A puede desregistrar B, con otro perfil y sin callback propio pendiente. Ese cierre puede retirar/liberar el nodo B guardado como siguiente: la siguiente iteración desreferencia un puntero obsoleto. actor_drain_mod también guarda una lista de handles y desreferencia find(handle) sin revalidarlo después de callbacks anteriores; retirar B durante A puede invalidar ese handle. fpcBs_Delete libera el proceso si el método devuelve 1, por lo que el riesgo no se limita a una mutación inocua de una lista.
+**R1 — reentrancia durante el recorrido de destrucción (BLOCKED: revisión estática y diagnóstico dirigido Windows recibido).** finish_delete_all_actors_of_name conserva NODE_GET_NEXT antes de llamar fpcDtTg_Do, que ejecuta código del mod. unregister_actor comprueba callbacks del perfil objetivo, no de los demás perfiles. Por ello un destructor de A puede desregistrar B, con otro perfil y sin callback propio pendiente. Ese cierre puede retirar/liberar el nodo B guardado como siguiente: la siguiente iteración desreferencia un puntero obsoleto. actor_drain_mod también guarda una lista de handles y desreferencia find(handle) sin revalidarlo después de callbacks anteriores; retirar B durante A puede invalidar ese handle. fpcBs_Delete libera el proceso si el método devuelve 1, por lo que el riesgo no se limita a una mutación inocua de una lista.
 
 Se conserva el parche exacto para evaluar la integración y se bloquea su adopción; no se improvisa una corrección amplia ni se fuerza GO. Hace falta una barrera de mutaciones/reentrancia y una estrategia de recorrido que no conserve pointers/handles invalidables por callbacks, con pruebas de esos escenarios y recompilación afectada.
 

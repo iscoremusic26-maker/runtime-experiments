@@ -37,3 +37,9 @@ Parche experimental con barrera de solicitudes, predrenado separado de retirada 
 Cierre de esta revisión: **25/25 PASS de laboratorio Windows x64/MSVC 19.51.36260.0 + SDK10.0.26100.0**, run [38204996509](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38204996509). El parche y los scopes efectivos se compilan como funciones extraídas con adaptadores sintéticos; no es compilación del host completo ni ejecución del engine/DX12. Compilación completa BLOCKED por dependencias/gitlinks exactos; integración/fases/escenas NOT_TESTED y compatibilidad/teardown global NOT_VERIFIED.
 
 Checkpoint final: **DEVF_CP01_HOST_LIFETIME_EXPERIMENT**, rama experimental independiente, PR draft #1 sin merge. Ver [recuperación](../CP01_HOST_EXPERIMENT/RECOVERY.md) y [matriz detallada](../CP01_HOST_EXPERIMENT/TEST_RESULTS.md). Bloqueo arquitectónico **no cerrado en producción**, ubicación permanece NOT_VERIFIED. CP01 **no listo para TEST activo Windows/DX12**; DISARMED_NO_REGISTRATION y CP02 NO-GO. Detener aquí: siguiente trabajo mínimo es obtener/integrar las dependencias exactas del host, sin repetir la auditoría ni análisis de ubicación.
+
+## Actualización incremental: integración del host Windows (CP01)
+
+El checkpoint DEVF_CP01_PATCHED_HOST_INTEGRATION_MSVC acredita PATCHED_HOST_BUILD_PASS y 17 expectativas INTEGRATION_TEST_PASS con colas/layouts reales y adaptadores declarados. No reemplaza las conclusiones anteriores de ubicación/runtime ni certifica seguridad global. [Informe](../CP01_HOST_INTEGRATION/INTEGRATION_REPORT.md) y [matriz](../CP01_HOST_INTEGRATION/TEST_RESULTS.md).
+
+La reentrancia del recorrido de destrucción y el teardown global fuera del loader siguen BLOCKED. DLL/contexto en el juego, recursos, escenas y DX12 siguen NOT_TESTED. DEVF DISARMED_NO_REGISTRATION; CP02 NO-GO. CP01 no está listo para una prueba activa en la instalación del usuario. No se instaló, ejecutó ni distribuyó el host ni se hizo merge.

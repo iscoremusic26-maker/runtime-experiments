@@ -1,0 +1,12 @@
+{
+  "run_id": 38265011287,
+  "job_id": 114864857848,
+  "ci_commit": "55cbce11239adb3375e6a40002dd67a331b9ac99",
+  "overall_job": "failure in old diagnostic driver only",
+  "host_configure_build_collect": "success",
+  "artifact_id": 11756393337,
+  "artifact_bytes": 54467,
+  "artifact_sha256": "d8760d0800404c52501099775fec8e9c197fe088290429ebb20e027998e49d49",
+  "verification": "actual ZIP downloaded; SHA256, CRC and exact eleven textual member allowlist PASS",
+  "binaries_or_original_resources": false
+}

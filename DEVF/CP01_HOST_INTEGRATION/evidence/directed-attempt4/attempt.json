@@ -1,0 +1,13 @@
+{
+  "run_id": 38269006274,
+  "job_id": 114878303950,
+  "ci_commit": "81a37596b2fc9a1651270e109b59ef7233d6be62",
+  "artifact_id": 11756167402,
+  "artifact_bytes": 13178,
+  "artifact_sha256": "a2be2ce6fa420c78dbed1c4c9126060aa000c346b9d3a5727b82a768354b93e7",
+  "verification": "actual ZIP downloaded; SHA256/CRC/eight textual member allowlist PASS",
+  "cause": "native DUSK_BUILDING_GAME global.h includes item.hpp using f32 before types.h, after graphics PCH was excluded",
+  "classification": "TEST_DRIVER_INCLUDE_ORDER_ERROR; no host source change",
+  "test_execution": "NOT_TESTED",
+  "correction": "real scalar types.h precedes global.h, which then precedes actual queue headers; all ABI defines retained"
+}

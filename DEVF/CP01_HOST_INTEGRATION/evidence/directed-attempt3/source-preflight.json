@@ -1,0 +1,96 @@
+{
+  "root_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "tag": "v2.0.3",
+  "tree": "e4b79b565b2842f711f7c9f2390f56ef11063157",
+  "gitlinks": [
+    {
+      "path": "extern/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "url": "https://github.com/encounter/aurora.git",
+      "tracked_clean": true
+    },
+    {
+      "path": "extern/borealis",
+      "commit": "4ac5e7052a8c49a122f8d57f626b5c75c5ca6968",
+      "url": "https://github.com/encounter/borealis.git",
+      "tracked_clean": true
+    },
+    {
+      "path": "mods/randomizer",
+      "commit": "1f24e81303536db4b77f49d057a8ec1f11162000",
+      "url": "https://github.com/TwilitRealm/dusklight-randomizer.git",
+      "tracked_clean": true
+    },
+    {
+      "path": "mods/cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "url": "https://github.com/TwilitRealm/dusklight-cosmetics",
+      "tracked_clean": true
+    }
+  ],
+  "unpatched_files": [
+    {
+      "path": "include/f_pc/f_pc_stdcreate_req.h",
+      "sha256": "5effabc375a7bce92b331652b0235d103e8ea9382ed027e36bd7885ca45843db"
+    },
+    {
+      "path": "src/dusk/mod_loader.hpp",
+      "sha256": "6764280356f31f0a64f946c2e344392c12e3624d7fc715bd4c2769e83dcfcc1a"
+    },
+    {
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "sha256": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82"
+    },
+    {
+      "path": "src/dusk/mods/loader/natives.cpp",
+      "sha256": "8a033da1c9eb871358c3fd46fc8e47234f78486452dec72a6e13d73d0b6a24b7"
+    },
+    {
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "sha256": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3"
+    },
+    {
+      "path": "src/dusk/mods/svc/actor.hpp",
+      "sha256": "5cd0bcaa78b81500ac0b6752606ec499e3b99119bd4bfe2e4e1dc7d055bfe4bc"
+    },
+    {
+      "path": "src/dusk/mods/svc/registry.cpp",
+      "sha256": "747fe99de33833d40243c7069458cd1fb2fddc998397ef5cd63e03a0a6d6e059"
+    },
+    {
+      "path": "src/dusk/mods/svc/registry.hpp",
+      "sha256": "dff21a98441eaacd869cbfb08a555bb68716cdad01332ea3123c9eb85c2407a3"
+    },
+    {
+      "path": "src/dusk/mods/svc/stage.cpp",
+      "sha256": "3f1ab649cb49f88fc36ac607a203306a794b0e9df888d3e9e5b09498fc7672f3"
+    },
+    {
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "sha256": "4c57494d769800ad0a1dbbfc836a265803036fa2e5b1594c5a82e9d799617845"
+    },
+    {
+      "path": "src/f_pc/f_pc_base.cpp",
+      "sha256": "766c08a272bc39e336df4e86d089c39301a1855a079ce0c3a181c13684796828"
+    },
+    {
+      "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+      "sha256": "fd45dc723ec0856c09e58d8d5826af6b3197ea43f316a33adbd77b01e0977d75"
+    }
+  ],
+  "tracked_clean": true,
+  "vcpkg_commit": "9e593bb18ea69cc5095e012465dcd675a822ed0d",
+  "patch_applied": false,
+  "tools": {
+    "cmake": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+    "ninja": "1.13.2",
+    "python": "Python 3.12.10",
+    "git": "git version 2.55.0.windows.5",
+    "sccache": "sccache 0.12.0",
+    "vcpkg": "vcpkg package management program version 2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8\n\nSee LICENSE.txt for license information."
+  },
+  "msvc_banner": "Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64\nCopyright (C) Microsoft Corporation.  All rights reserved.",
+  "msvc_tools_version": "14.51.36231",
+  "windows_sdk_version": "10.0.26100.0\\",
+  "target_arch": "x64"
+}

@@ -1,0 +1,111 @@
+{
+  "root_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "tag": "v2.0.3",
+  "tree": "e4b79b565b2842f711f7c9f2390f56ef11063157",
+  "gitlinks": [
+    {
+      "path": "extern/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "url": "https://github.com/encounter/aurora.git",
+      "tracked_clean": true
+    },
+    {
+      "path": "extern/borealis",
+      "commit": "4ac5e7052a8c49a122f8d57f626b5c75c5ca6968",
+      "url": "https://github.com/encounter/borealis.git",
+      "tracked_clean": true
+    },
+    {
+      "path": "mods/randomizer",
+      "commit": "1f24e81303536db4b77f49d057a8ec1f11162000",
+      "url": "https://github.com/TwilitRealm/dusklight-randomizer.git",
+      "tracked_clean": true
+    },
+    {
+      "path": "mods/cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "url": "https://github.com/TwilitRealm/dusklight-cosmetics",
+      "tracked_clean": true
+    }
+  ],
+  "patched_files": [
+    {
+      "path": "include/f_pc/f_pc_stdcreate_req.h",
+      "sha256": "fd07e6bf3ad34d3d32c7659bd66907f15e419124a64ecb37170888d78f7d75dc"
+    },
+    {
+      "path": "src/dusk/mod_loader.hpp",
+      "sha256": "db6559974a92d536962b2e5eaaab254cf184e2a63f3f397ab0c96f703dfaa462"
+    },
+    {
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "sha256": "4f2354770be2078a39e1a1d725bad86105abb0b21aa8cc877d2ba95032c27c2c"
+    },
+    {
+      "path": "src/dusk/mods/loader/natives.cpp",
+      "sha256": "12404c7dac6c4c24de57571396c40efe87ea80d54af4b99c8b77ea177859b078"
+    },
+    {
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "sha256": "ca0dcba1a8f66152ad14ddea06a06e5be7538c85098049a2d67685de0d366130"
+    },
+    {
+      "path": "src/dusk/mods/svc/actor.hpp",
+      "sha256": "9356a405eec434629e28f397574662e4061c2d0eed5be3bf16e6243851b5a361"
+    },
+    {
+      "path": "src/dusk/mods/svc/registry.cpp",
+      "sha256": "43f82d27956e6221d2084810eecdb983567e66ff61de2b1f57d557ff0076bfbc"
+    },
+    {
+      "path": "src/dusk/mods/svc/registry.hpp",
+      "sha256": "6332dce1d33c6c34915545dcbc4bdc6fad8f842e3b0b0e3ba33634626fd4cea1"
+    },
+    {
+      "path": "src/dusk/mods/svc/stage.cpp",
+      "sha256": "064e64efd901995d71373eefaf9294839cc48bc016b76a7f834c7d37597f9f36"
+    },
+    {
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "sha256": "b44e0258999ab189ad97f6e754b17589d574304b9d54041fde8cab41f64fbff1"
+    },
+    {
+      "path": "src/f_pc/f_pc_base.cpp",
+      "sha256": "ff3fb41c3911ec8890a34bb385309a06538dfe6324346d9faa646d05a0242bcc"
+    },
+    {
+      "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+      "sha256": "c9a1b44a45b8a747705dcab14e2703a5fe896db67b88bb992d96ed18fe9a2742"
+    }
+  ],
+  "only_expected_tracked_changes": true,
+  "changed_paths": [
+    "include/f_pc/f_pc_stdcreate_req.h",
+    "src/dusk/mod_loader.hpp",
+    "src/dusk/mods/loader/loader.cpp",
+    "src/dusk/mods/loader/natives.cpp",
+    "src/dusk/mods/svc/actor.cpp",
+    "src/dusk/mods/svc/actor.hpp",
+    "src/dusk/mods/svc/registry.cpp",
+    "src/dusk/mods/svc/registry.hpp",
+    "src/dusk/mods/svc/stage.cpp",
+    "src/f_op/f_op_actor_mng.cpp",
+    "src/f_pc/f_pc_base.cpp",
+    "src/f_pc/f_pc_stdcreate_req.cpp"
+  ],
+  "original_patch_sha256": "3a6268135dac0d37580342dacfb429bca84428b91b2ad0beec97e88a0a7501d8",
+  "vcpkg_commit": "9e593bb18ea69cc5095e012465dcd675a822ed0d",
+  "patch_applied": true,
+  "tools": {
+    "cmake": "cmake version 4.4.3\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+    "ninja": "1.13.2",
+    "python": "Python 3.12.10",
+    "git": "git version 2.55.0.windows.5",
+    "sccache": "sccache 0.12.0",
+    "vcpkg": "vcpkg package management program version 2026-07-27-98d7cb0cf1f4686a3e43aa5672b6230c1d56bce8\n\nSee LICENSE.txt for license information."
+  },
+  "msvc_banner": "Microsoft (R) C/C++ Optimizing Compiler Version 19.51.36260 for x64\nCopyright (C) Microsoft Corporation.  All rights reserved.",
+  "msvc_tools_version": "14.51.36231",
+  "windows_sdk_version": "10.0.26100.0\\",
+  "target_arch": "x64"
+}

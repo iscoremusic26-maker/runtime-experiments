@@ -1,6 +1,6 @@
 # Recuperación y reproducción de la integración CP01
 
-El tag final de esta etapa se consignará al recibir/verificar la evidencia. Recuperar siempre en un checkout independiente, sin reset/clean sobre trabajo ajeno. No mover tags anteriores ni hacer merge. Baseline 413377f y experimento eea4742 permanecen en el historial.
+Tag principal: DEVF_CP01_PATCHED_HOST_INTEGRATION_MSVC. Tag del diagnóstico privado: DEVF_CP01_REAL_QUEUE_INTEGRATION_MSVC (11b763d). Recuperar siempre en un checkout independiente, sin reset/clean sobre trabajo ajeno. No mover tags anteriores ni hacer merge. Baseline 413377f y experimento eea4742 permanecen en el historial.
 
 ## Source y aplicación
 
@@ -27,7 +27,7 @@ Detenerse si falla un comando y clasificar el error. No cambiar hashes, source o
 
 El laboratorio privado establecido en codex-cp00-inputs utiliza la rama experiment/devf-cp01-host-integration-directed, PR draft #4 y .github/workflows/devf-cp01-host-directed.yml. Solo contiene copias de herramientas/parche propios, con hashes en CI_SOURCE.json. No lee los ZIP/ARC existentes en ese repositorio. Configura el mismo source y compila exclusivamente las siete TUs/driver para evitar repetir el host por cambios de la prueba. Las funciones/layouts extraídos permanecen en RUNNER_TEMP, mientras el artefacto contiene solo JSON/logs.
 
-Para repetir únicamente el diagnóstico en una copia ya configurada, usar run_directed.py, sin repetir build/install. El script obtiene flags del compile_commands.json efectivo y usa cl.exe directamente para el driver; /Od afecta solo el diagnóstico. Sus adaptadores son explícitos y no autorizan una declaración de seguridad global.
+Para repetir únicamente el diagnóstico en una copia ya configurada, usar run_directed.py, sin repetir build/install. El script obtiene flags del compile_commands.json efectivo y usa cl.exe directamente para el driver. Solo el diagnóstico retira /Yu,/Yc,/Fp, sustituye únicamente /FI del PCH gráfico por /FItypes.h seguido de /FIglobal.h (global antes de headers de colas, política oficial GameABIConfig.cmake; los escalares deben preceder a global bajo DUSK_BUILDING_GAME); conserva los defines/flags de ABI, y añade /Od,/Gy,/Zc:inline,/OPT:REF para eliminar funciones de headers no utilizadas. El host conserva sus opciones originales. Sus adaptadores son explícitos y no autorizan una declaración de seguridad global.
 
 GitHub puede restringir workflow_dispatch a workflows presentes en default. No hacer merge para habilitarlo. Una reproducción autorizada puede usar un PR draft nuevo con el snapshot correspondiente o los comandos Windows anteriores. No ejecutar otra etapa baseline intacta.
 
@@ -36,3 +36,12 @@ GitHub puede restringir workflow_dispatch a workflows presentes en default. No h
 No hay instalación que revertir. Conservar los checkouts originales; descartar solamente los árboles experimentales propios cuando deje de ser necesaria su evidencia. No modificar EXE, saves, flags, recursos o instalación del usuario. Mantener DISARMED_NO_REGISTRATION.
 
 INTEGRATION_REVIEW.md describe los riesgos graves de reentrancia y teardown global. Antes de una prueba activa se requiere resolverlos mediante una etapa específica, pruebas afectadas y evidencia runtime/ubicación ya pendiente. Este checkpoint no autoriza activación, prueba DX12 ni CP02.
+
+```sh
+git fetch origin tag DEVF_CP01_PATCHED_HOST_INTEGRATION_MSVC
+git switch --detach DEVF_CP01_PATCHED_HOST_INTEGRATION_MSVC
+git rev-parse DEVF_CP01_PATCHED_HOST_INTEGRATION_MSVC^{commit}
+git merge-base --is-ancestor 413377f HEAD
+```
+
+Los artefactos descargados se verificaron SHA256/CRC/allowlist y sus JSON/logs están versionados en evidence/full-host y evidence/directed-final. Consultar VERIFIED_INTEGRATION_SUMMARY.json y los intentos históricos; no depende de su vencimiento en Actions. La publicación contiene únicamente informes, herramientas propias y evidencias textuales.

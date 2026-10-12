@@ -1,0 +1,20 @@
+LAYOUT pointer=8 create_request=144 standard_request=200 owner_offset=176 tag_data_offset=24
+PASS empty real queue
+PASS real tag insertion two requests
+PASS submission owner before first callback
+PASS actual cancel removes/frees first node
+PASS scanner follows retained second node
+PASS actual cancel removes/frees final node
+PASS profile owner distinct from submitting owner
+PASS opaque real queue entry conservatively blocks
+PASS process cancel failure retains request and sticky flag
+PASS sticky cancel success does not prove actual queue drained
+PASS delete clears real process request backlink
+PASS cancel callback failure retains scanned request
+PASS LIMIT original delete callback failure removes queue before failure
+PASS real queue head/tail empty after cleanup
+PASS real delete queue requeues callback failure
+PASS real delete queue drains after callback success
+PASS BLOCKED detached next node revisited by exact traversal
+SAFETY_BLOCKED reentrant_next_node_revisit=observed objects_not_freed=yes runtime=NOT_TESTED
+INTEGRATION_TEST_PASS checks=17 game_runtime=NOT_TESTED adapters=profile_owner,phase,layer,heap,process_delete

@@ -1,0 +1,14 @@
+{
+  "phase": "vcpkg",
+  "command": [
+    "D:\\a\\Mods-Duskligh\\Mods-Duskligh/baseline-vcpkg/vcpkg.exe",
+    "install",
+    "freetype:x64-windows",
+    "zstd:x64-windows"
+  ],
+  "started_at_utc": "2026-10-12T14:44:32.233496+00:00",
+  "state": "PASS",
+  "finished_at_utc": "2026-10-12T14:46:35.304629+00:00",
+  "elapsed_seconds": 123.063,
+  "exit_code": 0
+}

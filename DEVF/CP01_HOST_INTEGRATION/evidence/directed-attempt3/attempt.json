@@ -1,0 +1,13 @@
+{
+  "run_id": 38268038098,
+  "job_id": 114875100347,
+  "ci_commit": "6491d55f71d5c7cc8da72b69ff013861e1770f17",
+  "artifact_id": 11755208575,
+  "artifact_bytes": 12610,
+  "artifact_sha256": "0fa7eaab662e8c53697fec4c87be82ce15368bb6319a361367ee28c7abf9a73d",
+  "verification": "actual ZIP downloaded; SHA256/CRC/eight textual member allowlist PASS",
+  "cause": "GXDestroyTexObj remained unresolved from inherited graphics PCH; /Gy,/Zc:inline,/OPT:REF did not remove the reference",
+  "classification": "TEST_DRIVER_LINK_CONFIGURATION_ERROR; original and patched host unchanged",
+  "test_execution": "NOT_TESTED",
+  "correction": "queue-only driver excludes graphics PCH; real global.h forced first as official cmake/GameABIConfig.cmake SDK policy, followed by real types.h; same actual ABI/preprocessor flags retained"
+}

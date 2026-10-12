@@ -1,0 +1,29 @@
+{
+  "baseline_run": 38256856294,
+  "integration_run": 38265011287,
+  "baseline_status": "BASELINE_BUILD_PASS",
+  "integration_status": "PATCHED_HOST_BUILD_PASS",
+  "dependencies": {
+    "archives_and_embedded_fixtures": {
+      "added": [],
+      "removed": [],
+      "changed": []
+    },
+    "git_and_recursive_gitlinks": {
+      "added": [],
+      "removed": [],
+      "changed": []
+    },
+    "vcpkg_versions_equal": true
+  },
+  "dependency_comparison_status": "PASS",
+  "warnings": {
+    "baseline_occurrences": 31,
+    "integration_occurrences": 31,
+    "new_code_message_pairs": [],
+    "occurrence_changes": [],
+    "scope": "host build.log only; diagnostic driver and Actions infrastructure warnings excluded; not a source-location correspondence proof"
+  },
+  "compiler_linker_errors": [],
+  "game_runtime": "NOT_TESTED"
+}

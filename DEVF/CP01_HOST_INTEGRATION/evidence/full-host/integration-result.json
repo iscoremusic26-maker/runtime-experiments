@@ -1,0 +1,681 @@
+{
+  "source_after": {
+    "root_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "tag": "v2.0.3",
+    "tree": "e4b79b565b2842f711f7c9f2390f56ef11063157",
+    "gitlinks": [
+      {
+        "path": "extern/aurora",
+        "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+        "url": "https://github.com/encounter/aurora.git",
+        "tracked_clean": true
+      },
+      {
+        "path": "extern/borealis",
+        "commit": "4ac5e7052a8c49a122f8d57f626b5c75c5ca6968",
+        "url": "https://github.com/encounter/borealis.git",
+        "tracked_clean": true
+      },
+      {
+        "path": "mods/randomizer",
+        "commit": "1f24e81303536db4b77f49d057a8ec1f11162000",
+        "url": "https://github.com/TwilitRealm/dusklight-randomizer.git",
+        "tracked_clean": true
+      },
+      {
+        "path": "mods/cosmetics",
+        "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+        "url": "https://github.com/TwilitRealm/dusklight-cosmetics",
+        "tracked_clean": true
+      }
+    ],
+    "patched_files": [
+      {
+        "path": "include/f_pc/f_pc_stdcreate_req.h",
+        "sha256": "fd07e6bf3ad34d3d32c7659bd66907f15e419124a64ecb37170888d78f7d75dc"
+      },
+      {
+        "path": "src/dusk/mod_loader.hpp",
+        "sha256": "db6559974a92d536962b2e5eaaab254cf184e2a63f3f397ab0c96f703dfaa462"
+      },
+      {
+        "path": "src/dusk/mods/loader/loader.cpp",
+        "sha256": "4f2354770be2078a39e1a1d725bad86105abb0b21aa8cc877d2ba95032c27c2c"
+      },
+      {
+        "path": "src/dusk/mods/loader/natives.cpp",
+        "sha256": "12404c7dac6c4c24de57571396c40efe87ea80d54af4b99c8b77ea177859b078"
+      },
+      {
+        "path": "src/dusk/mods/svc/actor.cpp",
+        "sha256": "ca0dcba1a8f66152ad14ddea06a06e5be7538c85098049a2d67685de0d366130"
+      },
+      {
+        "path": "src/dusk/mods/svc/actor.hpp",
+        "sha256": "9356a405eec434629e28f397574662e4061c2d0eed5be3bf16e6243851b5a361"
+      },
+      {
+        "path": "src/dusk/mods/svc/registry.cpp",
+        "sha256": "43f82d27956e6221d2084810eecdb983567e66ff61de2b1f57d557ff0076bfbc"
+      },
+      {
+        "path": "src/dusk/mods/svc/registry.hpp",
+        "sha256": "6332dce1d33c6c34915545dcbc4bdc6fad8f842e3b0b0e3ba33634626fd4cea1"
+      },
+      {
+        "path": "src/dusk/mods/svc/stage.cpp",
+        "sha256": "064e64efd901995d71373eefaf9294839cc48bc016b76a7f834c7d37597f9f36"
+      },
+      {
+        "path": "src/f_op/f_op_actor_mng.cpp",
+        "sha256": "b44e0258999ab189ad97f6e754b17589d574304b9d54041fde8cab41f64fbff1"
+      },
+      {
+        "path": "src/f_pc/f_pc_base.cpp",
+        "sha256": "ff3fb41c3911ec8890a34bb385309a06538dfe6324346d9faa646d05a0242bcc"
+      },
+      {
+        "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+        "sha256": "c9a1b44a45b8a747705dcab14e2703a5fe896db67b88bb992d96ed18fe9a2742"
+      }
+    ],
+    "only_expected_tracked_changes": true,
+    "changed_paths": [
+      "include/f_pc/f_pc_stdcreate_req.h",
+      "src/dusk/mod_loader.hpp",
+      "src/dusk/mods/loader/loader.cpp",
+      "src/dusk/mods/loader/natives.cpp",
+      "src/dusk/mods/svc/actor.cpp",
+      "src/dusk/mods/svc/actor.hpp",
+      "src/dusk/mods/svc/registry.cpp",
+      "src/dusk/mods/svc/registry.hpp",
+      "src/dusk/mods/svc/stage.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_stdcreate_req.cpp"
+    ],
+    "original_patch_sha256": "3a6268135dac0d37580342dacfb429bca84428b91b2ad0beec97e88a0a7501d8",
+    "vcpkg_commit": "9e593bb18ea69cc5095e012465dcd675a822ed0d",
+    "patch_applied": true
+  },
+  "source_verification_error": null,
+  "archives": [
+    {
+      "path": "abseil-cpp-subbuild\\abseil-cpp-populate-prefix\\src\\20240722.0.tar.gz",
+      "root": "_deps",
+      "bytes": 2242861,
+      "sha256": "f50e5ac311a81382da7fa75b97310e4b9006474f9560ac46f54a9967f07d4ae3"
+    },
+    {
+      "path": "battery-embed-src\\examples\\generatedfile\\resources\\helloworld.zip",
+      "root": "_deps",
+      "bytes": 177,
+      "sha256": "8a30277f3f6a90b7d3f14e976907541917e2a303669e52608acc1ea219361e6e"
+    },
+    {
+      "path": "cxxopts-subbuild\\cxxopts-populate-prefix\\src\\v3.3.1.tar.gz",
+      "root": "_deps",
+      "bytes": 161557,
+      "sha256": "3bfc70542c521d4b55a46429d808178916a579b28d048bd8c727ee76c39e2072"
+    },
+    {
+      "path": "dawn_prebuilt-subbuild\\dawn_prebuilt-populate-prefix\\src\\dawn-windows-amd64.tar.gz",
+      "root": "_deps",
+      "bytes": 14209713,
+      "sha256": "42a7a295c87b2e8a36312e2f84a5823aac63325e8e1d271bc7ced6f83bfb075f"
+    },
+    {
+      "path": "fmt-subbuild\\fmt-populate-prefix\\src\\12.1.0.tar.gz",
+      "root": "_deps",
+      "bytes": 711419,
+      "sha256": "ea7de4299689e12b6dddd392f9896f08fb0777ac7168897a244a6d6085043fea"
+    },
+    {
+      "path": "googletest-subbuild\\googletest-populate-prefix\\src\\v1.17.0.tar.gz",
+      "root": "_deps",
+      "bytes": 885595,
+      "sha256": "65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c"
+    },
+    {
+      "path": "imgui-subbuild\\imgui-populate-prefix\\src\\v1.91.9b-docking.tar.gz",
+      "root": "_deps",
+      "bytes": 2006500,
+      "sha256": "466fdef9b18de15f0bb6e288e3d00ffa3d82200ec458ce5e4f724a161d9528a5"
+    },
+    {
+      "path": "luabridge3-subbuild\\luabridge3-populate-prefix\\src\\twilit-v1.zip",
+      "root": "_deps",
+      "bytes": 3890843,
+      "sha256": "aa65e6e3446363d03842134182db28e6206e08d366b8efb8f66d26f96a3314be"
+    },
+    {
+      "path": "luau-subbuild\\luau-populate-prefix\\src\\0.734.tar.gz",
+      "root": "_deps",
+      "bytes": 3112286,
+      "sha256": "cb55a891226d8c70284e22eb9281cc2b4496c709a4050f52aaa18a355fe7b1a3"
+    },
+    {
+      "path": "miniz-subbuild\\miniz-populate-prefix\\src\\miniz-3.0.2.zip",
+      "root": "_deps",
+      "bytes": 99268,
+      "sha256": "ada38db0b703a56d3dd6d57bf84a9c5d664921d870d8fea4db153979fb5332c5"
+    },
+    {
+      "path": "nlohmann_json-subbuild\\nlohmann_json-populate-prefix\\src\\json.tar.xz",
+      "root": "_deps",
+      "bytes": 114576,
+      "sha256": "42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa"
+    },
+    {
+      "path": "nod_prebuilt-subbuild\\nod_prebuilt-populate-prefix\\src\\libnod-windows-x86_64.tar.gz",
+      "root": "_deps",
+      "bytes": 6408338,
+      "sha256": "c9dfecf8e52066a5222f3cb1cad18d0740c958ce65bf60cb84e780a3856ed881"
+    },
+    {
+      "path": "picosha2-subbuild\\picosha2-populate-prefix\\src\\v1.0.1.tar.gz",
+      "root": "_deps",
+      "bytes": 7767,
+      "sha256": "9983136544234e573fe07cc1a22fdf978ad7979043e7be2e9082f6d4991ff8a8"
+    },
+    {
+      "path": "rmlui-subbuild\\rmlui-populate-prefix\\src\\f00a0fee38391b2f927114e11bea18dc0a7dba1e.tar.gz",
+      "root": "_deps",
+      "bytes": 4033883,
+      "sha256": "6d9fd1164b7873c9dfba72d724753bda9e3db8280c9af802eed8e2a12035f152"
+    },
+    {
+      "path": "sdl3_prebuilt-subbuild\\sdl3_prebuilt-populate-prefix\\src\\SDL3-windows-amd64.tar.gz",
+      "root": "_deps",
+      "bytes": 1948117,
+      "sha256": "5a641c2355b4cf3e710662f1b29d1255448ca55d9f34f1c62cd29668eaa3aabb"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Different Encryptions.zip",
+      "root": "_deps",
+      "bytes": 1083,
+      "sha256": "6b31406fad0767ddb9be0a90a20828e9e070e21fbe049b7eb2b392c1c345d935"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Empty Dir Same Name As File.zip",
+      "root": "_deps",
+      "bytes": 218,
+      "sha256": "d394fb12ed4095f7f512670b579e82f9aadb658db2c1978213ef3eca295c5599"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\empty.zip",
+      "root": "_deps",
+      "bytes": 22,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\evil.zip",
+      "root": "_deps",
+      "bytes": 241,
+      "sha256": "2a90a6231fa6f01448ed4a7dc71761659af45103bae518edf90c8930b7d2ecda"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\evil_via_absolute_file_name.zip",
+      "root": "_deps",
+      "bytes": 172,
+      "sha256": "9722b4e0782e7bbab00ce084e56cadbbf1d0dc70bec241f710cda571fa98e0cc"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\evil_via_invalid_utf8.zip",
+      "root": "_deps",
+      "bytes": 4585,
+      "sha256": "b9625c82de43d898e794d77954ac3fdacc85b7b585c13fdf9ba1dfc357a017f9"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Mixed Paths.zip",
+      "root": "_deps",
+      "bytes": 12814,
+      "sha256": "9157550334c4bbec26efe1b6fcb01a7d544b0bcc8f13ecb6c7a1c8b07904bf91"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Parent Dir Same Name As File.zip",
+      "root": "_deps",
+      "bytes": 241,
+      "sha256": "d3829a7297144155836ed014f6945508eb04aaa0976188e90ea5712a3d71389e"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Repeated Dir Name.zip",
+      "root": "_deps",
+      "bytes": 210,
+      "sha256": "69c9cff25b2d1ebfacd3d6b24e143af013f2e9dacf971cdf66b3f47d5c5d4f6c"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Repeated File Name With Different Cases.zip",
+      "root": "_deps",
+      "bytes": 313,
+      "sha256": "01e8e6525d6c6c5dc15a8783a0b18f60176ffd54554b31d42b509d1028222d3a"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Repeated File Name.zip",
+      "root": "_deps",
+      "bytes": 227,
+      "sha256": "7a1542a276e0637a0eec12418dcad98b53f7ee90e3c88dafcb9064eff7e49646"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\SJIS Bug 846195.zip",
+      "root": "_deps",
+      "bytes": 479,
+      "sha256": "3823e935f91eac22738d4c0db3198e6fe8b231cb1ace5db65b374d5e3628ee9d"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\test.zip",
+      "root": "_deps",
+      "bytes": 5065,
+      "sha256": "bf4efc0897e82fbb9940a05a6b507ab75d700de59ca14e458283789323d2b524"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\test_encrypted.zip",
+      "root": "_deps",
+      "bytes": 5325,
+      "sha256": "96e34dca4deb618e4062cf1a3916da1659b91c8343ccd966cce01c4ee6904922"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\test_mismatch_size.zip",
+      "root": "_deps",
+      "bytes": 886,
+      "sha256": "23e0649f22e18996cd111603c8f11ed6bb4e586e711b5a0140123c25e9b58e09"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\test_nocompress.zip",
+      "root": "_deps",
+      "bytes": 14252,
+      "sha256": "32cc05dcdf501c9ff5c22cacb40e7170dab609be196e67d151d4538a8150ca3d"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\test_posix_permissions.zip",
+      "root": "_deps",
+      "bytes": 574,
+      "sha256": "1013d9a7d0cce34e0cb538a4e54899f9cde186efec756144ebb42119db8bfb34"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Windows Special Names.zip",
+      "root": "_deps",
+      "bytes": 3985,
+      "sha256": "ef3d861252c26cf034e38b6db2ada678d85cff0b943481b5ee232bb771c52561"
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib\\google\\test\\data\\Wrong CRC.zip",
+      "root": "_deps",
+      "bytes": 231,
+      "sha256": "458823445fb5f151c3ab0fd021555586a90881fbefed769a676b3255bf2bd2b7"
+    },
+    {
+      "path": "sqlite3-subbuild\\sqlite3-populate-prefix\\src\\sqlite-amalgamation-3510300.zip",
+      "root": "_deps",
+      "bytes": 2876305,
+      "sha256": "acb1e6f5d832484bf6d32b681e858c38add8b2acdfd42ac5df24b8afb46552b4"
+    },
+    {
+      "path": "tracy-subbuild\\tracy-populate-prefix\\src\\v0.14.1.zip",
+      "root": "_deps",
+      "bytes": 6387264,
+      "sha256": "908f3a2917fa86a247abfcf85dcf04bad1db6986a4d40f94b70512f3e9e98d5b"
+    },
+    {
+      "path": "xxhash-subbuild\\xxhash-populate-prefix\\src\\v0.8.3.tar.gz",
+      "root": "_deps",
+      "bytes": 1147630,
+      "sha256": "aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80"
+    },
+    {
+      "path": "bzip2-1.0.8.tar.gz",
+      "root": "downloads",
+      "bytes": 810029,
+      "sha256": "ab5a03176ee106d3f0fa90e381da478ddae405918153cca248e682cd0c4a2269"
+    },
+    {
+      "path": "facebook-zstd-v1.5.7.tar.gz",
+      "root": "downloads",
+      "bytes": 2451884,
+      "sha256": "37d7284556b20954e56e1ca85b80226768902e2edabd3b649e9e72c0c9012ee3"
+    },
+    {
+      "path": "freetype-freetype-VER-2-14-3.tar.gz",
+      "root": "downloads",
+      "bytes": 2515533,
+      "sha256": "dc49de6b01a266eef4876a4dd34d9842c475d3e28ff2eff63bd2fb760ab56261"
+    },
+    {
+      "path": "google-brotli-v1.2.0.tar.gz",
+      "root": "downloads",
+      "bytes": 646315,
+      "sha256": "816c96e8e8f193b40151dad7e8ff37b1221d019dbcb9c35cd3fadbfe6477dfec"
+    },
+    {
+      "path": "madler-zlib-v1.3.2.tar.gz",
+      "root": "downloads",
+      "bytes": 1566911,
+      "sha256": "b99a0b86c0ba9360ec7e78c4f1e43b1cbdf1e6936c8fa0f6835c0cd694a495a1"
+    },
+    {
+      "path": "pnggroup-libpng-v1.6.58.tar.gz",
+      "root": "downloads",
+      "bytes": 1592190,
+      "sha256": "a9d4df463d36a6e5f9c29bd6f4967312d17e996c1854f3511f833924eb1993cf"
+    }
+  ],
+  "fetched_git_dependencies": [
+    {
+      "path": "base64pp-src",
+      "commit": "736345896182b50babfe6eaa10b211b90d6abb0b",
+      "url": "https://github.com/matheusgomes28/base64pp.git",
+      "recursive_gitlinks": "245c7c94c20eac22730ef89035967f78b77bf405 doxygen-awesome-css (v2.2.0-2-g245c7c9)"
+    },
+    {
+      "path": "battery-embed-src",
+      "commit": "408567ae3eb296f3aa8d00e1c57d0b7d28ce992b",
+      "url": "https://github.com/TwilitRealm/embed.git",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "funchook-src",
+      "commit": "88388db3c69e16c1560fee65c6857d75f5ce6fd5",
+      "url": "https://github.com/kubo/funchook.git",
+      "recursive_gitlinks": "ab59d6e193948cfa5d1482fb6c7e64870e9e93b9 distorm (3.5.2)"
+    },
+    {
+      "path": "sentry_native-src",
+      "commit": "93c4e3221d3a2c91a9797a1195cb5280eff55d5a",
+      "url": "https://github.com/getsentry/sentry-native.git",
+      "recursive_gitlinks": "48f5cc21bac647a8a64e9787cb84f349e334b7ac external/benchmark (v1.9.2-6-g48f5cc2)\n 25b6b727af49fa383161e7dba4a82ab0661b69b8 external/breakpad (remotes/origin/chore/update_2025_06_13-3-g25b6b727)\n e5040b878718f5c004d0ecfe1747642c72ddcd39 external/crashpad (remotes/origin/joshua/feat/offline_caching_windows-136-ge5040b87)\n 9719c1e1e676814c456b55f5f070eabad6709d31 external/crashpad/third_party/lss/lss (v2022.10.12)\n 5d060033dbe1595f612a2f506b7988c8d513d32e external/crashpad/third_party/mini_chromium/mini_chromium (remotes/origin/main-26-g5d06003)\n fef58692c1d7bec94c4ed3d030a45a1832a9615d external/crashpad/third_party/zlib/zlib (heads/getsentry-sentry-native)\n 284202fb1e42dbeba6598e26ced2e1ec404eecd1 external/libunwindstack-ndk (libunwindstack_origin-150-g284202f)\n ed31caa60f20a4f6569883b2d752ef7522de51e0 external/third_party/lss (v2024.02.01)"
+    },
+    {
+      "path": "yaml-cpp-src",
+      "commit": "56e3bb550c91fd7005566f19c079cb7a503223cf",
+      "url": "https://github.com/jbeder/yaml-cpp.git",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "base64pp-src\\doxygen-awesome-css",
+      "commit": "245c7c94c20eac22730ef89035967f78b77bf405",
+      "url": "https://github.com/jothepro/doxygen-awesome-css.git",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "funchook-src\\distorm",
+      "commit": "ab59d6e193948cfa5d1482fb6c7e64870e9e93b9",
+      "url": "https://github.com/gdabah/distorm.git",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "sentry_native-src\\external\\benchmark",
+      "commit": "48f5cc21bac647a8a64e9787cb84f349e334b7ac",
+      "url": "https://github.com/google/benchmark.git",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "sentry_native-src\\external\\breakpad",
+      "commit": "25b6b727af49fa383161e7dba4a82ab0661b69b8",
+      "url": "https://github.com/getsentry/breakpad.git",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad",
+      "commit": "e5040b878718f5c004d0ecfe1747642c72ddcd39",
+      "url": "https://github.com/getsentry/crashpad.git",
+      "recursive_gitlinks": "9719c1e1e676814c456b55f5f070eabad6709d31 third_party/lss/lss (v2022.10.12)\n 5d060033dbe1595f612a2f506b7988c8d513d32e third_party/mini_chromium/mini_chromium (remotes/origin/main-26-g5d06003)\n fef58692c1d7bec94c4ed3d030a45a1832a9615d third_party/zlib/zlib (heads/getsentry-sentry-native)"
+    },
+    {
+      "path": "sentry_native-src\\external\\libunwindstack-ndk",
+      "commit": "284202fb1e42dbeba6598e26ced2e1ec404eecd1",
+      "url": "https://github.com/getsentry/libunwindstack-ndk",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\lss\\lss",
+      "commit": "9719c1e1e676814c456b55f5f070eabad6709d31",
+      "url": "https://github.com/getsentry/chromium-linux-syscall-support",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\mini_chromium\\mini_chromium",
+      "commit": "5d060033dbe1595f612a2f506b7988c8d513d32e",
+      "url": "https://github.com/getsentry/mini_chromium.git",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "sentry_native-src\\external\\crashpad\\third_party\\zlib\\zlib",
+      "commit": "fef58692c1d7bec94c4ed3d030a45a1832a9615d",
+      "url": "https://github.com/getsentry/chromium-zlib",
+      "recursive_gitlinks": ""
+    },
+    {
+      "path": "sentry_native-src\\external\\third_party\\lss",
+      "commit": "ed31caa60f20a4f6569883b2d752ef7522de51e0",
+      "url": "https://github.com/getsentry/chromium-linux-syscall-support",
+      "recursive_gitlinks": ""
+    }
+  ],
+  "installed_host": [
+    {
+      "path": "build/install/Dusklight.exe",
+      "bytes": 52321280,
+      "sha256": "d4ec7dd9ef06435d70f45c4b6654602cc95b672f5c0b7d7ce04a4afbe795c061",
+      "machine": "AMD64",
+      "dll": false,
+      "executed": false
+    }
+  ],
+  "phases": {
+    "vcpkg": {
+      "phase": "vcpkg",
+      "command": [
+        "D:\\a\\Mods-Duskligh\\Mods-Duskligh/baseline-vcpkg/vcpkg.exe",
+        "install",
+        "freetype:x64-windows",
+        "zstd:x64-windows"
+      ],
+      "started_at_utc": "2026-10-12T14:44:32.233496+00:00",
+      "state": "PASS",
+      "finished_at_utc": "2026-10-12T14:46:35.304629+00:00",
+      "elapsed_seconds": 123.063,
+      "exit_code": 0
+    },
+    "configure": {
+      "phase": "configure",
+      "command": [
+        "cmake",
+        "--preset",
+        "x-windows-ci-msvc",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "started_at_utc": "2026-10-12T14:46:39.486962+00:00",
+      "state": "PASS",
+      "finished_at_utc": "2026-10-12T14:48:05.255370+00:00",
+      "elapsed_seconds": 85.766,
+      "exit_code": 0
+    },
+    "build": {
+      "phase": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "--preset",
+        "x-windows-ci-msvc",
+        "--parallel",
+        "2"
+      ],
+      "started_at_utc": "2026-10-12T14:48:05.730944+00:00",
+      "state": "PASS",
+      "finished_at_utc": "2026-10-12T15:28:19.582882+00:00",
+      "elapsed_seconds": 2413.797,
+      "exit_code": 0
+    }
+  },
+  "status": "PATCHED_HOST_BUILD_PASS",
+  "engine_execution": "NOT_TESTED",
+  "DEVF": "DISARMED_NO_REGISTRATION",
+  "patch_applied": true,
+  "collected_at_utc": "2026-10-12T15:28:23.231276+00:00",
+  "vcpkg_installed": "{\n  \"brotli:x64-windows\": {\n    \"package_name\": \"brotli\",\n    \"triplet\": \"x64-windows\",\n    \"version\": \"1.2.0\",\n    \"port_version\": 0,\n    \"features\": [],\n    \"desc\": [\n      \"a generic-purpose lossless compression algorithm that compresses data using a combination of a modern variant of the LZ77 algorithm, Huffman coding and 2nd order context modeling.\"\n    ]\n  },\n  \"bzip2:x64-windows\": {\n    \"package_name\": \"bzip2\",\n    \"triplet\": \"x64-windows\",\n    \"version\": \"1.0.8\",\n    \"port_version\": 6,\n    \"features\": [\n      \"tool\"\n    ],\n    \"desc\": [\n      \"bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression.\"\n    ]\n  },\n  \"freetype:x64-windows\": {\n    \"package_name\": \"freetype\",\n    \"triplet\": \"x64-windows\",\n    \"version\": \"2.14.3\",\n    \"port_version\": 0,\n    \"features\": [\n      \"brotli\",\n      \"bzip2\",\n      \"png\",\n      \"zlib\"\n    ],\n    \"desc\": [\n      \"A library to render fonts.\"\n    ]\n  },\n  \"libpng:x64-windows\": {\n    \"package_name\": \"libpng\",\n    \"triplet\": \"x64-windows\",\n    \"version\": \"1.6.58\",\n    \"port_version\": 0,\n    \"features\": [],\n    \"desc\": [\n      \"libpng is a library implementing an interface for reading and writing PNG (Portable Network Graphics) format files\"\n    ]\n  },\n  \"vcpkg-cmake-config:x64-windows\": {\n    \"package_name\": \"vcpkg-cmake-config\",\n    \"triplet\": \"x64-windows\",\n    \"version\": \"2026-07-21\",\n    \"port_version\": 0,\n    \"features\": [],\n    \"desc\": []\n  },\n  \"vcpkg-cmake:x64-windows\": {\n    \"package_name\": \"vcpkg-cmake\",\n    \"triplet\": \"x64-windows\",\n    \"version\": \"2024-04-23\",\n    \"port_version\": 0,\n    \"features\": [],\n    \"desc\": []\n  },\n  \"zlib:x64-windows\": {\n    \"package_name\": \"zlib\",\n    \"triplet\": \"x64-windows\",\n    \"version\": \"1.3.2\",\n    \"port_version\": 1,\n    \"features\": [],\n    \"desc\": [\n      \"A compression library\"\n    ]\n  },\n  \"zstd:x64-windows\": {\n    \"package_name\": \"zstd\",\n    \"triplet\": \"x64-windows\",\n    \"version\": \"1.5.7\",\n    \"port_version\": 0,\n    \"features\": [],\n    \"desc\": [\n      \"Zstandard - Fast real-time compression algorithm\"\n    ]\n  }\n}",
+  "selected_cache": {
+    "AURORA_DAWN_LINKAGE": "shared",
+    "AURORA_DAWN_PROVIDER": "package",
+    "AURORA_DAWN_REF": "1155e0ed531126f33a1279afa029349651ca1c93",
+    "AURORA_DAWN_VERSION": "v20260807.225922",
+    "AURORA_NOD_LINKAGE": "shared",
+    "AURORA_NOD_PROVIDER": "package",
+    "AURORA_NOD_VERSION": "v2.0.0-alpha.12",
+    "AURORA_SDL3_LINKAGE": "shared",
+    "AURORA_SDL3_PROVIDER": "package",
+    "AURORA_SDL3_REF": "refs/tags/release-3.4.10",
+    "AURORA_SDL3_VERSION": "3.4.10",
+    "BOREALIS_ENABLE_SENTRY": "TRUE",
+    "CMAKE_BUILD_TYPE": "RelWithDebInfo",
+    "CMAKE_CXX_COMPILER": "C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+    "CMAKE_C_COMPILER": "C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe",
+    "CMAKE_INSTALL_PREFIX": "D:/a/Mods-Duskligh/Mods-Duskligh/official/build/install",
+    "CMAKE_MSVC_DEBUG_INFORMATION_FORMAT": "Embedded",
+    "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreadedDLL",
+    "CMAKE_TOOLCHAIN_FILE": "D:/a/Mods-Duskligh/Mods-Duskligh/baseline-vcpkg/scripts/buildsystems/vcpkg.cmake",
+    "VCPKG_TARGET_TRIPLET": "x64-windows",
+    "AURORA_DAWN_LINKAGE-STRINGS": "shared;static",
+    "AURORA_DAWN_PROVIDER-STRINGS": "auto;vendor;system;package",
+    "AURORA_NOD_LINKAGE-STRINGS": "shared;static",
+    "AURORA_NOD_PROVIDER-STRINGS": "auto;vendor;system;package",
+    "AURORA_SDL3_LINKAGE-STRINGS": "shared;static",
+    "AURORA_SDL3_PROVIDER-STRINGS": "auto;vendor;system;package",
+    "AURORA_SDL3_TARGET": "SDL3::SDL3",
+    "CMAKE_GENERATOR": "Ninja"
+  },
+  "compile_graph": {
+    "translation_units": 2700,
+    "patched_cpp_entries": {
+      "src/dusk/mods/loader/loader.cpp": 1,
+      "src/dusk/mods/loader/natives.cpp": 1,
+      "src/dusk/mods/svc/actor.cpp": 1,
+      "src/dusk/mods/svc/registry.cpp": 1,
+      "src/dusk/mods/svc/stage.cpp": 1,
+      "src/f_op/f_op_actor_mng.cpp": 1,
+      "src/f_pc/f_pc_base.cpp": 1,
+      "src/f_pc/f_pc_stdcreate_req.cpp": 1
+    },
+    "headers_recompiled_together": true,
+    "basis": "fresh runner build; Ninja dependency scan below",
+    "actual_header_consumers": {
+      "include/f_pc/f_pc_stdcreate_req.h": [
+        "CMakeFiles/JSystem_JFramework.dir/libs/JSystem/src/JFramework/JFWDisplay.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/cmake_pch.cxx.obj",
+        "CMakeFiles/dusklight.dir/cmake_pch.cxx.obj",
+        "mods/shadow_mod/CMakeFiles/shadow_mod.dir/src/mod.cpp.obj",
+        "mods/custom_actor_demo/CMakeFiles/custom_actor_demo.dir/src/m_a_obj_wrock.cpp.obj",
+        "mods/custom_actor_demo/CMakeFiles/custom_actor_demo.dir/src/mod.cpp.obj",
+        "mods/custom_actor_demo/CMakeFiles/custom_actor_demo.dir/src/m_a_mine.cpp.obj",
+        "mods/cosmetics/CMakeFiles/cosmetics.dir/src/mod.cpp.obj",
+        "mods/cosmetics/CMakeFiles/cosmetics.dir/src/texture_utils.cpp.obj",
+        "mods/cosmetics/CMakeFiles/cosmetics.dir/src/hooks.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/draw.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/messages.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/tools.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/randomizer_context.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/verify_item_functions.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/session.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/item.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/hooks.cpp.obj",
+        "mods/randomizer/CMakeFiles/randomizer.dir/src/ui/rando_config.cpp.obj"
+      ],
+      "src/dusk/mod_loader.hpp": [
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/bundle_zip.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/bundle_disk.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/context.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/depgraph.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/manifest.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/loader.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/natives.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/packages.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/updates.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/item_checks.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/queue.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/item_gives.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/actor.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/audio_res/audio_res.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/audio_res/bst.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/audio_res/wsys.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/audio_res/wave.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/camera.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/config.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/file.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/game.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/gfx.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/flow.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/hook.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/host.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/http.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/net.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/websocket.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/item.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/log.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/interp.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/overlay.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/registry.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/resource.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/texture.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/game_mode.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/ui.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/window.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/stage.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/save.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/save_manager.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/drop_install_modal.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/menu_bar.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/mod_browser.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/online_mods.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/mod_texture_provider.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/mod_updates.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/mods_window.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/overlay.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/prelaunch.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/saves_window.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/ui.cpp.obj",
+        "CMakeFiles/dusklight.dir/src/m_Do/m_Do_main.cpp.obj",
+        "CMakeFiles/dusklight.dir/src/f_ap/f_ap_game.cpp.obj"
+      ],
+      "src/dusk/mods/svc/actor.hpp": [
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/loader.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/actor.cpp.obj",
+        "CMakeFiles/dusklight.dir/src/f_op/f_op_actor_mng.cpp.obj",
+        "CMakeFiles/dusklight.dir/src/f_pc/f_pc_base.cpp.obj",
+        "CMakeFiles/dusklight.dir/src/f_pc/f_pc_profile.cpp.obj",
+        "CMakeFiles/dusklight.dir/src/f_pc/f_pc_stdcreate_req.cpp.obj",
+        "CMakeFiles/dusklight.dir/src/d/d_stage.cpp.obj"
+      ],
+      "src/dusk/mods/svc/registry.hpp": [
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/context.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/loader.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/loader/natives.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/updates.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/actor.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/audio_res/audio_res.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/camera.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/config.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/file.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/game.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/gfx.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/flow.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/hook.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/host.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/http.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/net.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/websocket.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/item.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/log.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/interp.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/overlay.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/registry.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/resource.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/texture.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/game_mode.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/ui.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/window.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/stage.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/mods/svc/save.cpp.obj",
+        "CMakeFiles/dusk_internal.dir/src/dusk/ui/mod_browser.cpp.obj"
+      ]
+    }
+  }
+}

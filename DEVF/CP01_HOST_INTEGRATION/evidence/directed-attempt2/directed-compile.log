@@ -1,0 +1,20 @@
+cl : Command line warning D9025 : overriding '/O2' with '/Od'
+cl : Command line warning D9025 : overriding '/O2' with '/Od'
+real_queue.cpp
+c_node.cpp
+c_list.cpp
+c_tree.cpp
+c_tag.cpp
+f_pc_create_tag.cpp
+f_pc_method.cpp
+f_pc_delete_tag.cpp
+c_tag.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+f_pc_create_tag.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+f_pc_method.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+f_pc_delete_tag.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+real_queue.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+c_node.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+c_list.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+c_tree.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+D:\a\_temp\private-directed\directed_queue.exe : fatal error LNK1120: 1 unresolved externals
+cl : Command line warning D9025 : overriding '/O2' with '/Od'

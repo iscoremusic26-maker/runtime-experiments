@@ -1,0 +1,11 @@
+cl : Command line warning D9025 : overriding '/O2' with '/Od'
+cl : Command line warning D9025 : overriding '/O2' with '/Od'
+real_queue.cpp
+c_node.cpp
+c_list.cpp
+c_tree.cpp
+c_tag.cpp
+f_pc_create_tag.cpp
+f_pc_method.cpp
+f_pc_delete_tag.cpp
+cl : Command line warning D9025 : overriding '/O2' with '/Od'

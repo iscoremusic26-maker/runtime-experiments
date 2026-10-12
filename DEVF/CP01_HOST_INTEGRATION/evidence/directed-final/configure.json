@@ -1,0 +1,14 @@
+{
+  "phase": "configure",
+  "command": [
+    "cmake",
+    "--preset",
+    "x-windows-ci-msvc",
+    "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+  ],
+  "started_at_utc": "2026-10-12T15:30:01.402827+00:00",
+  "state": "PASS",
+  "finished_at_utc": "2026-10-12T15:31:15.736078+00:00",
+  "elapsed_seconds": 74.329,
+  "exit_code": 0
+}

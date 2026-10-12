@@ -1,0 +1,184 @@
+Computing installation plan...
+The following packages will be built and installed:
+  * brotli:x64-windows@1.2.0
+  * bzip2[core,tool]:x64-windows@1.0.8#6
+    freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.14.3
+  * libpng:x64-windows@1.6.58
+  * vcpkg-cmake:x64-windows@2024-04-23
+  * vcpkg-cmake-config:x64-windows@2026-07-21
+  * zlib:x64-windows@1.3.2#1
+    zstd:x64-windows@1.5.7
+Additional packages (*) will be modified to complete this operation.
+Detecting compiler hash for triplet x64-windows...
+Compiler found: C:/Program Files/Microsoft Visual Studio/18/Enterprise/VC/Tools/MSVC/14.51.36231/bin/Hostx64/x64/cl.exe
+Installing 1/8 vcpkg-cmake:x64-windows@2024-04-23...
+vcpkg-cmake:x64-windows@2024-04-23 package ABI: baf4ae0206a7b8594be0fe8358ecdd97e2c03748147e454f35583839884fb944
+Building vcpkg-cmake:x64-windows@2024-04-23...
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_configure.cmake
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_build.cmake
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg_cmake_install.cmake
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/vcpkg-port-config.cmake
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/vcpkg-cmake_x64-windows/share/vcpkg-cmake/copyright
+-- Performing post-build validation
+Elapsed time to handle vcpkg-cmake:x64-windows: 76.5 ms
+Installing 2/8 vcpkg-cmake-config:x64-windows@2026-07-21...
+vcpkg-cmake-config:x64-windows@2026-07-21 package ABI: 1ce3ec39d11f02e363402d580af4ae621036decb38e72036c4d51a492d8711de
+Building vcpkg-cmake-config:x64-windows@2026-07-21...
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/vcpkg_cmake_config_fixup.cmake
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/vcpkg-port-config.cmake
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/vcpkg-cmake-config_x64-windows/share/vcpkg-cmake-config/copyright
+-- Skipping post-build validation due to VCPKG_POLICY_EMPTY_PACKAGE
+Elapsed time to handle vcpkg-cmake-config:x64-windows: 63.5 ms
+Installing 3/8 brotli:x64-windows@1.2.0...
+brotli:x64-windows@1.2.0 package ABI: 2f43cb554afde66b9ab201b06aee2c771170b49cace925cb5adcc9c0ded8c36c
+Building brotli:x64-windows@1.2.0...
+Downloading https://github.com/google/brotli/archive/v1.2.0.tar.gz -> google-brotli-v1.2.0.tar.gz
+Successfully downloaded google-brotli-v1.2.0.tar.gz
+-- Extracting source D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/google-brotli-v1.2.0.tar.gz
+-- Applying patch install.patch
+-- Applying patch pkgconfig.patch
+-- Using source at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/buildtrees/brotli/src/v1.2.0-7af7ca71ad.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/brotli_x64-windows/lib/pkgconfig/libbrotlicommon.pc
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/brotli_x64-windows/lib/pkgconfig/libbrotlidec.pc
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/brotli_x64-windows/lib/pkgconfig/libbrotlienc.pc
+Downloading msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst, trying https://mirror.msys2.org/mingw/mingw64/mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+Successfully downloaded msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+Downloading msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst, trying https://mirror.msys2.org/msys/x86_64/msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+Successfully downloaded msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/brotli_x64-windows/debug/lib/pkgconfig/libbrotlicommon.pc
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/brotli_x64-windows/debug/lib/pkgconfig/libbrotlidec.pc
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/brotli_x64-windows/debug/lib/pkgconfig/libbrotlienc.pc
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/brotli_x64-windows/share/brotli/usage
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/brotli_x64-windows/share/brotli/copyright
+-- Performing post-build validation
+Elapsed time to handle brotli:x64-windows: 33 s
+Installing 4/8 bzip2[core,tool]:x64-windows@1.0.8#6...
+bzip2[core,tool]:x64-windows@1.0.8#6 package ABI: ba3d5ef0bd581eff9edd6dd95a3108fa03be4b27821c33fed1aeed5964bbfdd9
+Building bzip2[core,tool]:x64-windows@1.0.8#6...
+Downloading bzip2-1.0.8.tar.gz, trying https://sourceware.org/pub/bzip2/bzip2-1.0.8.tar.gz
+Successfully downloaded bzip2-1.0.8.tar.gz
+-- Extracting source D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/bzip2-1.0.8.tar.gz
+-- Applying patch fix-import-export-macros.patch
+-- Using source at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/buildtrees/bzip2/src/bzip2-1-336d4794a3.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/bzip2_x64-windows/lib/pkgconfig/bzip2.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/bzip2_x64-windows/debug/lib/pkgconfig/bzip2.pc
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/bzip2_x64-windows/share/bzip2/copyright
+-- Performing post-build validation
+Elapsed time to handle bzip2:x64-windows: 13 s
+Installing 5/8 zlib:x64-windows@1.3.2#1...
+zlib:x64-windows@1.3.2#1 package ABI: 5602c83e4c46b365ce310f48179425024578accfc382a53312d472af5547b7e0
+Building zlib:x64-windows@1.3.2#1...
+Downloading https://github.com/madler/zlib/archive/v1.3.2.tar.gz -> madler-zlib-v1.3.2.tar.gz
+Successfully downloaded madler-zlib-v1.3.2.tar.gz
+-- Extracting source D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/madler-zlib-v1.3.2.tar.gz
+-- Applying patch 0001-no-version-script-on-ohos.patch
+-- Using source at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/buildtrees/zlib/src/v1.3.2-c19a0bfd23.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/zlib_x64-windows/lib/pkgconfig/zlib.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/zlib_x64-windows/debug/lib/pkgconfig/zlib.pc
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/zlib_x64-windows/share/zlib/vcpkg-cmake-wrapper.cmake
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/zlib_x64-windows/share/zlib/copyright
+-- Performing post-build validation
+Elapsed time to handle zlib:x64-windows: 10 s
+Installing 6/8 libpng:x64-windows@1.6.58...
+libpng:x64-windows@1.6.58 package ABI: 3022f881c2cd288510bf0f3498fd7a4dcc28974ee3f3f44b270b0b7dced88e80
+Building libpng:x64-windows@1.6.58...
+Downloading https://github.com/pnggroup/libpng/archive/v1.6.58.tar.gz -> pnggroup-libpng-v1.6.58.tar.gz
+Successfully downloaded pnggroup-libpng-v1.6.58.tar.gz
+-- Extracting source D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/pnggroup-libpng-v1.6.58.tar.gz
+-- Applying patch cmake.patch
+-- Using source at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/buildtrees/libpng/src/v1.6.58-b91136795d.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/libpng_x64-windows/share/png/vcpkg-cmake-wrapper.cmake
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/libpng_x64-windows/share/libpng/libpng-config.cmake
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/libpng_x64-windows/lib/pkgconfig/libpng16.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/libpng_x64-windows/debug/lib/pkgconfig/libpng16.pc
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/libpng_x64-windows/debug/lib/pkgconfig/libpng.pc
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/libpng_x64-windows/lib/pkgconfig/libpng.pc
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/libpng_x64-windows/share/libpng/usage
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/libpng_x64-windows/share/libpng/copyright
+-- Performing post-build validation
+Elapsed time to handle libpng:x64-windows: 22 s
+Installing 7/8 freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.14.3...
+freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.14.3 package ABI: 66eec9d9cac612f5a597b1bdd937c8b912fbfb4f1a8b035687f42ecc67c7975f
+Building freetype[brotli,bzip2,core,png,zlib]:x64-windows@2.14.3...
+Downloading https://gitlab.freedesktop.org//freetype/freetype/-/archive/VER-2-14-3/freetype-VER-2-14-3.tar.gz -> freetype-freetype-VER-2-14-3.tar.gz
+Successfully downloaded freetype-freetype-VER-2-14-3.tar.gz
+-- Extracting source D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/freetype-freetype-VER-2-14-3.tar.gz
+-- Applying patch 0003-Fix-UWP.patch
+-- Applying patch brotli-static.patch
+-- Applying patch bzip2.patch
+-- Applying patch fix-exports.patch
+-- Using source at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/buildtrees/freetype/src/VER-2-14-3-46d5ca34ec.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/freetype_x64-windows/lib/pkgconfig/freetype2.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/freetype_x64-windows/debug/lib/pkgconfig/freetype2.pc
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/freetype_x64-windows/share/freetype/usage
+-- Performing post-build validation
+Elapsed time to handle freetype:x64-windows: 32 s
+Installing 8/8 zstd:x64-windows@1.5.7...
+zstd:x64-windows@1.5.7 package ABI: 9bd645175ab75d040201f54601279ff19759a316abf28630cf045e59139f17ec
+Building zstd:x64-windows@1.5.7...
+Downloading https://github.com/facebook/zstd/archive/v1.5.7.tar.gz -> facebook-zstd-v1.5.7.tar.gz
+Successfully downloaded facebook-zstd-v1.5.7.tar.gz
+-- Extracting source D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/facebook-zstd-v1.5.7.tar.gz
+-- Applying patch no-static-suffix.patch
+-- Applying patch fix-emscripten-and-clang-cl.patch
+-- Applying patch fix-windows-rc-compile.patch
+-- Using source at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/buildtrees/zstd/src/v1.5.7-bb6cae2b2e.clean
+-- Configuring x64-windows
+-- Building x64-windows-dbg
+-- Building x64-windows-rel
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/zstd_x64-windows/lib/pkgconfig/libzstd.pc
+-- Using cached msys2-mingw-w64-x86_64-pkgconf-1~2.5.1-1-any.pkg.tar.zst
+-- Using cached msys2-msys2-runtime-3.6.5-1-x86_64.pkg.tar.zst
+-- Using msys root at D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/downloads/tools/msys2/3e71d1f8e22ab23f
+-- Fixing pkgconfig file: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/zstd_x64-windows/debug/lib/pkgconfig/libzstd.pc
+-- Installing: D:/a/codex-cp00-inputs/codex-cp00-inputs/baseline-vcpkg/packages/zstd_x64-windows/share/zstd/usage
+-- Performing post-build validation
+Elapsed time to handle zstd:x64-windows: 38 s
+Total install time: 2.5 min
+Installed contents are licensed to you by owners. Microsoft is not responsible for, nor does it grant any licenses to, third-party packages.
+Packages installed in this vcpkg installation declare the following licenses:
+(BSD-3-Clause OR GPL-2.0-only)
+(FTL OR GPL-2.0-or-later)
+MIT
+Zlib
+bzip2-1.0.6
+libpng-2.0
+freetype is compatible with built-in CMake targets:
+
+    find_package(Freetype REQUIRED)
+    target_link_libraries(main PRIVATE Freetype::Freetype) # since CMake 3.10
+
+zstd provides CMake targets:
+
+  find_package(zstd CONFIG REQUIRED)
+  target_link_libraries(main PRIVATE zstd::libzstd)
+
+All requested installations completed successfully in: 2.5 min
