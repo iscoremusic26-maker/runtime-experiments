@@ -1,0 +1,54 @@
+name: DEVF CP01 Official SDK Architecture Disarmed Lab
+on:
+  pull_request:
+    paths:
+      - 'DEVF/CP01_OFFICIAL_ARCHITECTURE/**'
+      - '.github/workflows/devf-cp01-official-architecture.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  new-prototype-only:
+    runs-on: windows-latest
+    timeout-minutes: 20
+    env:
+      GIT_CONFIG_COUNT: '2'
+      GIT_CONFIG_KEY_0: core.autocrlf
+      GIT_CONFIG_VALUE_0: 'false'
+      GIT_CONFIG_KEY_1: core.longpaths
+      GIT_CONFIG_VALUE_1: 'true'
+    steps:
+      - name: Checkout independent architecture checkpoint
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Checkout exact official SDK root
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          repository: TwilitRealm/dusklight
+          ref: 40457c6adb381928e4b5fef6ed459ed291edd5e2
+          path: official
+          persist-credentials: false
+      - name: Fetch only pinned aurora public headers for compile-only ABI assertions
+        shell: pwsh
+        run: |
+          git -C official submodule update --init --depth 1 extern/aurora
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Enable MSVC Windows x64 SDK
+        uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756
+        with:
+          arch: amd64
+      - name: Build only new disarmed module, lab and ABI type assertions
+        shell: pwsh
+        run: |
+          python DEVF/CP01_OFFICIAL_ARCHITECTURE/ci/run_windows.py --source official --build "$env:RUNNER_TEMP/devf-architecture-build" --evidence "$env:RUNNER_TEMP/devf-architecture-evidence"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Upload only own textual evidence; no DLL, EXE, dusk or original resources
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: DEVF_OFFICIAL_ARCHITECTURE_METADATA_${{ github.run_id }}_${{ github.run_attempt }}
+          path: ${{ runner.temp }}/devf-architecture-evidence/
+          if-no-files-found: error
+          retention-days: 30
