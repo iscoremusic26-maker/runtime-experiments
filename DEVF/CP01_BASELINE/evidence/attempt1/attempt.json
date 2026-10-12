@@ -1,0 +1,17 @@
+{
+  "run_id": 38256216502,
+  "job_id": 114834895552,
+  "commit": "f59e17878d3252e5f9b9a01ac1c1c153aee6255e",
+  "artifact_id": 11750612225,
+  "artifact_sha256": "371b6c1a5cd97fe434d9cbb183b72ac2ac2f5ec6629b1213a9e1e364e0d47954",
+  "artifact_bytes": 4706,
+  "downloaded_and_crc_verified": true,
+  "result": "ENVIRONMENT_PREFLIGHT_FAIL",
+  "phase": "source raw file hash",
+  "cause": "Windows native EOL on files with text=auto; core.eol not explicitly LF",
+  "fix": "Add core.eol=lf before fresh checkout, preserve explicit *.bat eol=crlf",
+  "vcpkg_seconds": 121.468,
+  "configure": "NOT_RUN",
+  "build": "NOT_RUN",
+  "source_code_modified": false
+}
