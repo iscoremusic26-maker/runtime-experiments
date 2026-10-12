@@ -1,0 +1,19 @@
+{
+  "root_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "official_repository": "TwilitRealm/dusklight",
+  "source_archive_sha256_previously_verified": "9dbdc0b068df24c3fbb680c87be25e904978f04b315e2051e3c6203476516008",
+  "scope": "new official Git tree vs existing ZIP relation; no archive CRC/size investigation repeated",
+  "matching_git_blobs": 19366,
+  "differences": [
+    {
+      "path": "platforms/android/gradlew.bat",
+      "reason": "declared .bat eol=crlf; Git blob LF versus ZIP CRLF",
+      "zip_sha256": "fedad02c18e266ec094995a5751b7fe1eb6e74f66bf75db64fae2e50eb22c234",
+      "git_blob": "c4bdd3ab8e3ccd2ac3a2bc0db0f856f16b79ef39",
+      "normalized_content_equal": true
+    }
+  ],
+  "zip_extra_files": [],
+  "symlinks": [],
+  "status": "PASS_CONTENT_WITH_DECLARED_EOL"
+}

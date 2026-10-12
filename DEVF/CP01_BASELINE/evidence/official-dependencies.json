@@ -1,0 +1,240 @@
+{
+  "root_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "gitlinks": [
+    {
+      "path": "extern/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "url": "https://github.com/encounter/aurora.git",
+      "nested_gitlinks": 0
+    },
+    {
+      "path": "extern/borealis",
+      "commit": "4ac5e7052a8c49a122f8d57f626b5c75c5ca6968",
+      "url": "https://github.com/encounter/borealis.git",
+      "nested_gitlinks": 0
+    },
+    {
+      "path": "mods/randomizer",
+      "commit": "1f24e81303536db4b77f49d057a8ec1f11162000",
+      "url": "https://github.com/TwilitRealm/dusklight-randomizer.git",
+      "nested_gitlinks": 0
+    },
+    {
+      "path": "mods/cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "url": "https://github.com/TwilitRealm/dusklight-cosmetics",
+      "nested_gitlinks": 0
+    }
+  ],
+  "fetchcontent_declarations": [
+    {
+      "path": "CMakeLists.txt",
+      "line": 181,
+      "declaration": "miniz\n    URL https://github.com/richgel999/miniz/releases/download/3.0.2/miniz-3.0.2.zip\n    DOWNLOAD_EXTRACT_TIMESTAMP TRUE\n    EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "line": 187,
+      "declaration": "picosha2\n    URL https://github.com/okdshin/PicoSHA2/archive/refs/tags/v1.0.1.tar.gz\n    URL_HASH SHA256=9983136544234e573fe07cc1a22fdf978ad7979043e7be2e9082f6d4991ff8a8\n    DOWNLOAD_EXTRACT_TIMESTAMP TRUE\n    EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "line": 205,
+      "declaration": "opusfile\n        GIT_REPOSITORY https://github.com/xiph/opusfile.git\n        GIT_TAG        6dfd29e7adb87f2e193575fc3fa88cbf1a0b27df"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "line": 222,
+      "declaration": "funchook\n        GIT_REPOSITORY https://github.com/kubo/funchook.git\n        GIT_TAG v1.1.3\n        GIT_SHALLOW TRUE\n        GIT_PROGRESS TRUE\n        PATCH_COMMAND ${CMAKE_COMMAND} -DSOURCE_DIR=<SOURCE_DIR> -P ${CMAKE_CURRENT_SOURCE_DIR}/cmake/PatchFunchook.cmake\n        EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "cmake/ModSDK.cmake",
+      "line": 125,
+      "declaration": "fmt\n                URL https://github.com/fmtlib/fmt/archive/refs/tags/12.1.0.tar.gz\n                URL_HASH SHA256=ea7de4299689e12b6dddd392f9896f08fb0777ac7168897a244a6d6085043fea\n                DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n                EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/cmake/AuroraDawnProvider.cmake",
+      "line": 136,
+      "declaration": "dawn\n      URL \"https://github.com/encounter/dawn/archive/${AURORA_DAWN_REF}.tar.gz\"\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/cmake/AuroraDawnProvider.cmake",
+      "line": 191,
+      "declaration": "dawn_prebuilt\n    URL \"${AURORA_DAWN_PACKAGE_URL}\"\n    DOWNLOAD_EXTRACT_TIMESTAMP FALSE"
+    },
+    {
+      "path": "extern/aurora/cmake/AuroraNodProvider.cmake",
+      "line": 65,
+      "declaration": "aurora_nod\n      GIT_REPOSITORY \"https://github.com/encounter/nod.git\"\n      GIT_TAG \"${AURORA_NOD_VERSION}\"\n      GIT_SHALLOW TRUE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/cmake/AuroraNodProvider.cmake",
+      "line": 136,
+      "declaration": "nod_prebuilt\n    URL \"${AURORA_NOD_PACKAGE_URL}\"\n    DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n    EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/cmake/AuroraSDL3Provider.cmake",
+      "line": 96,
+      "declaration": "sdl3_prebuilt\n    URL \"${AURORA_SDL3_PACKAGE_URL}\"\n    DOWNLOAD_EXTRACT_TIMESTAMP FALSE"
+    },
+    {
+      "path": "extern/aurora/cmake/AuroraSDL3Provider.cmake",
+      "line": 142,
+      "declaration": "SDL\n      URL \"https://github.com/libsdl-org/SDL/archive/${AURORA_SDL3_REF}.tar.gz\"\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      PATCH_COMMAND ${CMAKE_COMMAND}\n        -DSDL_SOURCE_DIR=<SOURCE_DIR>\n        -P \"${CMAKE_CURRENT_LIST_DIR}/patches/apply-sdl3-android-nintendo-auto-mapping.cmake\"\n      COMMAND ${CMAKE_COMMAND}\n        -DSDL_SOURCE_DIR=<SOURCE_DIR>\n        -P \"${CMAKE_CURRENT_LIST_DIR}/patches/apply-sdl3-android-security-exception.cmake\"\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 37,
+      "declaration": "abseil-cpp\n    URL https://github.com/abseil/abseil-cpp/archive/refs/tags/20240722.0.tar.gz\n    DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n    EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 55,
+      "declaration": "xxhash\n    URL https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz\n    URL_HASH SHA256=aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80\n    SOURCE_SUBDIR cmake_unofficial\n    DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n    EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 98,
+      "declaration": "fmt\n      URL https://github.com/fmtlib/fmt/archive/refs/tags/12.1.0.tar.gz\n      URL_HASH SHA256=ea7de4299689e12b6dddd392f9896f08fb0777ac7168897a244a6d6085043fea\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 136,
+      "declaration": "ZLIB\n      URL https://github.com/zlib-ng/zlib-ng/archive/refs/tags/2.3.3.tar.gz\n      URL_HASH SHA256=f9c65aa9c852eb8255b636fd9f07ce1c406f061ec19a2e7d508b318ca0c907d1\n      PATCH_COMMAND ${CMAKE_COMMAND} -P \"${CMAKE_CURRENT_SOURCE_DIR}/../cmake/PatchZlib.cmake\"\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 178,
+      "declaration": "PNG\n      URL https://github.com/pnggroup/libpng/archive/refs/tags/v1.6.58.tar.gz\n      URL_HASH SHA256=A9D4DF463D36A6E5F9C29BD6F4967312D17E996C1854F3511F833924EB1993CF\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 212,
+      "declaration": "Freetype\n      URL https://files.twilitrealm.dev/freetype-2.14.3.tar.gz\n      URL_HASH SHA256=e61b31ab26358b946e767ed7eb7f4bb2e507da1cfefeb7a8861ace7fd5c899a1\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 226,
+      "declaration": "imgui\n      URL https://github.com/ocornut/imgui/archive/refs/tags/v1.91.9b-docking.tar.gz\n      URL_HASH SHA256=466fdef9b18de15f0bb6e288e3d00ffa3d82200ec458ce5e4f724a161d9528a5\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 288,
+      "declaration": "sqlite3\n      URL https://sqlite.org/2026/sqlite-amalgamation-3510300.zip\n      URL_HASH SHA256=acb1e6f5d832484bf6d32b681e858c38add8b2acdfd42ac5df24b8afb46552b4\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 316,
+      "declaration": "zstd\n        URL https://github.com/facebook/zstd/releases/download/v1.5.7/zstd-1.5.7.tar.gz\n        URL_HASH SHA256=eb33e51f49a15e023950cd7825ca74a4a2b43db8354825ac24fc1b7ee09e6fa3\n        DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n        SOURCE_SUBDIR build/cmake\n        EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 332,
+      "declaration": "rmlui\n      URL https://github.com/encounter/RmlUi/archive/f00a0fee38391b2f927114e11bea18dc0a7dba1e.tar.gz\n      URL_HASH SHA256=6d9fd1164b7873c9dfba72d724753bda9e3db8280c9af802eed8e2a12035f152\n      DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n      EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/extern/CMakeLists.txt",
+      "line": 361,
+      "declaration": "tracy\n          URL https://github.com/wolfpld/tracy/archive/refs/tags/v0.14.1.zip\n          URL_HASH SHA256=908f3a2917fa86a247abfcf85dcf04bad1db6986a4d40f94b70512f3e9e98d5b\n          DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n          EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/aurora/tests/CMakeLists.txt",
+      "line": 12,
+      "declaration": "googletest\n    URL https://github.com/google/googletest/archive/refs/tags/v1.17.0.tar.gz\n    URL_HASH SHA256=65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c\n    DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n    EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/borealis/CMakeLists.txt",
+      "line": 41,
+      "declaration": "fmt\n                URL https://github.com/fmtlib/fmt/archive/refs/tags/12.1.0.tar.gz\n                URL_HASH SHA256=ea7de4299689e12b6dddd392f9896f08fb0777ac7168897a244a6d6085043fea\n                DOWNLOAD_EXTRACT_TIMESTAMP FALSE"
+    },
+    {
+      "path": "extern/borealis/CMakeLists.txt",
+      "line": 110,
+      "declaration": "borealis_aurora\n                GIT_REPOSITORY https://github.com/encounter/aurora.git\n                GIT_TAG main\n                GIT_SHALLOW TRUE\n                SOURCE_SUBDIR include # avoid configuring cmake"
+    },
+    {
+      "path": "extern/borealis/CMakeLists.txt",
+      "line": 180,
+      "declaration": "sentry_native\n                GIT_REPOSITORY https://github.com/getsentry/sentry-native.git\n                GIT_TAG 0.13.6\n                GIT_SHALLOW TRUE\n                GIT_PROGRESS TRUE\n                GIT_SUBMODULES_RECURSE TRUE"
+    },
+    {
+      "path": "extern/borealis/CMakeLists.txt",
+      "line": 237,
+      "declaration": "cxxopts\n                    URL https://github.com/jarro2783/cxxopts/archive/refs/tags/v3.3.1.tar.gz\n                    URL_HASH SHA256=3bfc70542c521d4b55a46429d808178916a579b28d048bd8c727ee76c39e2072\n                    DOWNLOAD_EXTRACT_TIMESTAMP FALSE"
+    },
+    {
+      "path": "extern/borealis/CMakeLists.txt",
+      "line": 299,
+      "declaration": "xxhash\n                URL https://github.com/Cyan4973/xxHash/archive/refs/tags/v0.8.3.tar.gz\n                URL_HASH SHA256=aae608dfe8213dfd05d909a57718ef82f30722c392344583d3f39050c7f29a80\n                SOURCE_SUBDIR cmake_unofficial\n                DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n                EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "extern/borealis/CMakeLists.txt",
+      "line": 546,
+      "declaration": "nlohmann_json\n                    URL https://github.com/nlohmann/json/releases/download/v3.12.0/json.tar.xz\n                    URL_HASH SHA256=42f6e95cad6ec532fd372391373363b62a14af6d771056dbfc86160e6dfff7aa\n                    DOWNLOAD_EXTRACT_TIMESTAMP FALSE"
+    },
+    {
+      "path": "extern/borealis/cmake/BorealisCurl.cmake",
+      "line": 50,
+      "declaration": "borealis_nghttp2\n                URL https://github.com/nghttp2/nghttp2/releases/download/v1.70.0/nghttp2-1.70.0.tar.xz\n                URL_HASH SHA256=e05cb1388eaca3830aded4ccf20044b6e1ac1a61411dcca11b0437c4285c8bc2\n                DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n                ${_borealis_exclude_from_all}"
+    },
+    {
+      "path": "extern/borealis/cmake/BorealisCurl.cmake",
+      "line": 62,
+      "declaration": "borealis_curl\n            URL https://github.com/curl/curl/releases/download/curl-8_22_0/curl-8.22.0.tar.xz\n            URL_HASH SHA256=f7ef3ae8a22e521f289803fe93543eb64c329b58aa73a9e224dfd915a2a5f4f7\n            DOWNLOAD_EXTRACT_TIMESTAMP FALSE"
+    },
+    {
+      "path": "extern/borealis/tests/CMakeLists.txt",
+      "line": 5,
+      "declaration": "googletest\n            URL https://github.com/google/googletest/archive/refs/tags/v1.17.0.tar.gz\n            URL_HASH SHA256=65fab701d9829d38cb77c14acdc431d2108bfdbf8979e40eb8ae567edf10b27c\n            DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n            EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "mods/cosmetics/CMakeLists.txt",
+      "line": 22,
+      "declaration": "xxhash\n        GIT_REPOSITORY https://github.com/Cyan4973/xxHash.git\n        GIT_TAG        v0.8.3\n        SOURCE_SUBDIR  cmake_unofficial"
+    },
+    {
+      "path": "mods/luau_runtime/CMakeLists.txt",
+      "line": 21,
+      "declaration": "luau\n    URL https://github.com/luau-lang/luau/archive/refs/tags/0.734.tar.gz\n    URL_HASH SHA256=cb55a891226d8c70284e22eb9281cc2b4496c709a4050f52aaa18a355fe7b1a3\n    DOWNLOAD_EXTRACT_TIMESTAMP FALSE\n    EXCLUDE_FROM_ALL"
+    },
+    {
+      "path": "mods/luau_runtime/CMakeLists.txt",
+      "line": 29,
+      "declaration": "luabridge3\n    URL https://github.com/TwilitRealm/LuaBridge3/archive/refs/tags/twilit-v1.zip\n    URL_HASH SHA256=aa65e6e3446363d03842134182db28e6206e08d366b8efb8f66d26f96a3314be\n    DOWNLOAD_EXTRACT_TIMESTAMP TRUE"
+    },
+    {
+      "path": "mods/randomizer/CMakeLists.txt",
+      "line": 29,
+      "declaration": "yaml-cpp\n        GIT_REPOSITORY https://github.com/jbeder/yaml-cpp.git\n        GIT_TAG yaml-cpp-0.9.0"
+    },
+    {
+      "path": "mods/randomizer/CMakeLists.txt",
+      "line": 35,
+      "declaration": "base64pp\n        GIT_REPOSITORY https://github.com/matheusgomes28/base64pp.git\n        GIT_TAG v0.2.0-rc0"
+    },
+    {
+      "path": "mods/randomizer/CMakeLists.txt",
+      "line": 42,
+      "declaration": "battery-embed\n        GIT_REPOSITORY https://github.com/TwilitRealm/embed.git\n        GIT_TAG        twilit-v2"
+    }
+  ],
+  "version_files": [
+    {
+      "path": "CMakePresets.json",
+      "sha256": "ec1fab29c9229f442ccfbbc0a9cd8c5c03099deac37da6180864ec2ca4496627"
+    },
+    {
+      "path": ".github/workflows/build.yml",
+      "sha256": "b93bb72581aac8d2b19cd84e75d25c6f95555fd4cd8a4896c01e25ef11db2068"
+    },
+    {
+      "path": "extern/aurora/cmake/AuroraDependencyVersions.cmake",
+      "sha256": "a8ebbd1505e0e09cab1060a6caf55966ca53bcadfec06dd5b0e4a35802b113d9"
+    },
+    {
+      "path": "cmake/SymbolManifest.cmake",
+      "sha256": "9a99ee9b3b324964bcc82ae3494a881710d22938851b9e296599c9c74facd880"
+    }
+  ],
+  "source_patched": false
+}
