@@ -1,0 +1,26 @@
+{
+  "checks": {
+    "altered_arc_hash_fails_before_decode": "PASS_OFFLINE: changed scratch copy rejected; no derived output",
+    "hermite_interior_peak_and_tangent_types": "PASS_OFFLINE: endpoints0 but interior maximum1; both tangent encodings verified",
+    "python_json_and_document_links": "PASS_OFFLINE: two Python ASTs, saved JSON, 15 relative links",
+    "recovered_outputs_consistency": "PASS_OFFLINE: saved radii/BCK totals/182poses/31prisms/ground/box-vs-sphere; no rerun of resources or KCL",
+    "ssc_zero_crossing_fails_closed": "PASS_OFFLINE: finite bound rejected for parent scale crossing0",
+    "triangle_distance_face_and_edge": "PASS_OFFLINE: face projection and outside edge/vertex cases"
+  },
+  "corrected_documentary_pose_total": 182,
+  "cp02": "NO-GO",
+  "g4": "G4_RESOURCE_VERIFIED_POSITION_BLOCKED",
+  "g5": "NO-GO",
+  "math_bound_domain": "Ideal-real resource transformations; engine arithmetic/runtime NOT_VERIFIED",
+  "no_original_calculation_changed": true,
+  "recovered_radii": [
+    401,
+    494,
+    501
+  ],
+  "result_sha256": {
+    "position-query.json": "16b447fa5337cd538c32c791b67ad1b75f3e8589e957b5d1e4559525a73f52dd",
+    "resources-envelope.json": "bdef8e197a3bf43d2d7299ca52d9683465d7e224888ecbe06f4d3725fe8d12b4"
+  },
+  "scope": "Recovery validation only; no all28 BCK/KCL reprocessing"
+}

@@ -1,0 +1,1229 @@
+{
+  "all28_included": true,
+  "animation_exclusions": [],
+  "animations": [
+    {
+      "animated_channels": 59,
+      "channels_with_hull_beyond_key_values": 59,
+      "frames": 79,
+      "hermite_segments": 1352,
+      "index": 3,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 93,
+      "name": "oc_angry_a.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        -0.22697674500401868,
+        2.388904146138278
+      ],
+      "table_lengths": [
+        37,
+        3917,
+        172
+      ]
+    },
+    {
+      "animated_channels": 62,
+      "channels_with_hull_beyond_key_values": 62,
+      "frames": 64,
+      "hermite_segments": 1405,
+      "index": 4,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 77,
+      "name": "oc_angry_b.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        -0.4148881693254225,
+        1.6928998566872906
+      ],
+      "table_lengths": [
+        40,
+        3969,
+        229
+      ]
+    },
+    {
+      "animated_channels": 76,
+      "channels_with_hull_beyond_key_values": 75,
+      "frames": 42,
+      "hermite_segments": 1208,
+      "index": 5,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 64,
+      "name": "oc_attack_b.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        3754,
+        79
+      ]
+    },
+    {
+      "animated_channels": 71,
+      "channels_with_hull_beyond_key_values": 71,
+      "frames": 47,
+      "hermite_segments": 1021,
+      "index": 6,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 56,
+      "name": "oc_attack_c.bck",
+      "rotation_shift": 2,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        3206,
+        67
+      ]
+    },
+    {
+      "animated_channels": 67,
+      "channels_with_hull_beyond_key_values": 67,
+      "frames": 39,
+      "hermite_segments": 510,
+      "index": 7,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 54,
+      "name": "oc_cry.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1705,
+        44
+      ]
+    },
+    {
+      "animated_channels": 57,
+      "channels_with_hull_beyond_key_values": 57,
+      "frames": 37,
+      "hermite_segments": 586,
+      "index": 8,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 61,
+      "name": "oc_damage.bck",
+      "rotation_shift": 2,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1905,
+        45
+      ]
+    },
+    {
+      "animated_channels": 72,
+      "channels_with_hull_beyond_key_values": 72,
+      "frames": 37,
+      "hermite_segments": 686,
+      "index": 9,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 60,
+      "name": "oc_damage_l.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        2160,
+        88
+      ]
+    },
+    {
+      "animated_channels": 72,
+      "channels_with_hull_beyond_key_values": 70,
+      "frames": 37,
+      "hermite_segments": 770,
+      "index": 10,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 64,
+      "name": "oc_damage_r.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        2418,
+        85
+      ]
+    },
+    {
+      "animated_channels": 70,
+      "channels_with_hull_beyond_key_values": 70,
+      "frames": 15,
+      "hermite_segments": 589,
+      "index": 11,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 68,
+      "name": "oc_dash.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1836,
+        135
+      ]
+    },
+    {
+      "animated_channels": 73,
+      "channels_with_hull_beyond_key_values": 73,
+      "frames": 89,
+      "hermite_segments": 1816,
+      "index": 12,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 79,
+      "name": "oc_drowned.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        5462,
+        133
+      ]
+    },
+    {
+      "animated_channels": 63,
+      "channels_with_hull_beyond_key_values": 6,
+      "frames": 4,
+      "hermite_segments": 118,
+      "index": 13,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 55,
+      "name": "oc_find.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        526,
+        40
+      ]
+    },
+    {
+      "animated_channels": 60,
+      "channels_with_hull_beyond_key_values": 57,
+      "frames": 39,
+      "hermite_segments": 612,
+      "index": 14,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 55,
+      "name": "oc_finish.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        0.023145622843003366,
+        1.9610461374177248
+      ],
+      "table_lengths": [
+        19,
+        1943,
+        103
+      ]
+    },
+    {
+      "animated_channels": 69,
+      "channels_with_hull_beyond_key_values": 69,
+      "frames": 99,
+      "hermite_segments": 1464,
+      "index": 15,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 65,
+      "name": "oc_gale.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        4365,
+        149
+      ]
+    },
+    {
+      "animated_channels": 59,
+      "channels_with_hull_beyond_key_values": 55,
+      "frames": 29,
+      "hermite_segments": 628,
+      "index": 16,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 60,
+      "name": "oc_jump_a.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        2000,
+        62
+      ]
+    },
+    {
+      "animated_channels": 54,
+      "channels_with_hull_beyond_key_values": 50,
+      "frames": 10,
+      "hermite_segments": 202,
+      "index": 17,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 52,
+      "name": "oc_jump_b.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        776,
+        31
+      ]
+    },
+    {
+      "animated_channels": 65,
+      "channels_with_hull_beyond_key_values": 59,
+      "frames": 64,
+      "hermite_segments": 904,
+      "index": 18,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 55,
+      "name": "oc_jump_c.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        2840,
+        65
+      ]
+    },
+    {
+      "animated_channels": 63,
+      "channels_with_hull_beyond_key_values": 25,
+      "frames": 9,
+      "hermite_segments": 264,
+      "index": 19,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 60,
+      "name": "oc_leap_a.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        986,
+        31
+      ]
+    },
+    {
+      "animated_channels": 71,
+      "channels_with_hull_beyond_key_values": 67,
+      "frames": 25,
+      "hermite_segments": 779,
+      "index": 20,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 79,
+      "name": "oc_leap_b.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        2447,
+        83
+      ]
+    },
+    {
+      "animated_channels": 0,
+      "channels_with_hull_beyond_key_values": 0,
+      "frames": 0,
+      "hermite_segments": 0,
+      "index": 21,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 60,
+      "name": "oc_leap_spin.bck",
+      "rotation_shift": 0,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        69,
+        31
+      ]
+    },
+    {
+      "animated_channels": 68,
+      "channels_with_hull_beyond_key_values": 67,
+      "frames": 70,
+      "hermite_segments": 385,
+      "index": 22,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 56,
+      "name": "oc_serch.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1323,
+        49
+      ]
+    },
+    {
+      "animated_channels": 76,
+      "channels_with_hull_beyond_key_values": 66,
+      "frames": 49,
+      "hermite_segments": 904,
+      "index": 23,
+      "joints": 29,
+      "loop": 0,
+      "max_joint_local_translation_norm_ceil": 77,
+      "name": "oc_stand.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        2843,
+        79
+      ]
+    },
+    {
+      "animated_channels": 65,
+      "channels_with_hull_beyond_key_values": 65,
+      "frames": 70,
+      "hermite_segments": 363,
+      "index": 24,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 56,
+      "name": "oc_stand_wait.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1205,
+        49
+      ]
+    },
+    {
+      "animated_channels": 63,
+      "channels_with_hull_beyond_key_values": 63,
+      "frames": 70,
+      "hermite_segments": 272,
+      "index": 25,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 56,
+      "name": "oc_talk.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        927,
+        49
+      ]
+    },
+    {
+      "animated_channels": 64,
+      "channels_with_hull_beyond_key_values": 64,
+      "frames": 70,
+      "hermite_segments": 378,
+      "index": 26,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 56,
+      "name": "oc_talk_b.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1248,
+        49
+      ]
+    },
+    {
+      "animated_channels": 55,
+      "channels_with_hull_beyond_key_values": 55,
+      "frames": 40,
+      "hermite_segments": 281,
+      "index": 27,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 57,
+      "name": "oc_wait.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        959,
+        55
+      ]
+    },
+    {
+      "animated_channels": 68,
+      "channels_with_hull_beyond_key_values": 68,
+      "frames": 30,
+      "hermite_segments": 453,
+      "index": 28,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 56,
+      "name": "oc_wait_st.bck",
+      "rotation_shift": 2,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1472,
+        76
+      ]
+    },
+    {
+      "animated_channels": 60,
+      "channels_with_hull_beyond_key_values": 60,
+      "frames": 34,
+      "hermite_segments": 435,
+      "index": 29,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 70,
+      "name": "oc_walk.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1424,
+        61
+      ]
+    },
+    {
+      "animated_channels": 70,
+      "channels_with_hull_beyond_key_values": 70,
+      "frames": 18,
+      "hermite_segments": 590,
+      "index": 30,
+      "joints": 29,
+      "loop": 2,
+      "max_joint_local_translation_norm_ceil": 68,
+      "name": "oc_walk_st.bck",
+      "rotation_shift": 1,
+      "scale_range_all_joints": [
+        1.0,
+        1.0
+      ],
+      "table_lengths": [
+        1,
+        1880,
+        109
+      ]
+    }
+  ],
+  "arc_integrity": {
+    "E_oc.arc": {
+      "bytes": 30837,
+      "compression": "Yaz0",
+      "container": "RARC",
+      "crc32_computed_not_embedded": "8469edf7",
+      "decoded_bytes": 43488,
+      "file_count": 2,
+      "files": [
+        {
+          "id": 3,
+          "index": 3,
+          "path": "bmdr/oc.bmd",
+          "sha256": "08398d91747a69bca8638434f167cf8beb9392961b6f16256475fcb3ef342ddb",
+          "size": 39520
+        },
+        {
+          "id": 4,
+          "index": 4,
+          "path": "bmdr/oc_wepon.bmd",
+          "sha256": "dfa9a1e35a72a0983fa846af77891c8013bc1630f9b6a803bb1eb592447c2eef",
+          "size": 3648
+        }
+      ],
+      "sha256": "ed7031096583a3a5a62e8ebbadb7c74dff29a8f77bf738222389ab99a39131f4",
+      "table_entries": 7
+    },
+    "E_ocb.arc": {
+      "bytes": 137250,
+      "compression": "Yaz0",
+      "container": "RARC",
+      "crc32_computed_not_embedded": "7bc8aa97",
+      "decoded_bytes": 177792,
+      "file_count": 28,
+      "files": [
+        {
+          "id": 3,
+          "index": 3,
+          "path": "bck/oc_angry_a.bck",
+          "sha256": "d58cd78a905ad804544a71ed0e031aca96cf9622711b454f11f6ad6fb2095d0b",
+          "size": 10368
+        },
+        {
+          "id": 4,
+          "index": 4,
+          "path": "bck/oc_angry_b.bck",
+          "sha256": "ca549895107c3752e3e0f32bbb649e393f52909f1b237303550660b1711312dc",
+          "size": 10720
+        },
+        {
+          "id": 5,
+          "index": 5,
+          "path": "bck/oc_attack_b.bck",
+          "sha256": "3826a9d6255d5db2a8636632aeb689035b1e588b10bc14811b4894fcd8f1d69d",
+          "size": 9536
+        },
+        {
+          "id": 6,
+          "index": 6,
+          "path": "bck/oc_attack_c.bck",
+          "sha256": "f2ab10364e028db692b552b3e175f8ea10caca46c9d98ea30448352504ee04e3",
+          "size": 8416
+        },
+        {
+          "id": 7,
+          "index": 7,
+          "path": "bck/oc_cry.bck",
+          "sha256": "ef0d07f29bbaf3c67375a08a80ea09e21ef00963c997370ee4ebe3558e794829",
+          "size": 5312
+        },
+        {
+          "id": 8,
+          "index": 8,
+          "path": "bck/oc_damage.bck",
+          "sha256": "ce8e7819b0e691b0208cf5a55698450e0570a79c498d43f4d65d5bbd2b34b3c3",
+          "size": 5728
+        },
+        {
+          "id": 9,
+          "index": 9,
+          "path": "bck/oc_damage_l.bck",
+          "sha256": "0f547063fd7afcc11a22402dfa4c2d4e90ffc6690a3136df6478b429415bc9bc",
+          "size": 6368
+        },
+        {
+          "id": 10,
+          "index": 10,
+          "path": "bck/oc_damage_r.bck",
+          "sha256": "6ee63deba6e3c8607696f6107dddf6577f79ae6ab56e0917a91b86c2cbbb7f4e",
+          "size": 6912
+        },
+        {
+          "id": 11,
+          "index": 11,
+          "path": "bck/oc_dash.bck",
+          "sha256": "8e0b219802aecbaaf843b5342acf049c9f65da5f018f33ed22b126e1cb5c8efe",
+          "size": 5920
+        },
+        {
+          "id": 12,
+          "index": 12,
+          "path": "bck/oc_drowned.bck",
+          "sha256": "d21e65d24858715ccad4775efba6c5c03fd76bd57be26ef42c8a54c96c6236aa",
+          "size": 13184
+        },
+        {
+          "id": 13,
+          "index": 13,
+          "path": "bck/oc_find.bck",
+          "sha256": "2125be7c4fa301f1735d364ccb23d63ea5f16ad99ad4aff59fe2b94bf31c849b",
+          "size": 2912
+        },
+        {
+          "id": 14,
+          "index": 14,
+          "path": "bck/oc_finish.bck",
+          "sha256": "9f8c55634f7dfda36367e3a619f931aed7512f8631075ef62b72f33e72135d9a",
+          "size": 6080
+        },
+        {
+          "id": 15,
+          "index": 15,
+          "path": "bck/oc_gale.bck",
+          "sha256": "c1dfe577b88fee69204d1e12ccf675b71f0bf00e34aa04c256a90435ff2183c8",
+          "size": 11040
+        },
+        {
+          "id": 16,
+          "index": 16,
+          "path": "bck/oc_jump_a.bck",
+          "sha256": "6ac70ea6e3b90967c0cf1c05db7c9b5d20268a9c0ae24bcc25094a821d7e8e4e",
+          "size": 5952
+        },
+        {
+          "id": 17,
+          "index": 17,
+          "path": "bck/oc_jump_b.bck",
+          "sha256": "67ae95921751f1d0e6fc0c1ceae415d470208aff40917275f65c165ec9250de6",
+          "size": 3392
+        },
+        {
+          "id": 18,
+          "index": 18,
+          "path": "bck/oc_jump_c.bck",
+          "sha256": "4d27df1412f845c01a9a125dafa5f1dfecd3c5b3fad81c3e223b8988e4a4b5aa",
+          "size": 7680
+        },
+        {
+          "id": 19,
+          "index": 19,
+          "path": "bck/oc_leap_a.bck",
+          "sha256": "e462dc2ab726d8e5874bf465ec306b9c59cceb6fc1e5870004928d87107dc386",
+          "size": 3808
+        },
+        {
+          "id": 20,
+          "index": 20,
+          "path": "bck/oc_leap_b.bck",
+          "sha256": "3aa4b92f267060c60aad12b347719486b7f89637e107694074c751ab23251958",
+          "size": 6944
+        },
+        {
+          "id": 21,
+          "index": 21,
+          "path": "bck/oc_leap_spin.bck",
+          "sha256": "5b45932e8f54f3fb9b98a66370469a1704d9447beb5626b9e225ad6b53d5a3bc",
+          "size": 1984
+        },
+        {
+          "id": 22,
+          "index": 22,
+          "path": "bck/oc_serch.bck",
+          "sha256": "da1f9121905fd9d5d5893322996d3e8929e2b65082a43f8b6b299c4886698f83",
+          "size": 4576
+        },
+        {
+          "id": 23,
+          "index": 23,
+          "path": "bck/oc_stand.bck",
+          "sha256": "265ae4273022cb1ffc3baf090224868a809033854e4d8c3f56e0ec82d668ce74",
+          "size": 7712
+        },
+        {
+          "id": 24,
+          "index": 24,
+          "path": "bck/oc_stand_wait.bck",
+          "sha256": "07a519f0a760ab1ea73c8980a280ab108eb0123bd679915f7da44b86e3ac5f12",
+          "size": 4352
+        },
+        {
+          "id": 25,
+          "index": 25,
+          "path": "bck/oc_talk.bck",
+          "sha256": "f08322c49a6fa68398681df3b9037a4334050c6ee70f6b6a88f34e25446e68ea",
+          "size": 3776
+        },
+        {
+          "id": 26,
+          "index": 26,
+          "path": "bck/oc_talk_b.bck",
+          "sha256": "f76c553d6dd2164073bffdca5f12fcf00fedc94c27488366e14f12f94c2e2a91",
+          "size": 4416
+        },
+        {
+          "id": 27,
+          "index": 27,
+          "path": "bck/oc_wait.bck",
+          "sha256": "085ef187a4f5a2b6d4fd3c7d34137208b761e87166bbf04e09afcd17fff3f56a",
+          "size": 3840
+        },
+        {
+          "id": 28,
+          "index": 28,
+          "path": "bck/oc_wait_st.bck",
+          "sha256": "18a396fb03bdd9af7cee536215c83b807f927eecff1adc76fc3753b099d053f0",
+          "size": 4960
+        },
+        {
+          "id": 29,
+          "index": 29,
+          "path": "bck/oc_walk.bck",
+          "sha256": "9bd41fc77f95aa4d797371a80e7a1d90240e75c658f6138d012898029d68ff0c",
+          "size": 4800
+        },
+        {
+          "id": 30,
+          "index": 30,
+          "path": "bck/oc_walk_st.bck",
+          "sha256": "5f15c0695ad2bf896621d750bf20e9f6035ddc4e69814cd00b9b29847865fdb7",
+          "size": 5920
+        }
+      ],
+      "sha256": "156bbd9d030a28885b6989ea53a4cffa965c152c29c24e37505844a0d76b8a09",
+      "table_entries": 33
+    }
+  },
+  "cp02": "NO-GO",
+  "engine_arithmetic_and_render": "NOT_VERIFIED; not run",
+  "g5": "NO-GO",
+  "input_commit": "91884d5932377e15a96a9f1c8df48348751f37a5",
+  "manifest_sha256": "87211983294b1829f55d0be18765b1e49d3fccb8c0653a5ce3e2ad2db958a96f",
+  "models": {
+    "body3": {
+      "draw_table_entries": 85,
+      "inverse_bind_count": 29,
+      "joints": 29,
+      "materials": 3,
+      "matrix_groups": 11,
+      "parent_chains": {
+        "1": [
+          0,
+          1
+        ],
+        "12": [
+          0,
+          1,
+          2,
+          9,
+          10,
+          11,
+          12
+        ],
+        "17": [
+          0,
+          1,
+          2,
+          15,
+          16,
+          17
+        ],
+        "22": [
+          0,
+          20,
+          22
+        ],
+        "25": [
+          0,
+          20,
+          23,
+          24,
+          25
+        ],
+        "28": [
+          0,
+          20,
+          26,
+          27,
+          28
+        ]
+      },
+      "position_bounds": [
+        [
+          -97.5528793334961,
+          -12.688277244567871,
+          -42.5008544921875
+        ],
+        [
+          97.5528793334961,
+          137.96360778808594,
+          42.5008544921875
+        ]
+      ],
+      "position_format": [
+        9,
+        1,
+        4,
+        0
+      ],
+      "primitive_vertex_references": 1500,
+      "referenced_draw_matrices": 55,
+      "referenced_position_count": 566,
+      "sections": [
+        [
+          "INF1",
+          384
+        ],
+        [
+          "VTX1",
+          11776
+        ],
+        [
+          "EVP1",
+          1824
+        ],
+        [
+          "DRW1",
+          288
+        ],
+        [
+          "JNT1",
+          2304
+        ],
+        [
+          "SHP1",
+          12064
+        ],
+        [
+          "MAT3",
+          2464
+        ],
+        [
+          "TEX1",
+          8384
+        ]
+      ],
+      "shapes": 3,
+      "skin_envelopes": 30,
+      "skin_weight_sums": [
+        0.9999999776482582,
+        1.0000000298023224
+      ],
+      "textures": [
+        {
+          "embedded_image": true,
+          "format": "CMPR",
+          "height": 128,
+          "mipmaps": 1,
+          "width": 128
+        },
+        {
+          "embedded_image": true,
+          "format": "CMPR",
+          "height": 128,
+          "mipmaps": 1,
+          "width": 128
+        },
+        {
+          "embedded_image": true,
+          "format": "CMPR",
+          "height": 128,
+          "mipmaps": 1,
+          "width": 128
+        }
+      ],
+      "usable_draw_matrices": 55,
+      "vertices": 566
+    },
+    "weapon4": {
+      "draw_table_entries": 1,
+      "inverse_bind_count": 0,
+      "joints": 1,
+      "materials": 1,
+      "matrix_groups": 1,
+      "parent_chains": {},
+      "position_bounds": [
+        [
+          -13.457221984863281,
+          -5.420070171356201,
+          -19.07572364807129
+        ],
+        [
+          23.65351676940918,
+          10.22458553314209,
+          90.81378173828125
+        ]
+      ],
+      "position_format": [
+        9,
+        1,
+        4,
+        0
+      ],
+      "primitive_vertex_references": 44,
+      "referenced_draw_matrices": 1,
+      "referenced_position_count": 17,
+      "sections": [
+        [
+          "INF1",
+          64
+        ],
+        [
+          "VTX1",
+          608
+        ],
+        [
+          "EVP1",
+          32
+        ],
+        [
+          "DRW1",
+          32
+        ],
+        [
+          "JNT1",
+          128
+        ],
+        [
+          "SHP1",
+          480
+        ],
+        [
+          "MAT3",
+          1152
+        ],
+        [
+          "TEX1",
+          1120
+        ]
+      ],
+      "shapes": 1,
+      "skin_envelopes": 0,
+      "skin_weight_sums": null,
+      "textures": [
+        {
+          "embedded_image": true,
+          "format": "CMPR",
+          "height": 64,
+          "mipmaps": 1,
+          "width": 32
+        }
+      ],
+      "usable_draw_matrices": 1,
+      "vertices": 17
+    }
+  },
+  "movement_confinement": "NOT_VERIFIED; native2000 is soft",
+  "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "policy": "DISARMED_NO_REGISTRATION",
+  "pose_diagnostics_only": {
+    "animations": {
+      "oc_attack_b.bck": {
+        "body_bounds": [
+          [
+            -132.94647975691893,
+            -5.567084251297391,
+            -177.70608518447443
+          ],
+          [
+            160.03401055434352,
+            237.43042810472934,
+            156.9295829773123
+          ]
+        ],
+        "max_body_radius_sample": 249.27717007775917,
+        "max_weapon_radius_sample": 283.49039242436794,
+        "sample_count": 85,
+        "sample_spacing_frames": 0.5,
+        "weapon_bounds": [
+          [
+            -154.15018302550334,
+            -15.296907965012203,
+            -226.67069810159506
+          ],
+          [
+            49.390283008342,
+            254.51724913415407,
+            252.39921004002423
+          ]
+        ]
+      },
+      "oc_attack_c.bck": {
+        "body_bounds": [
+          [
+            -131.41255669985617,
+            -4.092998244524175,
+            -130.62884595600525
+          ],
+          [
+            126.02785642814722,
+            244.56946890739553,
+            145.40208745623522
+          ]
+        ],
+        "max_body_radius_sample": 245.324255130653,
+        "max_weapon_radius_sample": 300.1401259632772,
+        "sample_count": 95,
+        "sample_spacing_frames": 0.5,
+        "weapon_bounds": [
+          [
+            -206.0616309190558,
+            12.282798100878914,
+            -194.41889374701947
+          ],
+          [
+            225.83461154311897,
+            291.3611410191131,
+            248.6849299831078
+          ]
+        ]
+      },
+      "oc_wait.bck": {
+        "body_bounds": [
+          [
+            -88.5140242335547,
+            -0.12398126593387104,
+            -16.10446929931641
+          ],
+          [
+            54.03766034433912,
+            180.75863320397298,
+            143.29103567613322
+          ]
+        ],
+        "leg_end25_y": 8.95183618935819,
+        "leg_end28_y": 8.951682871618477,
+        "max_body_radius_sample": 198.54502526232326,
+        "max_weapon_radius_sample": 114.61407238396949,
+        "sample_count": 1,
+        "sample_spacing_frames": null,
+        "weapon_bounds": [
+          [
+            -103.50547287917954,
+            18.562678251541712,
+            -17.317956476590098
+          ],
+          [
+            26.009691559855312,
+            75.82544515699198,
+            103.19325650691842
+          ]
+        ]
+      }
+    },
+    "bind": {
+      "body_bounds": [
+        [
+          -166.00054226619912,
+          0.07895530988107247,
+          -41.68268254937735
+        ],
+        [
+          166.0134084441978,
+          255.09941230464983,
+          59.99043434494857
+        ]
+      ],
+      "body_radius_sample": 256.5738543837839,
+      "leg_end25_y": 8.961407822425624,
+      "leg_end28_y": 8.958347910932783,
+      "weapon_bounds": [
+        [
+          -157.79838279544657,
+          153.73435705065566,
+          -29.725174067544263
+        ],
+        [
+          -102.12863774121222,
+          176.66421432475653,
+          134.9534072530294
+        ]
+      ],
+      "weapon_radius_sample": 270.301665392179
+    },
+    "status": "APPROXIMATE_SAMPLES; double trig, callback angles0, actor attitude0, no morph; NOT a continuous bound or engine execution"
+  },
+  "provenance": {
+    "disc_id": "GZ2E01",
+    "effective_game_override_status": "NOT_VERIFIED",
+    "extraction_method": "Dolphin Filesystem; read-only export",
+    "extraction_witness": "USER_REPORTED; bytes/hashes independently verified"
+  },
+  "resource_skeletal_bound": {
+    "body_radius_upper": 401,
+    "collider_radius_uppers": {
+      "backbone": 238,
+      "head": 357,
+      "weapon20": 411,
+      "weapon70": 501
+    },
+    "combined_radius_upper": 501,
+    "domain": "Ideal-real resource transforms; arbitrary rotations and joint callbacks; all28 BCK plus bind and convex morphs; NOT engine FP/runtime proof",
+    "draw_association": "SHP1 primitives/palette carry resolve position-to-DRW; per-DRW vertex AABB enclosure, not exact posed mesh",
+    "hio_assumption": 1.5,
+    "joint_origin_radius_uppers_hio": {
+      "1": 165,
+      "12": 351,
+      "17": 297,
+      "22": 165,
+      "25": 267,
+      "28": 267
+    },
+    "method": "exact-rational Hermite Bernstein hulls, per-joint norm propagation, SSC reciprocal exclusion of zero, EVP abs-weight sum, integer upper rounding",
+    "nonunit_scale_joints": [
+      22
+    ],
+    "scale_compensation_zero_parent": false,
+    "weapon_radius_upper": 494
+  },
+  "reused_decoders": [
+    "CP01/analysis/analyze_location.py:yaz/rarc",
+    "CP01/analysis/location_geometry.py:bmd"
+  ],
+  "reused_g2_aggregate_sha256": "a1204c40168dd22e7284207cb466b3d7651446b61b9fcc4e88d04b1bc9e07ca8",
+  "source_sha256": {
+    "libs/JSystem/include/JSystem/JMath/JMath.h": "235936a091c97ff8d6b1af7c977c583041ca3ca9e538f39dd84feec353ab2c1e",
+    "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp": "a47bac98e1f1fe48dcc03fbbf68eb5f720712fd9a24defa67158b92d5a3a3ecb",
+    "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp": "1268786e60bebf291e8d57ebe1ff154e2e62f883d8914f61711fd7eb73578045",
+    "libs/JSystem/src/J3DGraphAnimator/J3DJointTree.cpp": "8ce4d2d33a25e189df166de9838bea940272e729ecd37f07d9b524a8d48e7a13",
+    "libs/JSystem/src/J3DGraphAnimator/J3DMtxBuffer.cpp": "16542b9d5f92631dd8b23811e74313f61fa523bd8fdab4e972639e69420bc7de",
+    "libs/JSystem/src/J3DGraphLoader/J3DAnmLoader.cpp": "d0ba24c76e7ed23ddd3adde73ce124afc429b0018d1fd649718b5a53317824fb",
+    "libs/JSystem/src/J3DGraphLoader/J3DModelLoader.cpp": "1155063cd83b756b24e01022a22aa453a0980228479416414b2eabd8b61294f4",
+    "src/d/actor/d_a_e_oc.cpp": "e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4",
+    "src/m_Do/m_Do_ext.cpp": "8c96e7e5d27dbfef2c7c84094f4a9e2b143670f9cdbb55fb252331660a352582"
+  },
+  "status": "G4_RESOURCE_VERIFIED_POSITION_BLOCKED"
+}

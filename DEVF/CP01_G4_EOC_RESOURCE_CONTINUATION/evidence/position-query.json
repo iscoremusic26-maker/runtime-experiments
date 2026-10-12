@@ -1,0 +1,195 @@
+{
+  "center_support": {
+    "normal": [
+      -0.015020012855529785,
+      0.9985599517822266,
+      -0.05155003070831299
+    ],
+    "plc": {
+      "code_words": [
+        "0x3fff",
+        "0x40ff",
+        "0xffffff00",
+        "0x0",
+        "0x3000ff"
+      ],
+      "exit_id": 63,
+      "ground_code": 0,
+      "link_through": false,
+      "normal_group": false,
+      "object_through": false,
+      "room": 3,
+      "special": 0
+    },
+    "prism": 2174,
+    "y": -6729.480961460304
+  },
+  "cp02": "NO-GO",
+  "effective_resource_override": "NOT_VERIFIED in supplied manifest",
+  "external_fixed_origin_separations": [
+    {
+      "chunk": "ACTR",
+      "condition": "Triangle inequality from prior box containing origin; same authored transforms; excludes displacement",
+      "distance_lower_from_old_box": 3343.5611738086754,
+      "fixed_origin_resource_bound_gap_lower": 2842.5611738086754,
+      "index": 16,
+      "name": "mmvbg"
+    },
+    {
+      "chunk": "ACTR",
+      "condition": "Triangle inequality from prior box containing origin; same authored transforms; excludes displacement",
+      "distance_lower_from_old_box": 21191.116992277937,
+      "fixed_origin_resource_bound_gap_lower": 20690.116992277937,
+      "index": 19,
+      "name": "mmvbg"
+    },
+    {
+      "chunk": "ACTR",
+      "condition": "Triangle inequality from prior box containing origin; same authored transforms; excludes displacement",
+      "distance_lower_from_old_box": 22147.65486367094,
+      "fixed_origin_resource_bound_gap_lower": 21646.65486367094,
+      "index": 20,
+      "name": "mmvbg"
+    },
+    {
+      "chunk": "SCO6",
+      "condition": "Triangle inequality from prior box containing origin; same authored transforms; excludes displacement",
+      "distance_lower_from_old_box": 3242.7125772037166,
+      "fixed_origin_resource_bound_gap_lower": 2741.7125772037166,
+      "index": 3,
+      "name": "ClearB"
+    }
+  ],
+  "g4": "G4_RESOURCE_VERIFIED_POSITION_BLOCKED",
+  "g5": "NO-GO",
+  "ground_queries": {
+    "acch100_square": {
+      "area": 40000.0,
+      "ground_prisms": [
+        2174,
+        2175
+      ],
+      "max_slope_degrees": 5.521586788973122,
+      "plc_ground_codes": [
+        0
+      ],
+      "plc_rooms": [
+        3
+      ],
+      "radius": 100,
+      "scope": "Union of eligible projected ground prisms, not feet contact/connected traversability/no-water proof",
+      "terrain_height_minmax": [
+        -6741.7793566978135,
+        -6722.814356871863
+      ],
+      "uncovered_ground_area": 0
+    },
+    "resource501_circumscribed64": {
+      "area": 789176.8588151038,
+      "ground_prisms": [
+        2174,
+        2175,
+        2187,
+        2494
+      ],
+      "max_slope_degrees": 18.605110120067764,
+      "plc_ground_codes": [
+        0
+      ],
+      "plc_rooms": [
+        3
+      ],
+      "radius": 501,
+      "scope": "Union of eligible projected ground prisms, not feet contact/connected traversability/no-water proof",
+      "terrain_height_minmax": [
+        -6777.345369967054,
+        -6702.5287226719565
+      ],
+      "uncovered_ground_area": 0
+    },
+    "resource501_square": {
+      "area": 1004004.0,
+      "ground_prisms": [
+        2174,
+        2175,
+        2187,
+        2493,
+        2494
+      ],
+      "max_slope_degrees": 18.605110120067764,
+      "plc_ground_codes": [
+        0
+      ],
+      "plc_rooms": [
+        3
+      ],
+      "radius": 501,
+      "scope": "Union of eligible projected ground prisms, not feet contact/connected traversability/no-water proof",
+      "terrain_height_minmax": [
+        -6793.5278856542955,
+        -6639.938779543363
+      ],
+      "uncovered_ground_area": 637.777176886797
+    }
+  },
+  "movement_domain": "NOT_VERIFIED; no claim that2000+501 is a hard roaming domain",
+  "policy": "DISARMED_NO_REGISTRATION",
+  "position": "NO_SAFE_POSITION_VERIFIED",
+  "query_box": [
+    [
+      -5307.7346,
+      -7230.480961460304,
+      64634.8281
+    ],
+    [
+      -4305.7346,
+      -6228.480961460304,
+      65636.8281
+    ]
+  ],
+  "query_counts": {
+    "leaf_lists": 10,
+    "prisms_decoded": 31,
+    "visited_intersecting_cells": 19
+  },
+  "reference_only": {
+    "logical": 6,
+    "room": 3,
+    "stage": "F_SP121",
+    "status": "NOT_APPROVED_FOR_E_OC",
+    "xyz": [
+      -4806.7346,
+      -6729.480961460304,
+      65135.8281
+    ],
+    "yaw": 0
+  },
+  "reused_digpl": {
+    "center_point_distance": 806.8590692226057,
+    "limit": "Spatial comparison only; Digpl consumes player observations, not an E_OC sweep",
+    "new_ball_point_gap_lower": 305.85906922260574,
+    "old_box_gap": 565.6960562988279,
+    "points": 27
+  },
+  "reused_g2": {
+    "captures": 28,
+    "limit": "Conservative ball overlaps sampled Link center; not proof of an actual collision/attack",
+    "link_distance_minus_resource_radius": -12.420877816530151,
+    "link_min_center_xz": 488.57912218346985,
+    "sha256": "a1204c40168dd22e7284207cb466b3d7651446b61b9fcc4e88d04b1bc9e07ca8"
+  },
+  "reused_route7_polyline_distance_to_old_box": 115.615565,
+  "scope": "New501 resource enclosure at old reference only; targeted octree query, no full KCL reconstruction",
+  "wall_roof_box_intersections": [
+    {
+      "distance_minus_resource_radius": 144.85774037173655,
+      "distance_to_reference_triangle": 645.8577403717366,
+      "prism": 4714
+    },
+    {
+      "distance_minus_resource_radius": 241.27839930949426,
+      "distance_to_reference_triangle": 742.2783993094943,
+      "prism": 4734
+    }
+  ]
+}
