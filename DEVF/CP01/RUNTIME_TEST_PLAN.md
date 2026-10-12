@@ -10,3 +10,7 @@ Cuando exista un TEST técnicamente justificado y revisión autorizada:
 3. Solo después de garantías y evidencia, probar el mecanismo de desactivación autorizado. No usar hot reload con actores en un host que sigue sin barrera.
 
 Reversión: cerrar proceso; retirar solo nuevo TEST y restaurar copia anterior si existía; reiniciar baseline y conservar logs/dumps. No borrar ROM, saves, EXE o archivos de escenario. No ejecutar estas acciones automáticamente.
+
+## Actualización de ubicación desde 58c4966
+
+Evidencia F_SP121 recibida por Git LFS, íntegra y analizada. LOCATION_ANALYSIS y evidence/location-f-sp121-*.json documentan candidato geométrico condicionado y pendientes concretos. Bloqueo operativo superado; seguridad del lugar aún no aprobada, unload sin cambios. Mantener DISARMED_NO_REGISTRATION. No hubo cambios al módulo/host, nuevas compilaciones o repetición de suites, TEST activo ni CP02. Nuevo checkpoint de recuperación DEVF_CP01_LOCATION_F_SP121_REVIEW en rama documental existente.

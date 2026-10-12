@@ -3,7 +3,7 @@
 
 | Bloqueo | Estado | Qué se resolvió | Qué falta |
 |---|---|---|---|
-| Ubicación real segura | BLOCKED / NOT_VERIFIED | Nuevo ZIP y punto F_SP121/3/layer 6 comunicados; descarga bloqueada por entorno failed | Leer/verificar adjunto; analizar con fuente exacta 2.0.3; cotejar suelo, huella, actores, capas y eventos; completar observación runtime |
+| Ubicación real segura | PARTIAL_STATIC_PASS / NOT_APPROVED | ZIP completo verificado; KCL/PLC, WRock, capas, volúmenes y candidato medidos | Collider @bg004d/Obj_Board ausentes, ruta7 próxima sin consumidor/anchura acreditados, contexto y observación runtime; contacto en pendiente |
 | Ciclo de vida / unload | MITIGADO en modo desarmado; NO RESUELTO con actores | Release e identidad de slot verificados, cierre sin reactivación, limpieza parcial conservadora, rechazo de post-callback y cero registros por defecto | Host debe drenar solicitudes por perfil, respetar fallos de destrucción y retener perfil/contexto/DLL si no completa cierre; además cancelación/fin seguro de archivo pendiente |
 
 Build MSVC, 20 casos nuevos distintos (14 de cierre + 6 de propiedad de colisión) y 9 regresiones afectadas: PASS en runs incrementales separados. Los otros 7 casos originales no se repitieron. Los 16 PASS anteriores se conservan como historia, sin usarlos para certificar las nuevas condiciones del host.
@@ -14,6 +14,8 @@ Pin de DLL probado solo sobre fixtures propias: mantiene código, no datos/perfi
 
 No se emite DEVF_CP01_TEST.dusk. Artefacto únicamente BUILD ONLY desarmado. Aparición, dibujo, colisión, sala/capa, limpieza y renderer DX12 dentro del juego siguen NOT_TESTED. Obtener evidencia de ubicación no resuelve el segundo bloqueo. No iniciar CP02.
 
-## Decisión de esta revisión F_SP121
+## Decisión tras la evidencia F_SP121 accesible
 
-NO-GO continúa. El adjunto no equivale a verificación: no se leyeron sus bytes y no hay análisis de lugar completado. No se aprobó ninguna coordenada ni condición de aparición. Esta limitación operativa no demuestra que el punto sea inseguro o seguro. El bloqueo de unload sigue independiente e intacto; no se modifica host, código de activación o política. Sin TEST activo, sin CP02, sin merge. Se publica únicamente checkpoint documental separado del anterior.
+Se supera el bloqueo operativo de descarga, pero la seguridad del lugar sigue pendiente. Existe candidato geométrico F_SP121/3/layer6, (-4806.7346,-6729.480961460304,65135.8281), yaw0/escala1 únicamente analizados. Cobertura estática y exclusión acotada de volúmenes no acreditan colliders externos ni zonas barridas: ruta7 queda a115.6156 de caja del modelo; terreno varía58.3206 unidades bajo ella. LOCATION_ANALYSIS detalla evidencia adicional sin reextraer los tres ARC recibidos.
+
+Unload continúa bloqueado, sin cambio o nueva prueba. No se modifica host, activación, CMake o workflow. No TEST activo, instalación ni CP02. Cambios solo de análisis/documentación en rama documental existente, sin merge.

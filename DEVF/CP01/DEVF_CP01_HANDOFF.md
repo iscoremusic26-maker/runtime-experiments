@@ -14,3 +14,7 @@ Windows Actions runs 38187694002 y 38189000074 PASS con MSVC 19.51.36260.0/SDK 1
 Artefacto únicamente BUILD ONLY desarmado; no DEVF_CP01_TEST.dusk. Falta una garantía real de host para drenar/retener contexto/perfil/DLL ante fallo y para finalizar recursos pendientes, además de ubicación/ejecución. CP01 no listo para prueba de actor en Windows/DX12. Capturar evidencia de lugar sí puede hacerse con vistas nativas sin instalar DEVF.
 
 Leer GO_NO_GO, TEST_RESULTS, LOCATION_EVIDENCE, LIFECYCLE_AUDIT, BUILD_ENV y RESUME_INSTRUCTIONS. Hashes/evidencia nuevos usan prefijos safety-review y collision-review; evidencia original permanece intacta.
+
+## Actualización de ubicación desde 58c4966
+
+Evidencia F_SP121 recibida por Git LFS, íntegra y analizada. LOCATION_ANALYSIS y evidence/location-f-sp121-*.json documentan candidato geométrico condicionado y pendientes concretos. Bloqueo operativo superado; seguridad del lugar aún no aprobada, unload sin cambios. Mantener DISARMED_NO_REGISTRATION. No hubo cambios al módulo/host, nuevas compilaciones o repetición de suites, TEST activo ni CP02. Nuevo checkpoint de recuperación DEVF_CP01_LOCATION_F_SP121_REVIEW en rama documental existente.

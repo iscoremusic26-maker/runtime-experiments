@@ -1,3 +1,11 @@
+# CP01 — evidencia F_SP121 verificada
+
+La revisión desde 58c4966 recuperó el ZIP completo por Git LFS y verificó CRC, tamaños y hashes. STG_00.arc, R03_00.arc y WRock.arc ya están analizados: no volver a solicitarlos. LOCATION_ANALYSIS.md contiene el candidato geométrico condicionado, los resultados y límites. Seguridad de ubicación aún NOT_APPROVED; unload bloqueado; DISARMED_NO_REGISTRATION intacto.
+
+Evidencia adicional concreta: Player Info/colisión/triggers, lista completa de actores, contexto y salida/reentrada; copias privadas de @bg004d.arc y Obj_Board.arc, y M_RGate00.arc para completar puerta/evento si corresponde. No instalar DEVF ni activar apariciones. Las instrucciones de consulta nativa siguientes siguen siendo válidas.
+
+## Guía histórica de captura y solicitudes anteriores
+
 # Ubicación — bloqueo preciso y evidencia mínima Windows
 
 ## Inventario histórico de insumos anteriores (checkpoint 1dd539d)
@@ -7,7 +15,7 @@ El demo oficial especifica F_SP108/room 0/layer -1 y posición (-14324, 0, 341).
 
 El código getLayerNo_common_common muestra para F_SP108 decisiones por Twilight y flags 0x2008, 0x1E08, 0x0602 y 0x4510; no hay una única capa universal. getLayerNo(0) usa la sala actual y el override de entrada; el argumento numérico se ignora. layer=-1 de StageService coincide con cualquier capa: no usarlo como acreditación de un estado de progreso seguro. Entry no es Layer.
 
-**Resultado: BLOCKED. No se elige ningún stage/room/layer/XYZ de producción.**
+**Resultado histórico: BLOCKED por ausencia de assets. La nueva evidencia F_SP121 resuelve esa ausencia; ver análisis actualizado. No hay coordenadas aprobadas para producción.**
 
 ## Captura concreta sin instalar un mod
 Estas acciones son manuales y de consulta; no se ejecutó nada en tu PC. Usar una copia de partida para observación y no usar controles que editen progreso. El propio juego advierte que las herramientas avanzadas incluyen opciones de escritura: limitarse a las vistas y comandos siguientes.
@@ -28,7 +36,7 @@ pos devuelve stage, room, entry y XYZ con cuatro decimales; angle sin argumento 
 5. Opcionalmente, para capturar geometría y volúmenes que el propio host conoce, usar únicamente vistas: **Debug → Collision View → Enable Terrain view**, y **Debug → Trigger View → Load Zones / Event Areas / Event Tags / Switch Areas**. Son flags de visualización transitoria, no setters de progreso. Capturar imágenes y volver a desactivarlos. No usar Save Editor, State Share para restaurar estado, Process Management, Actor Spawner, Development Mode ni edición de flags. Estas vistas ayudan a observar el estado real, pero no sustituyen la auditoría de assets/huella ni prueban ausencia de todos los scripts.
 6. Guardar capturas al entrar y tras salir/reentrar normalmente sin DEVF, más un vídeo breve alrededor del punto. Anotar hora/estado Twilight/progreso relevante. Esto acredita datos observados y ayuda a delimitar una prueba; no prueba seguridad de un actor que aún no apareció.
 
-## Archivos mínimos que faltan
+## Solicitud inicial ya satisfecha por el ZIP F_SP121
 Desde la imagen de juego que tu instalación utiliza, usando un explorador de disco/archivos que ya tengas y extracción de solo lectura, copiar a una carpeta de evidencia —nunca reemplazar originales—:
 
 - /res/Stage/<stage observado>/Stg_00.arc
@@ -70,24 +78,6 @@ Copiar y completar valores observados, dejando desconocidos como null:
 
 Con esa evidencia se podrán cotejar capa, geometría/huella de Wrock, suelo/altura, actores existentes y volúmenes/scripts, y limitar una prueba a ese estado de escena. Las capturas no sustituyen los binarios para una auditoría exhaustiva ni las pruebas de aparición/colisión posteriores. Resolver la ubicación no resuelve por sí solo la barrera de descarga del host.
 
-## Revisión de evidencia F_SP121 — 2026-10-11 (America/Panama)
+## Revisión desde 58c4966
 
-Base: `DEVF_CP01_SAFETY_REVIEW`, commit `1dd539d96750130c4b59344437ec2d6ad6479b58`. Esta revisión es documental y está incompleta por indisponibilidad del entorno; no es un PASS de análisis de assets.
-
-El usuario adjuntó `DEVF_CP01_EVIDENCIA_F_SP121.zip` y declara que contiene `STG_00.arc`, `R03_00.arc`, `WRock.arc` y `SHA256SUMS.txt`, extraídos de su CISO. Los nombres y contenidos son declarados, no inventariados por esta revisión. Se conserva la capitalización indicada; no se ha confirmado el nombre interno de recurso ni su resolución en el loader.
-
-| Dato | Valor comunicado por el usuario |
-|---|---|
-| Versión / backend | Dusklight 2.0.3 / DX12 |
-| Zona | Hyrule Field, antes del puente hacia Kakariko |
-| Stage / Room | F_SP121 / 3 |
-| Layer efectivo / Entry | 6 / -4 |
-| XYZ | (-4056.7346, -6717.1538, 65135.8281) |
-| Ángulo s16 | -24697 |
-| Actores listados | 120 |
-
-Estos datos son un punto de observación del jugador comunicado en chat, no coordenadas aprobadas de aparición de dvfrock. Entry -4 no se convierte en Layer; la capa efectiva comunicada es 6. El número 120 no aporta nombres, posiciones, parámetros, capas ni estado de actores.
-
-El entorno falló durante su aprovisionamiento (`connector_failed`); una actualización posterior informó fallo al consultar capacidades del executor. La llamada de descarga del adjunto devolvió `download_file requires a ready execution workspace`. No se leyeron bytes del ZIP ni de SHA256SUMS.txt. CRC, tamaños y SHA256: **NOT_VERIFIED**; no se afirma corrupción ni integridad. Fuente exacta 2.0.3 y herramientas binarias: no ejecutadas en esta revisión. No se ha comprobado geometría, suelo, colisiones, actores, eventos, triggers, capas internas ni recursos WRock.
-
-**Resultado: LOCATION BLOCKED / NOT_VERIFIED. No hay ubicación candidata fundamentada por esta revisión.** Véase LOCATION_ANALYSIS.md para límites y trabajo pendiente. El bloqueo independiente de unload continúa. Política `DISARMED_NO_REGISTRATION`, NO-GO para TEST de actor y CP02.
+El fallo previo de entorno queda superado. Integridad y análisis estático ahora PASS en el alcance de LOCATION_ANALYSIS.md. Stage/room/layer/XYZ observados se conservan como datos del usuario; candidato calculado es solo análisis. No son PASS de juego o prueba de seguridad universal.

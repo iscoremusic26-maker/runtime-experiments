@@ -4,7 +4,7 @@ Resultados originales 16 PASS/build Windows conservados en tag DEVF_CP01 (092c1e
 | Área | Estado actual | Evidencia/límite |
 |---|---|---|
 | Binarios de escenario/suelo/modelo | NOT_VERIFIED en revisión F_SP121 | Inventario histórico: ausentes en ZIP del host; nuevo adjunto declarado por usuario, bytes inaccesibles |
-| Stage/room/layer/XYZ seguros | NOT_VERIFIED | Referencia demo no acredita suelo/eventos; guía LOCATION_EVIDENCE lista capturas y archivos exactos |
+| Stage/room/layer/XYZ seguros | NOT_APPROVED | Candidato geométrico fundamentado; faltan colisiones externas, ruta/contexto y contacto en pendiente |
 | Funciones de cierre exactas del host | PASS auditoría/reproducción acotada | Cinco cuerpos sin modificar compilados con colas/slots/backends simulados; hashes en exact-host-functions.json |
 | Guardas de activación antes de registro | PASS laboratorio | Falta de cada requisito/default no produce llamadas de registro; cierre repetido sin ownership |
 | Propiedad de slot de colisión tras scene teardown/reutilización | PASS lógica propia, seis casos | No retira slot ajeno; referencia propia única exige índice/actor correctos; tabla sin referencia propia solo retira ID local; adaptador nativo compilado/enlazado, no ejecutado en motor |
@@ -31,17 +31,24 @@ Compilador MSVC 19.51.36260.0 / Windows SDK 10.0.26100.0, x64 RelWithDebInfo. Wa
 
 Run final 38189000074: seis casos nuevos de propiedad de colisión PASS, sin repetir las suites 14/9/16. Ver collision-review-build-and-tests.log y collision-review-verification.json. El laboratorio usa una tabla simulada para demostrar la política; no certifica la ejecución del adaptador cBgS en una sala real. Total de esta revisión: 20 casos nuevos distintos y nueve regresiones afectadas.
 
-## Revisión F_SP121: comprobaciones nuevas
+## Revisión F_SP121 desde 58c4966: comprobaciones nuevas
 
-| Comprobación | Resultado | Límite |
+| Comprobación | Resultado | Alcance / límite |
 |---|---|---|
-| Lectura de cuatro informes base por GitHub | PASS documental | Ref 1dd539d; no ejecución del código |
-| Descarga del ZIP adjunto | BLOCKED_ENVIRONMENT | download_file exige workspace listo; entorno failed |
-| CRC ZIP, tamaños y SHA256 contra manifiesto | NOT_VERIFIED | No se leyeron bytes ni manifiesto |
-| Geometría/suelo/colisiones y huella WRock | NOT_ANALYZED | Sin extracción ni parseo |
-| Actores/eventos/triggers/capas | NOT_ANALYZED | 120 es solo el conteo comunicado |
-| Análisis mediante fuente exacta 2.0.3 | NOT_EXECUTED | No hay entorno disponible |
-| Ubicación candidata fundamentada | NOT_ESTABLISHED | XYZ comunicado es observación del jugador |
-| Validación DEVF dentro del juego / DX12 | NOT_TESTED | Datos aportados por usuario no son prueba del actor |
+| Git LFS, SHA256 ZIP y tres hashes individuales | PASS | Copias íntegras, no acredita procedencia/región/runtime |
+| CRC de cuatro miembros y tamaños | PASS | Sin corrupción detectada; manifiesto interno leído |
+| Yaz0/RARC y límites DZS/DZR | PASS | Tablas acotadas antes de interpretar |
+| Sala3, MULT identidad, comunes/capa6 | PASS estático | No es lista de actores vivos; layer efectivo comunicado |
+| KCL/PLC y árbol completo | PASS estático | 5326 prismas referenciados; ningún query del motor ejecutado |
+| Suelo observado y WRock BMD/DZB/joint | PASS estático | Y difiere0.000141; índices/tamaños correctos |
+| Cobertura envolventes del candidato | PASS numérico | Resta semiplanos: área sin soporte0;441 puntos por caja y octree/baricéntrico |
+| KCL paredes/techos en caja del candidato | PASS separación estática | Solo intersecta dos planos de suelo; no colliders externos |
+| Triggers/volúmenes con contrato identificado | PASS separación acotada | No equivale a ausencia de eventos globales |
+| Rutas/event_list/STB inventario estructural | PASS análisis | Ruta7 a115.6156 de caja; efectos de secuencias no certificados |
+| Geometría @bg004d / Obj_Board | NOT_TESTED / BLOCKED_INPUT | Recursos no incluidos |
+| Actores vivos, anchura de ruta, scripts y progreso | NOT_VERIFIED | Contexto y evidencia Windows pendientes |
+| Ubicación candidata geométrica | PASS existencia condicionada | Ninguna coordenada aprobada de aparición |
+| DEVF runtime: aparición/render/colisión/cleanup, DX12 | NOT_TESTED | No se ejecutó juego ni activó mod |
+| Barrera unload / TEST activo / CP02 | NO-GO / NOT_APPROVED / NOT_STARTED | Sin cambios respecto de auditoría de seguridad |
 
-No se repitieron CP00, builds ni suites anteriores; los PASS anteriores son históricos. No hay nuevos resultados de tests ejecutables. Véase LOCATION_ANALYSIS.md.
+Python estándar, análisis local reproducible (analysis/README). Metadata y referencias exactas en evidence/location-f-sp121-*.json. Sin nuevas suites Windows ni SDK Linux: módulo y política no cambiaron. PASS previos conservados. Los antiguos BLOCKED_ENVIRONMENT de 58c4966 quedan históricos en ese commit.

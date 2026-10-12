@@ -1,0 +1,423 @@
+{
+  "source": "exact 2.0.3 extracted source; original inputs unchanged",
+  "files": [
+    {
+      "file": "include/d/d_bg_w_kcol.h",
+      "sha256": "8ff4e9671fd2af43a7118c5250ec4b28e94a577ea9bd7318da71c5f69be4f5ab",
+      "anchors": [
+        {
+          "text": "struct KC_PrismData",
+          "line": 19
+        },
+        {
+          "text": "struct KC_Header",
+          "line": 29
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_bg_w_kcol.cpp",
+      "sha256": "734b6957c29b43c813400fdcfa78a54e76ef5bfe961bb0f4bb7b5e790034df92",
+      "anchors": [
+        {
+          "text": "void* dBgWKCol::initKCollision",
+          "line": 22
+        },
+        {
+          "text": "bool dBgWKCol::GetTriPnt(KC_PrismData",
+          "line": 125
+        },
+        {
+          "text": "bool dBgWKCol::GroundCross",
+          "line": 545
+        }
+      ]
+    },
+    {
+      "file": "include/d/d_bg_plc.h",
+      "sha256": "010583e75a10a08566473e8eaf7b6191f75963f23827d75bb882fda14521bd88",
+      "anchors": [
+        {
+          "text": "struct sBgPlc",
+          "line": 6
+        }
+      ]
+    },
+    {
+      "file": "include/d/d_bg_pc.h",
+      "sha256": "e369e734a0adb1cc080939d7e42f76fc1c64871e79ff37151d20d16be711cbf7",
+      "anchors": [
+        {
+          "text": "s32 getExit()",
+          "line": 24
+        },
+        {
+          "text": "u32 getObjThrough()",
+          "line": 26
+        },
+        {
+          "text": "s32 getRoom()",
+          "line": 59
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_bg.cpp",
+      "sha256": "d16ea71e66c0e93256ba8bcb2a412c551c21172674096319611a826595b6b893",
+      "anchors": [
+        {
+          "text": "cBgD_t* dzb =",
+          "line": 212
+        },
+        {
+          "text": "void* kcl =",
+          "line": 227
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_stage.cpp",
+      "sha256": "b946520ed3813852f61bdff284c0c005bd70afcd194439d39c2557a5ef492095",
+      "anchors": [
+        {
+          "text": "static int dStage_rpatInfoInit",
+          "line": 2262
+        },
+        {
+          "text": "static void layerActorLoader",
+          "line": 2759
+        },
+        {
+          "text": "void dStage_dt_c_roomReLoader",
+          "line": 2816
+        },
+        {
+          "text": "static void readMult",
+          "line": 2467
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_com_inf_game.cpp",
+      "sha256": "a7dc9b5a64489e92c5eec6f3bc097857f66ad3c54f72ba106e14db4acc7c6ce3",
+      "anchors": [
+        {
+          "text": "int dComIfG_play_c::getLayerNo_common_common",
+          "line": 160
+        },
+        {
+          "text": "else if (!strcmp(i_stageName, \"F_SP121\"))",
+          "line": 642
+        },
+        {
+          "text": "int dComIfG_play_c::getLayerNo(int",
+          "line": 890
+        }
+      ]
+    },
+    {
+      "file": "include/d/d_stage.h",
+      "sha256": "dc59d4f57374566c29727bbc3eacdeb21d7b998c8e4f1550220cb840738651ab",
+      "anchors": [
+        {
+          "text": "struct stage_actor_data_class",
+          "line": 211
+        },
+        {
+          "text": "struct stage_tgsc_data_class",
+          "line": 222
+        },
+        {
+          "text": "struct dStage_Mult_info",
+          "line": 285
+        }
+      ]
+    },
+    {
+      "file": "include/d/d_path.h",
+      "sha256": "5391ab57a63b9dd85ff9fb7b35387eafda0509302ed627ab8ab5538514f3969b",
+      "anchors": [
+        {
+          "text": "struct dPnt",
+          "line": 10
+        },
+        {
+          "text": "struct dPath",
+          "line": 18
+        }
+      ]
+    },
+    {
+      "file": "include/d/d_bg_w.h",
+      "sha256": "a1db9949ca778bca40567ae7964f5b795e5311c587ba450584afe27aba0b6a35",
+      "anchors": [
+        {
+          "text": "struct cBgD_Tri_t",
+          "line": 62
+        },
+        {
+          "text": "struct cBgD_t",
+          "line": 101
+        }
+      ]
+    },
+    {
+      "file": "libs/JSystem/include/JSystem/JKernel/JKRArchive.h",
+      "sha256": "ee880cb3a50a54ab3e27f1730cc364bea6abb879931835431aa1dea065cfa189",
+      "anchors": [
+        {
+          "text": "struct SArcHeader",
+          "line": 21
+        },
+        {
+          "text": "struct SArcDataInfo",
+          "line": 36
+        },
+        {
+          "text": "struct SDIFileEntry",
+          "line": 87
+        }
+      ]
+    },
+    {
+      "file": "libs/JSystem/include/JSystem/J3DGraphLoader/J3DModelLoader.h",
+      "sha256": "d019dc4adf89474b1074b590440b6ce791cd0d0aeff15c0b6ea2a046fc329bf1",
+      "anchors": [
+        {
+          "text": "struct J3DVertexBlock",
+          "line": 58
+        },
+        {
+          "text": "struct J3DJointBlock",
+          "line": 93
+        }
+      ]
+    },
+    {
+      "file": "libs/JSystem/include/JSystem/J3DGraphLoader/J3DJointFactory.h",
+      "sha256": "90c250c6f940d8be2df68f431c551040ecf862b57fc4e0958c5f10e0a2379313",
+      "anchors": [
+        {
+          "text": "struct J3DJointInitData",
+          "line": 13
+        }
+      ]
+    },
+    {
+      "file": "mods/custom_actor_demo/src/m_a_obj_wrock.cpp",
+      "sha256": "39ab431a77dae6cd65ba11463ba3298fb6680ab3d8eb4862cc01dc15771e914f",
+      "anchors": [
+        {
+          "text": "static const char* l_resName",
+          "line": 11
+        },
+        {
+          "text": "int maObj_Wrock_c::CreateHeap",
+          "line": 65
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_resorce.cpp",
+      "sha256": "13ecf79461866083bc22c21c27cbfafa77eae7550f0db92bd46cc978bdaccdb3",
+      "anchors": [
+        {
+          "text": "int dRes_info_c::set(char",
+          "line": 53
+        },
+        {
+          "text": "if (!stricmp(i_arcName",
+          "line": 877
+        }
+      ]
+    },
+    {
+      "file": "src/dusk/mods/svc/overlay.cpp",
+      "sha256": "6d58a9a0109773c01ddd3fb3bddad478a75f8f906b401e1af69be4b40b7287e6",
+      "anchors": [
+        {
+          "text": "// Aurora matches overlay paths",
+          "line": 52
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_scene_exit.cpp",
+      "sha256": "f9fe0b9a93f63e28f65a21cda9e7d936f3598098881277e1a2fe6c109fcad59a",
+      "anchors": [
+        {
+          "text": "scale.x *= 75.0f",
+          "line": 43
+        },
+        {
+          "text": "int daScex_c::execute",
+          "line": 59
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_no_chg_room.cpp",
+      "sha256": "85b8e1a12b8dce06103837184641ce126ee0b3823e61fcf43abac651d146c01a",
+      "anchors": [
+        {
+          "text": "scale *= getScaleType()",
+          "line": 130
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_tag_attack_item.cpp",
+      "sha256": "27c34fa35887cd098ff595e0b84c7b568916961776497ec391cc4b9a890a15f2",
+      "anchors": [
+        {
+          "text": "mCyl.SetR",
+          "line": 62
+        },
+        {
+          "text": "mCyl.SetH",
+          "line": 63
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_tag_evtarea.cpp",
+      "sha256": "7a910f039f46f31b9aa0ce40d99e9b593547621e958ab73ba7cab09b3202b303",
+      "anchors": [
+        {
+          "text": "case 21:",
+          "line": 60
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_npc.cpp",
+      "sha256": "cd2311dd8b29c2f1e82ba01da5aec8b9ea094437ceba7ede349f4f284158dabe",
+      "anchors": [
+        {
+          "text": "BOOL daNpcT_chkPointInArea(cXyz i_pos",
+          "line": 2709
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_swc00.cpp",
+      "sha256": "27626694cad07044022e3dbf0c9d5fba911a64b2c48e6933e0585917e33d0ae8",
+      "anchors": [
+        {
+          "text": "static inline int daSwc00_getScale",
+          "line": 253
+        },
+        {
+          "text": "a_this->scale.x = 10.0f",
+          "line": 308
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_tag_chgrestart.cpp",
+      "sha256": "ff6ce81e2e8a0c91b80926b1c1e317aa8d384087ce97586896ed0b7b3b5e984c",
+      "anchors": [
+        {
+          "text": "int daTagChgRestart_c::Create()",
+          "line": 37
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_suspend.cpp",
+      "sha256": "680d04288c8538a18e1324cb73b80174f4e8abb04ebc5d474de055f5695dbbd6",
+      "anchors": [
+        {
+          "text": "int daSus_c::create()",
+          "line": 11
+        }
+      ]
+    },
+    {
+      "file": "src/d/d_com_static.cpp",
+      "sha256": "664f0617a2d5d8658fce858dbe1de4665b618cdc1383bf428965d7a0dbe0612e",
+      "anchors": [
+        {
+          "text": "void daSus_c::data_c::set",
+          "line": 29
+        },
+        {
+          "text": "const char* daSetBgObj_c::getArcName",
+          "line": 349
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_set_bgobj.cpp",
+      "sha256": "d9811c90eebb969471bee3476e444312dab76527806af49eed068aab60529deb",
+      "anchors": [
+        {
+          "text": "int daSetBgObj_c::CreateInit",
+          "line": 14
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_obj_cboard.cpp",
+      "sha256": "04a7225fb9e3bcbadb677ac658c4be06af8b45aed05dff86f0480354d2608665",
+      "anchors": [
+        {
+          "text": "static DUSK_CONST char* l_arcName",
+          "line": 23
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_obj_rgate.cpp",
+      "sha256": "eb644962c9c9596514d552e2f87015f1c68786bf998ff79d41a606276750bffb",
+      "anchors": [
+        {
+          "text": "static DUSK_CONSTEXPR char DUSK_CONST* l_arcName",
+          "line": 213
+        }
+      ]
+    },
+    {
+      "file": "src/d/actor/d_a_kytag06.cpp",
+      "sha256": "eb133863e9d021ed750295b3d146099c3afd373c131c2bed93c001917b3b24e2",
+      "anchors": [
+        {
+          "text": "static void daKytag06_type_04_Execute",
+          "line": 258
+        },
+        {
+          "text": "static void daKytag06_type_05_Execute",
+          "line": 789
+        }
+      ]
+    },
+    {
+      "file": "include/d/d_event_data.h",
+      "sha256": "770710d7955b3a237b1b95e7082e0f6e29d026a23b4e1893770d7615bca93077",
+      "anchors": [
+        {
+          "text": "struct event_binary_data_header",
+          "line": 13
+        },
+        {
+          "text": "class dEvDtEvent_c",
+          "line": 229
+        }
+      ]
+    },
+    {
+      "file": "libs/JSystem/include/JSystem/JStudio/JStudio/stb-data.h",
+      "sha256": "ab7974dc3b8201b53a83ebd0fee60136f61dde474d5e233eadf182a6fdcd4d11",
+      "anchors": [
+        {
+          "text": "struct THeader",
+          "line": 31
+        },
+        {
+          "text": "struct TBlock_object",
+          "line": 52
+        }
+      ]
+    }
+  ]
+}

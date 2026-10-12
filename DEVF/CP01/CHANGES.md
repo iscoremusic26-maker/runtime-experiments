@@ -10,3 +10,7 @@
 Sin modificaciones de ZIP, source upstream, EXE, ROM, saves, escenarios, otros mods, hooks, PIN del mod, instalación, apariciones o CP02. No TEST aprobado. La build cerrada no aporta proof of life de actor: solo evita generar el estado inseguro mientras faltan garantías.
 
 - Propiedad de colisión: inspección de referencias propias con APIs públicas, comprobación de índice/actor y rechazo de duplicados. Tras limpieza de escena solo retira el ID local si ya no hay referencias propias; nunca retira un slot reutilizado por otra colisión. Seis casos nuevos en el run final; suites previas no repetidas.
+
+## Actualización de ubicación desde 58c4966
+
+Evidencia F_SP121 recibida por Git LFS, íntegra y analizada. LOCATION_ANALYSIS y evidence/location-f-sp121-*.json documentan candidato geométrico condicionado y pendientes concretos. Bloqueo operativo superado; seguridad del lugar aún no aprobada, unload sin cambios. Mantener DISARMED_NO_REGISTRATION. No hubo cambios al módulo/host, nuevas compilaciones o repetición de suites, TEST activo ni CP02. Nuevo checkpoint de recuperación DEVF_CP01_LOCATION_F_SP121_REVIEW en rama documental existente.

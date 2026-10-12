@@ -24,3 +24,7 @@ Hash .dusk BUILD ONLY: 4c1978292620fa4ea8f4eb1e3758e29ae1d4477c222fd0bac31dbc08a
 Hash EXE de seguridad: 1530815210aa924c0fad7be0c354c85d32c98e5cdbc330f86d427e7359554605
 
 Build y lógica seleccionada PASS; ubicación NOT_VERIFIED, juego/DX12 NOT_TESTED, TEST de actor no aprobado. Los informes históricos del checkpoint 092c1e6 siguen disponibles por tag.
+
+## Actualización de ubicación desde 58c4966
+
+Evidencia F_SP121 recibida por Git LFS, íntegra y analizada. LOCATION_ANALYSIS y evidence/location-f-sp121-*.json documentan candidato geométrico condicionado y pendientes concretos. Bloqueo operativo superado; seguridad del lugar aún no aprobada, unload sin cambios. Mantener DISARMED_NO_REGISTRATION. No hubo cambios al módulo/host, nuevas compilaciones o repetición de suites, TEST activo ni CP02. Nuevo checkpoint de recuperación DEVF_CP01_LOCATION_F_SP121_REVIEW en rama documental existente.
