@@ -12,11 +12,13 @@ jobs:
     runs-on: windows-latest
     timeout-minutes: 180
     env:
-      GIT_CONFIG_COUNT: '2'
+      GIT_CONFIG_COUNT: '3'
       GIT_CONFIG_KEY_0: core.autocrlf
       GIT_CONFIG_VALUE_0: 'false'
       GIT_CONFIG_KEY_1: core.longpaths
       GIT_CONFIG_VALUE_1: 'true'
+      GIT_CONFIG_KEY_2: core.eol
+      GIT_CONFIG_VALUE_2: lf
       SCCACHE_GHA_ENABLED: 'true'
       RUSTC_WRAPPER: sccache
       VCPKG_BINARY_SOURCES: clear
