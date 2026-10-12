@@ -73,3 +73,9 @@ Comprobación nueva incremental: consumidor ACTR[5]/Digpl y ruta7 PASS por pará
 | Unload / CP02 | BLOCKED / NO-GO | Auditoría previa conservada, sin nueva investigación |
 
 Ver metadata extra-collisions-verification.json, hashes/líneas en extra-collisions-source-references.json y herramienta location_extra_collisions.py. Solo cálculos estructurales/geométricos nuevos con Python estándar; ninguna compilación o suite anterior repetida. Los recursos originales nunca entran en Git/artefactos del repositorio principal.
+
+## Revisión experimental autorizada del host desde 5f3a7ef
+
+Nueva rama independiente `experiment/devf-cp01-host-lifetime`. Ver [HOST_LIFETIME_REVIEW](../CP01_HOST_EXPERIMENT/HOST_LIFETIME_REVIEW.md) y [pruebas incrementales](../CP01_HOST_EXPERIMENT/TEST_RESULTS.md). La auditoría anterior se conserva como base histórica; su declaración de “no modificar host” correspondía al alcance anterior. El usuario autoriza ahora exclusivamente código fuente experimental, sin modificar instalación ni distribuir ejecutable.
+
+Parche experimental con barrera de solicitudes, predrenado separado de retirada de perfiles, veto ante shutdown fallido y ownership retenido. No integrado en un host completo: faltan submódulos exactos del release para compilarlo. No acredita seguridad del runtime. DISARMED_NO_REGISTRATION, ubicación NOT_VERIFIED, ejecución DX12 NOT_TESTED y CP02 NO-GO se conservan. No repetir ubicación/auditoría/suites no afectadas. Recuperar esta rama y comprobar SOURCE_MANIFEST antes de aplicar a una copia del source; nunca a una instalación.

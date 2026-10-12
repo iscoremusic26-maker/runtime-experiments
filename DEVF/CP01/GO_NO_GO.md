@@ -27,3 +27,9 @@ Consumidor Digpl de ruta7 identificado y sus27 puntos excluidos de caja/radio500
 PASS estático: ambos ARC íntegros, geometría/dependencias/carga y4 ubicaciones mmvbg/ClearB excluidas de caja candidata, incluyendo carga inicial y estados intacto/roto. El acceso a assets ya no es un BLOCKED_INPUT de estas dos colisiones. Model1.dzb opcional ausente no bloquea: el código deja ese collider nulo.
 
 Ubicación segura NOT_VERIFIED: evidencia Windows/contexto, pendiente/contacto, efectos globales/cámara/progreso y acceso Digpl permanecen. Runtime del mod NOT_TESTED. Unload BLOCKED independiente e intacto; no se vuelve a auditar. NO-GO para TEST activo y CP02; mantener DISARMED_NO_REGISTRATION. No se rechaza ni aprueba candidato por suposición. Checkpoint nuevo DEVF_CP01_EXTRA_COLLISIONS_REVIEW, sin merge ni mover tags anteriores.
+
+## Revisión experimental autorizada del host desde 5f3a7ef
+
+Nueva rama independiente `experiment/devf-cp01-host-lifetime`. Ver [HOST_LIFETIME_REVIEW](../CP01_HOST_EXPERIMENT/HOST_LIFETIME_REVIEW.md) y [pruebas incrementales](../CP01_HOST_EXPERIMENT/TEST_RESULTS.md). La auditoría anterior se conserva como base histórica; su declaración de “no modificar host” correspondía al alcance anterior. El usuario autoriza ahora exclusivamente código fuente experimental, sin modificar instalación ni distribuir ejecutable.
+
+Parche experimental con barrera de solicitudes, predrenado separado de retirada de perfiles, veto ante shutdown fallido y ownership retenido. No integrado en un host completo: faltan submódulos exactos del release para compilarlo. No acredita seguridad del runtime. DISARMED_NO_REGISTRATION, ubicación NOT_VERIFIED, ejecución DX12 NOT_TESTED y CP02 NO-GO se conservan. No repetir ubicación/auditoría/suites no afectadas. Recuperar esta rama y comprobar SOURCE_MANIFEST antes de aplicar a una copia del source; nunca a una instalación.

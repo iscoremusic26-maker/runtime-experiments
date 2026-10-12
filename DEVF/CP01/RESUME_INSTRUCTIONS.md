@@ -17,3 +17,9 @@ DEVF_CP01_LOCATION_WORK=/workspace/work/cp01-extra-collisions python -B DEVF/CP0
 ```
 
 Originales nuevos solo en repositorio privado main9f95a34 y directorio de trabajo fuera de código. Si se pierde el temporal, recuperar informes de este tag antes de decidir qué entrada privada necesita reconstruirse; no relanzar KCL/WRock/Digpl/CP00 por rutina. Módulo y política intactos; no MSVC/suites nuevas, host, actor, TEST activo o CP02. Detenerse tras checkpoint.
+
+## Revisión experimental autorizada del host desde 5f3a7ef
+
+Nueva rama independiente `experiment/devf-cp01-host-lifetime`. Ver [HOST_LIFETIME_REVIEW](../CP01_HOST_EXPERIMENT/HOST_LIFETIME_REVIEW.md) y [pruebas incrementales](../CP01_HOST_EXPERIMENT/TEST_RESULTS.md). La auditoría anterior se conserva como base histórica; su declaración de “no modificar host” correspondía al alcance anterior. El usuario autoriza ahora exclusivamente código fuente experimental, sin modificar instalación ni distribuir ejecutable.
+
+Parche experimental con barrera de solicitudes, predrenado separado de retirada de perfiles, veto ante shutdown fallido y ownership retenido. No integrado en un host completo: faltan submódulos exactos del release para compilarlo. No acredita seguridad del runtime. DISARMED_NO_REGISTRATION, ubicación NOT_VERIFIED, ejecución DX12 NOT_TESTED y CP02 NO-GO se conservan. No repetir ubicación/auditoría/suites no afectadas. Recuperar esta rama y comprobar SOURCE_MANIFEST antes de aplicar a una copia del source; nunca a una instalación.
