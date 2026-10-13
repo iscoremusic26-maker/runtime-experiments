@@ -1,0 +1,82 @@
+{
+  "build.log": {
+    "bytes": 5837,
+    "sha256": "f78b834fa8cb5cb42d970129483521d01b19a6abebb54255c96542971b3ede38"
+  },
+  "candidate-imports.json": {
+    "bytes": 3034,
+    "sha256": "7715db05616dc74b90e696c3cd681479a44df03a8094f84a9c539ba3e4007909"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compile-commands.json": {
+    "bytes": 24511,
+    "sha256": "c38c656c368cedd34c2abf61a56766f5f7833be91af3944b9241c61adc54de8a"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 1010,
+    "sha256": "91cea33d6890b9c0972330aead247bcff206c56777ef3e46f87a6a6d3cb1801d"
+  },
+  "DOWNLOAD_MANIFEST.json": {
+    "bytes": 1209,
+    "sha256": "7e0e3287b40e595600709f6c4e5c83a4e772e355a4648db1fd9dde9dd4177259"
+  },
+  "g5-overlay-diff.log": {
+    "bytes": 870,
+    "sha256": "1cad60a90c3b6b7ffef1cfc6ce82684937cedd0b4aff68be5d556d3e211073de"
+  },
+  "g5-overlay-ledger.json": {
+    "bytes": 343,
+    "sha256": "fafeb9815995a90eab0a2ee1a5de63faa16f8454d5df8c7d6ee53584ee4f2eeb"
+  },
+  "memcmp-review.json": {
+    "bytes": 1164,
+    "sha256": "0a6ab04d76615c76fc31eac2bc403dfad50d0414ee88bc32837c45fcb7488cd2"
+  },
+  "module-disassembly.log": {
+    "bytes": 704691,
+    "sha256": "9f5b0c8b5fd2418604a788e1230c07cec394610932b2c1036f9eee455dff92c4"
+  },
+  "module-exports.log": {
+    "bytes": 837,
+    "sha256": "0a763c69b36839bf5b7826d7722e7fcafd64bae992acf5fdfab6f4ffebfa45d1"
+  },
+  "module-headers.log": {
+    "bytes": 6067,
+    "sha256": "9c352d3013d798d9b6d6dda43e9a13782f52e654e5baf48fa6a56b770f0d3101"
+  },
+  "module-imports.log": {
+    "bytes": 5589,
+    "sha256": "22ec98141fac60a1afe6ffbfd1f4958b37b8ea27ffbd3c2e67a17c1c429c921b"
+  },
+  "module-map.log": {
+    "bytes": 84667,
+    "sha256": "17ee193fd7a799d0b18419314f3f4db7af98ad6342fe0dfb0df273000ffcc0d1"
+  },
+  "official-package.log": {
+    "bytes": 162,
+    "sha256": "70d345b6d84b64fb4c5debe26e807c188dffed94bc2b590ff7b1ca3d63001475"
+  },
+  "overlay-diff.log": {
+    "bytes": 12842,
+    "sha256": "c462d8d7eeed2e5c7deddd8f7ce3ab41e9f7e64d78ca928307eabaa87d5f4544"
+  },
+  "overlay-ledger.json": {
+    "bytes": 2419,
+    "sha256": "fb9214ca118aa7f6b5bc71cd895d8dd8d76054374316936c9bf14f7321e0d176"
+  },
+  "result.json": {
+    "bytes": 46680,
+    "sha256": "dfab9f76eddfd9369e06d4a585486d16536e523b2face7647ac96ee2dd6cc7f6"
+  },
+  "semantic-pe-negative-results.json": {
+    "bytes": 1841,
+    "sha256": "7e40b38542c0c1d27e0d154459f1d5a07d2d13a089b08f6120f6f66fbb5f9ae6"
+  }
+}

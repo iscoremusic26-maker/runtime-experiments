@@ -1,0 +1,44 @@
+[
+  {
+    "case": "external-manifest-changed",
+    "rejected": true,
+    "execution": "OFFLINE_PYTHON_INSPECTION_ONLY",
+    "dll_loaded": false
+  },
+  {
+    "case": "external-source-changed",
+    "rejected": true,
+    "execution": "OFFLINE_PYTHON_INSPECTION_ONLY",
+    "dll_loaded": false
+  },
+  {
+    "case": "wrong-artifact-digest",
+    "rejected": true,
+    "execution": "OFFLINE_PYTHON_INSPECTION_ONLY",
+    "dll_loaded": false
+  },
+  {
+    "case": "manifest-id-changed",
+    "rejected": true,
+    "execution": "OFFLINE_PYTHON_INSPECTION_ONLY",
+    "dll_loaded": false
+  },
+  {
+    "case": "internal-DLL-changed",
+    "rejected": true,
+    "execution": "OFFLINE_PYTHON_INSPECTION_ONLY",
+    "dll_loaded": false
+  },
+  {
+    "case": "directory-marked-regular",
+    "rejected": true,
+    "execution": "OFFLINE_PYTHON_INSPECTION_ONLY",
+    "dll_loaded": false
+  },
+  {
+    "case": "file-marked-directory",
+    "rejected": true,
+    "execution": "OFFLINE_PYTHON_INSPECTION_ONLY",
+    "dll_loaded": false
+  }
+]

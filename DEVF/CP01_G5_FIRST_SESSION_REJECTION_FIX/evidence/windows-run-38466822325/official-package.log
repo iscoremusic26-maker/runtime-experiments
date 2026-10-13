@@ -1,0 +1,5 @@
+[1/1] Packaging devf_g5_rejection_diagnostic -> <WORK>/build/mods/devf_g5_rejection_diagnostic.dusk
+mod.json
+lib
+lib/windows-amd64
+lib/windows-amd64/mod.dll

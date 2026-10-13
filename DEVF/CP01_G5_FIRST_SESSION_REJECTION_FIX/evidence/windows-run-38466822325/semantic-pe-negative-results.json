@@ -1,0 +1,102 @@
+[
+  {
+    "case": "decorated-same-base-changed",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "prohibited-native-setter",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "prohibited-actor-create",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "prohibited-system-import",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "changed-CRT-memcmp",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "unexpected-DLL",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "metadata-ActorService",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "ABI-version",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "metadata-size",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "machine-x86",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "TLS-directory",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "delay-import-directory",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "export-name",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "ordinal-only-export",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "forwarded-export",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "aliased-export-ordinal",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "review-manifest-missing-symbol",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "review-manifest-duplicate",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "review-manifest-invalid-schema",
+    "rejected": true,
+    "loaded": false
+  },
+  {
+    "case": "review-manifest-absent",
+    "rejected": true,
+    "loaded": false
+  }
+]

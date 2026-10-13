@@ -1,0 +1,186 @@
+{
+  "status": "DOWNLOAD_VERIFIED",
+  "outer_artifact_members": [
+    {
+      "path": "DEVF_CP01_G5_DISARMED_DIAGNOSTIC_windows-amd64_29efb505a71014f9f8725846576485cdb91f77cd.dusk",
+      "directory": false,
+      "bytes": 31819,
+      "crc32": "50b37f4b",
+      "sha256": "095f11583e7c4e97f2f0be4455e827fc42f609eac03fd887bc142f707237a436"
+    },
+    {
+      "path": "DOWNLOAD_MANIFEST.json",
+      "directory": false,
+      "bytes": 1209,
+      "crc32": "1ce05897",
+      "sha256": "7e0e3287b40e595600709f6c4e5c83a4e772e355a4648db1fd9dde9dd4177259"
+    }
+  ],
+  "delivery_artifact_sha256": "755eca152bffed1bf1e39ef19dd653285e73092ab386524c31d1c07afca84189",
+  "text_artifact_sha256": "3b5fd364f31d9f8c636e2bb439cb1d91a44f18a13628590f74f869627189566d",
+  "all_CRC_and_hashes_pass": true,
+  "source_ledger_verified": true,
+  "compiled_DLL_sha256_matches": true,
+  "package": {
+    "package_bytes": 31819,
+    "package_sha256": "095f11583e7c4e97f2f0be4455e827fc42f609eac03fd887bc142f707237a436",
+    "dll_bytes": 163328,
+    "dll_sha256": "d2a5f3bcfeb2870be56968de59321b21ba5388c8d95b5d8e1f4e54d99f14711d",
+    "manifest_sha256": "41985bbc85e02fa4b3ff78ed36ab7d1afbd22c8f5a8a35a235cb9817fd8e803c",
+    "manifest": {
+      "id": "dev.devf.cp01_g5_rejection_diagnostic",
+      "name": "DEVF CP01 G5 REJECTION DIAGNOSTIC DISARMED",
+      "version": "0.0.2",
+      "description": "READ_ONLY_DIAGNOSTIC / DISARMED_NO_REGISTRATION. Raw Link speed and consecutive-update deltas; conditional KYTAG04 room scope evidence. NO native actor request. NOT APPROVED FOR INSTALLATION OR NEXT G5."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 336,
+        "crc32": "4849d185",
+        "sha256": "41985bbc85e02fa4b3ff78ed36ab7d1afbd22c8f5a8a35a235cb9817fd8e803c"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 163328,
+        "crc32": "3c184d2e",
+        "sha256": "d2a5f3bcfeb2870be56968de59321b21ba5388c8d95b5d8e1f4e54d99f14711d"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "VCRUNTIME140.dll": [
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memset",
+          "memcmp",
+          "memcpy"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-math-l1-1-0.dll": [
+          "sqrt"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strncmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_execute_onexit_table",
+          "_cexit",
+          "_initialize_onexit_table",
+          "_initialize_narrow_environment",
+          "_configure_narrow_argv",
+          "_seh_filter_dll",
+          "_initterm",
+          "_initterm_e"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "free"
+        ],
+        "dusklight.exe": [
+          "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+          "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+          "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?dComIfGp_isEnableNextStage@@YAHXZ",
+          "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+          "?dComIfGp_event_runCheck@@YAHXZ",
+          "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+          "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+          "?mProcID@dStage_roomControl_c@@2IA",
+          "?mStayNo@dStage_roomControl_c@@2CA",
+          "?mNextStayNo@dStage_roomControl_c@@2CA",
+          "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+          "?fpcM_IsCreating@@YAHI@Z",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+          "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+          "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+          "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+          "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+          "??1dBgS_GndChk@@UEAA@XZ",
+          "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+          "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+          "??0dBgS_GndChk@@QEAA@XZ",
+          "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z"
+        ],
+        "KERNEL32.dll": [
+          "QueryPerformanceCounter",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetSystemTimeAsFileTime",
+          "DisableThreadLibraryCalls",
+          "InitializeSListHead"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "G5_DIAGNOSTIC_EXACT_PE_PASS"
+    },
+    "exports": [
+      "mod_ctx",
+      "mod_initialize",
+      "mod_meta",
+      "mod_shutdown",
+      "mod_update"
+    ],
+    "byte_identical": true,
+    "status": "DIAGNOSTIC_PACKAGE_PASS"
+  },
+  "source_commit": "29efb505a71014f9f8725846576485cdb91f77cd",
+  "workflow_commit": "f02cbd99bc280d6bbd54ab0f08b4ba241b7f0fe4",
+  "run_id": "38466822325",
+  "dll_loaded": false,
+  "game_executed": false,
+  "installed": false,
+  "NEXT_G5_SESSION_AUTHORIZED": false,
+  "CP02": "NO_GO"
+}

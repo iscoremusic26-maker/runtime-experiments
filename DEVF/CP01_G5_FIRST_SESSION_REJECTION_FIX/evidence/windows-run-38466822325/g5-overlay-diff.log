@@ -1,0 +1,11 @@
+--- pilot/src/census_reader.cpp
++++ g5/src/census_reader.cpp
+@@ -54,7 +54,7 @@
+     const bool pilot_owner_valid=layer_id(c.layers,a->layer_tag.layer,pilot_owner);
+     const bool pilot_link=(reason&1u)!=0;
+     const std::array<double,3> pilot_speed=pilot_link?std::array<double,3>{a->speed.x,a->speed.y,a->speed.z}:std::array<double,3>{};
+-    devf::pilot::collect_actor(a->id,a->profname,a->current.roomNo,xyz,pilot_owner,pilot_owner_valid,pilot_link,pilot_speed,pilot_link?double(a->speedF):0.0);
++    devf::pilot::collect_actor(a->id,a->profname,a->current.roomNo,xyz,pilot_owner,pilot_owner_valid,pilot_link,pilot_speed,pilot_link?double(a->speedF):0.0,int(a->group));
+     const auto distance=devf::g4b::distance_to_C(xyz);
+     if(distance<0){local.actors_complete=false;c.incomplete=true;return actor;}
+     if(distance<=devf::g4b::radius)reason|=2;

@@ -1,0 +1,15 @@
+{
+  "compiled_source_commit": "29efb505a71014f9f8725846576485cdb91f77cd",
+  "ci_commit": "f02cbd99bc280d6bbd54ab0f08b4ba241b7f0fe4",
+  "independent_GitHub_fetch": "PASS",
+  "bare_fsck_main": "PASS",
+  "bare_fsck_ci": "PASS",
+  "historical_git_blobs_unchanged": 762,
+  "historical_worktree_unchanged": 762,
+  "historical_local_refs_unchanged": 54,
+  "historical_workflows_unchanged": 7,
+  "ci_diff_only_own_new_folder_and_workflow": true,
+  "private_original_or_binary_files_in_new_source_folder": false,
+  "final_annotated_tag": "DEVF_CP01_G5_DISARMED_DIAGNOSTIC_VERIFIED",
+  "final_tag_fetch_verification": "Execute after final documentation commit and publishing tag; reported in final delivery"
+}

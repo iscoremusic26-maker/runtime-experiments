@@ -1,0 +1,23 @@
+{
+  "run_id": 38466822325,
+  "job_id": 115535637388,
+  "conclusion": "success",
+  "compiled_source_commit": "29efb505a71014f9f8725846576485cdb91f77cd",
+  "ci_commit": "f02cbd99bc280d6bbd54ab0f08b4ba241b7f0fe4",
+  "text": {
+    "artifact_id": 11848254740,
+    "archive_bytes": 136753,
+    "sha256": "3b5fd364f31d9f8c636e2bb439cb1d91a44f18a13628590f74f869627189566d",
+    "expires_utc": "2026-11-12T20:57:56Z"
+  },
+  "delivery": {
+    "artifact_id": 11847829866,
+    "archive_bytes": 31866,
+    "sha256": "755eca152bffed1bf1e39ef19dd653285e73092ab386524c31d1c07afca84189",
+    "expires_utc": "2026-11-12T20:57:57Z"
+  },
+  "download": "PASS",
+  "game_executed": false,
+  "dll_loaded": false,
+  "installed": false
+}
