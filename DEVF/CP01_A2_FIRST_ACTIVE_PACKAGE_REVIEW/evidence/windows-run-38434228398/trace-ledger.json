@@ -1,0 +1,12 @@
+{
+  "trace.hpp": {
+    "input_lf_sha256": "3b6177cee12afe27872902496fab329638361b9a8875e50f651d7e3adfc94edf",
+    "output_lf_sha256": "8d0b730bf691b5d11f4c2cf19eb85e24fcf41deac0309cf3ddbfcf7994f1ebdb",
+    "edits": 2
+  },
+  "trace.cpp": {
+    "input_lf_sha256": "111e330a6beb533c997c8496c1b35212cf9ccdc354c8ae54de8363b490fd6d49",
+    "output_lf_sha256": "e143555e9c32daf7e7eb0d52ff6dee0a4a514ec610dbda1460725e3c6c735480",
+    "edits": 1
+  }
+}

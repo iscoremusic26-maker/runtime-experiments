@@ -1,0 +1,139 @@
+{
+  "status": "BLOCKED",
+  "started_utc": "2026-10-13T16:54:42.982169+00:00",
+  "source_commit": "faa851eb7d4baaa439d8b8d37238602cf22ea2f4",
+  "run_id": "38434228398",
+  "run_attempt": "1",
+  "ci_head": "a17478eb38acd365744de92a1725a7a486715e29",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.484,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.922,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\DEVF\\CP01_A2_FIRST_ACTIVE_PACKAGE_REVIEW",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 8.172,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_first_eoc_active",
+        "active_provider_lab",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 19.0,
+      "exit": 0
+    },
+    {
+      "label": "active-provider-lab",
+      "command": [
+        "<WORK>\\build\\active_provider_lab.exe"
+      ],
+      "seconds": 0.016,
+      "exit": 1
+    }
+  ],
+  "game_executed": false,
+  "installed": false,
+  "dll_loaded": false,
+  "host_built": false,
+  "runtime_tested": false,
+  "creation_capable": true,
+  "provider": "TECHNICALLY_ARMED_FIXED_C_E_OC",
+  "execution_authorized": false,
+  "G5": "NO_GO",
+  "CP02": "NO_GO",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_ledger": {
+    "CMakeLists.txt": "ba9d89aa4fe66f73af70c112ac8031d7917941213ba0779e4d0dcca0c03e4961",
+    "mod.json": "b14a16f582adf2dd3d8a1f38900345b83b8ab6747f23df2e11afd6ff9b8a8f67",
+    "SOURCE_AUTHORITY.json": "451c837c09191427442ea55e0dd88d66cd375e6f1d151735b2409b497412ef6c",
+    "ci/audit.py": "090310b208aac569f2ff9b007b5b3afbc556366b4c7fdb1c0af40e60f24c6835",
+    "ci/mutations.py": "f5824de168d2406fefa62cd655e2e5d2883b2b5bdc8606e83be351a99964145b",
+    "ci/negative_packages.py": "d4c74e426eba8b99f6d62adccd606bc2f18d100da959b812ba517275d21b0299",
+    "ci/prepare_trace.py": "885679498a6f2a571569bee8f3c1b99f7793b08e2aeb5f3926ef577504660f9e",
+    "ci/run_windows.py": "fe497b7ad74db7cee63e6cebf8b83c64a68383f94be43c9973c4937caa99e8e4",
+    "ci/verify_package.py": "511b3dc0a4f9548d38d3a1a24af054b4f5d293f1a0686e1b78a608c89f3d5b90",
+    "ci/windows-package.yml": "4031f2d41829c8d33a630db961a194564c77f973e1cb29d05f05b312aa4827d1",
+    "src/active_admission.cpp": "e9f63e0e710c46253461293e3bec6beb5c987a1693e9ebf7c42665f3a709e000",
+    "src/active_mod.cpp": "508645d290fc0efd4f6958c3b414dcdea4d9e9f8464100c624ceebc7bc68f5c4",
+    "src/package_compatibility.hpp": "5612316f4fda81bc2d959d7a5d908b6a049f63536a7ae5f6e1570b8b9a0f2e90",
+    "tests/provider_lab.cpp": "d8c571281cba013c52bbb83949db9d56f9d8585c93d28298a95275f870dca540"
+  },
+  "dependencies": {
+    "sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "library_bytes": 9400986,
+    "library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "library_crc32": "70c35731",
+    "sdk_files_verified": 58,
+    "original_integrity": "CP00 reused; selected library CRC/hash rechecked"
+  },
+  "negative_dependency_drift": [
+    {
+      "case": "manifest-hash-drift",
+      "rejected": true
+    },
+    {
+      "case": "SDK-hash-drift",
+      "rejected": true
+    },
+    {
+      "case": "importlib-hash-drift",
+      "rejected": true
+    }
+  ],
+  "source_audit": {
+    "status": "PASS_STATIC",
+    "provider": "TECHNICALLY_ARMED_FIXED_C_E_OC_LIVE_KEY",
+    "human_execution_authorized": false,
+    "seven_overlays_identical": true,
+    "native_backend_unchanged": true,
+    "A_B_C_reentry_scope_latch_preserved": true,
+    "request_sites": 1,
+    "runtime": "NOT_TESTED"
+  },
+  "ended_utc": "2026-10-13T16:55:13.984264+00:00"
+}

@@ -1,0 +1,15 @@
+{
+  "run_id": 38434228398,
+  "job_id": 115423937773,
+  "source_commit": "faa851eb7d4baaa439d8b8d37238602cf22ea2f4",
+  "ci_head": "a17478eb38acd365744de92a1725a7a486715e29",
+  "artifact_id": 11832381434,
+  "zip_bytes": 11920,
+  "zip_sha256": "2fcbfc36490e208c53b04d449999a6b0cd644b2f450a0ba2322ee95ba4a1eb0d",
+  "CRC": "PASS",
+  "manifest_files": 10,
+  "new_checks": 46,
+  "failures": 1,
+  "failure": "normal-log-saturation-reserves-request-restore: synthetic rows differed only in Link ID, omitted from dedup key; fixed fixture varies node identity then restores it. Production trace/policy/controller unchanged.",
+  "active_package_uploaded": false
+}

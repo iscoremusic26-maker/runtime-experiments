@@ -1,0 +1,63 @@
+{
+  "ci_base": "0b7b517ff2fdce5a0964cbc1dbd91d4a27525b28",
+  "head": "ci/devf-cp01-first-active-package",
+  "private_repository_checked": true,
+  "old_workflows": [
+    {
+      "workflow": "devf-cp01-first-native-offline.yml",
+      "sha256": "ccf8cfd2f7f7f794196480e26fd1cd79f2a540193c13068de4b0ed9c3b36fc33",
+      "paths": [
+        "DEVF/CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/**",
+        ".github/workflows/devf-cp01-first-native-offline.yml"
+      ],
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-g4b-package.yml",
+      "sha256": "d810a110d4038fae237bed2c016b3bd8ed4e36e1baa5f0fc309005fbea8c0dc6",
+      "paths": [
+        "DEVF/CP01_G4B_PACKAGE_DELIVERY/**",
+        ".github/workflows/devf-cp01-g4b-package.yml"
+      ],
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-g4b-readonly.yml",
+      "sha256": "81700d1ce0002fbba45e2ad28e07d95f4834befc65c4f4728c9b3287efe3cf19",
+      "paths": [
+        "DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/**",
+        ".github/workflows/devf-cp01-g4b-readonly.yml"
+      ],
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-a2-disarmed.yml",
+      "sha256": "94f6e319d91d4050d510d2a75b7af5358ec0614d1a9d2d72733030f885f9a11c",
+      "paths": [
+        "DEVF/CP01_A2_DISARMED_CONTROLLER/**",
+        ".github/workflows/devf-cp01-a2-disarmed.yml"
+      ],
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-g2-readonly.yml",
+      "sha256": "3852954d595a20df48c40c24eee1bfc40ce4781e5dc5982a3851b9c54cfefa19",
+      "paths": [
+        "DEVF/CP01_G2_READONLY_PACKAGE/**",
+        ".github/workflows/devf-cp01-g2-readonly.yml"
+      ],
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-first-pilot-safety.yml",
+      "sha256": "46b44ddc04f5424492b2163a0615b479848530bf0e239e4610234dc740c4bd6c",
+      "paths": [
+        "DEVF/CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE/**",
+        ".github/workflows/devf-cp01-first-pilot-safety.yml"
+      ],
+      "matches_new_diff": false
+    }
+  ],
+  "exact_new_job_base_head_sha_filter": true,
+  "no_host_game_Dll_execution": true
+}

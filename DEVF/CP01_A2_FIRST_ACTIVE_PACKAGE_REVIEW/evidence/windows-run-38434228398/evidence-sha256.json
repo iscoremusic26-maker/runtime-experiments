@@ -1,0 +1,42 @@
+{
+  "active-provider-lab.log": {
+    "bytes": 1766,
+    "sha256": "1167dc59d7db73fcac39defba98830ce9134e0706927721486b0570bd8ecf1d3"
+  },
+  "build.log": {
+    "bytes": 8028,
+    "sha256": "52c95c97aa9f02b405d5b5c21a82f78ff05ac02dc6d6f0f4f4a03e6c5035da6a"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 1010,
+    "sha256": "b75ed417114f2015da9bbcb8a08b3feea3521726cea94bd75cd8ea95c6830703"
+  },
+  "overlay-diff.log": {
+    "bytes": 12842,
+    "sha256": "c462d8d7eeed2e5c7deddd8f7ce3ab41e9f7e64d78ca928307eabaa87d5f4544"
+  },
+  "overlay-ledger.json": {
+    "bytes": 2419,
+    "sha256": "fb9214ca118aa7f6b5bc71cd895d8dd8d76054374316936c9bf14f7321e0d176"
+  },
+  "result.json": {
+    "bytes": 4539,
+    "sha256": "fd5b057a95fad58473fab50ab4e6a76877476b038f8a7d72ea3c2e83913fe359"
+  },
+  "trace-diff.log": {
+    "bytes": 1894,
+    "sha256": "a86d9ec3248d86b5cb369d9f8c271d2661fe50888cd0b05feaf99fe4d6cfa2b5"
+  },
+  "trace-ledger.json": {
+    "bytes": 455,
+    "sha256": "a3c74cf31f1af8e356303d7fca0272bf3d77fddb984dd6683e1760b309680efd"
+  }
+}
