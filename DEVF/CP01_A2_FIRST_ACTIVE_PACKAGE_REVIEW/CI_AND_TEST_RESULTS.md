@@ -29,3 +29,5 @@ python DEVF/CP01_A2_FIRST_ACTIVE_PACKAGE_REVIEW/ci/run_windows.py --source .offi
 REQUEST/CREATION/RENDER/COLLISION/CLEANUP y DX12 de esta DLL: **NOT_TESTED**. G5/CP02 NO-GO; G6 NOT_VERIFIED; ubicación no certificada y unloading custom BLOCKED.
 
 Integridad histórica:658 archivos de worktree sin cambios y658 blobs Git del baseline sin cambios;46 textos históricos tienen solo diferencia CRLF(worktree)/LF(Git). Se preservan ambos ledgers y no se reescribe ningún histórico. El verificador de fetch usa los hashes de los blobs del baseline; el subset277 conserva su ledger exacto anterior.
+
+Referencias:las50 referencias locales previas conservan su valor. De ellas,45 son ramas/tags de GitHub contrastados exactamente mediante fetch;5 son referencias locales/tracking (incluidas dos tracking ya obsoletas) cuyos objetos originales siguen recuperables en la historia descargada. No se publican ni actualizan esas referencias locales para simular igualdad con la punta remota. El tag base0ff1b8b también se verifica por separado.

@@ -31,9 +31,15 @@ if d!=download['manifest'] or d['source_commit']!=r['source_commit'] or d['workf
 for k in ['dll_sha256','dll_bytes','package_sha256','package_bytes']:
  if d[k]!=r['package_verification'][k] or d[k]!=download[k]:raise RuntimeError('Delivery identity differs '+k)
 refs=doc('evidence/historical-refs.json')['references']
+remote_refs=0;historical_objects=0
 for ref,h in refs.items():
- # Prior origin tracking refs are checked against the actual remote branches in this fetch.
- actual=ref.replace('refs/remotes/origin/','refs/heads/')
- if git('rev-parse',actual).decode().strip()!=h:raise RuntimeError('Historical reference drift '+ref)
+ if ref.startswith('refs/remotes/') or ref=='refs/heads/work':
+  # These are prior local tracking/scratch references, including already stale tracking values.
+  # Their unchanged local values were certified separately; historical Git objects must remain fetchable.
+  git('cat-file','-e',h);historical_objects+=1
+ else:
+  if git('rev-parse',ref).decode().strip()!=h:raise RuntimeError('Historical GitHub reference drift '+ref)
+  remote_refs+=1
+if git('rev-parse','DEVF_CP01_A2_FIRST_PILOT_SAFETY_TRACE_VERIFIED^{commit}').decode().strip()!=base:raise RuntimeError('Pilot base tag changed')
 subprocess.run(['git','--git-dir='+str(a.git_dir),'fsck','--full'],check=True,capture_output=True)
-print(json.dumps({'status':'PASS_STATIC','ref':a.ref,'commit':git('rev-parse',a.ref+'^{commit}').decode().strip(),'historical_files':len(historical),'original277':len(prior['file_sha256']),'historical_refs':len(refs),'compiled_own_inputs':len(r['source_ledger']),'CI_text_manifests':3,'delivery_provenance':'PASS','git_fsck':'PASS','runtime':'NOT_TESTED'},indent=2))
+print(json.dumps({'status':'PASS_STATIC','ref':a.ref,'commit':git('rev-parse',a.ref+'^{commit}').decode().strip(),'historical_files':len(historical),'original277':len(prior['file_sha256']),'prior_local_refs_preserved':len(refs),'GitHub_historical_refs_exact':remote_refs,'local_tracking_scratch_objects_recovered':historical_objects,'compiled_own_inputs':len(r['source_ledger']),'CI_text_manifests':3,'delivery_provenance':'PASS','git_fsck':'PASS','runtime':'NOT_TESTED'},indent=2))
