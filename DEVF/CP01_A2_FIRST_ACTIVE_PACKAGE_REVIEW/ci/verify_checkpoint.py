@@ -11,7 +11,7 @@ base='0ff1b8bf5e331fc411d6dd9e5fc70c7b3809c75e'
 subprocess.run(['git','--git-dir='+str(a.git_dir),'merge-base','--is-ancestor',base,a.ref],check=True)
 changes=git('diff','--name-only',base,a.ref).decode().splitlines()
 if any(not f.startswith(DIR) for f in changes):raise RuntimeError('Historical path changed')
-historical=doc('evidence/historical-before.json')
+historical=doc('evidence/historical-git-blobs.json')['files_sha256']
 for path,h in historical.items():
  if sha(blob(path))!=h:raise RuntimeError('Historical bytes drift '+path)
 prior=json.loads(blob('DEVF/CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE/evidence/historical-integrity.json'))

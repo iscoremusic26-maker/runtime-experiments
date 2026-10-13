@@ -7,5 +7,8 @@
   "SDK_Aurora_tracked_sources_unchanged": true,
   "importlib_and_selected_ZIP_member_hash_CRC_verified_in_runner": true,
   "all_changes_only_new_directory": true,
-  "mismatches": []
+  "mismatches": [],
+  "historical_git_baseline_blobs": 658,
+  "historical_CRLF_worktree_vs_LF_Git_only": 46,
+  "historical_files_rewritten": false
 }

@@ -27,3 +27,5 @@ python DEVF/CP01_A2_FIRST_ACTIVE_PACKAGE_REVIEW/ci/run_windows.py --source .offi
 Último run: configure Ninja Release8.360s; build DLL11.640s; target SDK package0.297s. Fases desde2026-10-13T17:03:28.585634Z hasta17:03:53.499604Z (12:03:28→12:03:53 Panama UTC−5). Comandos completos y15 unidades de producción en result.json/compile-commands.json. Los23 archivos textuales y22 hashes del run final están preservados en Git; los16 inputs propios se contrastaron con el commit compilado y con el checkpoint. CI_SOURCE es procedencia externa excluida del propio ledger para evitar autoreferencia. Herramientas documentales agregadas después no alteran el binario.
 
 REQUEST/CREATION/RENDER/COLLISION/CLEANUP y DX12 de esta DLL: **NOT_TESTED**. G5/CP02 NO-GO; G6 NOT_VERIFIED; ubicación no certificada y unloading custom BLOCKED.
+
+Integridad histórica:658 archivos de worktree sin cambios y658 blobs Git del baseline sin cambios;46 textos históricos tienen solo diferencia CRLF(worktree)/LF(Git). Se preservan ambos ledgers y no se reescribe ningún histórico. El verificador de fetch usa los hashes de los blobs del baseline; el subset277 conserva su ledger exacto anterior.
