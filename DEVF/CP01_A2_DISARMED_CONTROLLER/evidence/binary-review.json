@@ -1,0 +1,27 @@
+{
+  "status": "A2_DISARMED_BINARY_AUDIT_PASS",
+  "review_method": "Source and compilation graph + strict PE services/IAT/exports + map/address-to-disassembly correlation",
+  "dll_sha256": "fd9f04fdd52c87ac29ed491f6cdcb8f1b39187ac6086179a8b033412ce5b5ad1",
+  "module_units": 6,
+  "entry_addresses": {
+    "mod_initialize": "0x180001010",
+    "mod_shutdown": "0x180001160",
+    "mod_update": "0x180001180"
+  },
+  "update_direct_targets": {
+    "capture_owner": "0x1800014C0",
+    "Controller.disarm": "0x180001350",
+    "validate_owner": "0x180001370",
+    "snprintf": "0x1800012F0"
+  },
+  "update_service_call": {
+    "instruction": "0x1800012C9 call qword ptr [rax+8]",
+    "service_pointer": "svc_log @ 0x1800060C8",
+    "member": "LogService.write offset8 (public Windows ABI)"
+  },
+  "unused_simulation_members_absent_from_link_map": true,
+  "CRT_GetCurrentThreadId": "CRT startup import, not own worker or OS thread validation",
+  "runtime": "NOT_TESTED",
+  "downloaded_evidence_zip_sha256": "7f4df21533e3ccc2f4ba24841c596d21a180deb8ee1cc87e635dc5e1280ee624",
+  "source_ledger_matches_final_code": true
+}

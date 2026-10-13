@@ -1,0 +1,534 @@
+{
+  "status": "A2_DISARMED_CONTROLLER_PASS_LAB",
+  "started_utc": "2026-10-13T03:30:09.172929+00:00",
+  "run_id": "38341931143",
+  "run_attempt": "1",
+  "ci_head": "6ba5533ec4d32f0c7c3735481d300544a50a92f9",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.407,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.828,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=<WORKSPACE>\\codex-cp00-inputs\\.official",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 5.656,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_a2_disarmed",
+        "a2_controller_lab",
+        "a2_adapter_lab",
+        "a2_abi_link_probe",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 9.656,
+      "exit": 0
+    },
+    {
+      "label": "controller-lab",
+      "command": [
+        "<WORK>\\build\\a2_controller_lab.exe"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "adapter-lab",
+      "command": [
+        "<WORK>\\build\\a2_adapter_lab.exe"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "guard-valid",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src",
+        "/DDEVF_A2_DISARMED=1",
+        "<WORK>\\build\\guard.cpp",
+        "/Fo<WORK>\\build\\guard.obj"
+      ],
+      "seconds": 0.297,
+      "exit": 0
+    },
+    {
+      "label": "guard-missing",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src",
+        "<WORK>\\build\\guard.cpp",
+        "/Fo<WORK>\\build\\guard.obj"
+      ],
+      "seconds": 0.344,
+      "exit": 2
+    },
+    {
+      "label": "guard-zero",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src",
+        "/DDEVF_A2_DISARMED=0",
+        "<WORK>\\build\\guard.cpp",
+        "/Fo<WORK>\\build\\guard.obj"
+      ],
+      "seconds": 0.281,
+      "exit": 2
+    },
+    {
+      "label": "guard-spawn",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src",
+        "/DDEVF_A2_DISARMED=1",
+        "/DDEVF_ENABLE_SPAWN=1",
+        "<WORK>\\build\\guard.cpp",
+        "/Fo<WORK>\\build\\guard.obj"
+      ],
+      "seconds": 0.297,
+      "exit": 2
+    },
+    {
+      "label": "guard-armed",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src",
+        "/DDEVF_A2_DISARMED=1",
+        "/DDEVF_A2_ARMED=1",
+        "<WORK>\\build\\guard.cpp",
+        "/Fo<WORK>\\build\\guard.obj"
+      ],
+      "seconds": 0.297,
+      "exit": 2
+    },
+    {
+      "label": "guard-mutation",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src",
+        "/DDEVF_A2_DISARMED=1",
+        "/DDEVF_ENABLE_MUTATION=1",
+        "<WORK>\\build\\guard.cpp",
+        "/Fo<WORK>\\build\\guard.obj"
+      ],
+      "seconds": 0.297,
+      "exit": 2
+    },
+    {
+      "label": "guard-fake-excluded",
+      "command": [
+        "cl",
+        "/nologo",
+        "/c",
+        "/std:c++20",
+        "/DDEVF_A2_DISARMED=1",
+        "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\tests",
+        "<WORK>\\build\\reject-fake.cpp",
+        "/Fo<WORK>\\build\\fake.obj"
+      ],
+      "seconds": 0.031,
+      "exit": 2
+    },
+    {
+      "label": "module-headers",
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_a2_disarmed.dll"
+      ],
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_a2_disarmed.dll"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_a2_disarmed.dll"
+      ],
+      "seconds": 0.032,
+      "exit": 0
+    },
+    {
+      "label": "module-disassembly",
+      "command": [
+        "dumpbin",
+        "/disasm",
+        "<WORK>\\build\\devf_a2_disarmed.dll"
+      ],
+      "seconds": 0.14,
+      "exit": 0
+    },
+    {
+      "label": "abi-probe-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\a2_abi_link_probe.dll"
+      ],
+      "seconds": 0.032,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "packaged": false,
+  "host_built": false,
+  "runtime": "NOT_TESTED",
+  "policy": "DISARMED_NO_REGISTRATION",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_audit": {
+    "status": "PASS_STATIC",
+    "production_units": [
+      "disarmed_mod",
+      "controller_core",
+      "room_owner_resolver",
+      "G2/core",
+      "G2/native_reader",
+      "SDK/game_feature"
+    ],
+    "only_service_callbacks": [
+      "Host metadata",
+      "Log.write"
+    ],
+    "synchronous_visitors": [
+      "G2 match_actor",
+      "G2 census_actor"
+    ],
+    "entry_graph": "mod_initialize -> service/header/version checks; mod_update -> capture_owner -> historical G2 capture + scalar/link checks; Controller.disarm; validate_owner; Log.write; mod_shutdown -> scalar disarm",
+    "simulation_linked": false,
+    "native_request_backend": false,
+    "native_layer_setter": false,
+    "historical_G2_unchanged": true
+  },
+  "compiled_main_commit": "0fa942f3758cee7d901cf847651b47477aa032af",
+  "source_ledger": {
+    "CMakeLists.txt": "94ad86f99f3bcffb9824e62f07e9637a59236550a55c6445d7bb531fa59a0c67",
+    "mod.json": "46e54ef3a6cdc6c98b909ca47a7589aedd4118eafd80e8004015e2e9901788c9",
+    "ci/audit.py": "1bcb6a3b03297369e88e1807503d286dcdb63e8ebf91012be82b483ea29049b0",
+    "ci/mutations.py": "97114c160f2e7cb10ac789e83125c84b4f4dc4b9927e5eaa7a5e875d28db9aca",
+    "ci/run_windows.py": "bb13b8db43e577bd90c44be05d2d45288e0eaebc2df1f0f488cdf7c3b2406c10",
+    "ci/windows.yml": "94f6e319d91d4050d510d2a75b7af5358ec0614d1a9d2d72733030f885f9a11c",
+    "src/controller_core.cpp": "aebc1beb31c9ca27b132665390fce2b9328e4b6bbf805e37e99949c33f8f69ee",
+    "src/controller_core.hpp": "cfacb397d189fdb56ccad51d55bb58cb2add13c15165273bff44c898a493e468",
+    "src/disarmed_mod.cpp": "322ca9ab7f2d40c7bd13d5332f63ffee10408844b5d6b8d780b433f8402d6b88",
+    "src/room_owner_resolver.cpp": "1fa97f73c07c3ba57652b08e8ee3b3b6da4c35f7be3b5453e93cc7265754d602",
+    "src/room_owner_resolver.hpp": "ec5dbef75945c26834d32e97facf5d41bda43b01111731998b10c70ecc0be543",
+    "tests/abi_link_probe.cpp": "091d53bf4f6b2fba9b605bbb8aa49da80cc43d21f10716af2285f2841177485e",
+    "tests/adapter_lab.cpp": "737b4a9af4cad4e7ccf70e90a7375aee7411f1ccb7115561d713bdbce249ec5b",
+    "tests/controller_lab.cpp": "08b2abd24e7edb667424ade75a28047e56ce80befce721b7cf77d5d144a2f138",
+    "tests/fake_engine.hpp": "2862bad5b8fa30a9479aaaaa1e1de1ae66de43b01d35ce37a1bae83ae48c83fb",
+    "tests/simulation.hpp": "81ada719fd803715fef6a1888db7b528e5bb8d4f7e83d5c72cb59e3fcca3995d"
+  },
+  "dependencies": {
+    "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "bytes": 9400986,
+    "member_crc32": "70c35731",
+    "original_integrity": "CP00 reused; selected library only"
+  },
+  "controller_summary": "SUMMARY 70 PASS 0 FAIL; synthetic controller only; no engine or DX12",
+  "adapter_summary": "SUMMARY 29 PASS 0 FAIL; actual disarmed lifecycle with fake resolver; no engine",
+  "mutations": [
+    {
+      "mutation": "double_attempt",
+      "detected": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL repeated_signals: expectation failed",
+        "FAIL service_error_no_retry: expectation failed",
+        "FAIL invalid_id_no_retry: expectation failed",
+        "FAIL exception_after_enqueue: expectation failed",
+        "FAIL resolver_exception_no_continuation: expectation failed",
+        "FAIL resolver_uncertainty_disarm_no_reset: expectation failed",
+        "FAIL restore_failure_no_retry: expectation failed",
+        "FAIL foreign_id: expectation failed",
+        "FAIL wrong_actor_profile: expectation failed",
+        "FAIL wrong_actor_owner: expectation failed",
+        "FAIL wrong_actor_room: expectation failed",
+        "FAIL phase_failed: expectation failed",
+        "FAIL request_vanished: expectation failed",
+        "FAIL actor_removed: expectation failed",
+        "FAIL missing_resources: expectation failed",
+        "FAIL ambiguous_creation: expectation failed",
+        "FAIL reuse_reported: expectation failed",
+        "FAIL timeout_no_retry: expectation failed",
+        "FAIL room_change_no_rearm: expectation failed",
+        "FAIL deactivate_reactivate_no_rearm: expectation failed"
+      ]
+    },
+    {
+      "mutation": "omit_restore",
+      "detected": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL single_request_owner_and_restore: expectation failed",
+        "FAIL previous_root_restored: expectation failed",
+        "FAIL service_error_no_retry: expectation failed",
+        "FAIL exception_before_enqueue: expectation failed",
+        "FAIL exception_after_enqueue: expectation failed",
+        "FAIL target_unregistered_after_selection: expectation failed",
+        "FAIL early_exit_scope_restore: expectation failed",
+        "FAIL nested_lifo: expectation failed",
+        "FAIL reentry_blocked: expectation failed",
+        "FAIL restore_failure_no_retry: expectation failed"
+      ]
+    },
+    {
+      "mutation": "allow_root",
+      "detected": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL root_target: expectation failed"
+      ]
+    },
+    {
+      "mutation": "foreign_id",
+      "detected": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL foreign_id: expectation failed"
+      ]
+    },
+    {
+      "mutation": "continue_after_error",
+      "detected": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL error_terminal_monitor: expectation failed"
+      ]
+    },
+    {
+      "mutation": "ignore_transition",
+      "detected": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL stage_transition: expectation failed",
+        "FAIL room_transition: expectation failed"
+      ]
+    }
+  ],
+  "binary_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?mNextStayNo@dStage_roomControl_c@@2CA",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?mStayNo@dStage_roomControl_c@@2CA",
+        "?mProcID@dStage_roomControl_c@@2IA",
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ"
+      ],
+      "VCRUNTIME140.dll": [
+        "memcpy",
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memset"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_cexit",
+        "_initialize_onexit_table",
+        "_initterm",
+        "_initterm_e",
+        "_execute_onexit_table",
+        "_seh_filter_dll",
+        "_configure_narrow_argv",
+        "_initialize_narrow_environment"
+      ],
+      "KERNEL32.dll": [
+        "QueryPerformanceCounter",
+        "GetCurrentThreadId",
+        "InitializeSListHead",
+        "DisableThreadLibraryCalls",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentProcessId"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "A2_DISARMED_BINARY_AUDIT_PASS"
+  },
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "module_compile_units": [
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_a2_disarmed_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FAs /FIglobal.h /FoCMakeFiles\\devf_a2_disarmed.dir\\src\\disarmed_mod.cpp.obj /FdCMakeFiles\\devf_a2_disarmed.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\disarmed_mod.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/disarmed_mod.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_a2_disarmed.dir/src/disarmed_mod.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_a2_disarmed_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FAs /FIglobal.h /FoCMakeFiles\\devf_a2_disarmed.dir\\src\\controller_core.cpp.obj /FdCMakeFiles\\devf_a2_disarmed.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\controller_core.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_a2_disarmed.dir/src/controller_core.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_a2_disarmed_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FAs /FIglobal.h /FoCMakeFiles\\devf_a2_disarmed.dir\\src\\room_owner_resolver.cpp.obj /FdCMakeFiles\\devf_a2_disarmed.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\room_owner_resolver.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_a2_disarmed.dir/src/room_owner_resolver.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_a2_disarmed_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FAs /FIglobal.h /FoCMakeFiles\\devf_a2_disarmed.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\core.cpp.obj /FdCMakeFiles\\devf_a2_disarmed.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\core.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/core.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_a2_disarmed.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/core.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_a2_disarmed_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FAs /FIglobal.h /FoCMakeFiles\\devf_a2_disarmed.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\native_reader.cpp.obj /FdCMakeFiles\\devf_a2_disarmed.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\native_reader.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/native_reader.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_a2_disarmed.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/native_reader.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_a2_disarmed_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FAs /FIglobal.h /FoCMakeFiles\\devf_a2_disarmed.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp.obj /FdCMakeFiles\\devf_a2_disarmed.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/.official/sdk/src/game_feature.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_a2_disarmed.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/.official/sdk/src/game_feature.cpp.obj"
+    }
+  ],
+  "artifact_hashes": {
+    "devf_a2_disarmed.dll": {
+      "bytes": 18944,
+      "sha256": "fd9f04fdd52c87ac29ed491f6cdcb8f1b39187ac6086179a8b033412ce5b5ad1"
+    },
+    "a2_abi_link_probe.dll": {
+      "bytes": 10240,
+      "sha256": "06f144690ad1f1ab87dad530cd1ed0756835b1d7a66d41d6b5cdf642371f4e82"
+    },
+    "a2_controller_lab.exe": {
+      "bytes": 64000,
+      "sha256": "b80d45910aa1fbad11961988b44ee58571e164b5fa95907efe14f52a7a77bc5c"
+    },
+    "a2_adapter_lab.exe": {
+      "bytes": 19456,
+      "sha256": "239fca6e311773828581e33bee9848e46649c56becf35582e38ef434ab103965"
+    }
+  },
+  "call_graph_verified": {
+    "source": "mod_initialize -> service/header/version checks; mod_update -> capture_owner -> historical G2 capture + scalar/link checks; Controller.disarm; validate_owner; Log.write; mod_shutdown -> scalar disarm",
+    "compile_units": 6,
+    "lab_scope_backend_in_map": false,
+    "services": "Host/Log/Game only",
+    "setter_in_host_IAT": false,
+    "creation_in_host_IAT_or_services": false,
+    "disassembly_log": "module-disassembly.log",
+    "link_map_log": "module-map.log"
+  },
+  "official_source_unchanged": true,
+  "msvc": "A2_DISARMED_MSVC_LINK_PASS",
+  "binary": "A2_DISARMED_BINARY_AUDIT_PASS",
+  "ended_utc": "2026-10-13T03:30:41.010844+00:00"
+}

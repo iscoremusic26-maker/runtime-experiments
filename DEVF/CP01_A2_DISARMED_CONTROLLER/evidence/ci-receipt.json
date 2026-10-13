@@ -1,0 +1,18 @@
+{
+  "run_id": 38341931143,
+  "job_id": 115114646018,
+  "ci_head": "6ba5533ec4d32f0c7c3735481d300544a50a92f9",
+  "compiled_main_commit": "0fa942f3758cee7d901cf847651b47477aa032af",
+  "artifact_id": 11787297060,
+  "artifact_zip_sha256": "7f4df21533e3ccc2f4ba24841c596d21a180deb8ee1cc87e635dc5e1280ee624",
+  "runner": "windows-latest",
+  "OS": "Microsoft Windows Server 2025",
+  "image": "windows-2025-vs2026",
+  "image_version": "20260925.250.1",
+  "runner_version": "2.337.0",
+  "download_SHA256_CRC_and_text_members_verified": true,
+  "compiled_code_matches_final_ledger": true,
+  "binaries_uploaded": false,
+  "dusk_generated": false,
+  "runtime": "NOT_TESTED"
+}

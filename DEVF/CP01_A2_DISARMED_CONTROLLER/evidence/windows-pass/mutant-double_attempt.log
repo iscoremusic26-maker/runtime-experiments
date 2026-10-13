@@ -1,0 +1,71 @@
+PASS host
+PASS thread
+PASS missing_node
+PASS wrong_profile
+PASS root_target
+PASS link_owner_confusion
+PASS missing_child
+PASS unregistered_child
+PASS incoherent_node_child
+PASS node_creating
+PASS node_destroying
+PASS creates
+PASS deletes
+PASS parent_creates
+PASS parent_deletes
+PASS wrong_stage
+PASS wrong_room
+PASS wrong_logical
+PASS unregistered_previous
+PASS stage_transition
+PASS room_transition
+PASS node_id_mismatch
+PASS missing_play
+PASS wrong_parent_scene
+PASS registry_incomplete
+PASS player_absent
+PASS default_zero
+PASS no_position
+PASS single_request_owner_and_restore
+PASS previous_changed_before_select
+PASS previous_root_restored
+FAIL repeated_signals: expectation failed
+FAIL service_error_no_retry: expectation failed
+FAIL invalid_id_no_retry: expectation failed
+PASS exception_before_enqueue
+FAIL exception_after_enqueue: expectation failed
+FAIL resolver_exception_no_continuation: expectation failed
+FAIL resolver_uncertainty_disarm_no_reset: expectation failed
+PASS selection_throw_restore
+PASS selection_mismatch
+PASS target_changed_before_scope
+PASS target_unregistered_after_selection
+PASS early_exit_scope_restore
+PASS nested_lifo
+PASS reentry_blocked
+PASS dead_previous_fail_closed
+FAIL restore_failure_no_retry: expectation failed
+PASS latch_consumed_before_request
+PASS pending_then_ready
+PASS visible_incomplete
+PASS actor_init_missing
+PASS own_pending_counts
+FAIL foreign_id: expectation failed
+FAIL wrong_actor_profile: expectation failed
+FAIL wrong_actor_owner: expectation failed
+FAIL wrong_actor_room: expectation failed
+FAIL phase_failed: expectation failed
+FAIL request_vanished: expectation failed
+FAIL actor_removed: expectation failed
+FAIL missing_resources: expectation failed
+FAIL ambiguous_creation: expectation failed
+FAIL reuse_reported: expectation failed
+PASS ready_then_destroyed
+PASS ready_regresses
+FAIL timeout_no_retry: expectation failed
+PASS context_lost
+FAIL room_change_no_rearm: expectation failed
+FAIL deactivate_reactivate_no_rearm: expectation failed
+PASS error_terminal_monitor
+PASS preset_no_changes
+SUMMARY 50 PASS 20 FAIL; synthetic controller only; no engine or DX12

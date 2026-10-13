@@ -1,0 +1,129 @@
+{
+  "status": "BLOCKED",
+  "started_utc": "2026-10-13T03:27:40.972840+00:00",
+  "run_id": "38341748553",
+  "run_attempt": "1",
+  "ci_head": "3fdb50233e7de29a3d903550633cde682638925e",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.39,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.891,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=<WORKSPACE>\\codex-cp00-inputs\\.official",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 6.14,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_a2_disarmed",
+        "a2_controller_lab",
+        "a2_adapter_lab",
+        "a2_abi_link_probe",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 5.188,
+      "exit": 2
+    }
+  ],
+  "game_executed": false,
+  "packaged": false,
+  "host_built": false,
+  "runtime": "NOT_TESTED",
+  "policy": "DISARMED_NO_REGISTRATION",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_audit": {
+    "status": "PASS_STATIC",
+    "production_units": [
+      "disarmed_mod",
+      "controller_core",
+      "room_owner_resolver",
+      "G2/core",
+      "G2/native_reader",
+      "SDK/game_feature"
+    ],
+    "only_service_callbacks": [
+      "Host metadata",
+      "Log.write"
+    ],
+    "synchronous_visitors": [
+      "G2 match_actor",
+      "G2 census_actor"
+    ],
+    "entry_graph": "mod_initialize -> service/header/version checks; mod_update -> capture_owner -> historical G2 capture + scalar/link checks; Controller.disarm; validate_owner; Log.write; mod_shutdown -> scalar disarm",
+    "simulation_linked": false,
+    "native_request_backend": false,
+    "native_layer_setter": false,
+    "historical_G2_unchanged": true
+  },
+  "compiled_main_commit": "e54566ebb9f3eaee50d872e95ae0e20f305221c1",
+  "source_ledger": {
+    "CMakeLists.txt": "94ad86f99f3bcffb9824e62f07e9637a59236550a55c6445d7bb531fa59a0c67",
+    "mod.json": "46e54ef3a6cdc6c98b909ca47a7589aedd4118eafd80e8004015e2e9901788c9",
+    "ci/audit.py": "1bcb6a3b03297369e88e1807503d286dcdb63e8ebf91012be82b483ea29049b0",
+    "ci/mutations.py": "97114c160f2e7cb10ac789e83125c84b4f4dc4b9927e5eaa7a5e875d28db9aca",
+    "ci/run_windows.py": "e43eb904df886d4dcb8a810334a5cdd15c2ef0c875144b4fd00e7a95a59bcaac",
+    "ci/windows.yml": "94f6e319d91d4050d510d2a75b7af5358ec0614d1a9d2d72733030f885f9a11c",
+    "src/controller_core.cpp": "2b335fe7bf29778e6e88a554f3c3053ef7c75a743dae9e00ce71cb8e43bf899e",
+    "src/controller_core.hpp": "cfacb397d189fdb56ccad51d55bb58cb2add13c15165273bff44c898a493e468",
+    "src/disarmed_mod.cpp": "322ca9ab7f2d40c7bd13d5332f63ffee10408844b5d6b8d780b433f8402d6b88",
+    "src/room_owner_resolver.cpp": "f347832174ff7cd2834d76b2e31c84682715cf64d04fdca4fb9f66846c9b87f4",
+    "src/room_owner_resolver.hpp": "ec5dbef75945c26834d32e97facf5d41bda43b01111731998b10c70ecc0be543",
+    "tests/abi_link_probe.cpp": "091d53bf4f6b2fba9b605bbb8aa49da80cc43d21f10716af2285f2841177485e",
+    "tests/adapter_lab.cpp": "737b4a9af4cad4e7ccf70e90a7375aee7411f1ccb7115561d713bdbce249ec5b",
+    "tests/controller_lab.cpp": "fd63994f2bddc6e9c4ee1bd41b8ca28607e8fa28be6cdd187de0ea3c0fee452a",
+    "tests/fake_engine.hpp": "2862bad5b8fa30a9479aaaaa1e1de1ae66de43b01d35ce37a1bae83ae48c83fb",
+    "tests/simulation.hpp": "81ada719fd803715fef6a1888db7b528e5bb8d4f7e83d5c72cb59e3fcca3995d"
+  },
+  "dependencies": {
+    "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "bytes": 9400986,
+    "member_crc32": "70c35731",
+    "original_integrity": "CP00 reused; selected library only"
+  },
+  "ended_utc": "2026-10-13T03:27:56.644789+00:00"
+}

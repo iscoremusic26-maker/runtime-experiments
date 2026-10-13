@@ -1,0 +1,71 @@
+PASS host
+PASS thread
+PASS missing_node
+PASS wrong_profile
+PASS root_target
+PASS link_owner_confusion
+PASS missing_child
+PASS unregistered_child
+PASS incoherent_node_child
+PASS node_creating
+PASS node_destroying
+PASS creates
+PASS deletes
+PASS parent_creates
+PASS parent_deletes
+PASS wrong_stage
+PASS wrong_room
+PASS wrong_logical
+PASS unregistered_previous
+PASS stage_transition
+PASS room_transition
+PASS node_id_mismatch
+PASS missing_play
+PASS wrong_parent_scene
+PASS registry_incomplete
+PASS player_absent
+PASS default_zero
+PASS no_position
+FAIL single_request_owner_and_restore: expectation failed
+PASS previous_changed_before_select
+FAIL previous_root_restored: expectation failed
+PASS repeated_signals
+FAIL service_error_no_retry: expectation failed
+PASS invalid_id_no_retry
+FAIL exception_before_enqueue: expectation failed
+FAIL exception_after_enqueue: expectation failed
+PASS resolver_exception_no_continuation
+PASS resolver_uncertainty_disarm_no_reset
+PASS selection_throw_restore
+PASS selection_mismatch
+PASS target_changed_before_scope
+FAIL target_unregistered_after_selection: expectation failed
+FAIL early_exit_scope_restore: expectation failed
+FAIL nested_lifo: expectation failed
+FAIL reentry_blocked: expectation failed
+PASS dead_previous_fail_closed
+FAIL restore_failure_no_retry: expectation failed
+PASS latch_consumed_before_request
+PASS pending_then_ready
+PASS visible_incomplete
+PASS actor_init_missing
+PASS own_pending_counts
+PASS foreign_id
+PASS wrong_actor_profile
+PASS wrong_actor_owner
+PASS wrong_actor_room
+PASS phase_failed
+PASS request_vanished
+PASS actor_removed
+PASS missing_resources
+PASS ambiguous_creation
+PASS reuse_reported
+PASS ready_then_destroyed
+PASS ready_regresses
+PASS timeout_no_retry
+PASS context_lost
+PASS room_change_no_rearm
+PASS deactivate_reactivate_no_rearm
+PASS error_terminal_monitor
+PASS preset_no_changes
+SUMMARY 60 PASS 10 FAIL; synthetic controller only; no engine or DX12

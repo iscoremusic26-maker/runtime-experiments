@@ -1,0 +1,36 @@
+[1/18] Building CXX object CMakeFiles\devf_a2_disarmed.dir\src\disarmed_mod.cpp.obj
+[2/18] Building CXX object CMakeFiles\devf_a2_disarmed.dir\src\controller_core.cpp.obj
+[3/18] Building CXX object CMakeFiles\devf_a2_disarmed.dir\<WORKSPACE>\DEVF\CP01_G2_READONLY_PACKAGE\src\core.cpp.obj
+[4/18] Building CXX object CMakeFiles\devf_a2_disarmed.dir\src\room_owner_resolver.cpp.obj
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[5/18] Building CXX object CMakeFiles\devf_a2_disarmed.dir\<WORKSPACE>\DEVF\CP01_G2_READONLY_PACKAGE\src\native_reader.cpp.obj
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[6/18] Building CXX object CMakeFiles\devf_a2_disarmed.dir\<WORKSPACE>\.official\sdk\src\game_feature.cpp.obj
+[7/18] Building CXX object CMakeFiles\a2_controller_lab.dir\src\controller_core.cpp.obj
+[8/18] Building CXX object CMakeFiles\a2_abi_link_probe.dir\tests\abi_link_probe.cpp.obj
+[9/18] Building CXX object CMakeFiles\a2_abi_link_probe.dir\<WORKSPACE>\.official\sdk\src\game_feature.cpp.obj
+[10/18] Building CXX object CMakeFiles\a2_controller_lab.dir\tests\controller_lab.cpp.obj
+[11/18] Building CXX object CMakeFiles\a2_adapter_lab.dir\src\disarmed_mod.cpp.obj
+[12/18] Building CXX object CMakeFiles\a2_adapter_lab.dir\src\controller_core.cpp.obj
+[13/18] Building CXX object CMakeFiles\a2_adapter_lab.dir\tests\adapter_lab.cpp.obj
+[14/18] Building CXX object CMakeFiles\a2_adapter_lab.dir\<WORKSPACE>\.official\sdk\src\game_feature.cpp.obj
+[15/18] Linking CXX shared module devf_a2_disarmed.dll
+[16/18] Linking CXX executable a2_controller_lab.exe
+[17/18] Linking CXX shared library a2_abi_link_probe.dll
+[18/18] Linking CXX executable a2_adapter_lab.exe

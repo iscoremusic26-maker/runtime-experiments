@@ -1,0 +1,2 @@
+reject-fake.cpp
+<WORKSPACE>\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\tests\simulation.hpp(3): fatal error C1189: #error:  "Simulation is exclusively an offline laboratory component"
