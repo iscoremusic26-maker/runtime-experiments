@@ -1,0 +1,153 @@
+{
+  "status": "BLOCKED",
+  "started_utc": "2026-10-13T15:43:29.401608+00:00",
+  "run_id": "38424407438",
+  "run_attempt": "1",
+  "ci_head": "00d11a67a168cf1f0abbfdeea74816aa51ce2bd2",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.265,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.813,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 7.703,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_first_pilot_experiment",
+        "pilot_safety_trace_lab",
+        "pilot_native_abi_lab",
+        "pilot_baseline_reentry_reproducer",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 20.907,
+      "exit": 0
+    },
+    {
+      "label": "pilot_safety_trace_lab",
+      "command": [
+        "<WORK>\\build\\pilot_safety_trace_lab.exe"
+      ],
+      "seconds": 0.015,
+      "exit": 1
+    }
+  ],
+  "game_executed": false,
+  "packaged": false,
+  "host_built": false,
+  "runtime": "NOT_TESTED",
+  "policy": "PILOT_CONDITIONAL_LOCATION_SESSION_DENIED_NO_REGISTRATION",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "reused_source_ledger": {
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp": "aebc1beb31c9ca27b132665390fce2b9328e4b6bbf805e37e99949c33f8f69ee",
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.hpp": "cfacb397d189fdb56ccad51d55bb58cb2add13c15165273bff44c898a493e468",
+    "CP01_A2_DISARMED_CONTROLLER/src/disarmed_mod.cpp": "322ca9ab7f2d40c7bd13d5332f63ffee10408844b5d6b8d780b433f8402d6b88",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp": "1fa97f73c07c3ba57652b08e8ee3b3b6da4c35f7be3b5453e93cc7265754d602",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.hpp": "ec5dbef75945c26834d32e97facf5d41bda43b01111731998b10c70ecc0be543",
+    "CP01_G2_READONLY_PACKAGE/src/core.cpp": "11d276f4dec817547692504aa4222a72de2183483b427daa5466b5978eca2ed9",
+    "CP01_G2_READONLY_PACKAGE/src/core.hpp": "5f5d6a7bc875e4e4e78727b4e7a10c3f949192b7591f418d11a8286b8f41d8d9",
+    "CP01_G2_READONLY_PACKAGE/src/mod.cpp": "165c84a66d78af80a5d3a76f447b57d3aabb5bf708ed0affa958ac98cd070fdf",
+    "CP01_G2_READONLY_PACKAGE/src/native_reader.cpp": "8c6edce203fff4742e12ed13897ec826a1fa8f5ac301caa19fa0c4f8bcfde7d7",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp": "63e1e2aacffbfe971ed2d2e6be68e2fa762d58e79773dce4ed3a531897983858",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.hpp": "b486f4caaf58e55d156977644524babe65ee2258f4a47b410b2b832dbf39288f",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp": "fbddb942e9d08042dfd231d898688b45cf1d48ef5bbb83d345cdff249aacfdf1",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp": "b7ea663b194f03e25b5a7852489f57d8477ba7241beaf43b8932a9f644e2703d",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/mod.cpp": "209211040750fe7da4ba9af44963534628ae6e7a36f53dfe9d4dad7adb91a46c",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/admission.cpp": "55e7f3af2deac9d4641138be4a505de98ff740ec1e4e958a03cf96dc1b9e0aef",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/experimental_mod.cpp": "8d7d583e60d4749a334a05896e69346b41202415ef779817ce2477f636f1d52e",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/experiment_core.cpp": "3280446cb069033262e5cd8043792f5c92bb6072d7274fdb98cf99dcfde3fa25",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/experiment_core.hpp": "b7770073f04c277b3e816bbb8fd4d28dc90ea6e85b0bc8e1177998c43a7533a8",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/native_backend.cpp": "a60425f3d0e76a240e814f9b402e1ef787d2159b90d382a0859bc444dc5b6f4e",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/native_backend.hpp": "e4b8fbf1c17590aed22a4ccad881f33b95cb11c62b3747dfed41fdd2cbde75f4",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/readonly_bridge.cpp": "8a59110076b98fb69511625e2ed03e85738ac3a6610728bfe6e4b6b2684cb08a"
+  },
+  "compiled_main_commit": "3b4df80d1e7f3f0d0f51fe7791f614e73e2f689f",
+  "source_ledger": {
+    "CMakeLists.txt": "39bfd897e429d7b31e8118f95b7348ab6f412d64a93a623f6ed889037dd8b655",
+    "ci/audit.py": "b0b8600382cd52e1e931de171f44538e857d277fddd7667627bd636c61db4b2f",
+    "ci/build_overlay.py": "130c87392d241f50da685abcae5c865a83c2dce5d1a2f58ade1fa2913a046346",
+    "ci/mutations.py": "c04dbb67fb06136fe4419108e5221fae83eb89c185118fe1b05d452577b4b2b4",
+    "ci/overlay-edits.json": "f1fa14c062afae2ebb898141d587eb3dd308c40dffd65c2d72a504a78e2279d9",
+    "ci/reviewed-game-imports.json": "b1a9076fa98c156f531abffdbc4144f81da46ac7cab2b04e8fbba5f4749de1a8",
+    "ci/run_windows.py": "6c0041c379eb5c29d6770ecacf5943d11bd390f7a05db9d76e045fc4e315298e",
+    "ci/trigger-isolation.json": "f5fbb059be9fa9feb826c292ebf7ef99a4226ab9264590ac081f90b137d87268",
+    "src/census_values.cpp": "2422a5519a55d445d0dcc019519a59c24504adb8272f827e419be6d3d63e93d7",
+    "src/census_values.hpp": "9105bc56a3a0a789f21050aba6a7d46b3a03b1db276887a0ef482fda7c8248ab",
+    "src/experimental_mod.cpp": "d4577acf52d468358cc0074cfb31fe31872957f660ca389b66ee04946a346da4",
+    "src/policy.cpp": "35cfb67e1898bbecb73bc25f066f11e7121e380485576508fe18fdbb05386888",
+    "src/policy.hpp": "c929e78e46adc5dbfb2981f210e0f620132d0c22cf1503b3211ab82e7e4efa3d",
+    "src/policy_values.hpp": "1cdd5e6d2692d665edde3d317ffce29756e663ff98dc652423ba3f96d83b524f",
+    "src/readonly_bridge.cpp": "4c1a25e8897318c960b9a57fa9e7bbe0cc12d6b1d8b48241d7bbe62b1cea5ab4",
+    "src/trace.cpp": "6a131628b0edabb42aa4f504424d7da4ebebc2bd409151aa126d10a1f8d70b35",
+    "src/trace.hpp": "3b6177cee12afe27872902496fab329638361b9a8875e50f651d7e3adfc94edf",
+    "tests/pilot_lab.cpp": "b6463c251def870ee35f03ee677f65085b2c81077fb2f9247b3d2b0d9298cbd1",
+    "tests/preflight_reentry_baseline.cpp": "5549ba556fed83cf4dbd540f4193896ad2601ad4254e852595caa9525d530b24"
+  },
+  "dependencies": {
+    "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "bytes": 9400986,
+    "member_crc32": "70c35731",
+    "original_integrity": "CP00 reused; selected library only"
+  },
+  "source_audit": {
+    "status": "PASS_STATIC",
+    "single_request_site": true,
+    "native_admission": "NONE_ALWAYS_UNCHANGED",
+    "live_key": "bound after current precheck A; B/C context/freshness mandatory",
+    "link_XZ": 1600,
+    "other_actor_XZ": 1600,
+    "center_policy_not_collision_clearance": true,
+    "same_actor_passes": 2,
+    "additional_actor_passes": 0,
+    "logger": "own bounded records in scope; LogService drain outside scope",
+    "no_package": true,
+    "native_backend_unchanged": true
+  },
+  "ended_utc": "2026-10-13T15:44:01.898169+00:00"
+}

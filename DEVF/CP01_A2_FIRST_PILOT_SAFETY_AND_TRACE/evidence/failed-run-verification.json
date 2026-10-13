@@ -1,0 +1,11 @@
+{
+  "run_id": "38424407438",
+  "artifact_id": 11827707740,
+  "zip_sha256": "3457d5fdc087c1d48873e27ab6656e6025e7fb748498e163ee357bb985b87728",
+  "bytes": 12970,
+  "crc_all_members": "PASS",
+  "text_members": 8,
+  "cause": "single lab assertion stable-rejections-deduplicated; initial controller state created duplicate policy category",
+  "build_link": "PASS",
+  "final_gates_not_awarded_from_this_run": true
+}

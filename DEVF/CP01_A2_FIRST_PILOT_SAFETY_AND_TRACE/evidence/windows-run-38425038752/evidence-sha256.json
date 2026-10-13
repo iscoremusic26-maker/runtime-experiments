@@ -1,0 +1,122 @@
+{
+  "build.log": {
+    "bytes": 8274,
+    "sha256": "bf5dcf0bfd56e837ee6af94f30a7e1e20496274880bf72ca37db0493768e06eb"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compile-commands.json": {
+    "bytes": 27794,
+    "sha256": "d0600aef68054434641e523a85df3ea7b17978e9d990ce93df25b07a4733f1b7"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 1010,
+    "sha256": "c4911970672e1b840031f97ac0acbf40d72ea122839513bf5ad74c156b54d8aa"
+  },
+  "module-disassembly.log": {
+    "bytes": 773048,
+    "sha256": "1b9635d4fe056633aa3df25bd49a570ed07af2547f1a67913a0c435bc8cdd07b"
+  },
+  "module-exports.log": {
+    "bytes": 835,
+    "sha256": "6e3e108eb005df4b4f42efa42fc9035c4a0fd72d93b411adec8487c07eed26cc"
+  },
+  "module-headers.log": {
+    "bytes": 6066,
+    "sha256": "fcb49c3fbad9a155e2d64a9655ed1a500d5c2a91ab10695fef750ee35aeced7d"
+  },
+  "module-imports.log": {
+    "bytes": 5852,
+    "sha256": "474d4f5f795331e7119c32fb8f058daf623a05b1f226fd17585a71154b734e04"
+  },
+  "module-map.log": {
+    "bytes": 99892,
+    "sha256": "94980d18ec0c71d5e6443da02fa6590795960b8674a5873b2421533b51743cf5"
+  },
+  "mutant-admit_truncated_census-build.log": {
+    "bytes": 113,
+    "sha256": "248018d93691899715fc574450e113ae7e9482a4c06d64ca62fa19d59ad3d963"
+  },
+  "mutant-admit_truncated_census.log": {
+    "bytes": 17085,
+    "sha256": "2bca4f10bcfbf37bf8a20543c1e9504659a9c78337876a7646b6a0936d040e23"
+  },
+  "mutant-allow_session_without_permission-build.log": {
+    "bytes": 113,
+    "sha256": "248018d93691899715fc574450e113ae7e9482a4c06d64ca62fa19d59ad3d963"
+  },
+  "mutant-allow_session_without_permission.log": {
+    "bytes": 17085,
+    "sha256": "8720b021803d3b315f59b2e8d4c9ffed53d90fda0ca9333e867706003687ebc4"
+  },
+  "mutant-critical_logs_share_normal_budget-build.log": {
+    "bytes": 113,
+    "sha256": "248018d93691899715fc574450e113ae7e9482a4c06d64ca62fa19d59ad3d963"
+  },
+  "mutant-critical_logs_share_normal_budget.log": {
+    "bytes": 17085,
+    "sha256": "012c0298238793059e6f5acedace81ec62453653d1f472aa69fa68d22834d8f5"
+  },
+  "mutant-omit_final_C_guard-build.log": {
+    "bytes": 113,
+    "sha256": "248018d93691899715fc574450e113ae7e9482a4c06d64ca62fa19d59ad3d963"
+  },
+  "mutant-omit_final_C_guard.log": {
+    "bytes": 17085,
+    "sha256": "fa811b9ffa08b65ec2e53c8e352c421ce81eaf0acec92e4caca0f3bd59be9664"
+  },
+  "mutant-omit_XZ_guard-build.log": {
+    "bytes": 113,
+    "sha256": "248018d93691899715fc574450e113ae7e9482a4c06d64ca62fa19d59ad3d963"
+  },
+  "mutant-omit_XZ_guard.log": {
+    "bytes": 17085,
+    "sha256": "49cac85ec65785ca479e7c1d97afc7831c48ba64e66c94b140d1c57b64a40b69"
+  },
+  "mutant-relax_single_attempt_latch-build.log": {
+    "bytes": 113,
+    "sha256": "248018d93691899715fc574450e113ae7e9482a4c06d64ca62fa19d59ad3d963"
+  },
+  "mutant-relax_single_attempt_latch.log": {
+    "bytes": 17085,
+    "sha256": "0adb95b003d76b6816d044428e997281f8d79579bedf5e21ef9feaf8880127aa"
+  },
+  "mutant-use_d3_instead_of_XZ-build.log": {
+    "bytes": 113,
+    "sha256": "248018d93691899715fc574450e113ae7e9482a4c06d64ca62fa19d59ad3d963"
+  },
+  "mutant-use_d3_instead_of_XZ.log": {
+    "bytes": 17085,
+    "sha256": "ec17e6361ab7dd39e68303922607d276e9f539a5df95466327867bdbb9301046"
+  },
+  "overlay-diff.log": {
+    "bytes": 12842,
+    "sha256": "c462d8d7eeed2e5c7deddd8f7ce3ab41e9f7e64d78ca928307eabaa87d5f4544"
+  },
+  "overlay-ledger.json": {
+    "bytes": 2419,
+    "sha256": "fb9214ca118aa7f6b5bc71cd895d8dd8d76054374316936c9bf14f7321e0d176"
+  },
+  "pilot_baseline_reentry_reproducer.log": {
+    "bytes": 259,
+    "sha256": "1434a2dfbe0e54572ff882df4d83ba076f6b9f1e01fba84a4513c35126072b5d"
+  },
+  "pilot_native_abi_lab.log": {
+    "bytes": 230,
+    "sha256": "5dc477dd1fcbeffe36a58f35059f201a3101e45c1f3ce0369d48f8b273ec6736"
+  },
+  "pilot_safety_trace_lab.log": {
+    "bytes": 17085,
+    "sha256": "92683e950de50fc5a68f1d3fd4f2872d62811de5855901b2598f809ed116afe1"
+  },
+  "result.json": {
+    "bytes": 37066,
+    "sha256": "0371421ddd6ff5a84202aab7ff9c806a9765957770e1a9dec2430a6581ffd712"
+  }
+}

@@ -1,0 +1,17 @@
+# Trazas forenses acotadas, solo probadas con fakes
+
+Cada registro se captura sin llamadas externas en el punto del evento. Tras regresar Controller y restaurar el scope, el módulo drena las líneas mediante LogService1.0 oficial. No hay threads, ficheros, telemetry, callbacks registrados ni pointer dumps. Así, un sink que falle no interrumpe el enqueue/restauración. Un drain reentrante se rechaza; un reingreso real a mod_update continúa siendo STOP.
+
+Eventos si ocurren: MODULE_INIT, ABI_VERIFIED/ABI_FAILED, SESSION_ADMISSION_DENIED y SESSION_GATE_DENIED; LOCATION_POLICY_PASS/FAIL y PREFLIGHT_REJECT; FIRST/FRESH_PRECHECK_PASS; ATTEMPT_CONSUMED, LAYER_SELECTED, CREATE_REQUEST_BEGIN/RESULT, LAYER_RESTORE_OK/RESTORE_FAILED; REQUESTED, PENDING, PENDING_PHASE, ACTOR_READY_OBSERVED, READY_MONITOR_BUDGET_EXHAUSTED; STOP_SESSION, FULL_EXIT_REQUIRED_ON_UNCERTAINTY y SHUTDOWN; LOG_BUDGET_EXHAUSTED/LOG_SINK_FAILED.
+
+Orden positivo obligatorio: latch → select → request begin/result → restore → requested → pending → actor ready. Los errores se registran donde ocurren, aunque STOP anteceda a una restauración posterior. MOD_ERROR conserva el ModResult exacto y todo ID devuelto. Request throws puede dejar incertidumbre sin ID; no se reintenta. FULL_EXIT es una instrucción humana, nunca cierre del host por el mod.
+
+Formato estable: `DEVF_PILOT event=... state=... reason=... policy_reason=... event_seq=... update_index=... capture_sequence=... attempt_id=... request_id=... child=... previous=...`. Incluye perfil, owner, room, fase, flags de cola/actorINIT, métricas Link y primer offender, preset/C float32, supresiones y fallos de sink. Los IDs son escalares; no son constantes de la sesión G4B.
+
+`APPROVED_BY_POLICY` solo representa el guard condicional; `REQUEST_QUEUED` es aceptación/cola validada; `ACTOR_INITIALIZED` solo se emite en el evento validado READY. PENDING_PHASE muestra `UNVALIDATED_PHASE_SCALARS` y no acredita por sí mismo cola/actor listos. Resource_ready siempre NOT_VERIFIED y render siempre NOT_TESTED. Capture_sequence0 en monitor/stop significa que esa línea no es una captura completa de suelo/Link; se correlaciona mediante attempt/request/update.
+
+Presupuesto por vida de módulo: **24 normales +32 críticos +8 terminales =64 registros**, separados. Las denegaciones repetidas se deduplican por categoría/razón/identidad; los eventos de cambio de estado y fallo permanecen distintos. No hay snapshots periódicos. Saturar los normales no consume los críticos de request/restauración ni los terminales STOP/SHUTDOWN. Una supresión emite LOG_BUDGET_EXHAUSTED, con contadores en registros siguientes. Se conserva la limitación: una traza truncada no demuestra ausencia de fallos.
+
+El sink puede devolver falso o lanzar en el fake; se contabiliza, se añade LOG_SINK_FAILED y se intenta ese marcador en un drain posterior, sin bucle de retry. La API real write es **void**: no se inventa un status ni se puede garantizar que un filtro de logging haya conservado una línea. El fallo permanente de LogService impide evidencia externa; se trata como falta de evidencia, no éxito. El logger no cambia latch, request ni scope.
+
+Las líneas sintéticas de los laboratorios llevan `SYNTHETIC_LAB DEVF_PILOT`; no son log del juego. En una futura sesión autorizada se podrán copiar solo líneas que contengan `DEVF_PILOT `, en orden, incluyendo init, begin/result/restore y terminales. No hace falta publicar el log completo; no hay instrucciones de ejecutar ahora el adaptador.

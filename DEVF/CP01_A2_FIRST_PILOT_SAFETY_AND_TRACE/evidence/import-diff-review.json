@@ -1,0 +1,86 @@
+{
+  "status": "PASS_STATIC",
+  "exact_game_decorated_imports_unchanged": true,
+  "host_import_count": 32,
+  "all_imports": {
+    "dusklight.exe": [
+      "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+      "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+      "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+      "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+      "??1dBgS_GndChk@@UEAA@XZ",
+      "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+      "?dComIfGp_event_runCheck@@YAHXZ",
+      "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+      "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+      "?dComIfGp_getStartStageName@@YAPEBDXZ",
+      "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+      "?mProcID@dStage_roomControl_c@@2IA",
+      "?mStayNo@dStage_roomControl_c@@2CA",
+      "?mNextStayNo@dStage_roomControl_c@@2CA",
+      "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+      "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+      "??0dBgS_GndChk@@QEAA@XZ",
+      "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+      "?fpcLy_SetCurrentLayer@@YAXPEAUlayer_class@@@Z",
+      "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+      "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+      "?dComIfGp_isEnableNextStage@@YAHXZ",
+      "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+      "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+      "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+      "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+      "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+      "?fpcM_IsCreating@@YAHI@Z",
+      "?fpcCtIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+      "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+      "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+      "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ"
+    ],
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "VCRUNTIME140.dll": [
+      "__std_type_info_destroy_list",
+      "__C_specific_handler",
+      "memset",
+      "memcpy",
+      "_CxxThrowException",
+      "__std_exception_destroy",
+      "__std_exception_copy"
+    ],
+    "api-ms-win-crt-math-l1-1-0.dll": [
+      "sqrt"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "api-ms-win-crt-string-l1-1-0.dll": [
+      "strncmp"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_initialize_onexit_table",
+      "_cexit",
+      "_execute_onexit_table",
+      "_initialize_narrow_environment",
+      "_configure_narrow_argv",
+      "_seh_filter_dll",
+      "_initterm_e",
+      "_initterm"
+    ],
+    "api-ms-win-crt-heap-l1-1-0.dll": [
+      "free"
+    ],
+    "KERNEL32.dll": [
+      "DisableThreadLibraryCalls",
+      "InitializeSListHead",
+      "QueryPerformanceCounter",
+      "GetSystemTimeAsFileTime",
+      "GetCurrentThreadId",
+      "GetCurrentProcessId"
+    ]
+  },
+  "CRT_added": {},
+  "no_file_thread_patch_load_cancel_imports": true,
+  "crt_scope": "runtime startup, math/memory/string/exception support; not a proof against arbitrary indirect C++ behavior"
+}

@@ -1,0 +1,21 @@
+{
+  "source": "GitHub job115392086716 setup log and compiler.log/result.json",
+  "os": "Windows Server2025 10.0.26100",
+  "runner_selector": "windows-latest",
+  "image": "windows-2025-vs2026",
+  "image_version": "20260925.250.1",
+  "msvc": "19.51.36260.0",
+  "toolset": "14.51.36231",
+  "windows_sdk": "10.0.26100.0",
+  "cmake": "4.4.3",
+  "configure_seconds": 7.688,
+  "build_seconds": 18.656,
+  "pipeline_started_utc": "2026-10-13T15:48:18.092335+00:00",
+  "pipeline_ended_utc": "2026-10-13T15:49:37.748792+00:00",
+  "job_started_utc": "2026-10-13T15:47:22Z",
+  "job_approx_seconds": 141,
+  "jobs": [
+    "pilot-offline"
+  ],
+  "historical_jobs_triggered": false
+}

@@ -1,0 +1,539 @@
+{
+  "status": "A2_FIRST_PILOT_PASS_LAB",
+  "started_utc": "2026-10-13T15:48:18.092335+00:00",
+  "run_id": "38425038752",
+  "run_attempt": "1",
+  "ci_head": "0b7b517ff2fdce5a0964cbc1dbd91d4a27525b28",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.5,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.859,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 7.688,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_first_pilot_experiment",
+        "pilot_safety_trace_lab",
+        "pilot_native_abi_lab",
+        "pilot_baseline_reentry_reproducer",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 18.656,
+      "exit": 0
+    },
+    {
+      "label": "pilot_safety_trace_lab",
+      "command": [
+        "<WORK>\\build\\pilot_safety_trace_lab.exe"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "pilot_native_abi_lab",
+      "command": [
+        "<WORK>\\build\\pilot_native_abi_lab.exe"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "pilot_baseline_reentry_reproducer",
+      "command": [
+        "<WORK>\\build\\pilot_baseline_reentry_reproducer.exe"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "module-headers",
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_first_pilot_experiment.dll"
+      ],
+      "seconds": 0.062,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_first_pilot_experiment.dll"
+      ],
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_first_pilot_experiment.dll"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "module-disassembly",
+      "command": [
+        "dumpbin",
+        "/disasm",
+        "<WORK>\\build\\devf_first_pilot_experiment.dll"
+      ],
+      "seconds": 0.406,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "packaged": false,
+  "host_built": false,
+  "runtime": "NOT_TESTED",
+  "policy": "PILOT_CONDITIONAL_LOCATION_SESSION_DENIED_NO_REGISTRATION",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "reused_source_ledger": {
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp": "aebc1beb31c9ca27b132665390fce2b9328e4b6bbf805e37e99949c33f8f69ee",
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.hpp": "cfacb397d189fdb56ccad51d55bb58cb2add13c15165273bff44c898a493e468",
+    "CP01_A2_DISARMED_CONTROLLER/src/disarmed_mod.cpp": "322ca9ab7f2d40c7bd13d5332f63ffee10408844b5d6b8d780b433f8402d6b88",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp": "1fa97f73c07c3ba57652b08e8ee3b3b6da4c35f7be3b5453e93cc7265754d602",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.hpp": "ec5dbef75945c26834d32e97facf5d41bda43b01111731998b10c70ecc0be543",
+    "CP01_G2_READONLY_PACKAGE/src/core.cpp": "11d276f4dec817547692504aa4222a72de2183483b427daa5466b5978eca2ed9",
+    "CP01_G2_READONLY_PACKAGE/src/core.hpp": "5f5d6a7bc875e4e4e78727b4e7a10c3f949192b7591f418d11a8286b8f41d8d9",
+    "CP01_G2_READONLY_PACKAGE/src/mod.cpp": "165c84a66d78af80a5d3a76f447b57d3aabb5bf708ed0affa958ac98cd070fdf",
+    "CP01_G2_READONLY_PACKAGE/src/native_reader.cpp": "8c6edce203fff4742e12ed13897ec826a1fa8f5ac301caa19fa0c4f8bcfde7d7",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp": "63e1e2aacffbfe971ed2d2e6be68e2fa762d58e79773dce4ed3a531897983858",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.hpp": "b486f4caaf58e55d156977644524babe65ee2258f4a47b410b2b832dbf39288f",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp": "fbddb942e9d08042dfd231d898688b45cf1d48ef5bbb83d345cdff249aacfdf1",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp": "b7ea663b194f03e25b5a7852489f57d8477ba7241beaf43b8932a9f644e2703d",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/mod.cpp": "209211040750fe7da4ba9af44963534628ae6e7a36f53dfe9d4dad7adb91a46c",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/admission.cpp": "55e7f3af2deac9d4641138be4a505de98ff740ec1e4e958a03cf96dc1b9e0aef",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/experimental_mod.cpp": "8d7d583e60d4749a334a05896e69346b41202415ef779817ce2477f636f1d52e",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/experiment_core.cpp": "3280446cb069033262e5cd8043792f5c92bb6072d7274fdb98cf99dcfde3fa25",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/experiment_core.hpp": "b7770073f04c277b3e816bbb8fd4d28dc90ea6e85b0bc8e1177998c43a7533a8",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/native_backend.cpp": "a60425f3d0e76a240e814f9b402e1ef787d2159b90d382a0859bc444dc5b6f4e",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/native_backend.hpp": "e4b8fbf1c17590aed22a4ccad881f33b95cb11c62b3747dfed41fdd2cbde75f4",
+    "CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/readonly_bridge.cpp": "8a59110076b98fb69511625e2ed03e85738ac3a6610728bfe6e4b6b2684cb08a"
+  },
+  "compiled_main_commit": "639d4780aeb15c17d9723babb5ff4c8d64c19a9d",
+  "source_ledger": {
+    "CMakeLists.txt": "39bfd897e429d7b31e8118f95b7348ab6f412d64a93a623f6ed889037dd8b655",
+    "ci/audit.py": "b0b8600382cd52e1e931de171f44538e857d277fddd7667627bd636c61db4b2f",
+    "ci/build_overlay.py": "130c87392d241f50da685abcae5c865a83c2dce5d1a2f58ade1fa2913a046346",
+    "ci/mutations.py": "c04dbb67fb06136fe4419108e5221fae83eb89c185118fe1b05d452577b4b2b4",
+    "ci/overlay-edits.json": "f1fa14c062afae2ebb898141d587eb3dd308c40dffd65c2d72a504a78e2279d9",
+    "ci/reviewed-game-imports.json": "b1a9076fa98c156f531abffdbc4144f81da46ac7cab2b04e8fbba5f4749de1a8",
+    "ci/run_windows.py": "6c0041c379eb5c29d6770ecacf5943d11bd390f7a05db9d76e045fc4e315298e",
+    "ci/trigger-isolation.json": "f5fbb059be9fa9feb826c292ebf7ef99a4226ab9264590ac081f90b137d87268",
+    "src/census_values.cpp": "2422a5519a55d445d0dcc019519a59c24504adb8272f827e419be6d3d63e93d7",
+    "src/census_values.hpp": "9105bc56a3a0a789f21050aba6a7d46b3a03b1db276887a0ef482fda7c8248ab",
+    "src/experimental_mod.cpp": "d4577acf52d468358cc0074cfb31fe31872957f660ca389b66ee04946a346da4",
+    "src/policy.cpp": "35cfb67e1898bbecb73bc25f066f11e7121e380485576508fe18fdbb05386888",
+    "src/policy.hpp": "c929e78e46adc5dbfb2981f210e0f620132d0c22cf1503b3211ab82e7e4efa3d",
+    "src/policy_values.hpp": "1cdd5e6d2692d665edde3d317ffce29756e663ff98dc652423ba3f96d83b524f",
+    "src/readonly_bridge.cpp": "4c1a25e8897318c960b9a57fa9e7bbe0cc12d6b1d8b48241d7bbe62b1cea5ab4",
+    "src/trace.cpp": "111e330a6beb533c997c8496c1b35212cf9ccdc354c8ae54de8363b490fd6d49",
+    "src/trace.hpp": "3b6177cee12afe27872902496fab329638361b9a8875e50f651d7e3adfc94edf",
+    "tests/pilot_lab.cpp": "b6463c251def870ee35f03ee677f65085b2c81077fb2f9247b3d2b0d9298cbd1",
+    "tests/preflight_reentry_baseline.cpp": "5549ba556fed83cf4dbd540f4193896ad2601ad4254e852595caa9525d530b24"
+  },
+  "dependencies": {
+    "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "bytes": 9400986,
+    "member_crc32": "70c35731",
+    "original_integrity": "CP00 reused; selected library only"
+  },
+  "source_audit": {
+    "status": "PASS_STATIC",
+    "single_request_site": true,
+    "native_admission": "NONE_ALWAYS_UNCHANGED",
+    "live_key": "bound after current precheck A; B/C context/freshness mandatory",
+    "link_XZ": 1600,
+    "other_actor_XZ": 1600,
+    "center_policy_not_collision_clearance": true,
+    "same_actor_passes": 2,
+    "additional_actor_passes": 0,
+    "logger": "own bounded records in scope; LogService drain outside scope",
+    "no_package": true,
+    "native_backend_unchanged": true
+  },
+  "lab_summaries": {
+    "pilot_safety_trace_lab": "SUMMARY pilot-new-and-affected-checks=104 failures=0 native-runtime=NOT_TESTED historical93-35-not-rerun",
+    "pilot_native_abi_lab": "PASS ABI actual official headers: ActorSpawnParams=48 ActorService=80 ServiceHeader=8 ProfileName=2 ActorId=4 ModContext*=8 opaque_ModContext_no_size_claim; create_offset=32 room_offset=64; C++20 Winx64; no native service called",
+    "pilot_baseline_reentry_reproducer": "SUMMARY focused-baseline-reproducer=2/2 expected-defects; fake-only"
+  },
+  "mutations": [
+    {
+      "mutation": "omit_XZ_guard",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL horizontal-threshold-1599.999000",
+        "FAIL large-deltaY-does-not-admit-small-XZ",
+        "FAIL stable-rejections-deduplicated"
+      ]
+    },
+    {
+      "mutation": "use_d3_instead_of_XZ",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL large-deltaY-does-not-admit-small-XZ"
+      ]
+    },
+    {
+      "mutation": "allow_session_without_permission",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL candidate-policy-never-grants-session"
+      ]
+    },
+    {
+      "mutation": "admit_truncated_census",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL census-truncated",
+        "FAIL normal-truncation-signalled"
+      ]
+    },
+    {
+      "mutation": "omit_final_C_guard",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL Link-far-then-near-phase-3",
+        "FAIL Link-position-drift-even-if-still-far-3",
+        "FAIL far-actor-motion-between-B-and-C-denied"
+      ]
+    },
+    {
+      "mutation": "critical_logs_share_normal_budget",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL critical-request-restoration-reserved-after-normal-saturation"
+      ]
+    },
+    {
+      "mutation": "relax_single_attempt_latch",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL latch-before-setter-and-never-second-request"
+      ]
+    }
+  ],
+  "binary_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+        "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+        "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "??1dBgS_GndChk@@UEAA@XZ",
+        "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+        "?dComIfGp_event_runCheck@@YAHXZ",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "?mProcID@dStage_roomControl_c@@2IA",
+        "?mStayNo@dStage_roomControl_c@@2CA",
+        "?mNextStayNo@dStage_roomControl_c@@2CA",
+        "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+        "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+        "??0dBgS_GndChk@@QEAA@XZ",
+        "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+        "?fpcLy_SetCurrentLayer@@YAXPEAUlayer_class@@@Z",
+        "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+        "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcCtIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "VCRUNTIME140.dll": [
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memset",
+        "memcpy",
+        "_CxxThrowException",
+        "__std_exception_destroy",
+        "__std_exception_copy"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "sqrt"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strncmp"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_initialize_onexit_table",
+        "_cexit",
+        "_execute_onexit_table",
+        "_initialize_narrow_environment",
+        "_configure_narrow_argv",
+        "_seh_filter_dll",
+        "_initterm_e",
+        "_initterm"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "free"
+      ],
+      "KERNEL32.dll": [
+        "DisableThreadLibraryCalls",
+        "InitializeSListHead",
+        "QueryPerformanceCounter",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "GetCurrentProcessId"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.actor",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "PASS_STATIC"
+  },
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "native_compile_units": [
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_pilot_experiment_EXPORTS -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_pilot_experiment.dir\\overlay\\src\\experiment_core.cpp.obj /FdCMakeFiles\\devf_first_pilot_experiment.dir\\ /FS -c <WORK>\\build\\overlay\\src\\experiment_core.cpp",
+      "file": "<WORK>/build/overlay/src/experiment_core.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_pilot_experiment.dir/overlay/src/experiment_core.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_pilot_experiment_EXPORTS -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_pilot_experiment.dir\\overlay\\src\\native_backend.cpp.obj /FdCMakeFiles\\devf_first_pilot_experiment.dir\\ /FS -c <WORK>\\build\\overlay\\src\\native_backend.cpp",
+      "file": "<WORK>/build/overlay/src/native_backend.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_pilot_experiment.dir/overlay/src/native_backend.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_pilot_experiment_EXPORTS -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_pilot_experiment.dir\\overlay\\src\\admission.cpp.obj /FdCMakeFiles\\devf_first_pilot_experiment.dir\\ /FS -c <WORK>\\build\\overlay\\src\\admission.cpp",
+      "file": "<WORK>/build/overlay/src/admission.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_pilot_experiment.dir/overlay/src/admission.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_pilot_experiment_EXPORTS -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_pilot_experiment.dir\\src\\experimental_mod.cpp.obj /FdCMakeFiles\\devf_first_pilot_experiment.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src\\experimental_mod.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE/src/experimental_mod.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_pilot_experiment.dir/src/experimental_mod.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_pilot_experiment_EXPORTS -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_pilot_experiment.dir\\src\\policy.cpp.obj /FdCMakeFiles\\devf_first_pilot_experiment.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src\\policy.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE/src/policy.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_pilot_experiment.dir/src/policy.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_pilot_experiment_EXPORTS -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_pilot_experiment.dir\\src\\trace.cpp.obj /FdCMakeFiles\\devf_first_pilot_experiment.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src\\trace.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE/src/trace.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_pilot_experiment.dir/src/trace.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_pilot_experiment_EXPORTS -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_pilot_experiment.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp.obj /FdCMakeFiles\\devf_first_pilot_experiment.dir\\ /FS -c <OFFICIAL>\\sdk\\src\\game_feature.cpp",
+      "file": "<OFFICIAL>/sdk/src/game_feature.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_pilot_experiment.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/.official/sdk/src/game_feature.cpp.obj"
+    }
+  ],
+  "bridge_compile_units": [
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\..\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\pilot_readonly_bridge.dir\\src\\readonly_bridge.cpp.obj /FdCMakeFiles\\pilot_readonly_bridge.dir\\pilot_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src\\readonly_bridge.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE/src/readonly_bridge.cpp",
+      "output": "<WORK>/build/CMakeFiles/pilot_readonly_bridge.dir/src/readonly_bridge.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\..\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\pilot_readonly_bridge.dir\\src\\census_values.cpp.obj /FdCMakeFiles\\pilot_readonly_bridge.dir\\pilot_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src\\census_values.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE/src/census_values.cpp",
+      "output": "<WORK>/build/CMakeFiles/pilot_readonly_bridge.dir/src/census_values.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\..\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\pilot_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\capture.cpp.obj /FdCMakeFiles\\pilot_readonly_bridge.dir\\pilot_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\capture.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp",
+      "output": "<WORK>/build/CMakeFiles/pilot_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\..\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\pilot_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\local_queries.cpp.obj /FdCMakeFiles\\pilot_readonly_bridge.dir\\pilot_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\local_queries.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp",
+      "output": "<WORK>/build/CMakeFiles/pilot_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\..\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\pilot_readonly_bridge.dir\\overlay\\src\\census_reader.cpp.obj /FdCMakeFiles\\pilot_readonly_bridge.dir\\pilot_readonly_bridge.pdb /FS -c <WORK>\\build\\overlay\\src\\census_reader.cpp",
+      "file": "<WORK>/build/overlay/src/census_reader.cpp",
+      "output": "<WORK>/build/CMakeFiles/pilot_readonly_bridge.dir/overlay/src/census_reader.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\..\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\pilot_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\core.cpp.obj /FdCMakeFiles\\pilot_readonly_bridge.dir\\pilot_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\core.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/core.cpp",
+      "output": "<WORK>/build/CMakeFiles/pilot_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/core.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\..\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\pilot_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\controller_core.cpp.obj /FdCMakeFiles\\pilot_readonly_bridge.dir\\pilot_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\controller_core.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp",
+      "output": "<WORK>/build/CMakeFiles/pilot_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<WORK>\\build\\overlay\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\src -I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\\..\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\pilot_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\room_owner_resolver.cpp.obj /FdCMakeFiles\\pilot_readonly_bridge.dir\\pilot_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\room_owner_resolver.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp",
+      "output": "<WORK>/build/CMakeFiles/pilot_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp.obj"
+    }
+  ],
+  "artifact_hashes": {
+    "devf_first_pilot_experiment.dll": {
+      "bytes": 121856,
+      "sha256": "0afa4216e335a7a5bc52ee0fd4f7536ad9434fe1266b259618b8e0e44c196357"
+    },
+    "pilot_safety_trace_lab.exe": {
+      "bytes": 131072,
+      "sha256": "8cb340355b5b76f02b4dc86b9a97abb557f661e0580ba02ff3be3112fa3a0ea0"
+    },
+    "pilot_native_abi_lab.exe": {
+      "bytes": 12288,
+      "sha256": "d9a0a019e404e9c649af715dcea2e4fc3a21712b32feb9acc878d9ae72f298e6"
+    }
+  },
+  "request_slot32_correlation": {
+    "status": "PASS_STATIC",
+    "request_preferred_va": "0x180003620",
+    "request_range_end": "0x180003760",
+    "svc_actor_preferred_va": "0x18001f0f0",
+    "exact_call": "000000018000372F: 41 FF 52 20        call        qword ptr [r10+20h]",
+    "registers_loaded_from_svc_actor": [
+      "r10"
+    ],
+    "service_offset_decimal": 32,
+    "addresses": "derived from this build only, never engine offsets/source constants"
+  },
+  "call_graph_verified": {
+    "entry": "mod_update -> link_anchor -> Controller.attempt -> LayerScope -> NativeBackend.request -> svc_actor.create_actor slot32; Admission NONE blocks entry BEFORE native reads",
+    "creation_code_present": true,
+    "services": "Host/Log/Game/Actor",
+    "real_setter_import": true,
+    "request_queue_visitor_import": true,
+    "native_units": 7,
+    "readonly_bridge_units": 8,
+    "disassembly_slot32_call": true,
+    "no_fake_in_module": true,
+    "disassembly_log": "module-disassembly.log",
+    "link_map_log": "module-map.log"
+  },
+  "official_source_unchanged": true,
+  "msvc": "A2_FIRST_PILOT_NATIVE_ABI_MSVC_LINK_PASS",
+  "binary": "A2_FIRST_PILOT_BINARY_AUDIT_PASS",
+  "ended_utc": "2026-10-13T15:49:37.748792+00:00"
+}

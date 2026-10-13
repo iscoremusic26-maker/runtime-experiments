@@ -1,0 +1,121 @@
+PASS native-provider-session-denied-with-zero-reads-setters-requests
+PASS candidate-policy-never-grants-session
+PASS positive-live-context-single-request
+PASS preset-float32-angle-parameters-unchanged
+PASS key-bound-from-fresh-A-not-historical-ids
+PASS explicit-key-mismatch-not-bypassed
+PASS horizontal-threshold-1599.999000
+PASS horizontal-threshold-1600.000000
+PASS horizontal-threshold-1600.001000
+PASS large-deltaY-does-not-admit-small-XZ
+PASS metrics-XZ-d3-deltaY-independent
+PASS link-absent
+PASS link-profile-unchecked
+PASS link-init-incomplete
+PASS link-actorINIT-absent
+PASS link-owner-invalid
+PASS link-owner-mismatch
+PASS link-room-wrong
+PASS link-ID-unknown
+PASS link-NaN
+PASS link-Inf
+PASS link-speed-unknown
+PASS link-speed-nonzero
+PASS link-forward-speed
+PASS census-incomplete
+PASS census-truncated
+PASS census-duplicate-flag
+PASS census-empty
+PASS census-count-mismatch
+PASS BG-unavailable
+PASS BG-truncated
+PASS BG-near-C
+PASS water-hit
+PASS water-unavailable
+PASS ground-poly
+PASS ground-Y
+PASS ground-room
+PASS ground-code
+PASS ground-special
+PASS ground-moving
+PASS ground-BG-not-zero
+PASS resources-unreadable
+PASS E_OC-unregistered
+PASS E_ocb-unregistered
+PASS event
+PASS next-room
+PASS capture-not-coherent
+PASS capture-stamp-mismatch
+PASS unidentified-far-actor
+PASS far-actor-NaN
+PASS actor-with-duplicate-ID
+PASS other-actor-XZ-200.000000
+PASS other-actor-XZ-1599.000000
+PASS other-actor-XZ-1600.000000
+PASS other-actor-XZ-5000.000000
+PASS Link-far-then-near-phase-2
+PASS Link-far-then-near-phase-3
+PASS Link-position-drift-even-if-still-far-2
+PASS Link-position-drift-even-if-still-far-3
+PASS reused-capture-sequence-denied-before-latch
+PASS mixed-update-captures-denied
+PASS far-actor-motion-between-B-and-C-denied
+PASS scene-child-drift-phase-2
+PASS scene-child-drift-phase-3
+PASS candidate-nonexact-or-nonfinite-denied
+PASS candidate-nonexact-or-nonfinite-denied
+PASS candidate-nonexact-or-nonfinite-denied
+PASS candidate-nonexact-or-nonfinite-denied
+PASS latch-before-setter-and-never-second-request
+PASS incremental-restore-error-0
+PASS incremental-restore-error-1
+PASS incremental-restore-error-2
+PASS incremental-restore-error-3
+PASS previous-not-root-and-not-Link-owner-restored
+PASS reentry-during-preflight-cannot-revive-STOP-1
+PASS reentry-during-preflight-cannot-revive-STOP-2
+PASS reentry-sticky-scope-restored
+PASS failed-restore-no-root-fallback-no-retry
+PASS own-pending-queue-not-conflict
+PASS ready-needs-identity-phase-owner-room
+PASS early-removal-after-ready-stop
+PASS incremental-ID-monitor-failure-0
+PASS incremental-ID-monitor-failure-1
+PASS incremental-ID-monitor-failure-2
+PASS incremental-ID-monitor-failure-3
+PASS incremental-ID-monitor-failure-4
+PASS late-actor-after-timeout-not-rearmed
+PASS exact-critical-event-order-positive
+PASS all-lines-parseable-prefix-render-not-tested
+PASS trace-cannot-alter-latch-or-restore
+SYNTHETIC_LAB DEVF_PILOT event=LOCATION_POLICY_PASS state=BLOCKED reason=None policy_reason=NONE event_seq=1 update_index=1 capture_sequence=1 attempt_id=0 request_id=4294967295 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=0 measurement=OBSERVED_SCALARS link_id=105 link_profile=253 link_room=3 link_owner=5 link_xz=2000.000000 link_d3=2000.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=APPROVED_BY_POLICY candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=FIRST_PRECHECK_PASS state=BLOCKED reason=None policy_reason=NONE event_seq=2 update_index=1 capture_sequence=1 attempt_id=0 request_id=4294967295 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=0 measurement=OBSERVED_SCALARS link_id=105 link_profile=253 link_room=3 link_owner=5 link_xz=2000.000000 link_d3=2000.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=APPROVED_BY_POLICY candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=FRESH_PRECHECK_PASS state=BLOCKED reason=None policy_reason=NONE event_seq=3 update_index=1 capture_sequence=2 attempt_id=0 request_id=4294967295 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=0 measurement=OBSERVED_SCALARS link_id=105 link_profile=253 link_room=3 link_owner=5 link_xz=2000.000000 link_d3=2000.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=APPROVED_BY_POLICY candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=ATTEMPT_CONSUMED state=ATTEMPT_CONSUMED reason=None policy_reason=NONE event_seq=4 update_index=1 capture_sequence=2 attempt_id=1 request_id=4294967295 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=0 measurement=OBSERVED_SCALARS link_id=105 link_profile=253 link_room=3 link_owner=5 link_xz=2000.000000 link_d3=2000.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=APPROVED_BY_POLICY candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=LAYER_SELECTED state=ATTEMPT_CONSUMED reason=None policy_reason=NONE event_seq=5 update_index=1 capture_sequence=2 attempt_id=1 request_id=4294967295 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=0 measurement=OBSERVED_SCALARS link_id=105 link_profile=253 link_room=3 link_owner=5 link_xz=2000.000000 link_d3=2000.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=APPROVED_BY_POLICY candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=CREATE_REQUEST_BEGIN state=ATTEMPT_CONSUMED reason=None policy_reason=NONE event_seq=6 update_index=1 capture_sequence=3 attempt_id=1 request_id=4294967295 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=0 measurement=OBSERVED_SCALARS link_id=105 link_profile=253 link_room=3 link_owner=5 link_xz=2000.000000 link_d3=2000.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=APPROVED_BY_POLICY candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=CREATE_REQUEST_RESULT state=ATTEMPT_CONSUMED reason=None policy_reason=NONE event_seq=7 update_index=1 capture_sequence=3 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=3 mod_result=0 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=0 measurement=OBSERVED_SCALARS link_id=105 link_profile=253 link_room=3 link_owner=5 link_xz=2000.000000 link_d3=2000.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=APPROVED_BY_POLICY candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=LAYER_RESTORE_OK state=REQUESTED reason=None policy_reason=NONE event_seq=8 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=0 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=NO_ADMISSION_PROOF candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=REQUESTED state=REQUESTED reason=None policy_reason=NONE event_seq=9 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=-1 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=1 polls=0 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=REQUEST_QUEUED candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=PENDING_PHASE state=REQUESTED reason=None policy_reason=NONE event_seq=10 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=-1 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=1 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=UNVALIDATED_PHASE_SCALARS candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=PENDING state=PENDING reason=None policy_reason=NONE event_seq=11 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=-1 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=1 polls=1 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=REQUEST_QUEUED candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=PENDING_PHASE state=PENDING reason=None policy_reason=NONE event_seq=12 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=3 mod_result=-1 phase=2 actor_profile=510 actor_owner=6 actor_INIT=0 queue=0 polls=2 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=UNVALIDATED_PHASE_SCALARS candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=ACTOR_READY_OBSERVED state=ACTOR_READY_OBSERVED reason=None policy_reason=NONE event_seq=13 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=3 mod_result=-1 phase=2 actor_profile=510 actor_owner=6 actor_INIT=1 queue=0 polls=2 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=ACTOR_INITIALIZED candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=SHUTDOWN state=ACTOR_READY_OBSERVED reason=None policy_reason=NONE event_seq=14 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=2 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=NO_ADMISSION_PROOF candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=STOP_SESSION state=STOP_SESSION reason=Shutdown policy_reason=NONE event_seq=15 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=2 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=NO_ADMISSION_PROOF candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+SYNTHETIC_LAB DEVF_PILOT event=FULL_EXIT_REQUIRED_ON_UNCERTAINTY state=STOP_SESSION reason=Shutdown policy_reason=NONE event_seq=16 update_index=1 capture_sequence=0 attempt_id=1 request_id=200 node=102 child=6 previous=0 room=3 mod_result=-1 phase=-1 actor_profile=4294967295 actor_owner=4294967295 actor_INIT=0 queue=0 polls=2 measurement=NOT_VERIFIED link_id=4294967295 link_profile=4294967295 link_room=-1 link_owner=4294967295 link_xz=0.000000 link_d3=0.000000 link_dy=0.000000 offender_id=4294967295 offender_profile=4294967295 offender_room=-1 offender_owner=4294967295 offender_xz=0.000000 evidence=NO_ADMISSION_PROOF candidate=LOCATION_CANDIDATE_CONDITIONAL location_safe=UNVERIFIED resource_ready=NOT_VERIFIED render=NOT_TESTED profile=510 parameters=4294967295 argument=-1 C_f32=-4806.7343750,-6729.4809570,65135.8281250 suppressed=0 sink_failures=0
+PASS stable-rejections-deduplicated
+PASS normal-truncation-signalled
+PASS critical-request-restoration-reserved-after-normal-saturation
+PASS trace-total-budget-finite
+PASS sink-failure-does-not-change-controller-0
+PASS sink-failure-does-not-change-controller-1
+PASS MOD_ERROR-traced-with-returned-ID
+PASS exact-ModResult-and-ID-in-result-record
+PASS failed-restore-record-and-full-exit-instruction
+PASS ready-monitor-budget-transition-traced
+PASS same-image-shutdown-does-not-reset-attempt
+PASS recursive-sink-drain-bounded
+PASS same-visitor-scalar-collector-detects-ID-duplicates
+PASS same-visitor-scalar-collector-cap256
+SUMMARY pilot-new-and-affected-checks=104 failures=0 native-runtime=NOT_TESTED historical93-35-not-rerun

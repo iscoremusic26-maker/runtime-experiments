@@ -1,0 +1,9 @@
+{
+  "root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "tracked_official_source_unchanged": true,
+  "host_exe": "not modified, built or run",
+  "only_new_public_fields": "fopAc_ac_c.speed and speedF after membership/init2/actorINIT",
+  "actor_header_sha256": "45cbac3b60ea9c47d9583d78f813c69ae38437a7c9b2ea28f1c9c3e26392197c",
+  "SDK_actor_header_sha256": "77c180571664dbaa07026bcbf073c0d459cb6e0e7264ddbca6d18770081082e8"
+}

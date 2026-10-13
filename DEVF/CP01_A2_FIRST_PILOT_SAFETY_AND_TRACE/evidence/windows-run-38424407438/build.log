@@ -1,0 +1,69 @@
+[1/29] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\src\census_values.cpp.obj
+[2/29] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\capture.cpp.obj
+[3/29] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\src\readonly_bridge.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+[4/29] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\local_queries.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[5/29] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G2_READONLY_PACKAGE\src\core.cpp.obj
+[6/29] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\overlay\src\census_reader.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[7/29] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\controller_core.cpp.obj
+[8/29] Building CXX object CMakeFiles\devf_first_pilot_experiment.dir\overlay\src\experiment_core.cpp.obj
+[9/29] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\room_owner_resolver.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[10/29] Linking CXX static library pilot_readonly_bridge.lib
+[11/29] Building CXX object CMakeFiles\devf_first_pilot_experiment.dir\overlay\src\admission.cpp.obj
+[12/29] Building CXX object CMakeFiles\devf_first_pilot_experiment.dir\overlay\src\native_backend.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[13/29] Building CXX object CMakeFiles\devf_first_pilot_experiment.dir\src\experimental_mod.cpp.obj
+[14/29] Building CXX object CMakeFiles\devf_first_pilot_experiment.dir\src\policy.cpp.obj
+[15/29] Building CXX object CMakeFiles\devf_first_pilot_experiment.dir\src\trace.cpp.obj
+[16/29] Building CXX object CMakeFiles\devf_first_pilot_experiment.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\.official\sdk\src\game_feature.cpp.obj
+[17/29] Building CXX object CMakeFiles\pilot_safety_trace_lab.dir\overlay\src\experiment_core.cpp.obj
+[18/29] Building CXX object CMakeFiles\pilot_safety_trace_lab.dir\overlay\src\admission.cpp.obj
+[19/29] Building CXX object CMakeFiles\pilot_safety_trace_lab.dir\src\policy.cpp.obj
+[20/29] Building CXX object CMakeFiles\pilot_safety_trace_lab.dir\src\trace.cpp.obj
+[21/29] Building CXX object CMakeFiles\pilot_safety_trace_lab.dir\src\census_values.cpp.obj
+[22/29] Building CXX object CMakeFiles\pilot_safety_trace_lab.dir\tests\pilot_lab.cpp.obj
+[23/29] Building CXX object CMakeFiles\pilot_native_abi_lab.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE\tests\abi_lab.cpp.obj
+[24/29] Building CXX object CMakeFiles\pilot_baseline_reentry_reproducer.dir\tests\preflight_reentry_baseline.cpp.obj
+[25/29] Building CXX object CMakeFiles\pilot_baseline_reentry_reproducer.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE\src\experiment_core.cpp.obj
+[26/29] Linking CXX executable pilot_safety_trace_lab.exe
+[27/29] Linking CXX shared module devf_first_pilot_experiment.dll
+[28/29] Linking CXX executable pilot_native_abi_lab.exe
+[29/29] Linking CXX executable pilot_baseline_reentry_reproducer.exe
