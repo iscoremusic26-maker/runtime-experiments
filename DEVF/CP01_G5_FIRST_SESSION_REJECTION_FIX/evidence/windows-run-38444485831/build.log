@@ -1,0 +1,101 @@
+[1/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\src\census_values.cpp.obj
+[2/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\capture.cpp.obj
+[3/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\overlay\src\readonly_bridge.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+[4/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\local_queries.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[5/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\overlay\src\census_reader.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[6/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G2_READONLY_PACKAGE\src\core.cpp.obj
+[7/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\controller_core.cpp.obj
+[8/24] Building CXX object CMakeFiles\devf_g5_rejection_diagnostic.dir\src\diagnostic_mod.cpp.obj
+FAILED: [code=2] CMakeFiles/devf_g5_rejection_diagnostic.dir/src/diagnostic_mod.cpp.obj 
+"C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\cl.exe"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g5_rejection_diagnostic_EXPORTS -I<WORK>\build\overlay\src -I<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src -I<OFFICIAL>\sdk\include -I<OFFICIAL>\include -I<OFFICIAL>\assets\GZ2E01 -I<OFFICIAL>\libs\JSystem\include -I<OFFICIAL>\extern\aurora\include\dolphin -I<OFFICIAL>\extern\aurora\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /GL- /FIglobal.h /showIncludes /FoCMakeFiles\devf_g5_rejection_diagnostic.dir\src\diagnostic_mod.cpp.obj /FdCMakeFiles\devf_g5_rejection_diagnostic.dir\ /FS -c <WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\diagnostic_mod.cpp
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(7): error C2374: 'devf::pilot::unknown': redefinition; multiple initialization
+<WORK>\build\overlay\src\policy_values.hpp(7): note: see declaration of 'devf::pilot::unknown'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(7): error C2086: 'const devf::pilot::Id devf::pilot::unknown': redefinition
+<WORK>\build\overlay\src\policy_values.hpp(7): note: see declaration of 'devf::pilot::unknown'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(8): error C2374: 'devf::pilot::actor_cap': redefinition; multiple initialization
+<WORK>\build\overlay\src\policy_values.hpp(8): note: see declaration of 'devf::pilot::actor_cap'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(8): error C2086: 'const unsigned int devf::pilot::actor_cap': redefinition
+<WORK>\build\overlay\src\policy_values.hpp(8): note: see declaration of 'devf::pilot::actor_cap'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(9): error C2374: 'devf::pilot::link_min_xz': redefinition; multiple initialization
+<WORK>\build\overlay\src\policy_values.hpp(9): note: see declaration of 'devf::pilot::link_min_xz'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(9): error C2086: 'const double devf::pilot::link_min_xz': redefinition
+<WORK>\build\overlay\src\policy_values.hpp(9): note: see declaration of 'devf::pilot::link_min_xz'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(9): error C2374: 'devf::pilot::actor_min_xz': redefinition; multiple initialization
+<WORK>\build\overlay\src\policy_values.hpp(9): note: see declaration of 'devf::pilot::actor_min_xz'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(9): error C2086: 'const double devf::pilot::actor_min_xz': redefinition
+<WORK>\build\overlay\src\policy_values.hpp(9): note: see declaration of 'devf::pilot::actor_min_xz'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(11): error C2374: 'devf::pilot::spawn': redefinition; multiple initialization
+<WORK>\build\overlay\src\policy_values.hpp(11): note: see declaration of 'devf::pilot::spawn'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(11): error C2086: 'const std::array<double,3> devf::pilot::spawn': redefinition
+<WORK>\build\overlay\src\policy_values.hpp(11): note: see declaration of 'devf::pilot::spawn'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(12): error C2011: 'devf::pilot::ContextStamp': 'struct' type redefinition
+<WORK>\build\overlay\src\policy_values.hpp(12): note: see declaration of 'devf::pilot::ContextStamp'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(16): error C2011: 'devf::pilot::ActorSample': 'struct' type redefinition
+<WORK>\build\overlay\src\policy_values.hpp(16): note: see declaration of 'devf::pilot::ActorSample'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(21): error C2011: 'devf::pilot::GroundSample': 'struct' type redefinition
+<WORK>\build\overlay\src\policy_values.hpp(21): note: see declaration of 'devf::pilot::GroundSample'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(24): error C2011: 'devf::pilot::CaptureFacts': 'struct' type redefinition
+<WORK>\build\overlay\src\policy_values.hpp(24): note: see declaration of 'devf::pilot::CaptureFacts'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(32): error C2011: 'devf::pilot::GuardReason': 'enum' type redefinition
+<WORK>\build\overlay\src\policy_values.hpp(32): note: see declaration of 'devf::pilot::GuardReason'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(35): error C2011: 'devf::pilot::Metrics': 'struct' type redefinition
+<WORK>\build\overlay\src\policy_values.hpp(35): note: see declaration of 'devf::pilot::Metrics'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\policy_values.hpp(36): error C2011: 'devf::pilot::Decision': 'struct' type redefinition
+<WORK>\build\overlay\src\policy_values.hpp(36): note: see declaration of 'devf::pilot::Decision'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\temporal.hpp(8): error C2079: 'devf::pilot::Temporal::previous_' uses undefined struct 'devf::pilot::CaptureFacts'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\temporal.hpp(8): error C2439: 'devf::pilot::Temporal::previous_': member could not be initialized
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\temporal.hpp(8): note: see declaration of 'devf::pilot::Temporal::previous_'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(19): error C2079: 'devf::pilot::Record::context' uses undefined struct 'devf::pilot::ContextStamp'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): error C2079: 'devf::pilot::Record::link' uses undefined struct 'devf::pilot::Metrics'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): error C2079: 'devf::pilot::Record::offender_distance' uses undefined struct 'devf::pilot::Metrics'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): error C2079: 'devf::pilot::Record::offender' uses undefined struct 'devf::pilot::ActorSample'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(15): error C2027: use of undefined type 'devf::pilot::GuardReason'
+<WORK>\build\overlay\src\policy_values.hpp(32): note: see declaration of 'devf::pilot::GuardReason'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(15): error C2065: 'None': undeclared identifier
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(19): error C2439: 'devf::pilot::Record::context': member could not be initialized
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(19): note: see declaration of 'devf::pilot::Record::context'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): error C2439: 'devf::pilot::Record::link': member could not be initialized
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): note: see declaration of 'devf::pilot::Record::link'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): error C2439: 'devf::pilot::Record::offender_distance': member could not be initialized
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): note: see declaration of 'devf::pilot::Record::offender_distance'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): error C2439: 'devf::pilot::Record::offender': member could not be initialized
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(22): note: see declaration of 'devf::pilot::Record::offender'
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(29): error C2512: 'devf::pilot::Record': no appropriate default constructor available
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(29): note: Invalid aggregate initialization
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(31): error C2512: 'devf::pilot::Record': no appropriate default constructor available
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(31): note: Invalid aggregate initialization
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(32): error C2512: 'devf::pilot::Record': no appropriate default constructor available
+<WORKSPACE>\DEVF\CP01_G5_FIRST_SESSION_REJECTION_FIX\src\trace.hpp(32): note: Invalid aggregate initialization
+[9/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\room_owner_resolver.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+ninja: build stopped: subcommand failed.

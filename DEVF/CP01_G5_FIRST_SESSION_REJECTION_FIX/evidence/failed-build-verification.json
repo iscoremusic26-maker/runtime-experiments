@@ -1,0 +1,12 @@
+{
+  "run": 38444485831,
+  "job": 115459196190,
+  "artifact": 11836564862,
+  "zip_bytes": 11499,
+  "zip_sha256": "1e1859b5a1292f65860bc17748e106623cc7416ae64dd68ce9ca97cc3862b554",
+  "CRC": "PASS",
+  "manifest_files": 9,
+  "cause": "Own generated policy headers duplicated across two paths despite pragma once. Canonical forwarding includes replace copies; no SDK/host modification.",
+  "lab_executed": false,
+  "package_uploaded": false
+}

@@ -1,0 +1,107 @@
+{
+  "status": "BLOCKED",
+  "source_commit": "c78dc590738c660a333830833f84994f8dfd33c7",
+  "ci_head": "f0068e19c2df5b24190297e6291c0fecfcc84a85",
+  "run_id": "38444485831",
+  "started_utc": "2026-10-13T18:10:37.369979+00:00",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 7.531,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 3.453,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\DEVF\\CP01_G5_FIRST_SESSION_REJECTION_FIX",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 20.234,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "g5_rejection_lab",
+        "devf_g5_rejection_diagnostic",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 12.547,
+      "exit": 2
+    }
+  ],
+  "game_executed": false,
+  "dll_loaded": false,
+  "host_built": false,
+  "creation_capable": false,
+  "mode": "DISARMED_READ_ONLY_DIAGNOSTIC",
+  "next_G5_authorized": false,
+  "CP02": "NO_GO",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_ledger": {
+    "CMakeLists.txt": "f3d224dc3682eae5db5801d8fea6a4cbc43b2be63d5bc106f8369061e3b45f8b",
+    "mod.json": "41985bbc85e02fa4b3ff78ed36ab7d1afbd22c8f5a8a35a235cb9817fd8e803c",
+    "SOURCE_MANIFEST.json": "eea31e9e4dc7ece930ddcf1f6473340b8818134201a6345014662c97cfa954ad",
+    "ci/audit.py": "8d7d62d7275fd8cb668a64ebffdd2a868dcd6b2c7c86322883a4c40e52ed76e9",
+    "ci/mutations.py": "3a22ee67190b8daf10c23347d64a0aa1415aa9f43bc7026008926f20b73ce54b",
+    "ci/parse_real_log.py": "5c796e82d956869d6fdd743474e7b6ad8c671a3b98d177e74d7eff5bc732e17d",
+    "ci/prepare.py": "cdf1e7189791abaf8c976379b906117616072aa13cbc0766bba27921a3cbecb5",
+    "ci/run_windows.py": "5b741f955861e26ee8c4e99a9f4b26852cb46748357eb727dd89e0528a14b6de",
+    "ci/verify_package.py": "1b66fdb334135f136f47f5fe7edc32fa32be1c177272d8046873933a5907007d",
+    "ci/windows-diagnostic.yml": "8fdf5633a1ac0ef79b71bf7e736dd0f28f03baa803868d8f74e865058e055caf",
+    "ci/zip_negatives.py": "4f95cbe2339a4f8167ebd2145a10b81f815c428def473b6a6fd88ff4a0c91d9c",
+    "src/census_values.cpp": "bc8c7eaf888875fbba67bd3e97e16387c2f7c79df89d89da69327bdbac104ea3",
+    "src/census_values.hpp": "2caa8a01c8202249db11c287f7870b7d98af05c9928f4960fa15ce66698194a8",
+    "src/diagnostic_mod.cpp": "4bdd362d25a9bba8e6b90809b66b77afb1434ce773e0fd24402ad28be460c19a",
+    "src/policy.cpp": "d9c03b2b2ad9f8d43936cbf58ad981ac5376a58ec4286c142ebd6fb84d808850",
+    "src/policy.hpp": "d6b5deb486adc053a86aa0935e878d676b9caf393fbdd05624cb27356bbd1c1e",
+    "src/policy_values.hpp": "12149fbee7af33e5a4b61da53528efc35a7cf26c4ad9c493967f81ae153f220b",
+    "src/temporal.cpp": "cddd25b7df02bfcbe8be98849b6e00aeeb51884b550e1f8384f95e74dc23e419",
+    "src/temporal.hpp": "3656953d1fd3c767f1cd93d8318e610a344387ec51592bf5cc66e084dfae9ecd",
+    "src/trace.cpp": "6981f02041ee4518b6e944d503bbe8c836280d97189d644668174e87e3ef8abc",
+    "src/trace.hpp": "fa98f709e30a752630d67631afe350b2f2bcd837c1c89e37e83a5016744b5ca7",
+    "tests/g5_lab.cpp": "aab12663c8bfed24e52379ff73c60b918095080140d32add989f1a8688480c8a"
+  },
+  "dependencies": {
+    "SDK": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "Aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "lib_bytes": 9400986,
+    "lib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "lib_CRC32": "70c35731"
+  },
+  "ended_utc": "2026-10-13T18:11:21.310025+00:00"
+}

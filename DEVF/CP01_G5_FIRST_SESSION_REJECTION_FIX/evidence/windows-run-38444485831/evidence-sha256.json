@@ -1,0 +1,38 @@
+{
+  "build.log": {
+    "bytes": 13874,
+    "sha256": "9ffc635dd27563156be375eacd1c59b9fc704f07aefe16a5e671f8368894cbb7"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 1011,
+    "sha256": "8d6a46c43cb468fd3bf66577493875a6be07658d4c38ff622447a35e780f3455"
+  },
+  "g5-overlay-diff.log": {
+    "bytes": 870,
+    "sha256": "1cad60a90c3b6b7ffef1cfc6ce82684937cedd0b4aff68be5d556d3e211073de"
+  },
+  "g5-overlay-ledger.json": {
+    "bytes": 343,
+    "sha256": "fafeb9815995a90eab0a2ee1a5de63faa16f8454d5df8c7d6ee53584ee4f2eeb"
+  },
+  "overlay-diff.log": {
+    "bytes": 12842,
+    "sha256": "c462d8d7eeed2e5c7deddd8f7ce3ab41e9f7e64d78ca928307eabaa87d5f4544"
+  },
+  "overlay-ledger.json": {
+    "bytes": 2419,
+    "sha256": "fb9214ca118aa7f6b5bc71cd895d8dd8d76054374316936c9bf14f7321e0d176"
+  },
+  "result.json": {
+    "bytes": 4195,
+    "sha256": "af1c65d4148e4a7f53b31610a8810f33fb8f306cc8f3720e6b860bafbd1ff973"
+  }
+}
