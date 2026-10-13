@@ -1,0 +1,54 @@
+{
+  "status": "PASS_STATIC",
+  "run": 38434647284,
+  "all_symbol_sets_identical": true,
+  "game_imports": 32,
+  "diff": {
+    "dusklight.exe": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": true
+    },
+    "api-ms-win-crt-runtime-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": true
+    },
+    "VCRUNTIME140.dll": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": false
+    },
+    "api-ms-win-crt-math-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": false
+    },
+    "VCRUNTIME140_1.dll": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": false
+    },
+    "api-ms-win-crt-heap-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": false
+    },
+    "KERNEL32.dll": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": false
+    },
+    "api-ms-win-crt-stdio-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": false
+    },
+    "api-ms-win-crt-string-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "ordering_changed": false
+    }
+  },
+  "cause": "Official add_mod changes target/link dependency order. Only import table ordering changed, not DLL names or exact symbols. Original comparator used ordered list equality; new comparator sorts all DLL symbol sets."
+}

@@ -1,0 +1,18 @@
+{
+  "run_id": 38434647284,
+  "job_id": 115425362079,
+  "source_commit": "99b523c790ceecc747e385346e3419af4959e2f7",
+  "ci_head": "b2d2c1a87f5360670237bac85fc832c67fd6edb6",
+  "artifact_id": 11832825995,
+  "zip_bytes": 128566,
+  "zip_sha256": "4318a9d18fbefea026fdd79d6f5d92e27f31d727b2787e83b8ce0f9ffb7a3c47",
+  "CRC": "PASS",
+  "manifest_files": 22,
+  "new_checks": 46,
+  "failures": 0,
+  "mutants_killed": 4,
+  "negative_packages_passed": 23,
+  "dependency_drift_negatives_passed": 3,
+  "failed_phase": "Ordered imports comparison, exact sets unchanged. No source/game/API change.",
+  "active_package_uploaded": false
+}

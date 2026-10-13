@@ -1,0 +1,31 @@
+--- pilot/trace.hpp
++++ active/trace.hpp
+@@ -8,7 +8,7 @@
+  PreflightReject,LocationPolicyPass,LocationPolicyFail,FirstPrecheckPass,FreshPrecheckPass,
+  AttemptConsumed,LayerSelected,CreateRequestBegin,CreateRequestResult,LayerRestoreOk,RestoreFailed,
+  Requested,Pending,PendingPhase,ActorReadyObserved,ReadyMonitorBudgetExhausted,StopSession,
+- FullExitRequired,Shutdown,LogBudgetExhausted,LogSinkFailed };
++ FullExitRequired,Shutdown,LogBudgetExhausted,LogSinkFailed,PackageProviderArmed };
+ const char* event_name(Event) noexcept;
+ struct Record {
+  Event event=Event::ModuleInit;unsigned state=0,reason=0;GuardReason guard=GuardReason::None;
+@@ -24,7 +24,7 @@
+ private:
+  std::array<Record,capacity> records_{};unsigned size_=0,read_=0,normal_=0,critical_=0,terminal_=0,suppressed_=0,failed_=0;
+  std::uint64_t update_=0,sequence_=0;bool marker_=false,sink_marker_=false,draining_=false;
+- std::array<Record,26> last_{};std::array<bool,26> seen_{};
++ std::array<Record,27> last_{};std::array<bool,27> seen_{};
+  bool append(Record,bool deduplicate) noexcept;
+  void budget_marker() noexcept;
+ public:
+--- pilot/trace.cpp
++++ active/trace.cpp
+@@ -7,7 +7,7 @@
+ const char* event_name(Event e) noexcept {
+  switch(e){
+ #define E(x,s) case Event::x:return s
+- E(ModuleInit,"MODULE_INIT");E(AbiVerified,"ABI_VERIFIED");E(AbiFailed,"ABI_FAILED");
++ E(PackageProviderArmed,"PACKAGE_PROVIDER_ARMED_NOT_EXECUTION_PERMISSION");E(ModuleInit,"MODULE_INIT");E(AbiVerified,"ABI_VERIFIED");E(AbiFailed,"ABI_FAILED");
+  E(SessionAdmissionDenied,"SESSION_ADMISSION_DENIED");E(SessionGateDenied,"SESSION_GATE_DENIED");
+  E(PreflightReject,"PREFLIGHT_REJECT");E(LocationPolicyPass,"LOCATION_POLICY_PASS");E(LocationPolicyFail,"LOCATION_POLICY_FAIL");
+  E(FirstPrecheckPass,"FIRST_PRECHECK_PASS");E(FreshPrecheckPass,"FRESH_PRECHECK_PASS");E(AttemptConsumed,"ATTEMPT_CONSUMED");

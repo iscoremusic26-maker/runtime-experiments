@@ -1,0 +1,64 @@
+[1/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\src\census_values.cpp.obj
+[2/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\capture.cpp.obj
+[3/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\src\readonly_bridge.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+[4/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\local_queries.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[5/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\overlay\src\census_reader.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[6/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G2_READONLY_PACKAGE\src\core.cpp.obj
+[7/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\controller_core.cpp.obj
+[8/24] Building CXX object CMakeFiles\devf_first_eoc_active.dir\overlay\src\experiment_core.cpp.obj
+[9/24] Building CXX object CMakeFiles\pilot_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\room_owner_resolver.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[10/24] Linking CXX static library pilot_readonly_bridge.lib
+[11/24] Building CXX object CMakeFiles\devf_first_eoc_active.dir\src\active_admission.cpp.obj
+[12/24] Building CXX object CMakeFiles\devf_first_eoc_active.dir\overlay\src\native_backend.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[13/24] Building CXX object CMakeFiles\devf_first_eoc_active.dir\src\active_mod.cpp.obj
+[14/24] Building CXX object CMakeFiles\devf_first_eoc_active.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\src\policy.cpp.obj
+[15/24] Building CXX object CMakeFiles\devf_first_eoc_active.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\.official\sdk\src\game_feature.cpp.obj
+[16/24] Building CXX object CMakeFiles\devf_first_eoc_active.dir\active_trace\trace.cpp.obj
+[17/24] Building CXX object CMakeFiles\active_provider_lab.dir\overlay\src\experiment_core.cpp.obj
+[18/24] Building CXX object CMakeFiles\active_provider_lab.dir\src\active_admission.cpp.obj
+[19/24] Building CXX object CMakeFiles\active_provider_lab.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\src\policy.cpp.obj
+[20/24] Building CXX object CMakeFiles\active_provider_lab.dir\active_trace\trace.cpp.obj
+[21/24] Building CXX object CMakeFiles\active_provider_lab.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_FIRST_PILOT_SAFETY_AND_TRACE\src\census_values.cpp.obj
+[22/24] Building CXX object CMakeFiles\active_provider_lab.dir\tests\provider_lab.cpp.obj
+[23/24] Linking CXX executable active_provider_lab.exe
+[24/24] Linking CXX shared module devf_first_eoc_active.dll

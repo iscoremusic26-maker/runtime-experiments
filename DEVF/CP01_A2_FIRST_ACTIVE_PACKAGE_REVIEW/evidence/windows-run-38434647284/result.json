@@ -1,0 +1,456 @@
+{
+  "status": "BLOCKED",
+  "started_utc": "2026-10-13T16:57:48.475864+00:00",
+  "source_commit": "99b523c790ceecc747e385346e3419af4959e2f7",
+  "run_id": "38434647284",
+  "run_attempt": "1",
+  "ci_head": "b2d2c1a87f5360670237bac85fc832c67fd6edb6",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 4.781,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 1.594,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\DEVF\\CP01_A2_FIRST_ACTIVE_PACKAGE_REVIEW",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 28.891,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_first_eoc_active",
+        "active_provider_lab",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 40.485,
+      "exit": 0
+    },
+    {
+      "label": "active-provider-lab",
+      "command": [
+        "<WORK>\\build\\active_provider_lab.exe"
+      ],
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "module-headers",
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_first_eoc_active.dll"
+      ],
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_first_eoc_active.dll"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_first_eoc_active.dll"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "module-disassembly",
+      "command": [
+        "dumpbin",
+        "/disasm",
+        "<WORK>\\build\\devf_first_eoc_active.dll"
+      ],
+      "seconds": 0.187,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "installed": false,
+  "dll_loaded": false,
+  "host_built": false,
+  "runtime_tested": false,
+  "creation_capable": true,
+  "provider": "TECHNICALLY_ARMED_FIXED_C_E_OC",
+  "execution_authorized": false,
+  "G5": "NO_GO",
+  "CP02": "NO_GO",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_ledger": {
+    "CMakeLists.txt": "ba9d89aa4fe66f73af70c112ac8031d7917941213ba0779e4d0dcca0c03e4961",
+    "mod.json": "b14a16f582adf2dd3d8a1f38900345b83b8ab6747f23df2e11afd6ff9b8a8f67",
+    "SOURCE_AUTHORITY.json": "451c837c09191427442ea55e0dd88d66cd375e6f1d151735b2409b497412ef6c",
+    "ci/audit.py": "090310b208aac569f2ff9b007b5b3afbc556366b4c7fdb1c0af40e60f24c6835",
+    "ci/mutations.py": "f5824de168d2406fefa62cd655e2e5d2883b2b5bdc8606e83be351a99964145b",
+    "ci/negative_packages.py": "d4c74e426eba8b99f6d62adccd606bc2f18d100da959b812ba517275d21b0299",
+    "ci/prepare_trace.py": "885679498a6f2a571569bee8f3c1b99f7793b08e2aeb5f3926ef577504660f9e",
+    "ci/run_windows.py": "fe497b7ad74db7cee63e6cebf8b83c64a68383f94be43c9973c4937caa99e8e4",
+    "ci/verify_download.py": "d9ac16ca93a72abbd092a95f9a4c60deeb43975832c3ed0db1d65b6c3ac7042e",
+    "ci/verify_package.py": "511b3dc0a4f9548d38d3a1a24af054b4f5d293f1a0686e1b78a608c89f3d5b90",
+    "ci/windows-package.yml": "4031f2d41829c8d33a630db961a194564c77f973e1cb29d05f05b312aa4827d1",
+    "src/active_admission.cpp": "e9f63e0e710c46253461293e3bec6beb5c987a1693e9ebf7c42665f3a709e000",
+    "src/active_mod.cpp": "508645d290fc0efd4f6958c3b414dcdea4d9e9f8464100c624ceebc7bc68f5c4",
+    "src/package_compatibility.hpp": "5612316f4fda81bc2d959d7a5d908b6a049f63536a7ae5f6e1570b8b9a0f2e90",
+    "tests/provider_lab.cpp": "b26a58792187850956a0ad42029c748d3c7877030d641b2a5d21eb7089c44085"
+  },
+  "dependencies": {
+    "sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "library_bytes": 9400986,
+    "library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "library_crc32": "70c35731",
+    "sdk_files_verified": 58,
+    "original_integrity": "CP00 reused; selected library CRC/hash rechecked"
+  },
+  "negative_dependency_drift": [
+    {
+      "case": "manifest-hash-drift",
+      "rejected": true
+    },
+    {
+      "case": "SDK-hash-drift",
+      "rejected": true
+    },
+    {
+      "case": "importlib-hash-drift",
+      "rejected": true
+    }
+  ],
+  "source_audit": {
+    "status": "PASS_STATIC",
+    "provider": "TECHNICALLY_ARMED_FIXED_C_E_OC_LIVE_KEY",
+    "human_execution_authorized": false,
+    "seven_overlays_identical": true,
+    "native_backend_unchanged": true,
+    "A_B_C_reentry_scope_latch_preserved": true,
+    "request_sites": 1,
+    "runtime": "NOT_TESTED"
+  },
+  "lab_summary": "SUMMARY active-provider-incremental-checks=46 failures=0 historical104-not-executed native-runtime=NOT_TESTED",
+  "mutations": [
+    {
+      "mutation": "provider_accidentally_NONE",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL real-provider-technically-armed-live-key",
+        "FAIL real-provider-one-request-three-fresh-captures",
+        "FAIL exact-preset-C-profile-parameters-angle-scale",
+        "FAIL MOD_OK-ID-is-not-READY",
+        "FAIL real-provider-no-second-request",
+        "FAIL same-image-shutdown-never-rearms",
+        "FAIL real-provider-Link-XZ-1600.000000",
+        "FAIL real-provider-Link-XZ-1600.001000",
+        "FAIL changed-Key-phase-2",
+        "FAIL changed-Key-phase-3",
+        "FAIL stale-A-B-denied",
+        "FAIL C-actor-drift-STOP",
+        "FAIL reentry-phase-1",
+        "FAIL reentry-phase-2",
+        "FAIL reentry-phase-3",
+        "FAIL reentry-after-latch-no-request",
+        "FAIL request-reentry-no-double",
+        "FAIL scope-error-terminal-0",
+        "FAIL scope-error-terminal-1",
+        "FAIL scope-error-terminal-2",
+        "FAIL timeout-no-retry",
+        "FAIL service-error-no-retry",
+        "FAIL arming-trace-honest-and-sink-failure-no-bypass",
+        "FAIL normal-log-saturation-reserves-request-restore"
+      ]
+    },
+    {
+      "mutation": "threshold_relaxed",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL real-provider-Link-XZ-1599.999000"
+      ]
+    },
+    {
+      "mutation": "C_check_omitted",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL C-actor-drift-STOP"
+      ]
+    },
+    {
+      "mutation": "multi_request_latch",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL real-provider-no-second-request",
+        "FAIL same-image-shutdown-never-rearms"
+      ]
+    }
+  ],
+  "negative_package_cases": [
+    {
+      "case": "duplicate",
+      "rejected": true
+    },
+    {
+      "case": "case_alias",
+      "rejected": true
+    },
+    {
+      "case": "extra_binary",
+      "rejected": true
+    },
+    {
+      "case": "traversal",
+      "rejected": true
+    },
+    {
+      "case": "absolute",
+      "rejected": true
+    },
+    {
+      "case": "drive",
+      "rejected": true
+    },
+    {
+      "case": "backslash",
+      "rejected": true
+    },
+    {
+      "case": "symlink",
+      "rejected": true
+    },
+    {
+      "case": "special",
+      "rejected": true
+    },
+    {
+      "case": "oversized",
+      "rejected": true
+    },
+    {
+      "case": "false_directory",
+      "rejected": true
+    },
+    {
+      "case": "nonempty_directory",
+      "rejected": true
+    },
+    {
+      "case": "bad_crc",
+      "rejected": true
+    },
+    {
+      "case": "encrypted",
+      "rejected": true
+    },
+    {
+      "case": "ratio",
+      "rejected": true
+    },
+    {
+      "case": "manifest_absent",
+      "rejected": true
+    },
+    {
+      "case": "dll_absent",
+      "rejected": true
+    },
+    {
+      "case": "manifest_wrong_id",
+      "rejected": true
+    },
+    {
+      "case": "manifest_duplicate_json_id",
+      "rejected": true
+    },
+    {
+      "case": "manifest_drift",
+      "rejected": true
+    },
+    {
+      "case": "dll_substituted",
+      "rejected": true
+    },
+    {
+      "case": "malformed_zip",
+      "rejected": true
+    },
+    {
+      "case": "hash_corrupt",
+      "rejected": true
+    }
+  ],
+  "binary_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "?mNextStayNo@dStage_roomControl_c@@2CA",
+        "?mStayNo@dStage_roomControl_c@@2CA",
+        "?mProcID@dStage_roomControl_c@@2IA",
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?dComIfGp_event_runCheck@@YAHXZ",
+        "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+        "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+        "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+        "??0dBgS_GndChk@@QEAA@XZ",
+        "??1dBgS_GndChk@@UEAA@XZ",
+        "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+        "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+        "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+        "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcCtIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+        "?fpcLy_SetCurrentLayer@@YAXPEAUlayer_class@@@Z"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "VCRUNTIME140.dll": [
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memset",
+        "memcpy",
+        "_CxxThrowException",
+        "__std_exception_destroy",
+        "__std_exception_copy"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "sqrt"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strncmp"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_seh_filter_dll",
+        "_initialize_onexit_table",
+        "_initialize_narrow_environment",
+        "_execute_onexit_table",
+        "_initterm_e",
+        "_cexit",
+        "_initterm",
+        "_configure_narrow_argv"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "free"
+      ],
+      "KERNEL32.dll": [
+        "DisableThreadLibraryCalls",
+        "InitializeSListHead",
+        "QueryPerformanceCounter",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "GetCurrentProcessId"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.actor",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "PASS_STATIC"
+  },
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "ended_utc": "2026-10-13T16:59:33.841008+00:00"
+}
