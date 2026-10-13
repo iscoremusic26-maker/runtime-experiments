@@ -1,0 +1,19 @@
+{
+  "base": "dc2f65ab5d1423ce74d78661dbbea5e14a692409",
+  "checks": {
+    "first_walk_counter_boundary_math": "PASS_OFFLINE:101 timers incl last retained-speed tick; max794<=800; NOT engine execution",
+    "prior_resource_bounds_kcl_and_lab_json_unchanged": "PASS_OFFLINE: saved hashes match; no BCK/KCL rerun",
+    "saved_overlay_rtbl_scls_and_screening_consistency": "PASS_OFFLINE; no recomputation of old evidence",
+    "scls13_signed_room_and_layer_sentinel": "PASS_OFFLINE",
+    "syntax_json_and_relative_links": "PASS_OFFLINE:10 existing links, Python AST and JSON",
+    "truncated_scls_stride_fails_closed": "PASS_OFFLINE"
+  },
+  "cp02": "NO-GO",
+  "g4": "G4_RESOURCE_VERIFIED_POSITION_BLOCKED",
+  "g5": "NO-GO",
+  "maximum_walk_recurrence_math": 794,
+  "policy": "DISARMED_NO_REGISTRATION",
+  "result_sha256": "81853b8e2d4797af0794976118b04dc1093430f9b21ff6af1dad143e0fa95f78",
+  "scope": "New offline delta only; no old suites/native execution",
+  "source_declared_voluntary_upper_conditional": 800
+}
