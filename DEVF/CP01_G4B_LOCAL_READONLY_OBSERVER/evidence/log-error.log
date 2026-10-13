@@ -1,0 +1,7 @@
+PASS error_case_initialize
+PASS scalar_disarmed_line
+PASS exception_reports_error
+PASS exception_stops_further_native_reads
+PASS reinitialize_disarmed_error
+PASS exception_budget_cannot_reset
+SUMMARY 6 PASS 0 FAIL; real observer lifecycle with fake capture; no engine

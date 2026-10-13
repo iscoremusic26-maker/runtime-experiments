@@ -1,0 +1,93 @@
+diff --git aDEVF/CP01_G2_READONLY_PACKAGE/src/native_reader.cpp bDEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp
+index 647c7d4..3389756 100644
+--- aDEVF/CP01_G2_READONLY_PACKAGE/src/native_reader.cpp
++++ bDEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp
+@@ -1,4 +1,6 @@
+-#include "core.hpp"
++#include "../../CP01_G2_READONLY_PACKAGE/src/core.hpp"
++#include "capture.hpp"
++#include <cmath>
+ #include <d/d_com_inf_game.h>
+ #include <f_op/f_op_actor_iter.h>
+ #include <f_op/f_op_actor_mng.h>
+@@ -7,6 +9,7 @@
+ #include <f_pc/f_pc_layer.h>
+ #include <cstddef>
+ #include <cstring>
++namespace devf::g4b { namespace { Capture current_values; } Capture& sidecar() noexcept { return current_values; } }
+ namespace devf::a1 {
+ namespace {
+ using Layers = Registry<layer_class>;
+@@ -34,11 +37,33 @@ void* census_actor(void* actor, void* data) {
+     // The public queue may contain actors before their derived Create has completed.
+     // Inspect only the already-established process header before reading actor fields.
+     const auto* process = static_cast<const base_process_class*>(actor);
+-    if (process->profname != fpcNm_E_OC_e) return nullptr;
+-    if (!complete(*process)) { c.incomplete = true; return actor; }
++    // Extend the SAME historical bounded visitor for local owning-value diagnostics.
++    if (!complete(*process)) { auto& local=devf::g4b::sidecar();local.actors_complete=false;
++        local.incomplete_actor=process->id;local.incomplete_profile=process->profname;local.incomplete_init=process->state.init_state;
++        c.incomplete=true; return actor; }
+     const auto* a = static_cast<const fopAc_ac_c*>(actor);
+-    if (!(a->actor_condition & fopAcCnd_INIT_e)) { c.incomplete = true; return actor; }
+-    if (a->current.roomNo != c.values.room) return nullptr;
++    if (!(a->actor_condition & fopAcCnd_INIT_e)) { auto& local=devf::g4b::sidecar();
++        local.incomplete_actor=process->id;local.incomplete_profile=process->profname;local.incomplete_init=process->state.init_state;
++        c.incomplete = true; return actor; }
++    auto& local=devf::g4b::sidecar();
++    local.visited=c.visited;
++    const std::array<double,3> xyz{a->current.pos.x,a->current.pos.y,a->current.pos.z};
++    unsigned reason=(a==dComIfGp_getPlayer(0))?1u:0u;
++    const auto distance=devf::g4b::distance_to_C(xyz);
++    if(distance<0){local.actors_complete=false;c.incomplete=true;return actor;}
++    if(distance<=devf::g4b::radius)reason|=2;
++    for(unsigned i=0;i<local.bg_count;++i)if(local.bg[i].actor==a->id){
++        const auto& slot=dComIfG_Bgsp().m_chk_element[local.bg[i].index];
++        devf::g4b::Id owner=devf::g4b::unknown;
++        local.bg[i].owner_valid=slot.m_actor_ptr==a && layer_id(c.layers,a->layer_tag.layer,owner);
++        reason|=4;
++    }
++    if(reason){
++        if(local.actor_count==devf::g4b::max_actors)local.actors_truncated=true;
++        else {auto& r=local.actors[local.actor_count++];r.id=a->id;r.profile=a->profname;r.room=a->current.roomNo;
++            r.xyz=xyz;r.distance=distance;r.included=reason;r.initialized=true;r.owner_valid=layer_id(c.layers,a->layer_tag.layer,r.owner);}
++    }
++    if (process->profname != fpcNm_E_OC_e || a->current.roomNo != c.values.room) return nullptr;
+     if (c.values.census_count == c.values.census.size()) {
+         c.values.census_truncated = true; return actor;
+     }
+@@ -52,6 +77,8 @@ void* census_actor(void* actor, void* data) {
+ }
+ Snapshot capture_native() {
+     Snapshot s;
++    devf::g4b::sidecar()={};
++    struct Publish { Snapshot& s; ~Publish() {auto& c=devf::g4b::sidecar();c.base=s.status;c.e_oc_registered=s.e_oc_registered;c.e_ocb_registered=s.e_ocb_registered;} } publish{s};
+     // These queries are public scalar getters. No native memory is retained after this call.
+     if (dComIfGp_isEnableNextStage()) { s.status = Observation::Transition; return s; }
+     const char* stage = dComIfGp_getStartStageName(); // host-owned fixed name, API contract
+@@ -81,6 +108,10 @@ Snapshot capture_native() {
+     }
+     s.link_xyz = {player->current.pos.x, player->current.pos.y, player->current.pos.z};
+     s.link_yaw = player->current.angle.y;
++    auto& link=devf::g4b::sidecar().link;link.id=player->id;link.profile=player->profname;link.owner=s.link_owner;
++    link.owner_valid=link.initialized=true;link.room=player->current.roomNo;
++    link.xyz={player->current.pos.x,player->current.pos.y,player->current.pos.z};link.included=1;
++    devf::g4b::sidecar().link_read=true;
+     const auto room_id = dStage_roomControl_c::getStatusProcID(s.room);
+     const auto* room = fopScnM_SearchByID(room_id);
+     if (!room || room->base.base.id != room_id || room->base.base.profname != fpcNm_ROOM_SCENE_e) {
+@@ -96,9 +127,14 @@ Snapshot capture_native() {
+     if (s.room_creates || s.room_deletes) { s.status = Observation::IncompleteRoom; return s; }
+     s.logical_layer = dComIfG_play_c::getLayerNo(0);
+     // Presence in native registry is NOT proof of installed/fully loaded model or animation.
++    devf::g4b::sidecar().resources_read=true;
+     s.e_oc_registered = dComIfG_getObjectResInfo("E_OC") != nullptr;
+     s.e_ocb_registered = dComIfG_getObjectResInfo("E_ocb") != nullptr;
++    devf::g4b::collect_bg(devf::g4b::sidecar());
++    devf::g4b::sidecar().actors_complete=true;
+     Census census{s, layers}; fopAcIt_Judge(census_actor, &census);
++    devf::g4b::sidecar().visited=census.visited;
++    if(census.incomplete || s.census_truncated)devf::g4b::sidecar().actors_complete=false;
+     if (census.incomplete || s.census_truncated) { s.status = Observation::IncompleteCensus; return s; }
+     s.status = valid_values(s) ? Observation::Captured : Observation::InvalidValues;
+     return s;

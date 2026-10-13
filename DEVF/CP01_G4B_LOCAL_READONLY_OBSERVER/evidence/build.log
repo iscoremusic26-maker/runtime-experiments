@@ -1,0 +1,47 @@
+[1/20] Building CXX object CMakeFiles\devf_g4b_readonly.dir\src\mod.cpp.obj
+[2/20] Building CXX object CMakeFiles\devf_g4b_readonly.dir\src\capture.cpp.obj
+[3/20] Building CXX object CMakeFiles\devf_g4b_readonly.dir\src\local_queries.cpp.obj
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[4/20] Building CXX object CMakeFiles\devf_g4b_readonly.dir\src\extended_g2_reader.cpp.obj
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[5/20] Building CXX object CMakeFiles\devf_g4b_readonly.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G2_READONLY_PACKAGE\src\core.cpp.obj
+[6/20] Building CXX object CMakeFiles\devf_g4b_readonly.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\controller_core.cpp.obj
+[7/20] Building CXX object CMakeFiles\devf_g4b_readonly.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\.official\sdk\src\game_feature.cpp.obj
+[8/20] Building CXX object CMakeFiles\devf_g4b_readonly.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\room_owner_resolver.cpp.obj
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<WORKSPACE>\codex-cp00-inputs\.official\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[9/20] Building CXX object CMakeFiles\g4b_capture_lab.dir\tests\capture_lab.cpp.obj
+[10/20] Building CXX object CMakeFiles\g4b_capture_lab.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\controller_core.cpp.obj
+[11/20] Building CXX object CMakeFiles\g4b_capture_lab.dir\src\capture.cpp.obj
+[12/20] Building CXX object CMakeFiles\g4b_adapter_lab.dir\tests\fake_capture.cpp.obj
+[13/20] Building CXX object CMakeFiles\g4b_adapter_lab.dir\tests\adapter_lab.cpp.obj
+[14/20] Building CXX object CMakeFiles\g4b_adapter_lab.dir\src\mod.cpp.obj
+[15/20] Building CXX object CMakeFiles\g4b_adapter_lab.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\controller_core.cpp.obj
+[16/20] Building CXX object CMakeFiles\g4b_adapter_lab.dir\src\capture.cpp.obj
+[17/20] Building CXX object CMakeFiles\g4b_adapter_lab.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\.official\sdk\src\game_feature.cpp.obj
+[18/20] Linking CXX executable g4b_capture_lab.exe
+[19/20] Linking CXX shared module devf_g4b_readonly.dll
+[20/20] Linking CXX executable g4b_adapter_lab.exe

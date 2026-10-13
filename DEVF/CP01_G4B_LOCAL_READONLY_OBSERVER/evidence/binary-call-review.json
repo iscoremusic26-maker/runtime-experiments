@@ -1,0 +1,40 @@
+{
+  "status": "PASS_STATIC",
+  "binary_sha256": "d5693c904b0706a04d37ca4eac7403cbb14a4bdccf3fd37650c058de94296fde",
+  "source_ledger_matches_final": true,
+  "reused_source_ledger_matches": true,
+  "module_compile_units": 8,
+  "proof_scope": "MSVC-produced DLL and text inspection; not runtime or arbitrary C++ proof",
+  "entry_rvas": {
+    "mod_initialize": "0x1020",
+    "mod_shutdown": "0x1260",
+    "mod_update": "0x1270",
+    "evaluate": "0x1690",
+    "capture_g4b": "0x29d0",
+    "collect_bg": "0x2d70",
+    "capture_adapted_g2": "0x3170",
+    "census_actor": "0x4590"
+  },
+  "entry_evidence": [
+    "mod_update checks active/busy/16 slots/cadence and consumes budget before capture",
+    "native capture calls inherited A2 resolver, two private surface helpers, event/context reads and evaluate",
+    "only service-indirect call in mod_update is LogService.write at +8 with own stack buffer",
+    "source and compiled map contain no Controller/fake/request backend"
+  ],
+  "BG_virtual_slots": {
+    "0x10": "ChkNotReady",
+    "0x20": "ChkMoveBg",
+    "0x40": "GetBnd",
+    "0x18": "ChkLock"
+  },
+  "virtual_effect_authority": "dBgW_Base declaration order and cBgW/dBgWKCol implementations; dBgWSv inherits these reads",
+  "ground_query_evidence": [
+    "private query helpers pass stack-owned query to imported cBgS GroundCross",
+    "host SetObj/SetPos receivers are private query subobjects",
+    "IAT has cBgS::GroundCross exact owner, no dBgS DEBUG wrapper and no SphChk"
+  ],
+  "not_a_runtime_pointer_dump": true,
+  "historical_files_changed": false,
+  "original_resources_uploaded": false,
+  "runtime": "NOT_TESTED"
+}

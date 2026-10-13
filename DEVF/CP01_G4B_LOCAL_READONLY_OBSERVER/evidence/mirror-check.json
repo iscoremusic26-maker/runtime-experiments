@@ -1,0 +1,125 @@
+{
+  "files": [
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/mod.json",
+      "sha256_lf": "70e96371ac93206509732839e77e56936b52867cce66f146db06f2f27859dc2f",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/CMakeLists.txt",
+      "sha256_lf": "ebcd42b5cf098cf1009847689ae521334315b39be8d3306d0d6e62452a846e72",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/reviewed-imports.json",
+      "sha256_lf": "00ba22f5b4b7101ed1dc2a0daf7c73700a4dfd58ced0140f3494e4dc30f72d3d",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/windows.yml",
+      "sha256_lf": "81700d1ce0002fbba45e2ad28e07d95f4834befc65c4f4728c9b3287efe3cf19",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/run_windows.py",
+      "sha256_lf": "a66b5f4260a32ddbb27a1d6842b24cd6b6a495e2dc114746099982863b587fd5",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/mutations.py",
+      "sha256_lf": "16f2fc1b347f2ad075eb64ec1f8cace0fde5e9366e2b4686b9bc70f388e68449",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/audit.py",
+      "sha256_lf": "66cdf6eb7b49e5f7c19bfbeb889dc8430bd0ca2acd320663f427457f68db6c0a",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/capture_lab.cpp",
+      "sha256_lf": "2566636f8e2710c99271e8a9d808a82915f6c55d97a4267f09d49cd5ea6d45ff",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/fake_capture.cpp",
+      "sha256_lf": "5fdaf16d8c8e24e38970c6e3e8f89c53753f0a3c21453369a31dca67c85506c8",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/adapter_lab.cpp",
+      "sha256_lf": "adbeba9959ca6c46c04ab57093059253a90420c17dbb8e3844af91a7fd4db4b8",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp",
+      "sha256_lf": "fbddb942e9d08042dfd231d898688b45cf1d48ef5bbb83d345cdff249aacfdf1",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.hpp",
+      "sha256_lf": "b486f4caaf58e55d156977644524babe65ee2258f4a47b410b2b832dbf39288f",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/src/mod.cpp",
+      "sha256_lf": "209211040750fe7da4ba9af44963534628ae6e7a36f53dfe9d4dad7adb91a46c",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp",
+      "sha256_lf": "63e1e2aacffbfe971ed2d2e6be68e2fa762d58e79773dce4ed3a531897983858",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp",
+      "sha256_lf": "b7ea663b194f03e25b5a7852489f57d8477ba7241beaf43b8932a9f644e2703d",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp",
+      "sha256_lf": "aebc1beb31c9ca27b132665390fce2b9328e4b6bbf805e37e99949c33f8f69ee",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp",
+      "sha256_lf": "1fa97f73c07c3ba57652b08e8ee3b3b6da4c35f7be3b5453e93cc7265754d602",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_A2_DISARMED_CONTROLLER/src/disarmed_mod.cpp",
+      "sha256_lf": "322ca9ab7f2d40c7bd13d5332f63ffee10408844b5d6b8d780b433f8402d6b88",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.hpp",
+      "sha256_lf": "ec5dbef75945c26834d32e97facf5d41bda43b01111731998b10c70ecc0be543",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_A2_DISARMED_CONTROLLER/src/controller_core.hpp",
+      "sha256_lf": "cfacb397d189fdb56ccad51d55bb58cb2add13c15165273bff44c898a493e468",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G2_READONLY_PACKAGE/src/core.hpp",
+      "sha256_lf": "5f5d6a7bc875e4e4e78727b4e7a10c3f949192b7591f418d11a8286b8f41d8d9",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G2_READONLY_PACKAGE/src/core.cpp",
+      "sha256_lf": "11d276f4dec817547692504aa4222a72de2183483b427daa5466b5978eca2ed9",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G2_READONLY_PACKAGE/src/mod.cpp",
+      "sha256_lf": "165c84a66d78af80a5d3a76f447b57d3aabb5bf708ed0affa958ac98cd070fdf",
+      "ci_mirror_equal": true
+    },
+    {
+      "path": "CP01_G2_READONLY_PACKAGE/src/native_reader.cpp",
+      "sha256_lf": "8c6edce203fff4742e12ed13897ec826a1fa8f5ac301caa19fa0c4f8bcfde7d7",
+      "ci_mirror_equal": true
+    }
+  ],
+  "own_source_commit": "9d4cba8f5e40377cf0746da6366160c147686cc8"
+}
