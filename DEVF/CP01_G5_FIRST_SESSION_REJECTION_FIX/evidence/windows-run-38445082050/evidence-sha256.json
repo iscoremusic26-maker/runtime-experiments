@@ -1,0 +1,106 @@
+{
+  "build.log": {
+    "bytes": 6488,
+    "sha256": "09bef2566bd3d10777254664747db9854f8037d171b1d2618cdfcfa4425edd57"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 1010,
+    "sha256": "77c0cafdd51c160eb6cab869d98e705db05430d38c5ae1553bc53dad68ba25c8"
+  },
+  "g5-lab.log": {
+    "bytes": 6399,
+    "sha256": "41c2fd62bcbeab1cd91d9a6bc5fa0184c54ae83c61658cb853f50f733e8acb8e"
+  },
+  "g5-overlay-diff.log": {
+    "bytes": 870,
+    "sha256": "1cad60a90c3b6b7ffef1cfc6ce82684937cedd0b4aff68be5d556d3e211073de"
+  },
+  "g5-overlay-ledger.json": {
+    "bytes": 343,
+    "sha256": "fafeb9815995a90eab0a2ee1a5de63faa16f8454d5df8c7d6ee53584ee4f2eeb"
+  },
+  "mutant-any_invalid_room-build.log": {
+    "bytes": 124,
+    "sha256": "d78301ebda33318d4492cb0f5373b8eb12255985bd1f0a558511a79677013506"
+  },
+  "mutant-any_invalid_room.log": {
+    "bytes": 6399,
+    "sha256": "b4b4717f98f1e08f52290791afe355d097c4752457f7dabdb76988a63ca7ec7b"
+  },
+  "mutant-critical_shares_normal-build.log": {
+    "bytes": 124,
+    "sha256": "d78301ebda33318d4492cb0f5373b8eb12255985bd1f0a558511a79677013506"
+  },
+  "mutant-critical_shares_normal.log": {
+    "bytes": 6399,
+    "sha256": "decb689e65611b83af0c95a5b2f8726f7a4a9f73cd7e6d644994221f3f4414ee"
+  },
+  "mutant-C_freshness_missing-build.log": {
+    "bytes": 124,
+    "sha256": "d78301ebda33318d4492cb0f5373b8eb12255985bd1f0a558511a79677013506"
+  },
+  "mutant-C_freshness_missing.log": {
+    "bytes": 6400,
+    "sha256": "843b0094fa096cc94c0c2b04cafd5fd46524885d28b1aace829923215efcef94"
+  },
+  "mutant-d3_replaces_XZ-build.log": {
+    "bytes": 124,
+    "sha256": "d78301ebda33318d4492cb0f5373b8eb12255985bd1f0a558511a79677013506"
+  },
+  "mutant-d3_replaces_XZ.log": {
+    "bytes": 6399,
+    "sha256": "25d840e15d28c9c7f611f6f05598297f1dcdc001b76f1b8008cf54bedeace8ca"
+  },
+  "mutant-far_unknown_profile-build.log": {
+    "bytes": 124,
+    "sha256": "d78301ebda33318d4492cb0f5373b8eb12255985bd1f0a558511a79677013506"
+  },
+  "mutant-far_unknown_profile.log": {
+    "bytes": 6399,
+    "sha256": "8dcb10f40ec202cc4c80af58e293bbf9b6ee777d703f787ad70d6b2c3244a116"
+  },
+  "mutant-ky_without_owner_distance-build.log": {
+    "bytes": 124,
+    "sha256": "d78301ebda33318d4492cb0f5373b8eb12255985bd1f0a558511a79677013506"
+  },
+  "mutant-ky_without_owner_distance.log": {
+    "bytes": 6399,
+    "sha256": "a619ff9dec3e80a1698f6325a315feae8a70687f3fdecf4fe9e9760272d34871"
+  },
+  "mutant-movement_admitted-build.log": {
+    "bytes": 124,
+    "sha256": "d78301ebda33318d4492cb0f5373b8eb12255985bd1f0a558511a79677013506"
+  },
+  "mutant-movement_admitted.log": {
+    "bytes": 6385,
+    "sha256": "170a457819ab972c3956ddc6af4d4e0fe93513b6433c857dd576b09216f44f5b"
+  },
+  "mutant-reject_consumes_latch-build.log": {
+    "bytes": 124,
+    "sha256": "d78301ebda33318d4492cb0f5373b8eb12255985bd1f0a558511a79677013506"
+  },
+  "mutant-reject_consumes_latch.log": {
+    "bytes": 6400,
+    "sha256": "83e954ddc4f0bc546013a90c04c6846b6b1603b238eaa205fa180491cad863e6"
+  },
+  "overlay-diff.log": {
+    "bytes": 12842,
+    "sha256": "c462d8d7eeed2e5c7deddd8f7ce3ab41e9f7e64d78ca928307eabaa87d5f4544"
+  },
+  "overlay-ledger.json": {
+    "bytes": 2419,
+    "sha256": "fb9214ca118aa7f6b5bc71cd895d8dd8d76054374316936c9bf14f7321e0d176"
+  },
+  "result.json": {
+    "bytes": 10177,
+    "sha256": "4e6b29a07ff8f7520f1074ea8f30f8b2ed67b4f152ee3412c40f159b88a4a6de"
+  }
+}

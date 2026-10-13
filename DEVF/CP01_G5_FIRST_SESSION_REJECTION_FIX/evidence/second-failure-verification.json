@@ -1,0 +1,15 @@
+{
+  "run": 38445082050,
+  "job": 115461238858,
+  "artifact": 11837853851,
+  "zip_bytes": 31512,
+  "zip_sha256": "adbfad4e2ecf7b3544062a5ca364fda82bace9701cdc21c5db5ecb282693eb35",
+  "CRC": "PASS",
+  "manifest_files": 26,
+  "lab_checks": 100,
+  "lab_failures": 0,
+  "mutants_compiled_killed": 8,
+  "ZIP_negatives_pass": 13,
+  "failure": "Historical G4B complete IAT expectation rejected new diagnostic; imports/map were not preserved before exception. Actual differences remain unknown until a focal capture.",
+  "package_published": false
+}

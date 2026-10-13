@@ -1,0 +1,47 @@
+--- approved/policy.cpp
++++ g5/policy.cpp
+@@ -8,13 +8,22 @@
+  for(double v:p)if(!std::isfinite(v)||std::abs(v)>std::numeric_limits<float>::max())return false;
+  return true;
+ }
+-bool identifiable(const ActorSample& a) noexcept {
++bool identifiable(const ActorSample& a,const first::Frame& f) noexcept {
+  return a.id!=unknown&&a.id!=0&&a.profile!=unknown&&a.owner!=unknown&&a.owner_valid&&
+-        a.room>=0&&a.room<64&&a.init==2&&a.initialized;
++        room_scope(a,f)!=RoomScope::Invalid&&a.init==2&&a.initialized;
+ }
+ bool same_actor(const ActorSample& a,const ActorSample& b) noexcept {
+- return a.id==b.id&&a.profile==b.profile&&a.owner==b.owner&&a.room==b.room&&a.xyz==b.xyz&&a.is_link==b.is_link;
++ return a.id==b.id&&a.profile==b.profile&&a.owner==b.owner&&a.room==b.room&&a.xyz==b.xyz&&a.is_link==b.is_link&&a.group==b.group;
+ }
++}
++// Room validity exception only, NOT an exclusion from distance/census/freshness.
++RoomScope room_scope(const ActorSample& a,const first::Frame& f) noexcept {
++ if(a.room>=0&&a.room<64)return RoomScope::Ordinary;
++ const auto& o=f.owner;
++ if(a.room==-1&&a.profile==686&&a.group==0&&!a.is_link&&a.owner_valid&&a.owner==o.parent&&
++    o.parent==o.play_layer&&o.parent==o.link_owner&&o.parent!=o.root&&o.parent!=o.child&&
++    first::validate_owner(o)==first::Reason::None&&first::context_valid(f))return RoomScope::KnownStageKYTAG04;
++ return RoomScope::Invalid;
+ }
+ Metrics metrics(const std::array<double,3>& p) noexcept {
+  Metrics m;if(!finite3(p))return m;
+@@ -47,15 +56,15 @@
+  if(g.status!=1||g.bg!=0||g.poly!=2174||g.room!=3||g.ground!=0||g.special!=0||g.moving||
+     !std::isfinite(g.y)||std::abs(g.y-spawn[1])>0.01)return deny(GuardReason::GroundMismatch);
+  if(!v.resources_read||!f.registered_eoc||!f.registered_weapon)return deny(GuardReason::ResourcesNotRegistered);
+- if(!v.link_read||!v.link_profile_checked||!identifiable(v.link)||v.link.room!=f.owner.room||v.link.owner!=f.owner.link_owner||!v.link.is_link)
++ if(!v.link_read||!v.link_profile_checked||!identifiable(v.link,f)||v.link.room!=f.owner.room||v.link.owner!=f.owner.link_owner||!v.link.is_link)
+   return deny(GuardReason::LinkUnknown);
+  d.link=metrics(v.link.xyz);
+- if(!d.link.valid||!finite3(v.link.speed)||!std::isfinite(v.link.speed_forward))return deny(GuardReason::DistanceInvalid);
++ if(!d.link.valid||!finite3(v.link.speed)||(!std::isfinite(v.link.speed_forward)||std::abs(v.link.speed_forward)>std::numeric_limits<float>::max()))return deny(GuardReason::DistanceInvalid);
+  if(d.link.xz<link_min_xz)return deny(GuardReason::LinkTooClose);
+  if(v.link.speed!=std::array<double,3>{}||v.link.speed_forward!=0)return deny(GuardReason::LinkMoving);
+  unsigned links=0;
+  for(unsigned i=0;i<v.count;++i){const auto& a=v.actors[i];d.offender=a;d.offender_metrics=metrics(a.xyz);
+-  if(!identifiable(a))return deny(GuardReason::ActorCensusIncomplete);
++  if(!identifiable(a,f))return deny(GuardReason::ActorCensusIncomplete);
+   if(!d.offender_metrics.valid)return deny(GuardReason::DistanceInvalid);
+   for(unsigned j=0;j<i;++j)if(v.actors[j].id==a.id)return deny(GuardReason::ActorCensusIncomplete);
+   if(a.is_link){++links;if(!same_actor(a,v.link))return deny(GuardReason::LinkUnknown);continue;}
