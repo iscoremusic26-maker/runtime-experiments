@@ -1,0 +1,13 @@
+PASS coherent_scalars_only_not_admission
+PASS wrong_stage
+PASS wrong_room
+PASS wrong_logical
+PASS missing_room_scene
+PASS invalid_play_scene
+PASS unregistered_child
+PASS stage_transition
+PASS room_transition
+PASS retiring_room
+PASS parent_pending_delete
+PASS child_pending_create
+FAIL changed_mid_capture

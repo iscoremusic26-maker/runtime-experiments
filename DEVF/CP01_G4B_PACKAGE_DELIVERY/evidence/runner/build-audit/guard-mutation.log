@@ -1,0 +1,2 @@
+guard.cpp
+<WORKSPACE>\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\../../CP01_A2_DISARMED_CONTROLLER/src/controller_core.hpp(9): fatal error C1189: #error:  "Arming configurations forbidden"

@@ -1,6 +1,6 @@
 # Package recovery checkpoint
 
-Main private repository iscoremusic26-maker/Mods-Duskligh. Branch **package/devf-cp01-g4b-observation**, exact base17bbbd288f2e17974303f98fbfcd3345f49aa11d. [Draft PR15](https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/15), no merge/force push/tag replacement. New recovery tag **DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED** points to the final reports/tools/text-evidence checkpoint; resolve the final commit using Git/tag or PR body. A self-referential commit hash is not embedded in the tagged tree. Prior observer checkpoint/tag remain untouched.
+Main private repository iscoremusic26-maker/Mods-Duskligh. Branch **package/devf-cp01-g4b-observation**, exact base17bbbd288f2e17974303f98fbfcd3345f49aa11d. [Draft PR15](https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/15), no merge/force push/tag replacement. New recovery tag **DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED_FINAL** points to the final reports/tools/text-evidence checkpoint; resolve the final commit using Git/tag or PR body. A self-referential commit hash is not embedded in the tagged tree. Prior observer checkpoint/tag remain untouched.
 
 Native observer source checkpoint17bbbd2, equivalent compiled source9d4cba8; packaging-run source6c788fb7d0e1245c49af473c2ecca5dc1c7f417f. All original G4B and reused G2/A2/approved review files remain identical to SOURCE_APPROVAL.json; final additions are packaging inspection, the locally executed independent download checker, reports and text evidence. Checker hash and actual package-tool/observer source equality in evidence/source-match.json.
 
@@ -12,8 +12,8 @@ Official host source40457c6adb381928e4b5fef6ed459ed291edd5e2; Aurora3227d76c60e1
 
 ```bash
 git clone https://github.com/iscoremusic26-maker/Mods-Duskligh.git devf-g4b-package-recovery
-git -C devf-g4b-package-recovery fetch origin refs/heads/package/devf-cp01-g4b-observation refs/tags/DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED
-git -C devf-g4b-package-recovery switch --detach DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED
+git -C devf-g4b-package-recovery fetch origin refs/heads/package/devf-cp01-g4b-observation refs/tags/DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED_FINAL
+git -C devf-g4b-package-recovery switch --detach DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED_FINAL
 git -C devf-g4b-package-recovery merge-base --is-ancestor 17bbbd288f2e17974303f98fbfcd3345f49aa11d HEAD
 git -C devf-g4b-package-recovery status --short
 ```
@@ -40,3 +40,5 @@ Download only the exact artifact from the authorized private repo. Check GitHub 
 ## Stop boundary
 
 G4B_PACKAGE_READY_FOR_USER_REVIEW only. No installation/game/DLL execution or hot reload. Runtime capture/owner/creation/render NOT_TESTED or NOT_VERIFIED; first test location blocked, G5/CP02 NO_GO, G6 NOT_VERIFIED, independent custom-DLL blocker unchanged. Next minimum step is a separate explicit authorization for the cold observation-only session documented in G4B_USER_OBSERVATION_PROCEDURE.md; do not begin it during recovery.
+
+The initial package tag DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED at3c3b97add5d4321d7aded9565f14b1e3193cfa65 is retained. The FINAL checkpoint adds the runner build-audit text logs that an inherited build-directory ignore rule omitted from the first source delivery. Native/package bytes and source are unchanged; no extra Windows build or package was generated.
