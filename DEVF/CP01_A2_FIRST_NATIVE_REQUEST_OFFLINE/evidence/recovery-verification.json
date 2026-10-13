@@ -1,0 +1,17 @@
+{
+  "status": "PASS_STATIC",
+  "independent_fetch_from_github": true,
+  "verified_published_parent_commit": "8fcb2238d7196ec5bfebc3904789dd59860a68ca",
+  "verified_compiled_main_commit": "1f184e56b66bef014601419a5c9078f16e112944",
+  "branch": "experiment/devf-cp01-a2-first-native",
+  "git_fsck_full": "PASS",
+  "source_ledger_files_verified_from_git": 16,
+  "reused_source_files_verified_from_git": 14,
+  "downloaded_evidence_manifest_files_verified_from_git": 28,
+  "protected_historical_files_verified_from_git": 206,
+  "prior_local_refs_unchanged": 48,
+  "missing_files": [],
+  "tag_final": "DEVF_CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE_VERIFIED",
+  "final_tag_verification_protocol": "after committing this record: create new annotated tag, push branch/tag without force; independent fetch exact branch and tag, compare peeled SHA; fsck full; verify this report and all inherited ledger blobs again",
+  "no_circular_claim": "this report certifies the named published parent; final head/tag fetch is performed and reported after publication"
+}
