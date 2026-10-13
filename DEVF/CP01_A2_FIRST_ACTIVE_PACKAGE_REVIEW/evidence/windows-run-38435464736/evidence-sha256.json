@@ -1,0 +1,90 @@
+{
+  "build.log": {
+    "bytes": 7258,
+    "sha256": "a68e663c109cc043f8087d5c8ec81c361a807c5d9a3f432e2d88e1cb71c0e6d6"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compile-commands.json": {
+    "bytes": 26991,
+    "sha256": "9c09d3c81eecddf347a4e6f210a00af14d34929f9f5a94391a68ca2b51ec1ca7"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 1010,
+    "sha256": "77c0cafdd51c160eb6cab869d98e705db05430d38c5ae1553bc53dad68ba25c8"
+  },
+  "DOWNLOAD_MANIFEST.json": {
+    "bytes": 1766,
+    "sha256": "5d455b27168df8872b5cec8c54f7a68b5b3bc835e50a9b45f980a2408b12e27c"
+  },
+  "internal-disassembly.log": {
+    "bytes": 778600,
+    "sha256": "734141763b76c462540658af17b1958779f1f9c71704641ba2c1c5340570f22e"
+  },
+  "internal-exports.log": {
+    "bytes": 815,
+    "sha256": "9a35336a27b422998bb45850080978f7c3e970dce38259cfd0b56d438c773a37"
+  },
+  "internal-headers.log": {
+    "bytes": 6052,
+    "sha256": "bcabdc8cefea68dbff0a4e26a0de233fddbfaee4e195444ef492c78e3b0ad5ef"
+  },
+  "internal-imports.log": {
+    "bytes": 5838,
+    "sha256": "24ab3a3e31c87a14610c6c341ef98fc579ba97b5b58d67be60e53c5deeac58ea"
+  },
+  "module-disassembly.log": {
+    "bytes": 778608,
+    "sha256": "d43f8ec860bcff18bc132b48327e441a8c97c19310c9316fb3e5bc46f9025a92"
+  },
+  "module-exports.log": {
+    "bytes": 823,
+    "sha256": "b20cb3290699528c847aee02f069fd671b2823d397109cc27a86fa14ff8a0af1"
+  },
+  "module-headers.log": {
+    "bytes": 6060,
+    "sha256": "878499f106310cdb598f5e051c8654b7223f5b39e1153dd14c19a5d0f5d8c977"
+  },
+  "module-imports.log": {
+    "bytes": 5846,
+    "sha256": "bef8dffbd137b009ad52d4d6219f7e88674a9dc382a45888e7384afe90f63a2f"
+  },
+  "module-map.log": {
+    "bytes": 99639,
+    "sha256": "21ab9ccda3ba817fb3c176aed904aaf458174e95d9c96daf049b5188caddec42"
+  },
+  "official-package.log": {
+    "bytes": 148,
+    "sha256": "6ef89cce7419158029e31348b8c828f29fd7b4e78f425afc8c7a63f2720c88f6"
+  },
+  "overlay-diff.log": {
+    "bytes": 12842,
+    "sha256": "c462d8d7eeed2e5c7deddd8f7ce3ab41e9f7e64d78ca928307eabaa87d5f4544"
+  },
+  "overlay-ledger.json": {
+    "bytes": 2419,
+    "sha256": "fb9214ca118aa7f6b5bc71cd895d8dd8d76054374316936c9bf14f7321e0d176"
+  },
+  "provider-disassembly.log": {
+    "bytes": 1016,
+    "sha256": "e7ca71d31b3a63870c47a268c2a045ebf309a809a036f79cf4e3c039dceee3b6"
+  },
+  "result.json": {
+    "bytes": 42270,
+    "sha256": "b996a280d8052087030ffc5e0e98d91ea07503e9e823ca686b0e8afc435ccb6f"
+  },
+  "trace-diff.log": {
+    "bytes": 1894,
+    "sha256": "a86d9ec3248d86b5cb369d9f8c271d2661fe50888cd0b05feaf99fe4d6cfa2b5"
+  },
+  "trace-ledger.json": {
+    "bytes": 455,
+    "sha256": "a3c74cf31f1af8e356303d7fca0272bf3d77fddb984dd6683e1760b309680efd"
+  }
+}

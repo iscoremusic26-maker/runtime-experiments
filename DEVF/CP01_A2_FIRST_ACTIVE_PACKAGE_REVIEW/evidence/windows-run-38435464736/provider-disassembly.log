@@ -1,0 +1,14 @@
+  0000000180003930: 0F 10 05 69 89 00  movups      xmm0,xmmword ptr [000000018000C2A0h]
+  0000000180003937: 48 8B C1           mov         rax,rcx
+  000000018000393A: 48 C7 41 04 FF FF  mov         qword ptr [rcx+4],0FFFFFFFFFFFFFFFFh
+  0000000180003942: F2 0F 10 0D 66 89  movsd       xmm1,mmword ptr [000000018000C2B0h]
+  000000018000394A: 0F 11 41 20        movups      xmmword ptr [rcx+20h],xmm0
+  000000018000394E: 48 C7 41 0C FF FF  mov         qword ptr [rcx+0Ch],0FFFFFFFFFFFFFFFFh
+  0000000180003956: F2 0F 11 49 30     movsd       mmword ptr [rcx+30h],xmm1
+  000000018000395B: 48 C7 41 14 FF FF  mov         qword ptr [rcx+14h],0FFFFFFFFFFFFFFFFh
+  0000000180003963: 66 C7 01 01 01     mov         word ptr [rcx],101h
+  0000000180003968: C6 41 38 01        mov         byte ptr [rcx+38h],1
+  000000018000396C: C3                 ret
+  000000018000396D: CC                 int         3
+  000000018000396E: CC                 int         3
+  000000018000396F: CC                 int         3

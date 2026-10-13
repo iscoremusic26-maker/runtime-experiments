@@ -1,0 +1,17 @@
+# Auditoría focalizada de entrega activa-capaz
+
+**ACTIVE-CAPABLE / NOT INSTALLED / NOT RUN / SESSION NOT AUTHORIZED.**
+
+Dusklight **2.0.3 Windows x64/DX12**; paquete ID`dev.devf.cp01_eoc_first_active_pilot` versión`0.0.1`; fuente compilada`a67662bec0be8ac7982dd8685f9ac29cc1c0ebea`.
+
+Solo directorio nuevo; historia CP01/G2/G4B/piloto NONE intacta. Se reutilizan siete overlays idénticos en entradas/salidas normalizadas, backend nativo y puente completo. La adaptación adicional de trace solo añade evento de armado y tablas de27 tipos. Provider nuevo fijo, módulo propio con traza de armado, contract checks en cada update e initialized_once. No perfiles,StageService,callbacks diferidos,hooks/teleports/flags/saves/recursos/runtime files/red/workers.
+
+Siete unidades nativas (core/backend/provider/mod/policy/trace/SDK game_feature) y ocho unidadesbridge. Solo bridge recibe READ_ONLY/A2 DISARMED / G4B READ_ONLY históricos; mutador nunca READ_ONLY. AdmissionNONE generado sigue en ledger histórico pero NO está en el target distribuido. No fuentes fake/lab en DLL. Current_admission probado confakebackend y correlacionado en cuerpo compilado; única llamada create del backend real slot32, setter yrequestvisitor reales. SDK gameheaders/modmeta/exports/IAT auditados.
+
+Se conserva latch irreversible antes de primer setter, corrección reentrada A/B, C inmediatamente previo alrequest, previous registrado en vivo/restauraciónRAII sin fallbackroot y ausencia de retry/cancel/delete. Logger se drena solo después de regresar controlador/scope; sink void real no inventaACK. Evento ProviderArmed usa pool normal existente; límites24+32+8. Preset nativo callbackNULL. ID devuelto escalar y monitor anterior120 polls / READY60 / missing3 sin cambios. MOD_OK noREADY ni render.
+
+Contract disponible se verifica en initialize y update. Host wrong/null/structsize/majors/functionpointers fallanclosed en tests del mismo helper; initialized_once nuncareset. Como antes, errorMOD_RESULT del callback puede llevar al loader a deshabilitar laDLL; no se garantiza que la solicitud ya encolada desaparezca. Las APIs no ofrecen una barrera contra hot reload/nuevaimagen; prohibición operacional explícita, no falso guardhost. No carga de DLL en harness propio; solo laboratorio del algoritmo conFakeBackend.
+
+Link y otros centros XZ>=1600 no certifican collider, agro/persecución ni navegación; snapshots G4B no validan el nuevo censo global/velocidades. Water volume, BG exacto/transform y overlap siguen sin verificar. Recursos REGISTERED no prueban READY GPU ni render. IDs carecen de generación/lease universal; la petición es asíncrona y E_OC puede ejecutar antes de READY. Lifetime de room/layer incierto; globales desconocidos pueden bloquear todo intento. Randomizer/otros mods pueden interferir. STOP no cancela, elimina ni hace rollback; FULL EXIT no revierte autosaves. Hot reload/re-enable en vivo prohibidos, sin mecanismo para impedir una nueva imagen DLL del host. Unloading custom BLOCKED independiente, sin reinvestigación.
+
+Auditoría estática acotada, no prueba seguridad arbitraria del motor/SDK/otrosmods ni ausencia de crash en el juego. Autorización de construcción y revisión privada no autoriza ensayo. El artefacto solo aparece después de gates runnerPASS y en repositorio privado; no originales ni DLLs sueltas en artifacts/Git. Dos fallos del pipeline fueron de nuestrofixture/comparator; conservados sin relajar producción. Último run reutiliza Windowslabs iguales por hashes; no etiqueta evidencias pasadas como ejecutadas de nuevo.

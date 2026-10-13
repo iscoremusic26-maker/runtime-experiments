@@ -1,0 +1,5 @@
+[1/1] Packaging devf_first_eoc_active -> <WORK>/build/mods/devf_first_eoc_active.dusk
+mod.json
+lib
+lib/windows-amd64
+lib/windows-amd64/mod.dll

@@ -1,0 +1,929 @@
+ devf_first_eoc_active
+
+ Timestamp is 6ace6478 (Tue Oct 13 17:03:52 2026)
+
+ Preferred load address is 0000000180000000
+
+ Start         Length     Name                   Class
+ 0001:00000000 0000a1c0H .text$mn                CODE
+ 0001:0000a1c0 00000040H .text$mn$00             CODE
+ 0001:0000a200 00000238H .text$x                 CODE
+ 0002:00000000 00000218H .idata$5                DATA
+ 0002:00000218 00000038H .00cfg                  DATA
+ 0002:00000250 00000008H .CRT$XCA                DATA
+ 0002:00000258 00000008H .CRT$XCZ                DATA
+ 0002:00000260 00000008H .CRT$XIA                DATA
+ 0002:00000268 00000008H .CRT$XIZ                DATA
+ 0002:00000270 00000008H .CRT$XPA                DATA
+ 0002:00000278 00000008H .CRT$XPZ                DATA
+ 0002:00000280 00000008H .CRT$XTA                DATA
+ 0002:00000288 00000018H .CRT$XTZ                DATA
+ 0002:00000290 00000000H .gehcont$y              DATA
+ 0002:00000290 00000000H .gfids$y                DATA
+ 0002:000002a0 00003ce0H .rdata                  DATA
+ 0002:00003f80 00000000H .rdata$CastGuardVftablesA DATA
+ 0002:00003f80 00000000H .rdata$CastGuardVftablesC DATA
+ 0002:00003f80 000008dcH .rdata$r                DATA
+ 0002:0000485c 0000005cH .rdata$voltmd           DATA
+ 0002:000048b8 000002e0H .rdata$zzzdbg           DATA
+ 0002:00004b98 00000008H .rtc$IAA                DATA
+ 0002:00004ba0 00000008H .rtc$IZZ                DATA
+ 0002:00004ba8 00000008H .rtc$TAA                DATA
+ 0002:00004bb0 00000008H .rtc$TZZ                DATA
+ 0002:00004bb8 00000af8H .xdata                  DATA
+ 0002:000056b0 00000090H .xdata$x                DATA
+ 0002:00005740 000000acH .edata                  DATA
+ 0002:000057ec 000000b4H .idata$2                DATA
+ 0002:000058a0 00000018H .idata$3                DATA
+ 0002:000058b8 00000218H .idata$4                DATA
+ 0002:00005ad0 00000840H .idata$6                DATA
+ 0003:00000000 0000bf48H .data                   DATA
+ 0003:0000bf48 00000050H .data$r                 DATA
+ 0003:0000bf98 00000258H .data$rs                DATA
+ 0003:0000c1f0 000000d0H .bss                    DATA
+ 0004:00000000 00000744H .pdata                  DATA
+ 0005:00000000 00000008H modmeta$a               DATA
+ 0005:00000008 00000148H modmeta$d               DATA
+ 0005:00000150 00000008H modmeta$z               DATA
+ 0006:00000000 00000060H .rsrc$01                DATA
+ 0006:00000060 00000180H .rsrc$02                DATA
+
+  Address         Publics by Value              Rva+Base               Lib:Object
+
+ 0000:00000000       __AbsoluteZero             0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_count   0000000000000000     <absolute>
+ 0000:00000000       ___safe_se_handler_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table   0000000000000000     <absolute>
+ 0000:00000000       __arm64x_extra_rfe_table_size 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_native_entrypoint 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata 0000000000000000     <absolute>
+ 0000:00000000       __arm64x_redirection_metadata_count 0000000000000000     <absolute>
+ 0000:00000000       __dynamic_value_reloc_table 0000000000000000     <absolute>
+ 0000:00000000       __enclave_config           0000000000000000     <absolute>
+ 0000:00000000       __guard_check_icall_a64n_fptr 0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_eh_cont_table      0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_count         0000000000000000     <absolute>
+ 0000:00000000       __guard_fids_table         0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_count          0000000000000000     <absolute>
+ 0000:00000000       __guard_iat_table          0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_count      0000000000000000     <absolute>
+ 0000:00000000       __guard_longjmp_table      0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_delayload_iat 0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_delayload_iat_copy 0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat     0000000000000000     <absolute>
+ 0000:00000000       __hybrid_auxiliary_iat_copy 0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map          0000000000000000     <absolute>
+ 0000:00000000       __hybrid_code_map_count    0000000000000000     <absolute>
+ 0000:00000000       __hybrid_image_info_bitfield 0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points 0000000000000000     <absolute>
+ 0000:00000000       __x64_code_ranges_to_entry_points_count 0000000000000000     <absolute>
+ 0000:00000100       __guard_flags              0000000000000100     <absolute>
+ 0000:00000000       __ImageBase                0000000180000000     <linker-defined>
+ 0001:00000000       ??$?8N$02@std@@YA_NAEBV?$array@N$02@0@0@Z 0000000180001000 f i experiment_core.cpp.obj
+ 0001:00000050       ??1LayerScope@first@devf@@QEAA@XZ 0000000180001050 f i experiment_core.cpp.obj
+ 0001:00000060       ?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z 0000000180001060 f   experiment_core.cpp.obj
+ 0001:00000d00       ?context_valid@first@devf@@YA_NAEBUFrame@12@@Z 0000000180001d00 f   experiment_core.cpp.obj
+ 0001:00000da0       ?key@first@devf@@YA?AUKey@12@AEBUOwner@12@@Z 0000000180001da0 f   experiment_core.cpp.obj
+ 0001:00000dd0       ?poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z 0000000180001dd0 f   experiment_core.cpp.obj
+ 0001:00001310       ?restore@LayerScope@first@devf@@QEAA_NXZ 0000000180002310 f   experiment_core.cpp.obj
+ 0001:00001380       ?shutdown@Controller@first@devf@@QEAAXXZ 0000000180002380 f   experiment_core.cpp.obj
+ 0001:00001430       ?stop@Controller@first@devf@@QEAAXW4Reason@23@@Z 0000000180002430 f   experiment_core.cpp.obj
+ 0001:000014c0       ?validate_owner@a2@devf@@YA?AW4Reason@12@AEBUOwner@12@@Z 00000001800024c0 f   pilot_readonly_bridge:controller_core.cpp.obj
+ 0001:000014c0       ?validate_owner@first@devf@@YA?AW4Reason@12@AEBUOwner@12@@Z 00000001800024c0 f   experiment_core.cpp.obj
+ 0001:00001610       ??0Frame@first@devf@@QEAA@XZ 0000000180002610 f i native_backend.cpp.obj
+ 0001:000018a0       ??0Observation@first@devf@@QEAA@XZ 00000001800028a0 f i native_backend.cpp.obj
+ 0001:00001ac0       ??0exception@std@@QEAA@AEBV01@@Z 0000000180002ac0 f i native_backend.cpp.obj
+ 0001:00001b00       ??0runtime_error@std@@QEAA@AEBV01@@Z 0000000180002b00 f i native_backend.cpp.obj
+ 0001:00001b40       ??0runtime_error@std@@QEAA@PEBD@Z 0000000180002b40 f i native_backend.cpp.obj
+ 0001:00001b90       ??1runtime_error@std@@UEAA@XZ 0000000180002b90 f i native_backend.cpp.obj
+ 0001:00001bb0       ??_Eexception@std@@UEAAPEAXI@Z 0000000180002bb0 f i native_backend.cpp.obj
+ 0001:00001bb0       ??_Eruntime_error@std@@UEAAPEAXI@Z 0000000180002bb0 f i native_backend.cpp.obj
+ 0001:00001bb0       ??_Gexception@std@@UEAAPEAXI@Z 0000000180002bb0 f i native_backend.cpp.obj
+ 0001:00001bb0       ??_Gruntime_error@std@@UEAAPEAXI@Z 0000000180002bb0 f i native_backend.cpp.obj
+ 0001:00001d70       ?current@NativeBackend@first@devf@@UEAAIXZ 0000000180002d70 f   native_backend.cpp.obj
+ 0001:00002250       ?observe@NativeBackend@first@devf@@UEAA?AUObservation@23@I@Z 0000000180003250 f   native_backend.cpp.obj
+ 0001:000025c0       ?registered@NativeBackend@first@devf@@UEAA_NI@Z 00000001800035c0 f   native_backend.cpp.obj
+ 0001:00002620       ?request@NativeBackend@first@devf@@UEAA?AURequestResult@23@AEBUPreset@23@@Z 0000000180003620 f   native_backend.cpp.obj
+ 0001:00002840       ?select@NativeBackend@first@devf@@UEAAXI@Z 0000000180003840 f   native_backend.cpp.obj
+ 0001:000028c0       ?service_available@NativeBackend@first@devf@@UEBA_NXZ 00000001800038c0 f   native_backend.cpp.obj
+ 0001:00002900       ?what@exception@std@@UEBAPEBDXZ 0000000180003900 f i native_backend.cpp.obj
+ 0001:00002920       devf_first_request_link_anchor 0000000180003920 f   native_backend.cpp.obj
+ 0001:00002930       ?current_admission@first@devf@@YA?AUAdmission@12@XZ 0000000180003930 f   active_admission.cpp.obj
+ 0001:00002970       ??_ENativeBackend@first@devf@@UEAAPEAXI@Z 0000000180003970 f i active_mod.cpp.obj
+ 0001:00002970       ??_GNativeBackend@first@devf@@UEAAPEAXI@Z 0000000180003970 f i active_mod.cpp.obj
+ 0001:000029d0       ?preflight@NativeBackend@first@devf@@UEAA?AUFrame@23@XZ 00000001800039d0 f i active_mod.cpp.obj
+ 0001:00002a60       __local_stdio_printf_options 0000000180003a60 f i active_mod.cpp.obj
+ 0001:00002a70       mod_initialize             0000000180003a70 f   active_mod.cpp.obj
+ 0001:00002d00       mod_shutdown               0000000180003d00 f   active_mod.cpp.obj
+ 0001:00002d40       mod_update                 0000000180003d40 f   active_mod.cpp.obj
+ 0001:00002ff0       snprintf                   0000000180003ff0 f i active_mod.cpp.obj
+ 0001:00003050       ?assess@pilot@devf@@YA?AUDecision@12@AEBUFrame@first@2@@Z 0000000180004050 f   policy.cpp.obj
+ 0001:00003920       ?freshness@pilot@devf@@YA?AW4GuardReason@12@AEBUFrame@first@2@0@Z 0000000180004920 f   policy.cpp.obj
+ 0001:00003ab0       ?guard_name@pilot@devf@@YAPEBDW4GuardReason@12@@Z 0000000180004ab0 f   policy.cpp.obj
+ 0001:00003bd0       ?metrics@pilot@devf@@YA?AUMetrics@12@AEBV?$array@N$02@std@@@Z 0000000180004bd0 f   policy.cpp.obj
+ 0001:00003de0       ??0Record@pilot@devf@@QEAA@XZ 0000000180004de0 f i trace.cpp.obj
+ 0001:00003ed0       ?append@Trace@pilot@devf@@AEAA_NURecord@23@_N@Z 0000000180004ed0 f   trace.cpp.obj
+ 0001:000042a0       ?drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z 00000001800052a0 f   trace.cpp.obj
+ 0001:00004460       ?format_record@pilot@devf@@YA_NAEBURecord@12@PEAD_K@Z 0000000180005460 f   trace.cpp.obj
+ 0001:00004cb0       ?record@Trace@pilot@devf@@QEAAXW4Event@23@AEBVController@first@3@PEBUFrame@63@PEBUObservation@63@H@Z 0000000180005cb0 f   trace.cpp.obj
+ 0001:00004fab       ?fpcLy_SetCurrentLayer@@YAXPEAUlayer_class@@@Z 0000000180005fab f   windows-amd64:dusklight.exe
+ 0001:00004fb1       ?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ 0000000180005fb1 f   windows-amd64:dusklight.exe
+ 0001:00004fb7       ?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ 0000000180005fb7 f   windows-amd64:dusklight.exe
+ 0001:00004fbd       ?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z 0000000180005fbd f   windows-amd64:dusklight.exe
+ 0001:00004fc3       ?fpcCtIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z 0000000180005fc3 f   windows-amd64:dusklight.exe
+ 0001:00004fc9       ?fpcM_IsCreating@@YAHI@Z   0000000180005fc9 f   windows-amd64:dusklight.exe
+ 0001:00004fcf       ?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z 0000000180005fcf f   windows-amd64:dusklight.exe
+ 0001:00004fd5       ?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z 0000000180005fd5 f   windows-amd64:dusklight.exe
+ 0001:00004fdb       ?getLayerNo@dComIfG_play_c@@SAHH@Z 0000000180005fdb f   windows-amd64:dusklight.exe
+ 0001:00004fe1       ?dComIfGp_getStartStageName@@YAPEBDXZ 0000000180005fe1 f   windows-amd64:dusklight.exe
+ 0001:00004fe7       ?dComIfGp_isEnableNextStage@@YAHXZ 0000000180005fe7 f   windows-amd64:dusklight.exe
+ 0001:00004fed       ?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z 0000000180005fed f   windows-amd64:dusklight.exe
+ 0001:00004ff3       ?dComIfGp_event_runCheck@@YAHXZ 0000000180005ff3 f   windows-amd64:dusklight.exe
+ 0001:00004ff9       ?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z 0000000180005ff9 f   windows-amd64:dusklight.exe
+ 0001:00004fff       ?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z 0000000180005fff f   windows-amd64:dusklight.exe
+ 0001:00005010       ?read_only_preflight@first@devf@@YA?AUFrame@12@XZ 0000000180006010 f   pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0001:000055f0       ?set_capture_update@pilot@devf@@YAX_K@Z 00000001800065f0 f   pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0001:00005600       ?census_values@pilot@devf@@YAAEAVCensusValues@12@XZ 0000000180006600 f   pilot_readonly_bridge:census_values.cpp.obj
+ 0001:00005610       ?collect_actor@pilot@devf@@YAXIIHAEBV?$array@N$02@std@@I_N10N@Z 0000000180006610 f   pilot_readonly_bridge:census_values.cpp.obj
+ 0001:00005760       ?reset@CensusValues@pilot@devf@@QEAAXI_K@Z 0000000180006760 f   pilot_readonly_bridge:census_values.cpp.obj
+ 0001:00005d80       ??1dBgS_ObjGndChk@@UEAA@XZ 0000000180006d80 f i pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00005db0       ??_EdBgS_ObjGndChk@@WCA@EAAPEAXI@Z 0000000180006db0 f i pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00005dbc       ??_EdBgS_ObjGndChk@@WFI@EAAPEAXI@Z 0000000180006dbc f i pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00005dc8       ??_EdBgS_ObjGndChk@@WHA@EAAPEAXI@Z 0000000180006dc8 f i pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00005de0       ??_EdBgS_ObjGndChk@@UEAAPEAXI@Z 0000000180006de0 f i pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00005de0       ??_GdBgS_ObjGndChk@@UEAAPEAXI@Z 0000000180006de0 f i pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00005e40       ?capture_native@g4b@devf@@YA?AUCapture@12@I@Z 0000000180006e40 f   pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:000061e0       ?collect_bg@g4b@devf@@YAXAEAUCapture@12@@Z 00000001800071e0 f   pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00006410       ?classify_actor@g4b@devf@@YA?AW4Occupancy@12@AEBUActor@12@@Z 0000000180007410 f   pilot_readonly_bridge:capture.cpp.obj
+ 0001:000064f0       ?distance_to_C@g4b@devf@@YANAEBV?$array@N$02@std@@@Z 00000001800074f0 f   pilot_readonly_bridge:capture.cpp.obj
+ 0001:00006590       ?evaluate@g4b@devf@@YAXAEAUCapture@12@@Z 0000000180007590 f   pilot_readonly_bridge:capture.cpp.obj
+ 0001:00006a60       ?sphere_box_candidate@g4b@devf@@YA_NAEBV?$array@N$02@std@@0AEAN@Z 0000000180007a60 f   pilot_readonly_bridge:capture.cpp.obj
+ 0001:00006bd0       ??0Snapshot@a1@devf@@QEAA@XZ 0000000180007bd0 f i pilot_readonly_bridge:census_reader.cpp.obj
+ 0001:00006da0       ?capture_native@a1@devf@@YA?AUSnapshot@12@XZ 0000000180007da0 f   pilot_readonly_bridge:census_reader.cpp.obj
+ 0001:000086f0       ?sidecar@g4b@devf@@YAAEAUCapture@12@XZ 00000001800096f0 f   pilot_readonly_bridge:census_reader.cpp.obj
+ 0001:00008700       ?capture_owner@a2@devf@@YA?AUOwner@12@_N0@Z 0000000180009700 f   pilot_readonly_bridge:room_owner_resolver.cpp.obj
+ 0001:00008cf0       ?valid_values@a1@devf@@YA_NAEBUSnapshot@12@@Z 0000000180009cf0 f   pilot_readonly_bridge:core.cpp.obj
+ 0001:00009150       __std_max_element_d_       000000018000a150 f   msvcprt:vector_algorithms.obj
+ 0001:000091c0       __report_gsfailure         000000018000a1c0 f   MSVCRT:gs_report.obj
+ 0001:000091d0       __GSHandlerCheck           000000018000a1d0 f   MSVCRT:gshandler.obj
+ 0001:000091f0       __GSHandlerCheckCommon     000000018000a1f0 f   MSVCRT:gshandler.obj
+ 0001:000093d0       __GSHandlerCheck_EH4       000000018000a3d0 f   MSVCRT:gshandlereh4.obj
+ 0001:00009450       __chkstk                   000000018000a450 f   MSVCRT:chkstk.obj
+ 0001:00009450       _alloca_probe              000000018000a450 f   MSVCRT:chkstk.obj
+ 0001:000094b0       __security_check_cookie    000000018000a4b0 f   MSVCRT:amdsecgs.obj
+ 0001:000094d0       ??3@YAXPEAX_K@Z            000000018000a4d0 f   MSVCRT:delete_scalar_size.obj
+ 0001:000094e0       ??_Etype_info@@UEAAPEAXI@Z 000000018000a4e0 f i MSVCRT:std_type_info_static.obj
+ 0001:000094e0       ??_Gtype_info@@UEAAPEAXI@Z 000000018000a4e0 f i MSVCRT:std_type_info_static.obj
+ 0001:00009860       _DllMainCRTStartup         000000018000a860 f   MSVCRT:dll_dllmain.obj
+ 0001:000098a0       __isa_available_init       000000018000a8a0 f   MSVCRT:cpu_disp.obj
+ 0001:00009b50       _guard_check_icall_nop     000000018000ab50 f i MSVCRT:guard_support.obj
+ 0001:00009b60       ??3@YAXPEAX@Z              000000018000ab60 f   MSVCRT:delete_scalar.obj
+ 0001:00009b70       __security_init_cookie     000000018000ab70 f   MSVCRT:gs_support.obj
+ 0001:00009c30       DllMain                    000000018000ac30 f   MSVCRT:dll_dllmain_stub.obj
+ 0001:00009c60       ?__scrt_initialize_type_info@@YAXXZ 000000018000ac60 f   MSVCRT:tncleanup.obj
+ 0001:00009c70       ?__scrt_uninitialize_type_info@@YAXXZ 000000018000ac70 f   MSVCRT:tncleanup.obj
+ 0001:00009c80       __local_stdio_scanf_options 000000018000ac80 f i MSVCRT:default_local_stdio_options.obj
+ 0001:00009c90       __scrt_initialize_default_local_stdio_options 000000018000ac90 f   MSVCRT:default_local_stdio_options.obj
+ 0001:00009cb0       __scrt_acquire_startup_lock 000000018000acb0 f   MSVCRT:utility.obj
+ 0001:00009d00       __scrt_dllmain_after_initialize_c 000000018000ad00 f   MSVCRT:utility.obj
+ 0001:00009d40       __scrt_dllmain_before_initialize_c 000000018000ad40 f   MSVCRT:utility.obj
+ 0001:00009dc0       __scrt_dllmain_crt_thread_attach 000000018000adc0 f   MSVCRT:utility.obj
+ 0001:00009df0       __scrt_dllmain_crt_thread_detach 000000018000adf0 f   MSVCRT:utility.obj
+ 0001:00009e10       __scrt_dllmain_exception_filter 000000018000ae10 f   MSVCRT:utility.obj
+ 0001:00009e60       __scrt_dllmain_uninitialize_c 000000018000ae60 f   MSVCRT:utility.obj
+ 0001:00009ea0       __scrt_dllmain_uninitialize_critical 000000018000aea0 f   MSVCRT:utility.obj
+ 0001:00009ec0       __scrt_initialize_crt      000000018000aec0 f   MSVCRT:utility.obj
+ 0001:00009f00       __scrt_is_nonwritable_in_current_image 000000018000af00 f   MSVCRT:utility.obj
+ 0001:00009fa0       __scrt_release_startup_lock 000000018000afa0 f   MSVCRT:utility.obj
+ 0001:00009fd0       __scrt_uninitialize_crt    000000018000afd0 f   MSVCRT:utility.obj
+ 0001:0000a000       __scrt_get_dyn_tls_init_callback 000000018000b000 f   MSVCRT:dyn_tls_init.obj
+ 0001:0000a010       __scrt_fastfail            000000018000b010 f   MSVCRT:utility_desktop.obj
+ 0001:0000a020       _RTC_Initialize            000000018000b020 f   MSVCRT:initsect.obj
+ 0001:0000a070       _RTC_Terminate             000000018000b070 f   MSVCRT:initsect.obj
+ 0001:0000a0c0       _get_startup_argv_mode     000000018000b0c0 f   MSVCRT:argv_mode.obj
+ 0001:0000a0d0       __scrt_is_ucrt_dll_in_use  000000018000b0d0 f   MSVCRT:ucrt_detection.obj
+ 0001:0000a0dc       __CxxFrameHandler4         000000018000b0dc f   vcruntime:VCRUNTIME140_1.dll
+ 0001:0000a0e2       __std_exception_copy       000000018000b0e2 f   vcruntime:VCRUNTIME140.dll
+ 0001:0000a0e8       __std_exception_destroy    000000018000b0e8 f   vcruntime:VCRUNTIME140.dll
+ 0001:0000a0ee       _CxxThrowException         000000018000b0ee f   vcruntime:VCRUNTIME140.dll
+ 0001:0000a0f4       memcpy                     000000018000b0f4 f   vcruntime:VCRUNTIME140.dll
+ 0001:0000a0fa       memset                     000000018000b0fa f   vcruntime:VCRUNTIME140.dll
+ 0001:0000a100       __C_specific_handler       000000018000b100 f   vcruntime:VCRUNTIME140.dll
+ 0001:0000a106       __std_type_info_destroy_list 000000018000b106 f   vcruntime:VCRUNTIME140.dll
+ 0001:0000a10c       sqrt                       000000018000b10c f   ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0001:0000a112       strncmp                    000000018000b112 f   ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0001:0000a118       _initterm                  000000018000b118 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000a11e       _initterm_e                000000018000b11e f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000a124       free                       000000018000b124 f   ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0001:0000a12a       _seh_filter_dll            000000018000b12a f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000a130       _configure_narrow_argv     000000018000b130 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000a136       _initialize_narrow_environment 000000018000b136 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000a13c       _initialize_onexit_table   000000018000b13c f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000a142       _execute_onexit_table      000000018000b142 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000a148       _cexit                     000000018000b148 f   ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0001:0000a14e       ?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z 000000018000b14e f   windows-amd64:dusklight.exe
+ 0001:0000a154       ?SetObj@dBgS_PolyPassChk@@QEAAXXZ 000000018000b154 f   windows-amd64:dusklight.exe
+ 0001:0000a15a       ??0dBgS_GndChk@@QEAA@XZ    000000018000b15a f   windows-amd64:dusklight.exe
+ 0001:0000a160       ??1dBgS_GndChk@@UEAA@XZ    000000018000b160 f   windows-amd64:dusklight.exe
+ 0001:0000a166       ??0dBgS_ObjGndChk_Wtr@@QEAA@XZ 000000018000b166 f   windows-amd64:dusklight.exe
+ 0001:0000a16c       ??1dBgS_ObjGndChk_Wtr@@UEAA@XZ 000000018000b16c f   windows-amd64:dusklight.exe
+ 0001:0000a172       ?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z 000000018000b172 f   windows-amd64:dusklight.exe
+ 0001:0000a178       ?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z 000000018000b178 f   windows-amd64:dusklight.exe
+ 0001:0000a17e       ?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z 000000018000b17e f   windows-amd64:dusklight.exe
+ 0001:0000a184       ?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z 000000018000b184 f   windows-amd64:dusklight.exe
+ 0001:0000a18a       ?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z 000000018000b18a f   windows-amd64:dusklight.exe
+ 0001:0000a190       ?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z 000000018000b190 f   windows-amd64:dusklight.exe
+ 0001:0000a196       ?dComIfG_Bgsp@@YAAEAVdBgS@@XZ 000000018000b196 f   windows-amd64:dusklight.exe
+ 0001:0000a1a0       __acrt_initialize          000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __acrt_thread_attach       000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __acrt_thread_detach       000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __acrt_uninitialize        000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __acrt_uninitialize_critical 000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __scrt_stub_for_acrt_initialize 000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __scrt_stub_for_acrt_thread_attach 000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __scrt_stub_for_acrt_thread_detach 000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __scrt_stub_for_acrt_uninitialize 000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __scrt_stub_for_acrt_uninitialize_critical 000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __vcrt_initialize          000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __vcrt_thread_attach       000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __vcrt_thread_detach       000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __vcrt_uninitialize        000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1a0       __vcrt_uninitialize_critical 000000018000b1a0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1b0       __scrt_stub_for_is_c_termination_complete 000000018000b1b0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1b0       _is_c_termination_complete 000000018000b1b0 f   MSVCRT:ucrt_stubs.obj
+ 0001:0000a1d0       _guard_dispatch_icall_nop  000000018000b1d0 f   MSVCRT:guard_dispatch.obj
+ 0001:0000a1f0       _guard_xfg_dispatch_icall_nop 000000018000b1f0 f   MSVCRT:guard_xfg_dispatch.obj
+ 0002:00000000       __imp_DisableThreadLibraryCalls 000000018000c000     kernel32:KERNEL32.dll
+ 0002:00000008       __imp_InitializeSListHead  000000018000c008     kernel32:KERNEL32.dll
+ 0002:00000010       __imp_QueryPerformanceCounter 000000018000c010     kernel32:KERNEL32.dll
+ 0002:00000018       __imp_GetSystemTimeAsFileTime 000000018000c018     kernel32:KERNEL32.dll
+ 0002:00000020       __imp_GetCurrentThreadId   000000018000c020     kernel32:KERNEL32.dll
+ 0002:00000028       __imp_GetCurrentProcessId  000000018000c028     kernel32:KERNEL32.dll
+ 0002:00000030       \177KERNEL32_NULL_THUNK_DATA 000000018000c030     kernel32:KERNEL32.dll
+ 0002:00000038       __imp___std_type_info_destroy_list 000000018000c038     vcruntime:VCRUNTIME140.dll
+ 0002:00000040       __imp___C_specific_handler 000000018000c040     vcruntime:VCRUNTIME140.dll
+ 0002:00000048       __imp_memset               000000018000c048     vcruntime:VCRUNTIME140.dll
+ 0002:00000050       __imp_memcpy               000000018000c050     vcruntime:VCRUNTIME140.dll
+ 0002:00000058       __imp__CxxThrowException   000000018000c058     vcruntime:VCRUNTIME140.dll
+ 0002:00000060       __imp___std_exception_destroy 000000018000c060     vcruntime:VCRUNTIME140.dll
+ 0002:00000068       __imp___std_exception_copy 000000018000c068     vcruntime:VCRUNTIME140.dll
+ 0002:00000070       \177VCRUNTIME140_NULL_THUNK_DATA 000000018000c070     vcruntime:VCRUNTIME140.dll
+ 0002:00000078       __imp___CxxFrameHandler4   000000018000c078     vcruntime:VCRUNTIME140_1.dll
+ 0002:00000080       \177VCRUNTIME140_1_NULL_THUNK_DATA 000000018000c080     vcruntime:VCRUNTIME140_1.dll
+ 0002:00000088       __imp_free                 000000018000c088     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:00000090       \177api-ms-win-crt-heap-l1-1-0_NULL_THUNK_DATA 000000018000c090     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:00000098       __imp_sqrt                 000000018000c098     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0002:000000a0       \177api-ms-win-crt-math-l1-1-0_NULL_THUNK_DATA 000000018000c0a0     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0002:000000a8       __imp__seh_filter_dll      000000018000c0a8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000b0       __imp__initialize_onexit_table 000000018000c0b0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000b8       __imp__initialize_narrow_environment 000000018000c0b8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000c0       __imp__execute_onexit_table 000000018000c0c0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000c8       __imp__initterm_e          000000018000c0c8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000d0       __imp__cexit               000000018000c0d0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000d8       __imp__initterm            000000018000c0d8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000e0       __imp__configure_narrow_argv 000000018000c0e0     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000e8       \177api-ms-win-crt-runtime-l1-1-0_NULL_THUNK_DATA 000000018000c0e8     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:000000f0       __imp___stdio_common_vsprintf 000000018000c0f0     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:000000f8       \177api-ms-win-crt-stdio-l1-1-0_NULL_THUNK_DATA 000000018000c0f8     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00000100       __imp_strncmp              000000018000c100     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:00000108       \177api-ms-win-crt-string-l1-1-0_NULL_THUNK_DATA 000000018000c108     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:00000110       __imp_?mNextStayNo@dStage_roomControl_c@@2CA 000000018000c110     windows-amd64:dusklight.exe
+ 0002:00000118       __imp_?mStayNo@dStage_roomControl_c@@2CA 000000018000c118     windows-amd64:dusklight.exe
+ 0002:00000120       __imp_?mProcID@dStage_roomControl_c@@2IA 000000018000c120     windows-amd64:dusklight.exe
+ 0002:00000128       __imp_?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A 000000018000c128     windows-amd64:dusklight.exe
+ 0002:00000130       __imp_?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z 000000018000c130     windows-amd64:dusklight.exe
+ 0002:00000138       __imp_?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z 000000018000c138     windows-amd64:dusklight.exe
+ 0002:00000140       __imp_?dComIfGp_event_runCheck@@YAHXZ 000000018000c140     windows-amd64:dusklight.exe
+ 0002:00000148       __imp_?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z 000000018000c148     windows-amd64:dusklight.exe
+ 0002:00000150       __imp_??1dBgS_ObjGndChk_Wtr@@UEAA@XZ 000000018000c150     windows-amd64:dusklight.exe
+ 0002:00000158       __imp_?dComIfGp_isEnableNextStage@@YAHXZ 000000018000c158     windows-amd64:dusklight.exe
+ 0002:00000160       __imp_?dComIfGp_getStartStageName@@YAPEBDXZ 000000018000c160     windows-amd64:dusklight.exe
+ 0002:00000168       __imp_?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z 000000018000c168     windows-amd64:dusklight.exe
+ 0002:00000170       __imp_?SetObj@dBgS_PolyPassChk@@QEAAXXZ 000000018000c170     windows-amd64:dusklight.exe
+ 0002:00000178       __imp_??0dBgS_GndChk@@QEAA@XZ 000000018000c178     windows-amd64:dusklight.exe
+ 0002:00000180       __imp_??1dBgS_GndChk@@UEAA@XZ 000000018000c180     windows-amd64:dusklight.exe
+ 0002:00000188       __imp_??0dBgS_ObjGndChk_Wtr@@QEAA@XZ 000000018000c188     windows-amd64:dusklight.exe
+ 0002:00000190       __imp_?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z 000000018000c190     windows-amd64:dusklight.exe
+ 0002:00000198       __imp_?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z 000000018000c198     windows-amd64:dusklight.exe
+ 0002:000001a0       __imp_?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z 000000018000c1a0     windows-amd64:dusklight.exe
+ 0002:000001a8       __imp_?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z 000000018000c1a8     windows-amd64:dusklight.exe
+ 0002:000001b0       __imp_?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z 000000018000c1b0     windows-amd64:dusklight.exe
+ 0002:000001b8       __imp_?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z 000000018000c1b8     windows-amd64:dusklight.exe
+ 0002:000001c0       __imp_?dComIfG_Bgsp@@YAAEAVdBgS@@XZ 000000018000c1c0     windows-amd64:dusklight.exe
+ 0002:000001c8       __imp_?getLayerNo@dComIfG_play_c@@SAHH@Z 000000018000c1c8     windows-amd64:dusklight.exe
+ 0002:000001d0       __imp_?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z 000000018000c1d0     windows-amd64:dusklight.exe
+ 0002:000001d8       __imp_?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z 000000018000c1d8     windows-amd64:dusklight.exe
+ 0002:000001e0       __imp_?fpcM_IsCreating@@YAHI@Z 000000018000c1e0     windows-amd64:dusklight.exe
+ 0002:000001e8       __imp_?fpcCtIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z 000000018000c1e8     windows-amd64:dusklight.exe
+ 0002:000001f0       __imp_?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z 000000018000c1f0     windows-amd64:dusklight.exe
+ 0002:000001f8       __imp_?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ 000000018000c1f8     windows-amd64:dusklight.exe
+ 0002:00000200       __imp_?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ 000000018000c200     windows-amd64:dusklight.exe
+ 0002:00000208       __imp_?fpcLy_SetCurrentLayer@@YAXPEAUlayer_class@@@Z 000000018000c208     windows-amd64:dusklight.exe
+ 0002:00000210       \177dusklight_NULL_THUNK_DATA 000000018000c210     windows-amd64:dusklight.exe
+ 0002:00000218       __guard_check_icall_fptr   000000018000c218     MSVCRT:guard_support.obj
+ 0002:00000220       __guard_xfg_check_icall_fptr 000000018000c220     MSVCRT:guard_support.obj
+ 0002:00000228       __guard_dispatch_icall_fptr 000000018000c228     MSVCRT:guard_support.obj
+ 0002:00000230       __guard_xfg_dispatch_icall_fptr 000000018000c230     MSVCRT:guard_support.obj
+ 0002:00000238       __guard_xfg_table_dispatch_icall_fptr 000000018000c238     MSVCRT:guard_support.obj
+ 0002:00000240       __castguard_check_failure_os_handled_fptr 000000018000c240     MSVCRT:guard_support.obj
+ 0002:00000248       __guard_memcpy_fptr        000000018000c248     vcruntime:softmemtag.obj
+ 0002:00000250       __xc_a                     000000018000c250     MSVCRT:initializers.obj
+ 0002:00000258       __xc_z                     000000018000c258     MSVCRT:initializers.obj
+ 0002:00000260       __xi_a                     000000018000c260     MSVCRT:initializers.obj
+ 0002:00000268       __xi_z                     000000018000c268     MSVCRT:initializers.obj
+ 0002:00000270       __xp_a                     000000018000c270     MSVCRT:initializers.obj
+ 0002:00000278       __xp_z                     000000018000c278     MSVCRT:initializers.obj
+ 0002:00000280       __xt_a                     000000018000c280     MSVCRT:initializers.obj
+ 0002:00000288       __xt_z                     000000018000c288     MSVCRT:initializers.obj
+ 0002:000002a0       ?candidate@first@devf@@3V?$array@N$02@std@@B 000000018000c2a0     experiment_core.cpp.obj
+ 0002:000002b8       __real@47efffffe0000000    000000018000c2b8     experiment_core.cpp.obj
+ 0002:000002c0       __xmm@00000000000000000000000000000003 000000018000c2c0     experiment_core.cpp.obj
+ 0002:000002d0       __xmm@7fffffffffffffff7fffffffffffffff 000000018000c2d0     experiment_core.cpp.obj
+ 0002:000004e8       ??_7exception@std@@6B@     000000018000c4e8     native_backend.cpp.obj
+ 0002:000004f8       ??_C@_0BC@EOODALEL@Unknown?5exception@ 000000018000c4f8     native_backend.cpp.obj
+ 0002:00000518       ??_7runtime_error@std@@6B@ 000000018000c518     native_backend.cpp.obj
+ 0002:00000528       ??_C@_04JKDCBGBE@E_OC@     000000018000c528     native_backend.cpp.obj
+ 0002:00000530       ??_C@_05NFPEAGJA@E_ocb@    000000018000c530     native_backend.cpp.obj
+ 0002:00000538       ??_C@_0BN@PDKKABEN@registered?5layer?5unavailable@ 000000018000c538     native_backend.cpp.obj
+ 0002:00000558       mod_meta                   000000018000c558     active_mod.cpp.obj
+ 0002:00000570       ??_C@_02DKCKIIND@?$CFs@    000000018000c570     active_mod.cpp.obj
+ 0002:00000580       ??_7NativeBackend@first@devf@@6B@ 000000018000c580     active_mod.cpp.obj
+ 0002:000005c0       ??_C@_05EPONJPOE@2?40?43@  000000018000c5c0     active_mod.cpp.obj
+ 0002:000005c8       ??_C@_07LHDHKKMJ@2?40?43?40@ 000000018000c5c8     active_mod.cpp.obj
+ 0002:000005f0       ??_C@_0GB@NKPMEMO@Official2?40?43?5Host2?42?5Log1?5Game2@ 000000018000c5f0     active_mod.cpp.obj
+ 0002:00000654       ??_C@_04OKGDLNCL@NONE@     000000018000c654     policy.cpp.obj
+ 0002:00000660       ??_C@_0O@KAENHKFD@CAPTURE_STALE@ 000000018000c660     policy.cpp.obj
+ 0002:00000670       ??_C@_0N@HKCJKBIB@LINK_UNKNOWN@ 000000018000c670     policy.cpp.obj
+ 0002:00000680       ??_C@_0P@FKJIMIE@LINK_TOO_CLOSE@ 000000018000c680     policy.cpp.obj
+ 0002:00000690       ??_C@_0M@DFFFHPM@LINK_MOVING@ 000000018000c690     policy.cpp.obj
+ 0002:000006a0       ??_C@_0N@FDJLLICC@ACTOR_NEAR_C@ 000000018000c6a0     policy.cpp.obj
+ 0002:000006b0       ??_C@_0BI@PICJNMMH@ACTOR_CENSUS_INCOMPLETE@ 000000018000c6b0     policy.cpp.obj
+ 0002:000006c8       ??_C@_0BB@MOLNPJMH@DISTANCE_INVALID@ 000000018000c6c8     policy.cpp.obj
+ 0002:000006e0       ??_C@_0BD@OAKMIJLN@BG_SCAN_INCOMPLETE@ 000000018000c6e0     policy.cpp.obj
+ 0002:000006f8       ??_C@_09EDENJJNA@BG_NEAR_C@ 000000018000c6f8     policy.cpp.obj
+ 0002:00000708       ??_C@_0BJ@DEIOKAHJ@WATER_PROBE_NOT_VERIFIED@ 000000018000c708     policy.cpp.obj
+ 0002:00000728       ??_C@_0BA@MBPMDDDD@GROUND_MISMATCH@ 000000018000c728     policy.cpp.obj
+ 0002:00000738       ??_C@_0BJ@PILDOKAO@RESOURCES_NOT_REGISTERED@ 000000018000c738     policy.cpp.obj
+ 0002:00000758       ??_C@_0BO@PFJFNOFM@LINK_CHANGED_DURING_PREFLIGHT@ 000000018000c758     policy.cpp.obj
+ 0002:00000778       ??_C@_0BP@PPIBEDKC@ACTOR_CHANGED_DURING_PREFLIGHT@ 000000018000c778     policy.cpp.obj
+ 0002:00000798       ??_C@_07NFANNNEC@UNKNOWN@  000000018000c798     policy.cpp.obj
+ 0002:000007a0       __real@3f847ae147ae147b    000000018000c7a0     policy.cpp.obj
+ 0002:000007a8       __real@4099000000000000    000000018000c7a8     policy.cpp.obj
+ 0002:000007b0       __real@40efcdfa80000000    000000018000c7b0     policy.cpp.obj
+ 0002:000007b8       __real@c0b2c6bc00000000    000000018000c7b8     policy.cpp.obj
+ 0002:000007c0       __real@c0ba497b20000000    000000018000c7c0     policy.cpp.obj
+ 0002:000007c8       ??_C@_0DA@GMIAOGME@PACKAGE_PROVIDER_ARMED_NOT_EXECU@ 000000018000c7c8     trace.cpp.obj
+ 0002:000007f8       ??_C@_0M@NKKPMNDD@MODULE_INIT@ 000000018000c7f8     trace.cpp.obj
+ 0002:00000808       ??_C@_0N@IGBBAKKI@ABI_VERIFIED@ 000000018000c808     trace.cpp.obj
+ 0002:00000818       ??_C@_0L@GCHMIKIK@ABI_FAILED@ 000000018000c818     trace.cpp.obj
+ 0002:00000828       ??_C@_0BJ@MILGIHIP@SESSION_ADMISSION_DENIED@ 000000018000c828     trace.cpp.obj
+ 0002:00000848       ??_C@_0BE@KADPPCLP@SESSION_GATE_DENIED@ 000000018000c848     trace.cpp.obj
+ 0002:00000860       ??_C@_0BB@NBPPFJAL@PREFLIGHT_REJECT@ 000000018000c860     trace.cpp.obj
+ 0002:00000878       ??_C@_0BF@PIGKIFDK@LOCATION_POLICY_PASS@ 000000018000c878     trace.cpp.obj
+ 0002:00000890       ??_C@_0BF@MLCBMPCA@LOCATION_POLICY_FAIL@ 000000018000c890     trace.cpp.obj
+ 0002:000008a8       ??_C@_0BE@NEHKKMAJ@FIRST_PRECHECK_PASS@ 000000018000c8a8     trace.cpp.obj
+ 0002:000008c0       ??_C@_0BE@ODEHLHAF@FRESH_PRECHECK_PASS@ 000000018000c8c0     trace.cpp.obj
+ 0002:000008d8       ??_C@_0BB@IFIAHKOO@ATTEMPT_CONSUMED@ 000000018000c8d8     trace.cpp.obj
+ 0002:000008f0       ??_C@_0P@HKGCDGPB@LAYER_SELECTED@ 000000018000c8f0     trace.cpp.obj
+ 0002:00000900       ??_C@_0BF@IFDMKPGJ@CREATE_REQUEST_BEGIN@ 000000018000c900     trace.cpp.obj
+ 0002:00000918       ??_C@_0BG@BMJOMMG@CREATE_REQUEST_RESULT@ 000000018000c918     trace.cpp.obj
+ 0002:00000930       ??_C@_0BB@DOFBFJBG@LAYER_RESTORE_OK@ 000000018000c930     trace.cpp.obj
+ 0002:00000948       ??_C@_0P@CFPMJHII@RESTORE_FAILED@ 000000018000c948     trace.cpp.obj
+ 0002:00000958       ??_C@_09FLPNMBOH@REQUESTED@ 000000018000c958     trace.cpp.obj
+ 0002:00000968       ??_C@_07GCMJHCKE@PENDING@  000000018000c968     trace.cpp.obj
+ 0002:00000970       ??_C@_0O@DAEFMIEF@PENDING_PHASE@ 000000018000c970     trace.cpp.obj
+ 0002:00000980       ??_C@_0BF@POIEIKKJ@ACTOR_READY_OBSERVED@ 000000018000c980     trace.cpp.obj
+ 0002:00000998       ??_C@_0BP@FJHPNFPF@READY_MONITOR_BUDGET_EXHAUSTED@ 000000018000c998     trace.cpp.obj
+ 0002:000009b8       ??_C@_0N@OBOKLIAP@STOP_SESSION@ 000000018000c9b8     trace.cpp.obj
+ 0002:000009c8       ??_C@_0CC@HNIJDGAC@FULL_EXIT_REQUIRED_ON_UNCERTAINT@ 000000018000c9c8     trace.cpp.obj
+ 0002:000009f0       ??_C@_08CHKOCPBH@SHUTDOWN@ 000000018000c9f0     trace.cpp.obj
+ 0002:00000a00       ??_C@_0BF@FGMHHFNE@LOG_BUDGET_EXHAUSTED@ 000000018000ca00     trace.cpp.obj
+ 0002:00000a18       ??_C@_0BA@DNANPDCF@LOG_SINK_FAILED@ 000000018000ca18     trace.cpp.obj
+ 0002:00000a28       ??_C@_07DNMCHKDN@BLOCKED@  000000018000ca28     trace.cpp.obj
+ 0002:00000a30       ??_C@_08CCLJIAIG@REJECTED@ 000000018000ca30     trace.cpp.obj
+ 0002:00000a3c       ??_C@_06OHCJKBJM@FAILED@   000000018000ca3c     trace.cpp.obj
+ 0002:00000a44       ??_C@_04OHJIHAFH@None@     000000018000ca44     trace.cpp.obj
+ 0002:00000a50       ??_C@_08EONHCPJK@Disarmed@ 000000018000ca50     trace.cpp.obj
+ 0002:00000a5c       ??_C@_04CPPPJGME@Host@     000000018000ca5c     trace.cpp.obj
+ 0002:00000a64       ??_C@_06JGMANLDI@Thread@   000000018000ca64     trace.cpp.obj
+ 0002:00000a70       ??_C@_07GDNEHDJK@Context@  000000018000ca70     trace.cpp.obj
+ 0002:00000a78       ??_C@_08EPBENDNC@Registry@ 000000018000ca78     trace.cpp.obj
+ 0002:00000a84       ??_C@_06NPAAKFED@Player@   000000018000ca84     trace.cpp.obj
+ 0002:00000a8c       ??_C@_04OKAPPFIB@Node@     000000018000ca8c     trace.cpp.obj
+ 0002:00000a98       ??_C@_07JPNMPAFE@Binding@  000000018000ca98     trace.cpp.obj
+ 0002:00000aa0       ??_C@_0L@CACIDCOI@Transition@ 000000018000caa0     trace.cpp.obj
+ 0002:00000ab0       ??_C@_0P@FEDGFLOI@PendingContext@ 000000018000cab0     trace.cpp.obj
+ 0002:00000ac0       ??_C@_08CAGLMDLD@Previous@ 000000018000cac0     trace.cpp.obj
+ 0002:00000ad0       ??_C@_08GCJNLIKG@Position@ 000000018000cad0     trace.cpp.obj
+ 0002:00000ae0       ??_C@_0N@DKDFJODK@Revalidation@ 000000018000cae0     trace.cpp.obj
+ 0002:00000af0       ??_C@_07GHLOKJOA@Reentry@  000000018000caf0     trace.cpp.obj
+ 0002:00000af8       ??_C@_08BGOOMJFK@Consumed@ 000000018000caf8     trace.cpp.obj
+ 0002:00000b08       ??_C@_09HKIBPBNJ@Selection@ 000000018000cb08     trace.cpp.obj
+ 0002:00000b18       ??_C@_07LMLHFMEG@Service@  000000018000cb18     trace.cpp.obj
+ 0002:00000b20       ??_C@_09IMAPJMDG@InvalidId@ 000000018000cb20     trace.cpp.obj
+ 0002:00000b30       ??_C@_09FBNMMHMJ@Exception@ 000000018000cb30     trace.cpp.obj
+ 0002:00000b40       ??_C@_07PJAOEKIG@Restore@  000000018000cb40     trace.cpp.obj
+ 0002:00000b48       ??_C@_08DDGPABJB@Identity@ 000000018000cb48     trace.cpp.obj
+ 0002:00000b54       ??_C@_05CGFGLDKK@Phase@    000000018000cb54     trace.cpp.obj
+ 0002:00000b60       ??_C@_0N@BOJGJHLD@MissingActor@ 000000018000cb60     trace.cpp.obj
+ 0002:00000b70       ??_C@_09FDCBPLKG@Resources@ 000000018000cb70     trace.cpp.obj
+ 0002:00000b80       ??_C@_07MKALMBDJ@Timeout@  000000018000cb80     trace.cpp.obj
+ 0002:00000b88       ??_C@_07PKIBBDFP@Removed@  000000018000cb88     trace.cpp.obj
+ 0002:00000b90       ??_C@_09FNGPAEJC@Ambiguous@ 000000018000cb90     trace.cpp.obj
+ 0002:00000ba0       ??_C@_09PEFNAACO@Admission@ 000000018000cba0     trace.cpp.obj
+ 0002:00000bac       ??_C@_06LHIDHMIE@Medium@   000000018000cbac     trace.cpp.obj
+ 0002:00000bb4       ??_C@_05POJFNINJ@Queue@    000000018000cbb4     trace.cpp.obj
+ 0002:00000bc0       ??_C@_0BD@LDBDKEHN@CounterAttribution@ 000000018000cbc0     trace.cpp.obj
+ 0002:00000bd8       ??_C@_0BC@DEPKIKDN@ObservationBudget@ 000000018000cbd8     trace.cpp.obj
+ 0002:00000bf0       ??_C@_08NKPDJDJD@Shutdown@ 000000018000cbf0     trace.cpp.obj
+ 0002:00000c00       ??_C@_0M@JFMJFGPK@PilotSafety@ 000000018000cc00     trace.cpp.obj
+ 0002:00000c10       ??_C@_0BK@JLFKCDMN@UNVALIDATED_PHASE_SCALARS@ 000000018000cc10     trace.cpp.obj
+ 0002:00000c30       ??_C@_0BC@HCKFOHGE@ACTOR_INITIALIZED@ 000000018000cc30     trace.cpp.obj
+ 0002:00000c48       ??_C@_0P@LKAMBMPN@REQUEST_QUEUED@ 000000018000cc48     trace.cpp.obj
+ 0002:00000c58       ??_C@_0BD@GADPDPKH@APPROVED_BY_POLICY@ 000000018000cc58     trace.cpp.obj
+ 0002:00000c70       ??_C@_0BD@EAFHNGEL@NO_ADMISSION_PROOF@ 000000018000cc70     trace.cpp.obj
+ 0002:00000c88       ??_C@_0BB@FDIKEBHK@OBSERVED_SCALARS@ 000000018000cc88     trace.cpp.obj
+ 0002:00000ca0       ??_C@_0N@FKKMFHLP@NOT_VERIFIED@ 000000018000cca0     trace.cpp.obj
+ 0002:00000cb0       ??_C@_0CKG@NGDJIINJ@DEVF_PILOT?5event?$DN?$CFs?5state?$DN?$CFs?5rea@ 000000018000ccb0     trace.cpp.obj
+ 0002:00000f60       __xmm@40efcdfa80000000c0ba497b20000000 000000018000cf60     trace.cpp.obj
+ 0002:00001170       __real@c0ba497b204a4ea4    000000018000d170     pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0002:00001388       ??_7dBgS_ObjGndChk@@6BcBgS_Chk@@@ 000000018000d388     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00001398       ??_7dBgS_ObjGndChk@@6BcBgS_PolyInfo@@@ 000000018000d398     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000013a8       ??_7dBgS_ObjGndChk@@6BdBgS_PolyPassChk@@@ 000000018000d3a8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000013b8       ??_7dBgS_ObjGndChk@@6BdBgS_GrpPassChk@@@ 000000018000d3b8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000013c0       __real@ce6e6b28            000000018000d3c0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000013c8       ?C@g4b@devf@@3V?$array@N$02@std@@B 000000018000d3c8     pilot_readonly_bridge:capture.cpp.obj
+ 0002:000013e0       __real@407f500000000000    000000018000d3e0     pilot_readonly_bridge:capture.cpp.obj
+ 0002:000013e8       __real@40efcdfa7fcb923a    000000018000d3e8     pilot_readonly_bridge:capture.cpp.obj
+ 0002:000013f0       __real@bff0000000000000    000000018000d3f0     pilot_readonly_bridge:capture.cpp.obj
+ 0002:000013f8       __real@c0b2c6bc0ebedfa4    000000018000d3f8     pilot_readonly_bridge:capture.cpp.obj
+ 0002:00001400       __real@c0b8547b204a4ea4    000000018000d400     pilot_readonly_bridge:capture.cpp.obj
+ 0002:00001610       ??_C@_07LLJOGOLI@F_SP121@  000000018000d610     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00001620       __xmm@ffffffffffffffffffffffffffffffff 000000018000d620     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00003d60       __real@fff0000000000000    000000018000fd60     msvcprt:vector_algorithms.obj
+ 0002:00003d70       __xmm@00000000000000010000000000000001 000000018000fd70     msvcprt:vector_algorithms.obj
+ 0002:00003d80       __ymm@0000000000000001000000000000000100000000000000010000000000000001 000000018000fd80     msvcprt:vector_algorithms.obj
+ 0002:00003da0       __ymm@ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff 000000018000fda0     msvcprt:vector_algorithms.obj
+ 0002:00003dc8       ??_7type_info@@6B@         000000018000fdc8     MSVCRT:std_type_info_static.obj
+ 0002:00003dd0       _pDefaultRawDllMain        000000018000fdd0     MSVCRT:dll_dllmain.obj
+ 0002:00003dd0       _pRawDllMain               000000018000fdd0     MSVCRT:dll_dllmain.obj
+ 0002:00003de0       _load_config_used          000000018000fde0     MSVCRT:loadcfg.obj
+ 0002:00003f80       ??_R4exception@std@@6B@    000000018000ff80     native_backend.cpp.obj
+ 0002:00003fa8       ??_R3exception@std@@8      000000018000ffa8     native_backend.cpp.obj
+ 0002:00003fc0       ??_R2exception@std@@8      000000018000ffc0     native_backend.cpp.obj
+ 0002:00003fd0       ??_R1A@?0A@EA@exception@std@@8 000000018000ffd0     native_backend.cpp.obj
+ 0002:00003ff8       ??_R4runtime_error@std@@6B@ 000000018000fff8     native_backend.cpp.obj
+ 0002:00004020       ??_R3runtime_error@std@@8  0000000180010020     native_backend.cpp.obj
+ 0002:00004038       ??_R2runtime_error@std@@8  0000000180010038     native_backend.cpp.obj
+ 0002:00004050       ??_R1A@?0A@EA@runtime_error@std@@8 0000000180010050     native_backend.cpp.obj
+ 0002:00004078       ??_R3Backend@first@devf@@8 0000000180010078     active_mod.cpp.obj
+ 0002:00004090       ??_R2Backend@first@devf@@8 0000000180010090     active_mod.cpp.obj
+ 0002:000040a0       ??_R1A@?0A@EA@Backend@first@devf@@8 00000001800100a0     active_mod.cpp.obj
+ 0002:000040c8       ??_R4NativeBackend@first@devf@@6B@ 00000001800100c8     active_mod.cpp.obj
+ 0002:000040f0       ??_R3NativeBackend@first@devf@@8 00000001800100f0     active_mod.cpp.obj
+ 0002:00004108       ??_R2NativeBackend@first@devf@@8 0000000180010108     active_mod.cpp.obj
+ 0002:00004120       ??_R1A@?0A@EA@NativeBackend@first@devf@@8 0000000180010120     active_mod.cpp.obj
+ 0002:00004148       ??_R3Sink@pilot@devf@@8    0000000180010148     active_mod.cpp.obj
+ 0002:00004160       ??_R2Sink@pilot@devf@@8    0000000180010160     active_mod.cpp.obj
+ 0002:00004170       ??_R1A@?0A@EA@Sink@pilot@devf@@8 0000000180010170     active_mod.cpp.obj
+ 0002:00004218       ??_R3cBgS_GrpPassChk@@8    0000000180010218     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004230       ??_R2cBgS_GrpPassChk@@8    0000000180010230     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004240       ??_R1A@?0A@EA@cBgS_GrpPassChk@@8 0000000180010240     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004268       ??_R3cBgS_PolyPassChk@@8   0000000180010268     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004280       ??_R2cBgS_PolyPassChk@@8   0000000180010280     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004290       ??_R1A@?0A@EA@cBgS_PolyPassChk@@8 0000000180010290     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000042b8       ??_R1A@?0A@EA@dBgS_GndChk@@8 00000001800102b8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000042e0       ??_R3dBgS_GndChk@@8        00000001800102e0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004300       ??_R2dBgS_GndChk@@8        0000000180010300     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004350       ??_R1A@?0A@EA@cBgS_GndChk@@8 0000000180010350     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004378       ??_R3cBgS_GndChk@@8        0000000180010378     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004390       ??_R2cBgS_GndChk@@8        0000000180010390     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000043b0       ??_R1A@?0A@EA@cBgS_Chk@@8  00000001800103b0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000043d8       ??_R3cBgS_Chk@@8           00000001800103d8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000043f0       ??_R2cBgS_Chk@@8           00000001800103f0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004400       ??_R1CA@?0A@EA@cBgS_PolyInfo@@8 0000000180010400     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004428       ??_R3cBgS_PolyInfo@@8      0000000180010428     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004440       ??_R2cBgS_PolyInfo@@8      0000000180010440     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004450       ??_R1A@?0A@EA@cBgS_PolyInfo@@8 0000000180010450     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004478       ??_R1FI@?0A@EA@dBgS_Chk@@8 0000000180010478     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000044a0       ??_R3dBgS_Chk@@8           00000001800104a0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000044b8       ??_R2dBgS_Chk@@8           00000001800104b8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000044e8       ??_R1A@?0A@EA@dBgS_Chk@@8  00000001800104e8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004510       ??_R1A@?0A@EA@dBgS_PolyPassChk@@8 0000000180010510     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004538       ??_R3dBgS_PolyPassChk@@8   0000000180010538     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004550       ??_R2dBgS_PolyPassChk@@8   0000000180010550     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004568       ??_R1BI@?0A@EA@dBgS_GrpPassChk@@8 0000000180010568     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004590       ??_R3dBgS_GrpPassChk@@8    0000000180010590     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000045a8       ??_R2dBgS_GrpPassChk@@8    00000001800105a8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000045c0       ??_R1A@?0A@EA@dBgS_GrpPassChk@@8 00000001800105c0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000045e8       ??_R1BI@?0A@EA@cBgS_GrpPassChk@@8 00000001800105e8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004610       ??_R1FI@?0A@EA@dBgS_PolyPassChk@@8 0000000180010610     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004638       ??_R1FI@?0A@EA@cBgS_PolyPassChk@@8 0000000180010638     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004660       ??_R1HA@?0A@EA@dBgS_GrpPassChk@@8 0000000180010660     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004688       ??_R1HA@?0A@EA@cBgS_GrpPassChk@@8 0000000180010688     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000046b0       ??_R4dBgS_ObjGndChk@@6BcBgS_Chk@@@ 00000001800106b0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000046d8       ??_R3dBgS_ObjGndChk@@8     00000001800106d8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000046f0       ??_R2dBgS_ObjGndChk@@8     00000001800106f0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004748       ??_R1A@?0A@EA@dBgS_ObjGndChk@@8 0000000180010748     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004770       ??_R4dBgS_ObjGndChk@@6BcBgS_PolyInfo@@@ 0000000180010770     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004798       ??_R4dBgS_ObjGndChk@@6BdBgS_PolyPassChk@@@ 0000000180010798     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000047c0       ??_R4dBgS_ObjGndChk@@6BdBgS_GrpPassChk@@@ 00000001800107c0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000047e8       ??_R4type_info@@6B@        00000001800107e8     MSVCRT:std_type_info_static.obj
+ 0002:00004810       ??_R3type_info@@8          0000000180010810     MSVCRT:std_type_info_static.obj
+ 0002:00004828       ??_R2type_info@@8          0000000180010828     MSVCRT:std_type_info_static.obj
+ 0002:00004838       ??_R1A@?0A@EA@type_info@@8 0000000180010838     MSVCRT:std_type_info_static.obj
+ 0002:0000485c       __volatile_metadata        000000018001085c     <linker-defined>
+ 0002:00004b98       __rtc_iaa                  0000000180010b98     MSVCRT:initsect.obj
+ 0002:00004ba0       __rtc_izz                  0000000180010ba0     MSVCRT:initsect.obj
+ 0002:00004ba8       __rtc_taa                  0000000180010ba8     MSVCRT:initsect.obj
+ 0002:00004bb0       __rtc_tzz                  0000000180010bb0     MSVCRT:initsect.obj
+ 0002:000056b0       _CT??_R0?AVexception@std@@@8??0exception@std@@QEAA@AEBV01@@Z24 00000001800116b0     native_backend.cpp.obj
+ 0002:000056d8       _CT??_R0?AVruntime_error@std@@@8??0runtime_error@std@@QEAA@AEBV01@@Z24 00000001800116d8     native_backend.cpp.obj
+ 0002:00005700       _TI2?AVruntime_error@std@@ 0000000180011700     native_backend.cpp.obj
+ 0002:00005720       _CTA2?AVruntime_error@std@@ 0000000180011720     native_backend.cpp.obj
+ 0002:000057ec       __IMPORT_DESCRIPTOR_dusklight 00000001800117ec     windows-amd64:dusklight.exe
+ 0002:00005800       __IMPORT_DESCRIPTOR_VCRUNTIME140_1 0000000180011800     vcruntime:VCRUNTIME140_1.dll
+ 0002:00005814       __IMPORT_DESCRIPTOR_VCRUNTIME140 0000000180011814     vcruntime:VCRUNTIME140.dll
+ 0002:00005828       __IMPORT_DESCRIPTOR_api-ms-win-crt-math-l1-1-0 0000000180011828     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0002:0000583c       __IMPORT_DESCRIPTOR_api-ms-win-crt-stdio-l1-1-0 000000018001183c     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00005850       __IMPORT_DESCRIPTOR_api-ms-win-crt-string-l1-1-0 0000000180011850     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:00005864       __IMPORT_DESCRIPTOR_api-ms-win-crt-runtime-l1-1-0 0000000180011864     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:00005878       __IMPORT_DESCRIPTOR_api-ms-win-crt-heap-l1-1-0 0000000180011878     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:0000588c       __IMPORT_DESCRIPTOR_KERNEL32 000000018001188c     kernel32:KERNEL32.dll
+ 0002:000058a0       __NULL_IMPORT_DESCRIPTOR   00000001800118a0     windows-amd64:dusklight.exe
+ 0003:0000bec0       __security_cookie          000000018001eec0     MSVCRT:gs_cookie.obj
+ 0003:0000bf00       __security_cookie_complement 000000018001ef00     MSVCRT:gs_cookie.obj
+ 0003:0000bf08       _fltused                   000000018001ef08     MSVCRT:fltused.obj
+ 0003:0000bf10       __isa_available            000000018001ef10     MSVCRT:cpu_disp.obj
+ 0003:0000bf14       __isa_enabled              000000018001ef14     MSVCRT:cpu_disp.obj
+ 0003:0000bf18       __memset_fast_string_threshold 000000018001ef18     MSVCRT:cpu_disp.obj
+ 0003:0000bf20       __memset_nt_threshold      000000018001ef20     MSVCRT:cpu_disp.obj
+ 0003:0000bf28       __isa_inverted             000000018001ef28     MSVCRT:cpu_disp.obj
+ 0003:0000bf30       __scrt_native_dllmain_reason 000000018001ef30     MSVCRT:utility.obj
+ 0003:0000bf40       __scrt_ucrt_dll_is_in_use  000000018001ef40     MSVCRT:ucrt_stubs.obj
+ 0003:0000bf48       ??_R0?AVexception@std@@@8  000000018001ef48     native_backend.cpp.obj
+ 0003:0000bf70       ??_R0?AVruntime_error@std@@@8 000000018001ef70     native_backend.cpp.obj
+ 0003:0000bf98       ??_R0?AVBackend@first@devf@@@8 000000018001ef98     active_mod.cpp.obj
+ 0003:0000bfc8       ??_R0?AVNativeBackend@first@devf@@@8 000000018001efc8     active_mod.cpp.obj
+ 0003:0000bff8       ??_R0?AVSink@pilot@devf@@@8 000000018001eff8     active_mod.cpp.obj
+ 0003:0000c050       ??_R0?AVcBgS_GrpPassChk@@@8 000000018001f050     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c078       ??_R0?AVcBgS_PolyPassChk@@@8 000000018001f078     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c0a0       ??_R0?AVdBgS_GndChk@@@8    000000018001f0a0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c0c8       ??_R0?AVcBgS_GndChk@@@8    000000018001f0c8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c0f0       ??_R0?AVcBgS_Chk@@@8       000000018001f0f0     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c110       ??_R0?AVcBgS_PolyInfo@@@8  000000018001f110     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c138       ??_R0?AVdBgS_Chk@@@8       000000018001f138     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c158       ??_R0?AVdBgS_PolyPassChk@@@8 000000018001f158     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c180       ??_R0?AVdBgS_GrpPassChk@@@8 000000018001f180     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c1a8       ??_R0?AVdBgS_ObjGndChk@@@8 000000018001f1a8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0003:0000c1d0       ??_R0?AVtype_info@@@8      000000018001f1d0     MSVCRT:std_type_info_static.obj
+ 0003:0000c1f0       svc_actor                  000000018001f1f0     active_mod.cpp.obj
+ 0003:0000c1f8       svc_host                   000000018001f1f8     active_mod.cpp.obj
+ 0003:0000c200       svc_log                    000000018001f200     active_mod.cpp.obj
+ 0003:0000c208       mod_ctx                    000000018001f208     active_mod.cpp.obj
+ 0003:0000c220       ?_OptionsStorage@?1??__local_stdio_printf_options@@9@4_KA 000000018001f220     active_mod.cpp.obj
+ 0003:0000c228       svc_game                   000000018001f228     game_feature.cpp.obj
+ 0003:0000c240       __favor                    000000018001f240     MSVCRT:cpu_disp.obj
+ 0003:0000c244       __avx10_version            000000018001f244     MSVCRT:cpu_disp.obj
+ 0003:0000c250       ?__type_info_root_node@@3U__type_info_node@@A 000000018001f250     MSVCRT:tncleanup.obj
+ 0003:0000c260       ?_OptionsStorage@?1??__local_stdio_scanf_options@@9@4_KA 000000018001f260     MSVCRT:default_local_stdio_options.obj
+ 0003:0000c268       __scrt_current_native_startup_state 000000018001f268     MSVCRT:utility.obj
+ 0003:0000c270       __scrt_native_startup_lock 000000018001f270     MSVCRT:utility.obj
+ 0003:0000c2b0       __scrt_debugger_hook_flag  000000018001f2b0     MSVCRT:utility_desktop.obj
+ 0003:0000c2b8       __dyn_tls_init_callback    000000018001f2b8     <common>
+ 0005:00000000       mod_meta_bounds_begin      0000000180021000     active_mod.cpp.obj
+ 0005:00000150       mod_meta_bounds_end        0000000180021150     active_mod.cpp.obj
+
+ entry point at        0001:00009860
+
+ Static symbols
+
+ 0001:00000040       ??1End@?1??drain@Trace@pilot@devf@@QEAAXAEAVSink@34@@Z@QEAA@XZ 0000000180001040 f   trace.cpp.obj
+ 0001:00000040       ??1End@?1??attempt@Controller@first@devf@@QEAAXAEAVBackend@34@AEBUAdmission@34@@Z@QEAA@XZ 0000000180001040 f   experiment_core.cpp.obj
+ 0001:00000040       ??1End@?1??poll@Controller@first@devf@@QEAAXAEAVBackend@34@@Z@QEAA@XZ 0000000180001040 f   experiment_core.cpp.obj
+ 0001:00001800       ??0Layers@?A0x576dea14@first@devf@@QEAA@XZ 0000000180002800 f   native_backend.cpp.obj
+ 0001:00001c00       ?actor_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180002c00 f   native_backend.cpp.obj
+ 0001:00001dd0       ?id_of@Layers@?A0x576dea14@first@devf@@QEBAIPEBUlayer_class@@@Z 0000000180002dd0 f   native_backend.cpp.obj
+ 0001:00001e10       ?monitor_context@?A0x576dea14@first@devf@@YA?AUFrame@23@AEBULayers@123@@Z 0000000180002e10 f   native_backend.cpp.obj
+ 0001:00002760       ?request_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180003760 f   native_backend.cpp.obj
+ 0001:000029a0       ??_GOfficialSink@?A0x4acf3c59@@UEAAPEAXI@Z 00000001800039a0 f   active_mod.cpp.obj
+ 0001:00002a10       ?write@OfficialSink@?A0x4acf3c59@@UEAA_NPEBD@Z 0000000180003a10 f   active_mod.cpp.obj
+ 0001:000038c0       ?finite3@?A0x7a64678b@pilot@devf@@YA_NAEBV?$array@N$02@std@@@Z 00000001800048c0 f   policy.cpp.obj
+ 0001:00003b50       $LN21                      0000000180004b50     policy.cpp.obj
+ 0001:00003b90       ?identifiable@?A0x7a64678b@pilot@devf@@YA_NAEBUActorSample@23@@Z 0000000180004b90 f   policy.cpp.obj
+ 0001:00003d70       ?same_actor@?A0x7a64678b@pilot@devf@@YA_NAEBUActorSample@23@0@Z 0000000180004d70 f   policy.cpp.obj
+ 0001:00004270       $LN73                      0000000180005270     trace.cpp.obj
+ 0001:0000427c       $LN72                      000000018000527c     trace.cpp.obj
+ 0001:00004b90       $LN109                     0000000180005b90     trace.cpp.obj
+ 0001:00004c1c       $LN108                     0000000180005c1c     trace.cpp.obj
+ 0001:00004c3c       $LN107                     0000000180005c3c     trace.cpp.obj
+ 0001:000058e0       ??$query@VdBgS_ObjGndChk@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 00000001800068e0 f   pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00005b70       ??$query@VdBgS_ObjGndChk_Wtr@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 0000000180006b70 f   pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:00006a20       ?finite3@?A0x6ccca479@g4b@devf@@YA_NAEBV?$array@N$02@std@@@Z 0000000180007a20 f   pilot_readonly_bridge:capture.cpp.obj
+ 0001:00006d70       ??1Publish@?1??capture_native@a1@devf@@YA?AUSnapshot@23@XZ@QEAA@XZ 0000000180007d70 f   pilot_readonly_bridge:census_reader.cpp.obj
+ 0001:000081c0       ?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 00000001800091c0 f   pilot_readonly_bridge:census_reader.cpp.obj
+ 0001:000086c0       ?match_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 00000001800096c0 f   pilot_readonly_bridge:census_reader.cpp.obj
+ 0001:00008ea0       ??$_Minmax_element_impl@$01U_Traits_d_avx@_Sorting@?A0x8417fefe@@@_Sorting@?A0x8417fefe@@YA?A_PPEBXQEBX_N@Z 0000000180009ea0 f   msvcprt:vector_algorithms.obj
+ 0001:00009040       ??$_Minmax_element_impl@$01U_Traits_d_sse@_Sorting@?A0x8417fefe@@@_Sorting@?A0x8417fefe@@YA?A_PPEBXQEBX_N@Z 000000018000a040 f   msvcprt:vector_algorithms.obj
+ 0001:000091c0       ?_HandleError@_GsFailureOnError@?A0x71023ff6@@SAXXZ 000000018000a1c0 f   MSVCRT:gshandler.obj
+ 0001:00009394       $LN73                      000000018000a394     MSVCRT:gshandler.obj
+ 0001:000093a8       $LN72                      000000018000a3a8     MSVCRT:gshandler.obj
+ 0001:00009440       $$000000                   000000018000a440     MSVCRT:chkstk.obj
+ 0001:000094a0       $$000000                   000000018000a4a0     MSVCRT:amdsecgs.obj
+ 0001:00009510       ?dllmain_crt_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000018000a510 f   MSVCRT:dll_dllmain.obj
+ 0001:00009570       ?dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z 000000018000a570 f   MSVCRT:dll_dllmain.obj
+ 0001:00009680       ?dllmain_crt_process_detach@@YAH_N@Z 000000018000a680 f   MSVCRT:dll_dllmain.obj
+ 0001:00009720       ?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 000000018000a720 f   MSVCRT:dll_dllmain.obj
+ 0001:0000a1c0       $$000000                   000000018000b1c0     MSVCRT:guard_dispatch.obj
+ 0001:0000a1e0       $$000000                   000000018000b1e0     MSVCRT:guard_xfg_dispatch.obj
+ 0001:0000a200       ?dtor$0@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 000000018000b200 f   experiment_core.cpp.obj
+ 0001:0000a210       ?dtor$1@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 000000018000b210 f   experiment_core.cpp.obj
+ 0001:0000a220       ?catch$2@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 000000018000b220 f   experiment_core.cpp.obj
+ 0001:0000a220       ?catch$3@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 000000018000b220 f   experiment_core.cpp.obj
+ 0001:0000a22d       __catch$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z$0 000000018000b22d f   experiment_core.cpp.obj
+ 0001:0000a22d       __catch$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z$2 000000018000b22d f   experiment_core.cpp.obj
+ 0001:0000a250       ?dtor$0@?0??poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z@4HA 000000018000b250 f   experiment_core.cpp.obj
+ 0001:0000a260       ?catch$1@?0??poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z@4HA 000000018000b260 f   experiment_core.cpp.obj
+ 0001:0000a26d       __catch$?poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z$0 000000018000b26d f   experiment_core.cpp.obj
+ 0001:0000a290       ?catch$0@?0??restore@LayerScope@first@devf@@QEAA_NXZ@4HA 000000018000b290 f   experiment_core.cpp.obj
+ 0001:0000a29d       __catch$?restore@LayerScope@first@devf@@QEAA_NXZ$0 000000018000b29d f   experiment_core.cpp.obj
+ 0001:0000a2c0       mod_update$catch$9         000000018000b2c0 f   active_mod.cpp.obj
+ 0001:0000a2cd       __catch$mod_update$0       000000018000b2cd f   active_mod.cpp.obj
+ 0001:0000a320       ?dtor$0@?0??drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z@4HA 000000018000b320 f   trace.cpp.obj
+ 0001:0000a330       ?catch$1@?0??drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z@4HA 000000018000b330 f   trace.cpp.obj
+ 0001:0000a33d       __catch$?drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z$0 000000018000b33d f   trace.cpp.obj
+ 0001:0000a350       ?dtor$0@?0???$query@VdBgS_ObjGndChk@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ@4HA 000000018000b350 f   pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:0000a360       ?dtor$1@?0???$query@VdBgS_ObjGndChk@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ@4HA 000000018000b360 f   pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:0000a370       ?dtor$0@?0???$query@VdBgS_ObjGndChk_Wtr@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ@4HA 000000018000b370 f   pilot_readonly_bridge:local_queries.cpp.obj
+ 0001:0000a380       ?dtor$0@?0??capture_native@a1@devf@@YA?AUSnapshot@12@XZ@4HA 000000018000b380 f   pilot_readonly_bridge:census_reader.cpp.obj
+ 0001:0000a390       ?fin$0@?0??dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z@4HA 000000018000b390 f   MSVCRT:dll_dllmain.obj
+ 0001:0000a3b0       ?fin$0@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 000000018000b3b0 f   MSVCRT:dll_dllmain.obj
+ 0001:0000a3ca       ?fin$1@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 000000018000b3ca f   MSVCRT:dll_dllmain.obj
+ 0001:0000a3e0       ?filt$0@?0??dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z@4HA 000000018000b3e0 f   MSVCRT:dll_dllmain.obj
+ 0001:0000a420       __scrt_is_nonwritable_in_current_image$filt$0 000000018000b420 f   MSVCRT:utility.obj
+ 0002:000002e0       ?RSQRTE_TABLE@@3QBUBaseAndDec64@@B 000000018000c2e0     native_backend.cpp.obj
+ 0002:000005d8       ??_7OfficialSink@?A0x4acf3c59@@6B@ 000000018000c5d8     active_mod.cpp.obj
+ 0002:00000f70       ?RSQRTE_TABLE@@3QBUBaseAndDec64@@B 000000018000cf70     pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0002:00001180       ?RSQRTE_TABLE@@3QBUBaseAndDec64@@B 000000018000d180     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00001410       ?RSQRTE_TABLE@@3QBUBaseAndDec64@@B 000000018000d410     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00001630       ?RSQRTE_TABLE@@3QBUBaseAndDec64@@B 000000018000d630     pilot_readonly_bridge:room_owner_resolver.cpp.obj
+ 0002:00001830       ?_Tables_1_sse@_Removing@?A0x8417fefe@@3U?$_Tables@$0BAA@$07@12@B 000000018000d830     msvcprt:vector_algorithms.obj
+ 0002:00002130       ?_Tables_2_sse@_Removing@?A0x8417fefe@@3U?$_Tables@$0BAA@$0BA@@12@B 000000018000e130     msvcprt:vector_algorithms.obj
+ 0002:00003230       ?_Tables_4_sse@_Removing@?A0x8417fefe@@3U?$_Tables@$0BA@$0BA@@12@B 000000018000f230     msvcprt:vector_algorithms.obj
+ 0002:00003340       ?_Tables_4_avx@_Removing@?A0x8417fefe@@3U?$_Tables@$0BAA@$07@12@B 000000018000f340     msvcprt:vector_algorithms.obj
+ 0002:00003c40       ?_Tables_8_sse@_Removing@?A0x8417fefe@@3U?$_Tables@$03$0BA@@12@B 000000018000fc40     msvcprt:vector_algorithms.obj
+ 0002:00003c90       ?_Tables_8_avx@_Removing@?A0x8417fefe@@3U?$_Tables@$0BA@$07@12@B 000000018000fc90     msvcprt:vector_algorithms.obj
+ 0002:00003d20       ?_Tail_masks@?1??_Avx2_tail_mask_32@?A0x8417fefe@@YA?AT__m256i@@_K@Z@4QBIB 000000018000fd20     msvcprt:vector_algorithms.obj
+ 0002:00004198       ??_R4OfficialSink@?A0x4acf3c59@@6B@ 0000000180010198     active_mod.cpp.obj
+ 0002:000041c0       ??_R3OfficialSink@?A0x4acf3c59@@8 00000001800101c0     active_mod.cpp.obj
+ 0002:000041d8       ??_R2OfficialSink@?A0x4acf3c59@@8 00000001800101d8     active_mod.cpp.obj
+ 0002:000041f0       ??_R1A@?0A@EA@OfficialSink@?A0x4acf3c59@@8 00000001800101f0     active_mod.cpp.obj
+ 0002:00004bb8       $unwind$?context_valid@first@devf@@YA_NAEBUFrame@12@@Z 0000000180010bb8     experiment_core.cpp.obj
+ 0002:00004bcc       $unwind$?restore@LayerScope@first@devf@@QEAA_NXZ 0000000180010bcc     experiment_core.cpp.obj
+ 0002:00004bdc       $cppxdata$?restore@LayerScope@first@devf@@QEAA_NXZ 0000000180010bdc     experiment_core.cpp.obj
+ 0002:00004be9       $stateUnwindMap$?restore@LayerScope@first@devf@@QEAA_NXZ 0000000180010be9     experiment_core.cpp.obj
+ 0002:00004be9       $stateUnwindMap$mod_update 0000000180010be9     active_mod.cpp.obj
+ 0002:00004bec       $tryMap$?restore@LayerScope@first@devf@@QEAA_NXZ 0000000180010bec     experiment_core.cpp.obj
+ 0002:00004bf4       $handlerMap$?restore@LayerScope@first@devf@@QEAA_NXZ 0000000180010bf4     experiment_core.cpp.obj
+ 0002:00004bfc       $ip2state$?restore@LayerScope@first@devf@@QEAA_NXZ 0000000180010bfc     experiment_core.cpp.obj
+ 0002:00004c04       $unwind$?catch$1@?0??drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z@4HA 0000000180010c04     trace.cpp.obj
+ 0002:00004c04       $unwind$?catch$0@?0??restore@LayerScope@first@devf@@QEAA_NXZ@4HA 0000000180010c04     experiment_core.cpp.obj
+ 0002:00004c14       $cppxdata$?catch$1@?0??drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z@4HA 0000000180010c14     trace.cpp.obj
+ 0002:00004c14       $cppxdata$?catch$0@?0??restore@LayerScope@first@devf@@QEAA_NXZ@4HA 0000000180010c14     experiment_core.cpp.obj
+ 0002:00004c1e       $stateUnwindMap$?catch$1@?0??drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z@4HA 0000000180010c1e     trace.cpp.obj
+ 0002:00004c1e       $stateUnwindMap$?catch$0@?0??restore@LayerScope@first@devf@@QEAA_NXZ@4HA 0000000180010c1e     experiment_core.cpp.obj
+ 0002:00004c1e       $stateUnwindMap$?catch$1@?0??poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z@4HA 0000000180010c1e     experiment_core.cpp.obj
+ 0002:00004c1e       $stateUnwindMap$?catch$2@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 0000000180010c1e     experiment_core.cpp.obj
+ 0002:00004c1e       $stateUnwindMap$?catch$3@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 0000000180010c1e     experiment_core.cpp.obj
+ 0002:00004c20       $ip2state$?catch$1@?0??drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z@4HA 0000000180010c20     trace.cpp.obj
+ 0002:00004c20       $ip2state$?catch$0@?0??restore@LayerScope@first@devf@@QEAA_NXZ@4HA 0000000180010c20     experiment_core.cpp.obj
+ 0002:00004c20       $ip2state$?catch$1@?0??poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z@4HA 0000000180010c20     experiment_core.cpp.obj
+ 0002:00004c20       $ip2state$?catch$2@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 0000000180010c20     experiment_core.cpp.obj
+ 0002:00004c20       $ip2state$?catch$3@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 0000000180010c20     experiment_core.cpp.obj
+ 0002:00004c24       $unwind$?stop@Controller@first@devf@@QEAAXW4Reason@23@@Z 0000000180010c24     experiment_core.cpp.obj
+ 0002:00004c30       $unwind$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z 0000000180010c30     experiment_core.cpp.obj
+ 0002:00004c58       $cppxdata$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z 0000000180010c58     experiment_core.cpp.obj
+ 0002:00004c65       $stateUnwindMap$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z 0000000180010c65     experiment_core.cpp.obj
+ 0002:00004c76       $tryMap$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z 0000000180010c76     experiment_core.cpp.obj
+ 0002:00004c85       $handlerMap$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z 0000000180010c85     experiment_core.cpp.obj
+ 0002:00004c8e       $handlerMap$0$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z 0000000180010c8e     experiment_core.cpp.obj
+ 0002:00004c97       $ip2state$?attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z 0000000180010c97     experiment_core.cpp.obj
+ 0002:00004cb0       $unwind$?catch$1@?0??poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z@4HA 0000000180010cb0     experiment_core.cpp.obj
+ 0002:00004cb0       $unwind$?catch$2@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 0000000180010cb0     experiment_core.cpp.obj
+ 0002:00004cb0       $unwind$?catch$3@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 0000000180010cb0     experiment_core.cpp.obj
+ 0002:00004cc0       $cppxdata$?catch$1@?0??poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z@4HA 0000000180010cc0     experiment_core.cpp.obj
+ 0002:00004cc0       $cppxdata$?catch$2@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 0000000180010cc0     experiment_core.cpp.obj
+ 0002:00004cc0       $cppxdata$?catch$3@?0??attempt@Controller@first@devf@@QEAAXAEAVBackend@23@AEBUAdmission@23@@Z@4HA 0000000180010cc0     experiment_core.cpp.obj
+ 0002:00004ccc       $unwind$?poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z 0000000180010ccc     experiment_core.cpp.obj
+ 0002:00004cec       $cppxdata$?poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z 0000000180010cec     experiment_core.cpp.obj
+ 0002:00004cf9       $stateUnwindMap$?poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z 0000000180010cf9     experiment_core.cpp.obj
+ 0002:00004d02       $tryMap$?poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z 0000000180010d02     experiment_core.cpp.obj
+ 0002:00004d0a       $handlerMap$?poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z 0000000180010d0a     experiment_core.cpp.obj
+ 0002:00004d13       $ip2state$?poll@Controller@first@devf@@QEAAXAEAVBackend@23@@Z 0000000180010d13     experiment_core.cpp.obj
+ 0002:00004d1c       $unwind$?shutdown@Controller@first@devf@@QEAAXXZ 0000000180010d1c     experiment_core.cpp.obj
+ 0002:00004d1c       $unwind$??0runtime_error@std@@QEAA@PEBD@Z 0000000180010d1c     native_backend.cpp.obj
+ 0002:00004d1c       $unwind$__security_init_cookie 0000000180010d1c     MSVCRT:gs_support.obj
+ 0002:00004d24       $unwind$?same_actor@?A0x7a64678b@pilot@devf@@YA_NAEBUActorSample@23@0@Z 0000000180010d24     policy.cpp.obj
+ 0002:00004d24       $unwind$??0Frame@first@devf@@QEAA@XZ 0000000180010d24     native_backend.cpp.obj
+ 0002:00004d24       $unwind$??0Observation@first@devf@@QEAA@XZ 0000000180010d24     native_backend.cpp.obj
+ 0002:00004d24       $unwind$??_Gexception@std@@UEAAPEAXI@Z 0000000180010d24     native_backend.cpp.obj
+ 0002:00004d24       $unwind$??_Gruntime_error@std@@UEAAPEAXI@Z 0000000180010d24     native_backend.cpp.obj
+ 0002:00004d24       $unwind$_RTC_Initialize    0000000180010d24     MSVCRT:initsect.obj
+ 0002:00004d24       $unwind$_RTC_Terminate     0000000180010d24     MSVCRT:initsect.obj
+ 0002:00004d24       $unwind$??_GdBgS_ObjGndChk@@UEAAPEAXI@Z 0000000180010d24     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00004d30       $unwind$?current@NativeBackend@first@devf@@UEAAIXZ 0000000180010d30     native_backend.cpp.obj
+ 0002:00004d38       $unwind$?registered@NativeBackend@first@devf@@UEAA_NI@Z 0000000180010d38     native_backend.cpp.obj
+ 0002:00004d44       $unwind$?select@NativeBackend@first@devf@@UEAAXI@Z 0000000180010d44     native_backend.cpp.obj
+ 0002:00004d50       $unwind$?request@NativeBackend@first@devf@@UEAA?AURequestResult@23@AEBUPreset@23@@Z 0000000180010d50     native_backend.cpp.obj
+ 0002:00004d60       $unwind$?observe@NativeBackend@first@devf@@UEAA?AUObservation@23@I@Z 0000000180010d60     native_backend.cpp.obj
+ 0002:00004d78       $chain$0$?observe@NativeBackend@first@devf@@UEAA?AUObservation@23@I@Z 0000000180010d78     native_backend.cpp.obj
+ 0002:00004d8c       $chain$1$?observe@NativeBackend@first@devf@@UEAA?AUObservation@23@I@Z 0000000180010d8c     native_backend.cpp.obj
+ 0002:00004d8c       $chain$3$?observe@NativeBackend@first@devf@@UEAA?AUObservation@23@I@Z 0000000180010d8c     native_backend.cpp.obj
+ 0002:00004d9c       $chain$2$?observe@NativeBackend@first@devf@@UEAA?AUObservation@23@I@Z 0000000180010d9c     native_backend.cpp.obj
+ 0002:00004db0       $unwind$??0Layers@?A0x576dea14@first@devf@@QEAA@XZ 0000000180010db0     native_backend.cpp.obj
+ 0002:00004db0       $unwind$??0exception@std@@QEAA@AEBV01@@Z 0000000180010db0     native_backend.cpp.obj
+ 0002:00004db0       $unwind$??0runtime_error@std@@QEAA@AEBV01@@Z 0000000180010db0     native_backend.cpp.obj
+ 0002:00004db0       $unwind$??_GNativeBackend@first@devf@@UEAAPEAXI@Z 0000000180010db0     active_mod.cpp.obj
+ 0002:00004db0       $unwind$??_GOfficialSink@?A0x4acf3c59@@UEAAPEAXI@Z 0000000180010db0     active_mod.cpp.obj
+ 0002:00004db0       $unwind$??_Gtype_info@@UEAAPEAXI@Z 0000000180010db0     MSVCRT:std_type_info_static.obj
+ 0002:00004db0       $unwind$__scrt_release_startup_lock 0000000180010db0     MSVCRT:utility.obj
+ 0002:00004db0       $unwind$__scrt_uninitialize_crt 0000000180010db0     MSVCRT:utility.obj
+ 0002:00004db8       $unwind$?monitor_context@?A0x576dea14@first@devf@@YA?AUFrame@23@AEBULayers@123@@Z 0000000180010db8     native_backend.cpp.obj
+ 0002:00004dd4       $chain$2$?monitor_context@?A0x576dea14@first@devf@@YA?AUFrame@23@AEBULayers@123@@Z 0000000180010dd4     native_backend.cpp.obj
+ 0002:00004df0       $chain$3$?monitor_context@?A0x576dea14@first@devf@@YA?AUFrame@23@AEBULayers@123@@Z 0000000180010df0     native_backend.cpp.obj
+ 0002:00004df0       $chain$5$?monitor_context@?A0x576dea14@first@devf@@YA?AUFrame@23@AEBULayers@123@@Z 0000000180010df0     native_backend.cpp.obj
+ 0002:00004e00       $chain$4$?monitor_context@?A0x576dea14@first@devf@@YA?AUFrame@23@AEBULayers@123@@Z 0000000180010e00     native_backend.cpp.obj
+ 0002:00004e1c       $unwind$?request_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180010e1c     native_backend.cpp.obj
+ 0002:00004e24       $chain$0$?request_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180010e24     native_backend.cpp.obj
+ 0002:00004e38       $chain$1$?request_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180010e38     native_backend.cpp.obj
+ 0002:00004e38       $chain$3$?request_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180010e38     native_backend.cpp.obj
+ 0002:00004e48       $chain$2$?request_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180010e48     native_backend.cpp.obj
+ 0002:00004e5c       $unwind$?actor_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180010e5c     native_backend.cpp.obj
+ 0002:00004e68       $chain$2$?actor_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180010e68     native_backend.cpp.obj
+ 0002:00004e84       $chain$3$?actor_match@?A0x576dea14@first@devf@@YAPEAXPEAX0@Z 0000000180010e84     native_backend.cpp.obj
+ 0002:00004e94       $unwind$snprintf           0000000180010e94     active_mod.cpp.obj
+ 0002:00004ea4       $unwind$mod_initialize     0000000180010ea4     active_mod.cpp.obj
+ 0002:00004eb4       $unwind$mod_update         0000000180010eb4     active_mod.cpp.obj
+ 0002:00004ec8       $cppxdata$mod_update       0000000180010ec8     active_mod.cpp.obj
+ 0002:00004ed5       $tryMap$mod_update         0000000180010ed5     active_mod.cpp.obj
+ 0002:00004edd       $handlerMap$mod_update     0000000180010edd     active_mod.cpp.obj
+ 0002:00004ee6       $ip2state$mod_update       0000000180010ee6     active_mod.cpp.obj
+ 0002:00004eec       $unwind$mod_update$catch$9 0000000180010eec     active_mod.cpp.obj
+ 0002:00004ef4       $unwind$?write@OfficialSink@?A0x4acf3c59@@UEAA_NPEBD@Z 0000000180010ef4     active_mod.cpp.obj
+ 0002:00004ef4       $unwind$mod_shutdown       0000000180010ef4     active_mod.cpp.obj
+ 0002:00004ef4       $unwind$__scrt_initialize_default_local_stdio_options 0000000180010ef4     MSVCRT:default_local_stdio_options.obj
+ 0002:00004ef4       $unwind$?dllmain_crt_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 0000000180010ef4     MSVCRT:dll_dllmain.obj
+ 0002:00004ef4       $unwind$DllMain            0000000180010ef4     MSVCRT:dll_dllmain_stub.obj
+ 0002:00004ef4       $unwind$__GSHandlerCheck   0000000180010ef4     MSVCRT:gshandler.obj
+ 0002:00004ef4       $unwind$__scrt_acquire_startup_lock 0000000180010ef4     MSVCRT:utility.obj
+ 0002:00004ef4       $unwind$__scrt_dllmain_after_initialize_c 0000000180010ef4     MSVCRT:utility.obj
+ 0002:00004ef4       $unwind$__scrt_dllmain_before_initialize_c 0000000180010ef4     MSVCRT:utility.obj
+ 0002:00004ef4       $unwind$__scrt_dllmain_crt_thread_attach 0000000180010ef4     MSVCRT:utility.obj
+ 0002:00004ef4       $unwind$__scrt_dllmain_crt_thread_detach 0000000180010ef4     MSVCRT:utility.obj
+ 0002:00004ef4       $unwind$__scrt_dllmain_uninitialize_c 0000000180010ef4     MSVCRT:utility.obj
+ 0002:00004ef4       $unwind$__scrt_dllmain_uninitialize_critical 0000000180010ef4     MSVCRT:utility.obj
+ 0002:00004ef4       $unwind$__scrt_initialize_crt 0000000180010ef4     MSVCRT:utility.obj
+ 0002:00004ef4       $unwind$?classify_actor@g4b@devf@@YA?AW4Occupancy@12@AEBUActor@12@@Z 0000000180010ef4     pilot_readonly_bridge:capture.cpp.obj
+ 0002:00004efc       $unwind$?preflight@NativeBackend@first@devf@@UEAA?AUFrame@23@XZ 0000000180010efc     active_mod.cpp.obj
+ 0002:00004f08       $unwind$?metrics@pilot@devf@@YA?AUMetrics@12@AEBV?$array@N$02@std@@@Z 0000000180010f08     policy.cpp.obj
+ 0002:00004f10       $chain$1$?metrics@pilot@devf@@YA?AUMetrics@12@AEBV?$array@N$02@std@@@Z 0000000180010f10     policy.cpp.obj
+ 0002:00004f28       $chain$3$?metrics@pilot@devf@@YA?AUMetrics@12@AEBV?$array@N$02@std@@@Z 0000000180010f28     policy.cpp.obj
+ 0002:00004f40       $chain$4$?metrics@pilot@devf@@YA?AUMetrics@12@AEBV?$array@N$02@std@@@Z 0000000180010f40     policy.cpp.obj
+ 0002:00004f50       $chain$5$?metrics@pilot@devf@@YA?AUMetrics@12@AEBV?$array@N$02@std@@@Z 0000000180010f50     policy.cpp.obj
+ 0002:00004f50       $chain$7$?metrics@pilot@devf@@YA?AUMetrics@12@AEBV?$array@N$02@std@@@Z 0000000180010f50     policy.cpp.obj
+ 0002:00004f64       $chain$8$?metrics@pilot@devf@@YA?AUMetrics@12@AEBV?$array@N$02@std@@@Z 0000000180010f64     policy.cpp.obj
+ 0002:00004f74       $unwind$?assess@pilot@devf@@YA?AUDecision@12@AEBUFrame@first@2@@Z 0000000180010f74     policy.cpp.obj
+ 0002:00004f94       $chain$6$?assess@pilot@devf@@YA?AUDecision@12@AEBUFrame@first@2@@Z 0000000180010f94     policy.cpp.obj
+ 0002:00004fc0       $chain$7$?assess@pilot@devf@@YA?AUDecision@12@AEBUFrame@first@2@@Z 0000000180010fc0     policy.cpp.obj
+ 0002:00004fc0       $chain$9$?assess@pilot@devf@@YA?AUDecision@12@AEBUFrame@first@2@@Z 0000000180010fc0     policy.cpp.obj
+ 0002:00004fd0       $chain$8$?assess@pilot@devf@@YA?AUDecision@12@AEBUFrame@first@2@@Z 0000000180010fd0     policy.cpp.obj
+ 0002:00004ffc       $unwind$?freshness@pilot@devf@@YA?AW4GuardReason@12@AEBUFrame@first@2@0@Z 0000000180010ffc     policy.cpp.obj
+ 0002:00005008       $chain$2$?freshness@pilot@devf@@YA?AW4GuardReason@12@AEBUFrame@first@2@0@Z 0000000180011008     policy.cpp.obj
+ 0002:00005024       $chain$4$?freshness@pilot@devf@@YA?AW4GuardReason@12@AEBUFrame@first@2@0@Z 0000000180011024     policy.cpp.obj
+ 0002:00005040       $chain$5$?freshness@pilot@devf@@YA?AW4GuardReason@12@AEBUFrame@first@2@0@Z 0000000180011040     policy.cpp.obj
+ 0002:00005050       $unwind$?append@Trace@pilot@devf@@AEAA_NURecord@23@_N@Z 0000000180011050     trace.cpp.obj
+ 0002:00005060       $unwind$?record@Trace@pilot@devf@@QEAAXW4Event@23@AEBVController@first@3@PEBUFrame@63@PEBUObservation@63@H@Z 0000000180011060     trace.cpp.obj
+ 0002:00005074       $unwind$?drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z 0000000180011074     trace.cpp.obj
+ 0002:00005094       $cppxdata$?drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z 0000000180011094     trace.cpp.obj
+ 0002:000050a1       $stateUnwindMap$?drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z 00000001800110a1     trace.cpp.obj
+ 0002:000050aa       $tryMap$?drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z 00000001800110aa     trace.cpp.obj
+ 0002:000050b2       $handlerMap$?drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z 00000001800110b2     trace.cpp.obj
+ 0002:000050bb       $ip2state$?drain@Trace@pilot@devf@@QEAAXAEAVSink@23@@Z 00000001800110bb     trace.cpp.obj
+ 0002:000050c4       $unwind$?format_record@pilot@devf@@YA_NAEBURecord@12@PEAD_K@Z 00000001800110c4     trace.cpp.obj
+ 0002:000050d4       $chain$8$?format_record@pilot@devf@@YA_NAEBURecord@12@PEAD_K@Z 00000001800110d4     trace.cpp.obj
+ 0002:00005108       $chain$9$?format_record@pilot@devf@@YA_NAEBURecord@12@PEAD_K@Z 0000000180011108     trace.cpp.obj
+ 0002:00005118       $unwind$?read_only_preflight@first@devf@@YA?AUFrame@12@XZ 0000000180011118     pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0002:00005130       $chain$5$?read_only_preflight@first@devf@@YA?AUFrame@12@XZ 0000000180011130     pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0002:00005158       $chain$6$?read_only_preflight@first@devf@@YA?AUFrame@12@XZ 0000000180011158     pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0002:00005168       $unwind$?reset@CensusValues@pilot@devf@@QEAAXI_K@Z 0000000180011168     pilot_readonly_bridge:census_values.cpp.obj
+ 0002:00005180       $unwind$?collect_actor@pilot@devf@@YAXIIHAEBV?$array@N$02@std@@I_N10N@Z 0000000180011180     pilot_readonly_bridge:census_values.cpp.obj
+ 0002:00005188       $unwind$?capture_native@g4b@devf@@YA?AUCapture@12@I@Z 0000000180011188     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000051a4       $chain$0$?capture_native@g4b@devf@@YA?AUCapture@12@I@Z 00000001800111a4     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000051b8       $chain$1$?capture_native@g4b@devf@@YA?AUCapture@12@I@Z 00000001800111b8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000051c8       $unwind$?collect_bg@g4b@devf@@YAXAEAUCapture@12@@Z 00000001800111c8     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:000051ec       $unwind$??$query@VdBgS_ObjGndChk@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 00000001800111ec     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00005214       $cppxdata$??$query@VdBgS_ObjGndChk@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 0000000180011214     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:0000521d       $stateUnwindMap$??$query@VdBgS_ObjGndChk@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 000000018001121d     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:0000522a       $ip2state$??$query@VdBgS_ObjGndChk@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 000000018001122a     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00005234       $unwind$??$query@VdBgS_ObjGndChk_Wtr@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 0000000180011234     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:0000525c       $cppxdata$??$query@VdBgS_ObjGndChk_Wtr@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 000000018001125c     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00005265       $stateUnwindMap$??$query@VdBgS_ObjGndChk_Wtr@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 0000000180011265     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:0000526c       $ip2state$??$query@VdBgS_ObjGndChk_Wtr@@@?A0x8b322375@g4b@devf@@YA?AUSurface@12@XZ 000000018001126c     pilot_readonly_bridge:local_queries.cpp.obj
+ 0002:00005274       $unwind$?sphere_box_candidate@g4b@devf@@YA_NAEBV?$array@N$02@std@@0AEAN@Z 0000000180011274     pilot_readonly_bridge:capture.cpp.obj
+ 0002:00005298       $unwind$?evaluate@g4b@devf@@YAXAEAUCapture@12@@Z 0000000180011298     pilot_readonly_bridge:capture.cpp.obj
+ 0002:000052b0       $chain$2$?evaluate@g4b@devf@@YAXAEAUCapture@12@@Z 00000001800112b0     pilot_readonly_bridge:capture.cpp.obj
+ 0002:000052cc       $chain$9$?evaluate@g4b@devf@@YAXAEAUCapture@12@@Z 00000001800112cc     pilot_readonly_bridge:capture.cpp.obj
+ 0002:000052f8       $chain$10$?evaluate@g4b@devf@@YAXAEAUCapture@12@@Z 00000001800112f8     pilot_readonly_bridge:capture.cpp.obj
+ 0002:00005308       $chain$11$?evaluate@g4b@devf@@YAXAEAUCapture@12@@Z 0000000180011308     pilot_readonly_bridge:capture.cpp.obj
+ 0002:00005318       $unwind$?capture_native@a1@devf@@YA?AUSnapshot@12@XZ 0000000180011318     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:0000533c       $cppxdata$?capture_native@a1@devf@@YA?AUSnapshot@12@XZ 000000018001133c     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005345       $stateUnwindMap$?capture_native@a1@devf@@YA?AUSnapshot@12@XZ 0000000180011345     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:0000534d       $ip2state$?capture_native@a1@devf@@YA?AUSnapshot@12@XZ 000000018001134d     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005368       $unwind$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011368     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:0000537c       $chain$1$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 000000018001137c     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005394       $chain$3$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011394     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:000053ac       $chain$4$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 00000001800113ac     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:000053c0       $chain$15$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 00000001800113c0     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:000053c0       $chain$5$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 00000001800113c0     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:000053d0       $chain$6$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 00000001800113d0     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:000053ec       $chain$7$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 00000001800113ec     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005400       $chain$8$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011400     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005414       $chain$11$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011414     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005414       $chain$9$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011414     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005424       $chain$10$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011424     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005438       $chain$12$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011438     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005438       $chain$14$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011438     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:00005448       $chain$13$?census_actor@?A0xcd01d301@a1@devf@@YAPEAXPEAX0@Z 0000000180011448     pilot_readonly_bridge:census_reader.cpp.obj
+ 0002:0000545c       $unwind$?capture_owner@a2@devf@@YA?AUOwner@12@_N0@Z 000000018001145c     pilot_readonly_bridge:room_owner_resolver.cpp.obj
+ 0002:00005468       $chain$1$?capture_owner@a2@devf@@YA?AUOwner@12@_N0@Z 0000000180011468     pilot_readonly_bridge:room_owner_resolver.cpp.obj
+ 0002:00005480       $chain$5$?capture_owner@a2@devf@@YA?AUOwner@12@_N0@Z 0000000180011480     pilot_readonly_bridge:room_owner_resolver.cpp.obj
+ 0002:000054a0       $chain$6$?capture_owner@a2@devf@@YA?AUOwner@12@_N0@Z 00000001800114a0     pilot_readonly_bridge:room_owner_resolver.cpp.obj
+ 0002:000054b0       $chain$7$?capture_owner@a2@devf@@YA?AUOwner@12@_N0@Z 00000001800114b0     pilot_readonly_bridge:room_owner_resolver.cpp.obj
+ 0002:000054c0       $chain$8$?capture_owner@a2@devf@@YA?AUOwner@12@_N0@Z 00000001800114c0     pilot_readonly_bridge:room_owner_resolver.cpp.obj
+ 0002:000054e8       $unwind$?valid_values@a1@devf@@YA_NAEBUSnapshot@12@@Z 00000001800114e8     pilot_readonly_bridge:core.cpp.obj
+ 0002:000054f0       $unwind$??$_Minmax_element_impl@$01U_Traits_d_avx@_Sorting@?A0x8417fefe@@@_Sorting@?A0x8417fefe@@YA?A_PPEBXQEBX_N@Z 00000001800114f0     msvcprt:vector_algorithms.obj
+ 0002:00005500       $unwind$??$_Minmax_element_impl@$01U_Traits_d_sse@_Sorting@?A0x8417fefe@@@_Sorting@?A0x8417fefe@@YA?A_PPEBXQEBX_N@Z 0000000180011500     msvcprt:vector_algorithms.obj
+ 0002:00005508       $chain$0$??$_Minmax_element_impl@$01U_Traits_d_sse@_Sorting@?A0x8417fefe@@@_Sorting@?A0x8417fefe@@YA?A_PPEBXQEBX_N@Z 0000000180011508     msvcprt:vector_algorithms.obj
+ 0002:0000551c       $chain$1$??$_Minmax_element_impl@$01U_Traits_d_sse@_Sorting@?A0x8417fefe@@@_Sorting@?A0x8417fefe@@YA?A_PPEBXQEBX_N@Z 000000018001151c     msvcprt:vector_algorithms.obj
+ 0002:0000552c       $unwind$__GSHandlerCheckCommon 000000018001152c     MSVCRT:gshandler.obj
+ 0002:00005540       $unwind$__GSHandlerCheck_EH4 0000000180011540     MSVCRT:gshandlereh4.obj
+ 0002:00005550       $xdatasym                  0000000180011550     MSVCRT:chkstk.obj
+ 0002:00005558       $xdatasym                  0000000180011558     MSVCRT:amdsecgs.obj
+ 0002:0000555c       $unwind$?dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z 000000018001155c     MSVCRT:dll_dllmain.obj
+ 0002:00005594       $unwind$?fin$0@?0??dllmain_crt_process_attach@@YAHQEAUHINSTANCE__@@QEAX@Z@4HA 0000000180011594     MSVCRT:dll_dllmain.obj
+ 0002:00005594       $unwind$?fin$0@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 0000000180011594     MSVCRT:dll_dllmain.obj
+ 0002:00005594       $unwind$?fin$1@?0??dllmain_crt_process_detach@@YAH_N@Z@4HA 0000000180011594     MSVCRT:dll_dllmain.obj
+ 0002:0000559c       $unwind$?dllmain_crt_process_detach@@YAH_N@Z 000000018001159c     MSVCRT:dll_dllmain.obj
+ 0002:000055f0       $unwind$?dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z 00000001800115f0     MSVCRT:dll_dllmain.obj
+ 0002:00005618       $unwind$?filt$0@?0??dllmain_dispatch@@YAHQEAUHINSTANCE__@@KQEAX@Z@4HA 0000000180011618     MSVCRT:dll_dllmain.obj
+ 0002:00005620       $unwind$_DllMainCRTStartup 0000000180011620     MSVCRT:dll_dllmain.obj
+ 0002:00005630       $unwind$__isa_available_init 0000000180011630     MSVCRT:cpu_disp.obj
+ 0002:0000563c       $chain$1$__isa_available_init 000000018001163c     MSVCRT:cpu_disp.obj
+ 0002:00005654       $chain$2$__isa_available_init 0000000180011654     MSVCRT:cpu_disp.obj
+ 0002:00005668       $unwind$__scrt_is_nonwritable_in_current_image 0000000180011668     MSVCRT:utility.obj
+ 0002:00005688       $unwind$__scrt_is_nonwritable_in_current_image$filt$0 0000000180011688     MSVCRT:utility.obj
+ 0002:00005690       $unwind$__scrt_dllmain_exception_filter 0000000180011690     MSVCRT:utility.obj
+ 0002:000056a0       $xdatasym                  00000001800116a0     MSVCRT:guard_dispatch.obj
+ 0002:000056a8       $xdatasym                  00000001800116a8     MSVCRT:guard_xfg_dispatch.obj
+ 0002:00005740       .edata                     0000000180011740     devf_first_eoc_active.exp
+ 0002:00005768       rgpv                       0000000180011768     devf_first_eoc_active.exp
+ 0002:0000577c       rgszName                   000000018001177c     devf_first_eoc_active.exp
+ 0002:00005790       rgwOrd                     0000000180011790     devf_first_eoc_active.exp
+ 0002:0000579a       szName                     000000018001179a     devf_first_eoc_active.exp
+ 0002:000057b4       $N00001                    00000001800117b4     devf_first_eoc_active.exp
+ 0002:000057bc       $N00002                    00000001800117bc     devf_first_eoc_active.exp
+ 0002:000057cb       $N00003                    00000001800117cb     devf_first_eoc_active.exp
+ 0002:000057d4       $N00004                    00000001800117d4     devf_first_eoc_active.exp
+ 0002:000057e1       $N00005                    00000001800117e1     devf_first_eoc_active.exp
+ 0002:00005e08       .idata$6                   0000000180011e08     windows-amd64:dusklight.exe
+ 0002:00005ec0       .idata$6                   0000000180011ec0     vcruntime:VCRUNTIME140_1.dll
+ 0002:00005ed4       .idata$6                   0000000180011ed4     vcruntime:VCRUNTIME140.dll
+ 0002:00005fc0       .idata$6                   0000000180011fc0     ucrt:api-ms-win-crt-math-l1-1-0.dll
+ 0002:00005fe0       .idata$6                   0000000180011fe0     ucrt:api-ms-win-crt-stdio-l1-1-0.dll
+ 0002:00006000       .idata$6                   0000000180012000     ucrt:api-ms-win-crt-string-l1-1-0.dll
+ 0002:00006022       .idata$6                   0000000180012022     ucrt:api-ms-win-crt-runtime-l1-1-0.dll
+ 0002:00006044       .idata$6                   0000000180012044     ucrt:api-ms-win-crt-heap-l1-1-0.dll
+ 0002:00006302       .idata$6                   0000000180012302     kernel32:KERNEL32.dll
+ 0003:00000000       ?controller@?A0x4acf3c59@@3VController@first@devf@@A 0000000180013000     active_mod.cpp.obj
+ 0003:00000090       ?trace@?A0x4acf3c59@@3VTrace@pilot@devf@@A 0000000180013090     active_mod.cpp.obj
+ 0003:00005ec0       ?current@?A0x7fc93d2c@pilot@devf@@3VCensusValues@23@A 0000000180018ec0     pilot_readonly_bridge:census_values.cpp.obj
+ 0003:0000b790       ?current_values@?A0xcd01d301@g4b@devf@@3UCapture@23@A 000000018001e790     pilot_readonly_bridge:census_reader.cpp.obj
+ 0003:0000c020       ??_R0?AVOfficialSink@?A0x4acf3c59@@@8 000000018001f020     active_mod.cpp.obj
+ 0003:0000c210       ?active@?A0x4acf3c59@@3_NA 000000018001f210     active_mod.cpp.obj
+ 0003:0000c211       ?updating@?A0x4acf3c59@@3_NA 000000018001f211     active_mod.cpp.obj
+ 0003:0000c212       ?initialized_once@?A0x4acf3c59@@3_NA 000000018001f212     active_mod.cpp.obj
+ 0003:0000c218       ?updates@?A0x4acf3c59@@3_KA 000000018001f218     active_mod.cpp.obj
+ 0003:0000c230       ?update_index@?A0x1b080169@pilot@devf@@3_KA 000000018001f230     pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0003:0000c238       ?capture_sequence@?A0x1b080169@pilot@devf@@3IA 000000018001f238     pilot_readonly_bridge:readonly_bridge.cpp.obj
+ 0003:0000c23c       ?__proc_attached@@3HA      000000018001f23c     MSVCRT:dll_dllmain.obj
+ 0003:0000c278       ?is_initialized_as_dll@@3_NA 000000018001f278     MSVCRT:utility.obj
+ 0003:0000c279       ?module_local_atexit_table_initialized@@3_NA 000000018001f279     MSVCRT:utility.obj
+ 0003:0000c280       ?module_local_atexit_table@@3U_onexit_table_t@@A 000000018001f280     MSVCRT:utility.obj
+ 0003:0000c298       ?module_local_at_quick_exit_table@@3U_onexit_table_t@@A 000000018001f298     MSVCRT:utility.obj
+ 0005:00000008       ?mod_meta_header_record@@3UModMetaHeader@@A 0000000180021008     active_mod.cpp.obj
+ 0005:00000010       ?mod_meta_import_svc_host@@3UModMetaImport@@A 0000000180021010     active_mod.cpp.obj
+ 0005:00000060       ?mod_meta_import_svc_log@@3UModMetaImport@@A 0000000180021060     active_mod.cpp.obj
+ 0005:000000b0       ?mod_meta_import_svc_actor@@3UModMetaImport@@A 00000001800210b0     active_mod.cpp.obj
+ 0005:00000100       ?mod_meta_import_svc_game@@3UModMetaImport@@A 0000000180021100     game_feature.cpp.obj
+ 0006:00000060       $R000000                   0000000180022060     * linker generated manifest res *

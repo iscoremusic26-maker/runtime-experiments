@@ -1,0 +1,197 @@
+--- base/src/experiment_core.hpp
++++ pilot-overlay/src/experiment_core.hpp
+@@ -2,13 +2,15 @@
+ #include <array>
+ #include <cstdint>
+ #include <type_traits>
++#include "policy_values.hpp"
++namespace devf::pilot {enum class Event:unsigned;class Trace;}
+ #if !defined(DEVF_FIRST_OFFLINE) || DEVF_FIRST_OFFLINE != 1
+ #error "Intentional experimental offline target only; never a READ_ONLY observer"
+ #endif
+ namespace devf::first {
+ using Id=std::uint32_t;inline constexpr Id unknown=0xffffffffu;
+ inline constexpr std::array<double,3> candidate{-4806.7346,-6729.480961460304,65135.8281};
+-enum class Reason { None,Disarmed,Host,Thread,Context,Registry,Player,Node,Binding,Transition,PendingContext,Previous,Position,Revalidation,Reentry,Consumed,Selection,Service,InvalidId,Exception,Restore,Identity,Phase,MissingActor,Resources,Timeout,Removed,Ambiguous,Admission,Medium,Queue,CounterAttribution,ObservationBudget,Shutdown };
++enum class Reason { None,Disarmed,Host,Thread,Context,Registry,Player,Node,Binding,Transition,PendingContext,Previous,Position,Revalidation,Reentry,Consumed,Selection,Service,InvalidId,Exception,Restore,Identity,Phase,MissingActor,Resources,Timeout,Removed,Ambiguous,Admission,Medium,Queue,CounterAttribution,ObservationBudget,Shutdown,PilotSafety };
+ struct Owner {
+     bool host_ok=false, thread_ok=false, registry_ok=false, player_ok=false;
+     bool node_present=false, node_profile=false, node_complete=false, node_id_ok=false;
+@@ -23,6 +25,7 @@
+ 
+ struct Frame {
+  Owner owner{};bool event_read=false,event_active=false,stable=false,medium_observed=false;
++ devf::pilot::CaptureFacts pilot{};
+  bool registered_eoc=false,registered_weapon=false; // never means resource/GPU READY
+ };
+ struct Key { Id node=unknown,child=unknown,play=unknown,parent=unknown;int room=-1,logical=-1;bool operator==(const Key&) const=default; };
+@@ -32,7 +35,7 @@
+ bool same_context(const Owner&,const Owner&) noexcept;
+ struct Admission {
+  bool location_admitted=false,session_authorized=false;
+- Key context{};std::array<double,3> xyz=candidate;
++ Key context{};std::array<double,3> xyz=candidate;bool bind_context_live=false;
+ }; // No runtime setter/config/UI exists. Native provider in admission.cpp always returns NONE.
+ Admission current_admission() noexcept;
+ struct Preset {
+@@ -72,16 +75,22 @@
+  State state_=State::Blocked;Reason reason_=Reason::Admission;
+  bool consumed_=false,busy_=false,ready_seen_=false;Id id_=unknown;Owner origin_{};
+  unsigned polls_=0,missing_=0,timeout_,ready_polls_=0;
++ devf::pilot::Trace* trace_=nullptr;bool request_started_=false;
++ devf::pilot::GuardReason guard_reason_=devf::pilot::GuardReason::None;
++ void note(devf::pilot::Event,const Frame* =nullptr,const Observation* =nullptr,int result=-1) noexcept;
++ bool pilot_check(const Frame&,const Frame* previous=nullptr) noexcept;
+  bool terminal() const noexcept { return state_==State::StopSession||state_==State::Failed; }
+ public:
+  explicit Controller(unsigned timeout=120):timeout_(timeout?timeout:1){}
+  State state()const{return state_;}Reason reason()const{return reason_;}
+  bool consumed()const{return consumed_;}bool busy()const{return busy_;}Id id()const{return id_;}
+  unsigned polls()const{return polls_;}const Owner& origin()const{return origin_;}
+- void stop(Reason r) noexcept {state_=State::StopSession;reason_=r;}
++ void attach_trace(devf::pilot::Trace* t) noexcept {trace_=t;}
++ devf::pilot::GuardReason policy_reason()const noexcept{return guard_reason_;}
++ void stop(Reason r) noexcept;
+  void attempt(Backend&,const Admission&) noexcept;
+  void poll(Backend&) noexcept;
+- void shutdown() noexcept {stop(Reason::Shutdown);}
++ void shutdown() noexcept;
+ };
+ static_assert(std::is_trivially_copyable_v<Frame> && std::is_trivially_copyable_v<Observation>);
+ Frame read_only_preflight(); // compiled behind unchanged historical READ_ONLY/A2 guards
+--- base/src/experiment_core.cpp
++++ pilot-overlay/src/experiment_core.cpp
+@@ -1,8 +1,24 @@
+ #include "experiment_core.hpp"
++#include "policy.hpp"
++#include "trace.hpp"
+ #include <cstring>
+ #include <cmath>
+ #include <limits>
+ namespace devf::first {
++void Controller::note(pilot::Event e,const Frame* f,const Observation* o,int result) noexcept {if(trace_)trace_->record(e,*this,f,o,result);}
++bool Controller::pilot_check(const Frame& f,const Frame* previous) noexcept {
++ const auto decision=pilot::assess(f);guard_reason_=decision.reason;
++ if(decision.allowed&&previous)guard_reason_=pilot::freshness(*previous,f);
++ const bool ok=decision.allowed&&guard_reason_==pilot::GuardReason::None;
++ if(!ok)reason_=Reason::PilotSafety;
++ note(ok?pilot::Event::LocationPolicyPass:pilot::Event::LocationPolicyFail,&f);return ok;
++}
++void Controller::stop(Reason r) noexcept {
++ state_=State::StopSession;reason_=r;note(pilot::Event::StopSession);
++ if(request_started_||r==Reason::Restore)note(pilot::Event::FullExitRequired);
++}
++void Controller::shutdown() noexcept {note(pilot::Event::Shutdown);stop(Reason::Shutdown);}
++
+ Key key(const Owner& o) noexcept {return {o.node,o.child,o.play,o.parent,o.room,o.logical};}
+ Reason validate_owner(const Owner& o) noexcept {
+     if (!o.host_ok) return Reason::Host;
+@@ -41,31 +57,42 @@
+ void Controller::attempt(Backend& b,const Admission& permission) noexcept {
+  if(busy_){stop(Reason::Reentry);return;}
+  if(consumed_||terminal()||state_==State::ActorReadyObserved)return;
+- if(!permission.location_admitted||!permission.session_authorized){state_=State::Blocked;reason_=Reason::Admission;return;}
++ if(!permission.location_admitted||!permission.session_authorized){state_=State::Blocked;reason_=Reason::Admission;note(pilot::Event::SessionGateDenied);return;}
+  busy_=true;struct End{bool& busy;~End(){busy=false;}} end{busy_};
+  try {
+-  const auto first=b.preflight();reason_=validate_owner(first.owner);
++  const auto first=b.preflight();if(terminal())return;guard_reason_=pilot::GuardReason::None;reason_=validate_owner(first.owner);
+   if(reason_==Reason::None&&!context_valid(first))reason_=Reason::Transition;
+   if(reason_==Reason::None&&!first.medium_observed)reason_=Reason::Medium;
+   if(reason_==Reason::None&&(!first.registered_eoc||!first.registered_weapon))reason_=Reason::Resources;
+   Preset preset;if(reason_==Reason::None&&!convert_candidate(permission.xyz,preset))reason_=Reason::Position;
+-  if(reason_==Reason::None&&permission.context!=key(first.owner))reason_=Reason::Admission;
++  const auto admission_key=permission.bind_context_live?key(first.owner):permission.context;
++  if(reason_==Reason::None&&admission_key!=key(first.owner))reason_=Reason::Admission;
++  if(reason_==Reason::None&&!pilot_check(first))reason_=Reason::PilotSafety;
+   if(reason_==Reason::None&&!b.service_available())reason_=Reason::Service;
+-  if(reason_!=Reason::None){state_=State::Rejected;return;}
+-  const auto fresh=b.preflight();
++  if(reason_!=Reason::None){state_=State::Rejected;note(pilot::Event::PreflightReject,&first);return;}
++  note(pilot::Event::FirstPrecheckPass,&first);
++  const auto fresh=b.preflight();if(terminal())return;
+   if(validate_owner(fresh.owner)!=Reason::None||!context_valid(fresh)||!fresh.medium_observed||!fresh.registered_eoc||!fresh.registered_weapon||!same_context(first.owner,fresh.owner)||first.owner.previous!=fresh.owner.previous){stop(Reason::Revalidation);return;}
++  if(!pilot_check(fresh,&first)){stop(Reason::PilotSafety);return;}
++  note(pilot::Event::FreshPrecheckPass,&fresh);
+   if(b.current()!=fresh.owner.previous||!b.registered(fresh.owner.previous)||!b.registered(fresh.owner.child)){stop(Reason::Previous);return;}
+-  origin_=fresh.owner;consumed_=true;state_=State::AttemptConsumed; // BEFORE global setter / potential enqueue
++  if(terminal())return;
++  origin_=fresh.owner;consumed_=true;state_=State::AttemptConsumed;note(pilot::Event::AttemptConsumed,&fresh); // BEFORE global setter / potential enqueue
+   LayerScope scope(b,origin_.previous);
+   try {
+    if(!scope.select(origin_.child))stop(Reason::Selection);
+    else {
++    note(pilot::Event::LayerSelected,&fresh);
+     const auto selected=b.preflight();
+     if(terminal()){} // Reentry is sticky; never overwritten by later success.
+     else if(!context_valid(selected)||validate_owner(selected.owner)!=Reason::None||!selected.medium_observed||!selected.registered_eoc||!selected.registered_weapon||!same_context(origin_,selected.owner)||b.current()!=origin_.child)stop(Reason::Revalidation);
++    else if(!pilot_check(selected,&fresh))stop(Reason::PilotSafety);
++    else if(terminal()){}
+     else {
++     request_started_=true;note(pilot::Event::CreateRequestBegin,&selected);
+      const auto result=b.request(preset); // ONE backend request point; native service implementation is separate.
+-     if(result.id!=unknown)id_=result.id; // Keep diagnostic ID even if reentry already forced STOP.
++     if(result.id!=unknown)id_=result.id;
++     note(pilot::Event::CreateRequestResult,&selected,nullptr,result.result); // Keep diagnostic ID even if reentry already forced STOP.
+      if(terminal()){}
+      else if(result.result!=0)stop(Reason::Service);
+      else if(result.id==unknown||result.id==0||result.id>=0x7ffffffeu)stop(Reason::InvalidId);
+@@ -73,12 +100,14 @@
+     }
+    }
+   }catch(...){stop(Reason::Exception);}
+-  if(!scope.restore())stop(Reason::Restore);
++  if(!scope.restore()){note(pilot::Event::RestoreFailed);stop(Reason::Restore);}
++  else note(pilot::Event::LayerRestoreOk);
+   if(!terminal() && state_==State::Requested){
+    const auto after=b.observe(id_);
+    if(!context_valid(after.frame)||!same_context(origin_,after.frame.owner)||b.current()!=origin_.previous)stop(Reason::Revalidation);
+    else if(!after.actor_scan_complete||!after.request_scan_complete||after.ambiguous||after.id!=id_)stop(Reason::Ambiguous);
+    else if(after.request_present&&after.request_owner!=origin_.child)stop(Reason::Queue);
++   else note(pilot::Event::Requested,nullptr,&after);
+   }
+  }catch(...){stop(Reason::Exception);}
+ }
+@@ -88,7 +117,7 @@
+  busy_=true;struct End{bool& busy;~End(){busy=false;}} end{busy_};
+  try {
+   const auto a=b.observe(id_);if(terminal())return;
+-  ++polls_;
++  ++polls_;note(pilot::Event::PendingPhase,nullptr,&a);
+   if(!context_valid(a.frame)||!same_context(origin_,a.frame.owner)){stop(Reason::Context);return;}
+   if(!a.actor_scan_complete||!a.request_scan_complete||a.ambiguous||a.reused){stop(Reason::Ambiguous);return;}
+   if(a.id!=id_){stop(Reason::Identity);return;}
+@@ -104,9 +133,9 @@
+    if(a.owner!=origin_.child||a.room!=origin_.room||!a.room_api_ok){stop(Reason::Identity);return;}
+   }
+   const bool ready=a.actor_present&&!a.creating&&a.init==2&&a.actor_init&&a.derived_read&&a.room_api_ok&&a.owner==origin_.child&&a.room==origin_.room;
+-  if(ready){state_=State::ActorReadyObserved;reason_=Reason::None;ready_seen_=true;missing_=0;if(++ready_polls_>60)stop(Reason::ObservationBudget);return;}
++  if(ready){state_=State::ActorReadyObserved;reason_=Reason::None;ready_seen_=true;missing_=0;note(pilot::Event::ActorReadyObserved,nullptr,&a);if(++ready_polls_>60){note(pilot::Event::ReadyMonitorBudgetExhausted,nullptr,&a);stop(Reason::ObservationBudget);}return;}
+   if(ready_seen_){stop(Reason::Removed);return;}
+-  state_=State::Pending;
++  state_=State::Pending;note(pilot::Event::Pending,nullptr,&a);
+   if(!a.actor_present&&!a.creating && ++missing_>3){stop(Reason::MissingActor);return;}
+   if(polls_>=timeout_)stop(Reason::Timeout);
+  }catch(...){stop(Reason::Exception);}
+--- base/g4b-census
++++ pilot-overlay/g4b-census
+@@ -1,5 +1,6 @@
+-#include "../../CP01_G2_READONLY_PACKAGE/src/core.hpp"
++#include "<DEVF>/CP01_G2_READONLY_PACKAGE/src/core.hpp"
+ #include "capture.hpp"
++#include "census_values.hpp"
+ #include <cmath>
+ #include <d/d_com_inf_game.h>
+ #include <f_op/f_op_actor_iter.h>
+@@ -49,6 +50,11 @@
+     local.visited=c.visited;
+     const std::array<double,3> xyz{a->current.pos.x,a->current.pos.y,a->current.pos.z};
+     unsigned reason=(a==dComIfGp_getPlayer(0))?1u:0u;
++    devf::g4b::Id pilot_owner=devf::g4b::unknown;
++    const bool pilot_owner_valid=layer_id(c.layers,a->layer_tag.layer,pilot_owner);
++    const bool pilot_link=(reason&1u)!=0;
++    const std::array<double,3> pilot_speed=pilot_link?std::array<double,3>{a->speed.x,a->speed.y,a->speed.z}:std::array<double,3>{};
++    devf::pilot::collect_actor(a->id,a->profname,a->current.roomNo,xyz,pilot_owner,pilot_owner_valid,pilot_link,pilot_speed,pilot_link?double(a->speedF):0.0);
+     const auto distance=devf::g4b::distance_to_C(xyz);
+     if(distance<0){local.actors_complete=false;c.incomplete=true;return actor;}
+     if(distance<=devf::g4b::radius)reason|=2;

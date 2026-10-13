@@ -1,0 +1,218 @@
+{
+  "status": "DOWNLOAD_VERIFIED",
+  "artifact_zip_bytes": 34520,
+  "artifact_zip_sha256": "1f3956c2995e0243d9ad0f4280d8669ddc3c3958de0e8dba5439409dde796b53",
+  "github_digest_matched": true,
+  "outer_members": [
+    {
+      "path": "DEVF_CP01_E_OC_FIRST_ACTIVE_PILOT_windows-amd64_a67662bec0be8ac7982dd8685f9ac29cc1c0ebea.dusk",
+      "directory": false,
+      "bytes": 33897,
+      "crc32": "e5a73ad0",
+      "sha256": "f1475a82dc0d4783f2dcedd1d0748390733ff0f5006ddd54842691246397bd78"
+    },
+    {
+      "path": "DOWNLOAD_MANIFEST.json",
+      "directory": false,
+      "bytes": 1766,
+      "crc32": "ac556d0e",
+      "sha256": "5d455b27168df8872b5cec8c54f7a68b5b3bc835e50a9b45f980a2408b12e27c"
+    }
+  ],
+  "package_bytes": 33897,
+  "package_sha256": "f1475a82dc0d4783f2dcedd1d0748390733ff0f5006ddd54842691246397bd78",
+  "dll_bytes": 122368,
+  "dll_sha256": "26d07aae3f53151d105844f20f7be245f1dfcca120df51bcf239c8e3c449461b",
+  "inner_members": [
+    {
+      "path": "mod.json",
+      "directory": false,
+      "bytes": 330,
+      "crc32": "6377da46",
+      "sha256": "b14a16f582adf2dd3d8a1f38900345b83b8ab6747f23df2e11afd6ff9b8a8f67"
+    },
+    {
+      "path": "lib/",
+      "directory": true,
+      "bytes": 0,
+      "crc32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "lib/windows-amd64/",
+      "directory": true,
+      "bytes": 0,
+      "crc32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "lib/windows-amd64/mod.dll",
+      "directory": false,
+      "bytes": 122368,
+      "crc32": "75cd5444",
+      "sha256": "26d07aae3f53151d105844f20f7be245f1dfcca120df51bcf239c8e3c449461b"
+    }
+  ],
+  "manifest": {
+    "filename": "DEVF_CP01_E_OC_FIRST_ACTIVE_PILOT_windows-amd64_a67662bec0be8ac7982dd8685f9ac29cc1c0ebea.dusk",
+    "source_commit": "a67662bec0be8ac7982dd8685f9ac29cc1c0ebea",
+    "baseline_commit": "0ff1b8bf5e331fc411d6dd9e5fc70c7b3809c75e",
+    "workflow_commit": "245c9eec99f7ff0186aac4174f04811cb9918b76",
+    "workflow_run_id": "38435464736",
+    "workflow_run_attempt": "1",
+    "official_sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "compiler": "MSVC 19.51.36260",
+    "toolchain_env": {
+      "VCToolsVersion": "14.51.36231",
+      "WindowsSDKVersion": "10.0.26100.0\\",
+      "VSCMD_ARG_TGT_ARCH": "x64"
+    },
+    "module_id": "dev.devf.cp01_eoc_first_active_pilot",
+    "module_version": "0.0.1",
+    "package_sha256": "f1475a82dc0d4783f2dcedd1d0748390733ff0f5006ddd54842691246397bd78",
+    "package_bytes": 33897,
+    "dll_sha256": "26d07aae3f53151d105844f20f7be245f1dfcca120df51bcf239c8e3c449461b",
+    "dll_bytes": 122368,
+    "manifest_sha256": "b14a16f582adf2dd3d8a1f38900345b83b8ab6747f23df2e11afd6ff9b8a8f67",
+    "creation_capable": true,
+    "provider_armed_in_binary": true,
+    "installed": false,
+    "runtime_tested": false,
+    "execution_authorized": false,
+    "installation_authorized": false,
+    "G5": "NO_GO",
+    "G6": "NOT_VERIFIED",
+    "CP02": "NO_GO",
+    "location": "LOCATION_SAFE_UNVERIFIED",
+    "unloading": "CUSTOM_PROFILE_DLL_UNLOADING_BLOCKED",
+    "risk": "May request ONE E_OC automatically if loaded and live A/B/C guards pass. NOT INSTALLED / NOT RUN / SESSION NOT AUTHORIZED. STOP does not cancel/rollback; no hot reload.",
+    "generated_utc": "2026-10-13T17:03:53.499604+00:00"
+  },
+  "external_manifest_sha256": "5d455b27168df8872b5cec8c54f7a68b5b3bc835e50a9b45f980a2408b12e27c",
+  "pe_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "?mNextStayNo@dStage_roomControl_c@@2CA",
+        "?mStayNo@dStage_roomControl_c@@2CA",
+        "?mProcID@dStage_roomControl_c@@2IA",
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?dComIfGp_event_runCheck@@YAHXZ",
+        "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+        "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+        "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+        "??0dBgS_GndChk@@QEAA@XZ",
+        "??1dBgS_GndChk@@UEAA@XZ",
+        "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+        "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+        "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+        "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcCtIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+        "?fpcLy_SetCurrentLayer@@YAXPEAUlayer_class@@@Z"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "VCRUNTIME140.dll": [
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memset",
+        "memcpy",
+        "_CxxThrowException",
+        "__std_exception_destroy",
+        "__std_exception_copy"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "sqrt"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strncmp"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_seh_filter_dll",
+        "_initialize_onexit_table",
+        "_initialize_narrow_environment",
+        "_execute_onexit_table",
+        "_initterm_e",
+        "_cexit",
+        "_initterm",
+        "_configure_narrow_argv"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "free"
+      ],
+      "KERNEL32.dll": [
+        "DisableThreadLibraryCalls",
+        "InitializeSListHead",
+        "QueryPerformanceCounter",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "GetCurrentProcessId"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.actor",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "PASS_STATIC"
+  },
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "whole_dll_hash_matches_audited_loose_binary": true,
+  "dll_loaded": false,
+  "game_executed": false,
+  "installed": false,
+  "runtime": "NOT_TESTED"
+}

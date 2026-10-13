@@ -1,0 +1,15 @@
+{
+  "run_id": 38435464736,
+  "job_id": 115428153522,
+  "artifact_id": 11832716912,
+  "zip_bytes": 255743,
+  "zip_sha256": "c8f96624035ce0c8a3df2fcd0d02b469cf777cddfd5c8b1cb308c01ab54677ab",
+  "CRC": "PASS",
+  "manifest_files": 22,
+  "source_files_verified": 16,
+  "seven_overlay_inputs_outputs_verified": true,
+  "trace_adaptation_verified": true,
+  "source_sha": "a67662bec0be8ac7982dd8685f9ac29cc1c0ebea",
+  "ci_sha": "245c9eec99f7ff0186aac4174f04811cb9918b76",
+  "external_manifest_byte_identical_to_package_artifact": true
+}

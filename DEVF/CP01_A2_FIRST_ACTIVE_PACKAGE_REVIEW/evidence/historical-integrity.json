@@ -1,0 +1,11 @@
+{
+  "status": "PASS_STATIC",
+  "baseline": "0ff1b8bf5e331fc411d6dd9e5fc70c7b3809c75e",
+  "all_prior_DEVF_files_verified": 658,
+  "original277_verified": 277,
+  "previous_refs_verified": 50,
+  "SDK_Aurora_tracked_sources_unchanged": true,
+  "importlib_and_selected_ZIP_member_hash_CRC_verified_in_runner": true,
+  "all_changes_only_new_directory": true,
+  "mismatches": []
+}

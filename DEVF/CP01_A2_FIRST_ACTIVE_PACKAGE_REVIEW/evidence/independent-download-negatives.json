@@ -1,0 +1,30 @@
+{
+  "scope": "Linux read-only ZIP/hash/manifest parser; NOT a Windows/runtime test",
+  "cases": [
+    {
+      "case": "wrong_artifact_digest",
+      "expected_rejection": true,
+      "exit": 1,
+      "diagnostic": "RuntimeError: GitHub artifact digest mismatch",
+      "actual_download_unchanged": true,
+      "DLL_not_extracted_or_loaded": true
+    },
+    {
+      "case": "external_ci_manifest_drift",
+      "expected_rejection": true,
+      "exit": 1,
+      "diagnostic": "RuntimeError: External manifest drift workflow_commit",
+      "actual_download_unchanged": true,
+      "DLL_not_extracted_or_loaded": true
+    },
+    {
+      "case": "wrong_expected_internal_dll_hash",
+      "expected_rejection": true,
+      "exit": 1,
+      "diagnostic": "RuntimeError: Downloaded DLL hash/size differs",
+      "actual_download_unchanged": true,
+      "DLL_not_extracted_or_loaded": true
+    }
+  ],
+  "PASS": 3
+}

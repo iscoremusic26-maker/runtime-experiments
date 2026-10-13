@@ -1,0 +1,13 @@
+{
+  "run_id": 38435464736,
+  "job_id": 115428153522,
+  "image": "windows-2025-vs2026",
+  "image_version": "20260925.250.1",
+  "from_actual_job_log": [
+    "2026-10-13T17:02:51.5088395Z Image: windows-2025-vs2026",
+    "2026-10-13T17:02:51.5089326Z Version: 20260925.250.1",
+    "2026-10-13T17:02:51.5091842Z Included Software: https://github.com/actions/runner-images/blob/win25-vs2026/20260925.250/images/windows/Windows2025-VS2026-Readme.md",
+    "2026-10-13T17:03:54.9636755Z Artifact download URL: https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38435464736/artifacts/11832716912",
+    "2026-10-13T17:03:55.9637166Z Artifact download URL: https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38435464736/artifacts/11832392953"
+  ]
+}

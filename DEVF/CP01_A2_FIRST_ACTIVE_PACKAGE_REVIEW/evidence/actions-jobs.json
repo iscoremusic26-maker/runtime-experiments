@@ -1,0 +1,80 @@
+{
+  "jobs": [
+    {
+      "id": 115428153522,
+      "name": "active-package",
+      "status": "completed",
+      "conclusion": "success",
+      "run_id": 38435464736,
+      "logs_url": null,
+      "steps": [
+        {
+          "name": "Set up job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 1
+        },
+        {
+          "name": "Exact pilot, unchanged prior source inputs and private CP00 import library",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 2
+        },
+        {
+          "name": "Official SDK at exact v2.0.3 root, never build host",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 3
+        },
+        {
+          "name": "Exact Aurora headers only",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 4
+        },
+        {
+          "name": "MSVC x64 and Windows SDK",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 5
+        },
+        {
+          "name": "Build active-capable DLL, incremental fake lab, PE audit and official SDK package; NEVER load any DLL or host",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 6
+        },
+        {
+          "name": "Preserve sanitized text separately, no original resources or standalone binaries",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7
+        },
+        {
+          "name": "Private ACTIVE-CAPABLE package for review ONLY; not installed or run",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8
+        },
+        {
+          "name": "Post Official SDK at exact v2.0.3 root, never build host",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 15
+        },
+        {
+          "name": "Post Exact pilot, unchanged prior source inputs and private CP00 import library",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 16
+        },
+        {
+          "name": "Complete job",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 17
+        }
+      ]
+    }
+  ]
+}
