@@ -1,0 +1,140 @@
+Microsoft (R) COFF/PE Dumper Version 14.51.36260.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+
+Dump of file <WORK>\build\devf_first_native_experiment.dll
+
+File Type: DLL
+
+  Section contains the following imports:
+
+    dusklight.exe
+             180008110 Import Address Table
+             18000CBA0 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           0 ??1dBgS_ObjGndChk_Wtr@@UEAA@XZ
+                           0 ?dComIfGp_getStartStageName@@YAPEBDXZ
+                           0 ?dComIfGp_isEnableNextStage@@YAHXZ
+                           0 ?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z
+                           0 ??1dBgS_GndChk@@UEAA@XZ
+                           0 ?dComIfGp_event_runCheck@@YAHXZ
+                           0 ?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z
+                           0 ?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z
+                           0 ?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A
+                           0 ??0dBgS_ObjGndChk_Wtr@@QEAA@XZ
+                           0 ?mProcID@dStage_roomControl_c@@2IA
+                           0 ?mStayNo@dStage_roomControl_c@@2CA
+                           0 ?mNextStayNo@dStage_roomControl_c@@2CA
+                           0 ?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z
+                           0 ?SetObj@dBgS_PolyPassChk@@QEAAXXZ
+                           0 ??0dBgS_GndChk@@QEAA@XZ
+                           0 ?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z
+                           0 ?fpcLy_SetCurrentLayer@@YAXPEAUlayer_class@@@Z
+                           0 ?dComIfG_Bgsp@@YAAEAVdBgS@@XZ
+                           0 ?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z
+                           0 ?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z
+                           0 ?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z
+                           0 ?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z
+                           0 ?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z
+                           0 ?getLayerNo@dComIfG_play_c@@SAHH@Z
+                           0 ?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z
+                           0 ?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z
+                           0 ?fpcM_IsCreating@@YAHI@Z
+                           0 ?fpcCtIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z
+                           0 ?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z
+                           0 ?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ
+                           0 ?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ
+
+    VCRUNTIME140_1.dll
+             180008078 Import Address Table
+             18000CB08 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           0 __CxxFrameHandler4
+
+    VCRUNTIME140.dll
+             180008038 Import Address Table
+             18000CAC8 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          25 __std_type_info_destroy_list
+                           8 __C_specific_handler
+                          3C memcpy
+                          3E memset
+                           1 _CxxThrowException
+                          22 __std_exception_destroy
+                          21 __std_exception_copy
+
+    api-ms-win-crt-math-l1-1-0.dll
+             180008098 Import Address Table
+             18000CB28 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         116 sqrt
+
+    api-ms-win-crt-stdio-l1-1-0.dll
+             1800080F0 Import Address Table
+             18000CB80 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                           D __stdio_common_vsprintf
+
+    api-ms-win-crt-string-l1-1-0.dll
+             180008100 Import Address Table
+             18000CB90 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          8E strncmp
+
+    api-ms-win-crt-runtime-l1-1-0.dll
+             1800080A8 Import Address Table
+             18000CB38 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          16 _cexit
+                          22 _execute_onexit_table
+                          33 _initialize_narrow_environment
+                          18 _configure_narrow_argv
+                          3F _seh_filter_dll
+                          37 _initterm_e
+                          36 _initterm
+                          34 _initialize_onexit_table
+
+    api-ms-win-crt-heap-l1-1-0.dll
+             180008088 Import Address Table
+             18000CB18 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                          18 free
+
+    KERNEL32.dll
+             180008000 Import Address Table
+             18000CA90 Import Name Table
+                     0 time date stamp
+                     0 Index of first forwarder reference
+
+                         142 DisableThreadLibraryCalls
+                         39A InitializeSListHead
+                         481 QueryPerformanceCounter
+                         31A GetSystemTimeAsFileTime
+                         246 GetCurrentThreadId
+                         242 GetCurrentProcessId
+
+  Summary
+
+        1000 .data
+        1000 .pdata
+        6000 .rdata
+        1000 .reloc
+        1000 .rsrc
+        7000 .text
+        1000 modmeta

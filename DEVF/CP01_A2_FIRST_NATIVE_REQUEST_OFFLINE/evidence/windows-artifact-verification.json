@@ -1,0 +1,18 @@
+{
+  "status": "PASS_STATIC",
+  "artifact_id": 11824545435,
+  "artifact_zip_bytes": 109198,
+  "artifact_zip_sha256": "39ed3ea1f41b9cf6ca0155a71504ed5e6e37d35e8834e771f95ed18bf257fa1f",
+  "crc_all_members": "PASS",
+  "text_only": true,
+  "verified_members": 29,
+  "verified_manifest_entries": 28,
+  "source_ledger_matches": 16,
+  "historical_source_ledger_matches": 14,
+  "compiled_main_commit": "1f184e56b66bef014601419a5c9078f16e112944",
+  "ci_head": "7a33a26b084aed794108d281d5cad84de7d69d37",
+  "run_id": "38414957463",
+  "download_url_observed_in_job_log": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38414957463/artifacts/11824545435",
+  "expires_utc": "2026-11-12T14:39:06Z",
+  "downloaded_and_checked": true
+}

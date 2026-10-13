@@ -1,0 +1,59 @@
+[1/23] Building CXX object CMakeFiles\first_readonly_bridge.dir\src\readonly_bridge.cpp.obj
+[2/23] Building CXX object CMakeFiles\first_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\capture.cpp.obj
+[3/23] Building CXX object CMakeFiles\first_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\local_queries.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[4/23] Building CXX object CMakeFiles\first_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G4B_LOCAL_READONLY_OBSERVER\src\extended_g2_reader.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[5/23] Building CXX object CMakeFiles\first_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_G2_READONLY_PACKAGE\src\core.cpp.obj
+[6/23] Building CXX object CMakeFiles\first_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\controller_core.cpp.obj
+[7/23] Building CXX object CMakeFiles\devf_first_native_experiment.dir\src\experiment_core.cpp.obj
+[8/23] Building CXX object CMakeFiles\first_readonly_bridge.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\room_owner_resolver.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[9/23] Linking CXX static library first_readonly_bridge.lib
+[10/23] Building CXX object CMakeFiles\devf_first_native_experiment.dir\src\admission.cpp.obj
+[11/23] Building CXX object CMakeFiles\devf_first_native_experiment.dir\src\native_backend.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[12/23] Building CXX object CMakeFiles\devf_first_native_experiment.dir\src\experimental_mod.cpp.obj
+[13/23] Building CXX object CMakeFiles\devf_first_native_experiment.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\.official\sdk\src\game_feature.cpp.obj
+[14/23] Building CXX object CMakeFiles\first_request_lab.dir\src\experiment_core.cpp.obj
+[15/23] Building CXX object CMakeFiles\first_equivalence_lab.dir\tests\equivalence_lab.cpp.obj
+[16/23] Building CXX object CMakeFiles\first_request_lab.dir\tests\request_lab.cpp.obj
+[17/23] Building CXX object CMakeFiles\first_equivalence_lab.dir\src\experiment_core.cpp.obj
+[18/23] Building CXX object CMakeFiles\first_equivalence_lab.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\DEVF\CP01_A2_DISARMED_CONTROLLER\src\controller_core.cpp.obj
+[19/23] Linking CXX shared module devf_first_native_experiment.dll
+[20/23] Building CXX object CMakeFiles\first_abi_lab.dir\tests\abi_lab.cpp.obj
+[21/23] Linking CXX executable first_request_lab.exe
+[22/23] Linking CXX executable first_equivalence_lab.exe
+[23/23] Linking CXX executable first_abi_lab.exe

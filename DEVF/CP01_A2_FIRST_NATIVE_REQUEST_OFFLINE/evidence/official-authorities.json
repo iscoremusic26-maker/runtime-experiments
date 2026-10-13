@@ -1,0 +1,24 @@
+{
+  "root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "tracked_source_unchanged": true,
+  "host_exe": "never altered/built/executed",
+  "focused_source_sha256": {
+    "sdk/include/mods/svc/actor.h": "77c180571664dbaa07026bcbf073c0d459cb6e0e7264ddbca6d18770081082e8",
+    "src/dusk/mods/svc/actor.cpp": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3",
+    "include/f_pc/f_pc_layer.h": "67725225f9ec9d876dab0e404f4a5b18f3c067d7f70fe2184149ec69f86a8c7a",
+    "src/f_pc/f_pc_layer.cpp": "6f57e793b93cc268a6f5ad0b13f2100243d79473867f88a7bf95646b233c27da",
+    "include/f_pc/f_pc_manager.h": "fe69d11984b1894bdded58c8d6f65b7744b6f3d95ad6cee00320a69a901a68f5",
+    "src/f_pc/f_pc_manager.cpp": "a8da75b1ac0aa45b9125b3dba546e5971d3600a1be251cb8cee57afb3c64b2ce",
+    "src/f_pc/f_pc_create_req.cpp": "2863073dc547598cc34934bb84019155240b351e228f6ca919f3f30293df70f0",
+    "src/f_pc/f_pc_stdcreate_req.cpp": "fd45dc723ec0856c09e58d8d5826af6b3197ea43f316a33adbd77b01e0977d75",
+    "src/f_pc/f_pc_base.cpp": "766c08a272bc39e336df4e86d089c39301a1855a079ce0c3a181c13684796828",
+    "src/f_op/f_op_actor.cpp": "c190ba215061fcbfd71536733a00351c2bad600f1fe0d31d2083e89c60226839",
+    "include/f_op/f_op_actor_mng.h": "67b3551a7386d5337ef1988f57d5c358e7285a2f39edceb9c1701cf99a3b8cc0",
+    "src/f_op/f_op_actor_mng.cpp": "4c57494d769800ad0a1dbbfc836a265803036fa2e5b1594c5a82e9d799617845",
+    "src/f_pc/f_pc_executor.cpp": "321c16edf0e8b2fba1b5cbb8ce70c4e9e1d2f9995504d8987548236f3f36bccd",
+    "src/f_ap/f_ap_game.cpp": "cc98e04dcb13f4fb8fd518c78b73c468fe293d652d3ad5bce2ba23b58d5fa081",
+    "src/dusk/mods/loader/loader.cpp": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82"
+  },
+  "missing_optional_source_paths": []
+}

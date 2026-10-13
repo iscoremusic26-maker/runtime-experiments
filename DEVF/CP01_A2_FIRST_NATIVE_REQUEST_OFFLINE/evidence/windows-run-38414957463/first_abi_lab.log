@@ -1,0 +1,1 @@
+PASS ABI actual official headers: ActorSpawnParams=48 ActorService=80 ServiceHeader=8 ProfileName=2 ActorId=4 ModContext*=8 opaque_ModContext_no_size_claim; create_offset=32 room_offset=64; C++20 Winx64; no native service called

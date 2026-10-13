@@ -1,0 +1,634 @@
+{
+  "status": "A2_NATIVE_ADAPTER_PASS_LAB",
+  "started_utc": "2026-10-13T14:38:25.352887+00:00",
+  "run_id": "38414957463",
+  "run_attempt": "1",
+  "ci_head": "7a33a26b084aed794108d281d5cad84de7d69d37",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.532,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.828,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DCMAKE_C_COMPILER=cl",
+        "-DCMAKE_CXX_COMPILER=cl",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 5.969,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_first_native_experiment",
+        "first_request_lab",
+        "first_equivalence_lab",
+        "first_abi_lab",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 15.734,
+      "exit": 0
+    },
+    {
+      "label": "first_request_lab",
+      "command": [
+        "<WORK>\\build\\first_request_lab.exe"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "first_equivalence_lab",
+      "command": [
+        "<WORK>\\build\\first_equivalence_lab.exe"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "first_abi_lab",
+      "command": [
+        "<WORK>\\build\\first_abi_lab.exe"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "module-headers",
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_first_native_experiment.dll"
+      ],
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_first_native_experiment.dll"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_first_native_experiment.dll"
+      ],
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "module-disassembly",
+      "command": [
+        "dumpbin",
+        "/disasm",
+        "<WORK>\\build\\devf_first_native_experiment.dll"
+      ],
+      "seconds": 0.172,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "packaged": false,
+  "host_built": false,
+  "runtime": "NOT_TESTED",
+  "policy": "EXPERIMENTAL_OFFLINE_ADMISSION_NONE_NO_REGISTRATION",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_audit": {
+    "status": "PASS_STATIC",
+    "single_request_site": true,
+    "current_admission": "NONE_ALWAYS",
+    "native_services": [
+      "Host2.2",
+      "Log1",
+      "Game2",
+      "Actor1"
+    ],
+    "new_game_imports": [
+      "fpcLy_SetCurrentLayer",
+      "fpcCtIt_Judge"
+    ],
+    "reuse": "unchanged read-only bridge; own minimal guarded core",
+    "no_package_target": true,
+    "scope": "reviewed source graph, not runtime lifetime guarantee"
+  },
+  "reused_source_ledger": {
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp": "aebc1beb31c9ca27b132665390fce2b9328e4b6bbf805e37e99949c33f8f69ee",
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.hpp": "cfacb397d189fdb56ccad51d55bb58cb2add13c15165273bff44c898a493e468",
+    "CP01_A2_DISARMED_CONTROLLER/src/disarmed_mod.cpp": "322ca9ab7f2d40c7bd13d5332f63ffee10408844b5d6b8d780b433f8402d6b88",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp": "1fa97f73c07c3ba57652b08e8ee3b3b6da4c35f7be3b5453e93cc7265754d602",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.hpp": "ec5dbef75945c26834d32e97facf5d41bda43b01111731998b10c70ecc0be543",
+    "CP01_G2_READONLY_PACKAGE/src/core.cpp": "11d276f4dec817547692504aa4222a72de2183483b427daa5466b5978eca2ed9",
+    "CP01_G2_READONLY_PACKAGE/src/core.hpp": "5f5d6a7bc875e4e4e78727b4e7a10c3f949192b7591f418d11a8286b8f41d8d9",
+    "CP01_G2_READONLY_PACKAGE/src/mod.cpp": "165c84a66d78af80a5d3a76f447b57d3aabb5bf708ed0affa958ac98cd070fdf",
+    "CP01_G2_READONLY_PACKAGE/src/native_reader.cpp": "8c6edce203fff4742e12ed13897ec826a1fa8f5ac301caa19fa0c4f8bcfde7d7",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp": "63e1e2aacffbfe971ed2d2e6be68e2fa762d58e79773dce4ed3a531897983858",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.hpp": "b486f4caaf58e55d156977644524babe65ee2258f4a47b410b2b832dbf39288f",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp": "fbddb942e9d08042dfd231d898688b45cf1d48ef5bbb83d345cdff249aacfdf1",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp": "b7ea663b194f03e25b5a7852489f57d8477ba7241beaf43b8932a9f644e2703d",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/mod.cpp": "209211040750fe7da4ba9af44963534628ae6e7a36f53dfe9d4dad7adb91a46c"
+  },
+  "compiled_main_commit": "1f184e56b66bef014601419a5c9078f16e112944",
+  "source_ledger": {
+    "CMakeLists.txt": "9dad2b40b364c3d8763b96a24333a536a0929d0800664f22742d56b581cb8632",
+    "ci/audit.py": "828dc1aed7ff0e87f0926932337ead61ab99f5241e07d6e9d088e1534b29ddec",
+    "ci/mutations.py": "3c6316c15316c06107fa7aa0e2aab529a460affd2da0a3eb54a255a75ecd7776",
+    "ci/run_windows.py": "40baf175ae0ca201499bb4c75533cc4867bb7ff9a795ba14f6797c330c83adfb",
+    "ci/trigger-isolation.json": "261f5fb39ff11e217bb3b93b462f5a4fef4ff33e42767e6157131525c5089d3a",
+    "src/admission.cpp": "55e7f3af2deac9d4641138be4a505de98ff740ec1e4e958a03cf96dc1b9e0aef",
+    "src/experimental_mod.cpp": "8d7d583e60d4749a334a05896e69346b41202415ef779817ce2477f636f1d52e",
+    "src/experiment_core.cpp": "3280446cb069033262e5cd8043792f5c92bb6072d7274fdb98cf99dcfde3fa25",
+    "src/experiment_core.hpp": "b7770073f04c277b3e816bbb8fd4d28dc90ea6e85b0bc8e1177998c43a7533a8",
+    "src/native_backend.cpp": "a60425f3d0e76a240e814f9b402e1ef787d2159b90d382a0859bc444dc5b6f4e",
+    "src/native_backend.hpp": "e4b8fbf1c17590aed22a4ccad881f33b95cb11c62b3747dfed41fdd2cbde75f4",
+    "src/readonly_bridge.cpp": "8a59110076b98fb69511625e2ed03e85738ac3a6610728bfe6e4b6b2684cb08a",
+    "tests/abi_lab.cpp": "424c064bf021b0ce97c83305532a3616ecad6a6e8894703ec0e517a3cbc4ea10",
+    "tests/equivalence_lab.cpp": "f4b6a3f65a1c032e52a9354eb8f6368079c0d44ab3242ce7008513b6f14b9cf4",
+    "tests/fake.hpp": "685bccd4da56af644b72d453ca57539673020b1643898b1556f80476ce514f48",
+    "tests/request_lab.cpp": "086f30641761e308a63bbac9b1d3e41dcac84b2dc1c65ca11ac9ab99e0861c0d"
+  },
+  "dependencies": {
+    "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "bytes": 9400986,
+    "member_crc32": "70c35731",
+    "original_integrity": "CP00 reused; selected library only"
+  },
+  "lab_summaries": {
+    "first_request_lab": "SUMMARY checks=93 failures=0 runtime=NOT_TESTED",
+    "first_equivalence_lab": "SUMMARY owner-fixture-equivalence=35 failures=0 old-controller-remains-DISARMED",
+    "first_abi_lab": "PASS ABI actual official headers: ActorSpawnParams=48 ActorService=80 ServiceHeader=8 ProfileName=2 ActorId=4 ModContext*=8 opaque_ModContext_no_size_claim; create_offset=32 room_offset=64; C++20 Winx64; no native service called"
+  },
+  "mutations": [
+    {
+      "mutation": "omit_restore",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL fresh-context-drift",
+        "FAIL exact-child-and-restored-previous",
+        "FAIL MOD_OK-is-REQUESTED-not-ready",
+        "FAIL never-second-attempt",
+        "FAIL ids-not-hardcoded-or-Link-owner",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL reentry-sticky-restored",
+        "FAIL setter-reentry-no-request",
+        "FAIL own-pending-count-not-foreign",
+        "FAIL registered-or-ready-resources-not-actor-ready",
+        "FAIL complete-ID-phase-owner-room-ready",
+        "FAIL wrong-id",
+        "FAIL wrong-profile",
+        "FAIL wrong-owner",
+        "FAIL wrong-room",
+        "FAIL room-API-failure",
+        "FAIL duplicate-ID",
+        "FAIL recycled-ID",
+        "FAIL truncated-actor-scan",
+        "FAIL truncated-request-scan",
+        "FAIL removed",
+        "FAIL cancelled-request",
+        "FAIL deleting-phase",
+        "FAIL changed-room-context",
+        "FAIL changed-node",
+        "FAIL changed-child",
+        "FAIL transition-during-pending",
+        "FAIL event-during-pending",
+        "FAIL foreign-count-after-complete",
+        "FAIL parent-count-after-complete",
+        "FAIL delete-after-complete",
+        "FAIL incomplete-header-no-ready",
+        "FAIL incomplete-header-no-ready",
+        "FAIL incomplete-header-no-ready",
+        "FAIL incomplete-header-no-ready",
+        "FAIL bounded-missing-grace",
+        "FAIL missing-expired-no-retry",
+        "FAIL timeout-no-retry",
+        "FAIL finite-ready-observation",
+        "FAIL monitor-exception-stop"
+      ]
+    },
+    {
+      "mutation": "double_enqueue",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL one-real-backend-request",
+        "FAIL never-second-attempt",
+        "FAIL ids-not-hardcoded-or-Link-owner",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restore-after-failed-consumed-attempt",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL reentry-sticky-restored",
+        "FAIL wrong-id",
+        "FAIL wrong-profile",
+        "FAIL wrong-owner",
+        "FAIL wrong-room",
+        "FAIL room-API-failure",
+        "FAIL duplicate-ID",
+        "FAIL recycled-ID",
+        "FAIL truncated-actor-scan",
+        "FAIL truncated-request-scan",
+        "FAIL removed",
+        "FAIL cancelled-request",
+        "FAIL deleting-phase",
+        "FAIL changed-room-context",
+        "FAIL changed-node",
+        "FAIL changed-child",
+        "FAIL transition-during-pending",
+        "FAIL event-during-pending",
+        "FAIL foreign-count-after-complete",
+        "FAIL parent-count-after-complete",
+        "FAIL delete-after-complete",
+        "FAIL pending-queue-attribution-fail-closed",
+        "FAIL pending-queue-attribution-fail-closed",
+        "FAIL pending-queue-attribution-fail-closed",
+        "FAIL missing-expired-no-retry",
+        "FAIL timeout-no-retry",
+        "FAIL finite-ready-observation",
+        "FAIL monitor-exception-stop",
+        "FAIL shutdown-no-cancel-delete-or-rearm"
+      ]
+    },
+    {
+      "mutation": "use_Link_owner",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL exact-child-and-restored-previous",
+        "FAIL one-real-backend-request",
+        "FAIL MOD_OK-is-REQUESTED-not-ready",
+        "FAIL native-preset",
+        "FAIL never-second-attempt",
+        "FAIL ids-not-hardcoded-or-Link-owner",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL restoration-failure-no-root-fallback",
+        "FAIL reentry-sticky-restored",
+        "FAIL own-pending-count-not-foreign",
+        "FAIL registered-or-ready-resources-not-actor-ready",
+        "FAIL complete-ID-phase-owner-room-ready",
+        "FAIL wrong-id",
+        "FAIL wrong-profile",
+        "FAIL wrong-owner",
+        "FAIL wrong-room",
+        "FAIL room-API-failure",
+        "FAIL duplicate-ID",
+        "FAIL recycled-ID",
+        "FAIL truncated-actor-scan",
+        "FAIL truncated-request-scan",
+        "FAIL removed",
+        "FAIL cancelled-request",
+        "FAIL deleting-phase",
+        "FAIL changed-room-context",
+        "FAIL changed-node",
+        "FAIL changed-child",
+        "FAIL transition-during-pending",
+        "FAIL event-during-pending",
+        "FAIL foreign-count-after-complete",
+        "FAIL parent-count-after-complete",
+        "FAIL delete-after-complete",
+        "FAIL incomplete-header-no-ready",
+        "FAIL incomplete-header-no-ready",
+        "FAIL incomplete-header-no-ready",
+        "FAIL incomplete-header-no-ready",
+        "FAIL pending-queue-attribution-fail-closed",
+        "FAIL pending-queue-attribution-fail-closed",
+        "FAIL pending-queue-attribution-fail-closed",
+        "FAIL bounded-missing-grace",
+        "FAIL missing-expired-no-retry",
+        "FAIL timeout-no-retry",
+        "FAIL finite-ready-observation",
+        "FAIL monitor-exception-stop",
+        "FAIL shutdown-no-cancel-delete-or-rearm"
+      ]
+    },
+    {
+      "mutation": "ready_from_MOD_OK",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL MOD_OK-is-REQUESTED-not-ready"
+      ]
+    },
+    {
+      "mutation": "ignore_wrong_ID",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL wrong-id"
+      ]
+    },
+    {
+      "mutation": "timeout_rearm",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL timeout-no-retry"
+      ]
+    },
+    {
+      "mutation": "ignore_transition",
+      "compiled": true,
+      "killed": true,
+      "exit": 1,
+      "failed_checks": [
+        "FAIL transition",
+        "FAIL transition-during-pending"
+      ]
+    }
+  ],
+  "binary_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+        "??1dBgS_GndChk@@UEAA@XZ",
+        "?dComIfGp_event_runCheck@@YAHXZ",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+        "?mProcID@dStage_roomControl_c@@2IA",
+        "?mStayNo@dStage_roomControl_c@@2CA",
+        "?mNextStayNo@dStage_roomControl_c@@2CA",
+        "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+        "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+        "??0dBgS_GndChk@@QEAA@XZ",
+        "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+        "?fpcLy_SetCurrentLayer@@YAXPEAUlayer_class@@@Z",
+        "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+        "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+        "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcCtIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "VCRUNTIME140.dll": [
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memcpy",
+        "memset",
+        "_CxxThrowException",
+        "__std_exception_destroy",
+        "__std_exception_copy"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "sqrt"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strncmp"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_cexit",
+        "_execute_onexit_table",
+        "_initialize_narrow_environment",
+        "_configure_narrow_argv",
+        "_seh_filter_dll",
+        "_initterm_e",
+        "_initterm",
+        "_initialize_onexit_table"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "free"
+      ],
+      "KERNEL32.dll": [
+        "DisableThreadLibraryCalls",
+        "InitializeSListHead",
+        "QueryPerformanceCounter",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "GetCurrentProcessId"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.actor",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "PASS_STATIC"
+  },
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "native_compile_units": [
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_native_experiment_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_native_experiment.dir\\src\\experiment_core.cpp.obj /FdCMakeFiles\\devf_first_native_experiment.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE\\src\\experiment_core.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/experiment_core.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_native_experiment.dir/src/experiment_core.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_native_experiment_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_native_experiment.dir\\src\\native_backend.cpp.obj /FdCMakeFiles\\devf_first_native_experiment.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE\\src\\native_backend.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/native_backend.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_native_experiment.dir/src/native_backend.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_native_experiment_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_native_experiment.dir\\src\\admission.cpp.obj /FdCMakeFiles\\devf_first_native_experiment.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE\\src\\admission.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/admission.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_native_experiment.dir/src/admission.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_native_experiment_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_native_experiment.dir\\src\\experimental_mod.cpp.obj /FdCMakeFiles\\devf_first_native_experiment.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE\\src\\experimental_mod.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/experimental_mod.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_native_experiment.dir/src/experimental_mod.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_FIRST_OFFLINE=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_first_native_experiment_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FIglobal.h /FoCMakeFiles\\devf_first_native_experiment.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp.obj /FdCMakeFiles\\devf_first_native_experiment.dir\\ /FS -c <OFFICIAL>\\sdk\\src\\game_feature.cpp",
+      "file": "<OFFICIAL>/sdk/src/game_feature.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_first_native_experiment.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/.official/sdk/src/game_feature.cpp.obj"
+    }
+  ],
+  "bridge_compile_units": [
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\first_readonly_bridge.dir\\src\\readonly_bridge.cpp.obj /FdCMakeFiles\\first_readonly_bridge.dir\\first_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE\\src\\readonly_bridge.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE/src/readonly_bridge.cpp",
+      "output": "<WORK>/build/CMakeFiles/first_readonly_bridge.dir/src/readonly_bridge.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\first_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\capture.cpp.obj /FdCMakeFiles\\first_readonly_bridge.dir\\first_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\capture.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp",
+      "output": "<WORK>/build/CMakeFiles/first_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\first_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\local_queries.cpp.obj /FdCMakeFiles\\first_readonly_bridge.dir\\first_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\local_queries.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp",
+      "output": "<WORK>/build/CMakeFiles/first_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\first_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\extended_g2_reader.cpp.obj /FdCMakeFiles\\first_readonly_bridge.dir\\first_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\extended_g2_reader.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp",
+      "output": "<WORK>/build/CMakeFiles/first_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\first_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\core.cpp.obj /FdCMakeFiles\\first_readonly_bridge.dir\\first_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\core.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/core.cpp",
+      "output": "<WORK>/build/CMakeFiles/first_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/core.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\first_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\controller_core.cpp.obj /FdCMakeFiles\\first_readonly_bridge.dir\\first_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\controller_core.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp",
+      "output": "<WORK>/build/CMakeFiles/first_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_FIRST_OFFLINE=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /bigobj /Zc:__cplusplus /GL- /FoCMakeFiles\\first_readonly_bridge.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\room_owner_resolver.cpp.obj /FdCMakeFiles\\first_readonly_bridge.dir\\first_readonly_bridge.pdb /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\room_owner_resolver.cpp",
+      "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp",
+      "output": "<WORK>/build/CMakeFiles/first_readonly_bridge.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp.obj"
+    }
+  ],
+  "artifact_hashes": {
+    "devf_first_native_experiment.dll": {
+      "bytes": 57344,
+      "sha256": "241e20c95267d3aa4e204420a8a600013aeeb6976f9efa3863728d123ecf4306"
+    },
+    "first_request_lab.exe": {
+      "bytes": 67072,
+      "sha256": "36a6e549378fcb40987fa714f3865cfd1829a05ef68291dfcfc684bd7fd2165f"
+    },
+    "first_equivalence_lab.exe": {
+      "bytes": 16896,
+      "sha256": "13d387138fb07f987e0cc6c61e6e22dcb6b170baf0824579135537ed01678e90"
+    },
+    "first_abi_lab.exe": {
+      "bytes": 12288,
+      "sha256": "9efd46c1a622d5e4e38246da0bce4beb451eee08b21b09e3e393029ae4d78262"
+    }
+  },
+  "call_graph_verified": {
+    "entry": "mod_update -> link_anchor -> Controller.attempt -> LayerScope -> NativeBackend.request -> svc_actor.create_actor slot32; Admission NONE blocks entry BEFORE native reads",
+    "creation_code_present": true,
+    "services": "Host/Log/Game/Actor",
+    "real_setter_import": true,
+    "request_queue_visitor_import": true,
+    "native_units": 5,
+    "readonly_bridge_units": 7,
+    "disassembly_slot32_call": true,
+    "no_fake_in_module": true,
+    "disassembly_log": "module-disassembly.log",
+    "link_map_log": "module-map.log"
+  },
+  "official_source_unchanged": true,
+  "msvc": "A2_NATIVE_ADAPTER_MSVC_LINK_PASS",
+  "binary": "A2_NATIVE_ADAPTER_BINARY_REVIEW_PASS",
+  "ended_utc": "2026-10-13T14:39:05.657283+00:00"
+}

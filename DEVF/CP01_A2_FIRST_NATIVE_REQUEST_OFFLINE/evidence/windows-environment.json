@@ -1,0 +1,24 @@
+{
+  "provenance": "GitHub job115356817967 setup log + compiler.log/result.json",
+  "runner_selector": "windows-latest",
+  "runner_version": "2.337.0",
+  "os": "Microsoft Windows Server2025 10.0.26100 Datacenter",
+  "image": "windows-2025-vs2026",
+  "image_version": "20260925.250.1",
+  "msvc": "19.51.36260.0",
+  "toolset": "14.51.36231",
+  "link": "14.51.36260.0",
+  "windows_sdk": "10.0.26100.0",
+  "cmake": "4.4.3",
+  "job_started_utc": "2026-10-13T14:37:36Z",
+  "job_ended_utc": "2026-10-13T14:39:11Z",
+  "runner_job_approx_seconds": 95,
+  "build_seconds": 15.734,
+  "configure_seconds": 5.969,
+  "python_pipeline_seconds": 40.304396,
+  "historical_jobs_triggered": false,
+  "jobs": [
+    "first-offline"
+  ],
+  "run_conclusion": "success"
+}

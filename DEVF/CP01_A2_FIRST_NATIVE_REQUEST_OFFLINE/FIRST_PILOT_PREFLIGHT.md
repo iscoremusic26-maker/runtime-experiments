@@ -1,0 +1,13 @@
+# Preflight de un piloto futuro, no autorizado ahora
+
+Gate formal: FIRST_TEST_LOCATION_BLOCKED_EXACT_EVIDENCE, G4_RESOURCE_VERIFIED_POSITION_BLOCKED, G5_NO_GO. Este documento es un contrato de preparación, no una autorización ni instalación. No se entrega `.dusk`/DLL activa.
+
+El proveedor de admisión de esta entrega es NONE. Antes de un release separado habría que revisar/admitir expresamente C, contexto y sesión, definir la duración/cierre del piloto y autorizar empaquetado y una única solicitud real. Ningún fichero de configuración actual puede armar este código.
+
+1. Ejecutable oficial2.0.3 intacto Windowsx64/DX12. Preservar configuración y partidas; no editar saves/flags ni forzar escenas. Sesión fría/full exit, sin Randomizer ni otros mods que cambien actores, capas, hooks o recursos, si puede hacerse reversiblemente. La sesión observada llevaba Luau/Randomizer y1867 reemplazos, por lo que no era un baseline aislado.
+2. Revalidar inmediatamente F_SP121/room3/logical6, ROOM/PLAY y su hija vigente, parent/binding/init2, previous registrado, sin transición/retiro/evento ni colas ajenas. Los IDs observados102/6/60/5/0 no son constantes.
+3. C=(-4806.7346,-6729.480961460304,65135.8281), conversión float32 explícita. Soporte y−6729.4809570/poly2174/room3/ground0/special0/no moving. Revalidar agua vertical y scan BG completo, recursos registrados; REGISTERED no READY. Si cambia evidencia del medio, no solicitar.
+4. Revisar posición real de Link y actores del ensayo y documentar riesgo residual: distancia mínima observada621.886 es de centros, no clearance de collider. Envolvente501 es geométrica condicionada, no radio físico/navegación. Search E_OC~1200 permite detectar/perseguir Link aunque supere501. No inventar una distancia de seguridad derivada de esos valores.
+5. Resolver/admitir incertidumbres de water_volume, bg_exact, overlap y transformaciones BG para el piloto concreto, o aceptar explícitamente un ensayo experimental limitado con ellas. No declarar la ubicación absolutamente segura ni alterar formalmente G4 por valid=1. Hoy no se concede esa admisión.
+6. Criterios de parada: room/layer/node/eventos, scope restoration, cola/ID/profile/phase/room/owner, muerte/retirada y timeout. STOP no cancela un actor ya solicitado; la reacción de seguridad futura debe ser full exit y ausencia de autosave/progreso modificado, revisadas antes de autorización. No prometer rollback automático.
+7. Evidencia runtime posterior separada: ID solicitado/cola → init/owner/room → render/animación/interacción → transición/limpieza y cierre. No pasar gates por MSVC/fakes. No G5/G6/CP02 en esta tarea.

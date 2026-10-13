@@ -1,0 +1,16 @@
+{
+  "status": "PASS_STATIC",
+  "dll_sha256": "241e20c95267d3aa4e204420a8a600013aeeb6976f9efa3863728d123ecf4306",
+  "map_symbol": "?request@NativeBackend@first@devf@@UEAA?AURequestResult@23@AEBUPreset@23@@Z",
+  "request_function_preferred_va": "0x1800029C0",
+  "svc_actor_preferred_va": "0x18000EA60",
+  "service_load_va": "0x1800029E8",
+  "create_call_va": "0x180002ACF",
+  "instruction": "call qword ptr [r10+20h]",
+  "actual_service_create_offset_decimal": 32,
+  "matching_calls_in_request_function": 1,
+  "range_end": "0x180002B00",
+  "addresses": "derived from this PE/link map only; not engine offsets or source constants",
+  "source_graph": "mod_update -> anchor -> Controller.attempt -> LayerScope -> NativeBackend.request -> actual svc_actor slot32",
+  "no_binary_downloaded_or_executed": true
+}

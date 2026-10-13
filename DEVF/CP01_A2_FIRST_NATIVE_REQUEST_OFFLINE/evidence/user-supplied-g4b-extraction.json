@@ -1,0 +1,112 @@
+{
+  "provenance": "USER_SUPPLIED_EXPLICIT_EXTRACTION; raw log not obtained in this task",
+  "private_log_name": "dusklight-20261013-084455.log",
+  "raw_log_published": false,
+  "captures": 16,
+  "startup_invalid": 3,
+  "valid_capture_range": [
+    4,
+    16
+  ],
+  "valid_snapshots": 13,
+  "context": {
+    "stage": "F_SP121",
+    "room": 3,
+    "logical": 6,
+    "next": 3,
+    "next_stage": 0,
+    "owner_result": 0,
+    "stable": 1,
+    "session": 1,
+    "event_read": 1,
+    "event_active": 0,
+    "valid": 1,
+    "counts": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "child_registered": 1,
+    "binding": 1,
+    "retiring": 0,
+    "status_2e": 0
+  },
+  "observed_ids_not_constants": {
+    "root": 0,
+    "previous": 0,
+    "current": 0,
+    "link_owner": 5,
+    "node": 102,
+    "node_profile": 18,
+    "node_init": 2,
+    "room_param": 3,
+    "child": 6,
+    "play": 60,
+    "play_profile": 11,
+    "play_init": 2,
+    "play_layer": 5,
+    "parent": 5
+  },
+  "candidate_double": [
+    -4806.7346,
+    -6729.480961460304,
+    65135.8281
+  ],
+  "ground": {
+    "status": 1,
+    "y": -6729.480957,
+    "bg": 0,
+    "poly": 2174,
+    "room": 3,
+    "ground": 0,
+    "special": 0,
+    "color": 255,
+    "moving": 0
+  },
+  "water_group_probe": {
+    "status": 2,
+    "meaning": "NO_HIT_AT_PROBE"
+  },
+  "bg_scan": {
+    "complete": 1,
+    "truncated": 0,
+    "candidates": 0
+  },
+  "actor_scan": {
+    "complete": 1,
+    "truncated": 0,
+    "visits": 120,
+    "local_count": 1,
+    "local": "Link only"
+  },
+  "resources": {
+    "E_OC": "REGISTERED",
+    "E_ocb": "REGISTERED",
+    "READY": "NOT_VERIFIED"
+  },
+  "no_location_admission": 1,
+  "link_min_distance3": 621.886,
+  "min_capture": 8,
+  "other_distances": [
+    627.43,
+    825.957,
+    2318.112,
+    4573.928,
+    7114.038,
+    8516.636
+  ],
+  "uncertainties": {
+    "water_volume": "UNAVAILABLE_WITH_SAFE_API",
+    "bg_exact": "UNAVAILABLE_WITH_SAFE_API",
+    "overlap": "OVERLAP_NOT_VERIFIED",
+    "bg_transform": "UNAVAILABLE_WITH_SAFE_API"
+  },
+  "session": "NOT_ISOLATED; LuauSupport/DusklightRandomizer/1867 texture replacement registrations",
+  "fatal_G4B_attributed": "none reported in extraction",
+  "mipmap_warnings": "do not attribute automatically to DEVF",
+  "geometry501": "conditional geometry, not collider or motion bound",
+  "EOC_search_approx": 1200,
+  "runtime_request": "NOT_TESTED",
+  "render": "NOT_TESTED"
+}
