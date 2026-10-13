@@ -1,0 +1,167 @@
+{
+  "text_files": {
+    "source-match.json": {
+      "bytes": 2492,
+      "sha256": "04097eb1261222b4c5c428abfc0790b021cd83546448ae3fb20385a6aedfc505"
+    },
+    "delivery-links.json": {
+      "bytes": 2159,
+      "sha256": "6530e9d8ad84f57085084398bbe31b8bfbb34776c871b854c11e6fb17b216409"
+    },
+    "download-verification.json": {
+      "bytes": 7294,
+      "sha256": "eb9c794cdd6ed11855883e5fb6ca5b560272b2b85a8f5939ae662f6f6630ea42"
+    },
+    "DOWNLOAD_MANIFEST.json": {
+      "bytes": 2759,
+      "sha256": "4dcb7a4b928a5a081b511c2d852f5ed2f4d6b67dea724d37e3571227b15aa3d6"
+    },
+    "actions-artifacts.json": {
+      "bytes": 1709,
+      "sha256": "1ec8e85a9b0f116b62cfa8c8df8ff3b64a842e40c7a2f335e56d504ff8ea036d"
+    },
+    "ci-preflight.json": {
+      "bytes": 2493,
+      "sha256": "73cb68f09cf41bcce27b2dd0afb9f981d4569288076c6c321938ef96b054d57c"
+    },
+    "runner/approved-g4b-validation.log": {
+      "bytes": 389,
+      "sha256": "1f918d7a62cbed5463ee7176f0b58d25f7a58745d6397c1b84f17b713aba659b"
+    },
+    "runner/package-verification.json": {
+      "bytes": 5109,
+      "sha256": "e2966606fbb48399a6fa1c1c8ca70641a17227403ff55ab8b258fc94ad6598c5"
+    },
+    "runner/official-package.log": {
+      "bytes": 140,
+      "sha256": "def11e800958c87360dfb16d6e50a8b7997c275e7dbcb45b271a708545a7c79b"
+    },
+    "runner/DOWNLOAD_MANIFEST.json": {
+      "bytes": 2759,
+      "sha256": "4dcb7a4b928a5a081b511c2d852f5ed2f4d6b67dea724d37e3571227b15aa3d6"
+    },
+    "runner/package-result.json": {
+      "bytes": 42798,
+      "sha256": "a6542d09d178b6a86a7e3e6734fd6d6b0db45e90c7d9e28410a29cb8a6ac6dcf"
+    },
+    "runner/build-audit/drop_duplicate_id-test.log": {
+      "bytes": 1050,
+      "sha256": "d3d0b7c89f180f8ffa23f8693586f3aa95632871f2a3a3880b7d7ce293e13f99"
+    },
+    "runner/build-audit/module-headers.log": {
+      "bytes": 6056,
+      "sha256": "d47f72750d3918530e54d9c57937d5ac47b5eb325aed1dde4d954895c5b6c52c"
+    },
+    "runner/build-audit/capture-error.log": {
+      "bytes": 248,
+      "sha256": "2be4609918204cd8a0558461e6f16a4f53e0fcbfb6a22126f4c9a58bd0f325fa"
+    },
+    "runner/build-audit/guard-valid.log": {
+      "bytes": 11,
+      "sha256": "1397fdaa24b39cc0424500c3f61ea79dc1339e7c2b0c25f171fd24d5221aac2e"
+    },
+    "runner/build-audit/module-disassembly.log": {
+      "bytes": 415354,
+      "sha256": "c42d5d320d623c582271a690101c5d7cb54045a5edefdfbeb4103b87f53ba8e7"
+    },
+    "runner/build-audit/cmake-version.log": {
+      "bytes": 93,
+      "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+    },
+    "runner/build-audit/unavailable_water_is_absence-test.log": {
+      "bytes": 658,
+      "sha256": "25cd472488eb772b259e639bc468902c928c80f9b01db3c2eabfed40468a681a"
+    },
+    "runner/build-audit/ignore_context_change-test.log": {
+      "bytes": 318,
+      "sha256": "d58789bd5995f62241ff994146e9b634aaa85b6cfd74a51d80f0f67d486d1f7e"
+    },
+    "runner/build-audit/compiler.log": {
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    "runner/build-audit/unavailable_water_is_absence-build.log": {
+      "bytes": 71,
+      "sha256": "d1450eac65d9d9b2db6eb0c88dd75a9141df10671fcd31649b9c2ea1fe437b4c"
+    },
+    "runner/build-audit/guard-zero.log": {
+      "bytes": 165,
+      "sha256": "8f298d05524a789e1a6ea25fcd918ee4a8723e5620f64f5261a8c8f71740086b"
+    },
+    "runner/build-audit/capture-lab.log": {
+      "bytes": 1593,
+      "sha256": "66dce1fe16751b98820dea670594ca1d750b366cadeb23048a87c814ed841bdf"
+    },
+    "runner/build-audit/adapter-lab.log": {
+      "bytes": 866,
+      "sha256": "b83e2fdd469d9f297336fac3fb5e20435d647cb3cf624f67e096385f6cdb6a74"
+    },
+    "runner/build-audit/ignore_context_change-build.log": {
+      "bytes": 71,
+      "sha256": "d1450eac65d9d9b2db6eb0c88dd75a9141df10671fcd31649b9c2ea1fe437b4c"
+    },
+    "runner/build-audit/module-imports.log": {
+      "bytes": 5541,
+      "sha256": "33c51844751fc34c7d2e1aeca6d5fb15e6fa52589df680443f15ed146f77562c"
+    },
+    "runner/build-audit/guard-spawn.log": {
+      "bytes": 208,
+      "sha256": "45d41bbc5e28d702636b0ab19e3dee66ef75529fc6aa23646cbc0904eb910ee2"
+    },
+    "runner/build-audit/compile-commands.json": {
+      "bytes": 18175,
+      "sha256": "dde496d2e0bca43d51d543c943c72afae820b63048e96879aeff52772a1fe23e"
+    },
+    "runner/build-audit/guard-armed.log": {
+      "bytes": 208,
+      "sha256": "45d41bbc5e28d702636b0ab19e3dee66ef75529fc6aa23646cbc0904eb910ee2"
+    },
+    "runner/build-audit/build.log": {
+      "bytes": 6207,
+      "sha256": "b960bf93c1e35a3c2801607be67f8b12afe87bc162cb506aeb6db12e5d911d7e"
+    },
+    "runner/build-audit/log-error.log": {
+      "bytes": 275,
+      "sha256": "5256799342716723fe2c65a5bcf1023398d4490a34fda76a9b578e68d75e1f45"
+    },
+    "runner/build-audit/center_is_clearance-test.log": {
+      "bytes": 913,
+      "sha256": "4f808d3273eaff3567a558c73a64e918eb353715e47b8393ba73521cfd3710ed"
+    },
+    "runner/build-audit/center_is_clearance-build.log": {
+      "bytes": 71,
+      "sha256": "d1450eac65d9d9b2db6eb0c88dd75a9141df10671fcd31649b9c2ea1fe437b4c"
+    },
+    "runner/build-audit/configure.log": {
+      "bytes": 822,
+      "sha256": "edefc53f1bed473edc6b3a7c226fca8e6377d1caf6a6b09296711c5f0350015d"
+    },
+    "runner/build-audit/drop_duplicate_id-build.log": {
+      "bytes": 71,
+      "sha256": "d1450eac65d9d9b2db6eb0c88dd75a9141df10671fcd31649b9c2ea1fe437b4c"
+    },
+    "runner/build-audit/module-map.log": {
+      "bytes": 61607,
+      "sha256": "ab57b7ca5512b6c4067fb3144e3e3a369fe38e26035ef0bdefd2656367f72a91"
+    },
+    "runner/build-audit/module-exports.log": {
+      "bytes": 815,
+      "sha256": "ca3ad4aec37270a2f4a43c7b86c79a1fd0977a366f70d41700777022cdf4e6d6"
+    },
+    "runner/build-audit/guard-mutation.log": {
+      "bytes": 208,
+      "sha256": "45d41bbc5e28d702636b0ab19e3dee66ef75529fc6aa23646cbc0904eb910ee2"
+    },
+    "runner/build-audit/guard-missing.log": {
+      "bytes": 218,
+      "sha256": "096ac4949093720ac5cc37d722979dd7760cf227a46d6666b9389c14e21fd38b"
+    },
+    "runner/build-audit/result.json": {
+      "bytes": 26431,
+      "sha256": "a424e208b4532bfbfc9b420c2224c29ee3c5d25969d2b53e04ab0851e178aa50"
+    }
+  },
+  "native_binaries_committed": false,
+  "runner_artifact_crc_sha_verified": true,
+  "package_download_crc_sha_verified": true
+}

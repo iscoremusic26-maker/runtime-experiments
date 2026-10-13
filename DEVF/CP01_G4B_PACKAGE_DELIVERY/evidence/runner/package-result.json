@@ -1,0 +1,947 @@
+{
+  "status": "RUNNER_PACKAGE_VERIFIED_DOWNLOAD_PENDING",
+  "started_utc": "2026-10-13T05:24:05.015152+00:00",
+  "approved_observer_checkpoint": "17bbbd288f2e17974303f98fbfcd3345f49aa11d",
+  "packaging_source_commit": "6c788fb7d0e1245c49af473c2ecca5dc1c7f417f",
+  "ci_head": "1069e2f2897b137c9ec791861eb862c832a3edcb",
+  "run_id": "38351128600",
+  "run_attempt": "1",
+  "game_executed": false,
+  "installed": false,
+  "dll_loaded": false,
+  "phases": [
+    {
+      "label": "approved-g4b-validation",
+      "command": [
+        "python",
+        "<WORKSPACE>\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\ci\\run_windows.py",
+        "--source",
+        "<WORKSPACE>\\.official",
+        "--inputs",
+        ".",
+        "--work",
+        "<WORK>"
+      ],
+      "exit": 0,
+      "seconds": 29.469
+    },
+    {
+      "label": "official-package",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_g4b_readonly_package",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "seconds": 0.297
+    }
+  ],
+  "source_ledger": {
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/CMakeLists.txt": "ebcd42b5cf098cf1009847689ae521334315b39be8d3306d0d6e62452a846e72",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/mod.json": "70e96371ac93206509732839e77e56936b52867cce66f146db06f2f27859dc2f",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/audit.py": "66cdf6eb7b49e5f7c19bfbeb889dc8430bd0ca2acd320663f427457f68db6c0a",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/mutations.py": "16f2fc1b347f2ad075eb64ec1f8cace0fde5e9366e2b4686b9bc70f388e68449",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/reviewed-imports.json": "00ba22f5b4b7101ed1dc2a0daf7c73700a4dfd58ced0140f3494e4dc30f72d3d",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/run_windows.py": "a66b5f4260a32ddbb27a1d6842b24cd6b6a495e2dc114746099982863b587fd5",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/windows.yml": "81700d1ce0002fbba45e2ad28e07d95f4834befc65c4f4728c9b3287efe3cf19",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp": "63e1e2aacffbfe971ed2d2e6be68e2fa762d58e79773dce4ed3a531897983858",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.hpp": "b486f4caaf58e55d156977644524babe65ee2258f4a47b410b2b832dbf39288f",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp": "fbddb942e9d08042dfd231d898688b45cf1d48ef5bbb83d345cdff249aacfdf1",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp": "b7ea663b194f03e25b5a7852489f57d8477ba7241beaf43b8932a9f644e2703d",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/mod.cpp": "209211040750fe7da4ba9af44963534628ae6e7a36f53dfe9d4dad7adb91a46c",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/adapter_lab.cpp": "adbeba9959ca6c46c04ab57093059253a90420c17dbb8e3844af91a7fd4db4b8",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/capture_lab.cpp": "2566636f8e2710c99271e8a9d808a82915f6c55d97a4267f09d49cd5ea6d45ff",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/fake_capture.cpp": "5fdaf16d8c8e24e38970c6e3e8f89c53753f0a3c21453369a31dca67c85506c8",
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp": "aebc1beb31c9ca27b132665390fce2b9328e4b6bbf805e37e99949c33f8f69ee",
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.hpp": "cfacb397d189fdb56ccad51d55bb58cb2add13c15165273bff44c898a493e468",
+    "CP01_A2_DISARMED_CONTROLLER/src/disarmed_mod.cpp": "322ca9ab7f2d40c7bd13d5332f63ffee10408844b5d6b8d780b433f8402d6b88",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp": "1fa97f73c07c3ba57652b08e8ee3b3b6da4c35f7be3b5453e93cc7265754d602",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.hpp": "ec5dbef75945c26834d32e97facf5d41bda43b01111731998b10c70ecc0be543",
+    "CP01_G2_READONLY_PACKAGE/src/core.cpp": "11d276f4dec817547692504aa4222a72de2183483b427daa5466b5978eca2ed9",
+    "CP01_G2_READONLY_PACKAGE/src/core.hpp": "5f5d6a7bc875e4e4e78727b4e7a10c3f949192b7591f418d11a8286b8f41d8d9",
+    "CP01_G2_READONLY_PACKAGE/src/mod.cpp": "165c84a66d78af80a5d3a76f447b57d3aabb5bf708ed0affa958ac98cd070fdf",
+    "CP01_G2_READONLY_PACKAGE/src/native_reader.cpp": "8c6edce203fff4742e12ed13897ec826a1fa8f5ac301caa19fa0c4f8bcfde7d7",
+    "CP01_G2_READONLY_PACKAGE/evidence/pre-package-review.json": "9c134c2de998b5ecf12acd69347df0d3407fc799e455de9047bacfbc624cf568"
+  },
+  "msvc": "G4B_PACKAGE_MSVC_BUILD_PASS",
+  "fresh_build_validation": {
+    "status": "G4B_LOCAL_OBSERVER_PASS_LAB",
+    "started_utc": "2026-10-13T05:24:05.193043+00:00",
+    "run_id": "38351128600",
+    "run_attempt": "1",
+    "ci_head": "1069e2f2897b137c9ec791861eb862c832a3edcb",
+    "phases": [
+      {
+        "label": "compiler",
+        "command": [
+          "cl",
+          "/Bv",
+          "/c",
+          "<WORK>\\build\\version.cpp",
+          "/Fo<WORK>\\build\\version.obj"
+        ],
+        "seconds": 2.406,
+        "exit": 0
+      },
+      {
+        "label": "cmake-version",
+        "command": [
+          "cmake",
+          "--version"
+        ],
+        "seconds": 0.906,
+        "exit": 0
+      },
+      {
+        "label": "configure",
+        "command": [
+          "cmake",
+          "-S",
+          "<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER",
+          "-B",
+          "<WORK>\\build",
+          "-G",
+          "Ninja",
+          "-DCMAKE_BUILD_TYPE=Release",
+          "-DCMAKE_C_COMPILER=cl",
+          "-DCMAKE_CXX_COMPILER=cl",
+          "-DDUSK_SOURCE=<WORKSPACE>\\codex-cp00-inputs\\.official",
+          "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+          "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+        ],
+        "seconds": 5.766,
+        "exit": 0
+      },
+      {
+        "label": "build",
+        "command": [
+          "cmake",
+          "--build",
+          "<WORK>\\build",
+          "--target",
+          "devf_g4b_readonly",
+          "g4b_capture_lab",
+          "g4b_adapter_lab",
+          "--parallel",
+          "2"
+        ],
+        "seconds": 10.781,
+        "exit": 0
+      },
+      {
+        "label": "capture-lab",
+        "command": [
+          "<WORK>\\build\\g4b_capture_lab.exe"
+        ],
+        "seconds": 0.016,
+        "exit": 0
+      },
+      {
+        "label": "adapter-lab",
+        "command": [
+          "<WORK>\\build\\g4b_adapter_lab.exe"
+        ],
+        "seconds": 0.016,
+        "exit": 0
+      },
+      {
+        "label": "capture-error",
+        "command": [
+          "<WORK>\\build\\g4b_adapter_lab.exe",
+          "capture_error"
+        ],
+        "seconds": 0.0,
+        "exit": 0
+      },
+      {
+        "label": "log-error",
+        "command": [
+          "<WORK>\\build\\g4b_adapter_lab.exe",
+          "log_error"
+        ],
+        "seconds": 0.015,
+        "exit": 0
+      },
+      {
+        "label": "guard-valid",
+        "command": [
+          "cl",
+          "/nologo",
+          "/c",
+          "/std:c++20",
+          "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src",
+          "/DDEVF_A2_DISARMED=1",
+          "/DDEVF_READ_ONLY=1",
+          "/DDEVF_G4B_READ_ONLY=1",
+          "<WORK>\\build\\guard.cpp",
+          "/Fo<WORK>\\build\\guard.obj"
+        ],
+        "seconds": 0.282,
+        "exit": 0
+      },
+      {
+        "label": "guard-missing",
+        "command": [
+          "cl",
+          "/nologo",
+          "/c",
+          "/std:c++20",
+          "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src",
+          "<WORK>\\build\\guard.cpp",
+          "/Fo<WORK>\\build\\guard.obj"
+        ],
+        "seconds": 0.296,
+        "exit": 2
+      },
+      {
+        "label": "guard-zero",
+        "command": [
+          "cl",
+          "/nologo",
+          "/c",
+          "/std:c++20",
+          "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src",
+          "/DDEVF_A2_DISARMED=1",
+          "/DDEVF_READ_ONLY=1",
+          "/DDEVF_G4B_READ_ONLY=0",
+          "<WORK>\\build\\guard.cpp",
+          "/Fo<WORK>\\build\\guard.obj"
+        ],
+        "seconds": 0.266,
+        "exit": 2
+      },
+      {
+        "label": "guard-spawn",
+        "command": [
+          "cl",
+          "/nologo",
+          "/c",
+          "/std:c++20",
+          "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src",
+          "/DDEVF_A2_DISARMED=1",
+          "/DDEVF_READ_ONLY=1",
+          "/DDEVF_G4B_READ_ONLY=1",
+          "/DDEVF_ENABLE_SPAWN=1",
+          "<WORK>\\build\\guard.cpp",
+          "/Fo<WORK>\\build\\guard.obj"
+        ],
+        "seconds": 0.266,
+        "exit": 2
+      },
+      {
+        "label": "guard-armed",
+        "command": [
+          "cl",
+          "/nologo",
+          "/c",
+          "/std:c++20",
+          "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src",
+          "/DDEVF_A2_DISARMED=1",
+          "/DDEVF_READ_ONLY=1",
+          "/DDEVF_G4B_READ_ONLY=1",
+          "/DDEVF_A2_ARMED=1",
+          "<WORK>\\build\\guard.cpp",
+          "/Fo<WORK>\\build\\guard.obj"
+        ],
+        "seconds": 0.265,
+        "exit": 2
+      },
+      {
+        "label": "guard-mutation",
+        "command": [
+          "cl",
+          "/nologo",
+          "/c",
+          "/std:c++20",
+          "/I<WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src",
+          "/DDEVF_A2_DISARMED=1",
+          "/DDEVF_READ_ONLY=1",
+          "/DDEVF_G4B_READ_ONLY=1",
+          "/DDEVF_ENABLE_MUTATION=1",
+          "<WORK>\\build\\guard.cpp",
+          "/Fo<WORK>\\build\\guard.obj"
+        ],
+        "seconds": 0.266,
+        "exit": 2
+      },
+      {
+        "label": "module-headers",
+        "command": [
+          "dumpbin",
+          "/headers",
+          "<WORK>\\build\\devf_g4b_readonly.dll"
+        ],
+        "seconds": 0.031,
+        "exit": 0
+      },
+      {
+        "label": "module-imports",
+        "command": [
+          "dumpbin",
+          "/imports",
+          "<WORK>\\build\\devf_g4b_readonly.dll"
+        ],
+        "seconds": 0.031,
+        "exit": 0
+      },
+      {
+        "label": "module-exports",
+        "command": [
+          "dumpbin",
+          "/exports",
+          "<WORK>\\build\\devf_g4b_readonly.dll"
+        ],
+        "seconds": 0.032,
+        "exit": 0
+      },
+      {
+        "label": "module-disassembly",
+        "command": [
+          "dumpbin",
+          "/disasm",
+          "<WORK>\\build\\devf_g4b_readonly.dll"
+        ],
+        "seconds": 0.156,
+        "exit": 0
+      }
+    ],
+    "game_executed": false,
+    "packaged": false,
+    "host_built": false,
+    "runtime": "NOT_TESTED",
+    "policy": "DISARMED_NO_REGISTRATION",
+    "toolchain_env": {
+      "VCToolsVersion": "14.51.36231",
+      "WindowsSDKVersion": "10.0.26100.0\\",
+      "VSCMD_ARG_TGT_ARCH": "x64"
+    },
+    "source_audit": {
+      "status": "PASS_STATIC",
+      "entry_graph": "initialize -> Host/Log/Game validation; update -> A2 resolver -> adapted SAME G2 player match + bounded census + BG owning sidecar -> private ground/water queries -> event/context scalar recheck -> evaluate -> bounded Log.write; shutdown -> own scalar only",
+      "historical_G2_unchanged": true,
+      "services": "Host2.2/Log1.0/Game2 only",
+      "actor_queue_passes": "one existing membership + one existing census, no new census",
+      "new_virtual_calls": [
+        "ChkNotReady",
+        "ChkMoveBg",
+        "GetBnd",
+        "ChkLock"
+      ],
+      "private_query_writes_only": true
+    },
+    "reused_source_ledger": {
+      "CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp": "aebc1beb31c9ca27b132665390fce2b9328e4b6bbf805e37e99949c33f8f69ee",
+      "CP01_A2_DISARMED_CONTROLLER/src/controller_core.hpp": "cfacb397d189fdb56ccad51d55bb58cb2add13c15165273bff44c898a493e468",
+      "CP01_A2_DISARMED_CONTROLLER/src/disarmed_mod.cpp": "322ca9ab7f2d40c7bd13d5332f63ffee10408844b5d6b8d780b433f8402d6b88",
+      "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp": "1fa97f73c07c3ba57652b08e8ee3b3b6da4c35f7be3b5453e93cc7265754d602",
+      "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.hpp": "ec5dbef75945c26834d32e97facf5d41bda43b01111731998b10c70ecc0be543",
+      "CP01_G2_READONLY_PACKAGE/src/core.cpp": "11d276f4dec817547692504aa4222a72de2183483b427daa5466b5978eca2ed9",
+      "CP01_G2_READONLY_PACKAGE/src/core.hpp": "5f5d6a7bc875e4e4e78727b4e7a10c3f949192b7591f418d11a8286b8f41d8d9",
+      "CP01_G2_READONLY_PACKAGE/src/mod.cpp": "165c84a66d78af80a5d3a76f447b57d3aabb5bf708ed0affa958ac98cd070fdf",
+      "CP01_G2_READONLY_PACKAGE/src/native_reader.cpp": "8c6edce203fff4742e12ed13897ec826a1fa8f5ac301caa19fa0c4f8bcfde7d7"
+    },
+    "compiled_main_commit": "9d4cba8f5e40377cf0746da6366160c147686cc8",
+    "source_ledger": {
+      "CMakeLists.txt": "ebcd42b5cf098cf1009847689ae521334315b39be8d3306d0d6e62452a846e72",
+      "mod.json": "70e96371ac93206509732839e77e56936b52867cce66f146db06f2f27859dc2f",
+      "ci/audit.py": "66cdf6eb7b49e5f7c19bfbeb889dc8430bd0ca2acd320663f427457f68db6c0a",
+      "ci/mutations.py": "16f2fc1b347f2ad075eb64ec1f8cace0fde5e9366e2b4686b9bc70f388e68449",
+      "ci/reviewed-imports.json": "00ba22f5b4b7101ed1dc2a0daf7c73700a4dfd58ced0140f3494e4dc30f72d3d",
+      "ci/run_windows.py": "a66b5f4260a32ddbb27a1d6842b24cd6b6a495e2dc114746099982863b587fd5",
+      "ci/windows.yml": "81700d1ce0002fbba45e2ad28e07d95f4834befc65c4f4728c9b3287efe3cf19",
+      "src/capture.cpp": "63e1e2aacffbfe971ed2d2e6be68e2fa762d58e79773dce4ed3a531897983858",
+      "src/capture.hpp": "b486f4caaf58e55d156977644524babe65ee2258f4a47b410b2b832dbf39288f",
+      "src/extended_g2_reader.cpp": "fbddb942e9d08042dfd231d898688b45cf1d48ef5bbb83d345cdff249aacfdf1",
+      "src/local_queries.cpp": "b7ea663b194f03e25b5a7852489f57d8477ba7241beaf43b8932a9f644e2703d",
+      "src/mod.cpp": "209211040750fe7da4ba9af44963534628ae6e7a36f53dfe9d4dad7adb91a46c",
+      "tests/adapter_lab.cpp": "adbeba9959ca6c46c04ab57093059253a90420c17dbb8e3844af91a7fd4db4b8",
+      "tests/capture_lab.cpp": "2566636f8e2710c99271e8a9d808a82915f6c55d97a4267f09d49cd5ea6d45ff",
+      "tests/fake_capture.cpp": "5fdaf16d8c8e24e38970c6e3e8f89c53753f0a3c21453369a31dca67c85506c8"
+    },
+    "dependencies": {
+      "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+      "bytes": 9400986,
+      "member_crc32": "70c35731",
+      "original_integrity": "CP00 reused; selected library only"
+    },
+    "lab_summaries": {
+      "capture-lab": "SUMMARY 50 PASS 0 FAIL; synthetic scalar capture only; no engine or DX12",
+      "adapter-lab": "SUMMARY 31 PASS 0 FAIL; real observer lifecycle with fake capture; no engine",
+      "capture-error": "SUMMARY 5 PASS 0 FAIL; real observer lifecycle with fake capture; no engine",
+      "log-error": "SUMMARY 6 PASS 0 FAIL; real observer lifecycle with fake capture; no engine"
+    },
+    "mutations": [
+      {
+        "name": "center_is_clearance",
+        "compiled": true,
+        "test_exit": 1,
+        "killed": true
+      },
+      {
+        "name": "ignore_context_change",
+        "compiled": true,
+        "test_exit": 1,
+        "killed": true
+      },
+      {
+        "name": "drop_duplicate_id",
+        "compiled": true,
+        "test_exit": 1,
+        "killed": true
+      },
+      {
+        "name": "unavailable_water_is_absence",
+        "compiled": true,
+        "test_exit": 1,
+        "killed": true
+      }
+    ],
+    "binary_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "dusklight.exe": [
+          "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+          "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+          "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+          "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?dComIfGp_event_runCheck@@YAHXZ",
+          "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?mProcID@dStage_roomControl_c@@2IA",
+          "?dComIfGp_isEnableNextStage@@YAHXZ",
+          "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+          "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+          "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?fpcM_IsCreating@@YAHI@Z",
+          "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+          "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+          "?mNextStayNo@dStage_roomControl_c@@2CA",
+          "?mStayNo@dStage_roomControl_c@@2CA",
+          "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+          "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+          "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+          "??1dBgS_GndChk@@UEAA@XZ",
+          "??0dBgS_GndChk@@QEAA@XZ",
+          "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+          "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+          "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memset",
+          "memcpy"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-math-l1-1-0.dll": [
+          "sqrt"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strncmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_execute_onexit_table",
+          "_initialize_onexit_table",
+          "_initialize_narrow_environment",
+          "_configure_narrow_argv",
+          "_seh_filter_dll",
+          "_initterm_e",
+          "_initterm"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "free"
+        ],
+        "KERNEL32.dll": [
+          "DisableThreadLibraryCalls",
+          "InitializeSListHead",
+          "QueryPerformanceCounter",
+          "GetSystemTimeAsFileTime",
+          "GetCurrentThreadId",
+          "GetCurrentProcessId"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "G4B_LOCAL_OBSERVER_BINARY_AUDIT_PASS"
+    },
+    "exports": [
+      "mod_ctx",
+      "mod_initialize",
+      "mod_meta",
+      "mod_shutdown",
+      "mod_update"
+    ],
+    "module_compile_units": [
+      {
+        "directory": "<WORK>/build",
+        "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g4b_readonly_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FIglobal.h /FoCMakeFiles\\devf_g4b_readonly.dir\\src\\mod.cpp.obj /FdCMakeFiles\\devf_g4b_readonly.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\mod.cpp",
+        "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/mod.cpp",
+        "output": "<WORK>/build/CMakeFiles/devf_g4b_readonly.dir/src/mod.cpp.obj"
+      },
+      {
+        "directory": "<WORK>/build",
+        "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g4b_readonly_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FIglobal.h /FoCMakeFiles\\devf_g4b_readonly.dir\\src\\capture.cpp.obj /FdCMakeFiles\\devf_g4b_readonly.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\capture.cpp",
+        "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp",
+        "output": "<WORK>/build/CMakeFiles/devf_g4b_readonly.dir/src/capture.cpp.obj"
+      },
+      {
+        "directory": "<WORK>/build",
+        "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g4b_readonly_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FIglobal.h /FoCMakeFiles\\devf_g4b_readonly.dir\\src\\local_queries.cpp.obj /FdCMakeFiles\\devf_g4b_readonly.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\local_queries.cpp",
+        "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp",
+        "output": "<WORK>/build/CMakeFiles/devf_g4b_readonly.dir/src/local_queries.cpp.obj"
+      },
+      {
+        "directory": "<WORK>/build",
+        "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g4b_readonly_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FIglobal.h /FoCMakeFiles\\devf_g4b_readonly.dir\\src\\extended_g2_reader.cpp.obj /FdCMakeFiles\\devf_g4b_readonly.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G4B_LOCAL_READONLY_OBSERVER\\src\\extended_g2_reader.cpp",
+        "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp",
+        "output": "<WORK>/build/CMakeFiles/devf_g4b_readonly.dir/src/extended_g2_reader.cpp.obj"
+      },
+      {
+        "directory": "<WORK>/build",
+        "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g4b_readonly_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FIglobal.h /FoCMakeFiles\\devf_g4b_readonly.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\core.cpp.obj /FdCMakeFiles\\devf_g4b_readonly.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_G2_READONLY_PACKAGE\\src\\core.cpp",
+        "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/core.cpp",
+        "output": "<WORK>/build/CMakeFiles/devf_g4b_readonly.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_G2_READONLY_PACKAGE/src/core.cpp.obj"
+      },
+      {
+        "directory": "<WORK>/build",
+        "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g4b_readonly_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FIglobal.h /FoCMakeFiles\\devf_g4b_readonly.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\controller_core.cpp.obj /FdCMakeFiles\\devf_g4b_readonly.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\controller_core.cpp",
+        "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp",
+        "output": "<WORK>/build/CMakeFiles/devf_g4b_readonly.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp.obj"
+      },
+      {
+        "directory": "<WORK>/build",
+        "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g4b_readonly_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FIglobal.h /FoCMakeFiles\\devf_g4b_readonly.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\room_owner_resolver.cpp.obj /FdCMakeFiles\\devf_g4b_readonly.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\DEVF\\CP01_A2_DISARMED_CONTROLLER\\src\\room_owner_resolver.cpp",
+        "file": "<WORKSPACE>/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp",
+        "output": "<WORK>/build/CMakeFiles/devf_g4b_readonly.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/DEVF/CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp.obj"
+      },
+      {
+        "directory": "<WORK>/build",
+        "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDEVF_A2_DISARMED=1 -DDEVF_G4B_READ_ONLY=1 -DDEVF_READ_ONLY=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_g4b_readonly_EXPORTS -I<WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\assets\\GZ2E01 -I<WORKSPACE>\\codex-cp00-inputs\\.official\\libs\\JSystem\\include -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include\\dolphin -I<WORKSPACE>\\codex-cp00-inputs\\.official\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /Zc:__cplusplus /EHsc /FIglobal.h /FoCMakeFiles\\devf_g4b_readonly.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp.obj /FdCMakeFiles\\devf_g4b_readonly.dir\\ /FS -c <WORKSPACE>\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp",
+        "file": "<WORKSPACE>/codex-cp00-inputs/.official/sdk/src/game_feature.cpp",
+        "output": "<WORK>/build/CMakeFiles/devf_g4b_readonly.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/.official/sdk/src/game_feature.cpp.obj"
+      }
+    ],
+    "artifact_hashes": {
+      "devf_g4b_readonly.dll": {
+        "bytes": 50688,
+        "sha256": "2ac673d7e5980b8c7c9e62a3150097830b3be6b438600455fa67a022ea0f5006"
+      },
+      "g4b_capture_lab.exe": {
+        "bytes": 47616,
+        "sha256": "94e55e763d2747ef17ae562665830bcad2d8141784a817f3fb4447c679cc04c0"
+      },
+      "g4b_adapter_lab.exe": {
+        "bytes": 37376,
+        "sha256": "00b18064382100e276b08ef39e0aa59e281895fa0094aeccd3971bd31d79e617"
+      }
+    },
+    "call_graph_verified": {
+      "source": "initialize -> Host/Log/Game validation; update -> A2 resolver -> adapted SAME G2 player match + bounded census + BG owning sidecar -> private ground/water queries -> event/context scalar recheck -> evaluate -> bounded Log.write; shutdown -> own scalar only",
+      "compile_units": 8,
+      "lab_scope_backend_in_map": false,
+      "services": "Host/Log/Game only",
+      "gameplay_setter_in_host_IAT": false,
+      "caller_owned_query_setters": [
+        "SetObj",
+        "SetPos"
+      ],
+      "creation_in_host_IAT_or_services": false,
+      "disassembly_log": "module-disassembly.log",
+      "link_map_log": "module-map.log"
+    },
+    "official_source_unchanged": true,
+    "msvc": "G4B_LOCAL_OBSERVER_MSVC_LINK_PASS",
+    "binary": "G4B_LOCAL_OBSERVER_BINARY_AUDIT_PASS",
+    "ended_utc": "2026-10-13T05:24:34.563225+00:00"
+  },
+  "new_dll_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+        "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+        "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?dComIfGp_event_runCheck@@YAHXZ",
+        "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?mProcID@dStage_roomControl_c@@2IA",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?mNextStayNo@dStage_roomControl_c@@2CA",
+        "?mStayNo@dStage_roomControl_c@@2CA",
+        "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+        "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+        "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+        "??1dBgS_GndChk@@UEAA@XZ",
+        "??0dBgS_GndChk@@QEAA@XZ",
+        "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+        "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+        "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z"
+      ],
+      "VCRUNTIME140.dll": [
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memset",
+        "memcpy"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "sqrt"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strncmp"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_cexit",
+        "_execute_onexit_table",
+        "_initialize_onexit_table",
+        "_initialize_narrow_environment",
+        "_configure_narrow_argv",
+        "_seh_filter_dll",
+        "_initterm_e",
+        "_initterm"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "free"
+      ],
+      "KERNEL32.dll": [
+        "DisableThreadLibraryCalls",
+        "InitializeSListHead",
+        "QueryPerformanceCounter",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "GetCurrentProcessId"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "G4B_LOCAL_OBSERVER_BINARY_AUDIT_PASS"
+  },
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "historical_difference": {
+    "new_sha256": "2ac673d7e5980b8c7c9e62a3150097830b3be6b438600455fa67a022ea0f5006",
+    "historical_sha256": "d5693c904b0706a04d37ca4eac7403cbb14a4bdccf3fd37650c058de94296fde",
+    "new_bytes": 50688,
+    "historical_bytes": 50688,
+    "binary_rewritten": false,
+    "changed_fields": [
+      {
+        "field": "COFF.TimeDateStamp",
+        "file_offset": 264,
+        "new": 1791869065,
+        "historical": 1791867502
+      },
+      {
+        "field": "Debug[0].TimeDateStamp",
+        "file_offset": 37700,
+        "new": 1791869065,
+        "historical": 1791867502
+      }
+    ],
+    "normalized_sha256": "d5693c904b0706a04d37ca4eac7403cbb14a4bdccf3fd37650c058de94296fde",
+    "historical_equal_after_documented_timestamp_normalization": true,
+    "status": "PROVEN_ONLY_DOCUMENTED_PE_TIMESTAMPS_DIFFER"
+  },
+  "negative_package_cases": [
+    {
+      "case": "duplicate",
+      "rejected": true
+    },
+    {
+      "case": "case_alias",
+      "rejected": true
+    },
+    {
+      "case": "unexpected",
+      "rejected": true
+    },
+    {
+      "case": "traversal",
+      "rejected": true
+    },
+    {
+      "case": "absolute",
+      "rejected": true
+    },
+    {
+      "case": "drive",
+      "rejected": true
+    },
+    {
+      "case": "backslash",
+      "rejected": true
+    },
+    {
+      "case": "symlink",
+      "rejected": true
+    },
+    {
+      "case": "special",
+      "rejected": true
+    },
+    {
+      "case": "oversized",
+      "rejected": true
+    },
+    {
+      "case": "nonempty_directory",
+      "rejected": true
+    },
+    {
+      "case": "bad_crc",
+      "rejected": true
+    },
+    {
+      "case": "encrypted",
+      "rejected": true
+    }
+  ],
+  "package_verification": {
+    "status": "G4B_PACKAGE_STRUCTURE_PASS",
+    "sdk_package_target": "devf_g4b_readonly_package",
+    "package_bytes": 20818,
+    "package_sha256": "45822a197690e0995c30f1f42febd023db43f68154e3aab109a6070a995acc78",
+    "dll_bytes": 50688,
+    "dll_sha256": "2ac673d7e5980b8c7c9e62a3150097830b3be6b438600455fa67a022ea0f5006",
+    "built_and_packaged_dll_byte_identical": true,
+    "all_members_crc_pass": true,
+    "manifest_byte_identical": true,
+    "strict_contents_pass": true,
+    "manifest": {
+      "id": "dev.devf.g4b_local_readonly",
+      "name": "DEVF CP01 G4-B local READ_ONLY observer",
+      "version": "0.0.1",
+      "description": "DISARMED_NO_REGISTRATION. Bounded local C observations only; partial safe API coverage; no actors, hooks, setters or install/runtime authorization."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 268,
+        "crc32": "3429485d",
+        "sha256": "70e96371ac93206509732839e77e56936b52867cce66f146db06f2f27859dc2f"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 50688,
+        "crc32": "6237e38d",
+        "sha256": "2ac673d7e5980b8c7c9e62a3150097830b3be6b438600455fa67a022ea0f5006"
+      }
+    ],
+    "exports": [
+      "mod_ctx",
+      "mod_initialize",
+      "mod_meta",
+      "mod_shutdown",
+      "mod_update"
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "dusklight.exe": [
+          "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+          "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+          "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+          "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+          "?dComIfGp_event_runCheck@@YAHXZ",
+          "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?mProcID@dStage_roomControl_c@@2IA",
+          "?dComIfGp_isEnableNextStage@@YAHXZ",
+          "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+          "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+          "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?fpcM_IsCreating@@YAHI@Z",
+          "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+          "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+          "?mNextStayNo@dStage_roomControl_c@@2CA",
+          "?mStayNo@dStage_roomControl_c@@2CA",
+          "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+          "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+          "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+          "??1dBgS_GndChk@@UEAA@XZ",
+          "??0dBgS_GndChk@@QEAA@XZ",
+          "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+          "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+          "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memset",
+          "memcpy"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-math-l1-1-0.dll": [
+          "sqrt"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strncmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_execute_onexit_table",
+          "_initialize_onexit_table",
+          "_initialize_narrow_environment",
+          "_configure_narrow_argv",
+          "_seh_filter_dll",
+          "_initterm_e",
+          "_initterm"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "free"
+        ],
+        "KERNEL32.dll": [
+          "DisableThreadLibraryCalls",
+          "InitializeSListHead",
+          "QueryPerformanceCounter",
+          "GetSystemTimeAsFileTime",
+          "GetCurrentThreadId",
+          "GetCurrentProcessId"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "G4B_LOCAL_OBSERVER_BINARY_AUDIT_PASS"
+    },
+    "packaged_pe_audit_identical": true,
+    "dll_executed": false,
+    "game_executed": false
+  },
+  "dll_audit": "G4B_PACKAGE_DLL_AUDIT_PASS",
+  "structure": "G4B_PACKAGE_STRUCTURE_PASS",
+  "runner_status": "RUNNER_PACKAGE_VERIFIED_DOWNLOAD_PENDING",
+  "official_source_unchanged": true,
+  "filename": "DEVF_CP01_G4B_READ_ONLY_windows-amd64_17bbbd288f2e17974303f98fbfcd3345f49aa11d.dusk",
+  "ended_utc": "2026-10-13T05:24:34.972654+00:00"
+}

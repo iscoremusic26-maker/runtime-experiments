@@ -1,0 +1,66 @@
+{
+  "filename": "DEVF_CP01_G4B_READ_ONLY_windows-amd64_17bbbd288f2e17974303f98fbfcd3345f49aa11d.dusk",
+  "module_id": "dev.devf.g4b_local_readonly",
+  "module_version": "0.0.1",
+  "approved_source_commit": "17bbbd288f2e17974303f98fbfcd3345f49aa11d",
+  "prior_equivalent_compiled_source_commit": "9d4cba8f5e40377cf0746da6366160c147686cc8",
+  "packaging_source_commit": "6c788fb7d0e1245c49af473c2ecca5dc1c7f417f",
+  "workflow_commit": "1069e2f2897b137c9ec791861eb862c832a3edcb",
+  "workflow_run_id": "38351128600",
+  "official_sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "import_library": {
+    "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "bytes": 9400986,
+    "member_crc32": "70c35731",
+    "original_integrity": "CP00 reused; selected library only"
+  },
+  "compiler": "MSVC 19.51.36260",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "generated_utc": "2026-10-13T05:24:34.970634+00:00",
+  "package_sha256": "45822a197690e0995c30f1f42febd023db43f68154e3aab109a6070a995acc78",
+  "package_bytes": 20818,
+  "dll_sha256": "2ac673d7e5980b8c7c9e62a3150097830b3be6b438600455fa67a022ea0f5006",
+  "dll_bytes": 50688,
+  "manifest_sha256": "70e96371ac93206509732839e77e56936b52867cce66f146db06f2f27859dc2f",
+  "audits": {
+    "msvc": "G4B_PACKAGE_MSVC_BUILD_PASS",
+    "dll": "G4B_PACKAGE_DLL_AUDIT_PASS",
+    "structure": "G4B_PACKAGE_STRUCTURE_PASS"
+  },
+  "read_only": true,
+  "policy": "DISARMED_NO_REGISTRATION",
+  "runtime": "RUNTIME_NOT_TESTED",
+  "installation_authorized": false,
+  "execution_authorized": false,
+  "historical_difference": {
+    "new_sha256": "2ac673d7e5980b8c7c9e62a3150097830b3be6b438600455fa67a022ea0f5006",
+    "historical_sha256": "d5693c904b0706a04d37ca4eac7403cbb14a4bdccf3fd37650c058de94296fde",
+    "new_bytes": 50688,
+    "historical_bytes": 50688,
+    "binary_rewritten": false,
+    "changed_fields": [
+      {
+        "field": "COFF.TimeDateStamp",
+        "file_offset": 264,
+        "new": 1791869065,
+        "historical": 1791867502
+      },
+      {
+        "field": "Debug[0].TimeDateStamp",
+        "file_offset": 37700,
+        "new": 1791869065,
+        "historical": 1791867502
+      }
+    ],
+    "normalized_sha256": "d5693c904b0706a04d37ca4eac7403cbb14a4bdccf3fd37650c058de94296fde",
+    "historical_equal_after_documented_timestamp_normalization": true,
+    "status": "PROVEN_ONLY_DOCUMENTED_PE_TIMESTAMPS_DIFFER"
+  }
+}

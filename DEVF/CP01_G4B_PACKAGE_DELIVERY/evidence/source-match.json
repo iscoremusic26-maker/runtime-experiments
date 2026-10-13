@@ -1,0 +1,43 @@
+{
+  "status": "PASS_SOURCE_MATCH",
+  "approved_observer_checkpoint": "17bbbd288f2e17974303f98fbfcd3345f49aa11d",
+  "observer_and_reused_approved_files": [
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/CMakeLists.txt",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/mod.json",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/audit.py",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/mutations.py",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/reviewed-imports.json",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/run_windows.py",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/windows.yml",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.cpp",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/capture.hpp",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/extended_g2_reader.cpp",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/local_queries.cpp",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/src/mod.cpp",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/adapter_lab.cpp",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/capture_lab.cpp",
+    "CP01_G4B_LOCAL_READONLY_OBSERVER/tests/fake_capture.cpp",
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.cpp",
+    "CP01_A2_DISARMED_CONTROLLER/src/controller_core.hpp",
+    "CP01_A2_DISARMED_CONTROLLER/src/disarmed_mod.cpp",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.cpp",
+    "CP01_A2_DISARMED_CONTROLLER/src/room_owner_resolver.hpp",
+    "CP01_G2_READONLY_PACKAGE/src/core.cpp",
+    "CP01_G2_READONLY_PACKAGE/src/core.hpp",
+    "CP01_G2_READONLY_PACKAGE/src/mod.cpp",
+    "CP01_G2_READONLY_PACKAGE/src/native_reader.cpp",
+    "CP01_G2_READONLY_PACKAGE/evidence/pre-package-review.json"
+  ],
+  "packaging_tool_hashes": {
+    "SOURCE_APPROVAL.json": "6062738c755a66defee578f75d464b45aa1855e9b94594ac325c6df1098fad6d",
+    "ci/verify_package.py": "c170ab24e530125ebfbbbddd53af64cb73848e5a2c9910c2281ccc61e234252e",
+    "ci/windows.yml": "d810a110d4038fae237bed2c016b3bd8ed4e36e1baa5f0fc309005fbea8c0dc6",
+    "ci/run_package.py": "ae98aed30dae300766a43a4e19ae8ad8e55d66217a95f8ca41692570c29f2332",
+    "ci/verify_negative_cases.py": "94d3cc6d9e63c217be4ada99242cfa8012d67b84c17cf3e71d4aed5a02cd7e52"
+  },
+  "packaging_source_commit": "6c788fb7d0e1245c49af473c2ecca5dc1c7f417f",
+  "ci_head": "1069e2f2897b137c9ec791861eb862c832a3edcb",
+  "independent_download_checker_sha256": "96ba96796aaba796462d044ed96bbd69d235c4580c660610b7274f9921689995",
+  "independent_checker_executed": "PASS on actual private Actions download; not part of native module graph",
+  "all_original_observer_files_unchanged": true
+}

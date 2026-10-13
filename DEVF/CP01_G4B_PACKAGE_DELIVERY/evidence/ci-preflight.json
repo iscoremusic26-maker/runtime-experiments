@@ -1,0 +1,69 @@
+{
+  "status": "PASS_BEFORE_TRIGGER",
+  "base_branch": "ci/devf-cp01-g4b-readonly",
+  "base_commit": "7e95661bdf9f93de7ed5a532e1b37150e70fe30f",
+  "head_branch": "ci/devf-cp01-g4b-package",
+  "head_commit": "1069e2f2897b137c9ec791861eb862c832a3edcb",
+  "changed_files": [
+    ".github/workflows/devf-cp01-g4b-package.yml",
+    "DEVF/CP01_G4B_PACKAGE_DELIVERY/.gitignore",
+    "DEVF/CP01_G4B_PACKAGE_DELIVERY/CI_SOURCE.json",
+    "DEVF/CP01_G4B_PACKAGE_DELIVERY/SOURCE_APPROVAL.json",
+    "DEVF/CP01_G4B_PACKAGE_DELIVERY/ci/run_package.py",
+    "DEVF/CP01_G4B_PACKAGE_DELIVERY/ci/verify_negative_cases.py",
+    "DEVF/CP01_G4B_PACKAGE_DELIVERY/ci/verify_package.py",
+    "DEVF/CP01_G4B_PACKAGE_DELIVERY/ci/windows.yml"
+  ],
+  "workflows": [
+    {
+      "workflow": "devf-cp01-a2-disarmed.yml",
+      "events": [
+        "pull_request"
+      ],
+      "matched_changed_files": [],
+      "triggers_for_this_diff": false,
+      "historic_workflow_unchanged": true
+    },
+    {
+      "workflow": "devf-cp01-g2-readonly.yml",
+      "events": [
+        "pull_request"
+      ],
+      "matched_changed_files": [],
+      "triggers_for_this_diff": false,
+      "historic_workflow_unchanged": true
+    },
+    {
+      "workflow": "devf-cp01-g4b-package.yml",
+      "events": [
+        "pull_request"
+      ],
+      "matched_changed_files": [
+        ".github/workflows/devf-cp01-g4b-package.yml",
+        "DEVF/CP01_G4B_PACKAGE_DELIVERY/.gitignore",
+        "DEVF/CP01_G4B_PACKAGE_DELIVERY/CI_SOURCE.json",
+        "DEVF/CP01_G4B_PACKAGE_DELIVERY/SOURCE_APPROVAL.json",
+        "DEVF/CP01_G4B_PACKAGE_DELIVERY/ci/run_package.py",
+        "DEVF/CP01_G4B_PACKAGE_DELIVERY/ci/verify_negative_cases.py",
+        "DEVF/CP01_G4B_PACKAGE_DELIVERY/ci/verify_package.py",
+        "DEVF/CP01_G4B_PACKAGE_DELIVERY/ci/windows.yml"
+      ],
+      "triggers_for_this_diff": true,
+      "historic_workflow_unchanged": false
+    },
+    {
+      "workflow": "devf-cp01-g4b-readonly.yml",
+      "events": [
+        "pull_request"
+      ],
+      "matched_changed_files": [],
+      "triggers_for_this_diff": false,
+      "historic_workflow_unchanged": true
+    }
+  ],
+  "only_package_workflow_can_trigger": true,
+  "permissions": "contents:read; existing artifact runtime only",
+  "repo_private_verified": true,
+  "no_observer_source_changes": true,
+  "dispatch_reason": "New workflow_dispatch is unavailable before default-branch integration; no merge authorized. Narrow guarded PR event uses existing established capability."
+}

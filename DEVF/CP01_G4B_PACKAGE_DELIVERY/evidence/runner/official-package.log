@@ -1,0 +1,5 @@
+[1/1] Packaging devf_g4b_readonly -> <WORK>/build/mods/devf_g4b_readonly.dusk
+mod.json
+lib
+lib/windows-amd64
+lib/windows-amd64/mod.dll

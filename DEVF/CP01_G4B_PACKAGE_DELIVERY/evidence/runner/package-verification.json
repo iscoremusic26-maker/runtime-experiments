@@ -1,0 +1,159 @@
+{
+  "status": "G4B_PACKAGE_STRUCTURE_PASS",
+  "sdk_package_target": "devf_g4b_readonly_package",
+  "package_bytes": 20818,
+  "package_sha256": "45822a197690e0995c30f1f42febd023db43f68154e3aab109a6070a995acc78",
+  "dll_bytes": 50688,
+  "dll_sha256": "2ac673d7e5980b8c7c9e62a3150097830b3be6b438600455fa67a022ea0f5006",
+  "built_and_packaged_dll_byte_identical": true,
+  "all_members_crc_pass": true,
+  "manifest_byte_identical": true,
+  "strict_contents_pass": true,
+  "manifest": {
+    "id": "dev.devf.g4b_local_readonly",
+    "name": "DEVF CP01 G4-B local READ_ONLY observer",
+    "version": "0.0.1",
+    "description": "DISARMED_NO_REGISTRATION. Bounded local C observations only; partial safe API coverage; no actors, hooks, setters or install/runtime authorization."
+  },
+  "members": [
+    {
+      "path": "mod.json",
+      "directory": false,
+      "bytes": 268,
+      "crc32": "3429485d",
+      "sha256": "70e96371ac93206509732839e77e56936b52867cce66f146db06f2f27859dc2f"
+    },
+    {
+      "path": "lib/",
+      "directory": true,
+      "bytes": 0,
+      "crc32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "lib/windows-amd64/",
+      "directory": true,
+      "bytes": 0,
+      "crc32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "lib/windows-amd64/mod.dll",
+      "directory": false,
+      "bytes": 50688,
+      "crc32": "6237e38d",
+      "sha256": "2ac673d7e5980b8c7c9e62a3150097830b3be6b438600455fa67a022ea0f5006"
+    }
+  ],
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "pe_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+        "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+        "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?dComIfGp_event_runCheck@@YAHXZ",
+        "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?mProcID@dStage_roomControl_c@@2IA",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?mNextStayNo@dStage_roomControl_c@@2CA",
+        "?mStayNo@dStage_roomControl_c@@2CA",
+        "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+        "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+        "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+        "??1dBgS_GndChk@@UEAA@XZ",
+        "??0dBgS_GndChk@@QEAA@XZ",
+        "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+        "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+        "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z"
+      ],
+      "VCRUNTIME140.dll": [
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memset",
+        "memcpy"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "sqrt"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strncmp"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_cexit",
+        "_execute_onexit_table",
+        "_initialize_onexit_table",
+        "_initialize_narrow_environment",
+        "_configure_narrow_argv",
+        "_seh_filter_dll",
+        "_initterm_e",
+        "_initterm"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "free"
+      ],
+      "KERNEL32.dll": [
+        "DisableThreadLibraryCalls",
+        "InitializeSListHead",
+        "QueryPerformanceCounter",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "GetCurrentProcessId"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "G4B_LOCAL_OBSERVER_BINARY_AUDIT_PASS"
+  },
+  "packaged_pe_audit_identical": true,
+  "dll_executed": false,
+  "game_executed": false
+}
