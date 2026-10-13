@@ -1,0 +1,19 @@
+{
+  "status": "PASS_STATIC",
+  "independent_fetch_from_GitHub": true,
+  "verified_published_parent_commit": "0779c9adcfeb096b103e48fea922b77e8effcb0a",
+  "compiled_main_commit": "639d4780aeb15c17d9723babb5ff4c8d64c19a9d",
+  "ci_head": "0b7b517ff2fdce5a0964cbc1dbd91d4a27525b28",
+  "successful_run": 38425038752,
+  "sources_verified_from_git": 19,
+  "reused_sources_verified_from_git": 21,
+  "historical_files_verified_from_git": 277,
+  "final_manifest_texts_verified_from_git": 30,
+  "failed_run_texts_verified_from_git": 8,
+  "prior_historical_refs_unchanged": 50,
+  "authorized_new_branch_excluded_from_historical_refs": true,
+  "git_fsck": "PASS",
+  "new_tag": "DEVF_CP01_A2_FIRST_PILOT_SAFETY_TRACE_VERIFIED",
+  "final_protocol": "commit this record, annotate new tag, push without force, fetch exact branch/tag independently, compare peeled SHA and run verifier/fsck again",
+  "no_circular_claim": "this file verifies named published parent; final head/tag is checked after publication and reported to user"
+}
