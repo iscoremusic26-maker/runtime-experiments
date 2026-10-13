@@ -1,0 +1,139 @@
+{
+  "capture_run": 38465614811,
+  "historical_manifest": "CP01_G4B_LOCAL_READONLY_OBSERVER/ci/reviewed-imports.json",
+  "diff": {
+    "KERNEL32.dll": {
+      "added": [],
+      "removed": [],
+      "identical": [
+        "DisableThreadLibraryCalls",
+        "GetCurrentProcessId",
+        "GetCurrentThreadId",
+        "GetSystemTimeAsFileTime",
+        "InitializeSListHead",
+        "QueryPerformanceCounter"
+      ]
+    },
+    "VCRUNTIME140.dll": {
+      "added": [
+        "memcmp"
+      ],
+      "removed": [],
+      "identical": [
+        "__C_specific_handler",
+        "__std_type_info_destroy_list",
+        "memcpy",
+        "memset"
+      ]
+    },
+    "VCRUNTIME140_1.dll": {
+      "added": [],
+      "removed": [],
+      "identical": [
+        "__CxxFrameHandler4"
+      ]
+    },
+    "api-ms-win-crt-heap-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "identical": [
+        "free"
+      ]
+    },
+    "api-ms-win-crt-math-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "identical": [
+        "sqrt"
+      ]
+    },
+    "api-ms-win-crt-runtime-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "identical": [
+        "_cexit",
+        "_configure_narrow_argv",
+        "_execute_onexit_table",
+        "_initialize_narrow_environment",
+        "_initialize_onexit_table",
+        "_initterm",
+        "_initterm_e",
+        "_seh_filter_dll"
+      ]
+    },
+    "api-ms-win-crt-stdio-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "identical": [
+        "__stdio_common_vsprintf"
+      ]
+    },
+    "api-ms-win-crt-string-l1-1-0.dll": {
+      "added": [],
+      "removed": [],
+      "identical": [
+        "strncmp"
+      ]
+    },
+    "dusklight.exe": {
+      "added": [],
+      "removed": [],
+      "identical": [
+        "??0dBgS_GndChk@@QEAA@XZ",
+        "??0dBgS_ObjGndChk_Wtr@@QEAA@XZ",
+        "??1dBgS_GndChk@@UEAA@XZ",
+        "??1dBgS_ObjGndChk_Wtr@@UEAA@XZ",
+        "?ChkPolySafe@cBgS@@QEAA_NAEBVcBgS_PolyInfo@@@Z",
+        "?GetGroundCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetPolyColor@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetRoomId@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GetSpecialCode@dBgS@@QEAAHAEBVcBgS_PolyInfo@@@Z",
+        "?GroundCross@cBgS@@QEAAMPEAVcBgS_GndChk@@@Z",
+        "?SetObj@dBgS_PolyPassChk@@QEAAXXZ",
+        "?SetPos@cBgS_GndChk@@QEAAXPEBUcXyz@@@Z",
+        "?dComIfG_Bgsp@@YAAEAVdBgS@@XZ",
+        "?dComIfG_getObjectResInfo@@YAPEAVdRes_info_c@@PEBD@Z",
+        "?dComIfGp_event_runCheck@@YAHXZ",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?dComIfGp_isEnableNextStage@@YAHXZ",
+        "?dComIfGp_roomControl_checkStatusFlag@@YAEHE@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+        "?fpcLy_CurrentLayer@@YAPEAUlayer_class@@XZ",
+        "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+        "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?mNextStayNo@dStage_roomControl_c@@2CA",
+        "?mProcID@dStage_roomControl_c@@2IA",
+        "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+        "?mStayNo@dStage_roomControl_c@@2CA"
+      ]
+    }
+  },
+  "metadata": [
+    {
+      "kind": "header",
+      "abi": 1
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.host",
+      "major": 2,
+      "minor": 2
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.log",
+      "major": 1,
+      "minor": 0
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.game",
+      "major": 2,
+      "minor": 0
+    }
+  ]
+}

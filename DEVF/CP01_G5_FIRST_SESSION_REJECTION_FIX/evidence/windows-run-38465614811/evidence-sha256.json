@@ -1,0 +1,62 @@
+{
+  "build.log": {
+    "bytes": 5837,
+    "sha256": "8efda87bee4bd83a17b6c00039021574f2a69cec5a591ea151550f3b1db26d60"
+  },
+  "candidate-imports.json": {
+    "bytes": 3034,
+    "sha256": "7715db05616dc74b90e696c3cd681479a44df03a8094f84a9c539ba3e4007909"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 1010,
+    "sha256": "78c50a2d0bdca74b2ec920e4c82e997def636b18a7ec43a6e724ee953b7dd2ab"
+  },
+  "g5-overlay-diff.log": {
+    "bytes": 870,
+    "sha256": "1cad60a90c3b6b7ffef1cfc6ce82684937cedd0b4aff68be5d556d3e211073de"
+  },
+  "g5-overlay-ledger.json": {
+    "bytes": 343,
+    "sha256": "fafeb9815995a90eab0a2ee1a5de63faa16f8454d5df8c7d6ee53584ee4f2eeb"
+  },
+  "module-disassembly.log": {
+    "bytes": 704691,
+    "sha256": "9f5b0c8b5fd2418604a788e1230c07cec394610932b2c1036f9eee455dff92c4"
+  },
+  "module-exports.log": {
+    "bytes": 837,
+    "sha256": "0a763c69b36839bf5b7826d7722e7fcafd64bae992acf5fdfab6f4ffebfa45d1"
+  },
+  "module-headers.log": {
+    "bytes": 6067,
+    "sha256": "159a85655075ebd84f8334a41bfedfc2a47c22229cc5096be2006077d9ba433c"
+  },
+  "module-imports.log": {
+    "bytes": 5589,
+    "sha256": "22ec98141fac60a1afe6ffbfd1f4958b37b8ea27ffbd3c2e67a17c1c429c921b"
+  },
+  "module-map.log": {
+    "bytes": 84667,
+    "sha256": "993c8f2791fcc4173f346a52de29ef532399678388d158fe0194d454afe1389f"
+  },
+  "overlay-diff.log": {
+    "bytes": 12842,
+    "sha256": "c462d8d7eeed2e5c7deddd8f7ce3ab41e9f7e64d78ca928307eabaa87d5f4544"
+  },
+  "overlay-ledger.json": {
+    "bytes": 2419,
+    "sha256": "fb9214ca118aa7f6b5bc71cd895d8dd8d76054374316936c9bf14f7321e0d176"
+  },
+  "result.json": {
+    "bytes": 14426,
+    "sha256": "28ed005c27638b53ec4101b1c3776f06596c85304d4a39b35b42663a54313f8a"
+  }
+}

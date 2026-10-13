@@ -1,0 +1,8 @@
+{
+  "src/census_reader.cpp": {
+    "input_lf_sha256": "8538db473a6cbba925f46101087a49f7c70fc6e869f2038b8cd6d07d938ecc59",
+    "output_lf_sha256": "ad63cbc5ae6160f7bc7b49d80a7f700e4a1883de8bc0bbc5edfebecfb6c349ab",
+    "output_normalized_sha256": "4bff1adbcad81cad85ae778fc1bc09bc4ebcc914ded17aca570404598a4dfba0",
+    "edits": 1
+  }
+}
