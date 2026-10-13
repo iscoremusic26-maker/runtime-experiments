@@ -1,0 +1,7 @@
+{
+  "run_id": 38444298710,
+  "head": "6527ae5bde4078f09c1fb6dee32e28c7111fed6e",
+  "status": "SKIPPED",
+  "cause": "New workflow name substitution also changed base_ref; gate correctly prevented execution. Fixed only new base_ref to ci/devf-cp01-first-active-package. No Windows builds/tests/package were executed in this skipped run.",
+  "old_workflows_not_triggered": true
+}
