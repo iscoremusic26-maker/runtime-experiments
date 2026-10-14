@@ -1,0 +1,443 @@
+{
+  "scope": "Own CP04 code, reports and sanitized text; byte exact; self excluded",
+  "compiled_source": "18daf7648a35c5ee3a89b8a21f9f6d8248e25c30",
+  "CI": "4bea35d21049ccef0c8ea0f79ff86e066c43a563",
+  "run": "38585920329",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 155,
+      "sha256": "631eafb263009562598593b3f7164296784ca58f3f140b618f9435b6c94cf918"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 26,
+      "sha256": "a7d3ec2efb2be8ee8da74403ec1b1bc0ab32cbe92efabe5aca57aa5b2c7613b4"
+    },
+    {
+      "path": "BUILD_AND_PACKAGE.md",
+      "bytes": 3737,
+      "sha256": "19e0b8e1f08084380483b8b464a6b30296615f5023168fa706e57a5e46420467"
+    },
+    {
+      "path": "CI_SOURCE.json",
+      "bytes": 181,
+      "sha256": "74a80a9aa942ffe16c563beed340b7f3755b61da3607cef089a2a43488cab9d8"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 882,
+      "sha256": "9e286cb98a6b565f2745cf8628b7b6dd7ade29de957ae3cc9c276a66d2420826"
+    },
+    {
+      "path": "HUMAN_TEST.md",
+      "bytes": 2714,
+      "sha256": "1f2e0117030e7dfc0207e6fbe7ce59bf6bab8ca2c051b1b7bdcc9215650c9edb"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2491,
+      "sha256": "ed303d98e57ca7fca3d8d5dc2135751a0c8344514f7498952dd51ac963c4c2a3"
+    },
+    {
+      "path": "RECOVERY.md",
+      "bytes": 2634,
+      "sha256": "a945ed1882136b04ba3d01fc654e490987183f7ff8b83408a484887459ebbe3c"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 14195,
+      "sha256": "61d569b634828c63b1ca862ae2b5cdf976f133ff08b332c43146a33b9a520ebe"
+    },
+    {
+      "path": "TEST_RESULTS.md",
+      "bytes": 3533,
+      "sha256": "57b93258c1781cc9443d0f163f30c672474ce4cbc8f5dc51ff04a09119841825"
+    },
+    {
+      "path": "VISUAL_ROUTE.md",
+      "bytes": 4831,
+      "sha256": "08f575c926e99c1de2cf565e81d4d8fe05c9316e39c36e8ad5732ddda4f94d4a"
+    },
+    {
+      "path": "ci/audit.py",
+      "bytes": 6527,
+      "sha256": "c851b98aef4ebe46f8b103e1d71b867ac2112e15cdfe2613549aa6934ea53e6b"
+    },
+    {
+      "path": "ci/lab-reuse.json",
+      "bytes": 1583,
+      "sha256": "03a9b3ba3530f720d06ca2b19f098a95dd16f9d7cb50b1e0bb068a216b154c8c"
+    },
+    {
+      "path": "ci/reviewed-crt-surface.json",
+      "bytes": 917,
+      "sha256": "d211fafb60baca3bae0d4a049503009d83837eeb04fc8f055c8dd1d6fc584ffe"
+    },
+    {
+      "path": "ci/reviewed-exact-imports.json",
+      "bytes": 1712,
+      "sha256": "5cdd0b6acb79c2ad8a6c8411f92b67b6e14c894c688b233979a258c8539c9414"
+    },
+    {
+      "path": "ci/reviewed-game-exports.json",
+      "bytes": 865,
+      "sha256": "8c0645f9ddb4a83bc88a746031f423b3daee8f0d220ed984d9dc5221c69414be"
+    },
+    {
+      "path": "ci/run_windows.py",
+      "bytes": 9345,
+      "sha256": "16c5e594a32390aa3ec5b0f396ef8a7cbfd7ed43c55f19d07d90618f1b48b50a"
+    },
+    {
+      "path": "ci/verify_download.py",
+      "bytes": 5095,
+      "sha256": "17cd0471a941551d3deb9162652a7e33bc1868edebd5126ebd2172294ce7dd48"
+    },
+    {
+      "path": "ci/windows-hook.yml",
+      "bytes": 3421,
+      "sha256": "84c5a4ac1434c0c7de577ebbf5e64444f9db94e381655a1c95507ba504ddec26"
+    },
+    {
+      "path": "evidence/actions-artifacts.json",
+      "bytes": 1031,
+      "sha256": "c98ebf48a113fa75c4448edb4f571bc026eeca6ae7d1bcdee57d433283b4208e"
+    },
+    {
+      "path": "evidence/download-verification.json",
+      "bytes": 6565,
+      "sha256": "e4e58a084328ab0b2714d297ee139737afc7903e0ea66d0873212f60bc2bdd48"
+    },
+    {
+      "path": "evidence/gates.json",
+      "bytes": 834,
+      "sha256": "73b95bfda7105e404d19161613b8c0e4252439804bd363417960af53d4d715d8"
+    },
+    {
+      "path": "evidence/source-references.json",
+      "bytes": 3174,
+      "sha256": "ed0d6c8733041ab477dc65bc99554363099fe28d81e8914aa9eca9d34f6a7f2a"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/DOWNLOAD_MANIFEST.json",
+      "bytes": 1803,
+      "sha256": "253730cf007be1bc0adce480590273280f3280e327cc13c07b78f0e1078db86a"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/binary-audit.json",
+      "bytes": 3027,
+      "sha256": "5be5637e0ddacb80815b05b061388ae8a49ebc0c468100976833d6854edc7650"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/build.log",
+      "bytes": 1399,
+      "sha256": "e3bf58f46717546e094a5679c81a8d269213e8ba9e6c5fc1cd1ce35d00728ba2"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/cmake-version.log",
+      "bytes": 93,
+      "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/compile-commands.json",
+      "bytes": 3003,
+      "sha256": "7a1078e286648490f2bc4c4878ca07a8736b1c7ba5db4ff42ca8ed05e59b1cdf"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/compiler.log",
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/configure.log",
+      "bytes": 822,
+      "sha256": "1a4596ec450089e42188b45186779c575dceb55a1b91a8a2a6d957401f1e1034"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/evidence-sha256.json",
+      "bytes": 3710,
+      "sha256": "11f85186a3157b06779adc141dcb65facbda5c51923c6cf6fb5a17c4e38e8655"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-config_failure.log",
+      "bytes": 94,
+      "sha256": "1f1270047dd195dca424f7a7b65c7387068a9e7696bf4e18b9cb6ab1ecf736df"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-death_and_reload.log",
+      "bytes": 96,
+      "sha256": "c2dcbb9852c18e51951994e7f1be870c97d29ffbc6a0067a3311c2ff800e61cb"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-matching_and_original.log",
+      "bytes": 101,
+      "sha256": "c3caf425bdffca710d5126031b26ca42259b60d8c4087695b0d21604dcf2b789"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-model_missing.log",
+      "bytes": 93,
+      "sha256": "a7ca2ef726ae9b8d1dd2f8607c79217fcef79e6f25b122c4e5c6e1c25520c1c7"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-next_generation.log",
+      "bytes": 95,
+      "sha256": "014c3d222f83debb8329ccf293fd1b1a3bc1709fd7d90bc76892400cd26768ba"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-pool_failure.log",
+      "bytes": 92,
+      "sha256": "f1d56ba878ed294db98fadc34d32b5d6702edf31a4fe2a1369d2d2ed9b60f319"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-recycled_handle.log",
+      "bytes": 95,
+      "sha256": "0b1152859ef9650b5c603bffd5697c37e0b40f2d6f3d71677bbbd7745da8b24b"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-registration_rollback.log",
+      "bytes": 101,
+      "sha256": "5d9634831aaba30ee3e3c97d7b043cf1e611ee52a380dfbede1f9bf9e841aff1"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-resource_gates.log",
+      "bytes": 94,
+      "sha256": "e8a9a2d0578acefd0f31b0ec37d08f74700ef57c1c01334649708dafcfc12f9c"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-resource_missing.log",
+      "bytes": 96,
+      "sha256": "9b8f96faf9fae2e74822ce2fa9d8c77f6b0a1a2dcddfae25136788fd971d6bfa"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-shared_asset_private_emitters.log",
+      "bytes": 109,
+      "sha256": "5bdce011e4ee0f0eea88085dc7e70cf2fec1f1db5346eb7d249c685a7485ea61"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-shutdown_no_game_access.log",
+      "bytes": 103,
+      "sha256": "cca6abfb5a48326d4c6a07176188cfe581293b03e6bb11dd295e57de3fa94ef0"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/fake-single_emitter_anchor.log",
+      "bytes": 101,
+      "sha256": "c248959c6f0c2feea864dfa243c3c4370d4ca20544ed60726bdad260671cd7b1"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/lab-build.log",
+      "bytes": 1208,
+      "sha256": "15529265fc377216bfa40541b4acbb7d6617a6909854a363a68a84ebd308770b"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/module-exports.log",
+      "bytes": 823,
+      "sha256": "90a261f17e5033860c6e44f8e15b6c405e58d917f3b97670ff838a175d58102d"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/module-headers.log",
+      "bytes": 6060,
+      "sha256": "85a5f164b02e766fddc3d69c06da8a6f79bdaf0a1a6864e3b1f96414fe1d416f"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/module-imports.log",
+      "bytes": 4263,
+      "sha256": "860c7e556745039a10efbf0638dd76e58d123978244d2fd23ab49c400f03dccb"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/module-map.log",
+      "bytes": 56189,
+      "sha256": "8449a1feca788c3a93dbd7192fd4056d8c14fb00a243645247c5146cd7416e57"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/official-package.log",
+      "bytes": 148,
+      "sha256": "f6ca516c2475bf4f62fc316d9bfbdee43f44ec74865d080a0a2d7a738e80f575"
+    },
+    {
+      "path": "evidence/windows-run-38584533623/result.json",
+      "bytes": 19376,
+      "sha256": "de7df11adac2c287e969bb936dd710dc472ae59f388ca49724397ea0a310e0ab"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/DOWNLOAD_MANIFEST.json",
+      "bytes": 1803,
+      "sha256": "f44b7242dec178f69c3b0adc8e2b4fe860433bf199de27f9b96ffeff870e9ea8"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/binary-audit.json",
+      "bytes": 3027,
+      "sha256": "5be5637e0ddacb80815b05b061388ae8a49ebc0c468100976833d6854edc7650"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/build.log",
+      "bytes": 1399,
+      "sha256": "e3bf58f46717546e094a5679c81a8d269213e8ba9e6c5fc1cd1ce35d00728ba2"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/cmake-version.log",
+      "bytes": 93,
+      "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/compile-commands.json",
+      "bytes": 3003,
+      "sha256": "7a1078e286648490f2bc4c4878ca07a8736b1c7ba5db4ff42ca8ed05e59b1cdf"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/compiler.log",
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/configure.log",
+      "bytes": 822,
+      "sha256": "37632fda71d630032f5c6479c34be9440bb82bd9cdf497d2502dff19ccab70e2"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/evidence-sha256.json",
+      "bytes": 3711,
+      "sha256": "456b5ec3dad5e68b74d145ff719602207dda3f8284db095ecd5d47358b1c3f74"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-config_failure.log",
+      "bytes": 94,
+      "sha256": "1f1270047dd195dca424f7a7b65c7387068a9e7696bf4e18b9cb6ab1ecf736df"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-death_and_reload.log",
+      "bytes": 96,
+      "sha256": "c2dcbb9852c18e51951994e7f1be870c97d29ffbc6a0067a3311c2ff800e61cb"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-matching_and_original.log",
+      "bytes": 101,
+      "sha256": "c3caf425bdffca710d5126031b26ca42259b60d8c4087695b0d21604dcf2b789"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-model_missing.log",
+      "bytes": 93,
+      "sha256": "a7ca2ef726ae9b8d1dd2f8607c79217fcef79e6f25b122c4e5c6e1c25520c1c7"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-next_generation.log",
+      "bytes": 95,
+      "sha256": "014c3d222f83debb8329ccf293fd1b1a3bc1709fd7d90bc76892400cd26768ba"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-pool_failure.log",
+      "bytes": 92,
+      "sha256": "f1d56ba878ed294db98fadc34d32b5d6702edf31a4fe2a1369d2d2ed9b60f319"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-recycled_handle.log",
+      "bytes": 95,
+      "sha256": "0b1152859ef9650b5c603bffd5697c37e0b40f2d6f3d71677bbbd7745da8b24b"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-registration_rollback.log",
+      "bytes": 101,
+      "sha256": "5d9634831aaba30ee3e3c97d7b043cf1e611ee52a380dfbede1f9bf9e841aff1"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-resource_gates.log",
+      "bytes": 94,
+      "sha256": "e8a9a2d0578acefd0f31b0ec37d08f74700ef57c1c01334649708dafcfc12f9c"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-resource_missing.log",
+      "bytes": 96,
+      "sha256": "9b8f96faf9fae2e74822ce2fa9d8c77f6b0a1a2dcddfae25136788fd971d6bfa"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-shared_asset_private_emitters.log",
+      "bytes": 109,
+      "sha256": "5bdce011e4ee0f0eea88085dc7e70cf2fec1f1db5346eb7d249c685a7485ea61"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-shutdown_no_game_access.log",
+      "bytes": 103,
+      "sha256": "cca6abfb5a48326d4c6a07176188cfe581293b03e6bb11dd295e57de3fa94ef0"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/fake-single_emitter_anchor.log",
+      "bytes": 101,
+      "sha256": "c248959c6f0c2feea864dfa243c3c4370d4ca20544ed60726bdad260671cd7b1"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/lab-reuse.json",
+      "bytes": 1624,
+      "sha256": "5057b4d8b8450269c08f0721b57b7735dfe6d837c69684605b23514704e6402b"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/module-exports.log",
+      "bytes": 823,
+      "sha256": "90a261f17e5033860c6e44f8e15b6c405e58d917f3b97670ff838a175d58102d"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/module-headers.log",
+      "bytes": 6060,
+      "sha256": "f6992dc6afd04d479bc71ad42efa14c811ee726b379740730de5888f4cf859af"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/module-imports.log",
+      "bytes": 4263,
+      "sha256": "860c7e556745039a10efbf0638dd76e58d123978244d2fd23ab49c400f03dccb"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/module-map.log",
+      "bytes": 56189,
+      "sha256": "67d4d426da70ecd6e3cd1e2fcb22ecd8c053263b914e87ed9c159952c12318f5"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/official-package.log",
+      "bytes": 148,
+      "sha256": "f6ca516c2475bf4f62fc316d9bfbdee43f44ec74865d080a0a2d7a738e80f575"
+    },
+    {
+      "path": "evidence/windows-run-38585920329/result.json",
+      "bytes": 16670,
+      "sha256": "c119cfd3e529cda29ec1d16df1227c4394a92e23486bbee9d53abdefd2bdd137"
+    },
+    {
+      "path": "mod.json",
+      "bytes": 408,
+      "sha256": "23b2352be4432e0a1260d2df96631c26e767a0dc12ab8bbaa891f8cb394bee60"
+    },
+    {
+      "path": "src/mod.cpp",
+      "bytes": 8639,
+      "sha256": "5a4c4686536c9fad4396b28eb282a06cfdfce9a1bf63c1011e7c57f7f1f15c65"
+    },
+    {
+      "path": "src/observer.hpp",
+      "bytes": 3511,
+      "sha256": "cb8f0b6524fd69c548d627a983776592ce16b3ddb58e1ed57eb3c25677cca1c1"
+    },
+    {
+      "path": "src/particle_access.hpp",
+      "bytes": 3457,
+      "sha256": "e69416d6aeaec63f80f1117d0f4311026976fe5c4829a1715cfbf40f61e562cf"
+    },
+    {
+      "path": "src/policy.hpp",
+      "bytes": 1710,
+      "sha256": "a4085920082e3150d77ab53d297291e6bac85da3581d1742d4eb58375786bf64"
+    },
+    {
+      "path": "src/registration.hpp",
+      "bytes": 2160,
+      "sha256": "cea162de42ec986c854f185e8c1c25d38364b23a8eed094607f1ae6fc1d0dba4"
+    },
+    {
+      "path": "src/visual.hpp",
+      "bytes": 2829,
+      "sha256": "8c5d7dda0e9aa6d0b6259305b17b1e9974f840d70e3d0a954bdcec43e11f7ca7"
+    },
+    {
+      "path": "tests/visual_lab.cpp",
+      "bytes": 7525,
+      "sha256": "3b46892e6fddc5f7fd74c99ebfdad91b9b37d787712f0efc3fec4100a0658cb1"
+    }
+  ]
+}

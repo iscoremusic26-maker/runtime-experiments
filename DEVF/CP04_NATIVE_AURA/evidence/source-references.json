@@ -1,0 +1,57 @@
+{
+  "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "source_only": true,
+  "original_code_or_assets_copied": false,
+  "references": [
+    {
+      "path": "src/d/actor/d_a_e_oc.cpp",
+      "measured_lf_sha256": "e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_oc.cpp"
+    },
+    {
+      "path": "include/f_op/f_op_actor_enemy.h",
+      "measured_lf_sha256": "348f335e437d0dcbb2a81f5dc514d2291145583b5f6d8de5b7dd4599ae2e80ae",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor_enemy.h"
+    },
+    {
+      "path": "src/d/d_s_logo.cpp",
+      "measured_lf_sha256": "fe1d4f49a36080cf1b3596fa6911fa77f09e457a523bcd270f7ded8a73db2acb",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_logo.cpp"
+    },
+    {
+      "path": "src/d/d_particle.cpp",
+      "measured_lf_sha256": "847d3aca13ed3e4bd5726f999698050c697aa683c2e8fe7c49c08a4325ca927d",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_particle.cpp"
+    },
+    {
+      "path": "libs/JSystem/src/JParticle/JPAEmitterManager.cpp",
+      "measured_lf_sha256": "a547018b41bb95e62b865080b667c2faccf9c42404831cbb8441bfc2639ae901",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JParticle/JPAEmitterManager.cpp"
+    },
+    {
+      "path": "libs/JSystem/src/JParticle/JPAEmitter.cpp",
+      "measured_lf_sha256": "7a55f6adbcb065e17a7c74bef2d942375cbd758e1df93868d38681be9f07c70f",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JParticle/JPAEmitter.cpp"
+    },
+    {
+      "path": "libs/JSystem/src/JParticle/JPADynamicsBlock.cpp",
+      "measured_lf_sha256": "80ce2f384f5910feb1d23f24f804b015f731580deaef80f9ddae0c1d77861f72",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JParticle/JPADynamicsBlock.cpp"
+    },
+    {
+      "path": "libs/JSystem/src/JParticle/JPAParticle.cpp",
+      "measured_lf_sha256": "e85cc3cf47288bc371a0cca896812491c54821eb253b06a718445d2b972d82ce",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JParticle/JPAParticle.cpp"
+    },
+    {
+      "path": "libs/JSystem/src/JParticle/JPABaseShape.cpp",
+      "measured_lf_sha256": "42230d642c9cf52129c418712bd6ab3d4420cfb57dd7e14737cf2b24052aa709",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JParticle/JPABaseShape.cpp"
+    },
+    {
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "measured_lf_sha256": "ad8a35fbb089cb35077d57210117bfa552c123dbbb3d907a8362d9398b4ae8e7",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp"
+    }
+  ]
+}

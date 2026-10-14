@@ -1,6 +1,6 @@
 # Ruta visual concreta y propiedad
 
-Fuente oficial exacta40457c6 y Aurora3227d76; SOURCE_MANIFEST fija hashes. Se reutilizan sin repetir el target execute Windows y su timing/lifetime documentados en CP03. No se instala otro hook.
+Fuente oficial exacta40457c6 y Aurora 3227d76; SOURCE_MANIFEST fija hashes. Se reutilizan sin repetir el target execute Windows y su timing/lifetime documentados en CP03. No se instala otro hook.
 
 ## Vía de material descartada
 
@@ -14,7 +14,7 @@ Logo carga common.jpc/common-r.jpc (d_s_logo.cpp119–125 y938); d_particle.cpp1
 
 Backend comprueba pool/control/banco y recurso en la primera ejecución elegible, después de que E_OC haya construido modelos. Rechaza hijo, bloque de textura indirecta, callbacks de luz/model/trace por user-work, grupos especiales, emisión fixed-interval, curvas que alteran rate/lifetime o random fuera de[0,1]. Estos datos son **NOT_VERIFIED offline** porque no se recibió common.jpc; no se inventa un hash o contenido. El guard de aceptación es real, fail-closed y produce CP04_VISUAL_REJECTED, no un supuesto PASS visual. Puede bloquear en una instalación con propiedades no compatibles.
 
-Para recursos aceptados, se configuran únicamente campos privados de emisor: RGB(155,38,230), env(45,8,90), alpha144, escala0.6, rate0.4, lifetime18 y maxFrame0. Sin claves rate/lifetime, fixed-interval ni hijos, el cálculo de JPADynamicsBlock::create emite como máximo una partícula por tick (rate-random<=1), y JPAParticle::init_p/calc_p mantiene vida<=18 ticks. Pool/tabla nativos son finitos. No se crea un emisor por frame: el mismo key se activa/actualiza. Pixel color, textura, intensidad, persistencia visible y coste real requieren DX12 humano; APPLIED lee configuración privada, no certifica render.
+Para recursos aceptados, se configuran únicamente campos privados de emisor: RGB(155,38,230), env(45,8,90), alpha144, escala0.6, rate0.4, rateStep0, lifetime18 y maxFrame0. Sin claves rate/lifetime, fixed-interval ni hijos, el cálculo de JPADynamicsBlock::create emite como máximo una partícula por tick (rate-random<=1), y JPAParticle::init_p/calc_p mantiene vida<=18 ticks. Pool/tabla nativos son finitos. No se crea un emisor por frame: el mismo key se activa/actualiza. Pixel color, textura, intensidad, persistencia visible y coste real requieren DX12 humano; APPLIED lee configuración privada, no certifica render.
 
 ## Identidad y retirada
 

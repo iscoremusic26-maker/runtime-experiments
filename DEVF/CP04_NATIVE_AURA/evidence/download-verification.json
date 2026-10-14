@@ -1,0 +1,195 @@
+{
+  "status": "DOWNLOAD_VERIFIED",
+  "outer_artifact_members": [
+    {
+      "path": "DEVF_CP04_NATIVE_AURA_windows-amd64_18daf7648a35c5ee3a89b8a21f9f6d8248e25c30.dusk",
+      "directory": false,
+      "bytes": 14392,
+      "crc32": "f74d9e8b",
+      "sha256": "221b6ea51b514905a0e8deb69648331ded809d00924482d855e8bc8895ff3fd6"
+    },
+    {
+      "path": "DOWNLOAD_MANIFEST.json",
+      "directory": false,
+      "bytes": 1803,
+      "crc32": "3e113cc1",
+      "sha256": "f44b7242dec178f69c3b0adc8e2b4fe860433bf199de27f9b96ffeff870e9ea8"
+    }
+  ],
+  "delivery_artifact_sha256": "b9a626739120d70dbdf60b365ca4eda61c55dc5d7ca4b040f7b0125b067b0914",
+  "text_artifact_sha256": "2f35aa288b51142f4a07ee1e396bcce9fdd95d0c1f3f326bc0fb81350c5ea546",
+  "all_CRC_and_hashes_pass": true,
+  "source_ledger_verified": true,
+  "compiled_DLL_sha256_matches": true,
+  "package": {
+    "status": "CP04_PACKAGE_VERIFIED",
+    "package_bytes": 14392,
+    "package_sha256": "221b6ea51b514905a0e8deb69648331ded809d00924482d855e8bc8895ff3fd6",
+    "dll_bytes": 26624,
+    "dll_sha256": "13c991b0c89bd7eb6be107e4a24cb4f3a0cf67d97582da38dfc02107a194d403",
+    "manifest_sha256": "23b2352be4432e0a1260d2df96631c26e767a0dc12ab8bbaa891f8cb394bee60",
+    "manifest": {
+      "id": "dev.devf.cp04_native_aura",
+      "name": "DEVF CP04 \u2014 Purple native aura (150 HP TEST)",
+      "version": "0.4.0",
+      "description": "PRIVATE CP04 PILOT: one native E_OC2 with unchanged one-shot health150; one engine-owned purple particle marker, not a model recolor. No shared J3D edits. Exact host/DX12, install alone, full exit for removal. Human appearance and original E_OC2 control pending."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 408,
+        "crc32": "67022f59",
+        "sha256": "23b2352be4432e0a1260d2df96631c26e767a0dc12ab8bbaa891f8cb394bee60"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 26624,
+        "crc32": "c9f531f1",
+        "sha256": "13c991b0c89bd7eb6be107e4a24cb4f3a0cf67d97582da38dfc02107a194d403"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "dusklight.exe": [
+          "?mEmitterMng@dPa_control_c@@2PEAVJPAEmitterManager@@EA",
+          "?getResUserWork@JPAResourceManager@@QEBAIG@Z",
+          "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+          "?entry@level_c@dPa_control_c@@QEAAIGPEAVJPABaseEmitter@@PEAVdPa_levelEcallBack@@@Z",
+          "?getResource@JPAResourceManager@@QEBAPEAVJPAResource@@G@Z",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?cutTable@level_c@dPa_control_c@@QEAAXPEAVemitter_c@12@@Z",
+          "?get@level_c@dPa_control_c@@QEAAPEAVemitter_c@12@I@Z",
+          "?onActive@emitter_c@level_c@dPa_control_c@@QEAAXXZ",
+          "?createSimpleEmitterID@JPAEmitterManager@@QEAAPEAVJPABaseEmitter@@AEBU?$TVec3@M@JGeometry@@GEEPEAVJPAEmitterCallBack@@PEAVJPAParticleCallBack@@@Z",
+          "?execute@daE_OC_c@@QEAAHXZ",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?fpcM_IsCreating@@YAHI@Z",
+          "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "memcpy",
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memset",
+          "__std_terminate"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strncmp",
+          "strcmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_initialize_onexit_table",
+          "_cexit",
+          "_initialize_narrow_environment",
+          "_configure_narrow_argv",
+          "_execute_onexit_table",
+          "_initterm",
+          "_initterm_e",
+          "_seh_filter_dll"
+        ],
+        "KERNEL32.dll": [
+          "InitializeSListHead",
+          "GetCurrentProcessId",
+          "QueryPerformanceCounter",
+          "DisableThreadLibraryCalls",
+          "GetSystemTimeAsFileTime",
+          "GetCurrentThreadId"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.hook",
+          "major": 1,
+          "minor": 1
+        },
+        {
+          "kind": "hook_mem",
+          "target": "daE_OC_c::execute",
+          "size": 72,
+          "pointer_to_member_bytes": 8
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "CP04_NATIVE_AURA_PE_PASS",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "hook_target_bound_import": "?execute@daE_OC_c@@QEAAHXZ",
+      "manual_detour_imports": false,
+      "metadata_records": 7
+    },
+    "dll_internal_equals_loose": true,
+    "runtime_tested": false
+  },
+  "source_commit": "18daf7648a35c5ee3a89b8a21f9f6d8248e25c30",
+  "workflow_commit": "4bea35d21049ccef0c8ea0f79ff86e066c43a563",
+  "run_id": "38585920329",
+  "dll_loaded": false,
+  "game_executed": false,
+  "installed": false,
+  "execution_authorized": false,
+  "read_only": false,
+  "baseline_CP03_runtime": "CP03_HUMAN_RUNTIME_PASS",
+  "CP04": "OFFLINE_TEST_FOR_HUMAN_REVIEW",
+  "HookService_used": true,
+  "expected_initial_hp_by_code": 150,
+  "HP_diagnostic_read_only": true,
+  "appearance_technique": "NATIVE_PARTICLE_MARKER",
+  "CP04_RUNTIME": "HUMAN_RUNTIME_NOT_TESTED"
+}

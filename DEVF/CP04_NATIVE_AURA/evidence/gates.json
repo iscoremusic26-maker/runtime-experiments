@@ -1,0 +1,24 @@
+{
+  "SOURCE_VERIFIED": "EMITTER_OWNERSHIP_AND_FAIL_CLOSED_CONDITIONAL_RESOURCE_GUARDS",
+  "BUILD": "BUILD_PASS",
+  "TEST_FAKE": {
+    "passed": 13,
+    "actual_run": 38584533623,
+    "reused_unchanged_in": 38585920329
+  },
+  "PACKAGE": "PACKAGE_VERIFIED",
+  "DOWNLOAD": "DOWNLOAD_VERIFIED",
+  "appearance_technique": "NATIVE_PARTICLE_MARKER_NOT_MODEL_RECOLOR",
+  "material_or_texture_shared_writes": false,
+  "resource_binary_contents": "NOT_VERIFIED_OFFLINE",
+  "resource_acceptance": "PENDING_REAL_GAME_GUARD",
+  "original_E_OC2_visual_control": "PENDING",
+  "CP04_RUNTIME": "HUMAN_RUNTIME_NOT_TESTED",
+  "CP04_APPEARANCE_RUNTIME_PASS": false,
+  "CP03_baseline": "HUMAN_RUNTIME_PASS_PRESERVED",
+  "CP05": "NOT_AUTHORIZED",
+  "CP06": "NOT_AUTHORIZED",
+  "game_executed_by_agent": false,
+  "DLL_loaded": false,
+  "installed": false
+}

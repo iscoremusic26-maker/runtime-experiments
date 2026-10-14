@@ -1,0 +1,26 @@
+[
+  {
+    "id": 11905691294,
+    "name": "DEVF_CP04_NATIVE_AURA_TEST_38585920329_1",
+    "size_in_bytes": 15361,
+    "digest": "sha256:b9a626739120d70dbdf60b365ca4eda61c55dc5d7ca4b040f7b0125b067b0914",
+    "created_at": "2026-10-14T15:04:04Z",
+    "expires_at": "2026-11-13T15:04:02Z",
+    "expired": false,
+    "run_id": 38585920329,
+    "ci_head": "4bea35d21049ccef0c8ea0f79ff86e066c43a563",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38585920329/artifacts/11905691294"
+  },
+  {
+    "id": 11905676250,
+    "name": "DEVF_CP04_NATIVE_AURA_TEXT_38585920329_1",
+    "size_in_bytes": 28307,
+    "digest": "sha256:2f35aa288b51142f4a07ee1e396bcce9fdd95d0c1f3f326bc0fb81350c5ea546",
+    "created_at": "2026-10-14T15:04:02Z",
+    "expires_at": "2026-11-13T15:04:01Z",
+    "expired": false,
+    "run_id": 38585920329,
+    "ci_head": "4bea35d21049ccef0c8ea0f79ff86e066c43a563",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38585920329/artifacts/11905676250"
+  }
+]
