@@ -1,0 +1,22 @@
+{
+  "build.log": {
+    "bytes": 5218,
+    "sha256": "1485ac5f79ff9589a5e63c6bd01db1f2fcdae0ca4b05c27af14cb7427d83c288"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 822,
+    "sha256": "49f644c47101221e0cb6fe2b5f57b3760ab156ed46904967b102923fa70a9eff"
+  },
+  "result.json": {
+    "bytes": 3016,
+    "sha256": "97db26444b29ddc850765df3b913fba4caa055c898c908e7f5fc7abce816eaa0"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "run": 38495925831,
+  "job": 115631540566,
+  "artifact": 11863945519,
+  "artifact_sha256": "ee1fc163d2d63909903cd9129de46b8649303efa4828d55372d34ce52ea9eb75",
+  "CRC_and_member_hashes": "PASS",
+  "DLL_link": "PASS",
+  "lab_link": "FAIL GXDestroyTexObj still emitted by broad headers, csXyz conversion no longer referenced",
+  "fix": "Lab-only abort tripwire for unresolved unreferenced GX destructor; if ever reached including process exit, test fails. No game function linked/loaded for lab; no production stub. Production PE still rejects every native game import.",
+  "package_published": false
+}

@@ -1,0 +1,47 @@
+{
+  "run": 38496356945,
+  "job": 115632895155,
+  "artifact": 11863722618,
+  "artifact_sha256": "8baee34d223ff2c9c051b14f05ab9b726b7093e0d5500928bfe5ca2962e0b897",
+  "CRC_and_file_hashes": "PASS",
+  "DLL_build": "PASS",
+  "fake_scenarios": "11 PASS including process exit; GX tripwire never reached",
+  "PE_service_metadata": "FAIL",
+  "modmeta_virtual_size_bytes": 16,
+  "cause": "Our /Zc:inline removed unreferenced MOD_META_RECORD static data under MSVC; service imports absent. Not an original host/SDK patch.",
+  "correction": "Explicit /Zc:inline- for production. Keep passing lab unchanged, reused by exact relevant source/graph/toolchain hashes.",
+  "actual_native_game_imports": 0,
+  "actual_CRT_system_imports": {
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "VCRUNTIME140.dll": [
+      "memset",
+      "__std_type_info_destroy_list",
+      "__C_specific_handler",
+      "memcpy"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_cexit",
+      "_initterm_e",
+      "_execute_onexit_table",
+      "_initterm",
+      "_initialize_onexit_table",
+      "_initialize_narrow_environment",
+      "_seh_filter_dll",
+      "_configure_narrow_argv"
+    ],
+    "KERNEL32.dll": [
+      "InitializeSListHead",
+      "DisableThreadLibraryCalls",
+      "QueryPerformanceCounter",
+      "GetCurrentProcessId",
+      "GetCurrentThreadId",
+      "GetSystemTimeAsFileTime"
+    ]
+  },
+  "package_published": false
+}

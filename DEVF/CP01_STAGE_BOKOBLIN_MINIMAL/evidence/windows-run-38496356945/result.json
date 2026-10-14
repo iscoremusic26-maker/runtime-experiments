@@ -1,0 +1,242 @@
+{
+  "status": "BLOCKED",
+  "source_commit": "aa6774d872dbc1b1f18caf67db87ad7339802f34",
+  "ci_head": "812b84dcfa4ddb624f2e1266b34523eb93a47124",
+  "run_id": "38496356945",
+  "started_utc": "2026-10-14T01:33:52.361470+00:00",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.125,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.781,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\DEVF\\CP01_STAGE_BOKOBLIN_MINIMAL",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 5.094,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_stage_bokoblin_minimal",
+        "stage_bokoblin_lab",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 4.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-success",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "success"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "fake-reentry",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "reentry"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-reject",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "reject"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-zero-handle",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "zero-handle"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "fake-throw",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "throw"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-missing",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "missing"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-wrong-host",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "wrong-host"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "fake-small-stage",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "small-stage"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-null-add",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "null-add"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-wrong-stage-major",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "wrong-stage-major"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-null-context",
+      "command": [
+        "<WORK>\\build\\stage_bokoblin_lab.exe",
+        "null-context"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "module-headers",
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_stage_bokoblin_minimal.dll"
+      ],
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_stage_bokoblin_minimal.dll"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_stage_bokoblin_minimal.dll"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "DLL_loaded": false,
+  "host_built": false,
+  "mode": "ONE_NATIVE_STAGE_ADDITION_NOT_READ_ONLY",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_ledger": {
+    "CMakeLists.txt": "c5a5d05d43d9469f05e8e3256aeb17a953e0822f84f1abe938e8354a0f7ebfd6",
+    "mod.json": "68310dba18719f5dacc23e333303df77865e8bcd7f2d28b60f44060ce3c65a82",
+    "SOURCE_MANIFEST.json": "db5b109ab561e4442d5322dbff876f6dcfa265c54dc11404eb88e4bf2e6ed5b4",
+    "ci/audit.py": "51975ec4b8a1761f0fb352a279d9b04bedc39b74e9123be0ca1c3951463d7b75",
+    "ci/location_query.py": "e12389b63b43275273ee0fe36547e8f5b679cab2749ca2a7b2056608af38da26",
+    "ci/reviewed-crt-surface.json": "a7494dc6b61be94f54e73b4af8148c7b39476fba118734a092a4a84108b81565",
+    "ci/run_windows.py": "469054b17a4b4cdf68aa515609fffbd2479551b896372d0ba5e4c2b22049e9b9",
+    "ci/windows-stage.yml": "a8911329dbdf0d3171f20be5198f9c95927cee3316452f68b8524e39ffa3b2c4",
+    "src/mod.cpp": "50791c147b2b97b05f25e84fa43de9d3e050ae326e416ff4d6c675852e8fb03a",
+    "tests/stage_lab.cpp": "b661caf498cee8a6554a67e42c9bbdf3a0ec38a0e39a3a43ad7c7d1d8fc2e381"
+  },
+  "dependencies": {
+    "SDK": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "Aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "lib_bytes": 9400986,
+    "lib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "lib_CRC": "70c35731"
+  },
+  "fake_scenarios": {
+    "cases": [
+      "success",
+      "reentry",
+      "reject",
+      "zero-handle",
+      "throw",
+      "missing",
+      "wrong-host",
+      "small-stage",
+      "null-add",
+      "wrong-stage-major",
+      "null-context"
+    ],
+    "passed": 11,
+    "each_separate_process": true,
+    "game_or_DLL_runtime": false,
+    "1000_noop_updates_per_case": true,
+    "payload_bytes": "32 BE ACTR, E_oc/FFFF0000/(-1250,-6304.0083,60750)/(6,0,0)/FFFF"
+  },
+  "error": "Unexpected metadata services",
+  "ended_utc": "2026-10-14T01:34:04.616214+00:00"
+}

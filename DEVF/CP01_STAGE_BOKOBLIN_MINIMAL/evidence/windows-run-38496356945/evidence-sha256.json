@@ -1,0 +1,82 @@
+{
+  "build.log": {
+    "bytes": 3461,
+    "sha256": "035e3cf456fe378cd8b0e140d26fc9be978e4b3a30bc2bd98cad541df31e7c4e"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 822,
+    "sha256": "3f0a80f04c745ec1db95da2e5537a67932c24245c9c311d5b12239d8be4dc09c"
+  },
+  "fake-missing.log": {
+    "bytes": 125,
+    "sha256": "df238638584a81bcc791a6738b9804b979f16afc42d732a973672d198355615a"
+  },
+  "fake-null-add.log": {
+    "bytes": 126,
+    "sha256": "8bf6b094da556184165c5e6582ea9257933f5ae6408b17c6084560e76cac518f"
+  },
+  "fake-null-context.log": {
+    "bytes": 130,
+    "sha256": "89d92c07f0f500f336a43252d90f7bdd3bb2a2134bfd6cc641a03cccdd0b16e6"
+  },
+  "fake-reentry.log": {
+    "bytes": 105,
+    "sha256": "7142fc20976b96ab95044478170e6fbfa0b0b4bd25ffffe37d94c1c5b390056d"
+  },
+  "fake-reject.log": {
+    "bytes": 104,
+    "sha256": "88b81220cb0e672de7087fe398b83806640e7eeab63931442d8b3535984e23f3"
+  },
+  "fake-small-stage.log": {
+    "bytes": 129,
+    "sha256": "479b98871f86d00290b5ffb7c0325e0c1630410951efac56c437947ece460b60"
+  },
+  "fake-success.log": {
+    "bytes": 105,
+    "sha256": "fa0f6aace63e939ca74331153f2cf587be534384d429e420134c548783f55d96"
+  },
+  "fake-throw.log": {
+    "bytes": 123,
+    "sha256": "661c5073ea562bfd6c79c101d3bc6618fc60f7aad145a7f10b7b0659e155ac91"
+  },
+  "fake-wrong-host.log": {
+    "bytes": 128,
+    "sha256": "d1cb807527835d2838eae5ac78deb4a6ee1b518b941cd033f0662ffcd96c5dd8"
+  },
+  "fake-wrong-stage-major.log": {
+    "bytes": 135,
+    "sha256": "56b88c40ca714aa6e172c4ecde56e5289a9f8b57371f932feb9040840991421e"
+  },
+  "fake-zero-handle.log": {
+    "bytes": 109,
+    "sha256": "0ed17832376d4b22c9ac207d4aef62eb8f7361e1d2f7e7c58976b1cbdf2a98a6"
+  },
+  "module-exports.log": {
+    "bytes": 835,
+    "sha256": "334e76bc89e0bada4bc55181ccc78019b344d30a16297beea094e606e2e3437f"
+  },
+  "module-headers.log": {
+    "bytes": 6066,
+    "sha256": "552fe4cba95f8d52831fa6b0ec9efd152361665bb9c8dc018fdcda6d56ec0823"
+  },
+  "module-imports.log": {
+    "bytes": 2474,
+    "sha256": "5cbd657d5eb664dc132fdea73bd63b2917ff35bd457a4e134b9b1cad1cf32f17"
+  },
+  "module-map.log": {
+    "bytes": 30440,
+    "sha256": "98432974ca9327cdc0ab46fa9cdb2f14c5cefbe8f9d212cdb241acc26a4ccf95"
+  },
+  "result.json": {
+    "bytes": 6284,
+    "sha256": "70a144b94a713da19ebc3a7d5aade3556f1e2bbdc9b3d22da929412f85f5f33b"
+  }
+}
