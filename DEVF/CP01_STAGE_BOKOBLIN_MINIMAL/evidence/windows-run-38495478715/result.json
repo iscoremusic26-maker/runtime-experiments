@@ -1,0 +1,93 @@
+{
+  "status": "BLOCKED",
+  "source_commit": "1df9155c36f293b7876e4c94c70483f00f861439",
+  "ci_head": "b32a55f6bd9899db9d9bb48829a65b59b1052bfd",
+  "run_id": "38495478715",
+  "started_utc": "2026-10-14T01:24:35.226018+00:00",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.64,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 1.032,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\DEVF\\CP01_STAGE_BOKOBLIN_MINIMAL",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 5.953,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_stage_bokoblin_minimal",
+        "stage_bokoblin_lab",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 5.937,
+      "exit": 4294967295
+    }
+  ],
+  "game_executed": false,
+  "DLL_loaded": false,
+  "host_built": false,
+  "mode": "ONE_NATIVE_STAGE_ADDITION_NOT_READ_ONLY",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_ledger": {
+    "CMakeLists.txt": "91a2b27c1c6a8408a0a85024eb033dc4888b2369c344ea9a28eeaf3ea1664bbc",
+    "mod.json": "68310dba18719f5dacc23e333303df77865e8bcd7f2d28b60f44060ce3c65a82",
+    "SOURCE_MANIFEST.json": "db5b109ab561e4442d5322dbff876f6dcfa265c54dc11404eb88e4bf2e6ed5b4",
+    "ci/audit.py": "51975ec4b8a1761f0fb352a279d9b04bedc39b74e9123be0ca1c3951463d7b75",
+    "ci/location_query.py": "e12389b63b43275273ee0fe36547e8f5b679cab2749ca2a7b2056608af38da26",
+    "ci/reviewed-crt-surface.json": "a7494dc6b61be94f54e73b4af8148c7b39476fba118734a092a4a84108b81565",
+    "ci/run_windows.py": "469054b17a4b4cdf68aa515609fffbd2479551b896372d0ba5e4c2b22049e9b9",
+    "ci/windows-stage.yml": "a8911329dbdf0d3171f20be5198f9c95927cee3316452f68b8524e39ffa3b2c4",
+    "src/mod.cpp": "50791c147b2b97b05f25e84fa43de9d3e050ae326e416ff4d6c675852e8fb03a",
+    "tests/stage_lab.cpp": "a0193c2b7e46fc13a9991afeda618c5ffd7d2fd65920caeb8ed7add56865d300"
+  },
+  "dependencies": {
+    "SDK": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "Aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "lib_bytes": 9400986,
+    "lib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "lib_CRC": "70c35731"
+  },
+  "error": "build",
+  "ended_utc": "2026-10-14T01:24:50.936055+00:00"
+}

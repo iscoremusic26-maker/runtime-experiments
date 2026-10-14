@@ -1,0 +1,47 @@
+{
+  "old_workflows": [
+    {
+      "workflow": "devf-cp01-first-native-offline.yml",
+      "sha256": "ccf8cfd2f7f7f794196480e26fd1cd79f2a540193c13068de4b0ed9c3b36fc33",
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-g4b-package.yml",
+      "sha256": "d810a110d4038fae237bed2c016b3bd8ed4e36e1baa5f0fc309005fbea8c0dc6",
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-g4b-readonly.yml",
+      "sha256": "81700d1ce0002fbba45e2ad28e07d95f4834befc65c4f4728c9b3287efe3cf19",
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-a2-disarmed.yml",
+      "sha256": "94f6e319d91d4050d510d2a75b7af5358ec0614d1a9d2d72733030f885f9a11c",
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-first-active-package.yml",
+      "sha256": "4031f2d41829c8d33a630db961a194564c77f973e1cb29d05f05b312aa4827d1",
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-g2-readonly.yml",
+      "sha256": "3852954d595a20df48c40c24eee1bfc40ce4781e5dc5982a3851b9c54cfefa19",
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-g5-rejections.yml",
+      "sha256": "8fdf5633a1ac0ef79b71bf7e736dd0f28f03baa803868d8f74e865058e055caf",
+      "matches_new_diff": false
+    },
+    {
+      "workflow": "devf-cp01-first-pilot-safety.yml",
+      "sha256": "46b44ddc04f5424492b2163a0615b479848530bf0e239e4610234dc740c4bd6c",
+      "matches_new_diff": false
+    }
+  ],
+  "ci_base": "f02cbd99bc280d6bbd54ab0f08b4ba241b7f0fe4",
+  "private_workflow": true,
+  "only_own_new_workflow_runs": true
+}

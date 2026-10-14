@@ -1,0 +1,41 @@
+[1/6] Building CXX object CMakeFiles\devf_stage_bokoblin_minimal.dir\D_\a\codex-cp00-inputs\codex-cp00-inputs\.official\sdk\src\game_feature.cpp.obj
+[2/6] Building CXX object CMakeFiles\devf_stage_bokoblin_minimal.dir\src\mod.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[3/6] Building CXX object CMakeFiles\stage_bokoblin_lab.dir\tests\stage_lab.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[4/6] Linking CXX shared module devf_stage_bokoblin_minimal.dll
+[5/6] Building CXX object CMakeFiles\stage_bokoblin_lab.dir\src\mod.cpp.obj
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation
+<OFFICIAL>\libs\JSystem\include\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant
+<OFFICIAL>\include\d/d_stage.h(408): warning C4068: unknown pragma 'push'
+<OFFICIAL>\include\d/d_stage.h(439): warning C4068: unknown pragma 'pop'
+[6/6] Linking CXX executable stage_bokoblin_lab.exe
+FAILED: [code=4294967295] stage_bokoblin_lab.exe 
+C:\Windows\system32\cmd.exe /C "cd . && "C:\Program Files\CMake\bin\cmake.exe" -E vs_link_exe --msvc-ver=1951 --intdir=CMakeFiles\stage_bokoblin_lab.dir --rc="C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\rc.exe" --mt="C:\Program Files (x86)\Windows Kits\10\bin\10.0.26100.0\x64\mt.exe" --manifests  -- "C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\link.exe" /nologo CMakeFiles\stage_bokoblin_lab.dir\tests\stage_lab.cpp.obj CMakeFiles\stage_bokoblin_lab.dir\src\mod.cpp.obj  /out:stage_bokoblin_lab.exe /implib:stage_bokoblin_lab.lib /pdb:stage_bokoblin_lab.pdb /version:0.0 /machine:x64 /INCREMENTAL:NO /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+LINK: command "C:\Program Files\Microsoft Visual Studio\18\Enterprise\VC\Tools\MSVC\14.51.36231\bin\Hostx64\x64\link.exe /nologo CMakeFiles\stage_bokoblin_lab.dir\tests\stage_lab.cpp.obj CMakeFiles\stage_bokoblin_lab.dir\src\mod.cpp.obj /out:stage_bokoblin_lab.exe /implib:stage_bokoblin_lab.lib /pdb:stage_bokoblin_lab.pdb /version:0.0 /machine:x64 /INCREMENTAL:NO /subsystem:console kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST:EMBED,ID=1" failed (exit code 1120) with the following output:
+   Creating library stage_bokoblin_lab.lib and object stage_bokoblin_lab.exp
+
+stage_lab.cpp.obj : error LNK2019: unresolved external symbol GXDestroyTexObj referenced in function "public: __cdecl GXTexObjRAII::~GXTexObjRAII(void)" (??1GXTexObjRAII@@QEAA@XZ)
+
+mod.cpp.obj : error LNK2001: unresolved external symbol GXDestroyTexObj
+
+stage_lab.cpp.obj : error LNK2019: unresolved external symbol "public: __cdecl csXyz::csXyz(short,short,short)" (??0csXyz@@QEAA@FFF@Z) referenced in function "public: __cdecl BE<class csXyz>::operator class csXyz(void)const " (??B?$BE@VcsXyz@@@@QEBA?AVcsXyz@@XZ)
+
+stage_bokoblin_lab.exe : fatal error LNK1120: 2 unresolved externals
+
+ninja: build stopped: subcommand failed.

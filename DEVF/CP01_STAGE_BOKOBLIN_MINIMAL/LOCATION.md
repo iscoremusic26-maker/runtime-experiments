@@ -1,0 +1,15 @@
+# Punto local para prueba controlada
+
+**Propuesta técnicamente fundamentada; seguridad y visibilidad runtime NOT_VERIFIED.** No se fuerza ni reutiliza C=(-4806.734375,-6729.480957,65135.828125).
+
+F_SP121 room3 layer6, **(-1250,-6304.0083,60750)**, yaw0. Procedencia: el room.dzr ya verificado contiene ACT6[7] E_oc en(-50,-6201.491699,60750). Se desplaza X-1200 y se mide la Y del piso nuevo; ningún registro original se parchea/elimina. Hay siete E_oc en ACT6 y dos seleccionan E_OC normal por byte altoFF; la variante normal y E_ocb ya fueron verificadas en recursos privados y log G2. El nuevo create nativo usa resLoad E_OC/E_ocb, no un banco inventado ni una precarga impuesta por DEVF. Carga/mount/recursos efectivos de la futura sesión requieren comprobar aparición; MOD_OK no los demuestra.
+
+Consulta nueva acotada, reutilizando herramientas de CP01 sobre cache existente:36 celdas/16 hojas,45 prismas de5326. Sin repetir integridad/KCL global/WRock/Digpl/auditorías anteriores. Origen sobre prisma2456, Y=-6309.008121701793, normal(-0.12873006,0.99146998,-0.02058995), PLC room3/ground0/special0/exit63, sin through. Registro float32 Y=-6304.00830078125: aproximadamente5 unidades por encima, para no iniciar bajo suelo por redondeo; gravedad/Acch nativos deben asentar el actor, todavía sin prueba runtime.
+
+Huella Acch100: cuadrado200×200 cubierto completamente por2456, alturas[-6324.068588,-6293.947655]. Consulta conservadora radio501 como cuadrado1002×1002: cobertura completa por2277/2280/2448/2455/2456, alturas[-6387.014948,-6249.733520]. El501 se reutiliza de la sobreaproximación previa de recursos normal, no es collider exacto ni frontera navegable. Pared estática más cercana entre prismas locales a555.55794 del origen, fuera de501; pendiente local~7.49°. No piso plano universal, agua dinámica ni todas las superficies futuras de persecución.
+
+Registro de sala más cercano: E_oc original a1200XZ; otros home records de sala común/capa6>=1503.95. No ocupación duplicada de home original, ni compromiso sobre sus posiciones móviles. Link PLYR[11]/entry4 se separa1811.77XZ del punto, por lo que no se coloca en ese spawn de Link. No garantiza posición actual del jugador ni identifica una puerta sin evidencia.
+
+Volúmenes autorados ya modelados: scnChg más cercano centro9961.7; atkItem2692.4/radio200; EvtArea tipo21 centro7120.6/half4000, conservador XZ y fuera del parche501. Son separaciones estáticas, no inmunidad a efectos globales. No se requiere investigar todos los tags/rutas del mundo para este ensayo. No hay prueba de evento/agua/overrides/BG/ocupación efectiva actual en el punto: se verifica visualmente en la prueba humana y se para si contradice esta propuesta. No se afirma que Codex lo haya visto ni que el enemigo se confine al área.
+
+Reproducción offline: `DEVF_STAGE_LOCATION_CACHE` apunta al cache privado existente con inventory.json y R03_00.arc/{kcl,plc}; `DEVF_STAGE_LOCATION_OUTPUT` apunta a scratch propio. Ejecutar `python ci/location_query.py`. Solo metadata derivada seleccionada se publica; ARC/DZR/KCL/PLC y el log primario no se copian al repositorio o artefactos.
