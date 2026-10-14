@@ -1,0 +1,158 @@
+{
+  "status": "SOURCE_VERIFIED",
+  "original_sources_copied": false,
+  "references": [
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_e_oc.cpp",
+      "line_ranges": [
+        [
+          2418,
+          2418
+        ],
+        [
+          2631,
+          2644
+        ],
+        [
+          2704,
+          2833
+        ]
+      ],
+      "purpose": "Native HP assignment and first execute/action",
+      "lf_sha256": "e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_oc.cpp"
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "include/d/actor/d_a_e_oc.h",
+      "line_ranges": [
+        [
+          77,
+          77
+        ]
+      ],
+      "purpose": "Typed execute member",
+      "lf_sha256": "5922d8c0ecd722fe545cc84188f119173a9297062c8e10be4da071bcaed6a1d2",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_e_oc.h"
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "include/f_op/f_op_actor.h",
+      "line_ranges": [
+        [
+          315,
+          315
+        ]
+      ],
+      "purpose": "Typed health s16; no Windows offsets inferred",
+      "lf_sha256": "45cbac3b60ea9c47d9583d78f813c69ae38437a7c9b2ea28f1c9c3e26392197c",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor.h"
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/hook.h",
+      "line_ranges": [
+        [
+          53,
+          57
+        ]
+      ],
+      "purpose": "Callbacks on game stack/thread",
+      "lf_sha256": "28a8e9db5b3a43589b982b1f470a3c446218c723f5bdee8a9015964118e10030",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.h"
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/hook.hpp",
+      "line_ranges": [],
+      "purpose": "Official typed add_pre adapter",
+      "lf_sha256": "852ea51d3d82f9262f7a3eaa082cbf4b89863ee44978a6cad640f5b5c3acdf44",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp"
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_ranges": [
+        [
+          888,
+          927
+        ],
+        [
+          1057,
+          1057
+        ]
+      ],
+      "purpose": "Detach callbacks/backend and fatal refusal",
+      "lf_sha256": "a25cb20d7f939ada8c3ea03ff7acb316b07b4b36d1c4bab7eb71008b7a22ac5c",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp"
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/stage.cpp",
+      "line_ranges": [
+        [
+          189,
+          218
+        ],
+        [
+          314,
+          314
+        ]
+      ],
+      "purpose": "Stage edit owner cleanup",
+      "lf_sha256": "3f1ab649cb49f88fc36ac607a203306a794b0e9df888d3e9e5b09498fc7672f3",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/stage.cpp"
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line_ranges": [
+        [
+          296,
+          338
+        ]
+      ],
+      "purpose": "Detach before unload",
+      "lf_sha256": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp"
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/natives.cpp",
+      "line_ranges": [
+        [
+          563,
+          583
+        ]
+      ],
+      "purpose": "Deferred native module disposal",
+      "lf_sha256": "8a033da1c9eb871358c3fd46fc8e47234f78486452dec72a6e13d73d0b6a24b7",
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp"
+    },
+    {
+      "repository": "encounter/borealis",
+      "commit": "4ac5e7052a8c49a122f8d57f626b5c75c5ca6968",
+      "checkout_path": "extern/borealis",
+      "path": "src/log.cpp",
+      "line_ranges": [
+        [
+          637,
+          655
+        ]
+      ],
+      "purpose": "Fatal terminates through std::abort after optional fatal handler",
+      "lf_sha256": "41911844915c1b8f9d862c85a6210f6247c529ad49de2fa67f3bbb9a80f44d9c",
+      "url": "https://github.com/encounter/borealis/blob/4ac5e7052a8c49a122f8d57f626b5c75c5ca6968/src/log.cpp#L637-L655"
+    }
+  ]
+}

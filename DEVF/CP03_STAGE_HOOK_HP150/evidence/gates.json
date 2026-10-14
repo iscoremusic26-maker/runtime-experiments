@@ -1,0 +1,37 @@
+{
+  "SOURCE_VERIFIED": true,
+  "BUILD_PASS": true,
+  "PE_PASS": true,
+  "PACKAGE_VERIFIED": true,
+  "DOWNLOAD_VERIFIED": true,
+  "TEST_FAKE": {
+    "passed": 15,
+    "actual_run": 38511192326,
+    "reused_unchanged_in": 38513406897
+  },
+  "PE_NEGATIVES": {
+    "rejected": 4,
+    "run": 38513406897
+  },
+  "human_runtime": "HUMAN_RUNTIME_NOT_TESTED",
+  "CP03_stable": "NO_GO_PENDING_HUMAN_EVIDENCE",
+  "CP04": "NOT_AUTHORIZED",
+  "offline_test_delivery": "GO_FOR_CONTROLLED_HUMAN_TEST_AFTER_USER_APPROVAL",
+  "remaining": [
+    "Hook installation and real first-execute HP readback",
+    "Native appearance/render/resources and DX12 combat",
+    "No repeated write after damage; original actor negative control",
+    "Removal after full exit and reentry"
+  ],
+  "constraints": [
+    "Only CP03, no conflicting stage/enemy/HP/hook mods",
+    "Fingerprint isolation is not an ownership API",
+    "No hot-unload guarantee for materialized actor",
+    "Only exact original Windows host/SDK ABI"
+  ],
+  "installed": false,
+  "game_executed": false,
+  "DLL_loaded": false,
+  "host_modified": false,
+  "ActorService_used": false
+}

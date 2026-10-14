@@ -1,0 +1,598 @@
+{
+  "scope": "Own CP03 source, tools, reports and sanitized text only; byte-exact hash, self excluded",
+  "compiled_source": "b39e010d1a25168dee8de0c2c7740957d76dd853",
+  "ci_commit": "4f84a7137011a35f0500dc7ae1104420e58fbb30",
+  "run": "38513406897",
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 155,
+      "sha256": "631eafb263009562598593b3f7164296784ca58f3f140b618f9435b6c94cf918"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 26,
+      "sha256": "a7d3ec2efb2be8ee8da74403ec1b1bc0ab32cbe92efabe5aca57aa5b2c7613b4"
+    },
+    {
+      "path": "BUILD_AND_PACKAGE.md",
+      "bytes": 3711,
+      "sha256": "fa2af4af82dbbf097306e54fb1a1a7cbc53697f126b0760b93200dcdcc7fdeca"
+    },
+    {
+      "path": "CI_SOURCE.json",
+      "bytes": 181,
+      "sha256": "64b34b37be070769e06748d9c71e9a4682e59e8980a20b7ca35f3356a891aafb"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "bytes": 896,
+      "sha256": "03a82760c3a301c31908a1db2b55c75d947e53487e37046cbce2db7575dc2bc2"
+    },
+    {
+      "path": "HUMAN_TEST.md",
+      "bytes": 2781,
+      "sha256": "377f9a9d388e4a1bca8d523f774cb27e5844df2f4e1638bcdf3acb201aa33f1e"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2235,
+      "sha256": "68c820cd59d99bb988eea1fcd7d6eea388f8abf2152be45285a39e52654e438e"
+    },
+    {
+      "path": "RECOVERY.md",
+      "bytes": 2292,
+      "sha256": "dc19d5e3e84042adee016f6a717f67a5813187f64764806f435fa8bd28576ee9"
+    },
+    {
+      "path": "SOURCE_MANIFEST.json",
+      "bytes": 10844,
+      "sha256": "b9988611a970770469e8f3b5efd80e0e64c323868f7b17f4d39c2d43c6e66814"
+    },
+    {
+      "path": "SOURCE_REVIEW.md",
+      "bytes": 5317,
+      "sha256": "03ccb02da9b714266e5c97dd079759bd6c3f562d34f7eb2ed2a0311699546289"
+    },
+    {
+      "path": "TEST_RESULTS.md",
+      "bytes": 3322,
+      "sha256": "8e8deae58c5fb8caaa6971ce71090f111667dfb1e96320b088ecdd5254fc87fc"
+    },
+    {
+      "path": "ci/audit.py",
+      "bytes": 6399,
+      "sha256": "6d680fd7b2982242355e5675b32f5efa772cf0e432b73c696e0d9585381650c6"
+    },
+    {
+      "path": "ci/lab-reuse.json",
+      "bytes": 1519,
+      "sha256": "bac9f34c21734e6d5b21689b58bc305d8172f6dec947993f7bf9082bd426d792"
+    },
+    {
+      "path": "ci/reviewed-crt-surface.json",
+      "bytes": 894,
+      "sha256": "c15da97ebf2491383bab77f5ea4de0fead6732231502e76fcc7984d7557a9480"
+    },
+    {
+      "path": "ci/reviewed-exact-imports.json",
+      "bytes": 1037,
+      "sha256": "b0204c0111160b50e10a6a88c45842850114b0606e78adc7bd5b3559579d67e4"
+    },
+    {
+      "path": "ci/reviewed-game-exports.json",
+      "bytes": 231,
+      "sha256": "58989f68d34c9c11ff59dd47edce1cd4b98dc8120ea1e7e9deee47692c83af29"
+    },
+    {
+      "path": "ci/run_windows.py",
+      "bytes": 9093,
+      "sha256": "0b2bfd929f93829fbf2e35c64c2dcbea26d8dd4100a853051e7fb5bb70dc889e"
+    },
+    {
+      "path": "ci/verify_download.py",
+      "bytes": 4461,
+      "sha256": "dd302daae1fb1136fb393ed799ee1c8462ceaca2614568bba15acef5ce2b9382"
+    },
+    {
+      "path": "ci/verify_host_target.py",
+      "bytes": 4614,
+      "sha256": "11c62b9741edad64b63b704aa4966822263fcc169a14f8ae84f6a83ab57c6284"
+    },
+    {
+      "path": "ci/windows-hook.yml",
+      "bytes": 3462,
+      "sha256": "60294ce99b99dba380ace8aa49d6fb85e408874b39bc797c7b2fc9339b168761"
+    },
+    {
+      "path": "evidence/actions-artifacts.json",
+      "bytes": 1018,
+      "sha256": "768a18367b2490230321c5087d4531b08982062f707aa2a436749c1eafceeaf7"
+    },
+    {
+      "path": "evidence/attempt-38510945734/build.log",
+      "bytes": 3797,
+      "sha256": "e6ba3bfa6d960242318b33803b08e95149bd6cb2921f9128faec102a4cc93520"
+    },
+    {
+      "path": "evidence/attempt-38510945734/cmake-version.log",
+      "bytes": 93,
+      "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+    },
+    {
+      "path": "evidence/attempt-38510945734/compiler.log",
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    {
+      "path": "evidence/attempt-38510945734/configure.log",
+      "bytes": 822,
+      "sha256": "1184c611677ace2d488661006e1bbb9d75c2687ae2648826645129e0f286b53a"
+    },
+    {
+      "path": "evidence/attempt-38510945734/evidence-sha256.json",
+      "bytes": 649,
+      "sha256": "a17eefa51e9f5d58f99127bd927d2030a29a5782f77590b1f359cfffcfa4a923"
+    },
+    {
+      "path": "evidence/attempt-38510945734/result.json",
+      "bytes": 3496,
+      "sha256": "9bff3800b414a46e5af897ab8dd8890a7bc604c59d83e3e96d36cedef0793eef"
+    },
+    {
+      "path": "evidence/attempt-38511192326/build.log",
+      "bytes": 2616,
+      "sha256": "5c41bc59795f5f32b6a860216925a930192119787358e8891b3debda78ffd365"
+    },
+    {
+      "path": "evidence/attempt-38511192326/cmake-version.log",
+      "bytes": 93,
+      "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+    },
+    {
+      "path": "evidence/attempt-38511192326/compiler.log",
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    {
+      "path": "evidence/attempt-38511192326/configure.log",
+      "bytes": 822,
+      "sha256": "121c64c6265cea39e2e06eba016757e80d7777ded32e3cd3dcabd0edf09e4274"
+    },
+    {
+      "path": "evidence/attempt-38511192326/evidence-sha256.json",
+      "bytes": 3243,
+      "sha256": "46b96648ec738ae32c06c2cd6d90501e7512b2f47579f9b326f65a5e2cd6f339"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-ambiguous_or_recycled.log",
+      "bytes": 104,
+      "sha256": "cbf10fde3e76cd5bcc0e13e308e8338a09eda2fd2cde6e98d1af5a799d981420"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-bad_host.log",
+      "bytes": 91,
+      "sha256": "18a110dca9c273c29c5131d8efbcedd5ea58894d6fa938eb89d8d79057d2bdeb"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-detach_disarm.log",
+      "bytes": 96,
+      "sha256": "5a1ee83d7bece170e42fd995a3bcd7dc89174f88bc2d4da4af4da47ef1342680"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-hook_minor0.log",
+      "bytes": 94,
+      "sha256": "32229705cd3565ad201615ae7d7aac5eccee6544617744a925d93051b7634bd9"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-incomplete_and_late.log",
+      "bytes": 102,
+      "sha256": "024c87dce36c42a2851af7a15183a2a58f3ffe06b93857ee779bfc4d079c68c5"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-install_fail.log",
+      "bytes": 95,
+      "sha256": "fd9c3379bc81ba2da180861d0b60c570a37af9a708bd8ac9fcf1d8924346a7fe"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-install_throw.log",
+      "bytes": 96,
+      "sha256": "406843a4efb1338df15d4ec4f9b81a434119aa5f4e7eb3dbf0f7b4cbb061c3b2"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-missing_hook.log",
+      "bytes": 95,
+      "sha256": "cd0f9d3c8902fd2c1771da0984c61cdf599525c97a2601981f76c51c2355516d"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-originals.log",
+      "bytes": 92,
+      "sha256": "4611bef77f8cc897a9f39570615a018653541fc7b461baf3c901a5e00540c261"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-reentry.log",
+      "bytes": 90,
+      "sha256": "9129496ee478df9b8226a8b9f2ba35d4b348f3a609f1af260bc125a3a9b92e8a"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-registration_success.log",
+      "bytes": 103,
+      "sha256": "c411d7019905c94770a668a19ebc82c1bc4837abba8cc7002a76396584881cde"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-room_reload.log",
+      "bytes": 94,
+      "sha256": "7701095eecb40ef3f1ff5a2c7dcb9f23aa63ab24cbc5813555d31739a3ec9c8e"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-stage_fail.log",
+      "bytes": 93,
+      "sha256": "8b834af0e8439693db03866abe1a50f1c1ac862b818a977c990e342b4c718e6c"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-timing_and_damage.log",
+      "bytes": 100,
+      "sha256": "d8f385a9f9fb9c4ea199d838eeb0cd44d248da749ea6febca2e661daca1361c6"
+    },
+    {
+      "path": "evidence/attempt-38511192326/fake-zero_handle.log",
+      "bytes": 94,
+      "sha256": "f245fb68e5d92a37a2e8c283869c424c53029dde326ed0e9ef57da5e773f2bdf"
+    },
+    {
+      "path": "evidence/attempt-38511192326/module-exports.log",
+      "bytes": 833,
+      "sha256": "a377a16881572167a324fa830f8d2fd666519e82c52a76ad35e58f3463552ede"
+    },
+    {
+      "path": "evidence/attempt-38511192326/module-headers.log",
+      "bytes": 6065,
+      "sha256": "f99b4cca792e6416089c2968d7650cb435653368d81096702a592b234fbd4008"
+    },
+    {
+      "path": "evidence/attempt-38511192326/module-imports.log",
+      "bytes": 3363,
+      "sha256": "9a5e5b85fe8605506a373d4fc631dfc90dc5634d17dd12369622aa997df41eda"
+    },
+    {
+      "path": "evidence/attempt-38511192326/module-map.log",
+      "bytes": 41250,
+      "sha256": "1c01ee00d7d8c91455499e8f99431d3179032e736a92fe41c96e506a5d113470"
+    },
+    {
+      "path": "evidence/attempt-38511192326/result.json",
+      "bytes": 8865,
+      "sha256": "2a35076998434d21790214db3290590315cfcc90c8b0fde6e2919700617d15db"
+    },
+    {
+      "path": "evidence/attempt-38512608035/build.log",
+      "bytes": 1414,
+      "sha256": "6524de2c8273abd8dcf96b512be05573576e55924f045e33734aecb6a04efe06"
+    },
+    {
+      "path": "evidence/attempt-38512608035/cmake-version.log",
+      "bytes": 93,
+      "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+    },
+    {
+      "path": "evidence/attempt-38512608035/compiler.log",
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    {
+      "path": "evidence/attempt-38512608035/configure.log",
+      "bytes": 822,
+      "sha256": "3db96bb995c60fb6be8528ae5e429d6ad821579a90648c74c31b9b6a706aa75f"
+    },
+    {
+      "path": "evidence/attempt-38512608035/evidence-sha256.json",
+      "bytes": 3374,
+      "sha256": "7504641bc62c824733988c10ae988a2b4b13c40fe86305e6d271b6d1018ac155"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-ambiguous_or_recycled.log",
+      "bytes": 104,
+      "sha256": "cbf10fde3e76cd5bcc0e13e308e8338a09eda2fd2cde6e98d1af5a799d981420"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-bad_host.log",
+      "bytes": 91,
+      "sha256": "18a110dca9c273c29c5131d8efbcedd5ea58894d6fa938eb89d8d79057d2bdeb"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-detach_disarm.log",
+      "bytes": 96,
+      "sha256": "5a1ee83d7bece170e42fd995a3bcd7dc89174f88bc2d4da4af4da47ef1342680"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-hook_minor0.log",
+      "bytes": 94,
+      "sha256": "32229705cd3565ad201615ae7d7aac5eccee6544617744a925d93051b7634bd9"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-incomplete_and_late.log",
+      "bytes": 102,
+      "sha256": "024c87dce36c42a2851af7a15183a2a58f3ffe06b93857ee779bfc4d079c68c5"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-install_fail.log",
+      "bytes": 95,
+      "sha256": "fd9c3379bc81ba2da180861d0b60c570a37af9a708bd8ac9fcf1d8924346a7fe"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-install_throw.log",
+      "bytes": 96,
+      "sha256": "406843a4efb1338df15d4ec4f9b81a434119aa5f4e7eb3dbf0f7b4cbb061c3b2"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-missing_hook.log",
+      "bytes": 95,
+      "sha256": "cd0f9d3c8902fd2c1771da0984c61cdf599525c97a2601981f76c51c2355516d"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-originals.log",
+      "bytes": 92,
+      "sha256": "4611bef77f8cc897a9f39570615a018653541fc7b461baf3c901a5e00540c261"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-reentry.log",
+      "bytes": 90,
+      "sha256": "9129496ee478df9b8226a8b9f2ba35d4b348f3a609f1af260bc125a3a9b92e8a"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-registration_success.log",
+      "bytes": 103,
+      "sha256": "c411d7019905c94770a668a19ebc82c1bc4837abba8cc7002a76396584881cde"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-room_reload.log",
+      "bytes": 94,
+      "sha256": "7701095eecb40ef3f1ff5a2c7dcb9f23aa63ab24cbc5813555d31739a3ec9c8e"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-stage_fail.log",
+      "bytes": 93,
+      "sha256": "8b834af0e8439693db03866abe1a50f1c1ac862b818a977c990e342b4c718e6c"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-timing_and_damage.log",
+      "bytes": 100,
+      "sha256": "d8f385a9f9fb9c4ea199d838eeb0cd44d248da749ea6febca2e661daca1361c6"
+    },
+    {
+      "path": "evidence/attempt-38512608035/fake-zero_handle.log",
+      "bytes": 94,
+      "sha256": "f245fb68e5d92a37a2e8c283869c424c53029dde326ed0e9ef57da5e773f2bdf"
+    },
+    {
+      "path": "evidence/attempt-38512608035/lab-reuse.json",
+      "bytes": 1561,
+      "sha256": "60d98c2c0b815e09a4b40206ff8940841e5a32bb34403635f43bd795453fff28"
+    },
+    {
+      "path": "evidence/attempt-38512608035/module-exports.log",
+      "bytes": 833,
+      "sha256": "a377a16881572167a324fa830f8d2fd666519e82c52a76ad35e58f3463552ede"
+    },
+    {
+      "path": "evidence/attempt-38512608035/module-headers.log",
+      "bytes": 6065,
+      "sha256": "6b55ce8a4996455263f457690ba058dc434c78e381ca1d2b62e1342b7095aea6"
+    },
+    {
+      "path": "evidence/attempt-38512608035/module-imports.log",
+      "bytes": 3363,
+      "sha256": "9a5e5b85fe8605506a373d4fc631dfc90dc5634d17dd12369622aa997df41eda"
+    },
+    {
+      "path": "evidence/attempt-38512608035/module-map.log",
+      "bytes": 41250,
+      "sha256": "84bad2ff7a8987bb15e541264573476b97b0b2d5d38a35f8d0988e20303f82c2"
+    },
+    {
+      "path": "evidence/attempt-38512608035/result.json",
+      "bytes": 7769,
+      "sha256": "bca7bba5d07434fdfa7e2b8213459aded46842e5bc43374563c41c668bfda013"
+    },
+    {
+      "path": "evidence/download-verification.json",
+      "bytes": 5723,
+      "sha256": "97ed074428b69a95a24a52f2924727a39e7ffb72760173b118f15241bbfdc1cc"
+    },
+    {
+      "path": "evidence/gates.json",
+      "bytes": 1124,
+      "sha256": "0b7dd5c2009eb1e06d40f6aa3a2a247196fef54ab7846d0639ed6303bd3a25c5"
+    },
+    {
+      "path": "evidence/host-target.json",
+      "bytes": 1929,
+      "sha256": "b8c6dee82036868294c9a41846ab3d81d354bfa21236a3d80d0c8cab0ba1b0aa"
+    },
+    {
+      "path": "evidence/identity-uniqueness.json",
+      "bytes": 707,
+      "sha256": "3fc1f6b21b622c54fd2d890e0dab54c4b65cd755f47195f5e15d68b9a23a2d36"
+    },
+    {
+      "path": "evidence/source-references.json",
+      "bytes": 5433,
+      "sha256": "1bb6f109751f1f82f9b64f5dd8d51053fd96ca9719e812616342f65206eae64b"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/DOWNLOAD_MANIFEST.json",
+      "bytes": 1351,
+      "sha256": "5b2dc1565e5300e360621a3c90cffb757df96045c1a07c824f6bdc9606fc686c"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/binary-audit.json",
+      "bytes": 2315,
+      "sha256": "990c175f6ec3263bc7a403467a025e35a14ba83ec96b30b4516edef59e8a567f"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/build.log",
+      "bytes": 1414,
+      "sha256": "6524de2c8273abd8dcf96b512be05573576e55924f045e33734aecb6a04efe06"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/cmake-version.log",
+      "bytes": 93,
+      "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/compile-commands.json",
+      "bytes": 3049,
+      "sha256": "f9eefa27d13d7c24c9488915ce9bb1b9c51c24089bb21f8d6bcfe7d342fd488a"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/compiler.log",
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/configure.log",
+      "bytes": 822,
+      "sha256": "37632fda71d630032f5c6479c34be9440bb82bd9cdf497d2502dff19ccab70e2"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/evidence-sha256.json",
+      "bytes": 3922,
+      "sha256": "f2a6dc20b5a22a3ee77bec4543cb0cc9a12ef9515a4944a3380e1cdabcc6365a"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-ambiguous_or_recycled.log",
+      "bytes": 104,
+      "sha256": "cbf10fde3e76cd5bcc0e13e308e8338a09eda2fd2cde6e98d1af5a799d981420"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-bad_host.log",
+      "bytes": 91,
+      "sha256": "18a110dca9c273c29c5131d8efbcedd5ea58894d6fa938eb89d8d79057d2bdeb"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-detach_disarm.log",
+      "bytes": 96,
+      "sha256": "5a1ee83d7bece170e42fd995a3bcd7dc89174f88bc2d4da4af4da47ef1342680"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-hook_minor0.log",
+      "bytes": 94,
+      "sha256": "32229705cd3565ad201615ae7d7aac5eccee6544617744a925d93051b7634bd9"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-incomplete_and_late.log",
+      "bytes": 102,
+      "sha256": "024c87dce36c42a2851af7a15183a2a58f3ffe06b93857ee779bfc4d079c68c5"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-install_fail.log",
+      "bytes": 95,
+      "sha256": "fd9c3379bc81ba2da180861d0b60c570a37af9a708bd8ac9fcf1d8924346a7fe"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-install_throw.log",
+      "bytes": 96,
+      "sha256": "406843a4efb1338df15d4ec4f9b81a434119aa5f4e7eb3dbf0f7b4cbb061c3b2"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-missing_hook.log",
+      "bytes": 95,
+      "sha256": "cd0f9d3c8902fd2c1771da0984c61cdf599525c97a2601981f76c51c2355516d"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-originals.log",
+      "bytes": 92,
+      "sha256": "4611bef77f8cc897a9f39570615a018653541fc7b461baf3c901a5e00540c261"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-reentry.log",
+      "bytes": 90,
+      "sha256": "9129496ee478df9b8226a8b9f2ba35d4b348f3a609f1af260bc125a3a9b92e8a"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-registration_success.log",
+      "bytes": 103,
+      "sha256": "c411d7019905c94770a668a19ebc82c1bc4837abba8cc7002a76396584881cde"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-room_reload.log",
+      "bytes": 94,
+      "sha256": "7701095eecb40ef3f1ff5a2c7dcb9f23aa63ab24cbc5813555d31739a3ec9c8e"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-stage_fail.log",
+      "bytes": 93,
+      "sha256": "8b834af0e8439693db03866abe1a50f1c1ac862b818a977c990e342b4c718e6c"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-timing_and_damage.log",
+      "bytes": 100,
+      "sha256": "d8f385a9f9fb9c4ea199d838eeb0cd44d248da749ea6febca2e661daca1361c6"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/fake-zero_handle.log",
+      "bytes": 94,
+      "sha256": "f245fb68e5d92a37a2e8c283869c424c53029dde326ed0e9ef57da5e773f2bdf"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/lab-reuse.json",
+      "bytes": 1561,
+      "sha256": "60d98c2c0b815e09a4b40206ff8940841e5a32bb34403635f43bd795453fff28"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/module-exports.log",
+      "bytes": 833,
+      "sha256": "a377a16881572167a324fa830f8d2fd666519e82c52a76ad35e58f3463552ede"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/module-headers.log",
+      "bytes": 6065,
+      "sha256": "c6bd0449cf87c51061f1f7456c4f05692aa48ce7fc66c6d9cd5327bf3d9594e8"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/module-imports.log",
+      "bytes": 3363,
+      "sha256": "9a5e5b85fe8605506a373d4fc631dfc90dc5634d17dd12369622aa997df41eda"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/module-map.log",
+      "bytes": 41250,
+      "sha256": "82072a7bf2a3a771c8cde1ca0725b66cb9a247ae74ce9d40e9267fa8f447ba9c"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/official-package.log",
+      "bytes": 158,
+      "sha256": "e6bf46e06f040d367a687ab96b3e447790e7ad0484c8df69d4b9c7e8796e629f"
+    },
+    {
+      "path": "evidence/windows-run-38513406897/result.json",
+      "bytes": 15300,
+      "sha256": "4ba5345c590f4b0aa9e24011bddd0bfdafd76cef8208cfa50f3d117dd5f7a4e0"
+    },
+    {
+      "path": "mod.json",
+      "bytes": 454,
+      "sha256": "cf6d8216c4e5cd644470a2bebcdf91b0bccbd15e717e97e79ca41fb389d674f2"
+    },
+    {
+      "path": "src/mod.cpp",
+      "bytes": 4602,
+      "sha256": "82b22cf5f774eb9730e900924492137229e300347cba5944665a273c3598f7c8"
+    },
+    {
+      "path": "src/policy.hpp",
+      "bytes": 1710,
+      "sha256": "a4085920082e3150d77ab53d297291e6bac85da3581d1742d4eb58375786bf64"
+    },
+    {
+      "path": "src/registration.hpp",
+      "bytes": 1872,
+      "sha256": "3f8f78fd1442bd6e9724de1c335eb54afcf9a0a864cb0f7b442c5bdccd886688"
+    },
+    {
+      "path": "tests/hook_lab.cpp",
+      "bytes": 6343,
+      "sha256": "95b35280d8d6a1e9ff37c9de0a933c0acec6a47bd5eddba1081260b87df54cfa"
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 11870393231,
+    "name": "DEVF_CP03_HP150_TEST_38513406897_1",
+    "size_in_bytes": 9748,
+    "digest": "sha256:5dbea28d35c7a7f6866d0467bdc9531cbecd243cd23e3e03043ef71ba36c4014",
+    "created_at": "2026-10-14T04:50:46Z",
+    "expires_at": "2026-11-13T04:50:45Z",
+    "expired": false,
+    "run_id": 38513406897,
+    "ci_head": "4f84a7137011a35f0500dc7ae1104420e58fbb30",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38513406897/artifacts/11870393231"
+  },
+  {
+    "id": 11870208362,
+    "name": "DEVF_CP03_HP150_TEXT_38513406897_1",
+    "size_in_bytes": 25345,
+    "digest": "sha256:01507631908dfecb1ac6e765f0450a70d7806c66485ec43f935968df3f492308",
+    "created_at": "2026-10-14T04:50:44Z",
+    "expires_at": "2026-11-13T04:50:43Z",
+    "expired": false,
+    "run_id": 38513406897,
+    "ci_head": "4f84a7137011a35f0500dc7ae1104420e58fbb30",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38513406897/artifacts/11870208362"
+  }
+]

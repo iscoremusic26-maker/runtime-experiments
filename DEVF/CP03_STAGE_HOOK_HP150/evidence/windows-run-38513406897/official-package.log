@@ -1,0 +1,5 @@
+[1/1] Packaging devf_cp03_stage_hook_hp150 -> <WORK>/build/mods/devf_cp03_stage_hook_hp150.dusk
+mod.json
+lib
+lib/windows-amd64
+lib/windows-amd64/mod.dll
