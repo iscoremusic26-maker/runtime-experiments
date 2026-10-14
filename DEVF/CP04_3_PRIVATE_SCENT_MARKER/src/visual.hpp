@@ -73,6 +73,9 @@ struct Visual {
   if(fault||!p.eligible)return;
   if(!p.live){release(access,"NATIVE_DEATH_OR_DELETE_QUEUE",emit);return;}
   if(key&&id!=p.id){release(access,"NEXT_GENERATION",emit);if(fault)return;}
+  if(!in_range(p.x,-1e7f,1e7f)||!in_range(p.y,-1e7f,1e7f)||!in_range(p.z,-1e7f,1e7f)){
+   id=p.id;reject("ANCHOR_NONFINITE_OR_OUT_OF_RANGE",emit);return;
+  }
   if(!p.model_ready){id=p.id;reject("MODEL_NOT_READY_OR_NOT_OWNED",emit);return;}
   if(!key){
    // Never retry if the host has expired this generation's handle while execute was absent.

@@ -1,4 +1,4 @@
-name: DEVF CP04.2 PRIVATE SCENT MARKER FUNCTIONAL PRIVATE TEST
+name: DEVF CP04.3 PRIVATE SCENT MARKER FUNCTIONAL PRIVATE TEST
 on:
   pull_request:
     types: [opened, synchronize, reopened]

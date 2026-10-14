@@ -2,7 +2,7 @@ import argparse,datetime,json,os,shutil,subprocess,time,zipfile
 from pathlib import Path
 from audit import sha,inspect_pe,verify_package,negatives
 p=argparse.ArgumentParser();p.add_argument('--source',type=Path,required=True);p.add_argument('--inputs',type=Path,required=True);p.add_argument('--work',type=Path,required=True);a=p.parse_args();project=Path(__file__).resolve().parents[1];source=a.source.resolve();work=a.work.resolve();build=work/'build';ev=work/'evidence';ev.mkdir(parents=True,exist_ok=True);build.mkdir(parents=True,exist_ok=True)
-auth=json.loads((project/'SOURCE_MANIFEST.json').read_text());provenance=json.loads((project/'CI_SOURCE.json').read_text());r={'status':'BLOCKED','source_commit':provenance['source_commit'],'ci_head':os.getenv('DEVF_CI_HEAD'),'run_id':os.getenv('GITHUB_RUN_ID'),'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'phases':[],'game_executed':False,'DLL_loaded':False,'host_built':False,'mode':'CP04_3_PRIVATE_SCENT_MARKER_NO_EMITTER_WITH_CP03_ONE_SHOT150','toolchain_env':{k:os.getenv(k) for k in ['VCToolsVersion','WindowsSDKVersion','VSCMD_ARG_TGT_ARCH']}}
+auth=json.loads((project/'SOURCE_MANIFEST.json').read_text());provenance=json.loads((project/'CI_SOURCE.json').read_text());r={'status':'BLOCKED','source_commit':provenance['source_commit'],'ci_head':os.getenv('DEVF_CI_HEAD'),'run_id':os.getenv('GITHUB_RUN_ID'),'started_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'phases':[],'game_executed':False,'DLL_loaded':False,'host_built':False,'mode':'CP04_3_FUNCTIONAL_WITH_ONCE_PREFLIGHT_CP03_ONE_SHOT150','toolchain_env':{k:os.getenv(k) for k in ['VCToolsVersion','WindowsSDKVersion','VSCMD_ARG_TGT_ARCH']}}
 def git(at,*args):return subprocess.check_output(['git','-C',str(at),*args],text=True).strip()
 def run(label,cmd):
  start=time.monotonic()
@@ -25,7 +25,7 @@ try:
  f=build/'version.cpp';f.write_text('int compiler_only;\n');run('compiler',['cl','/Bv','/c',str(f),'/Fo'+str(build/'version.obj')]);run('cmake-version',['cmake','--version'])
  run('configure',['cmake','-S',str(project),'-B',str(build),'-G','Ninja','-DCMAKE_BUILD_TYPE=Release',f'-DDUSK_SOURCE={source}',f'-DDUSK_GAME_EXE={lib}','-DCMAKE_EXPORT_COMPILE_COMMANDS=ON'])
  run('build',['cmake','--build',str(build),'--target','devf_cp04_3_private_scent_marker','--parallel','2'])
- cases=['compatible_private_marker', 'native_preflight_branches', 'groups_and_flags', 'all_curves_fail_closed', 'fp32_population_bound', 'extra_scale_bounds', 'death_and_reentry', 'next_generation', 'recycled_handle', 'expired_handle_no_retry', 'partial_config_failure', 'missing_and_pool_no_retry', 'original_eoc2_untouched', 'shutdown_no_game_access', 'runtime_budget_guard', 'scene_clear_stale_resource', 'pause_resume_contract']
+ cases=['compatible_private_marker', 'native_preflight_branches', 'groups_and_flags', 'all_curves_fail_closed', 'fp32_population_bound', 'extra_scale_bounds', 'death_and_reentry', 'actor_id_recycled', 'nonfinite_anchor', 'next_generation', 'recycled_handle', 'expired_handle_no_retry', 'partial_config_failure', 'missing_and_pool_no_retry', 'original_eoc2_untouched', 'shutdown_no_game_access', 'runtime_budget_guard', 'scene_clear_stale_resource', 'pause_resume_contract']
  if sha((project/'src/policy.hpp').read_bytes().replace(b'\r\n',b'\n'))!=auth['unchanged_policy_sha256']:raise RuntimeError('HP policy drift')
  run('lab-build',['cmake','--build',str(build),'--target','cp04_3_visual_lab','--parallel','2'])
  for case in cases:run('fake-'+case,[str(build/'cp04_3_visual_lab.exe'),case])

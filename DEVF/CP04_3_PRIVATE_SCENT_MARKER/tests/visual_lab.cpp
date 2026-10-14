@@ -1,6 +1,8 @@
 #include "../src/registration.hpp"
 #include "../src/particle_access.hpp"
 #include <array>
+#include <algorithm>
+#include <JSystem/JParticle/JPAParticle.h>
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -174,6 +176,10 @@ bool run_case(const char* name){
    if(hp.inspect(s)!=devf::Decision::Ignore||s.health!=220)return false;auto pp=p;pp.id=s.id;pp.eligible=false;v.step(pp,a,emit);
   }return !a.attempts&&!events.applied&&!events.rejected;
  }
+ if(!std::strcmp(name,"nonfinite_anchor")){
+  p.x=std::numeric_limits<float>::quiet_NaN();v.step(p,a,emit);
+  return v.fault&&!v.key&&events.rejected==1&&!a.attempts;
+ }
  v.step(p,a,emit);if(!v.key||events.applied!=1||events.rejected||!a.manager.parameters_ok)return false;
  if(!std::strcmp(name,"compatible_private_marker")){
   const auto source_id=a.manager.bank.res.id;for(unsigned n=0;n<1000;++n){p.x+=0.1f;v.step(p,a,emit);}
@@ -183,6 +189,10 @@ bool run_case(const char* name){
  if(!std::strcmp(name,"death_and_reentry")){
   p.live=false;v.step(p,a,emit);v.step(p,a,emit);if(v.key||a.control.field_0x210.cuts!=1||!a.manager.emitter.checkStatus(JPAEmtrStts_StopDraw))return false;
   p=probe(568);v.step(p,a,emit);return a.attempts==2&&events.applied==2&&!v.fault;
+ }
+ if(!std::strcmp(name,"actor_id_recycled")){
+  p.live=false;v.step(p,a,emit);p.live=true;v.step(p,a,emit);
+  return v.fault&&events.rejected==1&&a.attempts==1&&!v.key;
  }
  if(!std::strcmp(name,"next_generation")){
   p=probe(568);v.step(p,a,emit);return a.attempts==2&&events.applied==2&&a.control.field_0x210.cuts==1&&!v.fault;
