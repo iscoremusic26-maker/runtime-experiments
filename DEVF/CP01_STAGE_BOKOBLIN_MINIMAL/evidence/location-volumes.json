@@ -1,0 +1,54 @@
+{
+  "method": "Bound each previously modeled XZ volume by enclosing circle; triangle inequality from new point. No actor-world scan or resource decode repeated.",
+  "modeled_existing_volumes": [
+    {
+      "name": "scnChg",
+      "source": "R03_00.arc/SCOB[0]",
+      "conservative_radial_margin_to_candidate501": 13345.177275530124
+    },
+    {
+      "name": "scnChg",
+      "source": "R03_00.arc/SCOB[1]",
+      "conservative_radial_margin_to_candidate501": 10253.693595951048
+    },
+    {
+      "name": "noChgRm",
+      "source": "R03_00.arc/SCOB[2]",
+      "conservative_radial_margin_to_candidate501": 23829.7284160354
+    },
+    {
+      "name": "scnChg",
+      "source": "R03_00.arc/SCOB[3]",
+      "conservative_radial_margin_to_candidate501": 9036.431984570045
+    },
+    {
+      "name": "SwAreaS",
+      "source": "R03_00.arc/SCOB[4]",
+      "conservative_radial_margin_to_candidate501": 6403.8928314592085
+    },
+    {
+      "name": "atkItem",
+      "source": "R03_00.arc/SCOB[5]",
+      "conservative_radial_margin_to_candidate501": 1991.3610419832062
+    },
+    {
+      "name": "atkItem",
+      "source": "R03_00.arc/SCOB[6]",
+      "conservative_radial_margin_to_candidate501": 1991.3610552325504
+    },
+    {
+      "name": "EvtArea",
+      "source": "R03_00.arc/SCO6[0]",
+      "conservative_radial_margin_to_candidate501": 962.7145480124927
+    },
+    {
+      "name": "SwAreaS",
+      "source": "R03_00.arc/SCO6[2]",
+      "conservative_radial_margin_to_candidate501": 8679.360717643329
+    }
+  ],
+  "smallest_margin": 962.7145480124927,
+  "static_only": true,
+  "runtime_event_interference": "NOT_VERIFIED",
+  "room_arc_sha256": "dc53106667811c4cde18b35edb5279357f00ebecaef2f9de546aea9a5a2b06af"
+}
