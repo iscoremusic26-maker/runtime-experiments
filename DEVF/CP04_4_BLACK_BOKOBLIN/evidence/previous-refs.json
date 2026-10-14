@@ -1,0 +1,357 @@
+[
+  {
+    "ref": "refs/heads/architecture/devf-official-sdk-only",
+    "sha": "545b2d1418bfcae11dd4585c1a9bdcbc526b6a2d",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/audit/devf-dawnlight-v403",
+    "sha": "60ffb08ea1337592d3e05216f3f3d97f37426e18",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/checkpoint/devf-cp00-windows-20261011",
+    "sha": "747ecc410162ed76f9aa68dbe9e9e2ad4e4d8c3f",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/checkpoint/devf-cp01-20261011",
+    "sha": "1dd539d96750130c4b59344437ec2d6ad6479b58",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/checkpoint/devf-cp01-location-blocked-20261011",
+    "sha": "5f3a7ef49341bc7d5629f16300a1146a246f4d2d",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/checkpoint/devf-cp01-official-baseline",
+    "sha": "413377f106cd989f8e1ea82b03dd28600696442a",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/experiment/devf-cp01-a2-first-native",
+    "sha": "befd909fd8229ef106d2f520368f7841b22fd749",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/experiment/devf-cp01-host-integration",
+    "sha": "765e16dcd86c1eeda45bad80a2c1380129565429",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/experiment/devf-cp01-host-lifetime",
+    "sha": "eea47427f7622301808af8374895bf4b16ee073f",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp01-stage-bokoblin-minimal",
+    "sha": "53ceaca4c28653bfb057ac3aaabb18b3624ea19b",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp02-eoc2-native-elite",
+    "sha": "0d2430262181bb2844f13bb8da0a628f71740998",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp03-actorservice-feasibility",
+    "sha": "85ad920d6417e7e7ff6ad8bd8ab0c1455a96d7a8",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp03-hp-diagnostic",
+    "sha": "139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp03-hp150-feasibility",
+    "sha": "08433c6cb338637ec4191bdcc454cbc9537ad7df",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp03-stage-hook-hp150",
+    "sha": "76c53b6bcc61228df3b5a19f35b28fc777d4bde9",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp04-1-aura-diagnostic",
+    "sha": "7c31c2e41ff8564ed7f79777c9cb9f309cbcd3c0",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp04-2-curve-diagnostic",
+    "sha": "dac8d172081e8933f3e9fcdeea40e09b4374f372",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp04-3-private-scent-marker",
+    "sha": "3b7f65b3f4268ae30d4f5832001114b8a6b260ce",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/feature/devf-cp04-native-aura",
+    "sha": "080f8e40714f842f170f14ea1a9ff3a5054ac8b2",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/fix/devf-cp01-g5-real-log-false-rejects",
+    "sha": "2e1b86edc1d189f0954714e0a168ae3f0bef6cea",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/implementation/devf-cp01-a2-disarmed",
+    "sha": "b342a8dfdf47fa503f02cb91c470d66e646334c5",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/implementation/devf-cp01-g4b-readonly",
+    "sha": "17bbbd288f2e17974303f98fbfcd3345f49aa11d",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/package/devf-cp01-first-active-eoc-review",
+    "sha": "843b2436d9a28305248316b9f54906447e5ec566",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/package/devf-cp01-g2-readonly",
+    "sha": "1990f3137553c0f2aec43f66eeda55746fc8cc2e",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/package/devf-cp01-g4b-observation",
+    "sha": "09a682f0338d24928b3ea1abca0df6972004a596",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/preflight/devf-cp01-a1-g0-g4",
+    "sha": "2124adddae1e4433f7523e777cf0a773b2119bb2",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/preparation/devf-cp01-first-eoc-pilot-safety",
+    "sha": "0ff1b8bf5e331fc411d6dd9e5fc70c7b3809c75e",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/review/devf-cp01-a2-owner-location",
+    "sha": "8911403f2432b7117fa9e6009d809a5c3501cd7c",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/review/devf-cp01-first-spawn-strategy",
+    "sha": "2911af67bde2dc1e6376ed7c989cdc862b79126d",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/review/devf-cp01-g4-eoc-resource-continuation",
+    "sha": "dc2f65ab5d1423ce74d78661dbbea5e14a692409",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/review/devf-cp01-g4-eoc-safety",
+    "sha": "3e0792e90b6ebc764b421e56ab63a36df3157893",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/heads/review/devf-cp01-g4-final-static-review",
+    "sha": "4276a0562eb156d04569be38b5cc2dc987cd074a",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP00",
+    "sha": "8a146281e236e715b94c173b8cb9f309396bb75b",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP00_WINDOWS",
+    "sha": "747ecc410162ed76f9aa68dbe9e9e2ad4e4d8c3f",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01",
+    "sha": "092c1e67842758b1f36d5422cbcad7da53014fef",
+    "type": "commit"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_A1_PREFLIGHT_G0_G4",
+    "sha": "8e0b1965b5d1927c6567ae739900311301a94ba0",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_A2_DISARMED_CONTROLLER_VERIFIED",
+    "sha": "51e83d90656136c874c496331c5c576d98b648b6",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_A2_FIRST_NATIVE_REQUEST_OFFLINE_VERIFIED",
+    "sha": "ff45bed5f83ecfd3fec5bb62da281eaf195ba893",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_A2_FIRST_PILOT_SAFETY_TRACE_VERIFIED",
+    "sha": "4beeba9e523ca2d964b34225170a432645a80ba9",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_A2_OWNER_LOCATION_REVIEW",
+    "sha": "629c98731a8c9988f88438e8f0463d2d1b1ad009",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_BASELINE_CONFIGURED",
+    "sha": "fa308c8da4f69bd207802a78359600ff088c534d",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_DAWNLIGHT_FOCUSED_AUDIT",
+    "sha": "0a500f08beb977587cfa905ecd93095e36a33415",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_EXTRA_COLLISIONS_REVIEW",
+    "sha": "7bed73a49d7ee57ca6fa9ffb7959be16abe5a210",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_FIRST_EOC_ACTIVE_PACKAGE_REVIEW_VERIFIED",
+    "sha": "46124f96eb93a7e3009001d05621d5dd55dbd390",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_FIRST_SPAWN_STRATEGY_REVIEW",
+    "sha": "0ad4871f579bcc02c2e2a2476f4bae442310e04f",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_G2_READONLY_PACKAGE",
+    "sha": "71aee0d05a46838044f8488b92cbb6d8b9406edb",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_G4B_LOCAL_READONLY_OBSERVER_VERIFIED",
+    "sha": "0c11d4ca51ef579c0630d08a1e5041320e046aed",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED",
+    "sha": "85379cd6283ca9213361a985be68638443aebaa9",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_G4B_OBSERVATION_PACKAGE_VERIFIED_FINAL",
+    "sha": "858118ed45cf55d76bc4c5b71e85100a85c88e08",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_G4_EOC_RESOURCE_CONTINUATION",
+    "sha": "f3dc714f198f078f2fd1c34196153f1316c1b10c",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_G4_EOC_SAFETY_REVIEW",
+    "sha": "2578de783ae3c95650489dd356daa051f55c0a76",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_G4_FINAL_STATIC_REVIEW",
+    "sha": "2a72e6313268330d707c9a73ec7c443ef2122d56",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_G5_DISARMED_DIAGNOSTIC_VERIFIED",
+    "sha": "3910e389de2b787b76817f8e0d036f5ccbf9a166",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_HOST_INTEGRATION_CONFIGURED",
+    "sha": "e8c070ee2962827159e1ee177f5275c7725986fe",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_HOST_LIFETIME_EXPERIMENT",
+    "sha": "7c6566ea175fb8cac04c0c7153bd864fff3bb969",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_LOCATION_DIGPOINTS_REVIEW",
+    "sha": "ee24be7489c3e096fc1acd46b77857701bf93d33",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_LOCATION_F_SP121_REVIEW",
+    "sha": "53558efd8e8f3a535460a4bf62bbc5a2655d305f",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_OFFICIAL_BASELINE_MSVC",
+    "sha": "4a9028c014c020ad9bfef1c31dc68cc193c569b2",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_OFFICIAL_SDK_ARCHITECTURE",
+    "sha": "1babf00b2e9f098eee1c61c0d8649692e2a3fb97",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_PATCHED_HOST_INTEGRATION_MSVC",
+    "sha": "0fbae8b4871c0899748dff79f3439bb4944d88bc",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_SAFETY_REVIEW",
+    "sha": "663c5626c209d13f1545b16e270c7efc2a19a973",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP01_STAGE_BOKOBLIN_MINIMAL_PACKAGE_VERIFIED",
+    "sha": "18ea0c64e3e77ed69cabc6e457f5ee1ec2ed154a",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP02_EOC2_ELITE_NATIVE_PACKAGE_VERIFIED",
+    "sha": "453ef09e8f6551313af8261f0e96fa7a6e160d95",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14",
+    "sha": "08ffbae5e5da73658df77b3763de2fe6851f7a45",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP03_HP_DIAGNOSTIC_OFFLINE_TEST",
+    "sha": "c6a80c0e88fdd7755e6225ddee4e8d0edd5eae4e",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP03_STAGE_HOOK_HP150_OFFLINE_TEST",
+    "sha": "566ad076485abe82e9006df82d29c9b262b03da3",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP04_1_AURA_GATE_DIAGNOSTIC_OFFLINE_TEST",
+    "sha": "cacb667161c3a84f03e3cd9e0bd211bec452cffe",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP04_2_NATIVE_CURVES_DIAGNOSTIC_OFFLINE_TEST",
+    "sha": "7c9ee8fa03866a6878de1c2622773f647412dec2",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP04_2_NATIVE_CURVES_ENDPOINTS_DIAGNOSTIC_OFFLINE_TEST",
+    "sha": "4ecf5fe3af056861b2c1ba72a13e6a1ef1702d39",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP04_3_PRIVATE_SCENT_MARKER_OFFLINE_TEST",
+    "sha": "fc8a5024a00023ea23ead3f3561a0f1b4c0b3918",
+    "type": "tag"
+  },
+  {
+    "ref": "refs/tags/DEVF_CP04_NATIVE_AURA_OFFLINE_TEST",
+    "sha": "581b6243e4419031c2ebe7a849843a3b17a45fd3",
+    "type": "tag"
+  }
+]

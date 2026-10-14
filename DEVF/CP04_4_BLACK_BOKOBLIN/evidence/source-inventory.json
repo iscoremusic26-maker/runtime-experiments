@@ -1,0 +1,487 @@
+{
+  "schema": 1,
+  "verdict": "CP04_4_BLOCKED_WITH_EVIDENCE",
+  "basis": "exact-source static inspection; not runtime isolation proof",
+  "sources": [
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_e_oc.cpp",
+      "git_blob_sha": "57828ccb7c987757929835da38623d8a6b04ebbd",
+      "line_ranges": [
+        [
+          158,
+          190
+        ],
+        [
+          1835,
+          1884
+        ],
+        [
+          2650,
+          2778
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "include/d/actor/d_a_e_oc.h",
+      "git_blob_sha": "2d40d9bcbcd70eda9480f81c041212041df4ed94",
+      "line_ranges": [
+        [
+          1,
+          172
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "git_blob_sha": "7f7c9998327f04de3b101a9269ab9633ad2a3824",
+      "line_ranges": [
+        [
+          46,
+          103
+        ],
+        [
+          141,
+          252
+        ],
+        [
+          363,
+          368
+        ],
+        [
+          473,
+          546
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
+      "git_blob_sha": "042dc81dd3f45120b58273a1d2c16a4b59c135ca",
+      "line_ranges": [
+        [
+          46,
+          141
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphBase/J3DPacket.cpp",
+      "git_blob_sha": "fb82b8244da9ab0ef011750875bc090310a92575",
+      "line_ranges": [
+        [
+          200,
+          245
+        ],
+        [
+          328,
+          378
+        ],
+        [
+          400,
+          413
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/include/JSystem/J3DGraphBase/J3DPacket.h",
+      "git_blob_sha": "992d96b25557d9287a013c2f8f9a257669b5ac57",
+      "line_ranges": [
+        [
+          23,
+          57
+        ],
+        [
+          105,
+          127
+        ],
+        [
+          295,
+          324
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphBase/J3DMaterial.cpp",
+      "git_blob_sha": "1bd619c0e03b68cef103cea6aeaa2889530747d5",
+      "line_ranges": [
+        [
+          199,
+          230
+        ],
+        [
+          253,
+          268
+        ],
+        [
+          320,
+          343
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphBase/J3DDrawBuffer.cpp",
+      "git_blob_sha": "2d175ff8714907ee7826a36c0e40afc5dc832d58",
+      "line_ranges": [
+        [
+          80,
+          98
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp",
+      "git_blob_sha": "a943940d84ba5af8462bdef35b1432401143f93b",
+      "line_ranges": [
+        [
+          160,
+          189
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/include/JSystem/J3DGraphBase/J3DVertex.h",
+      "git_blob_sha": "f7ad92afb81a1827987985ff9e439872123e08e1",
+      "line_ranges": [
+        [
+          16,
+          25
+        ],
+        [
+          118,
+          128
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphBase/J3DVertex.cpp",
+      "git_blob_sha": "6d605e64c6c648277b27d3ae528eb9dadf02405f",
+      "line_ranges": [
+        [
+          37,
+          84
+        ],
+        [
+          142,
+          190
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "git_blob_sha": "f2f4216ffc4a40919bfbfa189e2e4feb93c0a12a",
+      "line_ranges": [
+        [
+          331,
+          407
+        ],
+        [
+          1820,
+          1833
+        ],
+        [
+          3877,
+          3913
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/interp/material.cpp",
+      "git_blob_sha": "f8a16162a3c8fb5f3e65d6a8b3bae05c535e0062",
+      "line_ranges": [
+        [
+          270,
+          420
+        ],
+        [
+          501,
+          555
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/interp/vertex.cpp",
+      "git_blob_sha": "790f5084844c15796c8c37407235115dc8c5de3e",
+      "line_ranges": [
+        [
+          80,
+          115
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphLoader/J3DModelLoader.cpp",
+      "git_blob_sha": "c3c72310a0294f02c947bf1336ba6063680d329f",
+      "line_ranges": [
+        [
+          42,
+          136
+        ],
+        [
+          531,
+          599
+        ],
+        [
+          743,
+          755
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_resorce.cpp",
+      "git_blob_sha": "26295158f4914ad7be629adedc370bc8cc9fe30f",
+      "line_ranges": [
+        [
+          242,
+          324
+        ],
+        [
+          588,
+          650
+        ],
+        [
+          808,
+          830
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/texture.h",
+      "git_blob_sha": "0de813cd048ee6e493c103d5d9abf4b56597d262",
+      "line_ranges": [
+        [
+          15,
+          86
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/texture.cpp",
+      "git_blob_sha": "ac3b2e16645fb2ebd3004675b9497f639a92319d",
+      "line_ranges": [
+        [
+          332,
+          390
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/gfx.h",
+      "git_blob_sha": "ebfde28f6b08c995bc72b3a5f1667fca283110b1",
+      "line_ranges": [
+        [
+          1,
+          90
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight-cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "path": "src/mod.cpp",
+      "git_blob_sha": "53d0d1e4dc7483bd43f9f0dbd0e30caab24f2bea",
+      "line_ranges": [
+        [
+          383,
+          455
+        ],
+        [
+          472,
+          543
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight-cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "path": "src/mod.hpp",
+      "git_blob_sha": "6d77949b0326d396fbd88e6a7c64a25c65b8af13",
+      "line_ranges": [
+        [
+          1,
+          65
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight-cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "path": "src/hooks.cpp",
+      "git_blob_sha": "2c878f76322c26fa79b6185806ac75fa9bb3224c",
+      "line_ranges": [
+        [
+          1,
+          35
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight-cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "path": "src/texture_utils.cpp",
+      "git_blob_sha": "98c60dbad320ac78ad2d5b0c4ae6cf11561e92fd",
+      "line_ranges": [
+        [
+          100,
+          130
+        ],
+        [
+          182,
+          215
+        ],
+        [
+          324,
+          345
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight-cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "path": "src/texture_utils.hpp",
+      "git_blob_sha": "49dd0df81a86355515b584ef736c0aaa0c900164",
+      "line_ranges": [
+        [
+          1,
+          20
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight-cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "path": "src/color_utils.cpp",
+      "git_blob_sha": "d1dc2eb09684e25792a80844348a90010ee5b04e",
+      "line_ranges": [
+        [
+          1,
+          20
+        ]
+      ]
+    },
+    {
+      "repository": "TwilitRealm/dusklight-cosmetics",
+      "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "path": "src/color_utils.hpp",
+      "git_blob_sha": "94e1ce62a88379e6ed5f880cd27f89349a8cd5b0",
+      "line_ranges": [
+        [
+          1,
+          20
+        ]
+      ]
+    },
+    {
+      "repository": "encounter/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "path": "lib/dolphin/gx/GXDispList.cpp",
+      "git_blob_sha": "5bf946057bdd40fdbe52421d9f97fb9f39991456",
+      "line_ranges": [
+        [
+          48,
+          62
+        ]
+      ]
+    },
+    {
+      "repository": "encounter/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "path": "lib/gx/fifo.cpp",
+      "git_blob_sha": "bcaba60c56ef18ddbda9c40e39c35d3e95b9db47",
+      "line_ranges": [
+        [
+          149,
+          173
+        ]
+      ]
+    },
+    {
+      "repository": "encounter/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "path": "lib/gx/command_processor.cpp",
+      "git_blob_sha": "9c6ffa17e3d2fae5883a25d3208e8f71dca20073",
+      "line_ranges": [
+        [
+          382,
+          472
+        ]
+      ]
+    },
+    {
+      "repository": "encounter/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "path": "lib/gfx/recording.cpp",
+      "git_blob_sha": "9d1df79ff6aaa843b2af20614fc7f90dd10ec498",
+      "line_ranges": [
+        [
+          1135,
+          1137
+        ],
+        [
+          1190,
+          1204
+        ]
+      ]
+    },
+    {
+      "repository": "encounter/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "path": "lib/gfx/render_worker.cpp",
+      "git_blob_sha": "85783b60ec1a569ac7fba6dd153e8bc588cffee5",
+      "line_ranges": [
+        [
+          1,
+          40
+        ]
+      ]
+    },
+    {
+      "repository": "encounter/aurora",
+      "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "path": "lib/webgpu/gpu.cpp",
+      "git_blob_sha": "b3ae6cd1ddd30c63c821f564c3d0de8e8da415ea",
+      "line_ranges": [
+        [
+          739,
+          742
+        ]
+      ]
+    }
+  ]
+}
