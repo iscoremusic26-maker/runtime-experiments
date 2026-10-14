@@ -22,3 +22,22 @@ Falta exclusivamente: (1) canales y separación de material del E_OC2 efectivo, 
 Rollback de esta revisión documental: no requiere tocar instalación. Conservar CP03 histórico o instalación vanilla según estado previo del usuario. No crear/eliminar ramas/tags previos. No ejecutar juego ni cambiar saves al recuperar.
 
 El workflow nuevo sólo verifica Git/procedencia y sella un tag único; resultados concretos y SHA se agregan al terminar, sin fingir autorreferencia del commit que contiene este archivo.
+
+## Resultado de procedencia ejecutado
+
+[Actions Windows #38649308109](https://github.com/iscoremusic26-maker/Mods-Duskligh/actions/runs/38649308109), job 116143874314: **SUCCESS / PASS_STATIC** sobre `fac19a9ead3771185f6b977e4be238652b79e2c8`. Python 3.12.10, git version 2.55.0.windows.5, Windows-2025Server-10.0.26100-SP0; verificación 2.672 s (no tiempo de compilación). 32 fuentes con blob Git esperado/SHA256 y rangos válidos; 1249 rutas de la base intactas; 71 refs antiguas intactas; git fsck completo. Evidencia derivada: [evidence/static-audit-result.json](evidence/static-audit-result.json). No contiene recursos originales ni logs privados del juego.
+
+El cierre documental conserva sin cambios verificador, inventario y snapshot validados. La segunda ejecución comprueba únicamente Git y publica el tag final; no vuelve a descargar fuentes ni repite tests/compilaciones de etapas anteriores. El runner Windows está disponible; el executor Cloud permanece failed. El bloqueo del recoloreado es técnico, no falta de compilador demostrada.
+
+## Recuperación del cierre
+
+Tag final: `DEVF_CP04_4_BLACK_BOKOBLIN_BLOCKED_WITH_EVIDENCE`. El workflow de sellado lo crea de forma anotada sobre el **head de esta rama**; rechaza una ref existente y nunca la fuerza. Comprobar la conclusión de ese job y el destino con:
+
+```powershell
+git fetch origin feature/devf-cp04-4-black-bokoblin --tags
+git rev-parse DEVF_CP04_4_BLACK_BOKOBLIN_BLOCKED_WITH_EVIDENCE^{}
+git switch --detach DEVF_CP04_4_BLACK_BOKOBLIN_BLOCKED_WITH_EVIDENCE
+python DEVF/CP04_4_BLACK_BOKOBLIN/tools/verify_checkpoint.py --git-only
+```
+
+El SHA final literal y la confirmación de publicación del tag se dan en el PR y entrega tras leer la ref GitHub; no se inventa un SHA autorreferencial dentro del propio commit. Si el sellado falla, recuperar por el head/commit remoto y mantener el tag como pendiente hasta corregir sólo el bloqueo de publicación.

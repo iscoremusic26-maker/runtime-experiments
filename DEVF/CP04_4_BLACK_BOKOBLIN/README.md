@@ -17,3 +17,5 @@ La decisión, matriz de propiedad y dos rutas se encuentran en [ROOT_CAUSE_AND_C
 Cloud seleccionado está failed (error al consultar capacidades del executor). No se ha leído ni escrito un workspace local de esa máquina. GitHub permite recuperar y publicar el checkpoint. El workflow nuevo verifica exclusivamente procedencia fuente, preservación y tag; no compila juego/mod ni sustituye MSVC por Linux.
 
 CP04.3: el NO-GO runtime `RESOURCE_84ED_MISSING_NO_FALLBACK` (actor 147, banco 1) se conserva como evidencia aportada por el usuario. No se retomaron partículas 0x84ED/0x029D, ni auditorías CP01–03, ubicación, salud o SDK. CP05/CP06 no iniciados.
+
+Verificación Windows de procedencia ejecutada: [run 38649308109](https://github.com/iscoremusic26-maker/Mods-Duskligh/actions/runs/38649308109), SUCCESS. 32 fuentes contrastadas y todas las rutas/refs anteriores preservadas. No MSVC/build/render PASS. Resultado completo en TEST_RESULTS y evidence/static-audit-result.json.

@@ -1,0 +1,333 @@
+{
+  "schema": 1,
+  "verdict": "CP04_4_BLOCKED_WITH_EVIDENCE",
+  "run_id": 38649308109,
+  "job_id": 116143874314,
+  "workflow_url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/actions/runs/38649308109",
+  "source_commit": "fac19a9ead3771185f6b977e4be238652b79e2c8",
+  "result": {
+    "elapsed_seconds": 2.672,
+    "git": {
+      "added_paths": [
+        ".github/workflows/devf-cp04-4-recovery-tag.yml",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/BUILD_AND_PACKAGE.md",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/HUMAN_TEST.md",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/README.md",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/RECOVERY.md",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/ROOT_CAUSE_AND_CHOSEN_ROUTE.md",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/TEST_RESULTS.md",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/evidence/previous-refs.json",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/evidence/source-inventory.json",
+        "DEVF/CP04_4_BLACK_BOKOBLIN/tools/verify_checkpoint.py"
+      ],
+      "base": "139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f",
+      "git_version": "git version 2.55.0.windows.5",
+      "head": "fac19a9ead3771185f6b977e4be238652b79e2c8",
+      "previous_refs_preserved": 71,
+      "status": "PASS_STATIC",
+      "unchanged_baseline_paths": 1249
+    },
+    "platform": "Windows-2025Server-10.0.26100-SP0",
+    "python": "3.12.10",
+    "schema": 1,
+    "scope": "git/source provenance only; not MSVC, isolation or GPU proof",
+    "source_status": "PASS_STATIC",
+    "sources": [
+      {
+        "bytes": 93218,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "57828ccb7c987757929835da38623d8a6b04ebbd",
+        "path": "src/d/actor/d_a_e_oc.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4"
+      },
+      {
+        "bytes": 4986,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "2d40d9bcbcd70eda9480f81c041212041df4ed94",
+        "path": "include/d/actor/d_a_e_oc.h",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "5922d8c0ecd722fe545cc84188f119173a9297062c8e10be4da071bcaed6a1d2"
+      },
+      {
+        "bytes": 19036,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "7f7c9998327f04de3b101a9269ab9633ad2a3824",
+        "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "ad8a35fbb089cb35077d57210117bfa552c123dbbb3d907a8362d9398b4ae8e7"
+      },
+      {
+        "bytes": 4573,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "042dc81dd3f45120b58273a1d2c16a4b59c135ca",
+        "path": "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "dcd30412703dbecd9efeaf1e7c008312ae820ef67399bf6d22709487cbf525ae"
+      },
+      {
+        "bytes": 10828,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "fb82b8244da9ab0ef011750875bc090310a92575",
+        "path": "libs/JSystem/src/J3DGraphBase/J3DPacket.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "d1660f7000258c2390215db79e289c9b2fd9741af15b7c87c0c7fcd049a10ee8"
+      },
+      {
+        "bytes": 8778,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "992d96b25557d9287a013c2f8f9a257669b5ac57",
+        "path": "libs/JSystem/include/JSystem/J3DGraphBase/J3DPacket.h",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "e66e19bc7594c9d2c1db5e06b378470be55d47c58e120d2d7b2425e7a4ec361c"
+      },
+      {
+        "bytes": 12197,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "1bd619c0e03b68cef103cea6aeaa2889530747d5",
+        "path": "libs/JSystem/src/J3DGraphBase/J3DMaterial.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "3094c7e15087c47dbf189ddc9a39d61d38d509d309f4f361c65f413f4de5efd0"
+      },
+      {
+        "bytes": 6320,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "2d175ff8714907ee7826a36c0e40afc5dc832d58",
+        "path": "libs/JSystem/src/J3DGraphBase/J3DDrawBuffer.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "fdb2ed6f22c0e3a56726e42d52839e3a1321aff412b62eb505d1f1d45f91cf8c"
+      },
+      {
+        "bytes": 7999,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "a943940d84ba5af8462bdef35b1432401143f93b",
+        "path": "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "1268786e60bebf291e8d57ebe1ff154e2e62f883d8914f61711fd7eb73578045"
+      },
+      {
+        "bytes": 5405,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "f7ad92afb81a1827987985ff9e439872123e08e1",
+        "path": "libs/JSystem/include/JSystem/J3DGraphBase/J3DVertex.h",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "d69d3d9f49320f312f2642e754be643744503966d11fe2343afe7939863ea4bb"
+      },
+      {
+        "bytes": 7201,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "6d605e64c6c648277b27d3ae528eb9dadf02405f",
+        "path": "libs/JSystem/src/J3DGraphBase/J3DVertex.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "8a0e6eddff72836ba18c3d15b9b26c5590389fcbc9e15639f587717e95c39975"
+      },
+      {
+        "bytes": 133185,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "f2f4216ffc4a40919bfbfa189e2e4feb93c0a12a",
+        "path": "src/m_Do/m_Do_ext.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "8c96e7e5d27dbfef2c7c84094f4a9e2b143670f9cdbb55fb252331660a352582"
+      },
+      {
+        "bytes": 18541,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "f8a16162a3c8fb5f3e65d6a8b3bae05c535e0062",
+        "path": "src/dusk/interp/material.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "500d5606487bed51dbf6b0c5069a25d4557f171a19fc2c93d6b4bb2877ecd3cc"
+      },
+      {
+        "bytes": 4585,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "790f5084844c15796c8c37407235115dc8c5de3e",
+        "path": "src/dusk/interp/vertex.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "f12c5f20bb0b7d34751aa18b8e2c050c4cff35694b1c8bc47d2c8aebc0a5d0c6"
+      },
+      {
+        "bytes": 35237,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "c3c72310a0294f02c947bf1336ba6063680d329f",
+        "path": "libs/JSystem/src/J3DGraphLoader/J3DModelLoader.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "1155063cd83b756b24e01022a22aa453a0980228479416414b2eabd8b61294f4"
+      },
+      {
+        "bytes": 38467,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "26295158f4914ad7be629adedc370bc8cc9fe30f",
+        "path": "src/d/d_resorce.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "13ecf79461866083bc22c21c27cbfafa77eae7550f0db92bd46cc978bdaccdb3"
+      },
+      {
+        "bytes": 3387,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "0de813cd048ee6e493c103d5d9abf4b56597d262",
+        "path": "sdk/include/mods/svc/texture.h",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "61212d07340898d1426e653f755ced49c0796281fadc15aa4c04c523e22ee255"
+      },
+      {
+        "bytes": 16263,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "ac3b2e16645fb2ebd3004675b9497f639a92319d",
+        "path": "src/dusk/mods/svc/texture.cpp",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "c5d6b4a3ae229deb2a75184a3516097dd4c41f9898531ae7fef5440ea3af426c"
+      },
+      {
+        "bytes": 14460,
+        "citation_ranges_valid": true,
+        "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+        "git_blob_sha": "ebfde28f6b08c995bc72b3a5f1667fca283110b1",
+        "path": "sdk/include/mods/svc/gfx.h",
+        "repository": "TwilitRealm/dusklight",
+        "sha256": "b3fb8300f35d5123d4081c43896af4a0d992a5a533faf0998ce169d6725257c2"
+      },
+      {
+        "bytes": 23948,
+        "citation_ranges_valid": true,
+        "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+        "git_blob_sha": "53d0d1e4dc7483bd43f9f0dbd0e30caab24f2bea",
+        "path": "src/mod.cpp",
+        "repository": "TwilitRealm/dusklight-cosmetics",
+        "sha256": "86cad571e4845648fa1b40cf9a3213bf549a82d503757891a74f7e45b145db97"
+      },
+      {
+        "bytes": 2097,
+        "citation_ranges_valid": true,
+        "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+        "git_blob_sha": "6d77949b0326d396fbd88e6a7c64a25c65b8af13",
+        "path": "src/mod.hpp",
+        "repository": "TwilitRealm/dusklight-cosmetics",
+        "sha256": "c4723f543604af5fc00b8fdc767a5b4dee4bb82d77af055a336c3d81f3dff27b"
+      },
+      {
+        "bytes": 32432,
+        "citation_ranges_valid": true,
+        "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+        "git_blob_sha": "2c878f76322c26fa79b6185806ac75fa9bb3224c",
+        "path": "src/hooks.cpp",
+        "repository": "TwilitRealm/dusklight-cosmetics",
+        "sha256": "ddcbda572e2f4f8949605b03959ad423a08a0fe251b50cbd5d14cd004a24668d"
+      },
+      {
+        "bytes": 24582,
+        "citation_ranges_valid": true,
+        "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+        "git_blob_sha": "98c60dbad320ac78ad2d5b0c4ae6cf11561e92fd",
+        "path": "src/texture_utils.cpp",
+        "repository": "TwilitRealm/dusklight-cosmetics",
+        "sha256": "3274cb3759c94069ba01e8cf435e0addaa6deddeaa5c0f3965baa7a363434b2e"
+      },
+      {
+        "bytes": 579,
+        "citation_ranges_valid": true,
+        "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+        "git_blob_sha": "49dd0df81a86355515b584ef736c0aaa0c900164",
+        "path": "src/texture_utils.hpp",
+        "repository": "TwilitRealm/dusklight-cosmetics",
+        "sha256": "8121c5cc69c9d37bd3f0298eca4726146e20843ace872a72af0469f9999e09c3"
+      },
+      {
+        "bytes": 2948,
+        "citation_ranges_valid": true,
+        "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+        "git_blob_sha": "d1dc2eb09684e25792a80844348a90010ee5b04e",
+        "path": "src/color_utils.cpp",
+        "repository": "TwilitRealm/dusklight-cosmetics",
+        "sha256": "729b99a9b3f577e79d5203d5579fe7083d86d7a3e00b3f90047bfd96a87f549c"
+      },
+      {
+        "bytes": 884,
+        "citation_ranges_valid": true,
+        "commit": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+        "git_blob_sha": "94e1ce62a88379e6ed5f880cd27f89349a8cd5b0",
+        "path": "src/color_utils.hpp",
+        "repository": "TwilitRealm/dusklight-cosmetics",
+        "sha256": "b1fd8f9a592bd1cde84d7e786ccac298ee8cfd6511100b6fcc4aaa56aed9dc3f"
+      },
+      {
+        "bytes": 1532,
+        "citation_ranges_valid": true,
+        "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+        "git_blob_sha": "5bf946057bdd40fdbe52421d9f97fb9f39991456",
+        "path": "lib/dolphin/gx/GXDispList.cpp",
+        "repository": "encounter/aurora",
+        "sha256": "4fbb909532e524f8a0d9d8d5115e7cac1b69293dcfc7bcff6f2b90a8e5517a1c"
+      },
+      {
+        "bytes": 8955,
+        "citation_ranges_valid": true,
+        "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+        "git_blob_sha": "bcaba60c56ef18ddbda9c40e39c35d3e95b9db47",
+        "path": "lib/gx/fifo.cpp",
+        "repository": "encounter/aurora",
+        "sha256": "f26e48d9854352562ddb13936f93140ffd74f2c65e41df04da8a9074e17a1c6f"
+      },
+      {
+        "bytes": 28206,
+        "citation_ranges_valid": true,
+        "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+        "git_blob_sha": "9c6ffa17e3d2fae5883a25d3208e8f71dca20073",
+        "path": "lib/gx/command_processor.cpp",
+        "repository": "encounter/aurora",
+        "sha256": "ff3eeb1c06562c0cbbeb5cbad0daa45aeb4370733dd073ccd34f10f6303ba5ab"
+      },
+      {
+        "bytes": 47567,
+        "citation_ranges_valid": true,
+        "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+        "git_blob_sha": "9d1df79ff6aaa843b2af20614fc7f90dd10ec498",
+        "path": "lib/gfx/recording.cpp",
+        "repository": "encounter/aurora",
+        "sha256": "8ecd916a9dc5911d8907c34c6912f7105bfa5a70c2f1ca9b0f9448565cfac650"
+      },
+      {
+        "bytes": 6100,
+        "citation_ranges_valid": true,
+        "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+        "git_blob_sha": "85783b60ec1a569ac7fba6dd153e8bc588cffee5",
+        "path": "lib/gfx/render_worker.cpp",
+        "repository": "encounter/aurora",
+        "sha256": "5547cf000d1daaa2f1f85256c30300dac65783918aa43ca14ab65a5e31c04aec"
+      },
+      {
+        "bytes": 43157,
+        "citation_ranges_valid": true,
+        "commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+        "git_blob_sha": "b3ae6cd1ddd30c63c821f564c3d0de8e8da415ea",
+        "path": "lib/webgpu/gpu.cpp",
+        "repository": "encounter/aurora",
+        "sha256": "980c2aeb3800292eb59f9ae76a48794e7075a0a477315d3b5175d660e40bbb73"
+      }
+    ]
+  },
+  "independent_git_tree_comparison": {
+    "base": "139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f",
+    "head": "fac19a9ead3771185f6b977e4be238652b79e2c8",
+    "unchanged_baseline_paths": 1249,
+    "changed": [],
+    "truncated": false
+  }
+}

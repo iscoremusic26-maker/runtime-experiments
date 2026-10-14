@@ -5,22 +5,33 @@ on:
     paths:
       - '.github/workflows/devf-cp04-4-recovery-tag.yml'
 permissions:
-  contents: read
+  contents: write
 jobs:
   verify-checkpoint:
     if: github.event.repository.private == true && github.head_ref == 'feature/devf-cp04-4-black-bokoblin' && github.base_ref == 'feature/devf-cp03-hp-diagnostic' && github.event.pull_request.base.sha == '139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f' && github.event.pull_request.head.repo.full_name == github.repository
     runs-on: windows-latest
-    timeout-minutes: 12
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           fetch-depth: 0
-      - name: Verify source provenance and all historical refs without compiling
+      - name: Preserve validated source audit and seal one new recovery tag
         shell: pwsh
         env:
           CHECKPOINT_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
           if ((git rev-parse HEAD) -ne $env:CHECKPOINT_SHA) { throw 'Checkpoint mismatch' }
-          python DEVF/CP04_4_BLACK_BOKOBLIN/tools/verify_checkpoint.py
-          if ($LASTEXITCODE -ne 0) { throw 'CP04.4 source/recovery provenance failed' }
+          git merge-base --is-ancestor fac19a9ead3771185f6b977e4be238652b79e2c8 HEAD
+          if ($LASTEXITCODE -ne 0) { throw 'Verified source audit not preserved' }
+          git diff --exit-code fac19a9ead3771185f6b977e4be238652b79e2c8 HEAD -- DEVF/CP04_4_BLACK_BOKOBLIN/tools/verify_checkpoint.py DEVF/CP04_4_BLACK_BOKOBLIN/evidence/source-inventory.json DEVF/CP04_4_BLACK_BOKOBLIN/evidence/previous-refs.json
+          if ($LASTEXITCODE -ne 0) { throw 'Validated provenance inputs changed' }
+          python DEVF/CP04_4_BLACK_BOKOBLIN/tools/verify_checkpoint.py --git-only
+          if ($LASTEXITCODE -ne 0) { throw 'Historical recovery verification failed' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a DEVF_CP04_4_BLACK_BOKOBLIN_BLOCKED_WITH_EVIDENCE $env:CHECKPOINT_SHA -m 'CP04.4 focused exact-source isolation audit; blocked with evidence; source/Git Windows verified; no mod build/package/runtime PASS'
+          if ($LASTEXITCODE -ne 0) { throw 'Tag already exists or creation failed; no overwrite allowed' }
+          git push origin refs/tags/DEVF_CP04_4_BLACK_BOKOBLIN_BLOCKED_WITH_EVIDENCE
+          if ($LASTEXITCODE -ne 0) { throw 'New recovery tag push failed' }
+          Write-Output "CP044_RECOVERY_TAG_PUBLISHED target=$env:CHECKPOINT_SHA"
