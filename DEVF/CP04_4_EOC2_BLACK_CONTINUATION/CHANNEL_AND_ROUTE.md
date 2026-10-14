@@ -19,7 +19,7 @@ Los cuatro materiales tienen stage0 RGB=(A=KONST K0 RGB0, B=TEXC, C=RASC, D=C0),
 
 ## Ruta A elegida: comandos privados en la llamada del ShapePacket elegido
 
-HookService oficial tipado PRE/POST sobre J3DShapePacket::drawFast, no reemplazo/manual detour ni draw de todos los actores. El punto de entrada de servicio es común a packets, pero la escritura de comandos sólo se admite después de resolver **el ActorId CP03 previamente autorizado**, verificar toda identidad/escena/mName/estado2, identidad de su modelo principal y dirección exacta de su packet shape0/2. No census/proximidad. Los packets de otros actores, ojos y accesorio no reciben comandos del mod.
+HookService oficial tipado PRE/POST sobre el helper común J3DShapePacket::drawFast, sin reemplazar la función ni instalar detours manuales. El dispatcher observa las llamadas de ese helper y filtra antes de emitir. El punto de entrada de servicio es común a packets, pero la escritura de comandos sólo se admite después de resolver **el ActorId CP03 previamente autorizado**, verificar toda identidad/escena/mName/estado2, identidad de su modelo principal y dirección exacta de su packet shape0/2. No census/proximidad. Los packets de otros actores, ojos y accesorio no reciben comandos del mod.
 
 La instancia tiene packets propios que aún apuntan a material/shape compartido. Se verifica el contrato efectivo del cuerpo/ojos/TEV/Texture sin escribirlo. ColorBlock registra getMatColorOffset dentro de la DL base; se lee su batch XF exacto de dos palabras, con bounds/header/tamaño. No se escanea memoria. mDiffFlag exacto0x11000084 no contiene MatColor: la DL diferida que ya se ejecutó no sobreescribe ese MATCOLOR0 base.
 
