@@ -1,0 +1,156 @@
+{
+  "status": "DOWNLOAD_VERIFIED",
+  "outer_artifact_members": [
+    {
+      "path": "DEVF_CP02_EOC2_ELITE_NATIVE_windows-amd64_13959231169aedc111c1c5b5cac747bd62e252fd.dusk",
+      "directory": false,
+      "bytes": 7410,
+      "crc32": "bbb3dbd5",
+      "sha256": "c3166dcafec29d5963a77bd8bbb1a0cc2197650f4a0c30d310b459be9afa0901"
+    },
+    {
+      "path": "DOWNLOAD_MANIFEST.json",
+      "directory": false,
+      "bytes": 1270,
+      "crc32": "5c3d058a",
+      "sha256": "8979a663967c53d6e16c266fa502c3e9f3874a204c8e4b2dfad8d34e9507aef5"
+    }
+  ],
+  "delivery_artifact_sha256": "e96b1a5f26745cfad2b023616e8af7f24afb64434921611f3060631edf34a25a",
+  "text_artifact_sha256": "1c711db7c27146af5a8657cdc10801600d8a3cefd2f0f9f1fae952179175fd8d",
+  "all_CRC_and_hashes_pass": true,
+  "source_ledger_verified": true,
+  "compiled_DLL_sha256_matches": true,
+  "package": {
+    "status": "STAGE_PACKAGE_PASS",
+    "package_bytes": 7410,
+    "package_sha256": "c3166dcafec29d5963a77bd8bbb1a0cc2197650f4a0c30d310b459be9afa0901",
+    "dll_bytes": 13824,
+    "dll_sha256": "c8562d0258bd936d1affd2ec1ea8e7efd89c11302644c66fe65bf2988ad07366",
+    "manifest_sha256": "ec877d82d2ae38be7b49c34efb79a65f54dae1ad315a14ab0a8c3dca981c1c4d",
+    "manifest": {
+      "id": "dev.devf.cp02_eoc_elite_native",
+      "name": "DEVF CP02 \u2014 Bokoblin \u00c9lite (E_OC2)",
+      "version": "0.2.0",
+      "description": "NATIVE PARAMETRIZED VARIANT TEST. One E_oc stage entry selects E_OC2 via angle.x0106 and search M via FFFF0100, same CP01 position. No custom profile, memory edits or new AI. User approval required before install; never load with CP01 at the same coordinate."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 397,
+        "crc32": "30f216f9",
+        "sha256": "ec877d82d2ae38be7b49c34efb79a65f54dae1ad315a14ab0a8c3dca981c1c4d"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 13824,
+        "crc32": "af2d725c",
+        "sha256": "c8562d0258bd936d1affd2ec1ea8e7efd89c11302644c66fe65bf2988ad07366"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "VCRUNTIME140.dll": [
+          "memset",
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memcpy"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_initterm_e",
+          "_execute_onexit_table",
+          "_initterm",
+          "_initialize_onexit_table",
+          "_initialize_narrow_environment",
+          "_seh_filter_dll",
+          "_configure_narrow_argv"
+        ],
+        "KERNEL32.dll": [
+          "InitializeSListHead",
+          "DisableThreadLibraryCalls",
+          "QueryPerformanceCounter",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetSystemTimeAsFileTime"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "STAGE_ONLY_PE_PASS",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "game_imports": 0,
+      "required_services": "Host2.2 Log1.0 Stage1.0 Game2.0",
+      "permitted_game_mutation": "StageService.add_actor via resolved function pointer only"
+    },
+    "dll_internal_equals_loose": true,
+    "runtime_tested": false
+  },
+  "source_commit": "13959231169aedc111c1c5b5cac747bd62e252fd",
+  "workflow_commit": "d3a85769f096e2d6eb065ddf2d69847ab0b6b8e1",
+  "run_id": "38501242719",
+  "dll_loaded": false,
+  "game_executed": false,
+  "installed": false,
+  "execution_authorized": false,
+  "read_only": false,
+  "CP02_RUNTIME": "NOT_TESTED",
+  "CP03": "NOT_AUTHORIZED"
+}

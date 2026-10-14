@@ -1,0 +1,13 @@
+{
+  "run": 38501242719,
+  "job": 115648464135,
+  "conclusion": "success",
+  "text_artifact": 11866420418,
+  "text_bytes": 21005,
+  "text_archive_sha256": "1c711db7c27146af5a8657cdc10801600d8a3cefd2f0f9f1fae952179175fd8d",
+  "delivery_artifact": 11866086914,
+  "delivery_bytes": 8162,
+  "delivery_archive_sha256": "e96b1a5f26745cfad2b023616e8af7f24afb64434921611f3060631edf34a25a",
+  "delivery_expires_UTC": "2026-11-13T02:30:04Z",
+  "download_verified": true
+}

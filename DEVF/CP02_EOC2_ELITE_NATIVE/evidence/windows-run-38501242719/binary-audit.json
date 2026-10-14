@@ -1,0 +1,76 @@
+{
+  "machine": "AMD64",
+  "imports": {
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "VCRUNTIME140.dll": [
+      "memset",
+      "__std_type_info_destroy_list",
+      "__C_specific_handler",
+      "memcpy"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_cexit",
+      "_initterm_e",
+      "_execute_onexit_table",
+      "_initterm",
+      "_initialize_onexit_table",
+      "_initialize_narrow_environment",
+      "_seh_filter_dll",
+      "_configure_narrow_argv"
+    ],
+    "KERNEL32.dll": [
+      "InitializeSListHead",
+      "DisableThreadLibraryCalls",
+      "QueryPerformanceCounter",
+      "GetCurrentProcessId",
+      "GetCurrentThreadId",
+      "GetSystemTimeAsFileTime"
+    ]
+  },
+  "metadata": [
+    {
+      "kind": "header",
+      "abi": 1
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.host",
+      "major": 2,
+      "minor": 2
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.log",
+      "major": 1,
+      "minor": 0
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.stage",
+      "major": 1,
+      "minor": 0
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.game",
+      "major": 2,
+      "minor": 0
+    }
+  ],
+  "status": "STAGE_ONLY_PE_PASS",
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "game_imports": 0,
+  "required_services": "Host2.2 Log1.0 Stage1.0 Game2.0",
+  "permitted_game_mutation": "StageService.add_actor via resolved function pointer only"
+}

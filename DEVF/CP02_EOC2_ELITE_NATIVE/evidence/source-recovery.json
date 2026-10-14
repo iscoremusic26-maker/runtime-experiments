@@ -1,0 +1,15 @@
+{
+  "source_commit": "13959231169aedc111c1c5b5cac747bd62e252fd",
+  "ci_commit": "d3a85769f096e2d6eb065ddf2d69847ab0b6b8e1",
+  "independent_GitHub_fetch": "PASS",
+  "main_and_CI_bare_fsck": "PASS",
+  "baseline_commit": "53ceaca4c28653bfb057ac3aaabb18b3624ea19b",
+  "baseline_tree": "44e972812be8212d217ba5ca68e111c05d80f7ef",
+  "baseline_files_preserved": 981,
+  "diff_only_CP02_new_folder": true,
+  "previous_annotated_tag_unchanged": true,
+  "old_workflows_unchanged": 9,
+  "no_game_or_DLL_execution": true,
+  "final_tag": "DEVF_CP02_EOC2_ELITE_NATIVE_PACKAGE_VERIFIED",
+  "final_tag_fetch": "Performed after publication; final PR delivery records exact commit/tag equality and fsck"
+}

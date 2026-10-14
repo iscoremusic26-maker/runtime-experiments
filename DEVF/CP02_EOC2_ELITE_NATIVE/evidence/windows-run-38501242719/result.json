@@ -1,0 +1,490 @@
+{
+  "status": "CP02_PACKAGE_PASS_DOWNLOAD_PENDING",
+  "source_commit": "13959231169aedc111c1c5b5cac747bd62e252fd",
+  "ci_head": "d3a85769f096e2d6eb065ddf2d69847ab0b6b8e1",
+  "run_id": "38501242719",
+  "started_utc": "2026-10-14T02:29:47.844224+00:00",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.281,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.859,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\DEVF\\CP02_EOC2_ELITE_NATIVE",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 5.563,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_cp02_eoc_elite_native",
+        "cp02_eoc2_lab",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 5.422,
+      "exit": 0
+    },
+    {
+      "label": "fake-success",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "success"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-reentry",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "reentry"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-reject",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "reject"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-zero-handle",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "zero-handle"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "fake-throw",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "throw"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-missing",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "missing"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "fake-wrong-host",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "wrong-host"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-small-stage",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "small-stage"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-null-add",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "null-add"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "fake-wrong-stage-major",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "wrong-stage-major"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-null-context",
+      "command": [
+        "<WORK>\\build\\cp02_eoc2_lab.exe",
+        "null-context"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "module-headers",
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_cp02_eoc_elite_native.dll"
+      ],
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_cp02_eoc_elite_native.dll"
+      ],
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_cp02_eoc_elite_native.dll"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "official-package",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_cp02_eoc_elite_native_package",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 0.281,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "DLL_loaded": false,
+  "host_built": false,
+  "mode": "ONE_NATIVE_EOC2_PARAMETRIZED_STAGE_ADDITION",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_ledger": {
+    "CMakeLists.txt": "71dfdbb21b91f5d735cdfc713f2f01d87de01c9b50d06fa1d1ce758f8ce5a372",
+    "mod.json": "ec877d82d2ae38be7b49c34efb79a65f54dae1ad315a14ab0a8c3dca981c1c4d",
+    "SOURCE_MANIFEST.json": "3580173563b159646bb792bce69e211847bf0b56c128ec75e40bd85b2a9639cc",
+    "ci/audit.py": "31a9d23014af75875cff7f1ed74caa25e4ba2d8c44c7151c90a02eaaac2b480c",
+    "ci/reviewed-crt-surface.json": "a7494dc6b61be94f54e73b4af8148c7b39476fba118734a092a4a84108b81565",
+    "ci/reviewed-exact-imports.json": "020c69177c5a76049c82fe57b236c5355444fae055dd6c3c2a66eb3b26ffcc5a",
+    "ci/run_windows.py": "f5419c706185ca7b2c25f56462f2579dbfac99d16e6d603139f3cec9390ff661",
+    "ci/verify_download.py": "be75c7a287c332253479aadca0fd73a780a1651dfa3713f8395c21d3ae8fcaf6",
+    "ci/windows-eoc2.yml": "57086dc42c484368b6d74140f60a9e719244c7dcf7dc3cedf8147ab3cd499808",
+    "src/mod.cpp": "0b172fe0a7d60fc31e3b0ad5a2012757061ba83b1339d911758cb6ff6272a26a",
+    "tests/stage_lab.cpp": "3a12d0aea6f95d047222bb4073be580f8a9aaf5e95b0332f1b054882ffb99f89"
+  },
+  "dependencies": {
+    "SDK": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "Aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "lib_bytes": 9400986,
+    "lib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "lib_CRC": "70c35731"
+  },
+  "fake_scenarios": {
+    "cases": [
+      "success",
+      "reentry",
+      "reject",
+      "zero-handle",
+      "throw",
+      "missing",
+      "wrong-host",
+      "small-stage",
+      "null-add",
+      "wrong-stage-major",
+      "null-context"
+    ],
+    "passed": 11,
+    "each_separate_process": true,
+    "game_or_DLL_runtime": false,
+    "1000_noop_updates_per_case": true,
+    "payload_bytes": "32 BE ACTR, E_oc/FFFF0100/(-1250,-6304.0083,60750)/(262,0,0)/FFFF",
+    "reason_reexecuted": "CP02 production payload/identity and expected bytes differ from CP01; no equivalent source hashes"
+  },
+  "binary_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "VCRUNTIME140.dll": [
+        "memset",
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memcpy"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_cexit",
+        "_initterm_e",
+        "_execute_onexit_table",
+        "_initterm",
+        "_initialize_onexit_table",
+        "_initialize_narrow_environment",
+        "_seh_filter_dll",
+        "_configure_narrow_argv"
+      ],
+      "KERNEL32.dll": [
+        "InitializeSListHead",
+        "DisableThreadLibraryCalls",
+        "QueryPerformanceCounter",
+        "GetCurrentProcessId",
+        "GetCurrentThreadId",
+        "GetSystemTimeAsFileTime"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.stage",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "STAGE_ONLY_PE_PASS",
+    "exports": [
+      "mod_ctx",
+      "mod_initialize",
+      "mod_meta",
+      "mod_shutdown",
+      "mod_update"
+    ],
+    "game_imports": 0,
+    "required_services": "Host2.2 Log1.0 Stage1.0 Game2.0",
+    "permitted_game_mutation": "StageService.add_actor via resolved function pointer only"
+  },
+  "PE_negatives": [
+    {
+      "case": "x86-machine",
+      "rejected": true,
+      "DLL_loaded": false
+    },
+    {
+      "case": "ActorService",
+      "rejected": true,
+      "DLL_loaded": false
+    },
+    {
+      "case": "export-name",
+      "rejected": true,
+      "DLL_loaded": false
+    }
+  ],
+  "production_units": [
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_cp02_eoc_elite_native_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL- /FIglobal.h /FoCMakeFiles\\devf_cp02_eoc_elite_native.dir\\src\\mod.cpp.obj /FdCMakeFiles\\devf_cp02_eoc_elite_native.dir\\ /FS -c <WORKSPACE>\\DEVF\\CP02_EOC2_ELITE_NATIVE\\src\\mod.cpp",
+      "file": "<WORKSPACE>/DEVF/CP02_EOC2_ELITE_NATIVE/src/mod.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_cp02_eoc_elite_native.dir/src/mod.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_cp02_eoc_elite_native_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL- /FIglobal.h /FoCMakeFiles\\devf_cp02_eoc_elite_native.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp.obj /FdCMakeFiles\\devf_cp02_eoc_elite_native.dir\\ /FS -c <OFFICIAL>\\sdk\\src\\game_feature.cpp",
+      "file": "<OFFICIAL>/sdk/src/game_feature.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_cp02_eoc_elite_native.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/.official/sdk/src/game_feature.cpp.obj"
+    }
+  ],
+  "loose_dll": {
+    "bytes": 13824,
+    "sha256": "c8562d0258bd936d1affd2ec1ea8e7efd89c11302644c66fe65bf2988ad07366"
+  },
+  "package_verification": {
+    "status": "STAGE_PACKAGE_PASS",
+    "package_bytes": 7410,
+    "package_sha256": "c3166dcafec29d5963a77bd8bbb1a0cc2197650f4a0c30d310b459be9afa0901",
+    "dll_bytes": 13824,
+    "dll_sha256": "c8562d0258bd936d1affd2ec1ea8e7efd89c11302644c66fe65bf2988ad07366",
+    "manifest_sha256": "ec877d82d2ae38be7b49c34efb79a65f54dae1ad315a14ab0a8c3dca981c1c4d",
+    "manifest": {
+      "id": "dev.devf.cp02_eoc_elite_native",
+      "name": "DEVF CP02 \u2014 Bokoblin \u00c9lite (E_OC2)",
+      "version": "0.2.0",
+      "description": "NATIVE PARAMETRIZED VARIANT TEST. One E_oc stage entry selects E_OC2 via angle.x0106 and search M via FFFF0100, same CP01 position. No custom profile, memory edits or new AI. User approval required before install; never load with CP01 at the same coordinate."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 397,
+        "crc32": "30f216f9",
+        "sha256": "ec877d82d2ae38be7b49c34efb79a65f54dae1ad315a14ab0a8c3dca981c1c4d"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 13824,
+        "crc32": "af2d725c",
+        "sha256": "c8562d0258bd936d1affd2ec1ea8e7efd89c11302644c66fe65bf2988ad07366"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "VCRUNTIME140.dll": [
+          "memset",
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memcpy"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_initterm_e",
+          "_execute_onexit_table",
+          "_initterm",
+          "_initialize_onexit_table",
+          "_initialize_narrow_environment",
+          "_seh_filter_dll",
+          "_configure_narrow_argv"
+        ],
+        "KERNEL32.dll": [
+          "InitializeSListHead",
+          "DisableThreadLibraryCalls",
+          "QueryPerformanceCounter",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetSystemTimeAsFileTime"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "STAGE_ONLY_PE_PASS",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "game_imports": 0,
+      "required_services": "Host2.2 Log1.0 Stage1.0 Game2.0",
+      "permitted_game_mutation": "StageService.add_actor via resolved function pointer only"
+    },
+    "dll_internal_equals_loose": true,
+    "runtime_tested": false
+  },
+  "ended_utc": "2026-10-14T02:30:03.239988+00:00"
+}

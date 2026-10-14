@@ -1,0 +1,23 @@
+{
+  "source_commit": "13959231169aedc111c1c5b5cac747bd62e252fd",
+  "ci_commit": "d3a85769f096e2d6eb065ddf2d69847ab0b6b8e1",
+  "run": 38501242719,
+  "gates": {
+    "CP01_baseline": "USER_REPORTED_RUNTIME_PASS_APPEARANCE_ANIMATION_LIFE_WITHDRAWAL",
+    "CP01_detailed_combat": "NOT_VERIFIED",
+    "CP02_source_preset": "PASS_STATIC",
+    "CP02_payload_and_init_safety": "11_PASS_NEW_FOCUSED_CASES",
+    "CP02_MSVClink": "PASS",
+    "CP02_PE_and_package_audit": "PASS",
+    "CP02_build_package": "PASS",
+    "CP02_actual_download": "DOWNLOAD_VERIFIED",
+    "CP02_runtime_model_resource_mount_HP_attack_detection_combat": "NOT_TESTED",
+    "CP02_runtime_withdrawal_and_other_enemies_regressions": "NOT_TESTED",
+    "CP02_damage_multiplier_2x": "NOT_CLAIMED",
+    "CP02_mode": "NATIVE_PARAMETRIZED_E_OC2_NOT_CUSTOM_PROFILE_OR_AI",
+    "execution_authorized": false,
+    "installed": false,
+    "game_or_DLL_executed": false,
+    "CP03": "NOT_AUTHORIZED"
+  }
+}

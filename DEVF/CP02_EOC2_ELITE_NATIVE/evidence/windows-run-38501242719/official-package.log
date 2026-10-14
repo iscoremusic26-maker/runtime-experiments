@@ -1,0 +1,5 @@
+[1/1] Packaging devf_cp02_eoc_elite_native -> <WORK>/build/mods/devf_cp02_eoc_elite_native.dusk
+mod.json
+lib
+lib/windows-amd64
+lib/windows-amd64/mod.dll
