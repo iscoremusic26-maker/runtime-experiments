@@ -1,0 +1,747 @@
+{
+  "kind": "BOUNDED_SOURCE_REVIEW_NOT_RUNTIME",
+  "base": "08433c6cb338637ec4191bdcc454cbc9537ad7df",
+  "official_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "aurora_commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "files": {
+    "src/dusk/mods/svc/actor.cpp": {
+      "git_blob": "dbcf547d55a9764af52f5a7090968c8635e31405",
+      "sha256_git_blob": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3",
+      "lines": 403,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp"
+    },
+    "include/f_pc/f_pc_manager.h": {
+      "git_blob": "d8d9cbe1c9b3af04470de857efacea057800434b",
+      "sha256_git_blob": "fe69d11984b1894bdded58c8d6f65b7744b6f3d95ad6cee00320a69a901a68f5",
+      "lines": 116,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_manager.h"
+    },
+    "src/f_pc/f_pc_stdcreate_req.cpp": {
+      "git_blob": "a262a1bac6e2cd813023500fe6a41ea5b7658873",
+      "sha256_git_blob": "fd45dc723ec0856c09e58d8d5826af6b3197ea43f316a33adbd77b01e0977d75",
+      "lines": 178,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_stdcreate_req.cpp"
+    },
+    "src/f_pc/f_pc_create_req.cpp": {
+      "git_blob": "e5fdd5ef007331dd8ee0812226391143aeff077e",
+      "sha256_git_blob": "2863073dc547598cc34934bb84019155240b351e228f6ca919f3f30293df70f0",
+      "lines": 148,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_create_req.cpp"
+    },
+    "src/f_pc/f_pc_base.cpp": {
+      "git_blob": "f876774214264eba4987afd2f24aa8d207c39955",
+      "sha256_git_blob": "766c08a272bc39e336df4e86d089c39301a1855a079ce0c3a181c13684796828",
+      "lines": 205,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_base.cpp"
+    },
+    "include/f_pc/f_pc_base.h": {
+      "git_blob": "63c629e6241960ecbb9be2666c5a1cb89c556ec8",
+      "sha256_git_blob": "39d60f1aaf0ffb4b84b915ecb714b46afc8dc318e7d7cc8b81f6c0898072f577",
+      "lines": 62,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_base.h"
+    },
+    "include/f_op/f_op_actor_mng.h": {
+      "git_blob": "29dfac13894b1ebc34560d295ac56382927ac93d",
+      "sha256_git_blob": "67b3551a7386d5337ef1988f57d5c358e7285a2f39edceb9c1701cf99a3b8cc0",
+      "lines": 914,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor_mng.h"
+    },
+    "src/f_op/f_op_actor_iter.cpp": {
+      "git_blob": "6c9d012456a61d50aea6edd863cd2d793124051d",
+      "sha256_git_blob": "37e474e2c77a5c4b740adad6b1a168eaab0bc837cb8d39bda4ee2715a2cb6de9",
+      "lines": 31,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_iter.cpp"
+    },
+    "src/f_op/f_op_actor.cpp": {
+      "git_blob": "86a05077a845d4be1d4db227dd781a66d3dfb6d2",
+      "sha256_git_blob": "c190ba215061fcbfd71536733a00351c2bad600f1fe0d31d2083e89c60226839",
+      "lines": 655,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp"
+    },
+    "src/f_op/f_op_actor_mng.cpp": {
+      "git_blob": "207a0471b3acf8dc936c2aab46f8a033042178e8",
+      "sha256_git_blob": "4c57494d769800ad0a1dbbfc836a265803036fa2e5b1594c5a82e9d799617845",
+      "lines": 2494,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp"
+    },
+    "src/f_pc/f_pc_executor.cpp": {
+      "git_blob": "b2a343aab296b5f294393708509dcb6ca540d220",
+      "sha256_git_blob": "321c16edf0e8b2fba1b5cbb8ce70c4e9e1d2f9995504d8987548236f3f36bccd",
+      "lines": 87,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_executor.cpp"
+    },
+    "src/f_pc/f_pc_manager.cpp": {
+      "git_blob": "b9952a27a4336e412ff84bf44cef2fbb65cdf3ba",
+      "sha256_git_blob": "a8da75b1ac0aa45b9125b3dba546e5971d3600a1be251cb8cee57afb3c64b2ce",
+      "lines": 173,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_manager.cpp"
+    },
+    "src/f_pc/f_pc_creator.cpp": {
+      "git_blob": "cdc0af04b13ccf9f447ecab2c364a0faf589ff45",
+      "sha256_git_blob": "9b8d81b988d52298c09cdd740a80bc03d5db382ac3774036b7f7339b791bab88",
+      "lines": 24,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_creator.cpp"
+    },
+    "src/d/actor/d_a_e_oc.cpp": {
+      "git_blob": "57828ccb7c987757929835da38623d8a6b04ebbd",
+      "sha256_git_blob": "e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4",
+      "lines": 2865,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_oc.cpp"
+    },
+    "src/f_ap/f_ap_game.cpp": {
+      "git_blob": "6d8c621e58e4d6208813c4a2800938217c61700c",
+      "sha256_git_blob": "cc98e04dcb13f4fb8fd518c78b73c468fe293d652d3ad5bce2ba23b58d5fa081",
+      "lines": 865,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp"
+    },
+    "src/dusk/mods/loader/loader.cpp": {
+      "git_blob": "16e52f12da57d29fb569065b8ff88aa53f1281d3",
+      "sha256_git_blob": "f261650d049ba47af4562e322b8695cb1466755203314385b1c85a7e6144dc82",
+      "lines": 1285,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp"
+    },
+    "docs/modding.md": {
+      "git_blob": "a138ab329166fd5a9fde0e04bbd15a5d7af9d570",
+      "sha256_git_blob": "815dee47100b1a1c59aba12a881486f1bf0ad716c97cafbffb619607f36daf27",
+      "lines": 1626,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/docs/modding.md"
+    },
+    "include/f_op/f_op_actor.h": {
+      "git_blob": "2ac262ced12943c5156fe050472d2c58dd7ed113",
+      "sha256_git_blob": "45cbac3b60ea9c47d9583d78f813c69ae38437a7c9b2ea28f1c9c3e26392197c",
+      "lines": 441,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor.h"
+    },
+    "src/d/d_cc_uty.cpp": {
+      "git_blob": "91fc6677c17e8360315d468bfe3a2167e87b953d",
+      "sha256_git_blob": "33b6e2b58c41758fcc92d535fa1a89f789e8d26b737b8055edfdb48b4f4f1fc1",
+      "lines": 521,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_cc_uty.cpp"
+    },
+    "src/dusk/mods/loader/natives.cpp": {
+      "git_blob": "1db66e508b12be26ab5f2a935f8a39e2f218e87a",
+      "sha256_git_blob": "8a033da1c9eb871358c3fd46fc8e47234f78486452dec72a6e13d73d0b6a24b7",
+      "lines": 620,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp"
+    },
+    "src/dusk/mods/loader/native_module.cpp": {
+      "git_blob": "0d4eb6a984991bd474d7ed40a881de25db91ac6f",
+      "sha256_git_blob": "c592f80238e6db8650962a86e5fc28ba3d96a3e7d6cb2150103b748baf805029",
+      "lines": 79,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/native_module.cpp"
+    },
+    "src/dusk/mods/svc/registry.cpp": {
+      "git_blob": "c820602e6a7889135cb36fb993631a2eefab2c40",
+      "sha256_git_blob": "747fe99de33833d40243c7069458cd1fb2fddc998397ef5cd63e03a0a6d6e059",
+      "lines": 395,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp"
+    },
+    "src/f_pc/f_pc_deletor.cpp": {
+      "git_blob": "be6d169bed1ee6b5c4ca66d1be862bab7a729c80",
+      "sha256_git_blob": "d5e772d9570afd0d28eed6bc47b099d70c693baa0cc3ca9eb20031fd5ff1bfaa",
+      "lines": 136,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_deletor.cpp"
+    },
+    "sdk/include/mods/svc/actor.h": {
+      "git_blob": "6c2bc5d48564c09f234ecabc7225ca060ac50efa",
+      "sha256_git_blob": "77c180571664dbaa07026bcbf073c0d459cb6e0e7264ddbca6d18770081082e8",
+      "lines": 94,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/actor.h"
+    },
+    "include/d/d_com_inf_game.h": {
+      "git_blob": "dcf681162f851195c2a6708d54190d033e9b7454",
+      "sha256_git_blob": "a0fa44e73ec7c16e299d59eb69b10d368d725bd90265d611ad71c81526ff9343",
+      "lines": 5791,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_com_inf_game.h"
+    },
+    "include/d/d_stage.h": {
+      "git_blob": "fb8fd3124b7912e90c0587c8223c50826a65f022",
+      "sha256_git_blob": "dc59d4f57374566c29727bbc3eacdeb21d7b998c8e4f1550220cb840738651ab",
+      "lines": 1619,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_stage.h"
+    },
+    "src/d/d_com_inf_game.cpp": {
+      "git_blob": "8b3f0bde1d4ba4285638d798b2ee4577412acecb",
+      "sha256_git_blob": "a7dc9b5a64489e92c5eec6f3bc097857f66ad3c54f72ba106e14db4acc7c6ce3",
+      "lines": 6645,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp"
+    },
+    "src/f_pc/f_pc_layer.cpp": {
+      "git_blob": "81cea8fd1cb983e548711c643e34423ea366a303",
+      "sha256_git_blob": "6f57e793b93cc268a6f5ad0b13f2100243d79473867f88a7bf95646b233c27da",
+      "lines": 169,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_layer.cpp"
+    },
+    "cmake/GameABIConfig.cmake": {
+      "git_blob": "ef3b5818dc43f29b01742b781bad87dc0fae2f85",
+      "sha256_git_blob": "a4275736a0d6279c8ecadb68a28a894ff37fab13e5ecf14a6c6e450aaaf7c4ab",
+      "lines": 68,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/GameABIConfig.cmake"
+    },
+    "sdk/include/mods/svc/game.h": {
+      "git_blob": "61a10968e6b76ffec20cea678c31854fbfffc75d",
+      "sha256_git_blob": "23fbe752be5908b6fe41bae9846c38a058bd6597835c24060d149c6dfdc8f4b9",
+      "lines": 26,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h"
+    }
+  },
+  "claims": {
+    "C01": {
+      "status": "SOURCE-VERIFIED",
+      "claim": "ActorService returns the request ID, and fpcBs_Create assigns that same ID to the process.",
+      "references": [
+        {
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "lines": [
+            220,
+            250
+          ]
+        },
+        {
+          "path": "include/f_pc/f_pc_manager.h",
+          "lines": [
+            45,
+            48
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+          "lines": [
+            140,
+            177
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_create_req.cpp",
+          "lines": [
+            132,
+            147
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_base.cpp",
+          "lines": [
+            133,
+            175
+          ]
+        }
+      ]
+    },
+    "C02": {
+      "status": "SOURCE-VERIFIED",
+      "claim": "The allocator increments a static int. No ordinary per-death ID reuse; no explicit generation/overflow guarantee.",
+      "references": [
+        {
+          "path": "src/f_pc/f_pc_base.cpp",
+          "lines": [
+            54,
+            57
+          ]
+        },
+        {
+          "path": "include/f_pc/f_pc_base.h",
+          "lines": [
+            17,
+            44
+          ]
+        }
+      ]
+    },
+    "C03": {
+      "status": "SOURCE-VERIFIED",
+      "claim": "One-argument actor lookup includes partial actors; two-argument overload guards creation and can return 1 with NULL. Creation false alone does not mean ready. Execution state 2 differs from deletion state 3.",
+      "references": [
+        {
+          "path": "include/f_op/f_op_actor_mng.h",
+          "lines": [
+            218,
+            224
+          ]
+        },
+        {
+          "path": "src/f_op/f_op_actor_iter.cpp",
+          "lines": [
+            24,
+            31
+          ]
+        },
+        {
+          "path": "src/f_op/f_op_actor.cpp",
+          "lines": [
+            443,
+            477
+          ]
+        },
+        {
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "lines": [
+            152,
+            161
+          ]
+        },
+        {
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "lines": [
+            298,
+            318
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_executor.cpp",
+          "lines": [
+            32,
+            68
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_manager.cpp",
+          "lines": [
+            48,
+            50
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_creator.cpp",
+          "lines": [
+            10,
+            19
+          ]
+        }
+      ]
+    },
+    "C04": {
+      "status": "SOURCE-VERIFIED",
+      "claim": "Native E_OC2 initialization sets 220 and executes within create before returning; action includes damage_check and collision registration. No runtime hit inferred.",
+      "references": [
+        {
+          "path": "src/d/actor/d_a_e_oc.cpp",
+          "lines": [
+            2734,
+            2747
+          ]
+        },
+        {
+          "path": "src/d/actor/d_a_e_oc.cpp",
+          "lines": [
+            2771,
+            2779
+          ]
+        },
+        {
+          "path": "src/d/actor/d_a_e_oc.cpp",
+          "lines": [
+            2804,
+            2833
+          ]
+        },
+        {
+          "path": "src/d/actor/d_a_e_oc.cpp",
+          "lines": [
+            2415,
+            2418
+          ]
+        },
+        {
+          "path": "src/d/actor/d_a_e_oc.cpp",
+          "lines": [
+            2563,
+            2570
+          ]
+        },
+        {
+          "path": "src/d/actor/d_a_e_oc.cpp",
+          "lines": [
+            2586,
+            2639
+          ]
+        }
+      ]
+    },
+    "C05": {
+      "status": "SOURCE-VERIFIED",
+      "claim": "mod_update precedes create handler and engine execute/draw; A0 cannot observe same-frame completion via a second mod_update before execution.",
+      "references": [
+        {
+          "path": "src/f_ap/f_ap_game.cpp",
+          "lines": [
+            803,
+            831
+          ]
+        },
+        {
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "lines": [
+            1237,
+            1266
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_manager.cpp",
+          "lines": [
+            87,
+            115
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+          "lines": [
+            99,
+            109
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_create_req.cpp",
+          "lines": [
+            103,
+            120
+          ]
+        }
+      ]
+    },
+    "C06": {
+      "status": "SOURCE-VERIFIED",
+      "claim": "Public typed health exists and native docs permit data-field access. No E_OC or cc_at_check use of field_0x560 beyond initialization was found in the bounded methods reviewed; max-HP semantics NOT_VERIFIED. User only authorizes conceptual evaluation.",
+      "references": [
+        {
+          "path": "docs/modding.md",
+          "lines": [
+            121,
+            127
+          ]
+        },
+        {
+          "path": "include/f_op/f_op_actor.h",
+          "lines": [
+            314,
+            315
+          ]
+        },
+        {
+          "path": "src/d/actor/d_a_e_oc.cpp",
+          "lines": [
+            2771,
+            2779
+          ]
+        },
+        {
+          "path": "src/d/actor/d_a_e_oc.cpp",
+          "lines": [
+            638,
+            780
+          ]
+        },
+        {
+          "path": "src/d/d_cc_uty.cpp",
+          "lines": [
+            441,
+            448
+          ]
+        }
+      ]
+    },
+    "C07": {
+      "status": "SOURCE-VERIFIED",
+      "claim": "Shutdown errors/exceptions do not veto image retirement; shutdown can be skipped on partial initialization. Physical DLL release is deferred to a drain, not to actor completion.",
+      "references": [
+        {
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "lines": [
+            264,
+            289
+          ]
+        },
+        {
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "lines": [
+            296,
+            338
+          ]
+        },
+        {
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "lines": [
+            706,
+            725
+          ]
+        },
+        {
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "lines": [
+            1100,
+            1105
+          ]
+        },
+        {
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "lines": [
+            1268,
+            1282
+          ]
+        },
+        {
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "lines": [
+            563,
+            583
+          ]
+        },
+        {
+          "path": "src/dusk/mods/loader/native_module.cpp",
+          "lines": [
+            18,
+            20
+          ]
+        },
+        {
+          "path": "src/dusk/mods/loader/native_module.cpp",
+          "lines": [
+            70,
+            74
+          ]
+        },
+        {
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "lines": [
+            210,
+            223
+          ]
+        }
+      ]
+    },
+    "C08": {
+      "status": "SOURCE-VERIFIED",
+      "claim": "Native create does not register ModContext ownership. Delete may abort an allocated partial actor, but not a request lacking an actor; rejection and asynchronous deletion remain possible. A1 NULL/retained callback behavior and repeated postmethod are explicit.",
+      "references": [
+        {
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "lines": [
+            220,
+            236
+          ]
+        },
+        {
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "lines": [
+            309,
+            318
+          ]
+        },
+        {
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "lines": [
+            359,
+            400
+          ]
+        },
+        {
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "lines": [
+            240,
+            255
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_deletor.cpp",
+          "lines": [
+            42,
+            59
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_deletor.cpp",
+          "lines": [
+            63,
+            135
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_creator.cpp",
+          "lines": [
+            18,
+            20
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_create_req.cpp",
+          "lines": [
+            61,
+            74
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+          "lines": [
+            21,
+            31
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+          "lines": [
+            99,
+            109
+          ]
+        }
+      ]
+    },
+    "C09": {
+      "status": "NOT_VERIFIED",
+      "claim": "Getters and append semantics exist, but room_num is not data-layer/stage/atomic ready context. Scheduler layer and DZR data-layer are distinct; no safe gating implemented.",
+      "references": [
+        {
+          "path": "sdk/include/mods/svc/actor.h",
+          "lines": [
+            52,
+            90
+          ]
+        },
+        {
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "lines": [
+            136,
+            149
+          ]
+        },
+        {
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "lines": [
+            192,
+            232
+          ]
+        },
+        {
+          "path": "src/f_op/f_op_actor.cpp",
+          "lines": [
+            466,
+            536
+          ]
+        },
+        {
+          "path": "include/f_pc/f_pc_manager.h",
+          "lines": [
+            45,
+            48
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+          "lines": [
+            49,
+            69
+          ]
+        },
+        {
+          "path": "include/d/d_com_inf_game.h",
+          "lines": [
+            456,
+            460
+          ]
+        },
+        {
+          "path": "include/d/d_com_inf_game.h",
+          "lines": [
+            3359,
+            3368
+          ]
+        },
+        {
+          "path": "include/d/d_stage.h",
+          "lines": [
+            1138,
+            1143
+          ]
+        },
+        {
+          "path": "include/d/d_stage.h",
+          "lines": [
+            1211,
+            1218
+          ]
+        },
+        {
+          "path": "src/d/d_com_inf_game.cpp",
+          "lines": [
+            880,
+            900
+          ]
+        },
+        {
+          "path": "src/f_pc/f_pc_layer.cpp",
+          "lines": [
+            95,
+            108
+          ]
+        }
+      ]
+    },
+    "C10": {
+      "status": "NEEDS-RULE_EXCEPTION",
+      "claim": "Official game feature exposes typed ABI/public code, not a service HP setter. Future module would add reviewed native imports and a single own-instance health write; actual link/PE not tested.",
+      "references": [
+        {
+          "path": "docs/modding.md",
+          "lines": [
+            121,
+            127
+          ]
+        },
+        {
+          "path": "cmake/GameABIConfig.cmake",
+          "lines": [
+            31,
+            60
+          ]
+        },
+        {
+          "path": "sdk/include/mods/svc/game.h",
+          "lines": [
+            9,
+            26
+          ]
+        },
+        {
+          "path": "sdk/include/mods/svc/actor.h",
+          "lines": [
+            74,
+            94
+          ]
+        }
+      ]
+    },
+    "C11": {
+      "status": "DESIGN-PROPOSAL",
+      "claim": "Future ID-correlated request/ready/HP/cleanup telemetry with real before/after values. No runtime, fake, build or package evidence produced.",
+      "references": [
+        {
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "lines": [
+            220,
+            236
+          ]
+        },
+        {
+          "path": "src/d/d_cc_uty.cpp",
+          "lines": [
+            441,
+            448
+          ]
+        }
+      ]
+    }
+  },
+  "interface_classes": {
+    "SDK_public": "ActorService create/delete/room lookup; no request ownership/cancel-by-token/readiness setter",
+    "GameABI_public": "typed actor/process/room/layer getters and data-field access documented in modding.md126-127; policy exception and future link audit required",
+    "host_internal": "deactivate/unload/drain and create_request cancellation machinery; not callable as a fabricated SDK service"
+  },
+  "old_evidence_reused": "../evidence/source-provenance.json at08433c6; no old lab/build/location suite repeated",
+  "decision": "BLOCKED_WITH_EVIDENCE",
+  "A0_G5": "PASS_SOURCE_NO_MOD_CALLBACK",
+  "A0_G3": "BLOCKED_POST_FRAME_WINDOW",
+  "A0_G6": "BLOCKED_TOTAL_CLEANUP_NOT_PROVIDED",
+  "A1_G5": "BLOCKED_CALLBACK_RETENTION_WITHOUT_LEASE_OR_TOTAL_CANCEL",
+  "new_build": false,
+  "new_lab": false,
+  "hp_write": false,
+  "game_or_DLL_execution": false
+}

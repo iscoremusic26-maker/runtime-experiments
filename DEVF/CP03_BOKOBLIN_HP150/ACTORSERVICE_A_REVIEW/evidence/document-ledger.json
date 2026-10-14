@@ -1,0 +1,27 @@
+{
+  "scope": "OWN_DOCUMENTATION_AND_DERIVED_REFERENCES_ONLY",
+  "excluded_self": "evidence/document-ledger.json",
+  "base": "08433c6cb338637ec4191bdcc454cbc9537ad7df",
+  "files": {
+    "IDENTITY_AND_TIMING.md": {
+      "bytes": 6727,
+      "sha256": "667f1583537779de3499d3922f8019d87d171c8508e9a333321271442907d3ab"
+    },
+    "LIFECYCLE_SAFETY.md": {
+      "bytes": 6009,
+      "sha256": "19c0266731f46f0db1bb18efcd572af4f7ee3b029ed615a78f308fcdec848cb8"
+    },
+    "RECOVERY.md": {
+      "bytes": 2074,
+      "sha256": "19e7a91a732a499f1ce7d85bbdff7823b68339428294b280a2175d804b392829"
+    },
+    "VERDICT.md": {
+      "bytes": 5788,
+      "sha256": "47ccf3c3e7f07af588689c00c181fa7d76a043c2ff5bcab7256f4277ece9e28d"
+    },
+    "evidence/source-references.json": {
+      "bytes": 23777,
+      "sha256": "d17a7d0c2332b11f0abf2e26b86dd7e2059465acd77da0d96c1bf6d920acd9d9"
+    }
+  }
+}
