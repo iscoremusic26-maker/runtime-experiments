@@ -1,0 +1,101 @@
+{
+  "machine": "AMD64",
+  "imports": {
+    "dusklight.exe": [
+      "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z",
+      "?dComIfGp_getStartStageName@@YAPEBDXZ",
+      "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+      "?execute@daE_OC_c@@QEAAHXZ",
+      "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+      "?fpcM_IsCreating@@YAHI@Z"
+    ],
+    "VCRUNTIME140.dll": [
+      "__C_specific_handler",
+      "__std_type_info_destroy_list",
+      "__std_terminate",
+      "memset",
+      "memcpy"
+    ],
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "api-ms-win-crt-string-l1-1-0.dll": [
+      "strcmp",
+      "strncmp"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_initterm_e",
+      "_initterm",
+      "_seh_filter_dll",
+      "_initialize_narrow_environment",
+      "_initialize_onexit_table",
+      "_execute_onexit_table",
+      "_cexit",
+      "_configure_narrow_argv"
+    ],
+    "KERNEL32.dll": [
+      "GetCurrentThreadId",
+      "QueryPerformanceCounter",
+      "InitializeSListHead",
+      "DisableThreadLibraryCalls",
+      "GetSystemTimeAsFileTime",
+      "GetCurrentProcessId"
+    ]
+  },
+  "metadata": [
+    {
+      "kind": "header",
+      "abi": 1
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.host",
+      "major": 2,
+      "minor": 2
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.log",
+      "major": 1,
+      "minor": 0
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.stage",
+      "major": 1,
+      "minor": 0
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.hook",
+      "major": 1,
+      "minor": 1
+    },
+    {
+      "kind": "hook_mem",
+      "target": "daE_OC_c::execute",
+      "size": 72,
+      "pointer_to_member_bytes": 8
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.game",
+      "major": 2,
+      "minor": 0
+    }
+  ],
+  "status": "CP03_HOOK_PE_PASS",
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "hook_target_bound_import": "?execute@daE_OC_c@@QEAAHXZ",
+  "manual_detour_imports": false,
+  "metadata_records": 7
+}

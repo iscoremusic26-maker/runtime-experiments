@@ -24,6 +24,6 @@ execute procesa damage_check (638–785), que incluye CutDown, head jump/bomba a
 
 Cambios desde el último POST hasta el PRE siguiente se etiquetan OBSERVED_BETWEEN_EXECUTES; no prometen captura exacta del golpe mortal fuera de execute. Si el actor deja de ejecutarse sin pasar por nuestra ventana no existe lectura posterior: no se busca un actor eliminado para fabricar resumen final. Resumen conserva la última lectura conocida.
 
-Incrementos son HP_INCREASE_OBSERVED sin atribución ni corrección. Sin cambios no hay log. Límite32 incluye aumentos/pérdidas y ventanas entre executes; después se actualizan solo escalares, con un aviso de supresión y resumen. No se instrumenta control original: evita ampliar alcance. Comparar CP02 E_OC2 en sesión separada; un E_OC40 no es equivalente a E_OC2.
+Incrementos son HP_INCREASE_OBSERVED sin atribución ni corrección. Sin cambios no hay log. Límite 32 incluye aumentos/pérdidas y ventanas entre executes; después se actualizan solo escalares, con un aviso de supresión y resumen. No se instrumenta control original: evita ampliar alcance. Comparar CP02 E_OC2 en sesión separada; un E_OC40 no es equivalente a E_OC2.
 
 Laboratorio nuevo prueba Observer/Registration reales con snapshots y mock de servicios, no la DLL, backend o actor real. Instalación del POST, daño, coste real y logs del juego siguen pendientes de Windows/DX12.

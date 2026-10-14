@@ -1,0 +1,185 @@
+{
+  "status": "DOWNLOAD_VERIFIED",
+  "outer_artifact_members": [
+    {
+      "path": "DEVF_CP03_HP_DIAGNOSTIC_windows-amd64_9dd5b8efd4ad98f1d6260820d782e101366a0f8b.dusk",
+      "directory": false,
+      "bytes": 11975,
+      "crc32": "997e04a6",
+      "sha256": "0d9882b072fe5cd6248c16a181171a47364e1acf5870503c1eb2f39c668b4344"
+    },
+    {
+      "path": "DOWNLOAD_MANIFEST.json",
+      "directory": false,
+      "bytes": 1464,
+      "crc32": "a50831cc",
+      "sha256": "fd1354516ffbdabdb2409d5bf20dc1b9cc8b55cfe17b24f7ebfdc11a90f3155e"
+    }
+  ],
+  "delivery_artifact_sha256": "bb4d467aef263e35d6c4bdf90a3d2ebaee6f086dac5e9531c9fd3be4de0bdaa2",
+  "text_artifact_sha256": "620febc03004295f4714471893763d417dfc9e4ee517adfffde026228570c4e4",
+  "all_CRC_and_hashes_pass": true,
+  "source_ledger_verified": true,
+  "compiled_DLL_sha256_matches": true,
+  "package": {
+    "status": "CP03_PACKAGE_VERIFIED",
+    "package_bytes": 11975,
+    "package_sha256": "0d9882b072fe5cd6248c16a181171a47364e1acf5870503c1eb2f39c668b4344",
+    "dll_bytes": 22016,
+    "dll_sha256": "6951304f4cadfadc845e1760f31ba7582508a157738aceaac404c6d53b1b3eeb",
+    "manifest_sha256": "f3d794f1f847096ddcdb7adad8e637a3b025f647fc45ef359268db34d9fbe709",
+    "manifest": {
+      "id": "dev.devf.cp03_stage_hook_hp150",
+      "name": "DEVF CP03 \u2014 HP diagnostic (150 HP TEST)",
+      "version": "0.3.1",
+      "description": "PRIVATE DIAGNOSTIC: unchanged one-shot initial health150; bounded read-only HP deltas for the same verified native E_OC2. Official execute PRE/POST, effective net field change, unknown attack attribution. Install alone; exact host; human DX12 validation pending; full exit for removal."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 428,
+        "crc32": "751b300f",
+        "sha256": "f3d794f1f847096ddcdb7adad8e637a3b025f647fc45ef359268db34d9fbe709"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 22016,
+        "crc32": "5984ef6a",
+        "sha256": "6951304f4cadfadc845e1760f31ba7582508a157738aceaac404c6d53b1b3eeb"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "dusklight.exe": [
+          "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?execute@daE_OC_c@@QEAAHXZ",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?fpcM_IsCreating@@YAHI@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "__C_specific_handler",
+          "__std_type_info_destroy_list",
+          "__std_terminate",
+          "memset",
+          "memcpy"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strcmp",
+          "strncmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_initterm_e",
+          "_initterm",
+          "_seh_filter_dll",
+          "_initialize_narrow_environment",
+          "_initialize_onexit_table",
+          "_execute_onexit_table",
+          "_cexit",
+          "_configure_narrow_argv"
+        ],
+        "KERNEL32.dll": [
+          "GetCurrentThreadId",
+          "QueryPerformanceCounter",
+          "InitializeSListHead",
+          "DisableThreadLibraryCalls",
+          "GetSystemTimeAsFileTime",
+          "GetCurrentProcessId"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.hook",
+          "major": 1,
+          "minor": 1
+        },
+        {
+          "kind": "hook_mem",
+          "target": "daE_OC_c::execute",
+          "size": 72,
+          "pointer_to_member_bytes": 8
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "CP03_HOOK_PE_PASS",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "hook_target_bound_import": "?execute@daE_OC_c@@QEAAHXZ",
+      "manual_detour_imports": false,
+      "metadata_records": 7
+    },
+    "dll_internal_equals_loose": true,
+    "runtime_tested": false
+  },
+  "source_commit": "9dd5b8efd4ad98f1d6260820d782e101366a0f8b",
+  "workflow_commit": "7fd3628ee8bfeb30f8070db061220796c1c15b4a",
+  "run_id": "38541018826",
+  "dll_loaded": false,
+  "game_executed": false,
+  "installed": false,
+  "execution_authorized": false,
+  "read_only": false,
+  "CP03_RUNTIME": "HUMAN_RUNTIME_NOT_TESTED",
+  "CP04": "NOT_AUTHORIZED",
+  "HookService_used": true,
+  "expected_initial_hp_by_code": 150,
+  "diagnostic_read_only": true,
+  "diagnostic_mechanism": "EXECUTE_PRE_POST"
+}

@@ -1,0 +1,31 @@
+{
+  "source": "SOURCE_VERIFIED",
+  "build": "BUILD_PASS",
+  "PE": "PE_PASS",
+  "package": "PACKAGE_VERIFIED",
+  "download": "DOWNLOAD_VERIFIED",
+  "new_fake_cases": {
+    "passed": 17,
+    "executed_in": 38540468476,
+    "reused_unchanged_in": 38541018826
+  },
+  "PE_negative_cases": 4,
+  "human_diagnostic": "HUMAN_RUNTIME_NOT_TESTED",
+  "CP03_DIAGNOSTIC_PASS_RUNTIME": false,
+  "stable_general": false,
+  "baseline_human": "USER_REPORTED_FUNCTIONAL",
+  "baseline_immutable": true,
+  "test_delivery": "GO_FOR_CONTROLLED_HUMAN_TEST_AFTER_APPROVAL",
+  "mechanism": "EXISTING_EXECUTE_PRE_POST",
+  "diagnostic_read_only": true,
+  "sole_gameplay_write": "ONE_SHOT_HEALTH_150_UNCHANGED",
+  "original_instrumental_control": "OMITTED_SCOPE_MINIMIZATION",
+  "max_deltas_per_instance": 32,
+  "raw_attack_power": "NOT_MEASURED",
+  "zero_attribution": "UNKNOWN_OR_SPECIAL",
+  "CP04": "NOT_AUTHORIZED",
+  "CP06": "NOT_AUTHORIZED",
+  "installed": false,
+  "game_executed": false,
+  "DLL_loaded": false
+}
