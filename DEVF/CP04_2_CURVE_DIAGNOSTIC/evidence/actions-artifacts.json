@@ -1,29 +1,32 @@
 {
-  "run_id": 38601042519,
-  "job_id": 115980061266,
-  "source_commit": "63450cdc25e1714cdff9ef9e987dec0d2091bde2",
-  "ci_commit": "3ef9e525c9dd1e04f8661ef624b267d86fe6b0db",
-  "conclusion": "success",
+  "run_id": 38603069939,
+  "job_id": 115986904492,
+  "source_commit": "b88ffc89ea45758bfe25beea2e97b59ff1294377",
+  "ci_commit": "4cb4c238a1010f5638c5200c6ff5716cc2dba49d",
   "artifacts": [
     {
-      "type": "TEST_DIAGNOSTIC_ONLY",
-      "id": 11912504137,
-      "bytes": 16821,
-      "sha256": "a7e08be2e7d35b59cf75d4ddcf31581a2234610f071cba1caa94c7351102b1a3",
-      "expires_utc": "2026-11-13T16:48:26Z",
-      "expires_Panama": "2026-11-13 11:48:26 UTC-5",
-      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38601042519/artifacts/11912504137",
+      "type": "FINAL_DIAGNOSTIC_ONLY",
+      "id": 11914346552,
+      "bytes": 16775,
+      "sha256": "91f3d66c5651d6d2fd1ece368ec6a65485290929adab988e74ae6a432a3d6fcf",
+      "expires_utc": "2026-11-13T17:02:26Z",
+      "expires_Panama": "2026-11-13 12:02:26 UTC-5",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38603069939/artifacts/11914346552",
       "download_verified": true
     },
     {
-      "type": "TEXT",
-      "id": 11913134088,
-      "bytes": 27316,
-      "sha256": "9a5b612077ec81fa65b76cfbd5c4e7977f259968a415930f55c77a36c02ede85",
-      "expires_utc": "2026-11-13T16:48:25Z",
-      "expires_Panama": "2026-11-13 11:48:25 UTC-5",
-      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38601042519/artifacts/11913134088",
+      "type": "FINAL_TEXT",
+      "id": 11914456505,
+      "bytes": 27343,
+      "sha256": "0d55f16b2709cbff7a954d933a8c0dd627aa133ebbeb1922bf809b10512b930f",
+      "expires_utc": "2026-11-13T17:02:24Z",
+      "expires_Panama": "2026-11-13 12:02:24 UTC-5",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38603069939/artifacts/11914456505",
       "download_verified": true
     }
-  ]
+  ],
+  "conclusion": "success",
+  "superseded_run": 38601042519,
+  "endpoint_fields_added": true,
+  "no_extra_native_read": true
 }

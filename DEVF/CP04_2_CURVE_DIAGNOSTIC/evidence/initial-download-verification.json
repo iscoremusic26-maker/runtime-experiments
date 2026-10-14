@@ -1,0 +1,192 @@
+{
+  "status": "DOWNLOAD_VERIFIED",
+  "outer_artifact_members": [
+    {
+      "path": "DEVF_CP04_2_CURVE_DIAGNOSTIC_windows-amd64_63450cdc25e1714cdff9ef9e987dec0d2091bde2.dusk",
+      "directory": false,
+      "bytes": 15802,
+      "crc32": "706f2385",
+      "sha256": "c1ad765b83f05e8dd292243a3f243b29ad8ba1f615c4bf8d0370ebf00db9c6e1"
+    },
+    {
+      "path": "DOWNLOAD_MANIFEST.json",
+      "directory": false,
+      "bytes": 1892,
+      "crc32": "ab2ad8bc",
+      "sha256": "d39b988a2138ebbed6337111adac3709c49e7ef0043c64f1c5d46f3df1b9592b"
+    }
+  ],
+  "delivery_artifact_sha256": "a7e08be2e7d35b59cf75d4ddcf31581a2234610f071cba1caa94c7351102b1a3",
+  "text_artifact_sha256": "9a5b612077ec81fa65b76cfbd5c4e7977f259968a415930f55c77a36c02ede85",
+  "all_CRC_and_hashes_pass": true,
+  "source_ledger_verified": true,
+  "compiled_DLL_sha256_matches": true,
+  "package": {
+    "status": "CP04_PACKAGE_VERIFIED",
+    "package_bytes": 15802,
+    "package_sha256": "c1ad765b83f05e8dd292243a3f243b29ad8ba1f615c4bf8d0370ebf00db9c6e1",
+    "dll_bytes": 29184,
+    "dll_sha256": "7901a5f77bca4225e5f315686fbc4bda4f1dcc1b603115124c607c0b68074d09",
+    "manifest_sha256": "11507c0c0eedc1eaea506667c104a0f4b7000c109e40a0233d6b17d4e1dead70",
+    "manifest": {
+      "id": "dev.devf.cp04_native_aura",
+      "name": "DEVF CP04.2 \u2014 Native curves DIAGNOSTIC ONLY (150 HP TEST)",
+      "version": "0.4.2",
+      "description": "PRIVATE DIAGNOSTIC_ONLY: single resource029D read of two curve IDs/envelopes on the exact DEVF actor; NO emitters or effects created, NO resource writes. Inherited one-shot HP150 is unchanged. Full exit, install alone; appearance NO-GO, not a visual fix."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 410,
+        "crc32": "8aff2f6b",
+        "sha256": "11507c0c0eedc1eaea506667c104a0f4b7000c109e40a0233d6b17d4e1dead70"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 29184,
+        "crc32": "870fcd63",
+        "sha256": "7901a5f77bca4225e5f315686fbc4bda4f1dcc1b603115124c607c0b68074d09"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "dusklight.exe": [
+          "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z",
+          "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+          "?mEmitterMng@dPa_control_c@@2PEAVJPAEmitterManager@@EA",
+          "?getResUserWork@JPAResourceManager@@QEBAIG@Z",
+          "?getResource@JPAResourceManager@@QEBAPEAVJPAResource@@G@Z",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?execute@daE_OC_c@@QEAAHXZ",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?fpcM_IsCreating@@YAHI@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "memcpy",
+          "__std_type_info_destroy_list",
+          "__std_terminate",
+          "__C_specific_handler",
+          "memset"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strcmp",
+          "strncmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_initterm",
+          "_initterm_e",
+          "_cexit",
+          "_seh_filter_dll",
+          "_configure_narrow_argv",
+          "_initialize_narrow_environment",
+          "_initialize_onexit_table",
+          "_execute_onexit_table"
+        ],
+        "KERNEL32.dll": [
+          "InitializeSListHead",
+          "GetCurrentProcessId",
+          "QueryPerformanceCounter",
+          "DisableThreadLibraryCalls",
+          "GetSystemTimeAsFileTime",
+          "GetCurrentThreadId"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.hook",
+          "major": 1,
+          "minor": 1
+        },
+        {
+          "kind": "hook_mem",
+          "target": "daE_OC_c::execute",
+          "size": 72,
+          "pointer_to_member_bytes": 8
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "CP04_2_CURVE_DIAGNOSTIC_PE_PASS",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "hook_target_bound_import": "?execute@daE_OC_c@@QEAAHXZ",
+      "manual_detour_imports": false,
+      "metadata_records": 7
+    },
+    "dll_internal_equals_loose": true,
+    "runtime_tested": false
+  },
+  "source_commit": "63450cdc25e1714cdff9ef9e987dec0d2091bde2",
+  "workflow_commit": "3ef9e525c9dd1e04f8661ef624b267d86fe6b0db",
+  "run_id": "38601042519",
+  "dll_loaded": false,
+  "game_executed": false,
+  "installed": false,
+  "execution_authorized": false,
+  "read_only": false,
+  "baseline_CP03_runtime": "CP03_HUMAN_RUNTIME_PASS",
+  "CP04": "NO_GO_NEEDS_NATIVE_CURVE_BOUNDS",
+  "product_mode": "DIAGNOSTIC_ONLY",
+  "diagnostic_no_emitter": true,
+  "HookService_used": true,
+  "expected_initial_hp_by_code": 150,
+  "HP_diagnostic_read_only": true,
+  "appearance_technique": "RESOURCE_CURVE_READ_ONLY_PROBE",
+  "CP04_RUNTIME": "HUMAN_RUNTIME_NOT_TESTED"
+}

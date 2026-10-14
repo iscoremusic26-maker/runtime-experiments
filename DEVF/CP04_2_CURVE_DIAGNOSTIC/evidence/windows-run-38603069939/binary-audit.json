@@ -1,0 +1,105 @@
+{
+  "machine": "AMD64",
+  "imports": {
+    "dusklight.exe": [
+      "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z",
+      "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+      "?mEmitterMng@dPa_control_c@@2PEAVJPAEmitterManager@@EA",
+      "?getResUserWork@JPAResourceManager@@QEBAIG@Z",
+      "?getResource@JPAResourceManager@@QEBAPEAVJPAResource@@G@Z",
+      "?dComIfGp_getStartStageName@@YAPEBDXZ",
+      "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+      "?execute@daE_OC_c@@QEAAHXZ",
+      "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+      "?fpcM_IsCreating@@YAHI@Z"
+    ],
+    "VCRUNTIME140.dll": [
+      "memcpy",
+      "__std_type_info_destroy_list",
+      "__std_terminate",
+      "__C_specific_handler",
+      "memset"
+    ],
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "api-ms-win-crt-string-l1-1-0.dll": [
+      "strcmp",
+      "strncmp"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_initterm",
+      "_initterm_e",
+      "_cexit",
+      "_seh_filter_dll",
+      "_configure_narrow_argv",
+      "_initialize_narrow_environment",
+      "_initialize_onexit_table",
+      "_execute_onexit_table"
+    ],
+    "KERNEL32.dll": [
+      "InitializeSListHead",
+      "GetCurrentProcessId",
+      "QueryPerformanceCounter",
+      "DisableThreadLibraryCalls",
+      "GetSystemTimeAsFileTime",
+      "GetCurrentThreadId"
+    ]
+  },
+  "metadata": [
+    {
+      "kind": "header",
+      "abi": 1
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.host",
+      "major": 2,
+      "minor": 2
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.log",
+      "major": 1,
+      "minor": 0
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.stage",
+      "major": 1,
+      "minor": 0
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.hook",
+      "major": 1,
+      "minor": 1
+    },
+    {
+      "kind": "hook_mem",
+      "target": "daE_OC_c::execute",
+      "size": 72,
+      "pointer_to_member_bytes": 8
+    },
+    {
+      "kind": "import",
+      "id": "dev.twilitrealm.dusklight.game",
+      "major": 2,
+      "minor": 0
+    }
+  ],
+  "status": "CP04_2_CURVE_DIAGNOSTIC_PE_PASS",
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "hook_target_bound_import": "?execute@daE_OC_c@@QEAAHXZ",
+  "manual_detour_imports": false,
+  "metadata_records": 7
+}
