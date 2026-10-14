@@ -1,0 +1,1077 @@
+{
+  "status": "PASS_RESOURCE_STATIC",
+  "input_commit": "6b32ef995814e6a20924d6b6dd3fe5886a5ef3e0",
+  "arc_bytes": 33872,
+  "arc_sha256": "c87d7a3cb6087ff5bcb8be3abab64b2b1124fe90bba0118ab61e174349bba394",
+  "arc_git_blob": "cf76c37c3575041b6b39faf9baec571bb1d6749f",
+  "arc_crc32": "ee2501dd",
+  "rarc_bytes": 47296,
+  "rarc_sha256": "cc7514f44e1809462321bd30efcb388c64d3c0d47707ba3189efa73a8719afc3",
+  "yaz0_consumed": 33872,
+  "yaz0_trailing_bytes": 0,
+  "models": [
+    {
+      "id": 3,
+      "name": "oc2.bmd",
+      "bytes": 39520,
+      "sha256": "223369ea238319eee4587d324458c8057f380994f15b04ff264da458bd180995",
+      "crc32": "d1ddec25",
+      "block_names": [
+        "INF1",
+        "VTX1",
+        "EVP1",
+        "DRW1",
+        "JNT1",
+        "SHP1",
+        "MAT3",
+        "TEX1"
+      ],
+      "no_color_attrs": true,
+      "formats": [
+        {
+          "attr": 9,
+          "count": 1,
+          "type": 4,
+          "frac": 0
+        },
+        {
+          "attr": 10,
+          "count": 0,
+          "type": 3,
+          "frac": 15
+        },
+        {
+          "attr": 13,
+          "count": 1,
+          "type": 3,
+          "frac": 14
+        }
+      ],
+      "mapping": [
+        {
+          "shape": 0,
+          "material": 0
+        },
+        {
+          "shape": 2,
+          "material": 1
+        },
+        {
+          "shape": 1,
+          "material": 2
+        }
+      ],
+      "shapes": [
+        {
+          "shape": 0,
+          "attributes": [
+            {
+              "attr": 0,
+              "type": 1
+            },
+            {
+              "attr": 9,
+              "type": 3
+            },
+            {
+              "attr": 10,
+              "type": 3
+            },
+            {
+              "attr": 13,
+              "type": 3
+            }
+          ]
+        },
+        {
+          "shape": 1,
+          "attributes": [
+            {
+              "attr": 9,
+              "type": 3
+            },
+            {
+              "attr": 10,
+              "type": 3
+            },
+            {
+              "attr": 13,
+              "type": 3
+            }
+          ]
+        },
+        {
+          "shape": 2,
+          "attributes": [
+            {
+              "attr": 0,
+              "type": 1
+            },
+            {
+              "attr": 9,
+              "type": 3
+            },
+            {
+              "attr": 10,
+              "type": 3
+            },
+            {
+              "attr": 13,
+              "type": 3
+            }
+          ]
+        }
+      ],
+      "textures": [
+        {
+          "index": 0,
+          "name": "oc2_fix",
+          "format": 14,
+          "width": 128,
+          "height": 128,
+          "image_offset": 128,
+          "mip_count": 1
+        },
+        {
+          "index": 1,
+          "name": "oc2_fix",
+          "format": 14,
+          "width": 128,
+          "height": 128,
+          "image_offset": 128,
+          "mip_count": 1
+        },
+        {
+          "index": 2,
+          "name": "oc2_fix",
+          "format": 14,
+          "width": 128,
+          "height": 128,
+          "image_offset": 128,
+          "mip_count": 1
+        }
+      ],
+      "materials": [
+        {
+          "index": 0,
+          "remap": 0,
+          "name": "oc_body_mat01",
+          "mode": 1,
+          "channels": [
+            {
+              "lighting": 1,
+              "material_source": 0,
+              "light_mask": 255,
+              "diffuse": 2,
+              "attenuation": 1,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 2,
+              "attenuation": 1,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 1,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 1,
+              "attenuation": 0,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 0,
+              "attenuation": 2,
+              "ambient_source": 0
+            }
+          ],
+          "material_rgba": [
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ]
+          ],
+          "ambient_rgba": [
+            [
+              16,
+              16,
+              16,
+              255
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "color_channel_count": 1,
+          "texgen_count": 1,
+          "stage_count": 1,
+          "texture_index": 2,
+          "tev_order": [
+            0,
+            0,
+            4
+          ],
+          "tev": {
+            "color_inputs": [
+              14,
+              8,
+              10,
+              2
+            ],
+            "color_op": [
+              0,
+              0,
+              2,
+              1,
+              0
+            ],
+            "alpha_inputs": [
+              7,
+              6,
+              4,
+              7
+            ],
+            "alpha_op": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "konst_color_sel": 12,
+          "konst_alpha_sel": 31,
+          "konst_rgba": [
+            [
+              0,
+              0,
+              0,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ]
+          ],
+          "tev_registers": [
+            [
+              0,
+              0,
+              0,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "swap_mode": [
+            0,
+            0
+          ],
+          "swap_tables": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "alpha_compare": [
+            7,
+            0,
+            1,
+            7,
+            0
+          ],
+          "blend": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "zmode": [
+            1,
+            3,
+            1
+          ],
+          "zcomp": 1,
+          "dither": 1,
+          "cull": 2
+        },
+        {
+          "index": 1,
+          "remap": 1,
+          "name": "oc_body_mat02",
+          "mode": 1,
+          "channels": [
+            {
+              "lighting": 1,
+              "material_source": 0,
+              "light_mask": 255,
+              "diffuse": 2,
+              "attenuation": 1,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 2,
+              "attenuation": 1,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 1,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 1,
+              "attenuation": 0,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 0,
+              "attenuation": 2,
+              "ambient_source": 0
+            }
+          ],
+          "material_rgba": [
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ]
+          ],
+          "ambient_rgba": [
+            [
+              16,
+              16,
+              16,
+              255
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "color_channel_count": 1,
+          "texgen_count": 1,
+          "stage_count": 1,
+          "texture_index": 1,
+          "tev_order": [
+            0,
+            0,
+            4
+          ],
+          "tev": {
+            "color_inputs": [
+              14,
+              8,
+              10,
+              2
+            ],
+            "color_op": [
+              0,
+              0,
+              2,
+              1,
+              0
+            ],
+            "alpha_inputs": [
+              7,
+              6,
+              4,
+              7
+            ],
+            "alpha_op": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "konst_color_sel": 12,
+          "konst_alpha_sel": 31,
+          "konst_rgba": [
+            [
+              0,
+              0,
+              0,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ]
+          ],
+          "tev_registers": [
+            [
+              0,
+              0,
+              0,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "swap_mode": [
+            0,
+            0
+          ],
+          "swap_tables": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "alpha_compare": [
+            7,
+            0,
+            1,
+            7,
+            0
+          ],
+          "blend": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "zmode": [
+            1,
+            3,
+            1
+          ],
+          "zcomp": 1,
+          "dither": 1,
+          "cull": 2
+        },
+        {
+          "index": 2,
+          "remap": 2,
+          "name": "oc_eye_mat",
+          "mode": 1,
+          "channels": [
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 255,
+              "diffuse": 2,
+              "attenuation": 1,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 2,
+              "attenuation": 1,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 1,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 1,
+              "attenuation": 0,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 0,
+              "attenuation": 2,
+              "ambient_source": 0
+            }
+          ],
+          "material_rgba": [
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ]
+          ],
+          "ambient_rgba": [
+            [
+              16,
+              16,
+              16,
+              255
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "color_channel_count": 1,
+          "texgen_count": 1,
+          "stage_count": 1,
+          "texture_index": 0,
+          "tev_order": [
+            0,
+            0,
+            4
+          ],
+          "tev": {
+            "color_inputs": [
+              14,
+              8,
+              10,
+              2
+            ],
+            "color_op": [
+              0,
+              0,
+              2,
+              1,
+              0
+            ],
+            "alpha_inputs": [
+              7,
+              6,
+              4,
+              7
+            ],
+            "alpha_op": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "konst_color_sel": 12,
+          "konst_alpha_sel": 31,
+          "konst_rgba": [
+            [
+              0,
+              0,
+              0,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ]
+          ],
+          "tev_registers": [
+            [
+              0,
+              0,
+              0,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "swap_mode": [
+            0,
+            0
+          ],
+          "swap_tables": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "alpha_compare": [
+            7,
+            0,
+            1,
+            7,
+            0
+          ],
+          "blend": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "zmode": [
+            1,
+            3,
+            1
+          ],
+          "zcomp": 1,
+          "dither": 1,
+          "cull": 2
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "oc2_wepon.bmd",
+      "bytes": 7456,
+      "sha256": "ab736133d76c4d84924e5304a7c0b3d553f0706aa8a3a2758ee2456c1e8eef06",
+      "crc32": "12afd023",
+      "block_names": [
+        "INF1",
+        "VTX1",
+        "EVP1",
+        "DRW1",
+        "JNT1",
+        "SHP1",
+        "MAT3",
+        "TEX1"
+      ],
+      "no_color_attrs": true,
+      "formats": [
+        {
+          "attr": 9,
+          "count": 1,
+          "type": 4,
+          "frac": 0
+        },
+        {
+          "attr": 10,
+          "count": 0,
+          "type": 3,
+          "frac": 14
+        },
+        {
+          "attr": 13,
+          "count": 1,
+          "type": 3,
+          "frac": 14
+        }
+      ],
+      "mapping": [
+        {
+          "shape": 0,
+          "material": 0
+        }
+      ],
+      "shapes": [
+        {
+          "shape": 0,
+          "attributes": [
+            {
+              "attr": 9,
+              "type": 3
+            },
+            {
+              "attr": 10,
+              "type": 3
+            },
+            {
+              "attr": 13,
+              "type": 3
+            }
+          ]
+        }
+      ],
+      "textures": [
+        {
+          "index": 0,
+          "name": "ob2_1_1",
+          "format": 4,
+          "width": 32,
+          "height": 64,
+          "image_offset": 64,
+          "mip_count": 1
+        }
+      ],
+      "materials": [
+        {
+          "index": 0,
+          "remap": 0,
+          "name": "oc2_weapon",
+          "mode": 1,
+          "channels": [
+            {
+              "lighting": 1,
+              "material_source": 0,
+              "light_mask": 255,
+              "diffuse": 2,
+              "attenuation": 1,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 2,
+              "attenuation": 1,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 1,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 1,
+              "attenuation": 0,
+              "ambient_source": 0
+            },
+            {
+              "lighting": 0,
+              "material_source": 0,
+              "light_mask": 0,
+              "diffuse": 0,
+              "attenuation": 2,
+              "ambient_source": 0
+            }
+          ],
+          "material_rgba": [
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ]
+          ],
+          "ambient_rgba": [
+            [
+              16,
+              16,
+              16,
+              255
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "color_channel_count": 1,
+          "texgen_count": 1,
+          "stage_count": 1,
+          "texture_index": 0,
+          "tev_order": [
+            0,
+            0,
+            4
+          ],
+          "tev": {
+            "color_inputs": [
+              14,
+              8,
+              10,
+              2
+            ],
+            "color_op": [
+              0,
+              0,
+              2,
+              1,
+              0
+            ],
+            "alpha_inputs": [
+              7,
+              6,
+              4,
+              7
+            ],
+            "alpha_op": [
+              0,
+              0,
+              0,
+              1,
+              0
+            ]
+          },
+          "konst_color_sel": 12,
+          "konst_alpha_sel": 31,
+          "konst_rgba": [
+            [
+              0,
+              0,
+              0,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ]
+          ],
+          "tev_registers": [
+            [
+              0,
+              0,
+              0,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              255,
+              255,
+              255,
+              255
+            ],
+            [
+              0,
+              0,
+              0,
+              0
+            ]
+          ],
+          "swap_mode": [
+            0,
+            0
+          ],
+          "swap_tables": [
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ],
+            [
+              0,
+              1,
+              2,
+              3
+            ]
+          ],
+          "alpha_compare": [
+            7,
+            0,
+            1,
+            7,
+            0
+          ],
+          "blend": [
+            0,
+            1,
+            0,
+            3
+          ],
+          "zmode": [
+            1,
+            3,
+            1
+          ],
+          "zcomp": 1,
+          "dither": 1,
+          "cull": 2
+        }
+      ]
+    }
+  ],
+  "game_executed": false,
+  "visual": "HUMAN_RUNTIME_NOT_TESTED",
+  "original_texels_or_asset_bytes_published": false
+}

@@ -1,0 +1,65 @@
+{
+  "run_id": 38655854048,
+  "source_ci_commit": "3a73afd8fe5a142cf2816a253c2880ac6ec90d52",
+  "gate": {
+    "game_executed": false,
+    "host_bytes": 52309504,
+    "host_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "manifest_version": 2,
+    "matpacket_to_shapepacket_drawfast_direct_calls": 1,
+    "objdump_version": "GNU objdump (GNU Binutils) 2.46.0.20260210",
+    "original_bytes_or_addresses_published": false,
+    "packet_hook_admitted": true,
+    "same_address_names": {
+      "J3DMatPacket::draw": [
+        "?draw@J3DMatPacket@@UEAAXXZ",
+        "J3DMatPacket::draw",
+        "libs/JSystem/src/J3DGraphBase/J3DPacket.cpp#J3DMatPacket::draw"
+      ],
+      "J3DShape::drawFast": [
+        "?drawFast@J3DShape@@UEBAXXZ",
+        "J3DShape::drawFast",
+        "libs/JSystem/src/J3DGraphBase/J3DShape.cpp#J3DShape::drawFast"
+      ],
+      "J3DShapeDraw::draw": [
+        "?draw@J3DShapeDraw@@QEBAXXZ",
+        "J3DShapeDraw::draw",
+        "libs/JSystem/src/J3DGraphBase/J3DShapeDraw.cpp#J3DShapeDraw::draw"
+      ],
+      "J3DShapePacket::drawFast": [
+        "?drawFast@J3DShapePacket@@QEAAXXZ",
+        "J3DShapePacket::drawFast",
+        "libs/JSystem/src/J3DGraphBase/J3DPacket.cpp#J3DShapePacket::drawFast"
+      ]
+    },
+    "status": "PACKET_CALL_GATE_PASS",
+    "targets": [
+      {
+        "flags": 9,
+        "folded_or_alias": true,
+        "inline_sites": false,
+        "symbol": "J3DShape::drawFast"
+      },
+      {
+        "flags": 9,
+        "folded_or_alias": true,
+        "inline_sites": false,
+        "symbol": "J3DShapeDraw::draw"
+      },
+      {
+        "flags": 9,
+        "folded_or_alias": true,
+        "inline_sites": false,
+        "symbol": "J3DShapePacket::drawFast"
+      },
+      {
+        "flags": 9,
+        "folded_or_alias": true,
+        "inline_sites": false,
+        "symbol": "J3DMatPacket::draw"
+      }
+    ]
+  },
+  "compilation_performed": false,
+  "game_executed": false
+}
