@@ -1,0 +1,37 @@
+name: DEVF CP04.3 verified recovery tag
+on:
+  pull_request:
+    types: [synchronize]
+    paths:
+      - '.github/workflows/devf-cp04-3-recovery-tag.yml'
+permissions:
+  contents: write
+jobs:
+  seal-checkpoint:
+    if: github.event.repository.private == true && github.head_ref == 'feature/devf-cp04-3-private-scent-marker' && github.base_ref == 'feature/devf-cp04-2-curve-diagnostic' && github.event.pull_request.base.sha == 'dac8d172081e8933f3e9fcdeea40e09b4374f372' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Verify complete recovery, compiled code intact, and seal only one new tag
+        shell: pwsh
+        env:
+          CHECKPOINT_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          $actual = git rev-parse HEAD
+          if ($LASTEXITCODE -ne 0 -or $actual -ne $env:CHECKPOINT_SHA) { throw 'Checkpoint mismatch' }
+          git merge-base --is-ancestor 1cd0f30eb3c49e2ac2cebb00cc660cc4b487f084 HEAD
+          if ($LASTEXITCODE -ne 0) { throw 'Compiled source not preserved' }
+          git diff --exit-code 1cd0f30eb3c49e2ac2cebb00cc660cc4b487f084 HEAD -- DEVF/CP04_3_PRIVATE_SCENT_MARKER/src DEVF/CP04_3_PRIVATE_SCENT_MARKER/tests DEVF/CP04_3_PRIVATE_SCENT_MARKER/ci DEVF/CP04_3_PRIVATE_SCENT_MARKER/CMakeLists.txt DEVF/CP04_3_PRIVATE_SCENT_MARKER/mod.json DEVF/CP04_3_PRIVATE_SCENT_MARKER/SOURCE_MANIFEST.json DEVF/CP04_3_PRIVATE_SCENT_MARKER/preflight-spec.json DEVF/CP04_3_PRIVATE_SCENT_MARKER/recovery-provenance.json
+          if ($LASTEXITCODE -ne 0) { throw 'Compiled code ledger changed' }
+          git fsck --full
+          if ($LASTEXITCODE -ne 0) { throw 'Recovery fsck failed' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a DEVF_CP04_3_PRIVATE_SCENT_MARKER_OFFLINE_TEST $env:CHECKPOINT_SHA -m 'CP04.3 offline verified MSVC, 19 fake cases, PE/package/independent real download; runtime not tested'
+          if ($LASTEXITCODE -ne 0) { throw 'Tag already exists or creation failed; no overwrite allowed' }
+          git push origin refs/tags/DEVF_CP04_3_PRIVATE_SCENT_MARKER_OFFLINE_TEST
+          if ($LASTEXITCODE -ne 0) { throw 'New recovery tag publication failed' }

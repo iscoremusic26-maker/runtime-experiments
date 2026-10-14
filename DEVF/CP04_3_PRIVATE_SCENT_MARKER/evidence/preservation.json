@@ -1,0 +1,21 @@
+{
+  "source": {
+    "original_tree": "4842cb52660d69647f611970ae44cf349fccaa43",
+    "recovered_tree": "1c7529f17d965f6a4991b01ac5536d5f1d59fd28",
+    "original_blob_count": 1488,
+    "original_blobs_unchanged": true,
+    "new_files": 26
+  },
+  "CI": {
+    "baseline": "4cb4c238a1010f5638c5200c6ff5716cc2dba49d",
+    "old_blob_count": 439,
+    "old_blobs_unchanged": true,
+    "old_workflows_unchanged": true
+  },
+  "recovery_commit": "db687c6f9314f2b6e044d28aff43844194f76c83",
+  "compiled_source": "1cd0f30eb3c49e2ac2cebb00cc660cc4b487f084",
+  "CI_commit": "b58e6f513ef671971240d1f1f782d06e124c798d",
+  "Cloud_local_disk_checked": false,
+  "local_fsck_executed": false,
+  "independent_Windows_source_tag_job_will_verify_fsck": true
+}

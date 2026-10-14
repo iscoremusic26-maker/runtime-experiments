@@ -1,10 +1,9 @@
-# DEVF CP04.3 — Checkpoint de estudio y recuperación
-Estado: **CP04_3_NO_GO_BLOCKED**. Bloqueo externo observado: Codex Cloud environment_startup_failed, connectivity offline. No compilación de CP04.3, .dusk ni instalación autorizada por este checkpoint.
+# DEVF CP04.3 — Private purple scent marker TEST
 
-Partida exacta: dac8d172081e8933f3e9fcdeea40e09b4374f372, tag DEVF_CP04_2_NATIVE_CURVES_ENDPOINTS_DIAGNOSTIC_OFFLINE_TEST. Fuente oficial 40457c6adb381928e4b5fef6ed459ed291edd5e2 / Aurora3227d76c60e1e782ca576610bce61c9e7744d8be. CP03 y todas las carpetas/checkpoints anteriores conservados: solo se añade borrador propio CP04.3 e informes en esta carpeta.
+**CP04_3_OFFLINE_TEST_READY** — BUILD_PASS / PACKAGE_VERIFIED / DOWNLOAD_VERIFIED. [Windows run38638241539](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38638241539). Real download was verified in an independent fresh Windows job, not in the unavailable Cloud filesystem. Runtime visual/control original E_OC2/cleanup/performance remain HUMAN_RUNTIME_NOT_TESTED.
 
-Ruta A elegida: recurso84ED/banco1 (ID_ZI_S_NIOITAG_A) de kytag03, efecto persistente con color privado por emisor. Marcador púrpura de partículas alrededor de eyePos, no cambio de materiales/cuerpo. Diseño condicionado a preflight de un único recurso una vez antes de crear. Disponibilidad/metadatos en F_SP121 NOT_VERIFIED. Ruta B de materiales J3D sigue sin contrato probado de ownership; reutilizar evidencia CP04, no repetir auditoría.
+Recovery db687c6f9314f2b6e044d28aff43844194f76c83 first secured the26 previously orphaned files, preserving all1488 older blobs. No repeated reconstruction or CP01–03 research. Compiled source1cd0f30eb3c49e2ac2cebb00cc660cc4b487f084, CIb58e6f513ef671971240d1f1f782d06e124c798d. Source PR29 / CI PR21 remain draft, no merge.
 
-Leer ROOT_CAUSE_AND_CHOSEN_ROUTE.md, TEST_RESULTS.md, RECOVERY.md y preflight-spec.json. No CP05/CP06, no juego/DLL ejecutados, no modificación del EXE/SDK/JPC/saves/flags. Log humano solo resumido del prompt; original privado no leído ni publicado.
+Route A84ED scene-bank1, source kytag03 (ROOT_CAUSE_AND_CHOSEN_ROUTE.md). Marker/motes around eyePos, not body recolor. Once-only preflight authorizes an owned emitter ONLY if that resource meets all guards. No fallback or retry; actual scene availability/metadata NOT_VERIFIED. A runtime rejection or no visible marker means NO-GO for appearance.
 
-Este checkpoint conserva resultados técnicos verificables y borrador propio recuperado de operaciones confirmadas de la sesión; no cotejado otra vez con el disco inaccesible. No es un paquete TEST ni un tercer DIAGNOSTIC_ONLY. No transferir PASS de builds anteriores a CP04.3.
+See HUMAN_TEST.md, BUILD_AND_PACKAGE.md, TEST_RESULTS.md and RECOVERY.md. Snapshot files preflight-spec.json/recovery-provenance.json describe the earlier unbuilt recovery state and are retained byteexactly as part of the compiled ledger; this README and new evidence record the completed offline checks. No EXE/SDK/JPC/materials/shared assets changed; no game/DLL loaded. CP05/06 NOT_AUTHORIZED.

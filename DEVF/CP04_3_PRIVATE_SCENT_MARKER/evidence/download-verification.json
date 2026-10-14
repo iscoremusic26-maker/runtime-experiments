@@ -1,0 +1,206 @@
+{
+  "status": "DOWNLOAD_VERIFIED",
+  "outer_artifact_members": [
+    {
+      "path": "DEVF_CP04_3_PRIVATE_SCENT_MARKER_windows-amd64_1cd0f30eb3c49e2ac2cebb00cc660cc4b487f084.dusk",
+      "directory": false,
+      "bytes": 17280,
+      "crc32": "8c9fac14",
+      "sha256": "097a428edf39411a7caf9e31c738f66948832fdadec6bf0ee6162b5200ef868e"
+    },
+    {
+      "path": "DOWNLOAD_MANIFEST.json",
+      "directory": false,
+      "bytes": 1943,
+      "crc32": "87f7e11e",
+      "sha256": "31e63374db43aeb0225ead9920fe5f09be9812ce00f05846777c96e72676c070"
+    }
+  ],
+  "delivery_artifact_sha256": "60fc238129d513a26258295e075fe1e8c478a768c61e6ccd6e1dde49ff98f386",
+  "text_artifact_sha256": "bdcecabec0511ad843100441054f7baaf9802905d24fcbe8f652076b0732e58a",
+  "all_CRC_and_hashes_pass": true,
+  "source_ledger_verified": true,
+  "compiled_DLL_sha256_matches": true,
+  "package": {
+    "status": "CP04_PACKAGE_VERIFIED",
+    "package_bytes": 17280,
+    "package_sha256": "097a428edf39411a7caf9e31c738f66948832fdadec6bf0ee6162b5200ef868e",
+    "dll_bytes": 31744,
+    "dll_sha256": "bbb7779149fca7b5a54838031c42488a1f30f937676ec35acd7a86f3dd9b5981",
+    "manifest_sha256": "a31b19ca03283b1aa96de51beb0198503046b0d6b3f5cdb4736b61b92e2bd80d",
+    "manifest": {
+      "id": "dev.devf.cp04_native_aura",
+      "name": "DEVF CP04.3 — Private purple scent marker (150 HP TEST)",
+      "version": "0.4.3",
+      "description": "PRIVATE FUNCTIONAL TEST: one source-selected84ED scene-bank emitter, once-only bounded native preflight, no shared resources changed. CP03 identity/HP150 preserved. Full exit/install alone; DX12 pixels and cleanup HUMAN_NOT_VERIFIED."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 387,
+        "crc32": "48d3769a",
+        "sha256": "a31b19ca03283b1aa96de51beb0198503046b0d6b3f5cdb4736b61b92e2bd80d"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 31744,
+        "crc32": "9527766c",
+        "sha256": "bbb7779149fca7b5a54838031c42488a1f30f937676ec35acd7a86f3dd9b5981"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "dusklight.exe": [
+          "?mEmitterMng@dPa_control_c@@2PEAVJPAEmitterManager@@EA",
+          "?getResUserWork@JPAResourceManager@@QEBAIG@Z",
+          "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+          "?entry@level_c@dPa_control_c@@QEAAIGPEAVJPABaseEmitter@@PEAVdPa_levelEcallBack@@@Z",
+          "?getResource@JPAResourceManager@@QEBAPEAVJPAResource@@G@Z",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?cutTable@level_c@dPa_control_c@@QEAAXPEAVemitter_c@12@@Z",
+          "?get@level_c@dPa_control_c@@QEAAPEAVemitter_c@12@I@Z",
+          "?onActive@emitter_c@level_c@dPa_control_c@@QEAAXXZ",
+          "?createSimpleEmitterID@JPAEmitterManager@@QEAAPEAVJPABaseEmitter@@AEBU?$TVec3@M@JGeometry@@GEEPEAVJPAEmitterCallBack@@PEAVJPAParticleCallBack@@@Z",
+          "?execute@daE_OC_c@@QEAAHXZ",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?fpcM_IsCreating@@YAHI@Z",
+          "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "memcpy",
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memset",
+          "__std_terminate"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strncmp",
+          "strcmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_initialize_onexit_table",
+          "_cexit",
+          "_initialize_narrow_environment",
+          "_configure_narrow_argv",
+          "_execute_onexit_table",
+          "_initterm",
+          "_initterm_e",
+          "_seh_filter_dll"
+        ],
+        "KERNEL32.dll": [
+          "InitializeSListHead",
+          "GetCurrentProcessId",
+          "QueryPerformanceCounter",
+          "DisableThreadLibraryCalls",
+          "GetSystemTimeAsFileTime",
+          "GetCurrentThreadId"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.hook",
+          "major": 1,
+          "minor": 1
+        },
+        {
+          "kind": "hook_mem",
+          "target": "daE_OC_c::execute",
+          "size": 72,
+          "pointer_to_member_bytes": 8
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "CP04_3_PRIVATE_SCENT_MARKER_PE_PASS",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "hook_target_bound_import": "?execute@daE_OC_c@@QEAAHXZ",
+      "manual_detour_imports": false,
+      "metadata_records": 7
+    },
+    "dll_internal_equals_loose": true,
+    "runtime_tested": false
+  },
+  "source_commit": "1cd0f30eb3c49e2ac2cebb00cc660cc4b487f084",
+  "workflow_commit": "b58e6f513ef671971240d1f1f782d06e124c798d",
+  "run_id": "38638241539",
+  "dll_loaded": false,
+  "game_executed": false,
+  "installed": false,
+  "execution_authorized": false,
+  "read_only": false,
+  "baseline_CP03_runtime": "CP03_HUMAN_RUNTIME_PASS",
+  "CP04": "FUNCTIONAL_OFFLINE_HUMAN_TEST_PENDING",
+  "product_mode": "FUNCTIONAL_TEST_WITH_ONCE_PREFLIGHT",
+  "diagnostic_no_emitter": false,
+  "HookService_used": true,
+  "expected_initial_hp_by_code": 150,
+  "HP_diagnostic_read_only": true,
+  "appearance_technique": "PRIVATE_NATIVE_SCENT_MARKER",
+  "CP04_RUNTIME": "HUMAN_RUNTIME_NOT_TESTED",
+  "independent_job": true,
+  "artifact_ids": {
+    "TEST": 11928548467,
+    "TEXT": 11928194657
+  },
+  "expiry_utc": {
+    "TEST": "2026-11-13T21:13:03Z",
+    "TEXT": "2026-11-13T21:13:01Z"
+  }
+}
