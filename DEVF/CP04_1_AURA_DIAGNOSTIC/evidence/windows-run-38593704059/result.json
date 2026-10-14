@@ -1,0 +1,630 @@
+{
+  "status": "CP04_1_DIAGNOSTIC_PACKAGE_PASS_DOWNLOAD_PENDING",
+  "source_commit": "554c31a3e10906c50dd18a05fe0b55737bf5a3a8",
+  "ci_head": "da07f77fddd13ca1664997e5373f3dfe988cf7e1",
+  "run_id": "38593704059",
+  "started_utc": "2026-10-14T15:56:48.629636+00:00",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 5.234,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 1.563,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\DEVF\\CP04_1_AURA_DIAGNOSTIC",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 8.234,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_cp04_1_aura_diagnostic",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 5.672,
+      "exit": 0
+    },
+    {
+      "label": "lab-build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "cp04_1_visual_lab",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 2.485,
+      "exit": 0
+    },
+    {
+      "label": "fake-matching_and_original",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "matching_and_original"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "fake-shared_asset_private_emitters",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "shared_asset_private_emitters"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-single_emitter_anchor",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "single_emitter_anchor"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "fake-resource_gates",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "resource_gates"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-resource_missing",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "resource_missing"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-pool_failure",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "pool_failure"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "fake-model_missing",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "model_missing"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-config_failure",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "config_failure"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "fake-death_and_reload",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "death_and_reload"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-next_generation",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "next_generation"
+      ],
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "fake-recycled_handle",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "recycled_handle"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-shutdown_no_game_access",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "shutdown_no_game_access"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "fake-typed_native_create_branches",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "typed_native_create_branches"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "fake-resource_reason_boundaries",
+      "command": [
+        "<WORK>\\build\\cp04_1_visual_lab.exe",
+        "resource_reason_boundaries"
+      ],
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "module-headers",
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_cp04_1_aura_diagnostic.dll"
+      ],
+      "seconds": 0.078,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_cp04_1_aura_diagnostic.dll"
+      ],
+      "seconds": 0.032,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_cp04_1_aura_diagnostic.dll"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "official-package",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_cp04_1_aura_diagnostic_package",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 0.344,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "DLL_loaded": false,
+  "host_built": false,
+  "mode": "CP04_1_DIAGNOSTIC_ONLY_WITH_CP03_ONE_SHOT150",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_ledger": {
+    "CMakeLists.txt": "46606d0f4abb34018d778bff6f9220abc3b74437144e9f9ae4f309da0f82a738",
+    "mod.json": "c2e2b0dbda8c97ab072c00080215a80f369e9b473f121603cc410656786106d8",
+    "SOURCE_MANIFEST.json": "1f3812f04d85c8ceecebb403bd8d831301132a4cbf55ee15d321f5ddbfa6d111",
+    "ci/audit.py": "c9bf79404743a08211688dfd0992da8482be0fa1628f060703df20ba709ca3de",
+    "ci/registration-reuse.json": "6ba0ac9977c4d87fe0752c48bdfafe88c2c100983384d143269ceb54effea907",
+    "ci/reviewed-crt-surface.json": "d211fafb60baca3bae0d4a049503009d83837eeb04fc8f055c8dd1d6fc584ffe",
+    "ci/reviewed-exact-imports.json": "5cdd0b6acb79c2ad8a6c8411f92b67b6e14c894c688b233979a258c8539c9414",
+    "ci/reviewed-game-exports.json": "8c0645f9ddb4a83bc88a746031f423b3daee8f0d220ed984d9dc5221c69414be",
+    "ci/run_windows.py": "298236eab2700108ff4751a34ac91e4d43d4e54156ffb64c776f6f565622db54",
+    "ci/verify_download.py": "eb5c10daf857b2019dc85565f2535ecea09ac5be5b8e6818bdf020d8ec57cb83",
+    "ci/windows-hook.yml": "40a5b4ef97efd33c7accfd5fe9a504a94721e44d88cc5a72f643f0867d495538",
+    "src/mod.cpp": "58e3fe8c36f3359dccaaa028b646fd0f7eff8429be1458e6a4434473142b069e",
+    "src/observer.hpp": "cb8f0b6524fd69c548d627a983776592ce16b3ddb58e1ed57eb3c25677cca1c1",
+    "src/particle_access.hpp": "a74fbf0cef5873198fb41c79e49a546c8ba080522025843388be93907592966d",
+    "src/policy.hpp": "a4085920082e3150d77ab53d297291e6bac85da3581d1742d4eb58375786bf64",
+    "src/registration.hpp": "cea162de42ec986c854f185e8c1c25d38364b23a8eed094607f1ae6fc1d0dba4",
+    "src/visual.hpp": "5b83f9440460da3fe3ec12ae38053c5a4682b6ff42e0840606519283718f9764",
+    "tests/visual_lab.cpp": "bcdf256573bd3e4fd8506fbe436a9b1b690945ab33f01d825ba3f611f292ad11"
+  },
+  "dependencies": {
+    "SDK": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "Aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "lib_bytes": 9400986,
+    "lib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "lib_CRC": "70c35731"
+  },
+  "fake_scenarios": {
+    "cases": [
+      "matching_and_original",
+      "shared_asset_private_emitters",
+      "single_emitter_anchor",
+      "resource_gates",
+      "resource_missing",
+      "pool_failure",
+      "model_missing",
+      "config_failure",
+      "death_and_reload",
+      "next_generation",
+      "recycled_handle",
+      "shutdown_no_game_access",
+      "typed_native_create_branches",
+      "resource_reason_boundaries"
+    ],
+    "passed": 14,
+    "game_or_DLL_runtime": false,
+    "render_tested": false,
+    "actual_visual_and_registration_headers": true,
+    "historical_suites_repeated": false,
+    "actual_create_checked_template_with_fake_native_types": true,
+    "real_native_RAM_not_executed": true,
+    "18_precise_create_failure_branches": true,
+    "historical_predicate_comparisons": 32768,
+    "registration_case_reused": {
+      "status": "OFFLINE_TEST_PASS_REUSED",
+      "case": "registration_rollback",
+      "run_id": 38584533623,
+      "game_executed": false,
+      "rerun": false,
+      "source_function_sha256": "7c244824b1db01d9f617646e9dd528911f71401d1386924fa129509597ac237f",
+      "header_lf_sha256": {
+        "src/registration.hpp": "cea162de42ec986c854f185e8c1c25d38364b23a8eed094607f1ae6fc1d0dba4",
+        "src/policy.hpp": "a4085920082e3150d77ab53d297291e6bac85da3581d1742d4eb58375786bf64"
+      },
+      "log_sha256": "5d9634831aaba30ee3e3c97d7b043cf1e611ee52a380dfbede1f9bf9e841aff1",
+      "official_sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2"
+    }
+  },
+  "binary_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "dusklight.exe": [
+        "?mEmitterMng@dPa_control_c@@2PEAVJPAEmitterManager@@EA",
+        "?getResUserWork@JPAResourceManager@@QEBAIG@Z",
+        "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+        "?entry@level_c@dPa_control_c@@QEAAIGPEAVJPABaseEmitter@@PEAVdPa_levelEcallBack@@@Z",
+        "?getResource@JPAResourceManager@@QEBAPEAVJPAResource@@G@Z",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?cutTable@level_c@dPa_control_c@@QEAAXPEAVemitter_c@12@@Z",
+        "?get@level_c@dPa_control_c@@QEAAPEAVemitter_c@12@I@Z",
+        "?onActive@emitter_c@level_c@dPa_control_c@@QEAAXXZ",
+        "?createSimpleEmitterID@JPAEmitterManager@@QEAAPEAVJPABaseEmitter@@AEBU?$TVec3@M@JGeometry@@GEEPEAVJPAEmitterCallBack@@PEAVJPAParticleCallBack@@@Z",
+        "?execute@daE_OC_c@@QEAAHXZ",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z"
+      ],
+      "VCRUNTIME140.dll": [
+        "memcpy",
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memset",
+        "__std_terminate"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strncmp",
+        "strcmp"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_initialize_onexit_table",
+        "_cexit",
+        "_initialize_narrow_environment",
+        "_configure_narrow_argv",
+        "_execute_onexit_table",
+        "_initterm",
+        "_initterm_e",
+        "_seh_filter_dll"
+      ],
+      "KERNEL32.dll": [
+        "InitializeSListHead",
+        "GetCurrentProcessId",
+        "QueryPerformanceCounter",
+        "DisableThreadLibraryCalls",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.stage",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.hook",
+        "major": 1,
+        "minor": 1
+      },
+      {
+        "kind": "hook_mem",
+        "target": "daE_OC_c::execute",
+        "size": 72,
+        "pointer_to_member_bytes": 8
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "CP04_1_AURA_DIAGNOSTIC_PE_PASS",
+    "exports": [
+      "mod_ctx",
+      "mod_initialize",
+      "mod_meta",
+      "mod_shutdown",
+      "mod_update"
+    ],
+    "hook_target_bound_import": "?execute@daE_OC_c@@QEAAHXZ",
+    "manual_detour_imports": false,
+    "metadata_records": 7
+  },
+  "PE_negatives": [
+    {
+      "case": "x86",
+      "rejected": true,
+      "DLL_loaded": false
+    },
+    {
+      "case": "dev.twilitrealm.dusklight.hoox",
+      "rejected": true,
+      "DLL_loaded": false
+    },
+    {
+      "case": "daE_OC_c::executX",
+      "rejected": true,
+      "DLL_loaded": false
+    },
+    {
+      "case": "mod_updatX",
+      "rejected": true,
+      "DLL_loaded": false
+    }
+  ],
+  "production_units": [
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_cp04_1_aura_diagnostic_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL- /FIglobal.h /FoCMakeFiles\\devf_cp04_1_aura_diagnostic.dir\\src\\mod.cpp.obj /FdCMakeFiles\\devf_cp04_1_aura_diagnostic.dir\\ /FS -c <WORKSPACE>\\DEVF\\CP04_1_AURA_DIAGNOSTIC\\src\\mod.cpp",
+      "file": "<WORKSPACE>/DEVF/CP04_1_AURA_DIAGNOSTIC/src/mod.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_cp04_1_aura_diagnostic.dir/src/mod.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_cp04_1_aura_diagnostic_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL- /FIglobal.h /FoCMakeFiles\\devf_cp04_1_aura_diagnostic.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp.obj /FdCMakeFiles\\devf_cp04_1_aura_diagnostic.dir\\ /FS -c <OFFICIAL>\\sdk\\src\\game_feature.cpp",
+      "file": "<OFFICIAL>/sdk/src/game_feature.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_cp04_1_aura_diagnostic.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/.official/sdk/src/game_feature.cpp.obj"
+    }
+  ],
+  "loose_dll": {
+    "bytes": 29696,
+    "sha256": "e6d91eaf93201dbede491084c869f2c3cae6aad2f299aca4d5040f4f357e7553"
+  },
+  "package_verification": {
+    "status": "CP04_PACKAGE_VERIFIED",
+    "package_bytes": 16017,
+    "package_sha256": "da4aa72faa2148238c9e6ef879b372647c3c976fe57140d1a4484decd3109d60",
+    "dll_bytes": 29696,
+    "dll_sha256": "e6d91eaf93201dbede491084c869f2c3cae6aad2f299aca4d5040f4f357e7553",
+    "manifest_sha256": "c2e2b0dbda8c97ab072c00080215a80f369e9b473f121603cc410656786106d8",
+    "manifest": {
+      "id": "dev.devf.cp04_native_aura",
+      "name": "DEVF CP04.1 \u2014 Aura gate DIAGNOSTIC ONLY (150 HP TEST)",
+      "version": "0.4.1",
+      "description": "PRIVATE DIAGNOSTIC_ONLY: one native E_OC2, unchanged one-shot HP150, exact first aura gate reason; no causal visual fix claimed. Same CP04 module ID, install alone after full exit. No retries, shared-resource writes or game execution by Codex."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 395,
+        "crc32": "ecb680a2",
+        "sha256": "c2e2b0dbda8c97ab072c00080215a80f369e9b473f121603cc410656786106d8"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 29696,
+        "crc32": "675a5823",
+        "sha256": "e6d91eaf93201dbede491084c869f2c3cae6aad2f299aca4d5040f4f357e7553"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "dusklight.exe": [
+          "?mEmitterMng@dPa_control_c@@2PEAVJPAEmitterManager@@EA",
+          "?getResUserWork@JPAResourceManager@@QEBAIG@Z",
+          "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+          "?entry@level_c@dPa_control_c@@QEAAIGPEAVJPABaseEmitter@@PEAVdPa_levelEcallBack@@@Z",
+          "?getResource@JPAResourceManager@@QEBAPEAVJPAResource@@G@Z",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?cutTable@level_c@dPa_control_c@@QEAAXPEAVemitter_c@12@@Z",
+          "?get@level_c@dPa_control_c@@QEAAPEAVemitter_c@12@I@Z",
+          "?onActive@emitter_c@level_c@dPa_control_c@@QEAAXXZ",
+          "?createSimpleEmitterID@JPAEmitterManager@@QEAAPEAVJPABaseEmitter@@AEBU?$TVec3@M@JGeometry@@GEEPEAVJPAEmitterCallBack@@PEAVJPAParticleCallBack@@@Z",
+          "?execute@daE_OC_c@@QEAAHXZ",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?fpcM_IsCreating@@YAHI@Z",
+          "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "memcpy",
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memset",
+          "__std_terminate"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strncmp",
+          "strcmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_initialize_onexit_table",
+          "_cexit",
+          "_initialize_narrow_environment",
+          "_configure_narrow_argv",
+          "_execute_onexit_table",
+          "_initterm",
+          "_initterm_e",
+          "_seh_filter_dll"
+        ],
+        "KERNEL32.dll": [
+          "InitializeSListHead",
+          "GetCurrentProcessId",
+          "QueryPerformanceCounter",
+          "DisableThreadLibraryCalls",
+          "GetSystemTimeAsFileTime",
+          "GetCurrentThreadId"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.hook",
+          "major": 1,
+          "minor": 1
+        },
+        {
+          "kind": "hook_mem",
+          "target": "daE_OC_c::execute",
+          "size": 72,
+          "pointer_to_member_bytes": 8
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "CP04_1_AURA_DIAGNOSTIC_PE_PASS",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "hook_target_bound_import": "?execute@daE_OC_c@@QEAAHXZ",
+      "manual_detour_imports": false,
+      "metadata_records": 7
+    },
+    "dll_internal_equals_loose": true,
+    "runtime_tested": false
+  },
+  "ended_utc": "2026-10-14T15:57:13.260823+00:00"
+}

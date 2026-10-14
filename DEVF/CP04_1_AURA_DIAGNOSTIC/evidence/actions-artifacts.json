@@ -1,0 +1,27 @@
+{
+  "run_id": 38593704059,
+  "job_id": 115954866399,
+  "conclusion": "success",
+  "source_commit": "554c31a3e10906c50dd18a05fe0b55737bf5a3a8",
+  "ci_commit": "da07f77fddd13ca1664997e5373f3dfe988cf7e1",
+  "artifacts": [
+    {
+      "id": 11908437726,
+      "type": "TEST",
+      "bytes": 17017,
+      "sha256": "c91d96f418e1ed097f22b93e0eb703e9f47d492c008f24bebd9974dcc55c2e47",
+      "expires_utc": "2026-11-13T15:57:15Z",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38593704059/artifacts/11908437726",
+      "download_verified": true
+    },
+    {
+      "id": 11908358056,
+      "type": "TEXT",
+      "bytes": 30026,
+      "sha256": "906d2038478f1e72195761d888d6d282e899abc600c34ed6755831faa8d5a141",
+      "expires_utc": "2026-11-13T15:57:13Z",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38593704059/artifacts/11908358056",
+      "download_verified": true
+    }
+  ]
+}

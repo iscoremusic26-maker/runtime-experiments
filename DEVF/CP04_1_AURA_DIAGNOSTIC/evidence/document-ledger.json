@@ -1,0 +1,263 @@
+{
+  "status": "DOCUMENT_CHECKPOINT_LEDGER",
+  "compiled_source": "554c31a3e10906c50dd18a05fe0b55737bf5a3a8",
+  "ci_commit": "da07f77fddd13ca1664997e5373f3dfe988cf7e1",
+  "files": {
+    ".gitattributes": {
+      "bytes": 155,
+      "sha256": "631eafb263009562598593b3f7164296784ca58f3f140b618f9435b6c94cf918"
+    },
+    ".gitignore": {
+      "bytes": 26,
+      "sha256": "a7d3ec2efb2be8ee8da74403ec1b1bc0ab32cbe92efabe5aca57aa5b2c7613b4"
+    },
+    "BUILD_AND_PACKAGE.md": {
+      "bytes": 3836,
+      "sha256": "25c1bda4ad5ac14c94bcdc91ddbb5d879a6c28784d8e09d0c653500125bad32b"
+    },
+    "CMakeLists.txt": {
+      "bytes": 914,
+      "sha256": "46606d0f4abb34018d778bff6f9220abc3b74437144e9f9ae4f309da0f82a738"
+    },
+    "DIAGNOSIS.md": {
+      "bytes": 7110,
+      "sha256": "5f55fa1eb0fad88faa7e280dbd73619c28163e88fe8be00900198aa519abd032"
+    },
+    "HUMAN_TEST.md": {
+      "bytes": 2115,
+      "sha256": "c636f244884bcc6dcea34ba237b401a2b3728cdb47e510193308b5442df18695"
+    },
+    "README.md": {
+      "bytes": 596,
+      "sha256": "67f92482fb33e5cbd8700f8d8abccd97290272368deed268ddb8b9e7994e8b89"
+    },
+    "RECOVERY.md": {
+      "bytes": 2269,
+      "sha256": "99e2edc50f722954dc4561601078bdc1ec23bec34cfa607b7cf789dbec9231de"
+    },
+    "SOURCE_MANIFEST.json": {
+      "bytes": 14908,
+      "sha256": "1f3812f04d85c8ceecebb403bd8d831301132a4cbf55ee15d321f5ddbfa6d111"
+    },
+    "TEST_RESULTS.md": {
+      "bytes": 3454,
+      "sha256": "bbc4cbba4ac681d8d5b0d4f9b9a327cfecd113154fbab2af907f0b5bceabd28e"
+    },
+    "ci/audit.py": {
+      "bytes": 6533,
+      "sha256": "c9bf79404743a08211688dfd0992da8482be0fa1628f060703df20ba709ca3de"
+    },
+    "ci/registration-reuse.json": {
+      "bytes": 603,
+      "sha256": "6ba0ac9977c4d87fe0752c48bdfafe88c2c100983384d143269ceb54effea907"
+    },
+    "ci/reviewed-crt-surface.json": {
+      "bytes": 917,
+      "sha256": "d211fafb60baca3bae0d4a049503009d83837eeb04fc8f055c8dd1d6fc584ffe"
+    },
+    "ci/reviewed-exact-imports.json": {
+      "bytes": 1712,
+      "sha256": "5cdd0b6acb79c2ad8a6c8411f92b67b6e14c894c688b233979a258c8539c9414"
+    },
+    "ci/reviewed-game-exports.json": {
+      "bytes": 865,
+      "sha256": "8c0645f9ddb4a83bc88a746031f423b3daee8f0d220ed984d9dc5221c69414be"
+    },
+    "ci/run_windows.py": {
+      "bytes": 9718,
+      "sha256": "298236eab2700108ff4751a34ac91e4d43d4e54156ffb64c776f6f565622db54"
+    },
+    "ci/verify_download.py": {
+      "bytes": 5190,
+      "sha256": "eb5c10daf857b2019dc85565f2535ecea09ac5be5b8e6818bdf020d8ec57cb83"
+    },
+    "ci/windows-hook.yml": {
+      "bytes": 3494,
+      "sha256": "40a5b4ef97efd33c7accfd5fe9a504a94721e44d88cc5a72f643f0867d495538"
+    },
+    "evidence/actions-artifacts.json": {
+      "bytes": 950,
+      "sha256": "0c5f5c29b0fc77f797f13b2111e2c99cb4b1e081aaa994e0acfa2862c5c4879a"
+    },
+    "evidence/download-verification.json": {
+      "bytes": 6609,
+      "sha256": "ec67b445bc2b442d00a18ce36ce079af4a6e2c3044592785210503ad14a92356"
+    },
+    "evidence/focused-diff-review.json": {
+      "bytes": 317,
+      "sha256": "d5da1441c8089581b85586576fe3a7f606b4e0106097c6bee23d4026170bf9b3"
+    },
+    "evidence/gates.json": {
+      "bytes": 608,
+      "sha256": "f356fbe2d0b3a0aebd44828cd4042480dd88fc3cf57d9917bf8770be699da33f"
+    },
+    "evidence/human-failure-summary.json": {
+      "bytes": 670,
+      "sha256": "c5b8980c2ce2fdf4035e1cf88d7226e928c65175d78cbec4445038606585d1ad"
+    },
+    "evidence/preservation.json": {
+      "bytes": 2063,
+      "sha256": "704653e0e438c8858f6e782a27ca1d63163e2b870b7c05ef0cb89456adbd59df"
+    },
+    "evidence/reused-registration_rollback.log": {
+      "bytes": 101,
+      "sha256": "5d9634831aaba30ee3e3c97d7b043cf1e611ee52a380dfbede1f9bf9e841aff1"
+    },
+    "evidence/source-references.json": {
+      "bytes": 946,
+      "sha256": "3bada1fb75012f71fe9564442fad77e01eb5ada9a1752c299e76043faa820e6e"
+    },
+    "evidence/windows-run-38593704059/DOWNLOAD_MANIFEST.json": {
+      "bytes": 1852,
+      "sha256": "52bb76ebaf813ec8a0ca6658da5d8a56fddcf0e76b505fe2405307a900dd160d"
+    },
+    "evidence/windows-run-38593704059/binary-audit.json": {
+      "bytes": 3033,
+      "sha256": "053f95b615132621e4ff0eb8fb78d8635a324abc54e521b59df6ade7142f0277"
+    },
+    "evidence/windows-run-38593704059/build.log": {
+      "bytes": 1417,
+      "sha256": "e68b03e857c9cf0de618135ea499c29e30a751eb915a3b6ff31202100f9b6b43"
+    },
+    "evidence/windows-run-38593704059/cmake-version.log": {
+      "bytes": 93,
+      "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+    },
+    "evidence/windows-run-38593704059/compile-commands.json": {
+      "bytes": 3081,
+      "sha256": "90d296271e6343b78642615cf7094d21b589c3849c877e199743880f6eb7b08a"
+    },
+    "evidence/windows-run-38593704059/compiler.log": {
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    "evidence/windows-run-38593704059/configure.log": {
+      "bytes": 822,
+      "sha256": "2ccb207bf78a422cf4799c9d96f2b335176c9c103a8abef694cf4c871df0f100"
+    },
+    "evidence/windows-run-38593704059/evidence-sha256.json": {
+      "bytes": 4017,
+      "sha256": "61e9ab9a3124e1d360cb7e43e4be5ed43e75c6c55043436261dcc010b1f8d060"
+    },
+    "evidence/windows-run-38593704059/fake-config_failure.log": {
+      "bytes": 94,
+      "sha256": "1f1270047dd195dca424f7a7b65c7387068a9e7696bf4e18b9cb6ab1ecf736df"
+    },
+    "evidence/windows-run-38593704059/fake-death_and_reload.log": {
+      "bytes": 96,
+      "sha256": "c2dcbb9852c18e51951994e7f1be870c97d29ffbc6a0067a3311c2ff800e61cb"
+    },
+    "evidence/windows-run-38593704059/fake-matching_and_original.log": {
+      "bytes": 101,
+      "sha256": "c3caf425bdffca710d5126031b26ca42259b60d8c4087695b0d21604dcf2b789"
+    },
+    "evidence/windows-run-38593704059/fake-model_missing.log": {
+      "bytes": 93,
+      "sha256": "a7ca2ef726ae9b8d1dd2f8607c79217fcef79e6f25b122c4e5c6e1c25520c1c7"
+    },
+    "evidence/windows-run-38593704059/fake-next_generation.log": {
+      "bytes": 95,
+      "sha256": "014c3d222f83debb8329ccf293fd1b1a3bc1709fd7d90bc76892400cd26768ba"
+    },
+    "evidence/windows-run-38593704059/fake-pool_failure.log": {
+      "bytes": 92,
+      "sha256": "f1d56ba878ed294db98fadc34d32b5d6702edf31a4fe2a1369d2d2ed9b60f319"
+    },
+    "evidence/windows-run-38593704059/fake-recycled_handle.log": {
+      "bytes": 95,
+      "sha256": "0b1152859ef9650b5c603bffd5697c37e0b40f2d6f3d71677bbbd7745da8b24b"
+    },
+    "evidence/windows-run-38593704059/fake-resource_gates.log": {
+      "bytes": 94,
+      "sha256": "e8a9a2d0578acefd0f31b0ec37d08f74700ef57c1c01334649708dafcfc12f9c"
+    },
+    "evidence/windows-run-38593704059/fake-resource_missing.log": {
+      "bytes": 96,
+      "sha256": "9b8f96faf9fae2e74822ce2fa9d8c77f6b0a1a2dcddfae25136788fd971d6bfa"
+    },
+    "evidence/windows-run-38593704059/fake-resource_reason_boundaries.log": {
+      "bytes": 190,
+      "sha256": "dec683dd095073e63c9c990ec76fb976fee4035d9fb12cfa8fe950edc53b5665"
+    },
+    "evidence/windows-run-38593704059/fake-shared_asset_private_emitters.log": {
+      "bytes": 109,
+      "sha256": "5bdce011e4ee0f0eea88085dc7e70cf2fec1f1db5346eb7d249c685a7485ea61"
+    },
+    "evidence/windows-run-38593704059/fake-shutdown_no_game_access.log": {
+      "bytes": 103,
+      "sha256": "cca6abfb5a48326d4c6a07176188cfe581293b03e6bb11dd295e57de3fa94ef0"
+    },
+    "evidence/windows-run-38593704059/fake-single_emitter_anchor.log": {
+      "bytes": 101,
+      "sha256": "c248959c6f0c2feea864dfa243c3c4370d4ca20544ed60726bdad260671cd7b1"
+    },
+    "evidence/windows-run-38593704059/fake-typed_native_create_branches.log": {
+      "bytes": 1921,
+      "sha256": "d7b5714ac831b7c6a9e99a79f69e90758867f44da8934a956cbd8f0e2553c55e"
+    },
+    "evidence/windows-run-38593704059/lab-build.log": {
+      "bytes": 1393,
+      "sha256": "12fad7edda1c48454d1f40c0068b3fe7ef70d090aab110e1bef9e194ac34643a"
+    },
+    "evidence/windows-run-38593704059/module-exports.log": {
+      "bytes": 835,
+      "sha256": "73e898fdf3becbe93d4d1662a0b08f3f58e4bfb3ed7cafab75afbdddb075039a"
+    },
+    "evidence/windows-run-38593704059/module-headers.log": {
+      "bytes": 6066,
+      "sha256": "b018514a37da2313e3f93305ff4b540cc801eb8decdcb5d967769275009d5fb6"
+    },
+    "evidence/windows-run-38593704059/module-imports.log": {
+      "bytes": 4269,
+      "sha256": "1309c6ad947568210ade313f3dbf5dd32f53c974f8b3330874818ea48b936041"
+    },
+    "evidence/windows-run-38593704059/module-map.log": {
+      "bytes": 59085,
+      "sha256": "d462b9b09c7794a75ce1ed4bef0f002332d4b110bd908407d10eccea9e28c6af"
+    },
+    "evidence/windows-run-38593704059/official-package.log": {
+      "bytes": 160,
+      "sha256": "b950f8eefb8e19e409dcee1f2116ec69c5660df935557b34be6c0fb45dcacb28"
+    },
+    "evidence/windows-run-38593704059/result.json": {
+      "bytes": 20805,
+      "sha256": "f7ec5a59d15c13535cf12f7928b3247545cca737150825a5068c1e7c0875f184"
+    },
+    "evidence/windows-run-38593704059/reused-registration_rollback.log": {
+      "bytes": 101,
+      "sha256": "5d9634831aaba30ee3e3c97d7b043cf1e611ee52a380dfbede1f9bf9e841aff1"
+    },
+    "mod.json": {
+      "bytes": 395,
+      "sha256": "c2e2b0dbda8c97ab072c00080215a80f369e9b473f121603cc410656786106d8"
+    },
+    "src/mod.cpp": {
+      "bytes": 9825,
+      "sha256": "58e3fe8c36f3359dccaaa028b646fd0f7eff8429be1458e6a4434473142b069e"
+    },
+    "src/observer.hpp": {
+      "bytes": 3511,
+      "sha256": "cb8f0b6524fd69c548d627a983776592ce16b3ddb58e1ed57eb3c25677cca1c1"
+    },
+    "src/particle_access.hpp": {
+      "bytes": 4641,
+      "sha256": "a74fbf0cef5873198fb41c79e49a546c8ba080522025843388be93907592966d"
+    },
+    "src/policy.hpp": {
+      "bytes": 1710,
+      "sha256": "a4085920082e3150d77ab53d297291e6bac85da3581d1742d4eb58375786bf64"
+    },
+    "src/registration.hpp": {
+      "bytes": 2160,
+      "sha256": "cea162de42ec986c854f185e8c1c25d38364b23a8eed094607f1ae6fc1d0dba4"
+    },
+    "src/visual.hpp": {
+      "bytes": 5536,
+      "sha256": "5b83f9440460da3fe3ec12ae38053c5a4682b6ff42e0840606519283718f9764"
+    },
+    "tests/visual_lab.cpp": {
+      "bytes": 14172,
+      "sha256": "bcdf256573bd3e4fd8506fbe436a9b1b690945ab33f01d825ba3f611f292ad11"
+    }
+  }
+}

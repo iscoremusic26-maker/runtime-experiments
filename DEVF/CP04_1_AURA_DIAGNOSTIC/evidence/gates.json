@@ -1,0 +1,19 @@
+{
+  "source": "SOURCE_VERIFIED",
+  "offline_tests": "OFFLINE_TEST_PASS",
+  "build": "BUILD_PASS",
+  "package": "PACKAGE_VERIFIED",
+  "download": "DOWNLOAD_VERIFIED",
+  "native_resource_properties": "NOT_VERIFIED",
+  "original_runtime_cause": "BLOCKED_NEEDS_PRECISE_HUMAN_GATE",
+  "CP04_1": "DIAGNOSTIC_ONLY_HUMAN_TEST_PENDING",
+  "CP04_appearance": "NO-GO",
+  "CP03": "CP03_HUMAN_RUNTIME_PASS_UNCHANGED",
+  "CP04_1_render_runtime": "NOT_TESTED",
+  "CP05": "NOT_AUTHORIZED",
+  "CP06": "NOT_AUTHORIZED",
+  "game_executed": false,
+  "DLL_loaded": false,
+  "host_modified": false,
+  "unbounded_retries": false
+}

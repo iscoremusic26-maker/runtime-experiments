@@ -1,0 +1,118 @@
+{
+  "binary-audit.json": {
+    "bytes": 3033,
+    "sha256": "053f95b615132621e4ff0eb8fb78d8635a324abc54e521b59df6ade7142f0277"
+  },
+  "build.log": {
+    "bytes": 1417,
+    "sha256": "e68b03e857c9cf0de618135ea499c29e30a751eb915a3b6ff31202100f9b6b43"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compile-commands.json": {
+    "bytes": 3081,
+    "sha256": "90d296271e6343b78642615cf7094d21b589c3849c877e199743880f6eb7b08a"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 822,
+    "sha256": "2ccb207bf78a422cf4799c9d96f2b335176c9c103a8abef694cf4c871df0f100"
+  },
+  "DOWNLOAD_MANIFEST.json": {
+    "bytes": 1852,
+    "sha256": "52bb76ebaf813ec8a0ca6658da5d8a56fddcf0e76b505fe2405307a900dd160d"
+  },
+  "fake-config_failure.log": {
+    "bytes": 94,
+    "sha256": "1f1270047dd195dca424f7a7b65c7387068a9e7696bf4e18b9cb6ab1ecf736df"
+  },
+  "fake-death_and_reload.log": {
+    "bytes": 96,
+    "sha256": "c2dcbb9852c18e51951994e7f1be870c97d29ffbc6a0067a3311c2ff800e61cb"
+  },
+  "fake-matching_and_original.log": {
+    "bytes": 101,
+    "sha256": "c3caf425bdffca710d5126031b26ca42259b60d8c4087695b0d21604dcf2b789"
+  },
+  "fake-model_missing.log": {
+    "bytes": 93,
+    "sha256": "a7ca2ef726ae9b8d1dd2f8607c79217fcef79e6f25b122c4e5c6e1c25520c1c7"
+  },
+  "fake-next_generation.log": {
+    "bytes": 95,
+    "sha256": "014c3d222f83debb8329ccf293fd1b1a3bc1709fd7d90bc76892400cd26768ba"
+  },
+  "fake-pool_failure.log": {
+    "bytes": 92,
+    "sha256": "f1d56ba878ed294db98fadc34d32b5d6702edf31a4fe2a1369d2d2ed9b60f319"
+  },
+  "fake-recycled_handle.log": {
+    "bytes": 95,
+    "sha256": "0b1152859ef9650b5c603bffd5697c37e0b40f2d6f3d71677bbbd7745da8b24b"
+  },
+  "fake-resource_gates.log": {
+    "bytes": 94,
+    "sha256": "e8a9a2d0578acefd0f31b0ec37d08f74700ef57c1c01334649708dafcfc12f9c"
+  },
+  "fake-resource_missing.log": {
+    "bytes": 96,
+    "sha256": "9b8f96faf9fae2e74822ce2fa9d8c77f6b0a1a2dcddfae25136788fd971d6bfa"
+  },
+  "fake-resource_reason_boundaries.log": {
+    "bytes": 190,
+    "sha256": "dec683dd095073e63c9c990ec76fb976fee4035d9fb12cfa8fe950edc53b5665"
+  },
+  "fake-shared_asset_private_emitters.log": {
+    "bytes": 109,
+    "sha256": "5bdce011e4ee0f0eea88085dc7e70cf2fec1f1db5346eb7d249c685a7485ea61"
+  },
+  "fake-shutdown_no_game_access.log": {
+    "bytes": 103,
+    "sha256": "cca6abfb5a48326d4c6a07176188cfe581293b03e6bb11dd295e57de3fa94ef0"
+  },
+  "fake-single_emitter_anchor.log": {
+    "bytes": 101,
+    "sha256": "c248959c6f0c2feea864dfa243c3c4370d4ca20544ed60726bdad260671cd7b1"
+  },
+  "fake-typed_native_create_branches.log": {
+    "bytes": 1921,
+    "sha256": "d7b5714ac831b7c6a9e99a79f69e90758867f44da8934a956cbd8f0e2553c55e"
+  },
+  "lab-build.log": {
+    "bytes": 1393,
+    "sha256": "12fad7edda1c48454d1f40c0068b3fe7ef70d090aab110e1bef9e194ac34643a"
+  },
+  "module-exports.log": {
+    "bytes": 835,
+    "sha256": "73e898fdf3becbe93d4d1662a0b08f3f58e4bfb3ed7cafab75afbdddb075039a"
+  },
+  "module-headers.log": {
+    "bytes": 6066,
+    "sha256": "b018514a37da2313e3f93305ff4b540cc801eb8decdcb5d967769275009d5fb6"
+  },
+  "module-imports.log": {
+    "bytes": 4269,
+    "sha256": "1309c6ad947568210ade313f3dbf5dd32f53c974f8b3330874818ea48b936041"
+  },
+  "module-map.log": {
+    "bytes": 59085,
+    "sha256": "d462b9b09c7794a75ce1ed4bef0f002332d4b110bd908407d10eccea9e28c6af"
+  },
+  "official-package.log": {
+    "bytes": 160,
+    "sha256": "b950f8eefb8e19e409dcee1f2116ec69c5660df935557b34be6c0fb45dcacb28"
+  },
+  "result.json": {
+    "bytes": 20805,
+    "sha256": "f7ec5a59d15c13535cf12f7928b3247545cca737150825a5068c1e7c0875f184"
+  },
+  "reused-registration_rollback.log": {
+    "bytes": 101,
+    "sha256": "5d9634831aaba30ee3e3c97d7b043cf1e611ee52a380dfbede1f9bf9e841aff1"
+  }
+}

@@ -1,0 +1,5 @@
+[1/1] Packaging devf_cp04_1_aura_diagnostic -> <WORK>/build/mods/devf_cp04_1_aura_diagnostic.dusk
+mod.json
+lib
+lib/windows-amd64
+lib/windows-amd64/mod.dll

@@ -1,0 +1,54 @@
+{
+  "root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "file_lines": {
+    "src/d/d_s_logo.cpp": [
+      733,
+      763,
+      938
+    ],
+    "src/d/d_com_inf_game.cpp": [
+      904,
+      905
+    ],
+    "src/d/d_particle.cpp": [
+      1197,
+      1200,
+      1214,
+      1064,
+      1085,
+      1470,
+      1598
+    ],
+    "libs/JSystem/src/JParticle/JPAEmitterManager.cpp": [
+      51,
+      76
+    ],
+    "libs/JSystem/src/JParticle/JPAResourceManager.cpp": [
+      27,
+      32,
+      67,
+      73
+    ],
+    "libs/JSystem/src/JParticle/JPAResource.cpp": [
+      417,
+      1313,
+      1331
+    ],
+    "libs/JSystem/include/JSystem/JParticle/JPAExTexShape.h": [
+      36,
+      37
+    ],
+    "libs/JSystem/src/JParticle/JPAParticle.cpp": [
+      245,
+      247
+    ],
+    "src/dusk/mods/loader/loader.cpp": [
+      156,
+      165,
+      869,
+      873
+    ]
+  },
+  "original_files_copied": false,
+  "common_jpc_physical_received": false
+}

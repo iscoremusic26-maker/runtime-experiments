@@ -1,0 +1,7 @@
+{
+  "status": "SOURCE_VERIFIED",
+  "record_snapshot_on_execute_after_execute_byte_exact_CP04": true,
+  "native_tagged_refresh_release_byte_exact_CP04": true,
+  "original_CP04_TEST_retained_and_hash_verified": true,
+  "identity_HP_callback_sha256": "cac98a7dfc3f405591fa05a8eb976714396ba20674f88b07e252172a54e95a8d"
+}
