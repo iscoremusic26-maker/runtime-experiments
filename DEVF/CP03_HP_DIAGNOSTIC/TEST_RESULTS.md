@@ -1,5 +1,7 @@
 # Matriz de resultados del diagnóstico
 
+La tabla siguiente conserva el estado **al publicar el paquete offline**, en 9e0a804. El estado actual se actualiza exclusivamente en la sección de validación humana posterior; no se convierte TEST_FAKE en ejecución del juego.
+
 | Gate | Estado | Evidencia / límite |
 |---|---|---|
 | Baseline v0.3.0 en Windows/DX12 | USER_REPORTED | 220→150 para147/581/784, combate/muerte/respawn normales; no medición por impacto |
@@ -24,3 +26,21 @@ Cobertura fake: inicial220→150 sin pérdida 70, cambios150→115→100 con ven
 Run 38540468476: BUILD y17/17 PASS, gate de imports detuvo TEST por __std_terminate nuevo. Se revisó proveedor VCRUNTIME140 y superficie exacta; solo cambió auditoría/CI. Run 38541018826: SUCCESS, negativos/package PASS, descarga real posterior PASS. Código C++/headers/tests/CMake no cambian desde107dbdf.
 
 No se ejecutan suites CP00/CP01/CP02/CP03 históricas, A0/A1, G5, KCL/WRock/Digpl o SDK Linux. Logs de CI propio se conservan byte a byte y saneados; no raw logs personales. El bridge real se compila/audita pero no se invoca en CI. Eventos fake no son mediciones del juego. No clasificación FORCED_ZERO/SPECIAL sin ruta observada; aquí cero siempre UNKNOWN_OR_SPECIAL.
+
+## Validación humana posterior al CI — 14 de octubre de 2026
+
+Estado actual: **CP03_HUMAN_RUNTIME_PASS**, con alcance limitado al flujo probado. [Informe y extracto comunicado](HUMAN_RUNTIME_RESULTS_2026-10-14.md). Raw log personal no revisado localmente ni archivado en Git por el agente.
+
+| Comprobación posterior | Estado | Procedencia |
+|---|---|---|
+| Dos creaciones, health 220→150 | HUMAN_RUNTIME_PASS | USER_SUPPLIED_LOG_SUMMARY_ANALYZED; 147/1795, 568/4175 |
+| Serie 150→110→70→30→0 en cada ID | HUMAN_RUNTIME_PASS | USER_SUPPLIED_LOG_SUMMARY_ANALYZED; ocho HP_DELTA, ordinales 1–4 por instancia |
+| Incrementos o rechazos en ventanas comunicadas | Ninguno observado | Resumen: HP_INCREASE_OBSERVED=0, HP_REJECTED=0, HP_DIAG_REJECTED=0; no garantía universal |
+| Aparición, animaciones, combate, muerte | PASS_REPORTED | HUMAN_REPORTED |
+| Salida/reentrada natural y nueva instancia | PASS_REPORTED | HUMAN_REPORTED, correlacionado con ID568 y NEXT_GENERATION |
+| Cierre completo, retirada de v0.3.1, reinicio y ausencia | PASS_REPORTED | HUMAN_REPORTED: «Desaparecio»; no prueba por log |
+| Daño bruto, arma inequívoca, perfil HP máximo | NOT_TESTED | Delta neto no demuestra estos valores |
+| Otros mapas/versiones/mods, rendimiento amplio, hot-unload | NOT_TESTED | Fuera del alcance |
+| CP04 / CP06 | NOT_STARTED / NOT_AUTHORIZED | No se avanza |
+
+No se recompila, repite el laboratorio o crea una distribución nueva en este cierre. SOURCE/BUILD/PE/PACKAGE/DOWNLOAD anteriores se conservan como REPO_VERIFIED; la evidencia de runtime corresponde al usuario.

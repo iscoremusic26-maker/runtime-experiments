@@ -1,6 +1,8 @@
 # CP03 v0.3.1 — diagnóstico privado de HP
 
-**SOURCE_VERIFIED · BUILD_PASS · PACKAGE_VERIFIED · DOWNLOAD_VERIFIED · HUMAN_RUNTIME_NOT_TESTED.** Listo para prueba humana Windows x64/DX12; no es CP03_DIAGNOSTIC_PASS_RUNTIME ni estable. No CP04/CP06.
+**Estado actual: CP03_HUMAN_RUNTIME_PASS (v0.3.1)** para las condiciones probadas de Dusklight 2.0.3 Windows x64/DX12. [Informe humano del 14 de octubre de 2026](HUMAN_RUNTIME_RESULTS_2026-10-14.md): dos instancias con health 220→150 y serie 150→110→70→30→0; aparición, combate, muerte y retirada comunicados por el usuario. El resumen del log y el control negativo humano tienen procedencias distintas. No es estable general ni compatibilidad universal. CP04/CP06 no iniciados.
+
+Cronología: SOURCE_VERIFIED, BUILD_PASS, PACKAGE_VERIFIED y DOWNLOAD_VERIFIED se acreditaron offline; el paquete se publicó inicialmente como HUMAN_RUNTIME_NOT_TESTED. La validación humana posterior no cambia el código, el .dusk o las pruebas ejecutadas en CI. El protocolo original se conserva en HUMAN_TEST.md; no se solicita repetirlo.
 
 La versión v0.3.0 y sus refs/artefacto se conservan intactos. El usuario reportó HP_APPLIED 220→150 para ActorId 147/581/784, combate/muerte normales y respawn; esos antecedentes se guardan como USER_REPORTED, sin medición por impacto ni logs personales nuevos. Base de recuperación: `76c53b6bcc61228df3b5a19f35b28fc777d4bde9`.
 
@@ -9,7 +11,7 @@ v0.3.1 conserva policy.hpp byte a byte, payload StageService y una única escrit
 - [Descargar TEST privado v0.3.1](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38541018826/artifacts/11881653953), **11975 bytes**, SHA256 `0d9882b072fe5cd6248c16a181171a47364e1acf5870503c1eb2f39c668b4344`.
 - [CI Windows SUCCESS](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38541018826): MSVC 19.51.36260 x64, Windows SDK 10.0.26100.0. 17 casos nuevos TEST_FAKE PASS, cuatro negativos PE rechazados, paquete y ambas descargas verificados.
 - Fuente compilada `9dd5b8efd4ad98f1d6260820d782e101366a0f8b`; CI `7fd3628ee8bfeb30f8070db061220796c1c15b4a`. Checkpoint final añade solo informes/evidencia; fuente compilada sin cambios.
-- Recuperación: tag `DEVF_CP03_HP_DIAGNOSTIC_OFFLINE_TEST`, rama `feature/devf-cp03-hp-diagnostic`, [PR25](https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/25). CI en [PR17](https://github.com/iscoremusic26-maker/codex-cp00-inputs/pull/17), rama `ci/devf-cp03-hp-diagnostic`. Draft, sin merge.
+- Recuperación del cierre: tag nuevo `DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14`, rama `feature/devf-cp03-hp-diagnostic`, [PR25](https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/25). El tag histórico `DEVF_CP03_HP_DIAGNOSTIC_OFFLINE_TEST` sigue fijado al checkpoint offline 9e0a804. CI y [PR17](https://github.com/iscoremusic26-maker/codex-cp00-inputs/pull/17) permanecen intactos, draft y sin merge. Instrucciones exactas en RECOVERY.md.
 
 [Fuente y seguridad](SOURCE_REVIEW.md), [imports reales](IMPORT_REVIEW.md), [build/paquete](BUILD_AND_PACKAGE.md), [matriz](TEST_RESULTS.md), [recuperación](RECOVERY.md), [prueba humana/reversión](HUMAN_TEST.md). No ActorService, detours manuales, cambios de host/SDK/originales/saves/AI/colisiones/field_0x560 ni observación masiva. No se cargó la DLL o ejecutó el juego desde Codex.
 

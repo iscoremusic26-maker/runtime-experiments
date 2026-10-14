@@ -1,0 +1,46 @@
+{
+  "scope": "2026-10-14 human runtime documentary closure only, byte-exact; self excluded",
+  "historical_checkpoint": "9e0a804e73d474df9345680ad77e677656bd0d32",
+  "human_provenance": [
+    "USER_SUPPLIED_LOG_SUMMARY_ANALYZED",
+    "USER_REPORTED",
+    "HUMAN_REPORTED"
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 3536,
+      "sha256": "5ae89efc54022f268ff6ca385f31d818b1d93b0741f5c2794bcfbb51216ae592"
+    },
+    {
+      "path": "TEST_RESULTS.md",
+      "bytes": 5172,
+      "sha256": "def7262573214f05fc9b169c1867f9c5614d0756c58e34c2bbd8cbf91d3f5c56"
+    },
+    {
+      "path": "HUMAN_TEST.md",
+      "bytes": 2955,
+      "sha256": "ed427ee22fe3d230a592adf5c7e537dad3a1df1f037a50c04997f7caad8c7df5"
+    },
+    {
+      "path": "RECOVERY.md",
+      "bytes": 5827,
+      "sha256": "9f17042ed4de6ba501e586c58b019f2d31b6ce2eefdf5d266b06decad4cfc380"
+    },
+    {
+      "path": "BUILD_AND_PACKAGE.md",
+      "bytes": 4159,
+      "sha256": "a9714c9be40d71cb428049e1a94947d25df660f95996290a484466f6f5061aa6"
+    },
+    {
+      "path": "HUMAN_RUNTIME_RESULTS_2026-10-14.md",
+      "bytes": 8303,
+      "sha256": "d30968f76aee71e1e1378642d5dbea371cc278d2f2cbfbb1fb1285d5ddf446de"
+    },
+    {
+      "path": "evidence/human-runtime-closure-integrity-2026-10-14.json",
+      "bytes": 7965,
+      "sha256": "489b3391e9ec4ffc250954b9df345d8f4723c0a1a793e2d5fc4f8a875742c468"
+    }
+  ]
+}

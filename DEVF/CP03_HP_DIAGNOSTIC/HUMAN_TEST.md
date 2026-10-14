@@ -11,3 +11,7 @@ BUILD_PASS, PACKAGE_VERIFIED y DOWNLOAD_VERIFIED cumplidos. [TEST privado](https
 7. Reversión: cierre completo, retirar v0.3.1, reiniciar y comprobar ausencia. La retirada previa de v0.3.0 es antecedente; esta versión requiere nueva evidencia. Para volver al baseline, otro proceso con solo v0.3.0.
 
 Comparación opcional con CP02 E_OC2 de 220: otra sesión completamente separada, misma arma/corte, nunca instalado junto a CP03. Un E_OC original de 40 no es comparador equivalente. La instrumentación no registra ni modifica actores originales. No declarar CP03_DIAGNOSTIC_PASS_RUNTIME hasta revisar log real, combate y retirada; no CP04/CP06.
+
+## Ejecución completada — referencia posterior
+
+El texto anterior se conserva íntegro como protocolo histórico. El usuario completó la prueba v0.3.1 y comunicó las dos series de HP, combate/muerte, reentrada y control negativo tras cierre completo/retirada/reinicio: «Desaparecio». [Resultado humano del 14 de octubre de 2026](HUMAN_RUNTIME_RESULTS_2026-10-14.md). Estado del flujo probado: **CP03_HUMAN_RUNTIME_PASS**. No se solicita repetir estas pruebas; las instrucciones siguen disponibles para recuperación, con sus límites originales.
