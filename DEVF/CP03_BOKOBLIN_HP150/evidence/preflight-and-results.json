@@ -1,0 +1,67 @@
+{
+  "checked_utc": "2026-10-14 03:15:25 UTC",
+  "phase": "CP03_FEASIBILITY",
+  "decision": "BLOCKED_WITH_EVIDENCE",
+  "scope": "Documentation and read-only source provenance only",
+  "main_historical_pr": {
+    "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/21",
+    "head": "feature/devf-cp02-eoc2-native-elite",
+    "head_sha": "0d2430262181bb2844f13bb8da0a628f71740998",
+    "base": "feature/devf-cp01-stage-bokoblin-minimal",
+    "base_sha": "53ceaca4c28653bfb057ac3aaabb18b3624ea19b",
+    "state": "open",
+    "draft": true,
+    "merged": false
+  },
+  "ci_historical_pr": {
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/pull/15",
+    "head": "ci/devf-cp02-eoc2-native-elite",
+    "head_sha": "d3a85769f096e2d6eb065ddf2d69847ab0b6b8e1",
+    "base": "ci/devf-cp01-stage-bokoblin-minimal",
+    "base_sha": "09b6464343a2db0d64a643ab06714ef9f042b061",
+    "state": "open",
+    "draft": true,
+    "merged": false
+  },
+  "repository": {
+    "visibility": "private",
+    "push_permission": true
+  },
+  "existing_cp02_ci": [
+    {
+      "id": 38501242719,
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "human_reports": {
+    "source": "Latest user request; log files not attached in this task",
+    "cp01": {
+      "log": "dusklight-20261013-205829.log",
+      "appearance_behavior_withdrawal": "USER_REPORTED_RUNTIME_PASS"
+    },
+    "cp02": {
+      "log": "dusklight-20261013-214832.log",
+      "only_active_mod": "CP02 v0.2.0 (1/1)",
+      "result": 0,
+      "edit_handle": 1,
+      "error_fatal": "NONE_USER_REPORTED",
+      "appearance_behavior_withdrawal": "USER_REPORTED_RUNTIME_PASS",
+      "numerical_220_hp": "NOT_VERIFIED",
+      "damage_multiplier": "NOT_VERIFIED"
+    }
+  },
+  "results": {
+    "new_module": false,
+    "new_ci": false,
+    "new_dusk": false,
+    "official_tree_changes": false,
+    "historical_changes": false,
+    "new_build": "NOT_RUN_GATE_BLOCKED",
+    "new_lab": "NOT_RUN_NO_IMPLEMENTATION",
+    "cp03_runtime": "NOT_TESTED",
+    "hp150_runtime": "NOT_VERIFIED",
+    "cp04": "NOT_AUTHORIZED",
+    "originals_or_private_logs_uploaded": false
+  }
+}

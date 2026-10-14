@@ -1,0 +1,34 @@
+{
+  "kind": "OWN_DOCUMENTATION_ONLY",
+  "excluded_self": "evidence/document-ledger.json",
+  "files": {
+    "BLOCKER_REPORT.md": {
+      "bytes": 8848,
+      "sha256": "eaf4992de73420fb44d9364acfc2c620c7ab00c493c4e164814dc23abc9b04f2"
+    },
+    "FEASIBILITY_GATE.md": {
+      "bytes": 9467,
+      "sha256": "7009e4a1311d78db16ec76cddbd8dfe9f9454cd248936a19acbef54334b57014"
+    },
+    "README.md": {
+      "bytes": 2514,
+      "sha256": "ae73adb8f0bb3ebf87ad0a5a826ac77312a0bca86630858719263665ca238d81"
+    },
+    "RECOVERY.md": {
+      "bytes": 2476,
+      "sha256": "722c7824cb7c73efd0d19cb050aab5b6b9273f9a9ab5dcb9947f41c166e43605"
+    },
+    "evidence/preflight-and-results.json": {
+      "bytes": 2145,
+      "sha256": "1c44be62784ec4b327f702be5b0bc81e667008bfa33b0bd860eaaaca86b5ccf9"
+    },
+    "evidence/source-provenance.json": {
+      "bytes": 11289,
+      "sha256": "50506ea1fc5f136a2f6beaf1b69e378f7664dbabd5ec8713e271df291e94dabc"
+    },
+    "tools/collect_source_evidence.py": {
+      "bytes": 5511,
+      "sha256": "6180db426e4c76d9339eac87158748899a6ec8d0ea88f0d78bf9db4f422bd928"
+    }
+  }
+}

@@ -1,0 +1,368 @@
+{
+  "kind": "STATIC_PROVENANCE_ONLY",
+  "official_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "baseline_cp02": "0d2430262181bb2844f13bb8da0a628f71740998",
+  "baseline_ci": "d3a85769f096e2d6eb065ddf2d69847ab0b6b8e1",
+  "cp02_ledger_entries_verified": 52,
+  "cp02_manifest_entries_verified": {
+    "sdk_lf_sha256": 58,
+    "directed_sdk_source_sha256": 16,
+    "reuse_lf_sha256": 11,
+    "derivation_only_lf_sha256": 1
+  },
+  "reviewed_sources": {
+    "src/d/actor/d_a_e_oc.cpp": {
+      "git_blob": "57828ccb7c987757929835da38623d8a6b04ebbd",
+      "lf_sha256": "e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4",
+      "bytes_lf": 93218,
+      "lines": 2865,
+      "review_ranges": [
+        [
+          638,
+          780
+        ],
+        [
+          2704,
+          2863
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_oc.cpp"
+    },
+    "include/d/actor/d_a_e_oc.h": {
+      "git_blob": "2d40d9bcbcd70eda9480f81c041212041df4ed94",
+      "lf_sha256": "5922d8c0ecd722fe545cc84188f119173a9297062c8e10be4da071bcaed6a1d2",
+      "bytes_lf": 4986,
+      "lines": 171,
+      "review_ranges": [
+        [
+          20,
+          88
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_e_oc.h"
+    },
+    "include/d/d_stage.h": {
+      "git_blob": "fb8fd3124b7912e90c0587c8223c50826a65f022",
+      "lf_sha256": "dc59d4f57374566c29727bbc3eacdeb21d7b998c8e4f1550220cb840738651ab",
+      "bytes_lf": 61600,
+      "lines": 1619,
+      "review_ranges": [
+        [
+          210,
+          225
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_stage.h"
+    },
+    "include/f_op/f_op_actor.h": {
+      "git_blob": "2ac262ced12943c5156fe050472d2c58dd7ed113",
+      "lf_sha256": "45cbac3b60ea9c47d9583d78f813c69ae38437a7c9b2ea28f1c9c3e26392197c",
+      "bytes_lf": 15397,
+      "lines": 441,
+      "review_ranges": [
+        [
+          275,
+          330
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor.h"
+    },
+    "include/f_op/f_op_actor_mng.h": {
+      "git_blob": "29dfac13894b1ebc34560d295ac56382927ac93d",
+      "lf_sha256": "67b3551a7386d5337ef1988f57d5c358e7285a2f39edceb9c1701cf99a3b8cc0",
+      "bytes_lf": 32083,
+      "lines": 914,
+      "review_ranges": [
+        [
+          61,
+          83
+        ],
+        [
+          531,
+          555
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor_mng.h"
+    },
+    "sdk/include/mods/svc/stage.h": {
+      "git_blob": "9dbd94cff17f61716a5cf18e3ede9918cfe898c7",
+      "lf_sha256": "5f580e28394a33631f37b627e83ca3c6b590605939959edbb67ef05e1218465e",
+      "bytes_lf": 1557,
+      "lines": 43,
+      "review_ranges": [
+        [
+          14,
+          40
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h"
+    },
+    "sdk/include/mods/svc/actor.h": {
+      "git_blob": "6c2bc5d48564c09f234ecabc7225ca060ac50efa",
+      "lf_sha256": "77c180571664dbaa07026bcbf073c0d459cb6e0e7264ddbca6d18770081082e8",
+      "bytes_lf": 4295,
+      "lines": 94,
+      "review_ranges": [
+        [
+          14,
+          91
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/actor.h"
+    },
+    "sdk/include/mods/svc/game.h": {
+      "git_blob": "61a10968e6b76ffec20cea678c31854fbfffc75d",
+      "lf_sha256": "23fbe752be5908b6fe41bae9846c38a058bd6597835c24060d149c6dfdc8f4b9",
+      "bytes_lf": 864,
+      "lines": 26,
+      "review_ranges": [
+        [
+          9,
+          29
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h"
+    },
+    "sdk/include/mods/svc/config.h": {
+      "git_blob": "55a0bca1318a1c5bef421f714cafb95e8c9877a3",
+      "lf_sha256": "28e5853388b41c3800c7614a9e325d184cbd0ecea8e30215af0afac0a4b84bf1",
+      "bytes_lf": 4911,
+      "lines": 104,
+      "review_ranges": [
+        [
+          24,
+          102
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/config.h"
+    },
+    "src/dusk/mods/svc/stage.cpp": {
+      "git_blob": "4dfd2650248effd9c7b907c02f10d6896cc79eb4",
+      "lf_sha256": "3f1ab649cb49f88fc36ac607a203306a794b0e9df888d3e9e5b09498fc7672f3",
+      "bytes_lf": 9753,
+      "lines": 317,
+      "review_ranges": [
+        [
+          139,
+          218
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/stage.cpp"
+    },
+    "src/dusk/mods/svc/actor.cpp": {
+      "git_blob": "dbcf547d55a9764af52f5a7090968c8635e31405",
+      "lf_sha256": "cdfb4b64f5b5b2d9df6841169fceb300d1f828bf94417ad4b71bb1c2839e5fe3",
+      "bytes_lf": 13601,
+      "lines": 403,
+      "review_ranges": [
+        [
+          56,
+          123
+        ],
+        [
+          220,
+          318
+        ],
+        [
+          359,
+          400
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp"
+    },
+    "src/d/d_stage.cpp": {
+      "git_blob": "14167723d9284a108fac700e8b227acbb5c49372",
+      "lf_sha256": "b946520ed3813852f61bdff284c0c005bd70afcd194439d39c2557a5ef492095",
+      "bytes_lf": 121919,
+      "lines": 3082,
+      "review_ranges": [
+        [
+          1635,
+          1662
+        ],
+        [
+          2611,
+          2635
+        ],
+        [
+          2816,
+          2835
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp"
+    },
+    "docs/modding.md": {
+      "git_blob": "a138ab329166fd5a9fde0e04bbd15a5d7af9d570",
+      "lf_sha256": "815dee47100b1a1c59aba12a881486f1bf0ad716c97cafbffb619607f36daf27",
+      "bytes_lf": 64587,
+      "lines": 1626,
+      "review_ranges": [
+        [
+          753,
+          800
+        ],
+        [
+          1237,
+          1353
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/docs/modding.md"
+    },
+    "src/f_op/f_op_actor_mng.cpp": {
+      "git_blob": "207a0471b3acf8dc936c2aab46f8a033042178e8",
+      "lf_sha256": "4c57494d769800ad0a1dbbfc836a265803036fa2e5b1594c5a82e9d799617845",
+      "bytes_lf": 84879,
+      "lines": 2494,
+      "review_ranges": [
+        [
+          258,
+          275
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp"
+    },
+    "include/f_pc/f_pc_manager.h": {
+      "git_blob": "d8d9cbe1c9b3af04470de857efacea057800434b",
+      "lf_sha256": "fe69d11984b1894bdded58c8d6f65b7744b6f3d95ad6cee00320a69a901a68f5",
+      "bytes_lf": 3664,
+      "lines": 116,
+      "review_ranges": [
+        [
+          45,
+          48
+        ],
+        [
+          66,
+          114
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_manager.h"
+    },
+    "include/f_pc/f_pc_create_req.h": {
+      "git_blob": "eaff9ed3a6b8b77bc8586d5377188e680cb8bc0e",
+      "lf_sha256": "e8f67f3030e13d31f5f28146bfc9ce71895007c599a931b6796ca29b164733ec",
+      "bytes_lf": 1635,
+      "lines": 46,
+      "review_ranges": [
+        [
+          35,
+          40
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_create_req.h"
+    },
+    "src/f_pc/f_pc_create_req.cpp": {
+      "git_blob": "e5fdd5ef007331dd8ee0812226391143aeff077e",
+      "lf_sha256": "2863073dc547598cc34934bb84019155240b351e228f6ca919f3f30293df70f0",
+      "bytes_lf": 3995,
+      "lines": 148,
+      "review_ranges": [
+        [
+          18,
+          74
+        ],
+        [
+          84,
+          120
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_create_req.cpp"
+    },
+    "include/f_pc/f_pc_stdcreate_req.h": {
+      "git_blob": "8037f1bfcd36a7bd81ccb970bf69331aa5424b44",
+      "lf_sha256": "5effabc375a7bce92b331652b0235d103e8ea9382ed027e36bd7885ca45843db",
+      "bytes_lf": 336,
+      "lines": 13,
+      "review_ranges": [
+        [
+          8,
+          12
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_stdcreate_req.h"
+    },
+    "src/f_pc/f_pc_stdcreate_req.cpp": {
+      "git_blob": "a262a1bac6e2cd813023500fe6a41ea5b7658873",
+      "lf_sha256": "fd45dc723ec0856c09e58d8d5826af6b3197ea43f316a33adbd77b01e0977d75",
+      "bytes_lf": 5568,
+      "lines": 178,
+      "review_ranges": [
+        [
+          67,
+          109
+        ],
+        [
+          140,
+          177
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_stdcreate_req.cpp"
+    },
+    "src/f_pc/f_pc_base.cpp": {
+      "git_blob": "f876774214264eba4987afd2f24aa8d207c39955",
+      "lf_sha256": "766c08a272bc39e336df4e86d089c39301a1855a079ce0c3a181c13684796828",
+      "bytes_lf": 5879,
+      "lines": 205,
+      "review_ranges": [
+        [
+          179,
+          198
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_base.cpp"
+    },
+    "src/d/d_cc_uty.cpp": {
+      "git_blob": "91fc6677c17e8360315d468bfe3a2167e87b953d",
+      "lf_sha256": "33b6e2b58c41758fcc92d535fa1a89f789e8d26b737b8055edfdb48b4f4f1fc1",
+      "bytes_lf": 16264,
+      "lines": 521,
+      "review_ranges": [
+        [
+          434,
+          448
+        ]
+      ],
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_cc_uty.cpp"
+    }
+  },
+  "service_function_inventory": {
+    "stage": [
+      "patch_actor",
+      "delete_actor",
+      "add_actor",
+      "remove_actor_edit"
+    ],
+    "actor": [
+      "register_actor",
+      "unregister_actor",
+      "create_actor_from_name",
+      "create_actor",
+      "create_child_actor_from_name",
+      "create_child_actor",
+      "get_actor_id",
+      "get_actor_room_num",
+      "delete_actor"
+    ],
+    "game": [],
+    "config": [
+      "register_var",
+      "unregister_var",
+      "get_bool",
+      "set_bool",
+      "get_int",
+      "set_int",
+      "get_float",
+      "set_float",
+      "get_string",
+      "set_string",
+      "subscribe",
+      "unsubscribe"
+    ]
+  },
+  "semantic_gate_automated": false,
+  "new_build": "NOT_RUN_GATE_BLOCKED",
+  "new_fake_lab": "NOT_RUN_NO_IMPLEMENTATION",
+  "game_execution": "NOT_TESTED",
+  "original_resources_read_or_distributed": false
+}
