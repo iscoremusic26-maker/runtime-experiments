@@ -1,0 +1,23 @@
+{
+  "source": "SOURCE_VERIFIED",
+  "causal_failure": "USERWORK_0x12_REJECTED_BIT_0x10_CONFIRMED",
+  "native_group": 9,
+  "native_curve_IDs": "NOT_VERIFIED",
+  "native_curve_envelopes": "NOT_VERIFIED",
+  "route_A": "BLOCKED_NEEDS_NATIVE_CURVE_BOUNDS_AND_FP32_MARGIN",
+  "route_B": "NO_VERIFIED_ALTERNATIVE",
+  "tests": "TEST_FAKE_PASS",
+  "build": "BUILD_PASS",
+  "package": "PACKAGE_VERIFIED",
+  "download": "DOWNLOAD_VERIFIED",
+  "new_diagnostic_runtime": "HUMAN_RUNTIME_NOT_TESTED",
+  "CP04_appearance": "NO-GO",
+  "product": "DIAGNOSTIC_ONLY_NO_EMITTER",
+  "CP03": "CP03_HUMAN_RUNTIME_PASS_UNCHANGED",
+  "CP05": "NOT_AUTHORIZED",
+  "CP06": "NOT_AUTHORIZED",
+  "game_executed": false,
+  "DLL_loaded": false,
+  "host_modified": false,
+  "original_assets_modified": false
+}

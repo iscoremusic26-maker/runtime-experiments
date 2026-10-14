@@ -1,0 +1,73 @@
+{
+  "source_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "source_files_and_lines": {
+    "src/d/d_particle.cpp": [
+      167,
+      221,
+      1329,
+      1376,
+      1064,
+      1124
+    ],
+    "include/d/d_particle.h": [
+      413
+    ],
+    "src/d/d_com_inf_game.cpp": [
+      4939,
+      4942
+    ],
+    "src/m_Do/m_Do_graphic.cpp": [
+      2529,
+      2536
+    ],
+    "src/f_pc/f_pc_manager.cpp": [
+      52,
+      115
+    ],
+    "src/d/d_s_play.cpp": [
+      614
+    ],
+    "libs/JSystem/src/JParticle/JPAResource.cpp": [
+      795,
+      855,
+      1313,
+      1340
+    ],
+    "libs/JSystem/src/JParticle/JPADynamicsBlock.cpp": [
+      183,
+      218
+    ],
+    "libs/JSystem/src/JParticle/JPAEmitterManager.cpp": [
+      51,
+      76
+    ],
+    "libs/JSystem/src/JParticle/JPAEmitter.cpp": [
+      54,
+      69
+    ],
+    "libs/JSystem/src/JParticle/JPAParticle.cpp": [
+      26,
+      213,
+      217
+    ],
+    "libs/JSystem/src/JParticle/JPAKeyBlock.cpp": [
+      6,
+      24
+    ],
+    "libs/JSystem/src/JParticle/JPAMath.cpp": [
+      115,
+      136
+    ],
+    "libs/JSystem/include/JSystem/JMath/JMath.h": [
+      112,
+      124
+    ],
+    "libs/JSystem/src/JParticle/JPAResourceLoader.cpp": [
+      91,
+      96
+    ]
+  },
+  "raw_originals_copied": false,
+  "resource_curve_data_measured_by_Codex": false,
+  "human_measurement_available": "CP04.1_METADATA_ONLY"
+}
