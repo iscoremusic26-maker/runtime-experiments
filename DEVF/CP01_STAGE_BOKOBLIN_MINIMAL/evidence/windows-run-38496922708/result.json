@@ -1,0 +1,392 @@
+{
+  "status": "STAGE_PACKAGE_PASS_DOWNLOAD_PENDING",
+  "source_commit": "a17109b91ba5fde7a221ac72a4b5640570b8a4d2",
+  "ci_head": "09b6464343a2db0d64a643ab06714ef9f042b061",
+  "run_id": "38496922708",
+  "started_utc": "2026-10-14T01:40:40.791963+00:00",
+  "phases": [
+    {
+      "label": "compiler",
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "seconds": 2.719,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "seconds": 0.953,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\DEVF\\CP01_STAGE_BOKOBLIN_MINIMAL",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "seconds": 6.922,
+      "exit": 0
+    },
+    {
+      "label": "build",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_stage_bokoblin_minimal",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 4.078,
+      "exit": 0
+    },
+    {
+      "label": "module-headers",
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_stage_bokoblin_minimal.dll"
+      ],
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "module-imports",
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_stage_bokoblin_minimal.dll"
+      ],
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "module-exports",
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_stage_bokoblin_minimal.dll"
+      ],
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "official-package",
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_stage_bokoblin_minimal_package",
+        "--parallel",
+        "2"
+      ],
+      "seconds": 0.328,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "DLL_loaded": false,
+  "host_built": false,
+  "mode": "ONE_NATIVE_STAGE_ADDITION_NOT_READ_ONLY",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "source_ledger": {
+    "CMakeLists.txt": "7a2177fbd33a02f7a1d9923840547f67d1fda8eda210ff7e55bcff655428799e",
+    "mod.json": "68310dba18719f5dacc23e333303df77865e8bcd7f2d28b60f44060ce3c65a82",
+    "REUSE_FAKE_LAB.json": "eb0abfc5661919be40d32861e2998d60cb5c25ae71cb503fbb8c0cefb49c7aa2",
+    "SOURCE_MANIFEST.json": "db5b109ab561e4442d5322dbff876f6dcfa265c54dc11404eb88e4bf2e6ed5b4",
+    "ci/audit.py": "b7bb20de45d2d606b0a0673ade2e54d1179d7613cc9662a2e144b453b5d1df5f",
+    "ci/location_query.py": "e12389b63b43275273ee0fe36547e8f5b679cab2749ca2a7b2056608af38da26",
+    "ci/reviewed-crt-surface.json": "a7494dc6b61be94f54e73b4af8148c7b39476fba118734a092a4a84108b81565",
+    "ci/reviewed-exact-imports.json": "020c69177c5a76049c82fe57b236c5355444fae055dd6c3c2a66eb3b26ffcc5a",
+    "ci/run_windows.py": "0f466d6113fb8617f4a1a5a0e7c9eb5369d73b8da04ba6032caf636ab7b87251",
+    "ci/windows-stage.yml": "a8911329dbdf0d3171f20be5198f9c95927cee3316452f68b8524e39ffa3b2c4",
+    "src/mod.cpp": "50791c147b2b97b05f25e84fa43de9d3e050ae326e416ff4d6c675852e8fb03a",
+    "tests/stage_lab.cpp": "b661caf498cee8a6554a67e42c9bbdf3a0ec38a0e39a3a43ad7c7d1d8fc2e381"
+  },
+  "dependencies": {
+    "SDK": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "Aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "lib_bytes": 9400986,
+    "lib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "lib_CRC": "70c35731"
+  },
+  "fake_scenarios": {
+    "cases": [
+      "success",
+      "reentry",
+      "reject",
+      "zero-handle",
+      "throw",
+      "missing",
+      "wrong-host",
+      "small-stage",
+      "null-add",
+      "wrong-stage-major",
+      "null-context"
+    ],
+    "passed": 11,
+    "each_separate_process": true,
+    "game_or_DLL_runtime": false,
+    "1000_noop_updates_per_case": true,
+    "payload_bytes": "32 BE ACTR, E_oc/FFFF0000/(-1250,-6304.0083,60750)/(6,0,0)/FFFF"
+  },
+  "fake_reused_from_run": 38496356945,
+  "fake_not_reexecuted": true,
+  "binary_audit": {
+    "machine": "AMD64",
+    "imports": {
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "VCRUNTIME140.dll": [
+        "memset",
+        "__std_type_info_destroy_list",
+        "__C_specific_handler",
+        "memcpy"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_cexit",
+        "_initterm_e",
+        "_execute_onexit_table",
+        "_initterm",
+        "_initialize_onexit_table",
+        "_initialize_narrow_environment",
+        "_seh_filter_dll",
+        "_configure_narrow_argv"
+      ],
+      "KERNEL32.dll": [
+        "InitializeSListHead",
+        "DisableThreadLibraryCalls",
+        "QueryPerformanceCounter",
+        "GetCurrentProcessId",
+        "GetCurrentThreadId",
+        "GetSystemTimeAsFileTime"
+      ]
+    },
+    "metadata": [
+      {
+        "kind": "header",
+        "abi": 1
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.host",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.log",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.stage",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "kind": "import",
+        "id": "dev.twilitrealm.dusklight.game",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "STAGE_ONLY_PE_PASS",
+    "exports": [
+      "mod_ctx",
+      "mod_initialize",
+      "mod_meta",
+      "mod_shutdown",
+      "mod_update"
+    ],
+    "game_imports": 0,
+    "required_services": "Host2.2 Log1.0 Stage1.0 Game2.0",
+    "permitted_game_mutation": "StageService.add_actor via resolved function pointer only"
+  },
+  "PE_negatives": [
+    {
+      "case": "x86-machine",
+      "rejected": true,
+      "DLL_loaded": false
+    },
+    {
+      "case": "ActorService",
+      "rejected": true,
+      "DLL_loaded": false
+    },
+    {
+      "case": "export-name",
+      "rejected": true,
+      "DLL_loaded": false
+    }
+  ],
+  "production_units": [
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_stage_bokoblin_minimal_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL- /FIglobal.h /FoCMakeFiles\\devf_stage_bokoblin_minimal.dir\\src\\mod.cpp.obj /FdCMakeFiles\\devf_stage_bokoblin_minimal.dir\\ /FS -c <WORKSPACE>\\DEVF\\CP01_STAGE_BOKOBLIN_MINIMAL\\src\\mod.cpp",
+      "file": "<WORKSPACE>/DEVF/CP01_STAGE_BOKOBLIN_MINIMAL/src/mod.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_stage_bokoblin_minimal.dir/src/mod.cpp.obj"
+    },
+    {
+      "directory": "<WORK>/build",
+      "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_stage_bokoblin_minimal_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL- /FIglobal.h /FoCMakeFiles\\devf_stage_bokoblin_minimal.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp.obj /FdCMakeFiles\\devf_stage_bokoblin_minimal.dir\\ /FS -c <OFFICIAL>\\sdk\\src\\game_feature.cpp",
+      "file": "<OFFICIAL>/sdk/src/game_feature.cpp",
+      "output": "<WORK>/build/CMakeFiles/devf_stage_bokoblin_minimal.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/.official/sdk/src/game_feature.cpp.obj"
+    }
+  ],
+  "loose_dll": {
+    "bytes": 13824,
+    "sha256": "24b74c4e33bd7745c8937999958ac112a258e136ae78fa49571ae6fa53af1f65"
+  },
+  "package_verification": {
+    "status": "STAGE_PACKAGE_PASS",
+    "package_bytes": 7364,
+    "package_sha256": "4bbf0a8ae5fb436c32a4bb804f52c431bf6e6e1d7b4e95a5534d02505ab9ecf7",
+    "dll_bytes": 13824,
+    "dll_sha256": "24b74c4e33bd7745c8937999958ac112a258e136ae78fa49571ae6fa53af1f65",
+    "manifest_sha256": "68310dba18719f5dacc23e333303df77865e8bcd7f2d28b60f44060ce3c65a82",
+    "manifest": {
+      "id": "dev.devf.cp01_stage_bokoblin_minimal",
+      "name": "DEVF CP01 ONE NATIVE BOKOBLIN STAGE TEST",
+      "version": "0.1.0",
+      "description": "CONTROLLED HUMAN TEST ONLY. StageService adds one native E_oc entry in F_SP121 room3 layer6 on each normal room load. No runtime spawn guarantee, no hot reload; backup saves and approval required before installation."
+    },
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 364,
+        "crc32": "8d72d0b2",
+        "sha256": "68310dba18719f5dacc23e333303df77865e8bcd7f2d28b60f44060ce3c65a82"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 13824,
+        "crc32": "c7c333a5",
+        "sha256": "24b74c4e33bd7745c8937999958ac112a258e136ae78fa49571ae6fa53af1f65"
+      }
+    ],
+    "pe_audit": {
+      "machine": "AMD64",
+      "imports": {
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "VCRUNTIME140.dll": [
+          "memset",
+          "__std_type_info_destroy_list",
+          "__C_specific_handler",
+          "memcpy"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_initterm_e",
+          "_execute_onexit_table",
+          "_initterm",
+          "_initialize_onexit_table",
+          "_initialize_narrow_environment",
+          "_seh_filter_dll",
+          "_configure_narrow_argv"
+        ],
+        "KERNEL32.dll": [
+          "InitializeSListHead",
+          "DisableThreadLibraryCalls",
+          "QueryPerformanceCounter",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetSystemTimeAsFileTime"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "STAGE_ONLY_PE_PASS",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "game_imports": 0,
+      "required_services": "Host2.2 Log1.0 Stage1.0 Game2.0",
+      "permitted_game_mutation": "StageService.add_actor via resolved function pointer only"
+    },
+    "dll_internal_equals_loose": true,
+    "runtime_tested": false
+  },
+  "ended_utc": "2026-10-14T01:40:56.604721+00:00"
+}

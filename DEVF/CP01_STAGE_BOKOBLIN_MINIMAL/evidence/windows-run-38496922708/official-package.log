@@ -1,0 +1,5 @@
+[1/1] Packaging devf_stage_bokoblin_minimal -> <WORK>/build/mods/devf_stage_bokoblin_minimal.dusk
+mod.json
+lib
+lib/windows-amd64
+lib/windows-amd64/mod.dll

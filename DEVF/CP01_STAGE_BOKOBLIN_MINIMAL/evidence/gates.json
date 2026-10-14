@@ -1,0 +1,27 @@
+{
+  "source_commit": "a17109b91ba5fde7a221ac72a4b5640570b8a4d2",
+  "ci_commit": "09b6464343a2db0d64a643ab06714ef9f042b061",
+  "run": 38496922708,
+  "gates": {
+    "implementation": "ONE_OFFICIAL_STAGE_ADD_AT_INIT",
+    "registration_fake_tests": "11_PASS_REUSED_BY_HASH",
+    "MSVC_compile_link": "PASS",
+    "Stage1_metadata_and_five_exports": "PASS_STATIC",
+    "native_game_imports": 0,
+    "CRT_system_exact_imports": 20,
+    "own_PE_negatives": "3_PASS",
+    "package": "PASS",
+    "actual_download": "DOWNLOAD_VERIFIED",
+    "location_static_support": "PASS_LOCAL",
+    "location_effective_medium_visibility_events": "NOT_VERIFIED",
+    "native_actor_creation_render_AI_combat_death": "NOT_TESTED",
+    "DX12_runtime": "NOT_TESTED",
+    "withdrawal_after_full_exit_and_room_reload": "NOT_TESTED",
+    "review_and_controlled_human_test": "READY_AFTER_USER_APPROVAL",
+    "execution_authorized": false,
+    "installed": false,
+    "game_executed": false,
+    "CP02": "NO_GO",
+    "custom_profile_DLL_unloading_previous": "BLOCKED_INDEPENDENT_PRESERVED"
+  }
+}

@@ -10,3 +10,5 @@ Raíz40457c6adb381928e4b5fef6ed459ed291edd5e2/Aurora3227d76c60e1e782ca576610bce6
 - angle.x=0 sería normal con mMoveRange0, sin chequeo de home range en rama2420. Se elige6: mMoveRange600, pequeño positivo (600>200 de executeMoveOut). Es umbral de decisiones nativas, no una barrera física. Yaw/roll0; no HIO modificado ni IA personalizada.
 
 StageService es la mutación AUTORIZADA. Se importa además Host2.2 para versión2.0.3, Log1.0 y Game2 automático del featuregame. No custom profile, ActorService, Hook/Resource/OverlayService, cambios EXE/ROM/saves o registros originales. Ejemplo custom_actor_demo y docs/modding.md reutilizados exclusivamente para patrón de ACTR/add_actor/empaquetado.
+
+Build requirement discovered and verified: production uses /Zc:inline- to retain SDK MSVC MOD_META_RECORD imports; no edit to meta.hpp or host. Lab-only abort tripwire for unused GX header COMDAT is outside production. Final native DLL has no game/GX imports.

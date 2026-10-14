@@ -1,0 +1,15 @@
+{
+  "source_commit": "a17109b91ba5fde7a221ac72a4b5640570b8a4d2",
+  "ci_commit": "09b6464343a2db0d64a643ab06714ef9f042b061",
+  "independent_fetch": "PASS",
+  "main_and_CI_bare_fsck": "PASS",
+  "baseline_commit": "2e1b86edc1d189f0954714e0a168ae3f0bef6cea",
+  "baseline_tree_sha1": "57bfed5ca67631e47ba2e313b0989707d8e602d7",
+  "baseline_files_preserved": 901,
+  "diff_only_new_folder": true,
+  "previous_tag_unchanged": true,
+  "historical_workflows_unchanged": 8,
+  "SDK_worktree_unchanged": true,
+  "final_tag": "DEVF_CP01_STAGE_BOKOBLIN_MINIMAL_PACKAGE_VERIFIED",
+  "final_tag_fetch": "Performed after final commit/tag publication; final PR delivery reports result"
+}

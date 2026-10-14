@@ -1,0 +1,54 @@
+{
+  "binary-audit.json": {
+    "bytes": 1733,
+    "sha256": "efd1f8ecd207423b1894d632215d2cbe307f55f6349d5e8445c6958f55c5ad5d"
+  },
+  "build.log": {
+    "bytes": 1236,
+    "sha256": "1445635002273d1f6af0e2a96f8194663d27ef9b3688d12eaaf37ab840d0ed46"
+  },
+  "cmake-version.log": {
+    "bytes": 93,
+    "sha256": "af1b82b57223898998f8c5425148282ef6c86c88d151ffd259e7b2e9fee0247e"
+  },
+  "compile-commands.json": {
+    "bytes": 4024,
+    "sha256": "d8d96d8ca9f9287b36db60da56d3d3b190b62cf624d3d8950e330a836cf6cc21"
+  },
+  "compiler.log": {
+    "bytes": 1252,
+    "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+  },
+  "configure.log": {
+    "bytes": 822,
+    "sha256": "b43d5570ebb2598921532fccae067dfd2f87da45476ee1f577442809e54190b5"
+  },
+  "DOWNLOAD_MANIFEST.json": {
+    "bytes": 1123,
+    "sha256": "8e7d7fac5f5a75f5c0981b10e782ea598afdb9d8e08d0986cae11fa94be53ef8"
+  },
+  "module-exports.log": {
+    "bytes": 835,
+    "sha256": "334e76bc89e0bada4bc55181ccc78019b344d30a16297beea094e606e2e3437f"
+  },
+  "module-headers.log": {
+    "bytes": 6066,
+    "sha256": "ab7a34fea138ec74685bb21452c0785ffc96a3a903a37a0deb40058f1953478c"
+  },
+  "module-imports.log": {
+    "bytes": 2474,
+    "sha256": "df89fb5e5e7b4135dc27753dbeb2331def3a50fbb26e70ccf3a135576c0cd40b"
+  },
+  "module-map.log": {
+    "bytes": 31007,
+    "sha256": "7caac7a51b13340440ca88d0b2878bec7118bef85eb845ba362751ce45273be6"
+  },
+  "official-package.log": {
+    "bytes": 160,
+    "sha256": "f8485475ddc7ed803849ef89cfcea4bc11158ed24928a1a9087cb818186f8c2f"
+  },
+  "result.json": {
+    "bytes": 13073,
+    "sha256": "77241d572f7117c4d9a4fe16f213919f59f31803c478be21942a1d0a4329ba15"
+  }
+}

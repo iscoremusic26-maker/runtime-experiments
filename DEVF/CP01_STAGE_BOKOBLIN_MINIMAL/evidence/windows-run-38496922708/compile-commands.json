@@ -1,0 +1,26 @@
+[
+  {
+    "directory": "<WORK>/build",
+    "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_stage_bokoblin_minimal_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL- /FIglobal.h /FoCMakeFiles\\devf_stage_bokoblin_minimal.dir\\src\\mod.cpp.obj /FdCMakeFiles\\devf_stage_bokoblin_minimal.dir\\ /FS -c <WORKSPACE>\\DEVF\\CP01_STAGE_BOKOBLIN_MINIMAL\\src\\mod.cpp",
+    "file": "<WORKSPACE>/DEVF/CP01_STAGE_BOKOBLIN_MINIMAL/src/mod.cpp",
+    "output": "<WORK>/build/CMakeFiles/devf_stage_bokoblin_minimal.dir/src/mod.cpp.obj"
+  },
+  {
+    "directory": "<WORK>/build",
+    "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DDUSK_MOD_FEATURE_GAME=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -Ddevf_stage_bokoblin_minimal_EXPORTS -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /bigobj /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL- /FIglobal.h /FoCMakeFiles\\devf_stage_bokoblin_minimal.dir\\D_\\a\\codex-cp00-inputs\\codex-cp00-inputs\\.official\\sdk\\src\\game_feature.cpp.obj /FdCMakeFiles\\devf_stage_bokoblin_minimal.dir\\ /FS -c <OFFICIAL>\\sdk\\src\\game_feature.cpp",
+    "file": "<OFFICIAL>/sdk/src/game_feature.cpp",
+    "output": "<WORK>/build/CMakeFiles/devf_stage_bokoblin_minimal.dir/D_/a/codex-cp00-inputs/codex-cp00-inputs/.official/sdk/src/game_feature.cpp.obj"
+  },
+  {
+    "directory": "<WORK>/build",
+    "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /Zc:__cplusplus /Zc:inline /GL- /FoCMakeFiles\\stage_bokoblin_lab.dir\\tests\\stage_lab.cpp.obj /FdCMakeFiles\\stage_bokoblin_lab.dir\\ /FS -c <WORKSPACE>\\DEVF\\CP01_STAGE_BOKOBLIN_MINIMAL\\tests\\stage_lab.cpp",
+    "file": "<WORKSPACE>/DEVF/CP01_STAGE_BOKOBLIN_MINIMAL/tests/stage_lab.cpp",
+    "output": "<WORK>/build/CMakeFiles/stage_bokoblin_lab.dir/tests/stage_lab.cpp.obj"
+  },
+  {
+    "directory": "<WORK>/build",
+    "command": "\"C:\\Program Files\\Microsoft Visual Studio\\18\\Enterprise\\VC\\Tools\\MSVC\\14.51.36231\\bin\\Hostx64\\x64\\cl.exe\"  /nologo /TP -DAVOID_UB=1 -DMTX_USE_PS=1 -DPARTIAL_DEBUG=1 -DTARGET_PC=1 -DVERSION=0 -DWIDESCREEN_SUPPORT=1 -I<OFFICIAL>\\sdk\\include -I<OFFICIAL>\\include -I<OFFICIAL>\\assets\\GZ2E01 -I<OFFICIAL>\\libs\\JSystem\\include -I<OFFICIAL>\\extern\\aurora\\include\\dolphin -I<OFFICIAL>\\extern\\aurora\\include /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++20 -MD /FIglobal.h /utf-8 /EHsc /Zc:__cplusplus /Zc:inline /GL- /FoCMakeFiles\\stage_bokoblin_lab.dir\\src\\mod.cpp.obj /FdCMakeFiles\\stage_bokoblin_lab.dir\\ /FS -c <WORKSPACE>\\DEVF\\CP01_STAGE_BOKOBLIN_MINIMAL\\src\\mod.cpp",
+    "file": "<WORKSPACE>/DEVF/CP01_STAGE_BOKOBLIN_MINIMAL/src/mod.cpp",
+    "output": "<WORK>/build/CMakeFiles/stage_bokoblin_lab.dir/src/mod.cpp.obj"
+  }
+]
