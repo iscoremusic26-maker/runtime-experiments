@@ -1,0 +1,515 @@
+{
+  "status": "CP07_EDITOR_BUILD_PASS_PACKAGE_VERIFIED_DOWNLOAD_PENDING",
+  "source_commit": "c084729a36661cc6992843baca99f40b3c8211e2",
+  "ci_head": "420ab15de326153e15e1947742fbe8085b13ea54",
+  "event_merge_sha": "82b1ceb83969da8717db362f379ed4316a7df06f",
+  "run_id": "38770105933",
+  "started_utc": "2026-10-15T16:34:51.839817+00:00",
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "phases": [
+    {
+      "label": "compiler",
+      "exit": 0,
+      "seconds": 3.906
+    },
+    {
+      "label": "configure",
+      "exit": 0,
+      "seconds": 10.078
+    },
+    {
+      "label": "build",
+      "exit": 0,
+      "seconds": 16.938
+    },
+    {
+      "label": "config-io-registration-lab",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "editor-persistence-ui-lab",
+      "exit": 0,
+      "seconds": 0.094
+    },
+    {
+      "label": "headers",
+      "exit": 0,
+      "seconds": 0.046
+    },
+    {
+      "label": "imports",
+      "exit": 0,
+      "seconds": 0.032
+    },
+    {
+      "label": "exports",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "official-package",
+      "exit": 0,
+      "seconds": 0.359
+    }
+  ],
+  "game_executed": false,
+  "mod_DLL_executed": false,
+  "host_built": false,
+  "hooks": 0,
+  "personalization": false,
+  "source_ledger": {
+    "DEVF/CP07_1_NATIVE_EDITOR/CMakeLists.txt": "acfc347963361502e558bc46e1aa8f26f04ef153b770b7448754000a47bdeb53",
+    "DEVF/CP07_1_NATIVE_EDITOR/HUMAN_TEST.md": "574b8a81ae63b329f315fa46844fcec2c9cc1aa7793f9d01078eeca1df6d1a7b",
+    "DEVF/CP07_1_NATIVE_EDITOR/mod.json": "dc09c5cbe33fbd178ba3ab76f5ee40f3c78024959667886faa7a865aabfe246a",
+    "DEVF/CP07_1_NATIVE_EDITOR/README.md": "5498941cbad607b47c1677da6c3a006fd8fd08b4aaa83f3e702f80944790583d",
+    "DEVF/CP07_1_NATIVE_EDITOR/RECOVERY.md": "2347d0c684dc272559af09fc2dbbe89ed98af80315e628479b43fffeeb6478bc",
+    "DEVF/CP07_1_NATIVE_EDITOR/ci/audit_native.py": "84175c9ecf3c5bb083242801a5b56c5f89fe8749d67c7a71a1e6572c87c91a1b",
+    "DEVF/CP07_1_NATIVE_EDITOR/ci/reviewed-imports-delta.json": "42bb1ed480974e05cec7b130163c04f35a9a40256fbee1738f547cd32149386d",
+    "DEVF/CP07_1_NATIVE_EDITOR/ci/run_windows.py": "5cf40c76c8db565454787ca60e540fce623b725b6236428355029fb6698c7aef",
+    "DEVF/CP07_1_NATIVE_EDITOR/examples/both-enabled.json": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2",
+    "DEVF/CP07_1_NATIVE_EDITOR/examples/disabled.json": "6b7541e7d27e1f2ea01a407b07c6aae08702d3069cd7cc4d8bb6eaf086e1633c",
+    "DEVF/CP07_1_NATIVE_EDITOR/examples/field-only.json": "2283f1de6a9c8c31297ed0ab40c59df57a2f7666f41b982c8d066964b75dd72e",
+    "DEVF/CP07_1_NATIVE_EDITOR/examples/north-only.json": "ccb55cb8bba2d0d76b9e2d1f83d1397d1e0efce8ef498d8518af2c32424f7799",
+    "DEVF/CP07_1_NATIVE_EDITOR/examples/placements.json": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2",
+    "DEVF/CP07_1_NATIVE_EDITOR/src/config_core.hpp": "9d42cb17c885f231ea9a73c0ea8cadaa66e4d0cebb92270868d55b229300824d",
+    "DEVF/CP07_1_NATIVE_EDITOR/src/config_io.hpp": "e46bf84dd85e30d9270df4b90bc9d096949dd6f4363efd890af6294183f53bd0",
+    "DEVF/CP07_1_NATIVE_EDITOR/src/editor_ui.hpp": "cb000dd7a63b35a534dcd3ae1dde445c378269ab16b59bc75603c1b1b92e52bc",
+    "DEVF/CP07_1_NATIVE_EDITOR/src/mod.cpp": "80ff9025d12585596082248c7bf3f15b07a974525446e33ed31717a1e481d1aa",
+    "DEVF/CP07_1_NATIVE_EDITOR/src/native_records.hpp": "72a131c587f5331f703b46908b16fe0e2bb0eb4b12711f48eb82393d499feb71",
+    "DEVF/CP07_1_NATIVE_EDITOR/src/persistence.hpp": "6b6606081b998583ff954e9f1216fcedf998926dcdf5cd168627a089216e6c4c",
+    "DEVF/CP07_1_NATIVE_EDITOR/src/registration.hpp": "97309c344c18f403e3282d9e1e52389392b2557cf177518c57fa150ecf67d004",
+    "DEVF/CP07_1_NATIVE_EDITOR/src/runtime.hpp": "f451c7a289b8f6726b2a8d6a16e094655aa98be57922b0e381e1f83a84814022",
+    "DEVF/CP07_1_NATIVE_EDITOR/tests/config_lab.cpp": "3609f1c2dbbedc5242c3601d4b32234dbf6fc9164aaff9769cbeb52f7f7247b1",
+    "DEVF/CP07_1_NATIVE_EDITOR/tests/editor_lab.cpp": "ebde02780dcc59f703641ec8799fc8d68e5994bd7b959bea88d4435dd8bec654",
+    "DEVF/CP07_1_NATIVE_EDITOR/tests/registration_cases.hpp": "629c80e177bab5e3283b2ff71cbe516a69e7a70680a19a54426f35b0706dc45c",
+    "DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/audit.py": "f943eec8d6b32b569bb06106e221c4d23b17b809b49bd5aa7e6a9f9398be7682",
+    "DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/reviewed-imports.json": "93871a91c05cae1e6c5018185d8fbfa31af6f45cb24cd67f2816ded7380b743d"
+  },
+  "offline_cases": 109,
+  "case_names": [
+    "A_one_north",
+    "B_two_distinct",
+    "record_native_contract",
+    "A_no_reinjection",
+    "B_no_reinjection",
+    "fail_first",
+    "fail_second_rollback_first",
+    "throw_first",
+    "throw_second_rollback",
+    "zero_first",
+    "zero_second",
+    "duplicate_handle",
+    "error_with_returned_handle",
+    "throw_after_handle_rollback",
+    "remove_fail_retry_own_only",
+    "remove_exception",
+    "cleanup_idempotent",
+    "cleanup_without_init",
+    "null_context",
+    "null_service",
+    "short_service",
+    "wrong_version",
+    "null_add",
+    "null_remove",
+    "json_both_two_exact_records",
+    "json_field_only",
+    "json_north_only",
+    "json_empty_placements",
+    "json_both_disabled",
+    "json_field_disabled_north_active",
+    "json_north_disabled_field_active",
+    "json_reference_placements_matches_both",
+    "json_deterministic_order",
+    "json_float32_equivalent",
+    "json_invalid_missing",
+    "json_invalid_empty",
+    "json_invalid_oversize",
+    "json_invalid_bom",
+    "json_invalid_syntax",
+    "json_invalid_trailing",
+    "json_invalid_duplicate_key",
+    "json_invalid_unknown_root_key",
+    "json_invalid_unknown_placement_key",
+    "json_invalid_unknown_variant_key",
+    "json_invalid_version",
+    "json_invalid_unknown_reference",
+    "json_invalid_black_guard",
+    "json_invalid_hp",
+    "json_invalid_tint",
+    "json_invalid_ai",
+    "json_invalid_profile",
+    "json_invalid_enemy",
+    "json_invalid_x",
+    "json_invalid_ground_y",
+    "json_invalid_z",
+    "json_invalid_nonfinite",
+    "json_invalid_nan",
+    "json_invalid_yaw",
+    "json_invalid_parameters",
+    "json_invalid_stage",
+    "json_invalid_room",
+    "json_invalid_layer",
+    "json_invalid_duplicate_id",
+    "json_invalid_duplicate_site",
+    "json_invalid_disabled_entry",
+    "json_invalid_three_entries",
+    "json_invalid_id_path",
+    "json_invalid_types",
+    "json_invalid_complexity",
+    "dir_error",
+    "dir_null",
+    "dir_throw",
+    "join_error",
+    "join_null",
+    "join_throw",
+    "open_error",
+    "open_zero",
+    "open_throw",
+    "open_handle_error",
+    "open_handle_throw",
+    "size_error",
+    "size_throw",
+    "zero_size",
+    "oversize",
+    "read_error",
+    "read_throw",
+    "short",
+    "growth",
+    "tail_error",
+    "close_error",
+    "close_throw",
+    "null_host",
+    "host_wrong_version",
+    "host_short_header",
+    "host_wrong_major",
+    "host_old_minor",
+    "file_wrong_major",
+    "file_short_header",
+    "stage_wrong_major",
+    "file_missing_read",
+    "file_missing_close",
+    "host_missing_data_dir",
+    "stage_missing_add",
+    "stage_missing_remove",
+    "runtime_stage_fail_second",
+    "runtime_stage_exception_second",
+    "runtime_no_frame_registration_or_io",
+    "restart_config_changes_2_1_1_0",
+    "no_partial_config_on_late_error"
+  ],
+  "editor_cases": 55,
+  "editor_case_names": [
+    "ui_two_controls_saved_vs_draft",
+    "ui_save_backup_and_restart_field",
+    "ui_reenable_north_save_both",
+    "ui_discard_no_file_write",
+    "ui_close_reopen_retains_draft_no_io",
+    "ui_polled_callbacks_no_io_or_spawn",
+    "ui_absent_core_still_two",
+    "ui_wrong_version_optional",
+    "ui_missing_window_api",
+    "ui_menu_registration_failure",
+    "ui_zero_menu_handle",
+    "ui_window_push_failure",
+    "ui_window_zero_handle_cleans_partial",
+    "ui_partial_build_disables_controls",
+    "ui_text_build_failure",
+    "ui_duplicate_open_prevented",
+    "ui_shutdown_stale_callbacks_and_handles",
+    "ui_cleanup_failure_detach_fallback",
+    "missing_stays_zero_until_explicit_save",
+    "missing_explicit_disabled_creation",
+    "invalid_json_never_overwritten",
+    "empty_corrupt_file_read_only",
+    "permission_error_read_only",
+    "directory_list_failure_not_missing",
+    "directory_missing_end_rejected",
+    "write_api_unavailable_preserves_file",
+    "backup_fault_create",
+    "backup_fault_write_open",
+    "backup_fault_write",
+    "backup_fault_flush",
+    "backup_fault_write_close",
+    "backup_fault_read_open",
+    "backup_fault_read",
+    "backup_fault_read_corrupt",
+    "backup_fault_read_close",
+    "backup_fault_write_throw",
+    "backup_fault_open_throw",
+    "backup_fault_close_throw",
+    "config_fault_restore_write_open",
+    "config_fault_restore_write",
+    "config_fault_restore_flush",
+    "config_fault_restore_write_close",
+    "config_fault_restore_write_throw",
+    "config_readback_corrupt_restores",
+    "config_restore_failure_keeps_backup_and_locks",
+    "missing_failed_write_leaves_disabled",
+    "external_change_before_save_rejected",
+    "external_change_after_backup_rejected",
+    "backup_existing_never_overwritten",
+    "backup_capacity_fail_before_original_write",
+    "preserve_existing_custom_ids",
+    "missing_site_default_id_collision_avoided",
+    "four_modes_serialization_and_restart",
+    "ui_invalid_save_disabled",
+    "no_ui_write_on_shutdown"
+  ],
+  "record_hex": {
+    "NORTH": "455f6f6300000000ffff0100c49c4000c5c594ce4771fe00010600000000ffff",
+    "SITE1": "455f6f6300000000ffff0100c49c4000c5c50011476d4e00010600000000ffff"
+  },
+  "manifest": {
+    "id": "dev.devf.cp06_native_config_dual",
+    "version": "0.7.0",
+    "filename": "DEVF_CP07_1_NATIVE_EDITOR_windows-amd64_c084729a36661cc6992843baca99f40b3c8211e2.dusk",
+    "source_commit": "c084729a36661cc6992843baca99f40b3c8211e2",
+    "ci_commit": "420ab15de326153e15e1947742fbe8085b13ea54",
+    "build_run": "38770105933",
+    "stage": "F_SP121",
+    "room": 3,
+    "layer": 6,
+    "native_records": "CONFIGURED_0_TO_2",
+    "health_color_AI": "NATIVE_UNMODIFIED",
+    "hooks": 0,
+    "JSON_required": true,
+    "JSON_read": "COLD_START_ONLY",
+    "editor": "UiService2.3 optional menu/window, verified backup before save",
+    "status": "CP07_EDITOR_QA_BUILD_PASS_DOWNLOAD_PENDING",
+    "human_gate": "HUMAN_RUNTIME_PENDING",
+    "package_bytes": 39591,
+    "package_sha256": "c1070b6e4fa53f6cfa5e6f77640c30383351dc3dae10964f06edbb77e962cd46",
+    "dll_bytes": 77312,
+    "dll_sha256": "4e17e86d11b77589df93a2b91d2a3e21ed94620d9db39e44ed69e327833ae54f",
+    "manifest_sha256": "dc09c5cbe33fbd178ba3ab76f5ee40f3c78024959667886faa7a865aabfe246a"
+  },
+  "audit": {
+    "status": "PACKAGE_VERIFIED",
+    "package_bytes": 39591,
+    "package_sha256": "c1070b6e4fa53f6cfa5e6f77640c30383351dc3dae10964f06edbb77e962cd46",
+    "dll_bytes": 77312,
+    "dll_sha256": "4e17e86d11b77589df93a2b91d2a3e21ed94620d9db39e44ed69e327833ae54f",
+    "manifest_sha256": "dc09c5cbe33fbd178ba3ab76f5ee40f3c78024959667886faa7a865aabfe246a",
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 283,
+        "crc32": "b904233c",
+        "sha256": "dc09c5cbe33fbd178ba3ab76f5ee40f3c78024959667886faa7a865aabfe246a"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 77312,
+        "crc32": "7cd1c9e8",
+        "sha256": "4e17e86d11b77589df93a2b91d2a3e21ed94620d9db39e44ed69e327833ae54f"
+      }
+    ],
+    "pe": {
+      "status": "CP07_EDITOR_PE_ABI_PASS",
+      "machine": "AMD64",
+      "imports": {
+        "MSVCP140.dll": [
+          "?_Xlength_error@std@@YAXPEBD@Z",
+          "?_Xout_of_range@std@@YAXPEBD@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "_CxxThrowException",
+          "__C_specific_handler",
+          "__current_exception",
+          "__current_exception_context",
+          "__std_exception_copy",
+          "__std_exception_destroy",
+          "__std_terminate",
+          "__std_type_info_destroy_list",
+          "memcmp",
+          "memcpy",
+          "memmove",
+          "memset"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-math-l1-1-0.dll": [
+          "floor"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strcmp",
+          "strlen",
+          "strncmp"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_configure_narrow_argv",
+          "_crt_atexit",
+          "_execute_onexit_table",
+          "_initialize_narrow_environment",
+          "_initialize_onexit_table",
+          "_initterm",
+          "_initterm_e",
+          "_register_onexit_function",
+          "_seh_filter_dll",
+          "terminate"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "_callnewh",
+          "free",
+          "malloc"
+        ],
+        "KERNEL32.dll": [
+          "DisableThreadLibraryCalls",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetSystemTimeAsFileTime",
+          "InitializeSListHead",
+          "QueryPerformanceCounter"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2,
+          "optional": false
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.file",
+          "major": 1,
+          "minor": 0,
+          "optional": false
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0,
+          "optional": false
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0,
+          "optional": false
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.ui",
+          "major": 2,
+          "minor": 3,
+          "optional": true
+        }
+      ],
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "hooks": 0,
+      "game_imports": 0,
+      "tls_or_delay_imports": false,
+      "DLL_executed": false
+    }
+  },
+  "negatives": [
+    {
+      "case": "x86",
+      "rejected": true
+    },
+    {
+      "case": "foreign_stage_service",
+      "rejected": true
+    },
+    {
+      "case": "missing_export",
+      "rejected": true
+    },
+    {
+      "case": "wrong_stage_major",
+      "rejected": true
+    },
+    {
+      "case": "extra_original_asset",
+      "rejected": true
+    },
+    {
+      "case": "traversal",
+      "rejected": true
+    },
+    {
+      "case": "foreign_file_service",
+      "rejected": true
+    },
+    {
+      "case": "wrong_file_major",
+      "rejected": true
+    },
+    {
+      "case": "wrong_ui_version",
+      "rejected": true
+    },
+    {
+      "case": "required_ui",
+      "rejected": true
+    },
+    {
+      "case": "foreign_ui",
+      "rejected": true
+    }
+  ],
+  "examples": {
+    "examples/both-enabled.json": {
+      "bytes": 813,
+      "sha256": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2"
+    },
+    "examples/disabled.json": {
+      "bytes": 236,
+      "sha256": "6b7541e7d27e1f2ea01a407b07c6aae08702d3069cd7cc4d8bb6eaf086e1633c"
+    },
+    "examples/field-only.json": {
+      "bytes": 526,
+      "sha256": "2283f1de6a9c8c31297ed0ab40c59df57a2f7666f41b982c8d066964b75dd72e"
+    },
+    "examples/north-only.json": {
+      "bytes": 525,
+      "sha256": "ccb55cb8bba2d0d76b9e2d1f83d1397d1e0efce8ef498d8518af2c32424f7799"
+    },
+    "examples/placements.json": {
+      "bytes": 813,
+      "sha256": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2"
+    }
+  },
+  "source_zip_bytes": 45322,
+  "source_zip_sha256": "c81727f0c9b9155b6d3af5b876bf92deb5b185ea8fc9986ef2ffd9ce1febedc4"
+}

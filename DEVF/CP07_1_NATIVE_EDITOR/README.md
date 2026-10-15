@@ -15,4 +15,4 @@ Error al escribir -> intentar restaurar bytes previos, conservando respaldo. Si 
 
 Sólo llamadas oficiales Host/File/Stage/UI/Log, sin SDK/host/Aurora/Borealis/EXE/importlib/ROM/saves modificados. remove_actor_edit retira edición, no actor vivo. UiService elimina slots/callbacks propios al detach; shutdown primero desactiva callbacks y retira menú/ventana, luego ediciones. Sin hot unload.
 
-Estado build/package/download **PENDING** hasta ejecución real; nuevo gameplay **HUMAN_RUNTIME_PENDING**. Cierre CP06 en ../CP06_NATIVE_CONFIG_DUAL/HUMAN_RUNTIME_RESULTS_2026-10-15.md usa sólo reporte humano/sumario aportado, sin fingir lectura de logs.
+**CP07_1_EDITOR_QA_BUILD_READY / HUMAN_RUNTIME_PENDING.** Windows MSVC,109casos base+55editor y11negativos PE/ZIP PASS; paquete y descarga REAL independientes verificados. Fuente realmente compilada c084729a36661cc6992843baca99f40b3c8211e2; cierre documental posterior no cambia sus bytes. Véanse BUILD_AND_PACKAGE.md y TEST_RESULTS.md. Cierre CP06 en ../CP06_NATIVE_CONFIG_DUAL/HUMAN_RUNTIME_RESULTS_2026-10-15.md usa sólo reporte humano/sumario aportado, sin fingir lectura de logs.

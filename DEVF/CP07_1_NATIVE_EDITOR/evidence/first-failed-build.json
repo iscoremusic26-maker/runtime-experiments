@@ -1,0 +1,118 @@
+{
+  "run_id": 38769637138,
+  "source": "819f6a23fde8f125f9dfd2066fead106b18495cc",
+  "ci": "81afcf8e0f45418a392349d97f00baabb51153f5",
+  "status": "FAILURE",
+  "compiler": "PASS",
+  "base_cases": 109,
+  "editor_cases": 55,
+  "error": "UNREVIEWED_CRT_IMPORTS",
+  "observed_imports": {
+    "KERNEL32.dll": [
+      "AcquireSRWLockExclusive",
+      "DisableThreadLibraryCalls",
+      "GetCurrentProcessId",
+      "GetCurrentThreadId",
+      "GetSystemTimeAsFileTime",
+      "InitializeSListHead",
+      "QueryPerformanceCounter",
+      "ReleaseSRWLockExclusive",
+      "SleepConditionVariableSRW",
+      "WakeAllConditionVariable"
+    ],
+    "MSVCP140.dll": [
+      "?_Xlength_error@std@@YAXPEBD@Z",
+      "?_Xout_of_range@std@@YAXPEBD@Z"
+    ],
+    "VCRUNTIME140.dll": [
+      "_CxxThrowException",
+      "__C_specific_handler",
+      "__current_exception",
+      "__current_exception_context",
+      "__std_exception_copy",
+      "__std_exception_destroy",
+      "__std_terminate",
+      "__std_type_info_destroy_list",
+      "memcmp",
+      "memcpy",
+      "memmove",
+      "memset"
+    ],
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "api-ms-win-crt-heap-l1-1-0.dll": [
+      "_callnewh",
+      "free",
+      "malloc"
+    ],
+    "api-ms-win-crt-math-l1-1-0.dll": [
+      "floor"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_cexit",
+      "_configure_narrow_argv",
+      "_crt_atexit",
+      "_execute_onexit_table",
+      "_initialize_narrow_environment",
+      "_initialize_onexit_table",
+      "_initterm",
+      "_initterm_e",
+      "_register_onexit_function",
+      "_seh_filter_dll",
+      "terminate"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "api-ms-win-crt-string-l1-1-0.dll": [
+      "strcmp",
+      "strlen",
+      "strncmp"
+    ]
+  },
+  "phases": [
+    {
+      "label": "compiler",
+      "exit": 0,
+      "seconds": 2.437
+    },
+    {
+      "label": "configure",
+      "exit": 0,
+      "seconds": 8.188
+    },
+    {
+      "label": "build",
+      "exit": 0,
+      "seconds": 33.578
+    },
+    {
+      "label": "config-io-registration-lab",
+      "exit": 0,
+      "seconds": 0.062
+    },
+    {
+      "label": "editor-persistence-ui-lab",
+      "exit": 0,
+      "seconds": 0.078
+    },
+    {
+      "label": "headers",
+      "exit": 0,
+      "seconds": 0.079
+    },
+    {
+      "label": "imports",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "exports",
+      "exit": 0,
+      "seconds": 0.015
+    }
+  ],
+  "correction": "Removed local static std::string guard that generated four unnecessary Kernel32 synchronization imports. Reviewed exact strcmp/strlen/strncmp CRT delta only; historical allowlist unchanged. UI shutdown error now propagated.",
+  "package_ready": false
+}

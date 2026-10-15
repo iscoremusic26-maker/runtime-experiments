@@ -1,0 +1,12 @@
+# Gate focal: UI2.3 y persistencia File1.0
+
+Todo contra Dusklight40457c6adb381928e4b5fef6ed459ed291edd5e2, sólo lectura:
+- sdk/include/mods/svc/ui.h, blob300f8037212a528ffa1fc453bb223caee2537faa: UiMenuTabDesc/register_menu_tab/unregister_menu_tab; UiWindowDesc/UiTabDesc/window_push/window_close; UiControlDesc callbacks get/set/disabled/modified; pane_add_text/control/elem_set_text. Getters/predicados polled por frame: sólo memoria en este mod.
+- src/dusk/mods/svc/ui.cpp1177–1238 copia títulos/descriptores y callbacks en objetos del host; primer build ocurre durante window_push. Se admite build síncrono antes del out_handle, sin guardar descriptores de stack.1342–1405 registra menú propio y guards de slot/mod activo;1490–1531 elimina slots del dueño en detach. SDK no dispara on_closed en teardown; shutdown desactiva callbacks antes de cerrar/remover. No garantía propia universal de hot unload.
+- sdk/include/mods/service.hpp, IMPORT_OPTIONAL_SERVICE UiService2.3 produce flag1. PE verifica Ui opcional y otros4servicios requeridos. Si no disponible, no registrar UI ni interferir con el core.
+- FileService1.0: data_dir del Host2.2, locations opacas por join/create_child; no concatenar paths. list síncrono con final entry=null (file.cpp485–521) distingue ausente de fallo, sin confundir permiso con missing.
+- file.cpp276–361: lectura limitada, handles por propietario y close consume el handle; write/flush/close comprobados en copia nueva.524–565: join/create_child comparten almacenamiento de out_location, por lo que cada ubicación se copia como string opaca antes de otra llamada. No layouts de STL/LoadedMod ni offsets privados.
+- FileService no tiene rename/delete/atomic replace. Guardado secuencial con respaldo exclusivo verificado por bytes y parser antes de truncate, relectura/validación posterior y restauración best effort. No fsync/powerloss/lock entre procesos prometidos.
+
+Core reutilizado sin cambios: config_core.hpp/config_io.hpp/runtime.hpp/native_records.hpp/registration.hpp y tests109 anteriores en carpeta nueva. Sin hooks, ActorService, modificaciones de HP/IA/render, host/SDK/Aurora/Borealis/importlib o recursos originales.
+Prueba nueva:55casos del mismo Editor/Store/Ui usado en DLL, incluyendo callbacks y IO sobre archivos Windows reales con servicios dobles. Esto acredita lógica/contrato en laboratorio, no RmlUi/DX12 visual ni gameplay. CP06 humano separado se atribuye al reporte/sumario del usuario, sin rawlogs locales.
