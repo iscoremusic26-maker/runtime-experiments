@@ -1,0 +1,54 @@
+name: DEVF CP06 PARTIAL technical recovery tag only
+on:
+  pull_request:
+    types: [synchronize]
+    paths:
+      - '.github/workflows/devf-cp06-partial-tag.yml'
+permissions:
+  contents: write
+jobs:
+  seal-partial-checkpoint:
+    if: github.event.repository.private == true && github.head_ref == 'feature/devf-cp06-configurable-placements-pilot' && github.base_ref == 'feature/devf-cp05-ai-bounded-human-runtime-closure' && github.event.pull_request.base.sha == '3f6e2fc7a285dbce8cb520e0b4536ff56d542930' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Seal one honest PARTIAL technical tag without build or historical writes
+        shell: pwsh
+        env:
+          TARGET_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          if ((git rev-parse HEAD) -ne $env:TARGET_SHA) { throw 'Event head mismatch' }
+          git merge-base --is-ancestor 099508b7398b87f0d744065f715fdc0c00b9363c HEAD
+          if ($LASTEXITCODE -ne 0) { throw 'Verified closure missing' }
+          git diff --exit-code 107c79987b0d3d1d28319654739a72bd498271bb HEAD -- DEVF/CP06_CONFIGURABLE_PLACEMENTS/src DEVF/CP06_CONFIGURABLE_PLACEMENTS/tests DEVF/CP06_CONFIGURABLE_PLACEMENTS/CMakeLists.txt DEVF/CP06_CONFIGURABLE_PLACEMENTS/mod.json DEVF/CP06_CONFIGURABLE_PLACEMENTS/immutable-helpers.json DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/audit.py DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/run_windows.py DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/reviewed-imports.json
+          if ($LASTEXITCODE -ne 0) { throw 'Compiled graph changed' }
+          $rows = @(git diff --name-status 3f6e2fc7a285dbce8cb520e0b4536ff56d542930 HEAD)
+          foreach ($row in $rows) {
+            $part = $row -split "\t"
+            if ($part.Count -ne 2 -or $part[0] -ne 'A' -or (-not $part[1].StartsWith('DEVF/CP06_CONFIGURABLE_PLACEMENTS/') -and $part[1] -ne '.github/workflows/devf-cp06-partial-tag.yml')) { throw 'Historical path or scope changed' }
+            if ($part[1] -match '\.(arc|bmd|bdl|iso|exe|dll|dusk|zip)$') { throw 'Original or binary committed' }
+          }
+          $result = Get-Content DEVF/CP06_CONFIGURABLE_PLACEMENTS/evidence/build-result.json -Raw | ConvertFrom-Json
+          $download = Get-Content DEVF/CP06_CONFIGURABLE_PLACEMENTS/evidence/download-verification.json -Raw | ConvertFrom-Json
+          if ($result.offline_cases -ne 30 -or $result.status -ne 'BUILD_PASS_PACKAGE_VERIFIED_DOWNLOAD_PENDING' -or $download.status -ne 'DOWNLOAD_VERIFIED' -or $download.source_commit -ne '107c79987b0d3d1d28319654739a72bd498271bb' -or $download.manifest.CP06_MVP_complete -ne $false -or $download.manifest.scope -ne 'CP06_PARTIAL_SINGLE_SITE_MAX_ONE_ACTIVE' -or $download.manifest.package_sha256 -ne 'b1e8f63797e93c0064e83fc39a984c1c806d046761f675b20ac55063b6a6dfa2') { throw 'Partial verified results mismatch' }
+          if ((git rev-parse DEVF_CP05_AI_BOUNDED_HUMAN_RUNTIME_OBSERVED_2026-10-15) -ne 'fc289b8c75b87ebc46ff34003f7545cfa8a60c7a' -or (git rev-parse 'DEVF_CP05_AI_BOUNDED_HUMAN_RUNTIME_OBSERVED_2026-10-15^{}') -ne '3f6e2fc7a285dbce8cb520e0b4536ff56d542930') { throw 'CP05 human tag changed' }
+          if ((git rev-parse DEVF_CP05_AI_BOUNDED_PRIVATE_TEST_READY) -ne '83b2cea8815a8c01b29ad1f3df2a3731f7b667f4') { throw 'CP05 technical tag changed' }
+          if ((git rev-parse DEVF_CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED_2026-10-14) -ne 'f21d0d95e0fc7d5fcbca15ae17ba6b50cdee564e') { throw 'CP04 human tag changed' }
+          if ((git rev-parse DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14) -ne '08ffbae5e5da73658df77b3763de2fe6851f7a45') { throw 'CP03 human tag changed' }
+          $tagName = 'DEVF_CP06_PARTIAL_SINGLE_SITE_PRIVATE_TEST_READY'
+          $existing = @(git ls-remote --tags origin "refs/tags/$tagName")
+          if ($LASTEXITCODE -ne 0 -or $existing.Count -ne 0) { throw 'Tag exists or check failed; no overwrite' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a $tagName $env:TARGET_SHA -m 'CP06 PARTIAL: external config and two alternative presets; max one active verified site, no moving XYZ or general multi-instance epoch. MSVC30 cases,PE ABI,7 negatives,package and actual independent download verified. HUMAN_RUNTIME_NOT_TESTED. Not CP06 MVP.'
+          if ($LASTEXITCODE -ne 0) { throw 'Annotated tag failed' }
+          git push origin "refs/tags/$tagName"
+          if ($LASTEXITCODE -ne 0) { throw 'Non-forced tag push failed' }
+          $remote = @(git ls-remote --tags origin "refs/tags/$tagName" "refs/tags/$tagName^{}")
+          if ($LASTEXITCODE -ne 0 -or $remote.Count -ne 2 -or -not ($remote -match "^$($env:TARGET_SHA)\s")) { throw 'Remote annotated target mismatch' }
+          Write-Output "CP06_PARTIAL_TECHNICAL_TAG_SEALED target=$env:TARGET_SHA"

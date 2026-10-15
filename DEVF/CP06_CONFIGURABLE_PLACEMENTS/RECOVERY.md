@@ -23,3 +23,5 @@ CIinputs PR24; rama ci/devf-cp06-configurable-placements-pilot enmodo download-o
 
 **MVPno completo:** A moverXYZ bloqueado por falta de segundo sitio acreditado; B2activos/sceneepoch/correlación general no implementado. C toggle/retirada/2presets alternativos por iniciofrío implementado, runtimeporprobar. D gatesWindows/package/download PASS; E históricos preservados.
 Próxima continuación mínima necesita autorización focal para vínculo inequívoco placementId→ActorId/sceneepoch y segundo sitio con evidenciaespacial concreta. No relajar max1/whitelist para simular cumplimiento. No se ha autorizado editor/CP07/08/BokoblinExpansion ni mejoras deAI.
+
+El workflow nuevo .github/workflows/devf-cp06-partial-tag.yml sólo sella un tag técnico PARTIAL desde la rama/PR37 privada y base3f6exacta: verifica ascendencia del cierre, grafo compilado, evidenceJSON/manifestMVPfalse y sólo archivos nuevos CP06; rechaza tag existente, sin force. No build ni cambio de workflows históricos. Objeto/destino se publican literalmente en PR37/chat tras API readback. Si el sello falla, conservar SHA/PR como TAG_PENDING; no usar otro tag ni sobrescribir.
