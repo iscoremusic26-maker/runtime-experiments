@@ -1,0 +1,244 @@
+{
+  "status": "EXACT_BINARY_SYMBOL_MEASUREMENT_COMPLETE",
+  "kind": "OFFLINE_EXACT_BINARY_SYMBOL_GATE",
+  "game_executed": false,
+  "host_loaded": false,
+  "host_modified": false,
+  "host_built": false,
+  "mod_built": false,
+  "hooks_installed": false,
+  "ci_sha": "9b4930b3bab0a6437b17ce99e3f232f724823a5f",
+  "github_event_sha": "6f6a462263e5562a13f2bc851cdf3dedb1b108ef",
+  "run_id": "38749877215",
+  "official_source": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "inputs": {
+    "zip_bytes": 56037777,
+    "zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf",
+    "exe_bytes": 52309504,
+    "exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "exe_zip_crc32": "696d62e4",
+    "crc_checked": true,
+    "origin": "private existing inputs Git LFS; no new user upload"
+  },
+  "decompressor": {
+    "name": "zstandard",
+    "version": "0.25.0",
+    "wheel": "zstandard-0.25.0-cp312-cp312-win_amd64.whl",
+    "wheel_sha256": "ffef5a74088f1e09947aecf91011136665152e0b4b359c42be3373897fb39b01",
+    "hash_source": "PyPI release JSON via TLS"
+  },
+  "manifest": {
+    "version": 2,
+    "compression": 1,
+    "entries": 499234,
+    "build_id": "3e441e7c7f09432d9cfb111c22596cb601000000",
+    "identity_matches_rsds": true,
+    "target_records": [
+      {
+        "name": "`dusk::mods::svc::stage_add_actor'::`1'::dtor$1",
+        "demangler_output": null,
+        "rva": "0x1c9c0f0",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 5,
+        "code": true,
+        "local": true,
+        "multi_name": false,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 29999344,
+          "flags": 5
+        },
+        "names_at_same_rva": 1
+      },
+      {
+        "name": "?stage_add_actor@svc@mods@dusk@@YA?AW4ModResult@@AEAULoadedMod@23@PEBDECPEBX_KAEA_K@Z",
+        "demangler_output": "Microsoft (R) C++ Name Undecorator\nCopyright (C) Microsoft Corporation. All rights reserved.\n\nUndecoration of :- \"?stage_add_actor@svc@mods@dusk@@YA?AW4ModResult@@AEAULoadedMod@23@PEBDECPEBX_KAEA_K@Z\"\nis :- \"enum ModResult __cdecl dusk::mods::svc::stage_add_actor(struct dusk::mods::LoadedMod & __ptr64,char const * __ptr64,unsigned char,signed char,void const * __ptr64,unsigned __int64,unsigned __int64 & __ptr64)\"",
+        "rva": "0x4e4c00",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 9,
+        "code": true,
+        "local": false,
+        "multi_name": true,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 5131264,
+          "flags": 9
+        },
+        "names_at_same_rva": 3
+      },
+      {
+        "name": "src/dusk/mods/svc/stage.cpp#dusk::mods::svc::stage_add_actor_",
+        "demangler_output": null,
+        "rva": "0x4df780",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 69,
+        "code": true,
+        "local": true,
+        "multi_name": false,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 5109632,
+          "flags": 69
+        },
+        "names_at_same_rva": 2
+      },
+      {
+        "name": "`dusk::mods::svc::`anonymous namespace'::register_edit'::`1'::dtor$0",
+        "demangler_output": null,
+        "rva": "0x1c9c0d0",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 5,
+        "code": true,
+        "local": true,
+        "multi_name": false,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 29999312,
+          "flags": 5
+        },
+        "names_at_same_rva": 1
+      },
+      {
+        "name": "src/dusk/mods/svc/stage.cpp#dusk::mods::svc::register_edit",
+        "demangler_output": null,
+        "rva": "0x4e49d0",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 69,
+        "code": true,
+        "local": true,
+        "multi_name": false,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 5130704,
+          "flags": 69
+        },
+        "names_at_same_rva": 2
+      },
+      {
+        "name": "src/dusk/mods/svc/stage.cpp#dusk::mods::svc::stage_add_actor",
+        "demangler_output": null,
+        "rva": "0x4e4c00",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 73,
+        "code": true,
+        "local": false,
+        "multi_name": true,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 5131264,
+          "flags": 73
+        },
+        "names_at_same_rva": 3
+      },
+      {
+        "name": "dusk::mods::svc::`anonymous namespace'::stage_add_actor_",
+        "demangler_output": null,
+        "rva": "0x4df780",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 5,
+        "code": true,
+        "local": true,
+        "multi_name": false,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 5109632,
+          "flags": 5
+        },
+        "names_at_same_rva": 2
+      },
+      {
+        "name": "dusk::mods::svc::stage_add_actor",
+        "demangler_output": null,
+        "rva": "0x4e4c00",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 9,
+        "code": true,
+        "local": false,
+        "multi_name": true,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 5131264,
+          "flags": 9
+        },
+        "names_at_same_rva": 3
+      },
+      {
+        "name": "dusk::mods::svc::`anonymous namespace'::register_edit",
+        "demangler_output": null,
+        "rva": "0x4e49d0",
+        "rva_is_static_not_runtime_pointer": true,
+        "flags": 5,
+        "code": true,
+        "local": true,
+        "multi_name": false,
+        "dup_name": false,
+        "inline_sites_at_target": false,
+        "flag_inline_sites": false,
+        "resolver": {
+          "status": "Ok",
+          "rva": 5130704,
+          "flags": 5
+        },
+        "names_at_same_rva": 2
+      }
+    ],
+    "target_records_count": 9,
+    "resolver_model": "ported from exact manifest.cpp; binary read only, not in-process HookService invocation"
+  },
+  "register_edit_static_disassembly": {
+    "begin_rva": "0x4e49d0",
+    "end_rva": "0x4e4b36",
+    "function_bytes": 358,
+    "function_sha256": "04e7373d123870fd4e70b68209c762f7a486337bfc2fb3e7d13b0bb57af65be8",
+    "instructions": [
+      "00000001404E49E7: mov         rdi,r8",
+      "00000001404E49EA: mov         rbx,rdx",
+      "00000001404E4A1C: mov         qword ptr [r9],r8",
+      "00000001404E4B18: xor         eax,eax",
+      "00000001404E4B2E: ret"
+    ],
+    "method": "dumpbin /disasm:nobytes /range of the single .pdata function; no host execution",
+    "meaning": "static machine evidence, not installed HookService or end-to-end provenance",
+    "instruction_count": 95,
+    "instruction_selection": "Only ABI register flow/out-handle/return; full focal output remains in private CI job, no container layout copied into a mod."
+  },
+  "msvc_format_fixture": {
+    "status": "PASS",
+    "sdk_api_git_blob": "3015130ae3ceb41468723741902c257fc7c7fc8f",
+    "cpp_sha256": "7a2aa23263cbba9cc1e10e16033830e6449eca5d73adc6b4c50adc332651524e",
+    "output": "MSVC_X64_FORMAT_FIXTURE_PASS pointer=8 ModResult=4 Header=72 Entry=24",
+    "scope": "only pointer/ModResult/symbol-format layout; NOT private ActorEditRecord/LoadedMod layout, NOT host callback or actor bridge"
+  },
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "python": "3.12.10",
+  "bridge_proved": false,
+  "P2": "NO_GO_UNTIL_OWNER_HANDLE_TO_BUFFER_PROVED"
+}
