@@ -1,0 +1,49 @@
+name: DEVF CP04.4 human closure tag only
+on:
+  pull_request:
+    types: [opened]
+    paths:
+      - '.github/workflows/devf-cp04-4-human-closure-tag.yml'
+permissions:
+  contents: write
+jobs:
+  seal-one-documentary-tag:
+    if: github.event.repository.private == true && github.head_ref == 'docs/devf-cp04-4-human-tag-seal' && github.base_ref == 'feature/devf-cp04-4-eoc2-black-human-runtime-closure' && github.event.pull_request.base.sha == 'f7a6623f6d931bacef6f2c8e54f46f7476780ade' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: f7a6623f6d931bacef6f2c8e54f46f7476780ade
+          fetch-depth: 0
+      - name: Create only the immutable human closure tag and read it back
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $target = 'f7a6623f6d931bacef6f2c8e54f46f7476780ade'
+          $tagName = 'DEVF_CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED_2026-10-14'
+          if ((git rev-parse HEAD) -ne $target) { throw 'Target mismatch' }
+          if ((git rev-parse HEAD^) -ne '0a2ec044cbae476c6ca8f3e5387737791875f47c') { throw 'Documentary parent mismatch' }
+          $rows = @(git diff --name-only HEAD^ HEAD)
+          if ($LASTEXITCODE -ne 0 -or $rows.Count -ne 5) { throw 'Documentary diff mismatch' }
+          foreach ($path in $rows) {
+            if (-not $path.StartsWith('DEVF/CP04_4_EOC2_BLACK_CONTINUATION/') -or -not $path.EndsWith('.md')) { throw 'Non-documentary change' }
+          }
+          if ((git rev-parse DEVF_CP04_4_EOC2_BLACK_PRIVATE_TEST_READY) -ne '21f9abb6b8dec176cc8b56d2652fb56a797ba45b') { throw 'Historical TEST tag object mismatch' }
+          if ((git rev-parse 'DEVF_CP04_4_EOC2_BLACK_PRIVATE_TEST_READY^{}') -ne '0a2ec044cbae476c6ca8f3e5387737791875f47c') { throw 'Historical TEST target mismatch' }
+          if ((git rev-parse DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14) -ne '08ffbae5e5da73658df77b3763de2fe6851f7a45') { throw 'CP03 object mismatch' }
+          if ((git rev-parse 'DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14^{}') -ne '139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f') { throw 'CP03 target mismatch' }
+          $existing = @(git ls-remote --tags origin "refs/tags/$tagName")
+          if ($LASTEXITCODE -ne 0) { throw 'Cannot check existing ref' }
+          if ($existing.Count -ne 0) { throw 'Tag already exists; no overwrite permitted' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a $tagName $target -m 'Windows/DX12 human observed; 3 sessions, 5 sequential generations; original E_OC2 identical same-frame control pending. Documentary closure only; original functional dusk unchanged.'
+          if ($LASTEXITCODE -ne 0) { throw 'Annotated tag creation failed' }
+          git push origin "refs/tags/$tagName"
+          if ($LASTEXITCODE -ne 0) { throw 'Non-forced tag push failed' }
+          $remote = @(git ls-remote --tags origin "refs/tags/$tagName" "refs/tags/$tagName^{}")
+          if ($LASTEXITCODE -ne 0 -or $remote.Count -ne 2) { throw 'Remote annotated tag readback failed' }
+          $object = git rev-parse $tagName
+          if (-not ($remote -match "^$object\s") -or -not ($remote -match "^$target\s")) { throw 'Remote object/target mismatch' }
+          Write-Output "TAG_SEALED object=$object target=$target"
