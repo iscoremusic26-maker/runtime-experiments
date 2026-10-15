@@ -1,5 +1,7 @@
 # CP05 — Guardia/persecución acotada por instancia, piloto privado
 
+> **Actualización documental posterior (2026-10-15 Panamá).** **CP05_AI_BOUNDED_HUMAN_RUNTIME_OBSERVED**: detección cercana y cese de persecución reportados, reaparición normal y HP hasta cero según el análisis del log. Regreso caminando NOT_VERIFIED,30 updates no acreditados directamente, rollback CP05 y control E_OC2 idéntico pendientes. Ver [informe humano y límites](HUMAN_RUNTIME_RESULTS_2026-10-15.md). Las afirmaciones HUMAN_RUNTIME_NOT_TESTED y pasos de prueba siguientes conservan el estado histórico al preparar el TEST; no se reescriben código, logs ni paquete.
+
 **CP05_AI_BOUNDED_PRIVATE_TEST_READY**: BUILD_PASS / LAB_PASS29 / PE_ABI_PASS / PACKAGE_VERIFIED / DOWNLOAD_VERIFIED. **HUMAN_RUNTIME_NOT_TESTED**. No CP05 completo, release estable ni garantía universal.
 
 Nuevo mod `dev.devf.cp05_ai_guard` v0.5.0, un único E_OC2 adicional nativo F_SP121/3/6, home(-1250,-6304.00830078125,60750), HP220→150 una vez PRE_FIRST_EXECUTE, mismo negro/ojos/arma de CP04.4. No cambiar field_0x560. Instalar **sólo este DEVF**, nunca junto al CP03/CP04. El .dusk histórico CP04.4 permanece intacto.

@@ -1,5 +1,7 @@
 # CP05 — Resultados reales y límites
 
+> **Actualización documental posterior (2026-10-15 Panamá).** Cierre humano limitado: USER_HUMAN_REPORTED para detección/cese/reaparición; USER_LOG_ANALYZED_IN_CHATGPT para dos generaciones con HP150→0 y comandos negros. HOME_RETURN_WALKING_NOT_VERIFIED y demás pendientes se detallan en el informe; no se hereda aceptación CP04. Ver [informe humano y límites](HUMAN_RUNTIME_RESULTS_2026-10-15.md). Las afirmaciones HUMAN_RUNTIME_NOT_TESTED y pasos de prueba siguientes conservan el estado histórico al preparar el TEST; no se reescriben código, logs ni paquete.
+
 **CP05_AI_BOUNDED_PRIVATE_TEST_READY / HUMAN_RUNTIME_NOT_TESTED**.
 
 | Gate | Estado | Evidencia y límite |
