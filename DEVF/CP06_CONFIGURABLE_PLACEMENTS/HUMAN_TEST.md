@@ -1,5 +1,7 @@
 # CP06 — Prueba humana privada PARCIAL (no ejecutada por Codex)
 
+> **Estado documental posterior a la build (2026-10-15): CP06_PARTIAL_HUMAN_RUNTIME_OBSERVED.** [Cinco pruebas humanas y límites](HUMAN_RUNTIME_RESULTS_2026-10-15.md): presets alternativos en frío, desactivación JSON y rollback CP06 observados; sigue CHECKPOINT_CP06_PARTIAL, sin segundo sitio ni multiinstancia. El texto original que sigue conserva el estado histórico al compilar; no se modificó el .dusk ni se repitieron builds/pruebas. Procedencia de logs: USER_LOG_ANALYZED_IN_CHATGPT; observaciones: USER_HUMAN_REPORTED. Tag humano TAG_PENDING; [recuperación](RECOVERY.md#cierre-humano-documental-2026-10-15).
+
 **Sólo1activo/sitio1. No prueba del MVP de2sitios/actores.**
 [ZIPverificado](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38690126831/artifacts/11951843169),83222bytes/SHA `e79a0e76d3471530927ca169bbe4cbe107689b36200a63119ace012d261a10a1`; vence2026-11-14 01:04:00 Panamá.
 Extraer fuera de la instalación y comprobar SHA256SUMS. Instalar sólo `DEVF_CP06_PARTIAL_SINGLE_SITE_windows-amd64_107c79987b0d3d1d28319654739a72bd498271bb.dusk`,41419bytes/SHA `b1e8f63797e93c0064e83fc39a984c1c806d046761f675b20ac55063b6a6dfa2`;IDdev.devf.cp06_single_site0.6.0.

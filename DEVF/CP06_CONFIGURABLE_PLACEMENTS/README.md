@@ -1,5 +1,7 @@
 # DEVF CP06 — Configuración externa: TEST PARCIAL de un sitio
 
+> **Estado documental posterior a la build (2026-10-15): CP06_PARTIAL_HUMAN_RUNTIME_OBSERVED.** [Cinco pruebas humanas y límites](HUMAN_RUNTIME_RESULTS_2026-10-15.md): presets alternativos en frío, desactivación JSON y rollback CP06 observados; sigue CHECKPOINT_CP06_PARTIAL, sin segundo sitio ni multiinstancia. El texto original que sigue conserva el estado histórico al compilar; no se modificó el .dusk ni se repitieron builds/pruebas. Procedencia de logs: USER_LOG_ANALYZED_IN_CHATGPT; observaciones: USER_HUMAN_REPORTED. Tag humano TAG_PENDING; [recuperación](RECOVERY.md#cierre-humano-documental-2026-10-15).
+
 **CHECKPOINT_CP06_PARTIAL / PRIVATE_SINGLE_SITE_TEST_VERIFIED / HUMAN_RUNTIME_NOT_TESTED.**
 MSVC/30casos/PE-ABI/7negativos/paquete/descarga real PASS. **NO es el MVP completo CP06**.
 
