@@ -25,9 +25,9 @@ try:
     for forbidden in ["TextureService","ParticleAccess","VirtualProtect","WriteProcessMemory","CreateThread","funchook","std::thread","new J3D"]:
         if forbidden in source:raise RuntimeError("Forbidden new surface")
     if source.count("if(cp6::black())a->health=devf::kHp;")!=1 or "field_0x560=" in source:raise RuntimeError("HP write policy changed")
-    for name,expected in json.loads((ROOT/"reused-cp03.json").read_text()).items():
-        f=ROOT.parent/"CP03_HP_DIAGNOSTIC/src"/name
-        if sha(f.read_bytes().replace(b"\r\n",b"\n"))!=expected:raise RuntimeError("Immutable CP03 header changed")
+    for name,expected in json.loads((ROOT/"immutable-helpers.json").read_text()).items():
+        f=ROOT/name
+        if sha(f.read_bytes().replace(b"\r\n",b"\n"))!=expected:raise RuntimeError("Approved helper changed")
     r["source_ledger"]={f.relative_to(ROOT).as_posix():sha(f.read_bytes().replace(b"\r\n",b"\n")) for f in ROOT.rglob("*") if f.is_file() and not any(x in f.parts for x in ["evidence","__pycache__"]) and f.name!="SOURCE_CI.json"}
     with zipfile.ZipFile("Dusklight-v2.0.3-win32-x86_64.zip") as z:
         item=z.getinfo("sdk/windows-amd64.lib");lib=z.read(item);host=z.read("dusklight.exe")
@@ -59,8 +59,6 @@ try:
     with zipfile.ZipFile(DELIVERY/"SOURCE_COMPILED.zip","w",zipfile.ZIP_DEFLATED) as z:
         for f in ROOT.rglob("*"):
             if f.is_file() and not any(x in f.parts for x in ["evidence","__pycache__"]):z.write(f,"DEVF/CP06_CONFIGURABLE_PLACEMENTS/"+f.relative_to(ROOT).as_posix())
-        for name in ["policy.hpp","observer.hpp","registration.hpp"]:
-            f=ROOT.parent/"CP03_HP_DIAGNOSTIC/src"/name;z.write(f,"DEVF/CP03_HP_DIAGNOSTIC/src/"+name)
     r["delivery_manifest"]=manifest
 except Exception as e:
     r["error"]=str(e);print("CP06_BUILD_ERROR="+str(e),flush=True);raise
