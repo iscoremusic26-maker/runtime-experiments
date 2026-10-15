@@ -11,3 +11,8 @@ Sitio1: DEVF/CP01_STAGE_BOKOBLIN_MINIMAL/LOCATION.md conserva la consulta y proc
 Gate: GO limitado para catálogo externo/presets/1sitio, CP06_PARTIAL. Salida A(moverXYZ),B(2activos/2sitios/epochgeneral) pendientes; no MVP completo. C enable/remove por próximo inicio está implementado, runtime CP06 aún no ejecutado. MSVC/ABI/IO pendientes de pipeline, no se hereda PASS CP05.
 
 Fuentes fijadas: https://github.com/TwilitRealm/dusklight/tree/40457c6adb381928e4b5fef6ed459ed291edd5e2 y https://github.com/encounter/borealis/tree/4ac5e7052a8c49a122f8d57f626b5c75c5ca6968 .
+
+## Ruta comprobada e integridad posterior
+
+src/m_Do/m_Do_main.cpp630–631 fija ConfigPath=dataPaths.userPath;927–932 permite --mods override y, por defecto,mods=ConfigPath/mods. src/dusk/config.cpp define config.json enConfigPath. Por ello,data_dir es hermano de mods en setup normal, pero no se deduce de una carpeta --mods arbitraria. No se imprime la ruta personal.
+MSVC/SDK/metadataFileService1.0 y nuevaCRT verificados en el build final; los30casos prueban el core/Windowsfiles con serviciofake, no backenddeljuego. Sceneepoch general y correlación2actores se mantienen bloqueados; no se solicita el ARC ni se reabreActorServicepara sortearlo.

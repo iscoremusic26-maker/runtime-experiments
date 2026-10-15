@@ -1,0 +1,536 @@
+{
+  "DLL_loaded": false,
+  "ci_head": "5ba8018f6af0e3d0b98af745d5cd0433d485955a",
+  "delivery_manifest": {
+    "CP06_MVP_complete": false,
+    "ci_head": "5ba8018f6af0e3d0b98af745d5cd0433d485955a",
+    "dll_bytes": 77824,
+    "dll_sha256": "45effe8a0ac9d56c3921c2cd6d0a27e9ea7017821559ef96b94b21ff390214e0",
+    "filename": "DEVF_CP06_PARTIAL_SINGLE_SITE_windows-amd64_107c79987b0d3d1d28319654739a72bd498271bb.dusk",
+    "id": "dev.devf.cp06_single_site",
+    "install_alone": true,
+    "no_hot_reload": true,
+    "original_assets_included": false,
+    "package_bytes": 41419,
+    "package_sha256": "b1e8f63797e93c0064e83fc39a984c1c806d046761f675b20ac55063b6a6dfa2",
+    "private_test": true,
+    "run_id": "38690126831",
+    "runtime": "HUMAN_RUNTIME_NOT_TESTED",
+    "scope": "CP06_PARTIAL_SINGLE_SITE_MAX_ONE_ACTIVE",
+    "source_commit": "107c79987b0d3d1d28319654739a72bd498271bb",
+    "version": "0.6.0"
+  },
+  "dependencies": {
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "library_bytes": 9400986,
+    "library_crc32": "70c35731",
+    "library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "official_source": "40457c6adb381928e4b5fef6ed459ed291edd5e2"
+  },
+  "game_executed": false,
+  "host_or_CP03_built": false,
+  "negatives": [
+    {
+      "case": "x86",
+      "rejected": true
+    },
+    {
+      "case": "wrong_packet_hook",
+      "rejected": true
+    },
+    {
+      "case": "wrong_hook_service",
+      "rejected": true
+    },
+    {
+      "case": "wrong_file_service",
+      "rejected": true
+    },
+    {
+      "case": "wrong_export",
+      "rejected": true
+    },
+    {
+      "case": "original_arc_forbidden",
+      "rejected": true
+    },
+    {
+      "case": "path_escape",
+      "rejected": true
+    }
+  ],
+  "offline_cases": 30,
+  "package": {
+    "dll_bytes": 77824,
+    "dll_sha256": "45effe8a0ac9d56c3921c2cd6d0a27e9ea7017821559ef96b94b21ff390214e0",
+    "game_or_dll_executed": false,
+    "manifest_sha256": "016ae51081f6643715bc690e3acd66b979d0809e747dc9414be423802c2926a0",
+    "members": [
+      {
+        "bytes": 476,
+        "crc32": "2fdfa5d9",
+        "directory": false,
+        "path": "mod.json",
+        "sha256": "016ae51081f6643715bc690e3acd66b979d0809e747dc9414be423802c2926a0"
+      },
+      {
+        "bytes": 0,
+        "crc32": "00000000",
+        "directory": true,
+        "path": "lib/",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 0,
+        "crc32": "00000000",
+        "directory": true,
+        "path": "lib/windows-amd64/",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "bytes": 77824,
+        "crc32": "c1316cb3",
+        "directory": false,
+        "path": "lib/windows-amd64/mod.dll",
+        "sha256": "45effe8a0ac9d56c3921c2cd6d0a27e9ea7017821559ef96b94b21ff390214e0"
+      }
+    ],
+    "original_assets_included": false,
+    "package_bytes": 41419,
+    "package_sha256": "b1e8f63797e93c0064e83fc39a984c1c806d046761f675b20ac55063b6a6dfa2",
+    "pe_audit": {
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "game_or_dll_executed": false,
+      "hook_bound_imports": [
+        "?drawFast@J3DShapePacket@@QEAAXXZ",
+        "?execute@daE_OC_c@@QEAAHXZ"
+      ],
+      "imports": {
+        "KERNEL32.dll": [
+          "InitializeSListHead",
+          "DisableThreadLibraryCalls",
+          "GetSystemTimeAsFileTime",
+          "GetCurrentThreadId",
+          "GetCurrentProcessId",
+          "QueryPerformanceCounter"
+        ],
+        "MSVCP140.dll": [
+          "?_Xout_of_range@std@@YAXPEBD@Z",
+          "?_Xlength_error@std@@YAXPEBD@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "__current_exception",
+          "__current_exception_context",
+          "__std_type_info_destroy_list",
+          "__std_terminate",
+          "__std_exception_copy",
+          "__std_exception_destroy",
+          "_CxxThrowException",
+          "__C_specific_handler",
+          "memset",
+          "memcmp",
+          "memcpy",
+          "memmove"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "_callnewh",
+          "free",
+          "malloc"
+        ],
+        "api-ms-win-crt-math-l1-1-0.dll": [
+          "floor"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_initterm_e",
+          "_initterm",
+          "terminate",
+          "_cexit",
+          "_seh_filter_dll",
+          "_configure_narrow_argv",
+          "_initialize_narrow_environment",
+          "_initialize_onexit_table",
+          "_register_onexit_function",
+          "_execute_onexit_table",
+          "_crt_atexit"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-string-l1-1-0.dll": [
+          "strcmp",
+          "strncmp"
+        ],
+        "dusklight.exe": [
+          "?dComIfGp_event_runCheck@@YAHXZ",
+          "?dComIfGp_getStartStageName@@YAPEBDXZ",
+          "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+          "?execute@daE_OC_c@@QEAAHXZ",
+          "?ChkTgHit@dCcD_GObjInf@@QEAAIXZ",
+          "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+          "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+          "?fpcM_IsCreating@@YAHI@Z",
+          "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z",
+          "?drawFast@J3DShapePacket@@QEAAXXZ",
+          "GXCallDisplayList"
+        ]
+      },
+      "machine": "AMD64",
+      "metadata": [
+        {
+          "abi": 1,
+          "kind": "header"
+        },
+        {
+          "id": "dev.twilitrealm.dusklight.host",
+          "kind": "import",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "id": "dev.twilitrealm.dusklight.file",
+          "kind": "import",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "id": "dev.twilitrealm.dusklight.log",
+          "kind": "import",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "id": "dev.twilitrealm.dusklight.stage",
+          "kind": "import",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "id": "dev.twilitrealm.dusklight.hook",
+          "kind": "import",
+          "major": 1,
+          "minor": 1
+        },
+        {
+          "kind": "hook_mem",
+          "pointer_to_member_bytes": 8,
+          "size": 72,
+          "target": "daE_OC_c::execute"
+        },
+        {
+          "kind": "hook_mem",
+          "pointer_to_member_bytes": 8,
+          "size": 88,
+          "target": "J3DShapePacket::drawFast"
+        },
+        {
+          "id": "dev.twilitrealm.dusklight.game",
+          "kind": "import",
+          "major": 2,
+          "minor": 0
+        }
+      ],
+      "status": "CP06_PE_ABI_PASS",
+      "tls_or_delay_imports": false
+    },
+    "status": "PACKAGE_VERIFIED"
+  },
+  "pe": {
+    "exports": [
+      "mod_ctx",
+      "mod_initialize",
+      "mod_meta",
+      "mod_shutdown",
+      "mod_update"
+    ],
+    "game_or_dll_executed": false,
+    "hook_bound_imports": [
+      "?drawFast@J3DShapePacket@@QEAAXXZ",
+      "?execute@daE_OC_c@@QEAAHXZ"
+    ],
+    "imports": {
+      "KERNEL32.dll": [
+        "InitializeSListHead",
+        "DisableThreadLibraryCalls",
+        "GetSystemTimeAsFileTime",
+        "GetCurrentThreadId",
+        "GetCurrentProcessId",
+        "QueryPerformanceCounter"
+      ],
+      "MSVCP140.dll": [
+        "?_Xout_of_range@std@@YAXPEBD@Z",
+        "?_Xlength_error@std@@YAXPEBD@Z"
+      ],
+      "VCRUNTIME140.dll": [
+        "__current_exception",
+        "__current_exception_context",
+        "__std_type_info_destroy_list",
+        "__std_terminate",
+        "__std_exception_copy",
+        "__std_exception_destroy",
+        "_CxxThrowException",
+        "__C_specific_handler",
+        "memset",
+        "memcmp",
+        "memcpy",
+        "memmove"
+      ],
+      "VCRUNTIME140_1.dll": [
+        "__CxxFrameHandler4"
+      ],
+      "api-ms-win-crt-heap-l1-1-0.dll": [
+        "_callnewh",
+        "free",
+        "malloc"
+      ],
+      "api-ms-win-crt-math-l1-1-0.dll": [
+        "floor"
+      ],
+      "api-ms-win-crt-runtime-l1-1-0.dll": [
+        "_initterm_e",
+        "_initterm",
+        "terminate",
+        "_cexit",
+        "_seh_filter_dll",
+        "_configure_narrow_argv",
+        "_initialize_narrow_environment",
+        "_initialize_onexit_table",
+        "_register_onexit_function",
+        "_execute_onexit_table",
+        "_crt_atexit"
+      ],
+      "api-ms-win-crt-stdio-l1-1-0.dll": [
+        "__stdio_common_vsprintf"
+      ],
+      "api-ms-win-crt-string-l1-1-0.dll": [
+        "strcmp",
+        "strncmp"
+      ],
+      "dusklight.exe": [
+        "?dComIfGp_event_runCheck@@YAHXZ",
+        "?dComIfGp_getStartStageName@@YAPEBDXZ",
+        "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+        "?execute@daE_OC_c@@QEAAHXZ",
+        "?ChkTgHit@dCcD_GObjInf@@QEAAIXZ",
+        "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+        "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+        "?fpcM_IsCreating@@YAHI@Z",
+        "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z",
+        "?drawFast@J3DShapePacket@@QEAAXXZ",
+        "GXCallDisplayList"
+      ]
+    },
+    "machine": "AMD64",
+    "metadata": [
+      {
+        "abi": 1,
+        "kind": "header"
+      },
+      {
+        "id": "dev.twilitrealm.dusklight.host",
+        "kind": "import",
+        "major": 2,
+        "minor": 2
+      },
+      {
+        "id": "dev.twilitrealm.dusklight.file",
+        "kind": "import",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "id": "dev.twilitrealm.dusklight.log",
+        "kind": "import",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "id": "dev.twilitrealm.dusklight.stage",
+        "kind": "import",
+        "major": 1,
+        "minor": 0
+      },
+      {
+        "id": "dev.twilitrealm.dusklight.hook",
+        "kind": "import",
+        "major": 1,
+        "minor": 1
+      },
+      {
+        "kind": "hook_mem",
+        "pointer_to_member_bytes": 8,
+        "size": 72,
+        "target": "daE_OC_c::execute"
+      },
+      {
+        "kind": "hook_mem",
+        "pointer_to_member_bytes": 8,
+        "size": 88,
+        "target": "J3DShapePacket::drawFast"
+      },
+      {
+        "id": "dev.twilitrealm.dusklight.game",
+        "kind": "import",
+        "major": 2,
+        "minor": 0
+      }
+    ],
+    "status": "CP06_PE_ABI_PASS",
+    "tls_or_delay_imports": false
+  },
+  "phases": [
+    {
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\version.cpp",
+        "/Fo<WORK>\\version.obj"
+      ],
+      "exit": 0,
+      "label": "compiler",
+      "seconds": 2.593
+    },
+    {
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "exit": 0,
+      "label": "cmake",
+      "seconds": 0.922
+    },
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "<CHECKOUT>\\DEVF\\CP06_CONFIGURABLE_PLACEMENTS",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<CHECKOUT>\\.official",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+      ],
+      "exit": 0,
+      "label": "configure",
+      "seconds": 6.031
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_cp06_single_site",
+        "cp06_config_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build",
+      "seconds": 10.391
+    },
+    {
+      "command": [
+        "<WORK>\\build\\cp06_config_lab.exe",
+        "<WORK>\\config-fixture"
+      ],
+      "exit": 0,
+      "label": "focused-lab",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\devf_cp06_single_site.dll"
+      ],
+      "exit": 0,
+      "label": "module-headers",
+      "seconds": 0.062
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\devf_cp06_single_site.dll"
+      ],
+      "exit": 0,
+      "label": "module-imports",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\devf_cp06_single_site.dll"
+      ],
+      "exit": 0,
+      "label": "module-exports",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "devf_cp06_single_site_package"
+      ],
+      "exit": 0,
+      "label": "official-package",
+      "seconds": 0.328
+    }
+  ],
+  "run_id": "38690126831",
+  "runtime": "HUMAN_RUNTIME_NOT_TESTED",
+  "source_commit": "107c79987b0d3d1d28319654739a72bd498271bb",
+  "source_ledger": {
+    "BUILD_AND_PACKAGE.md": "f07327444e3fa5be3395f5f0318c886c93995d726e21020e1439588cd8f76901",
+    "CMakeLists.txt": "022a13f44658dc22d54aeca166305ea108c3eccdf20a038acfa1b430e1070875",
+    "CP06_SCHEMA.md": "c5415e785359e610b812fafe99a1b8b38983900cea4b2c124849c9dab7a0cd4a",
+    "CRT_IMPORT_REVIEW.md": "f316068aaf27efa4631bd27d3b98178267be7ef0909cb7a22ee7c53b445982cf",
+    "HUMAN_TEST.md": "7dffced3fde221d790a5b0360bd8056e38e05f0b2c5404abe3a63b9816cb2a1b",
+    "IMPLEMENTATION.md": "b42ca6c3b37ce8647d03f0c3136a2cf67b9e6f0335f5909bd09f4b4ddb6ecf56",
+    "README.md": "cc01fb8e4115ce128c5533a9b2be100a4cff956a291130ba2fa8341d599adf70",
+    "RECOVERY.md": "520daf6c9b418a7e03d4c531d684563d317d16a4888122bf4158f67c70d8f540",
+    "SOURCE_AND_SERVICE_GATE.md": "f933190c836396fdd402f5f9ec601bc94b69a857be116869369bb2de3efaeb17",
+    "TEST_RESULTS.md": "cd9384b60ad79dcb6fe70dd2ac78b9eb64f633bbd847786c199fbdfb3725f32d",
+    "ci/audit.py": "f943eec8d6b32b569bb06106e221c4d23b17b809b49bd5aa7e6a9f9398be7682",
+    "ci/reviewed-imports.json": "93871a91c05cae1e6c5018185d8fbfa31af6f45cb24cd67f2816ded7380b743d",
+    "ci/run_windows.py": "a187050bc4a389aacb64c09a39e182a8bc67c9691f62e6299cd453c759c634ff",
+    "examples/black-guard.json": "0910ce3dbc2fe9b5ba88efd8df351c9ceec84b135bc7eb54dc5292d8f6667a79",
+    "examples/disabled.json": "492a4013dda18a101be2def758b31277a3b967e3388db9c28239b5bb4937172c",
+    "examples/invalid-two-active.json": "8541c775a7ea720b7aff95a914da12179b4d724a53c1e00056dfe049e3e8ecbd",
+    "examples/native-elite.json": "2d2051dad17e65179c85528aaa649f77c33eef06a1197a872f691c41a8a19117",
+    "immutable-helpers.json": "fd39950012881aa53e0a6ce529678ce0e78fc59a28d73929f1740459196fbbd8",
+    "mod.json": "016ae51081f6643715bc690e3acd66b979d0809e747dc9414be423802c2926a0",
+    "src/ai_core.hpp": "33389d4ac2635546a860a29c2b168656465df283838b6ee39ce611701bb8d53e",
+    "src/config_core.hpp": "6a437ec2c902db6999ea209859c4e3ada8652b07a3a35b1c1581982ed6b45131",
+    "src/config_io.hpp": "354450aec1ab209ab4840107ee53b3abd6a59357150d8df765767929d0fa6ff0",
+    "src/mod.cpp": "34e6c8093999b3a659d320aa449c33026e4f0df79852f4ec98002700aa35b7ca",
+    "src/observer.hpp": "cb8f0b6524fd69c548d627a983776592ce16b3ddb58e1ed57eb3c25677cca1c1",
+    "src/policy.hpp": "d8762ec2a36eed1e12a4fa25e213158b74d6c01107e329e222e6d43cf8bf6215",
+    "src/registration.hpp": "65e05bfc56f0e8d3c180ed0b1347a7634230483826e24a224f36daba06d91f9b",
+    "src/xf_scope.hpp": "d91624725dd6092ab4efb7ed7ae0cecea7aef63060a67ba69da9639a38130989",
+    "tests/config_lab.cpp": "ab41455fdea2059daaaf67f55d5c918e5fc053a5c539e7e07f387ffdad11783e"
+  },
+  "started_utc": "2026-10-15T06:03:37.939890+00:00",
+  "status": "BUILD_PASS_PACKAGE_VERIFIED_DOWNLOAD_PENDING",
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "VSCMD_ARG_TGT_ARCH": "x64",
+    "WindowsSDKVersion": "10.0.26100.0\\"
+  }
+}
