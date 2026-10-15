@@ -20,3 +20,13 @@ Gate de fuente: GO para un piloto de percepción por instancia, condicionado a M
 Ownership: mPlayerRange pertenece al actor concreto; materiales/HIO/texturas compartidos sólo lectura. Scope guarda escalares y key opaco durante PRE/POST; al salir restaura el valor exacto si identidad/key/generación y expected range coinciden. No guarda puntero dereferenciable tras el scope. Callback incompleto: mod_update/shutdown busca sólo ActorId admitido, revalida record/key y restaura si coincide; si actor desapareció o hay otro writer, no toca memoria ajena, registra error fail-closed. Stack8 + overflow contabilizado evita perder scope exterior. El límite de callbacks del host ya documentado se mantiene: no hot reload ni recuperación de abort/OOM fatal.
 
 No se reauditó ARC/32 fuentes/render. CP04.4 .dusk y refs históricos permanecen intactos.
+
+## Validación posterior al gate
+
+Tres imports nuevos exactos en la DLL final, revisados y unidos al importlib oficial:
+`?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z`,
+`?dComIfGp_event_runCheck@@YAHXZ`,
+`?ChkTgHit@dCcD_GObjInf@@QEAAIXZ`.
+La última consulta está declarada en include/d/d_cc_d.h295 y definida en src/d/d_cc_d.cpp221–229, wrapper del hit real con comprobación de actor. No se sustituye por la firma de su clase base. PE/ABI del build final verifica el owner exacto y no amplía indiscriminadamente imports. Las dos queries citadas arriba más esta consulta de daño son la superficie nueva; no un nuevo hook.
+
+El primer execute de create ocurre antes del estado2; la inicialización nativa se conserva. La guardia no pretende impedir FIND inicial en esa llamada. El bloque visual y xf_scope son idénticos al CP04, salvo identidad/versionado en mensajes.

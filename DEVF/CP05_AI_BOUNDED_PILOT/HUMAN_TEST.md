@@ -1,9 +1,12 @@
 # CP05 — Protocolo humano condicionado
 
-NO instalar hasta recibir BUILD_PASS/LAB_PASS/PACKAGE_VERIFIED/DOWNLOAD_VERIFIED y hashes exactos.
+**Paquete privado verificado; HUMAN_RUNTIME_NOT_TESTED.** [Descargar ZIP TEST](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38672691356/artifacts/11945045896), 52452 bytes, SHA256 `c5df6dcbd0f440e096c5c4048f2c3c97476ed6cb1234c9587e2df0a6317914bc`. Extraer fuera de la instalación y contrastar SHA256SUMS.txt. Instalar sólo `DEVF_CP05_AI_GUARD_windows-amd64_ec61daa3ed7d539989028cd26b22fa529896de11.dusk`, 18929 bytes, SHA256 `23f81ad131082a03fcd66068ccd926ecf878182a5afce06244898cf663248ddb`. No instalar DLL suelta ni SourceZip. Vence2026-11-13 21:46:49 Panamá.
 Cerrar juego, respaldar saves; EXE oficial2.0.3 SHA ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049, Windows x64/DX12. Apartar .dusk DEVF anteriores; sólo nuevo dev.devf.cp05_ai_guard, sin hot reload ni mods que cambien el mismo hook.
 F_SP121/3/6: mismo añadido negro/HP150, ojos/arma conservados. Comparar guardia fuera1200 y entrada cerca, FOV/LOS y sonidos nativos; si original E_OC2 equivalente disponible comparar a1300 sin ruido/pares. No fabricar original ni flags.
 Tras interés nativo, alejar Link más1400 y observar desistimiento, movimiento y regreso a zona por lógica nativa. Treinta updates no son segundos; ningún teleport es válido. Obstáculo/sonidos/ataque pueden interrumpir y deben documentarse, no inferir navegación garantizada.
 Sólo si estable: ataques, daño/stun, muerte, salir/reentrar; comprobar nuevo ActorId/generación, negro150 y ausencia de residuos. Ante crash/rechazo/deslizamiento/contaminación detener y enviar log/captura privados.
 Rollback: cierre completo, retirar sólo CP05, arranque frío y ausencia de añadido. Se puede volver al .dusk CP04.4 ORIGINAL sin recompilarlo, siempre una sola versión.
 Todo gameplay CP05 HUMAN_RUNTIME_NOT_TESTED hasta evidencia; no aceptar AI_EVENT_OBSERVED como prueba visual. Comparación retail idéntica/no disponible => PENDING. No CP06.
+
+La primera llamada execute durante create conserva inicialización nativa; el scope AI sólo empieza con estado2/modelo creado. Puede existir FIND inicial nativo antes de asentarse la guardia. No concluir fallo por esa transición sola: registrar la secuencia y observar pérdida de interés/retorno sin forzar actores.
+1200/1400 son distancias del motor, sin overlay ni cronómetro GPU. Eventos STATE_ENTER/STATE_EXIT sólo indican estados externos/acción nativa observada, no prueban caminar ni llegar home. Registrar si el terreno/obstáculos/sonidos/otros actores impiden un retorno visible.
