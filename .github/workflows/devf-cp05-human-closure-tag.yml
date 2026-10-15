@@ -1,0 +1,44 @@
+name: DEVF CP05 human closure immutable tag only
+on:
+  pull_request:
+    types: [opened]
+    paths:
+      - '.github/workflows/devf-cp05-human-closure-tag.yml'
+permissions:
+  contents: write
+jobs:
+  seal-exact-human-document:
+    if: github.event.repository.private == true && github.head_ref == 'docs/devf-cp05-human-tag-seal' && github.base_ref == 'feature/devf-cp05-ai-bounded-human-runtime-closure' && github.event.pull_request.base.sha == '3f6e2fc7a285dbce8cb520e0b4536ff56d542930' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: 3f6e2fc7a285dbce8cb520e0b4536ff56d542930
+          fetch-depth: 0
+      - name: Verify exact parent/docs and push one new annotated tag without force
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $target = '3f6e2fc7a285dbce8cb520e0b4536ff56d542930'
+          if ((git rev-parse HEAD) -ne $target -or (git rev-parse HEAD^) -ne '7a7c8bc34841e6f85020cca93ff591e9cb9e789d') { throw 'Literal target/parent mismatch' }
+          $paths = @(git diff --name-only HEAD^ HEAD)
+          if ($LASTEXITCODE -ne 0 -or $paths.Count -ne 5) { throw 'Expected five-document closure' }
+          foreach ($path in $paths) {
+            if (-not $path.StartsWith('DEVF/CP05_AI_BOUNDED_PILOT/') -or -not $path.EndsWith('.md')) { throw 'Non-documentary change' }
+          }
+          if ((git rev-parse DEVF_CP05_AI_BOUNDED_PRIVATE_TEST_READY) -ne '83b2cea8815a8c01b29ad1f3df2a3731f7b667f4' -or (git rev-parse 'DEVF_CP05_AI_BOUNDED_PRIVATE_TEST_READY^{}') -ne '7a7c8bc34841e6f85020cca93ff591e9cb9e789d') { throw 'CP05 technical tag changed' }
+          if ((git rev-parse DEVF_CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED_2026-10-14) -ne 'f21d0d95e0fc7d5fcbca15ae17ba6b50cdee564e' -or (git rev-parse 'DEVF_CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED_2026-10-14^{}') -ne 'f7a6623f6d931bacef6f2c8e54f46f7476780ade') { throw 'CP04 human tag changed' }
+          if ((git rev-parse DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14) -ne '08ffbae5e5da73658df77b3763de2fe6851f7a45' -or (git rev-parse 'DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14^{}') -ne '139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f') { throw 'CP03 human tag changed' }
+          $tagName = 'DEVF_CP05_AI_BOUNDED_HUMAN_RUNTIME_OBSERVED_2026-10-15'
+          $existing = @(git ls-remote --tags origin "refs/tags/$tagName")
+          if ($LASTEXITCODE -ne 0 -or $existing.Count -ne 0) { throw 'Tag exists or cannot check; never overwrite' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a $tagName $target -m 'CP05 Windows/DX12 human observed: close detection and pursuit cessation reported; two sequential generations HP150 to zero and respawn. Walking home,30-update grace,cold rollback and identical same-frame EOC2 control not verified. Documentary only; original dusk unchanged.'
+          if ($LASTEXITCODE -ne 0) { throw 'Annotated tag creation failed' }
+          git push origin "refs/tags/$tagName"
+          if ($LASTEXITCODE -ne 0) { throw 'Non-forced push failed' }
+          $remote = @(git ls-remote --tags origin "refs/tags/$tagName" "refs/tags/$tagName^{}")
+          if ($LASTEXITCODE -ne 0 -or $remote.Count -ne 2 -or -not ($remote -match "^$target\s")) { throw 'Remote tag/peeled-target mismatch' }
+          Write-Output "CP05_HUMAN_TAG_SEALED target=$target"
