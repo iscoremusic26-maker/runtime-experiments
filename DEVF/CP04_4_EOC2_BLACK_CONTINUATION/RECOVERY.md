@@ -1,5 +1,7 @@
 # CP04.4 — Recuperación de continuación y TEST privado
 
+> **Nota documental posterior (2026-10-14 Panamá).** Cierre humano documental en rama hija feature/devf-cp04-4-eoc2-black-human-runtime-closure desde 0a2ec044cbae476c6ca8f3e5387737791875f47c. El funcional sigue siendo el mismo .dusk; creación del nuevo tag anotado bloqueada por Cloud/interfaz, con pasos de sello en el informe. Ver [cierre humano y límites](HUMAN_RUNTIME_RESULTS_2026-10-14.md). Las menciones siguientes a HUMAN_RUNTIME_NOT_TESTED/pendientes describen el estado histórico **en el momento de la build**; se conservan sin reescribir historia.
+
 Estado: **CP04_4_EOC2_BLACK_PRIVATE_TEST_READY / CODE_ISOLATED_OFFLINE / HUMAN_RUNTIME_NOT_TESTED**.
 Rama hija privada `feature/devf-cp04-4-eoc2-black-implementation`, [PR31 draft](https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/31), base exacta `0b2216eec658402aec2470e0df0080e399294225`. Nunca force/reset/mover refs selladas.
 

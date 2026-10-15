@@ -1,5 +1,7 @@
 # CP04.4 — Prueba humana privada Windows/DX12
 
+> **Nota documental posterior (2026-10-14 Panamá).** Protocolo histórico: el usuario ya reportó ejecución satisfactoria, reentrada y retirada en frío. No se exige repetir el gameplay para este cierre. El control simultáneo con E_OC2 original idéntico permanece pendiente. Ver [cierre humano y límites](HUMAN_RUNTIME_RESULTS_2026-10-14.md). Las menciones siguientes a HUMAN_RUNTIME_NOT_TESTED/pendientes describen el estado histórico **en el momento de la build**; se conservan sin reescribir historia.
+
 **TEST offline verificado; HUMAN_RUNTIME_NOT_TESTED.** No lo ejecutó Codex. APPLIED sólo confirma la palabra privada del comando y el cierre lógico del scope.
 
 1. Cerrar completamente Dusklight. Respaldar saves por el usuario. Comprobar EXE oficialSHA `ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049`, versión2.0.3, D3D12. No Vulkan/hot reload.

@@ -1,5 +1,7 @@
 # DEVF CP04.4 — E_OC2 negro por instancia, TEST privado
 
+> **Nota documental posterior (2026-10-14 Panamá).** Estado posterior a la build: **CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED** en el flujo reportado; tres logs/cinco generaciones y observaciones humanas. Comparador simultáneo E_OC2 idéntico pendiente. El tag documental nuevo sigue bloqueado por la interfaz disponible. Ver [cierre humano y límites](HUMAN_RUNTIME_RESULTS_2026-10-14.md). Las menciones siguientes a HUMAN_RUNTIME_NOT_TESTED/pendientes describen el estado histórico **en el momento de la build**; se conservan sin reescribir historia.
+
 **CP04_4_EOC2_BLACK_PRIVATE_TEST_READY**. Aislamiento de código **CODE_ISOLATED_OFFLINE**; apariencia/combate/limpieza en esta versión **HUMAN_RUNTIME_NOT_TESTED**. No se ejecutó juego ni se cargó la DLL en CI.
 
 Mod nuevo: `dev.devf.cp04_eoc2_black` versión0.4.4. Un E_OC2 adicional nativo en F_SP121/3/6, home(-1250,-6304.00830078125,60750), HP220→150 mediante la misma escritura única PRE_FIRST_EXECUTE de CP03, sin cambiar field_0x560. Incluye la telemetría y las políticas CP03 necesarias; se instala **solo**, nunca junto al .dusk CP03/CP04 anterior.

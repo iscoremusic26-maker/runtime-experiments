@@ -1,5 +1,7 @@
 # CP04.4 — Resultados finales de la continuación
 
+> **Nota documental posterior (2026-10-14 Panamá).** Actualización posterior a las pruebas offline: flujo humano observado según evidencia suministrada, con cinco generaciones secuenciales en tres sesiones; no se repitió build/laboratorio. El informe enlazado separa procedencias y pendientes. Ver [cierre humano y límites](HUMAN_RUNTIME_RESULTS_2026-10-14.md). Las menciones siguientes a HUMAN_RUNTIME_NOT_TESTED/pendientes describen el estado histórico **en el momento de la build**; se conservan sin reescribir historia.
+
 **CP04_4_EOC2_BLACK_PRIVATE_TEST_READY / CODE_ISOLATED_OFFLINE. HUMAN_RUNTIME_NOT_TESTED.**
 
 | Gate | Resultado | Evidencia real |
