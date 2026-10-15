@@ -1,0 +1,673 @@
+{
+  "status": "A_B_BUILD_PASS_PACKAGE_VERIFIED_DOWNLOAD_PENDING",
+  "source_commit": "689f79c1c785bea31715d814f7d03818a7f0dd72",
+  "ci_head": "08a5f4d952665bcc223b1b3feda37ac7ff23acdf",
+  "event_merge_sha": "f938bb7b2dd61f6432da1d29beccfd074f40c0be",
+  "run_id": "38755215665",
+  "started_utc": "2026-10-15T14:52:37.210646+00:00",
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "phases": [
+    {
+      "label": "compiler",
+      "exit": 0,
+      "seconds": 2.266
+    },
+    {
+      "label": "configure",
+      "exit": 0,
+      "seconds": 6.406
+    },
+    {
+      "label": "build",
+      "exit": 0,
+      "seconds": 3.172
+    },
+    {
+      "label": "registration-lab",
+      "exit": 0,
+      "seconds": 0
+    },
+    {
+      "label": "north-headers",
+      "exit": 0,
+      "seconds": 0.062
+    },
+    {
+      "label": "north-imports",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "north-exports",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "north-official-package",
+      "exit": 0,
+      "seconds": 0.281
+    },
+    {
+      "label": "dual-headers",
+      "exit": 0,
+      "seconds": 0.032
+    },
+    {
+      "label": "dual-imports",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "dual-exports",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "dual-official-package",
+      "exit": 0,
+      "seconds": 0.235
+    }
+  ],
+  "game_executed": false,
+  "mod_DLL_executed": false,
+  "host_built": false,
+  "personalization": false,
+  "north_context": {
+    "status": "NORTH_CONTEXT_SOURCE_SCREEN",
+    "candidate_ground": [
+      -1250,
+      -6327.600450915229,
+      61950
+    ],
+    "nearest_records": [
+      {
+        "chunk": "PLYR",
+        "index": 11,
+        "name": "Link",
+        "distance_xz": 939.4147114027968
+      },
+      {
+        "chunk": "ACT6",
+        "index": 32,
+        "name": "flwr7",
+        "distance_xz": 940.6912352095134
+      },
+      {
+        "chunk": "ACT6",
+        "index": 30,
+        "name": "flwr7",
+        "distance_xz": 950.3288904374107
+      },
+      {
+        "chunk": "ACT6",
+        "index": 26,
+        "name": "Digpl",
+        "distance_xz": 1025.9142264341594
+      },
+      {
+        "chunk": "ACT6",
+        "index": 33,
+        "name": "flwr7",
+        "distance_xz": 1054.229576515476
+      },
+      {
+        "chunk": "ACT6",
+        "index": 25,
+        "name": "Digpl",
+        "distance_xz": 1070.046727951635
+      },
+      {
+        "chunk": "ACT6",
+        "index": 31,
+        "name": "flwr7",
+        "distance_xz": 1076.1621625015441
+      },
+      {
+        "chunk": "ACT6",
+        "index": 27,
+        "name": "Digpl",
+        "distance_xz": 1096.5856099730654
+      }
+    ],
+    "native_Eoc_homes": [
+      {
+        "chunk": "ACT6",
+        "index": 7,
+        "name": "E_oc",
+        "distance_xz": 1697.0562748477141
+      },
+      {
+        "chunk": "ACT6",
+        "index": 9,
+        "name": "E_oc",
+        "distance_xz": 6768.308503607087
+      },
+      {
+        "chunk": "ACT6",
+        "index": 21,
+        "name": "E_oc",
+        "distance_xz": 9058.835465996719
+      },
+      {
+        "chunk": "ACT6",
+        "index": 8,
+        "name": "E_oc",
+        "distance_xz": 9066.697303869805
+      },
+      {
+        "chunk": "ACT6",
+        "index": 12,
+        "name": "E_oc",
+        "distance_xz": 10464.822024286892
+      },
+      {
+        "chunk": "ACT6",
+        "index": 10,
+        "name": "E_oc",
+        "distance_xz": 11656.429551828016
+      },
+      {
+        "chunk": "ACT6",
+        "index": 11,
+        "name": "E_oc",
+        "distance_xz": 20255.678216243465
+      }
+    ],
+    "nearest_routes": [
+      {
+        "index": 7,
+        "count": 27,
+        "closed": false,
+        "polyline_distance_xz": 922.9514113903244
+      },
+      {
+        "index": 24,
+        "count": 2,
+        "closed": false,
+        "polyline_distance_xz": 2130.596857291654
+      },
+      {
+        "index": 20,
+        "count": 2,
+        "closed": false,
+        "polyline_distance_xz": 2607.501649082774
+      },
+      {
+        "index": 23,
+        "count": 2,
+        "closed": false,
+        "polyline_distance_xz": 2731.0103978501697
+      }
+    ],
+    "digpl": {
+      "semantics": "27 discrete wolf-player digging points; not enemy paths",
+      "nearest_points": [
+        {
+          "index": 8,
+          "distance_xz": 4219.300889957956,
+          "delta_y": -387.684217053521,
+          "distance_to_square501_xz": 3513.203950811851
+        },
+        {
+          "index": 9,
+          "distance_xz": 5500.909015790026,
+          "delta_y": 683.395861071479,
+          "distance_to_square501_xz": 4831.894245531456
+        },
+        {
+          "index": 10,
+          "distance_xz": 6038.418667167754,
+          "delta_y": 720.947130602729,
+          "distance_to_square501_xz": 5366.395624625527
+        }
+      ],
+      "look_radius_player_only": 500
+    },
+    "entries": [
+      {
+        "index": 0,
+        "distance_xz": 8288.600998778204,
+        "angle_z": 1
+      },
+      {
+        "index": 1,
+        "distance_xz": 12758.816914573265,
+        "angle_z": 99
+      },
+      {
+        "index": 2,
+        "distance_xz": 8683.317338436964,
+        "angle_z": 2
+      },
+      {
+        "index": 3,
+        "distance_xz": 11432.08205009044,
+        "angle_z": 10
+      },
+      {
+        "index": 4,
+        "distance_xz": 26491.861079075166,
+        "angle_z": 20
+      },
+      {
+        "index": 5,
+        "distance_xz": 11692.41206937217,
+        "angle_z": 3
+      },
+      {
+        "index": 6,
+        "distance_xz": 15134.689875249127,
+        "angle_z": 0
+      },
+      {
+        "index": 7,
+        "distance_xz": 12462.718491520503,
+        "angle_z": 21
+      },
+      {
+        "index": 8,
+        "distance_xz": 10769.93526564689,
+        "angle_z": 5
+      },
+      {
+        "index": 9,
+        "distance_xz": 9382.968610085674,
+        "angle_z": 88
+      },
+      {
+        "index": 10,
+        "distance_xz": 8959.772843466826,
+        "angle_z": 15
+      },
+      {
+        "index": 11,
+        "distance_xz": 939.4147114027968,
+        "angle_z": 4
+      },
+      {
+        "index": 12,
+        "distance_xz": 23657.478754359498,
+        "angle_z": 14
+      },
+      {
+        "index": 13,
+        "distance_xz": 8288.600998778204,
+        "angle_z": 6
+      },
+      {
+        "index": 14,
+        "distance_xz": 8728.939445066675,
+        "angle_z": 22
+      },
+      {
+        "index": 15,
+        "distance_xz": 23653.226687047067,
+        "angle_z": 16
+      },
+      {
+        "index": 16,
+        "distance_xz": 23653.226687047067,
+        "angle_z": 17
+      }
+    ],
+    "room_arc_sha256": "dc53106667811c4cde18b35edb5279357f00ebecaef2f9de546aea9a5a2b06af",
+    "no_geometry_redecode": true,
+    "human_terrain_visibility_collision": "NOT_TESTED"
+  },
+  "source_ledger": {
+    "DEVF/CP06_NATIVE_SPAWN_QA/CMakeLists.txt": "fd4e4759611e223158cd74e0b822f7ef112a92371f35227045ca9804a9cdd1c8",
+    "DEVF/CP06_NATIVE_SPAWN_QA/README.md": "b4fb6c6ec6c1a2695c21760a4421fb4790d36aa19db44d76402fe05f888a3424",
+    "DEVF/CP06_NATIVE_SPAWN_QA/ci/audit_native.py": "e0b565d662f1a8f0226f2016cda00ca27131c6c3d1609be70438549d7b92cee2",
+    "DEVF/CP06_NATIVE_SPAWN_QA/ci/north_context.py": "36a52511406eb38dc84ca421f6d1ba3bb518a789ab59c5ef1a2c389f4bd24f94",
+    "DEVF/CP06_NATIVE_SPAWN_QA/ci/run_windows.py": "8bd350a5d62417113ef8c06c81503d546bb990af9289820b5d3d7b20b4c23d98",
+    "DEVF/CP06_NATIVE_SPAWN_QA/manifests/dual.json": "7752d8d40dec61f47daafedc00a4bd3618d6781e93cd0bfe7744d7c70e2f1788",
+    "DEVF/CP06_NATIVE_SPAWN_QA/manifests/north.json": "d95da59b767e0b0662fd06917cd8e10bfb117b294091976e385af82bad1959e2",
+    "DEVF/CP06_NATIVE_SPAWN_QA/src/mod.cpp": "3f35058e55ddc94f613d1155a4c467c34c50e80beadddf6b4f6709c9e5d5b5f6",
+    "DEVF/CP06_NATIVE_SPAWN_QA/src/native_records.hpp": "72a131c587f5331f703b46908b16fe0e2bb0eb4b12711f48eb82393d499feb71",
+    "DEVF/CP06_NATIVE_SPAWN_QA/src/registration.hpp": "479a1f09dbfe4918c8d71bbb9b5392288f7a941123f460598999976642a387d9",
+    "DEVF/CP06_NATIVE_SPAWN_QA/tests/registration_lab.cpp": "2fcbfb7038c3624217033ab0740cfa8ece91956f578b661a4d7c85e09f7092c7",
+    "DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/audit.py": "f943eec8d6b32b569bb06106e221c4d23b17b809b49bd5aa7e6a9f9398be7682",
+    "DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/reviewed-imports.json": "93871a91c05cae1e6c5018185d8fbfa31af6f45cb24cd67f2816ded7380b743d",
+    "DEVF/CP01/analysis/analyze_location.py": "63ff22e189f6494a26f532ea26aee48cb87256d05efa0122de350cc2b3e78a52",
+    "DEVF/CP01/analysis/location_geometry.py": "234c64955d995c0ed270e5bc8982de68709e47aec6343f65f5b60fd5bde53090",
+    "DEVF/CP01/analysis/location_details.py": "ff3a7f0e9772b995148b3c1c850432b017045b07a9545f90fb58cf0e174582d6"
+  },
+  "offline_cases": 24,
+  "record_hex": {
+    "NORTH": "455f6f6300000000ffff0100c49c4000c5c594ce4771fe00010600000000ffff",
+    "SITE1": "455f6f6300000000ffff0100c49c4000c5c50011476d4e00010600000000ffff"
+  },
+  "north_spawn_float32": -6322.6005859375,
+  "packages": {
+    "A": {
+      "manifest": {
+        "id": "dev.devf.cp06_qa_north_native",
+        "version": "0.6.1",
+        "qa": "A",
+        "filename": "DEVF_CP06_QA_A_NORTH_windows-amd64_689f79c1c785bea31715d814f7d03818a7f0dd72.dusk",
+        "source_commit": "689f79c1c785bea31715d814f7d03818a7f0dd72",
+        "ci_commit": "08a5f4d952665bcc223b1b3feda37ac7ff23acdf",
+        "build_run": "38755215665",
+        "stage": "F_SP121",
+        "room": 3,
+        "layer": 6,
+        "native_records": 1,
+        "north_spawn_y": -6322.6005859375,
+        "health_color_AI": "NATIVE_UNMODIFIED",
+        "hooks": 0,
+        "JSON_required": false,
+        "status": "NORTH_NATIVE_QA_BUILD_READY_DOWNLOAD_PENDING",
+        "human_gate": "HUMAN_RUNTIME_NOT_TESTED",
+        "package_bytes": 8159,
+        "package_sha256": "d2b84ac8867181aa1c91edd62ea7acfd776d472c8282f39a466d70d00a11e1a3",
+        "dll_bytes": 15360,
+        "dll_sha256": "2cfcf2d9f2380f95c9579484f1d67bfbdadbddd628abc637d0efd57f565e6d04",
+        "manifest_sha256": "d95da59b767e0b0662fd06917cd8e10bfb117b294091976e385af82bad1959e2"
+      },
+      "audit": {
+        "status": "PACKAGE_VERIFIED",
+        "package_bytes": 8159,
+        "package_sha256": "d2b84ac8867181aa1c91edd62ea7acfd776d472c8282f39a466d70d00a11e1a3",
+        "dll_bytes": 15360,
+        "dll_sha256": "2cfcf2d9f2380f95c9579484f1d67bfbdadbddd628abc637d0efd57f565e6d04",
+        "manifest_sha256": "d95da59b767e0b0662fd06917cd8e10bfb117b294091976e385af82bad1959e2",
+        "members": [
+          {
+            "path": "mod.json",
+            "directory": false,
+            "bytes": 275,
+            "crc32": "74abb83e",
+            "sha256": "d95da59b767e0b0662fd06917cd8e10bfb117b294091976e385af82bad1959e2"
+          },
+          {
+            "path": "lib/",
+            "directory": true,
+            "bytes": 0,
+            "crc32": "00000000",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "lib/windows-amd64/",
+            "directory": true,
+            "bytes": 0,
+            "crc32": "00000000",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "lib/windows-amd64/mod.dll",
+            "directory": false,
+            "bytes": 15360,
+            "crc32": "76b210e0",
+            "sha256": "2cfcf2d9f2380f95c9579484f1d67bfbdadbddd628abc637d0efd57f565e6d04"
+          }
+        ],
+        "pe": {
+          "status": "STAGE_ONLY_PE_ABI_PASS",
+          "machine": "AMD64",
+          "imports": {
+            "VCRUNTIME140_1.dll": [
+              "__CxxFrameHandler4"
+            ],
+            "VCRUNTIME140.dll": [
+              "__C_specific_handler",
+              "__std_type_info_destroy_list",
+              "memcpy",
+              "memset"
+            ],
+            "api-ms-win-crt-stdio-l1-1-0.dll": [
+              "__stdio_common_vsprintf"
+            ],
+            "api-ms-win-crt-runtime-l1-1-0.dll": [
+              "_cexit",
+              "_configure_narrow_argv",
+              "_execute_onexit_table",
+              "_initialize_narrow_environment",
+              "_initialize_onexit_table",
+              "_initterm",
+              "_initterm_e",
+              "_seh_filter_dll"
+            ],
+            "KERNEL32.dll": [
+              "DisableThreadLibraryCalls",
+              "GetCurrentProcessId",
+              "GetCurrentThreadId",
+              "GetSystemTimeAsFileTime",
+              "InitializeSListHead",
+              "QueryPerformanceCounter"
+            ]
+          },
+          "metadata": [
+            {
+              "kind": "header",
+              "abi": 1
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.host",
+              "major": 2,
+              "minor": 2
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.log",
+              "major": 1,
+              "minor": 0
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.stage",
+              "major": 1,
+              "minor": 0
+            }
+          ],
+          "exports": [
+            "mod_ctx",
+            "mod_initialize",
+            "mod_meta",
+            "mod_shutdown",
+            "mod_update"
+          ],
+          "hooks": 0,
+          "game_imports": 0,
+          "tls_or_delay_imports": false,
+          "DLL_executed": false
+        }
+      },
+      "negatives": [
+        {
+          "case": "x86",
+          "rejected": true
+        },
+        {
+          "case": "foreign_stage_service",
+          "rejected": true
+        },
+        {
+          "case": "missing_export",
+          "rejected": true
+        },
+        {
+          "case": "wrong_stage_major",
+          "rejected": true
+        },
+        {
+          "case": "extra_original_asset",
+          "rejected": true
+        },
+        {
+          "case": "traversal",
+          "rejected": true
+        }
+      ],
+      "source_zip_bytes": 28700,
+      "source_zip_sha256": "310c9f2116de4d1142cafd785402dac13bc6666cf8c1579557ce2d7ab5863a2d"
+    },
+    "B": {
+      "manifest": {
+        "id": "dev.devf.cp06_qa_dual_native",
+        "version": "0.6.1",
+        "qa": "B",
+        "filename": "DEVF_CP06_QA_B_DUAL_windows-amd64_689f79c1c785bea31715d814f7d03818a7f0dd72.dusk",
+        "source_commit": "689f79c1c785bea31715d814f7d03818a7f0dd72",
+        "ci_commit": "08a5f4d952665bcc223b1b3feda37ac7ff23acdf",
+        "build_run": "38755215665",
+        "stage": "F_SP121",
+        "room": 3,
+        "layer": 6,
+        "native_records": 2,
+        "north_spawn_y": -6322.6005859375,
+        "health_color_AI": "NATIVE_UNMODIFIED",
+        "hooks": 0,
+        "JSON_required": false,
+        "status": "DUAL_NATIVE_QA_BUILT_DOWNLOAD_PENDING",
+        "human_gate": "HUMAN_TEST_BLOCKED_UNTIL_NORTH_PASS",
+        "package_bytes": 8171,
+        "package_sha256": "b0cabb4a5be4f766f207f58aa2e5db24a9a873a95726d0dc9ba0d7e11d05bed5",
+        "dll_bytes": 15360,
+        "dll_sha256": "73bba38ddbbf3c8c8e9a3b40a2044d518026a793a7ae346ce2504449eea62ddf",
+        "manifest_sha256": "7752d8d40dec61f47daafedc00a4bd3618d6781e93cd0bfe7744d7c70e2f1788"
+      },
+      "audit": {
+        "status": "PACKAGE_VERIFIED",
+        "package_bytes": 8171,
+        "package_sha256": "b0cabb4a5be4f766f207f58aa2e5db24a9a873a95726d0dc9ba0d7e11d05bed5",
+        "dll_bytes": 15360,
+        "dll_sha256": "73bba38ddbbf3c8c8e9a3b40a2044d518026a793a7ae346ce2504449eea62ddf",
+        "manifest_sha256": "7752d8d40dec61f47daafedc00a4bd3618d6781e93cd0bfe7744d7c70e2f1788",
+        "members": [
+          {
+            "path": "mod.json",
+            "directory": false,
+            "bytes": 270,
+            "crc32": "39ab8696",
+            "sha256": "7752d8d40dec61f47daafedc00a4bd3618d6781e93cd0bfe7744d7c70e2f1788"
+          },
+          {
+            "path": "lib/",
+            "directory": true,
+            "bytes": 0,
+            "crc32": "00000000",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "lib/windows-amd64/",
+            "directory": true,
+            "bytes": 0,
+            "crc32": "00000000",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "lib/windows-amd64/mod.dll",
+            "directory": false,
+            "bytes": 15360,
+            "crc32": "bafc0686",
+            "sha256": "73bba38ddbbf3c8c8e9a3b40a2044d518026a793a7ae346ce2504449eea62ddf"
+          }
+        ],
+        "pe": {
+          "status": "STAGE_ONLY_PE_ABI_PASS",
+          "machine": "AMD64",
+          "imports": {
+            "VCRUNTIME140_1.dll": [
+              "__CxxFrameHandler4"
+            ],
+            "VCRUNTIME140.dll": [
+              "__C_specific_handler",
+              "__std_type_info_destroy_list",
+              "memcpy",
+              "memset"
+            ],
+            "api-ms-win-crt-stdio-l1-1-0.dll": [
+              "__stdio_common_vsprintf"
+            ],
+            "api-ms-win-crt-runtime-l1-1-0.dll": [
+              "_cexit",
+              "_configure_narrow_argv",
+              "_execute_onexit_table",
+              "_initialize_narrow_environment",
+              "_initialize_onexit_table",
+              "_initterm",
+              "_initterm_e",
+              "_seh_filter_dll"
+            ],
+            "KERNEL32.dll": [
+              "DisableThreadLibraryCalls",
+              "GetCurrentProcessId",
+              "GetCurrentThreadId",
+              "GetSystemTimeAsFileTime",
+              "InitializeSListHead",
+              "QueryPerformanceCounter"
+            ]
+          },
+          "metadata": [
+            {
+              "kind": "header",
+              "abi": 1
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.host",
+              "major": 2,
+              "minor": 2
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.log",
+              "major": 1,
+              "minor": 0
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.stage",
+              "major": 1,
+              "minor": 0
+            }
+          ],
+          "exports": [
+            "mod_ctx",
+            "mod_initialize",
+            "mod_meta",
+            "mod_shutdown",
+            "mod_update"
+          ],
+          "hooks": 0,
+          "game_imports": 0,
+          "tls_or_delay_imports": false,
+          "DLL_executed": false
+        }
+      },
+      "negatives": [
+        {
+          "case": "x86",
+          "rejected": true
+        },
+        {
+          "case": "foreign_stage_service",
+          "rejected": true
+        },
+        {
+          "case": "missing_export",
+          "rejected": true
+        },
+        {
+          "case": "wrong_stage_major",
+          "rejected": true
+        },
+        {
+          "case": "extra_original_asset",
+          "rejected": true
+        },
+        {
+          "case": "traversal",
+          "rejected": true
+        }
+      ],
+      "source_zip_bytes": 28700,
+      "source_zip_sha256": "310c9f2116de4d1142cafd785402dac13bc6666cf8c1579557ce2d7ab5863a2d"
+    }
+  }
+}

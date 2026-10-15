@@ -1,0 +1,83 @@
+{
+  "status_A": "NORTH_NATIVE_QA_BUILD_READY",
+  "status_B": "DUAL_NATIVE_QA_BUILT_HUMAN_TEST_BLOCKED_UNTIL_NORTH_PASS",
+  "base": "9c3ce7cc4fefec1855b1e014630326005c6f4556",
+  "compiled_source": "689f79c1c785bea31715d814f7d03818a7f0dd72",
+  "build_ci": "08a5f4d952665bcc223b1b3feda37ac7ff23acdf",
+  "build_run": 38755215665,
+  "verification_ci": "35221fa0593522ef3c17d7d89ea31afd4ebe2642",
+  "verification_run": 38755609469,
+  "packages": {
+    "A": {
+      "artifact": {
+        "id": 11983910861,
+        "bytes": 35994,
+        "sha256": "9f7e003b8963ecd1c60f0215000b5cf72f6c1b30a03fa7cd3b45d42bbd474a25",
+        "expires_at": "2026-11-14T14:52:52Z"
+      },
+      "manifest": {
+        "id": "dev.devf.cp06_qa_north_native",
+        "version": "0.6.1",
+        "qa": "A",
+        "filename": "DEVF_CP06_QA_A_NORTH_windows-amd64_689f79c1c785bea31715d814f7d03818a7f0dd72.dusk",
+        "source_commit": "689f79c1c785bea31715d814f7d03818a7f0dd72",
+        "ci_commit": "08a5f4d952665bcc223b1b3feda37ac7ff23acdf",
+        "build_run": "38755215665",
+        "stage": "F_SP121",
+        "room": 3,
+        "layer": 6,
+        "native_records": 1,
+        "north_spawn_y": -6322.6005859375,
+        "health_color_AI": "NATIVE_UNMODIFIED",
+        "hooks": 0,
+        "JSON_required": false,
+        "status": "NORTH_NATIVE_QA_BUILD_READY_DOWNLOAD_PENDING",
+        "human_gate": "HUMAN_RUNTIME_NOT_TESTED",
+        "package_bytes": 8159,
+        "package_sha256": "d2b84ac8867181aa1c91edd62ea7acfd776d472c8282f39a466d70d00a11e1a3",
+        "dll_bytes": 15360,
+        "dll_sha256": "2cfcf2d9f2380f95c9579484f1d67bfbdadbddd628abc637d0efd57f565e6d04",
+        "manifest_sha256": "d95da59b767e0b0662fd06917cd8e10bfb117b294091976e385af82bad1959e2"
+      },
+      "all_SHA_CRC_verified": true
+    },
+    "B": {
+      "artifact": {
+        "id": 11983696053,
+        "bytes": 36011,
+        "sha256": "4a556c25894c090b36e78d70f9a6455d959fd03fc9fc7093979db83eaae8cf96",
+        "expires_at": "2026-11-14T14:52:53Z"
+      },
+      "manifest": {
+        "id": "dev.devf.cp06_qa_dual_native",
+        "version": "0.6.1",
+        "qa": "B",
+        "filename": "DEVF_CP06_QA_B_DUAL_windows-amd64_689f79c1c785bea31715d814f7d03818a7f0dd72.dusk",
+        "source_commit": "689f79c1c785bea31715d814f7d03818a7f0dd72",
+        "ci_commit": "08a5f4d952665bcc223b1b3feda37ac7ff23acdf",
+        "build_run": "38755215665",
+        "stage": "F_SP121",
+        "room": 3,
+        "layer": 6,
+        "native_records": 2,
+        "north_spawn_y": -6322.6005859375,
+        "health_color_AI": "NATIVE_UNMODIFIED",
+        "hooks": 0,
+        "JSON_required": false,
+        "status": "DUAL_NATIVE_QA_BUILT_DOWNLOAD_PENDING",
+        "human_gate": "HUMAN_TEST_BLOCKED_UNTIL_NORTH_PASS",
+        "package_bytes": 8171,
+        "package_sha256": "b0cabb4a5be4f766f207f58aa2e5db24a9a873a95726d0dc9ba0d7e11d05bed5",
+        "dll_bytes": 15360,
+        "dll_sha256": "73bba38ddbbf3c8c8e9a3b40a2044d518026a793a7ae346ce2504449eea62ddf",
+        "manifest_sha256": "7752d8d40dec61f47daafedc00a4bd3618d6781e93cd0bfe7744d7c70e2f1788"
+      },
+      "all_SHA_CRC_verified": true
+    }
+  },
+  "game_executed": false,
+  "host_modified": false,
+  "original_mod_modified": false,
+  "personalization": false,
+  "JSON_required": false
+}

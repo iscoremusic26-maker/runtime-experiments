@@ -1,0 +1,13 @@
+# QA Windows/DX12 — A primero; B después de A satisfactorio
+
+**No se requiere JSON. No instalar SOURCE_COMPILED.zip, DLL suelta ni dos paquetes DEVF.** Los cinco ensayos anteriores no se repiten. Estos paquetes son QA privados.
+
+1. Respaldar partidas y cerrar Dusklight completamente. Usar el EXE oficial 2.0.3/DX12 habitual. Guardar fuera de mods todos los .dusk DEVF anteriores (CP04/05/06 v0.6.0) y otros QA. Nunca hot reload ni dos DEVF simultáneos.
+2. Descargar **A** desde [BUILD_AND_PACKAGE](BUILD_AND_PACKAGE.md). Verificar el ZIP con `Get-FileHash -Algorithm SHA256`, extraer fuera del juego y comprobar el hash del .dusk. Copiar **sólo el .dusk A** a la carpeta mods habitual. No hace falta placements.json ni cambiar el anterior.
+3. Entrar F_SP121/sala 3/capa 6. Norte: X=-1250, Z=61950, Y inicial=-6322.6005859375. A añade una entrada E_oc/E_OC2 nativa y ninguna en sitio 1. El enemigo puede caminar/perseguir; no se inmoviliza ni colorea para identificarlo. Distinguir al adicional de los enemigos retail existentes.
+4. Observar aparición, asentamiento en suelo, visibilidad, colisiones y ausencia de bloqueos de zona/eventos, crash o anomalías. STAGE_EDIT_REGISTERED records=1 demuestra registro, no nacimiento. Aportar privadamente log de la sesión y descripción/captura de lo observado. Si no aparece o hay un problema grave, cerrar y retirar A: **NO PROBAR B**.
+5. **Sólo después de confirmar A satisfactorio:** cerrar totalmente, retirar A e instalar únicamente el .dusk B verificado. B añade dos registros: sitio 1 (-1250,-6304.00830078125,60750) y norte. Ambos son nativos, sin negro, HP150 ni guardia CP05. Observar si aparecen ambos adicionales; si no se ven simultáneamente, esa prueba sigue PENDING.
+6. Si el ensayo es estable, observar combate/muerte y salida/reentrada de este QA nuevo, buscando duplicados o fallos. El mod no correlaciona ActorId ni mide HP. Ante crash, bloqueo, duplicados o comportamiento anómalo, detener y conservar el log privado. No se promete regreso a home ni rendimiento determinado.
+7. Rollback: cerrar por completo, retirar el QA y arrancar en frío; comprobar ausencia de los adicionales en ambos sitios, distinguiéndolos de retail. Después puede restaurarse sólo CP06 v0.6.0 original con su JSON conservado. remove_actor_edit no elimina actores vivos: por eso se exige cierre completo. Informar paquete, escena y resultado de cada sesión; no subir logs personales a GitHub.
+
+Hasta recibir el reporte: HUMAN_RUNTIME_NOT_TESTED, SITE2_PENDING, SIMULTANEITY_PENDING y REENTRY/ROLLBACK_QA_PENDING. B no hereda PASS de A. Estos QA no demuestran personalización multiinstancia.
