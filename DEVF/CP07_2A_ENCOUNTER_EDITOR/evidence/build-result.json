@@ -1,0 +1,723 @@
+{
+  "status": "DEVF_CP072A_BUILD_PASS_PACKAGE_VERIFIED_DOWNLOAD_PENDING",
+  "source_commit": "e066a5e7505a266658783259b70cb320321747f2",
+  "ci_head": "2f02e07e7916ef0c947042dbbc9e4d79b12153f3",
+  "event_merge_sha": "ffdffecabd2be30525f57c415d863770908d7f16",
+  "run_id": "38794698410",
+  "started_utc": "2026-10-15T19:32:56.620847+00:00",
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "phases": [
+    {
+      "label": "compiler",
+      "exit": 0,
+      "seconds": 3.188
+    },
+    {
+      "label": "configure",
+      "exit": 0,
+      "seconds": 8.359
+    },
+    {
+      "label": "build",
+      "exit": 0,
+      "seconds": 29.953
+    },
+    {
+      "label": "core109",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "editor55",
+      "exit": 0,
+      "seconds": 0.063
+    },
+    {
+      "label": "api-owner-lifecycle",
+      "exit": 0,
+      "seconds": 0
+    },
+    {
+      "label": "encounter-design",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "provider-headers",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "provider-imports",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "provider-exports",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "provider-official-package",
+      "exit": 0,
+      "seconds": 0.296
+    },
+    {
+      "label": "validator-valid",
+      "exit": 0,
+      "seconds": 0.016
+    }
+  ],
+  "game_executed": false,
+  "mod_DLL_executed": false,
+  "host_built": false,
+  "source_ledger": {
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/CMakeLists.txt": "7eebfa8ba84a78ed5ec39c1003515c5a76a5804c553c6e21dbdd10113f35f4c9",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/HUMAN_TEST.md": "6f4b17bd216d78728da6d2d5968f72b56d0133feb5d02533e48b28b8c91926e8",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/README.md": "ccc45d79b8d3f1fe8a0f614d8f5efbaa8764b45aac918a8007967ebcbf340c8a",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/RECOVERY.md": "348fb458b2714d0f37f0f56924cb9cd13c500dcb199ddf125c4930b47d1e7177",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/SOURCE_AND_CAPTURE_GATE.md": "33c25223e8c96b978b737534c6f35a26b1c97e894ee04fd9670957b7d1b4572a",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/TEST_RESULTS.md": "90a2647dee70699e1c6bdc52ed859441ae122105f10b69b467204dffdac28e3c",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/ci/audit_api.py": "6c4a3951164c9866c387183afc20dc56c3cf5503c73acd3401020686a862a18b",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/ci/native-read-imports.json": "d3a1e36f22a29539b1d3a94a18e5678729c790736cc94a7f4b2ba3e1153056af",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/ci/reviewed-imports-delta.json": "42bb1ed480974e05cec7b130163c04f35a9a40256fbee1738f547cd32149386d",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/ci/run_windows.py": "84d41c714c0e6575b7b371253dd05532e52a721fc84ebb83f5aafb12d67ce65f",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/ci/verify_download.py": "4ae5fd021414b3cef9881acf48460bf02cbb210ff85a8c92687f5b743df70c1c",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/consumer/mod.json": "fe82c707487206af1b4cfcff7180126a6b6fb234f123b9db28e8826142ce08d7",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/examples/both-enabled.json": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/examples/disabled.json": "6b7541e7d27e1f2ea01a407b07c6aae08702d3069cd7cc4d8bb6eaf086e1633c",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/examples/encounters.export.empty.json": "e509b571e2d751aa38f75cb81e31b14626035d27da24a5af8784484a83285789",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/examples/field-only.json": "2283f1de6a9c8c31297ed0ab40c59df57a2f7666f41b982c8d066964b75dd72e",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/examples/north-only.json": "ccb55cb8bba2d0d76b9e2d1f83d1397d1e0efce8ef498d8518af2c32424f7799",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/examples/placements.json": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/mod.json": "b9b1154a6456c071fbe95f441b19c175f62065efdc68ad97e653015daff0e1e3",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/shared/devf_native_api.h": "2a0756e250b5b3e68458a1cc24a510bc04d18328272fd78ba0f9efd44788f0a6",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/tests/api_c_abi.c": "b952c192c2283a31949b677c8333f9fa9df5ce984ba51c2a9aea5a2f6ec2df47",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/tests/api_lab.cpp": "fdcf07dbaf27cc3edc9ae81a83a7ce46f343ef668a1b5188be4c0d49cbb25044",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/tests/encounter_lab.cpp": "70df29a3859f29a561501511d38c14abe4af5af5e9c17a2f740f1410d22c0fa3",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/tests/encounter_validate.cpp": "f8a48025fd3f521725222b50b360ff55815a79b40afb691a9c8fe0791134c2fe",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/consumer/src/mod.cpp": "9f3ecf37b387711ed4120a41e997eac058bc1fffec7fe13a19843f609ff42bdd",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/consumer/src/probe.hpp": "efecb7d32d3b35de3b5b646f6b09150ac1dfec5ec3a0bcadef11a7fa97fbff9c",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/broker.hpp": "cc1e18db7d3733a00209f3a5351ec31f11f476759bc2055e678abed9b037b4ba",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/config_core.hpp": "9d42cb17c885f231ea9a73c0ea8cadaa66e4d0cebb92270868d55b229300824d",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/config_io.hpp": "e46bf84dd85e30d9270df4b90bc9d096949dd6f4363efd890af6294183f53bd0",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/editor_ui.hpp": "cb000dd7a63b35a534dcd3ae1dde445c378269ab16b59bc75603c1b1b92e52bc",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/encounter_core.hpp": "1d4d40ebf397cd0b5a6d43f119da5be17e7fd0d3fe08358e332dabddc5f40bf1",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/encounter_store.hpp": "6c464a85fa14e4eb3a0adf046988e39e3a482e67d20defc324fe485cbbe97bb4",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/encounter_ui.hpp": "975f7f1beac06ed20e21bd1b02863056f47346ae6c5be84c8309ba175bcfe9aa",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/mod.cpp": "8e96c75d31336da10e6e5e639794cd6f4d9b687307e5817c38eb79fab01cda9f",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/native_capture.cpp": "4092524dbba5ee656d3eb6fcdb2af92a0f9cc5414d95a578941f65dce9e4c5d8",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/native_records.hpp": "72a131c587f5331f703b46908b16fe0e2bb0eb4b12711f48eb82393d499feb71",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/persistence.hpp": "6b6606081b998583ff954e9f1216fcedf998926dcdf5cd168627a089216e6c4c",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/registration.hpp": "97309c344c18f403e3282d9e1e52389392b2557cf177518c57fa150ecf67d004",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/src/runtime.hpp": "f451c7a289b8f6726b2a8d6a16e094655aa98be57922b0e381e1f83a84814022",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/tests/config_lab.cpp": "3609f1c2dbbedc5242c3601d4b32234dbf6fc9164aaff9769cbeb52f7f7247b1",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/tests/editor_lab.cpp": "ebde02780dcc59f703641ec8799fc8d68e5994bd7b959bea88d4435dd8bec654",
+    "DEVF/CP07_2A_ENCOUNTER_EDITOR/provider/tests/registration_cases.hpp": "629c80e177bab5e3283b2ff71cbe516a69e7a70680a19a54426f35b0706dc45c",
+    "DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/audit.py": "f943eec8d6b32b569bb06106e221c4d23b17b809b49bd5aa7e6a9f9398be7682",
+    "DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/reviewed-imports.json": "93871a91c05cae1e6c5018185d8fbfa31af6f45cb24cd67f2816ded7380b743d"
+  },
+  "dependencies": {
+    "sdk_root": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora_headers": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "import_library_bytes": 9400986,
+    "import_library_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "member_crc": "70c35731",
+    "original_assets_uploaded": false,
+    "library_modified_or_generated": false
+  },
+  "core_cases": 109,
+  "core_case_names": [
+    "A_one_north",
+    "B_two_distinct",
+    "record_native_contract",
+    "A_no_reinjection",
+    "B_no_reinjection",
+    "fail_first",
+    "fail_second_rollback_first",
+    "throw_first",
+    "throw_second_rollback",
+    "zero_first",
+    "zero_second",
+    "duplicate_handle",
+    "error_with_returned_handle",
+    "throw_after_handle_rollback",
+    "remove_fail_retry_own_only",
+    "remove_exception",
+    "cleanup_idempotent",
+    "cleanup_without_init",
+    "null_context",
+    "null_service",
+    "short_service",
+    "wrong_version",
+    "null_add",
+    "null_remove",
+    "json_both_two_exact_records",
+    "json_field_only",
+    "json_north_only",
+    "json_empty_placements",
+    "json_both_disabled",
+    "json_field_disabled_north_active",
+    "json_north_disabled_field_active",
+    "json_reference_placements_matches_both",
+    "json_deterministic_order",
+    "json_float32_equivalent",
+    "json_invalid_missing",
+    "json_invalid_empty",
+    "json_invalid_oversize",
+    "json_invalid_bom",
+    "json_invalid_syntax",
+    "json_invalid_trailing",
+    "json_invalid_duplicate_key",
+    "json_invalid_unknown_root_key",
+    "json_invalid_unknown_placement_key",
+    "json_invalid_unknown_variant_key",
+    "json_invalid_version",
+    "json_invalid_unknown_reference",
+    "json_invalid_black_guard",
+    "json_invalid_hp",
+    "json_invalid_tint",
+    "json_invalid_ai",
+    "json_invalid_profile",
+    "json_invalid_enemy",
+    "json_invalid_x",
+    "json_invalid_ground_y",
+    "json_invalid_z",
+    "json_invalid_nonfinite",
+    "json_invalid_nan",
+    "json_invalid_yaw",
+    "json_invalid_parameters",
+    "json_invalid_stage",
+    "json_invalid_room",
+    "json_invalid_layer",
+    "json_invalid_duplicate_id",
+    "json_invalid_duplicate_site",
+    "json_invalid_disabled_entry",
+    "json_invalid_three_entries",
+    "json_invalid_id_path",
+    "json_invalid_types",
+    "json_invalid_complexity",
+    "dir_error",
+    "dir_null",
+    "dir_throw",
+    "join_error",
+    "join_null",
+    "join_throw",
+    "open_error",
+    "open_zero",
+    "open_throw",
+    "open_handle_error",
+    "open_handle_throw",
+    "size_error",
+    "size_throw",
+    "zero_size",
+    "oversize",
+    "read_error",
+    "read_throw",
+    "short",
+    "growth",
+    "tail_error",
+    "close_error",
+    "close_throw",
+    "null_host",
+    "host_wrong_version",
+    "host_short_header",
+    "host_wrong_major",
+    "host_old_minor",
+    "file_wrong_major",
+    "file_short_header",
+    "stage_wrong_major",
+    "file_missing_read",
+    "file_missing_close",
+    "host_missing_data_dir",
+    "stage_missing_add",
+    "stage_missing_remove",
+    "runtime_stage_fail_second",
+    "runtime_stage_exception_second",
+    "runtime_no_frame_registration_or_io",
+    "restart_config_changes_2_1_1_0",
+    "no_partial_config_on_late_error"
+  ],
+  "editor_cases": 55,
+  "editor_case_names": [
+    "ui_two_controls_saved_vs_draft",
+    "ui_save_backup_and_restart_field",
+    "ui_reenable_north_save_both",
+    "ui_discard_no_file_write",
+    "ui_close_reopen_retains_draft_no_io",
+    "ui_polled_callbacks_no_io_or_spawn",
+    "ui_absent_core_still_two",
+    "ui_wrong_version_optional",
+    "ui_missing_window_api",
+    "ui_menu_registration_failure",
+    "ui_zero_menu_handle",
+    "ui_window_push_failure",
+    "ui_window_zero_handle_cleans_partial",
+    "ui_partial_build_disables_controls",
+    "ui_text_build_failure",
+    "ui_duplicate_open_prevented",
+    "ui_shutdown_stale_callbacks_and_handles",
+    "ui_cleanup_failure_detach_fallback",
+    "missing_stays_zero_until_explicit_save",
+    "missing_explicit_disabled_creation",
+    "invalid_json_never_overwritten",
+    "empty_corrupt_file_read_only",
+    "permission_error_read_only",
+    "directory_list_failure_not_missing",
+    "directory_missing_end_rejected",
+    "write_api_unavailable_preserves_file",
+    "backup_fault_create",
+    "backup_fault_write_open",
+    "backup_fault_write",
+    "backup_fault_flush",
+    "backup_fault_write_close",
+    "backup_fault_read_open",
+    "backup_fault_read",
+    "backup_fault_read_corrupt",
+    "backup_fault_read_close",
+    "backup_fault_write_throw",
+    "backup_fault_open_throw",
+    "backup_fault_close_throw",
+    "config_fault_restore_write_open",
+    "config_fault_restore_write",
+    "config_fault_restore_flush",
+    "config_fault_restore_write_close",
+    "config_fault_restore_write_throw",
+    "config_readback_corrupt_restores",
+    "config_restore_failure_keeps_backup_and_locks",
+    "missing_failed_write_leaves_disabled",
+    "external_change_before_save_rejected",
+    "external_change_after_backup_rejected",
+    "backup_existing_never_overwritten",
+    "backup_capacity_fail_before_original_write",
+    "preserve_existing_custom_ids",
+    "missing_site_default_id_collision_avoided",
+    "four_modes_serialization_and_restart",
+    "ui_invalid_save_disabled",
+    "no_ui_write_on_shutdown"
+  ],
+  "api_cases": 50,
+  "api_case_names": [
+    "provider_alone_four_json_modes",
+    "required_consumer_real_request_none_field",
+    "provider_remains_independent_without_consumer",
+    "json_field_conflict_no_duplicate",
+    "json_north_plus_consumer_field_two",
+    "none_after_consumer_removed_cold_start",
+    "manifest_required_provider_absent_model",
+    "wrong_major_rejected_before_request",
+    "short_service_rejected",
+    "null_request_pointer_rejected",
+    "unpublished_deferred_service_model",
+    "two_consumers_distinct_sites_owned",
+    "same_owner_second_request_rejected",
+    "same_site_other_owner_rejected",
+    "duplicate_external_id_different_site_rejected",
+    "duplicate_json_id_rejected",
+    "bootstrap_closed_before_consumer_update",
+    "invalid_json_disarms_api_not_only_core",
+    "invalid_request_profile",
+    "invalid_request_scene",
+    "invalid_request_room",
+    "invalid_request_layer",
+    "invalid_request_x",
+    "invalid_request_y",
+    "invalid_request_z",
+    "invalid_request_yaw",
+    "invalid_request_parameters",
+    "invalid_request_reserved",
+    "invalid_request_id",
+    "invalid_request_unterminated",
+    "invalid_request_short",
+    "caller_context_null_self_unknown",
+    "output_missing_or_short_no_add",
+    "stage_failure_rollback_only_new_owner",
+    "stage_exception_with_handle_rollback",
+    "stage_zero_handle_no_receipt",
+    "stage_duplicate_core_handle_quarantined",
+    "detach_after_consumer_initialization_failed",
+    "detach_only_correct_owner",
+    "detach_remove_failure_drops_pointer_quarantines",
+    "detach_during_add_cancels_receipt",
+    "nested_request_rejected_no_second_add",
+    "watch_failure_no_publication",
+    "watch_zero_no_publication",
+    "publish_failure_cleanup_watch_and_core",
+    "consumer_no_reinjection",
+    "provider_unavailable_consumer_shutdown_no_stale_call",
+    "stale_ticket_rejected_after_owner_detach",
+    "provider_shutdown_without_consumer_shutdown",
+    "external_placement_not_serialized_in_editor_json"
+  ],
+  "encounter_cases": 62,
+  "encounter_case_names": [
+    "collection-empty",
+    "multi-stage-roundtrip",
+    "utf8-escapes",
+    "utf8-reject",
+    "utf8-reject",
+    "utf8-reject",
+    "utf8-reject",
+    "unicode-escape-input",
+    "duplicate-name",
+    "duplicate-id",
+    "unknown-document-no-placements-schema",
+    "unknown-key",
+    "duplicate-key",
+    "BOM",
+    "oversize",
+    "quantity-limits",
+    "max-16-collection",
+    "nonfinite-range",
+    "nonfinite-range",
+    "nonfinite-range",
+    "stage-traversal",
+    "room-layer-yaw",
+    "no-fake-fixed-capture",
+    "capture-negative-gate",
+    "capture-negative-gate",
+    "capture-negative-gate",
+    "capture-negative-gate",
+    "capture-negative-gate",
+    "capture-negative-gate",
+    "capture-fresh",
+    "model-add-edit-select-discard-delete",
+    "save-restart-export-multiple",
+    "work-invalid-read-only",
+    "export-invalid-not-overwritten",
+    "external-conflict",
+    "backup-failure-no-overwrite",
+    "backup-failure-no-overwrite",
+    "backup-failure-no-overwrite",
+    "backup-failure-no-overwrite",
+    "backup-failure-no-overwrite",
+    "backup-failure-no-overwrite",
+    "backup-failure-no-overwrite",
+    "target-failure-restores-backup",
+    "target-failure-restores-backup",
+    "target-failure-restores-backup",
+    "target-failure-restores-backup",
+    "target-failure-restores-backup",
+    "persistent-failure-keeps-backup",
+    "exclusive-backup-slots",
+    "missing-io-service",
+    "editor-ui-capture-is-deferred",
+    "ui-null-native",
+    "ui-close-cancels-capture",
+    "ui-edit-save-export-select-delete",
+    "ui-reopen-keeps-draft",
+    "ui-service-absent-core-independent",
+    "no-io-update-without-click",
+    "ui-new-draft-cancels-pending",
+    "ui-metadata-edit-cancels-pending",
+    "draft-capture-copy-preserves-other-entries",
+    "export-external-conflict-preserves-file",
+    "independent-work-export-backups"
+  ],
+  "C_ABI_compile": "PASS MSVC C11 and C++20",
+  "loader_execution": "SOURCE_CONTRACT_AND_FAKE_ONLY_NOT_REAL_HOST",
+  "record_hex": {
+    "NORTH": "455f6f6300000000ffff0100c49c4000c5c594ce4771fe00010600000000ffff",
+    "SITE1": "455f6f6300000000ffff0100c49c4000c5c50011476d4e00010600000000ffff"
+  },
+  "packages": {
+    "provider": {
+      "manifest": {
+        "id": "dev.devf.cp06_native_config_dual",
+        "version": "0.7.2",
+        "role": "provider",
+        "filename": "DEVF_CP07_2A_ENCOUNTER_EDITOR_windows-amd64_e066a5e7505a266658783259b70cb320321747f2.dusk",
+        "source_commit": "e066a5e7505a266658783259b70cb320321747f2",
+        "ci_commit": "2f02e07e7916ef0c947042dbbc9e4d79b12153f3",
+        "build_run": "38794698410",
+        "api": "dev.devf.native_placement@1.0",
+        "scope": "NATIVE_API_AND_DESIGN_EXPORT_NO_NEW_RUNTIME",
+        "status": "API_BUILD_PASS_DOWNLOAD_PENDING",
+        "human": "HUMAN_PENDING",
+        "package_bytes": 127380,
+        "package_sha256": "9e63d0e66f6e0cc6f4695ec665eca7bbddfca3d428ee44294c2fa246cc4c60ce",
+        "dll_bytes": 288768,
+        "dll_sha256": "00ff69ceefea75fea33f9c9bc840c27703a50851d0a435a6d63ffb632773d808",
+        "manifest_sha256": "b9b1154a6456c071fbe95f441b19c175f62065efdc68ad97e653015daff0e1e3"
+      },
+      "audit": {
+        "status": "PACKAGE_VERIFIED",
+        "package_bytes": 127380,
+        "package_sha256": "9e63d0e66f6e0cc6f4695ec665eca7bbddfca3d428ee44294c2fa246cc4c60ce",
+        "dll_bytes": 288768,
+        "dll_sha256": "00ff69ceefea75fea33f9c9bc840c27703a50851d0a435a6d63ffb632773d808",
+        "manifest_sha256": "b9b1154a6456c071fbe95f441b19c175f62065efdc68ad97e653015daff0e1e3",
+        "members": [
+          {
+            "path": "mod.json",
+            "directory": false,
+            "bytes": 263,
+            "crc32": "e5939928",
+            "sha256": "b9b1154a6456c071fbe95f441b19c175f62065efdc68ad97e653015daff0e1e3"
+          },
+          {
+            "path": "lib/",
+            "directory": true,
+            "bytes": 0,
+            "crc32": "00000000",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "lib/windows-amd64/",
+            "directory": true,
+            "bytes": 0,
+            "crc32": "00000000",
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+          },
+          {
+            "path": "lib/windows-amd64/mod.dll",
+            "directory": false,
+            "bytes": 288768,
+            "crc32": "cbb7bec1",
+            "sha256": "00ff69ceefea75fea33f9c9bc840c27703a50851d0a435a6d63ffb632773d808"
+          }
+        ],
+        "pe": {
+          "status": "DEVF_NATIVE_API_PE_ABI_PASS",
+          "role": "provider",
+          "machine": "AMD64",
+          "imports": {
+            "dusklight.exe": [
+              "?dComIfGp_event_runCheck@@YAHXZ",
+              "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
+              "?dComIfGp_getStartStageName@@YAPEBDXZ",
+              "?dComIfGp_isEnableNextStage@@YAHXZ",
+              "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+              "?fopScnM_SearchByID@@YAPEAVscene_class@@I@Z",
+              "?fpcLy_IsDeletingMesg@@YAHPEAUlayer_class@@@Z",
+              "?fpcLy_RootLayer@@YAPEAUlayer_class@@XZ",
+              "?fpcM_IsCreating@@YAHI@Z",
+              "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+              "?mStatus@dStage_roomControl_c@@2PAVdStage_roomStatus_c@@A",
+              "?mStayNo@dStage_roomControl_c@@2CA"
+            ],
+            "MSVCP140.dll": [
+              "?_Xlength_error@std@@YAXPEBD@Z",
+              "?_Xout_of_range@std@@YAXPEBD@Z"
+            ],
+            "VCRUNTIME140.dll": [
+              "_CxxThrowException",
+              "__C_specific_handler",
+              "__current_exception",
+              "__current_exception_context",
+              "__std_exception_copy",
+              "__std_exception_destroy",
+              "__std_terminate",
+              "__std_type_info_destroy_list",
+              "memcmp",
+              "memcpy",
+              "memmove",
+              "memset"
+            ],
+            "VCRUNTIME140_1.dll": [
+              "__CxxFrameHandler4"
+            ],
+            "api-ms-win-crt-stdio-l1-1-0.dll": [
+              "__stdio_common_vsprintf"
+            ],
+            "api-ms-win-crt-math-l1-1-0.dll": [
+              "floor"
+            ],
+            "api-ms-win-crt-string-l1-1-0.dll": [
+              "strcmp",
+              "strlen",
+              "strncmp"
+            ],
+            "api-ms-win-crt-runtime-l1-1-0.dll": [
+              "_cexit",
+              "_configure_narrow_argv",
+              "_crt_atexit",
+              "_execute_onexit_table",
+              "_initialize_narrow_environment",
+              "_initialize_onexit_table",
+              "_initterm",
+              "_initterm_e",
+              "_register_onexit_function",
+              "_seh_filter_dll",
+              "terminate"
+            ],
+            "api-ms-win-crt-heap-l1-1-0.dll": [
+              "_callnewh",
+              "free",
+              "malloc"
+            ],
+            "KERNEL32.dll": [
+              "DisableThreadLibraryCalls",
+              "GetCurrentProcessId",
+              "GetCurrentThreadId",
+              "GetSystemTimeAsFileTime",
+              "InitializeSListHead",
+              "QueryPerformanceCounter"
+            ]
+          },
+          "metadata": [
+            {
+              "kind": "header",
+              "abi": 1
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.host",
+              "major": 2,
+              "minor": 2,
+              "optional": false
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.file",
+              "major": 1,
+              "minor": 0,
+              "optional": false
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.log",
+              "major": 1,
+              "minor": 0,
+              "optional": false
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.stage",
+              "major": 1,
+              "minor": 0,
+              "optional": false
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.ui",
+              "major": 2,
+              "minor": 3,
+              "optional": true
+            },
+            {
+              "kind": "export",
+              "id": "dev.devf.native_placement",
+              "major": 1,
+              "minor": 0,
+              "deferred": true
+            },
+            {
+              "kind": "import",
+              "id": "dev.twilitrealm.dusklight.game",
+              "major": 2,
+              "minor": 0,
+              "optional": false
+            }
+          ],
+          "exports": [
+            "mod_ctx",
+            "mod_initialize",
+            "mod_meta",
+            "mod_shutdown",
+            "mod_update"
+          ],
+          "hooks": 0,
+          "game_imports": 12,
+          "tls_or_delay_imports": false,
+          "DLL_executed": false
+        }
+      },
+      "negatives": [
+        {
+          "case": "x86",
+          "rejected": true
+        },
+        {
+          "case": "missing_export",
+          "rejected": true
+        },
+        {
+          "case": "wrong_host_major",
+          "rejected": true
+        },
+        {
+          "case": "wrong_file_major",
+          "rejected": true
+        },
+        {
+          "case": "wrong_log_major",
+          "rejected": true
+        },
+        {
+          "case": "wrong_stage_major",
+          "rejected": true
+        },
+        {
+          "case": "wrong_ui_major",
+          "rejected": true
+        },
+        {
+          "case": "wrong_game_major",
+          "rejected": true
+        },
+        {
+          "case": "wrong_api_major",
+          "rejected": true
+        },
+        {
+          "case": "api_deferred_or_required_flag",
+          "rejected": true
+        },
+        {
+          "case": "foreign_api_id",
+          "rejected": true
+        },
+        {
+          "case": "non_null_deferred_pointer",
+          "rejected": true
+        },
+        {
+          "case": "extra_asset",
+          "rejected": true
+        },
+        {
+          "case": "traversal",
+          "rejected": true
+        }
+      ],
+      "examples": {
+        "examples/both-enabled.json": {
+          "bytes": 813,
+          "sha256": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2"
+        },
+        "examples/disabled.json": {
+          "bytes": 236,
+          "sha256": "6b7541e7d27e1f2ea01a407b07c6aae08702d3069cd7cc4d8bb6eaf086e1633c"
+        },
+        "examples/encounters.export.empty.json": {
+          "bytes": 174,
+          "sha256": "e509b571e2d751aa38f75cb81e31b14626035d27da24a5af8784484a83285789"
+        },
+        "examples/field-only.json": {
+          "bytes": 526,
+          "sha256": "2283f1de6a9c8c31297ed0ab40c59df57a2f7666f41b982c8d066964b75dd72e"
+        },
+        "examples/north-only.json": {
+          "bytes": 525,
+          "sha256": "ccb55cb8bba2d0d76b9e2d1f83d1397d1e0efce8ef498d8518af2c32424f7799"
+        },
+        "examples/placements.json": {
+          "bytes": 813,
+          "sha256": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2"
+        },
+        "tools/encounter_validate.exe": {
+          "bytes": 67584,
+          "sha256": "86c41d26eceae523fb74d593f8956e26625f6dd4d300bb6c4b3078db3e63b2c1"
+        }
+      },
+      "source_zip_bytes": 82183,
+      "source_zip_sha256": "71bcbef65f403f005a32ff51604d8e7b682b411419555eec43cf935af00e1a2f"
+    }
+  },
+  "official_source_unchanged": true
+}

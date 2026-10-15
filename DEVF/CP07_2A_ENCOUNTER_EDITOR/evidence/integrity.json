@@ -1,0 +1,21 @@
+{
+  "main_base": "c72ba3909b618f555c07cbeabd95e2fd1f4d4efa",
+  "CI_base": "049e028b6f73dae0011966835bd6136322e81d3e",
+  "compiled_source": "e066a5e7505a266658783259b70cb320321747f2",
+  "results": [
+    {
+      "key": "main",
+      "baseline_unchanged": 1489,
+      "new": 43
+    },
+    {
+      "key": "ci",
+      "baseline_unchanged": 158,
+      "new": 46
+    }
+  ],
+  "compiled_mirror_files": 42,
+  "shared_API_and_old_client_unchanged": true,
+  "original_probe_rebuilt": false,
+  "game_executed": false
+}
