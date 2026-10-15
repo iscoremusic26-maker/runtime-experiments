@@ -31,7 +31,7 @@
     "QueryPerformanceCounter"
   ],
   "dusklight.exe": [
-    "?ChkTgHit@cCcD_Obj@@QEBAIXZ",
+    "?ChkTgHit@cCcD_ObjHitInf@@QEBAIXZ",
     "?dComIfGp_event_runCheck@@YAHXZ",
     "?dComIfGp_getPlayer@@YAPEAVfopAc_ac_c@@H@Z",
     "?dComIfGp_getStartStageName@@YAPEBDXZ",
