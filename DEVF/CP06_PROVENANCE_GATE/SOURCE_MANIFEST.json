@@ -1,0 +1,192 @@
+{
+  "status": "NO_GO_MULTIINSTANCE_REGISTER_EDIT_OPAQUE_METHOD",
+  "gates": {
+    "P0": "PASS",
+    "P1": "PASS_STATIC_BINARY_OPAQUE_ENTRY",
+    "P2": "NO_GO",
+    "P3": "NOT_RUN",
+    "SITE2": "PENDING_UNCHANGED",
+    "P5": "NOT_RUN"
+  },
+  "base": "d9a776567c9cb999118d6ef29dd34c99f4664085",
+  "branch": "feature/devf-cp06-register-edit-provenance-gate",
+  "initial_checkpoint": "9eee5b975d8d43df79693e98337b826b194a9ee9",
+  "source_evidence_checkpoint": "503521e41111c9556daba703d3bb8cc18dc44b3e",
+  "official_source": {
+    "repo": "TwilitRealm/dusklight",
+    "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "files": [
+      {
+        "path": "src/dusk/mods/svc/stage.cpp",
+        "git_blob_sha1": "4dfd2650248effd9c7b907c02f10d6896cc79eb4"
+      },
+      {
+        "path": "src/dusk/mods/manifest.cpp",
+        "git_blob_sha1": "e60039a37f7c31df499709fa93bfbd42e3d23fdd"
+      },
+      {
+        "path": "src/dusk/mods/manifest.hpp",
+        "git_blob_sha1": "586759a8b147d45eb493bdb951c95caab4eeea71"
+      },
+      {
+        "path": "src/dusk/mods/svc/hook.cpp",
+        "git_blob_sha1": "0cc983c02d076b5e0e0e1189afbed8f3b74b884a"
+      },
+      {
+        "path": "sdk/include/mods/api.h",
+        "git_blob_sha1": "3015130ae3ceb41468723741902c257fc7c7fc8f"
+      },
+      {
+        "path": "sdk/include/mods/svc/stage.h",
+        "git_blob_sha1": "9dbd94cff17f61716a5cf18e3ede9918cfe898c7",
+        "provenance": "reused exact checkpoint source audit, not repeated this task"
+      },
+      {
+        "path": "src/d/d_stage.cpp",
+        "git_blob_sha1": "14167723d9284a108fac700e8b227acbb5c49372",
+        "provenance": "reused exact checkpoint source audit, not repeated this task"
+      },
+      {
+        "path": "include/f_op/f_op_actor_mng.h",
+        "git_blob_sha1": "29dfac13894b1ebc34560d295ac56382927ac93d",
+        "provenance": "reused exact checkpoint source audit, not repeated this task"
+      },
+      {
+        "path": "include/f_pc/f_pc_manager.h",
+        "git_blob_sha1": "d8d9cbe1c9b3af04470de857efacea057800434b",
+        "provenance": "reused exact checkpoint source audit, not repeated this task"
+      },
+      {
+        "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+        "git_blob_sha1": "a262a1bac6e2cd813023500fe6a41ea5b7658873",
+        "provenance": "reused exact checkpoint source audit, not repeated this task"
+      },
+      {
+        "path": "src/f_pc/f_pc_base.cpp",
+        "git_blob_sha1": "f876774214264eba4987afd2f24aa8d207c39955",
+        "provenance": "reused exact checkpoint source audit, not repeated this task"
+      },
+      {
+        "path": "sdk/include/mods/svc/hook.h",
+        "git_blob_sha1": "30b199b3864abe285c0135a589ff759590a9cbe6",
+        "provenance": "reused exact checkpoint source audit, not repeated this task"
+      },
+      {
+        "path": "sdk/include/mods/svc/hook.hpp",
+        "git_blob_sha1": "7ef02538b3990f0dddf5dd9c428ee2500c31045d",
+        "provenance": "reused exact checkpoint source audit, not repeated this task"
+      }
+    ]
+  },
+  "binary_inputs": {
+    "zip_bytes": 56037777,
+    "zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf",
+    "exe_bytes": 52309504,
+    "exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "exe_zip_crc32": "696d62e4",
+    "crc_checked": true,
+    "origin": "private existing inputs Git LFS; no new user upload"
+  },
+  "symbol_manifest": {
+    "version": 2,
+    "build_id": "3e441e7c7f09432d9cfb111c22596cb601000000",
+    "rsds_matches": true,
+    "entries": 499234,
+    "register_edit_rva": "0x4e49d0",
+    "function_bytes": 358,
+    "function_sha256": "04e7373d123870fd4e70b68209c762f7a486337bfc2fb3e7d13b0bb57af65be8"
+  },
+  "ci": {
+    "repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "branch": "ci/devf-cp06-register-edit-provenance-gate",
+    "head": "9b4930b3bab0a6437b17ce99e3f232f724823a5f",
+    "pr": 26,
+    "final_run": 38749877215,
+    "job": 116473164418,
+    "conclusion": "success",
+    "event_merge_sha": "6f6a462263e5562a13f2bc851cdf3dedb1b108ef",
+    "earlier_runs": [
+      {
+        "run": 38749242238,
+        "head": "586ef29ec87698fad12210486b72c31bffec187c",
+        "conclusion": "success",
+        "scope": "symbol-only"
+      },
+      {
+        "run": 38749796088,
+        "head": "16984c96e7d6cb87a17c99729dfc586ee058640b",
+        "conclusion": "failure",
+        "error": "NO_FOCAL_INSTRUCTIONS",
+        "cause": "probe regex escapes; corrected, no host hook"
+      }
+    ]
+  },
+  "decompressor": {
+    "name": "zstandard",
+    "version": "0.25.0",
+    "wheel": "zstandard-0.25.0-cp312-cp312-win_amd64.whl",
+    "wheel_sha256": "ffef5a74088f1e09947aecf91011136665152e0b4b359c42be3373897fb39b01",
+    "hash_source": "PyPI release JSON via TLS"
+  },
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "own_msvc_fixture": {
+    "status": "PASS",
+    "sdk_api_git_blob": "3015130ae3ceb41468723741902c257fc7c7fc8f",
+    "cpp_sha256": "7a2aa23263cbba9cc1e10e16033830e6449eca5d73adc6b4c50adc332651524e",
+    "output": "MSVC_X64_FORMAT_FIXTURE_PASS pointer=8 ModResult=4 Header=72 Entry=24",
+    "scope": "only pointer/ModResult/symbol-format layout; NOT private ActorEditRecord/LoadedMod layout, NOT host callback or actor bridge"
+  },
+  "game_executed": false,
+  "host_executed_or_built": false,
+  "mod_built": false,
+  "hooks_installed": false,
+  "private_layout_accessed": false,
+  "new_dusk": null,
+  "human_tag": {
+    "name": "DEVF_CP06_PARTIAL_SINGLE_SITE_HUMAN_RUNTIME_OBSERVED_2026-10-15",
+    "object": "5b9f28473654e26efe9514d0e2543b561511f3b3",
+    "target": "3ab8ff2fdd42128ab75157338699b21ae6d768bd"
+  },
+  "historical_annotated_refs": [
+    {
+      "name": "DEVF_CP06_PARTIAL_SINGLE_SITE_PRIVATE_TEST_READY",
+      "object": "feabf5382858b0969d7f272bde0c02f91d19ab31",
+      "target": "1a57ce17347d2f9c229af4c424d8b05a5ad59353"
+    },
+    {
+      "name": "DEVF_CP05_AI_BOUNDED_HUMAN_RUNTIME_OBSERVED_2026-10-15",
+      "object": "fc289b8c75b87ebc46ff34003f7545cfa8a60c7a",
+      "target": "3f6e2fc7a285dbce8cb520e0b4536ff56d542930"
+    },
+    {
+      "name": "DEVF_CP05_AI_BOUNDED_PRIVATE_TEST_READY",
+      "object": "83b2cea8815a8c01b29ad1f3df2a3731f7b667f4",
+      "target": "7a7c8bc34841e6f85020cca93ff591e9cb9e789d"
+    },
+    {
+      "name": "DEVF_CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED_2026-10-14",
+      "object": "f21d0d95e0fc7d5fcbca15ae17ba6b50cdee564e",
+      "target": "f7a6623f6d931bacef6f2c8e54f46f7476780ade"
+    },
+    {
+      "name": "DEVF_CP04_4_EOC2_BLACK_PRIVATE_TEST_READY",
+      "object": "21f9abb6b8dec176cc8b56d2652fb56a797ba45b",
+      "target": "0a2ec044cbae476c6ca8f3e5387737791875f47c"
+    },
+    {
+      "name": "DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14",
+      "object": "08ffbae5e5da73658df77b3763de2fe6851f7a45",
+      "target": "139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f"
+    }
+  ],
+  "baseline_dusk": {
+    "bytes": 41419,
+    "sha256": "b1e8f63797e93c0064e83fc39a984c1c806d046761f675b20ac55063b6a6dfa2",
+    "unchanged": true
+  },
+  "evidence_policy": "Only sanitized own-source/derived symbol and ABI metadata. No game assets, raw logs, original executable, SDK library or DLL artifacts. Final tree/blob/mode audit in PR40."
+}
