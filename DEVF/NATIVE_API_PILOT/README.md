@@ -25,4 +25,4 @@ Conservar copia de su JSON y usar examples/disabled.json como placements.json pa
 El editor sólo muestra/guarda placements del JSON; nunca serializa entradas externas. Si se activa FIELD por editor para próximo inicio mientras existe probeFIELD, al siguiente inicio gana JSON y se rechaza el probe, sin doble alta.
 data_dir del mismo ID permanece normal %APPDATA%/TwilitRealm/Dusklight/mod_data/dev.devf.cp06_native_config_dual/; seguir carpeta de datos activa si personalizada/portable/--user-dir.
 
-BUILD/PACKAGE/DOWNLOAD PENDING hasta CI ejecutada. Nuevo par HUMAN_PENDING. Cierre humano0.7.0 está en checkpoint documental separado, sin recompilar paquete histórico. No Expansion, CP07.2, CP08 ni personalización.
+**DEVF_NATIVE_API_PAIR_QA_READY / HUMAN_PENDING.** MSVC, C11/C++20,214casos(109+55+50),22negativos PE/ZIP, paquete y descarga REAL de ambos módulos PASS. Fuente compilada ae4fa410e4543c032fccfe761b2a817ae17479b2. Véanse TEST_RESULTS.md y BUILD_AND_PACKAGE.md. Nuevo par sin prueba humana todavía. Cierre humano0.7.0 está en checkpoint documental separado, sin recompilar paquete histórico. No Expansion, CP07.2, CP08 ni personalización.
