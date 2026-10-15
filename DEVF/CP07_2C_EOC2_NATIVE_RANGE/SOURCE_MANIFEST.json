@@ -1,0 +1,19 @@
+{
+  "official_revision": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "official_actor_path": "src/d/actor/d_a_e_oc.cpp",
+  "official_actor_blob": "57828ccb7c987757929835da38623d8a6b04ebbd",
+  "base": "7c588d2a06d307b0288256fc2383186129430401",
+  "compiled_source": "02e9070497bfe0ec2fda83ea63fd2ca237fb6dfd",
+  "build_ci": "1c1a96cffbdf80199570423addec4c91ded46865",
+  "source_tree": "69e350ba0d9c454b06c60de13c90c44e7e39595b",
+  "new_tests": 8,
+  "baseline_tests": 346,
+  "consumer_modified": false,
+  "provider_version": "0.7.4",
+  "old_pitch": 262,
+  "new_encounter_pitch": 306,
+  "only_record_byte_changed": 25,
+  "new_game_hooks": 0,
+  "host_or_sdk_modified": false,
+  "game_executed": false
+}

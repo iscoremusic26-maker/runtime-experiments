@@ -7,3 +7,5 @@ SOURCE_VERIFIED: el código oficial interpreta el byte bajo como rango finito mu
 HUMAN_RUNTIME_PENDING: determinar si aumenta el movimiento útil y evita la retirada prematura. executeWalk conserva regreso/patrullaje hacia home.pos. 5000 es un parámetro nativo, no persecución visual certificada.
 
 [Fuente y alcance](SOURCE_AND_DIFF.md) · [QA](HUMAN_TEST.md) · [Recuperación](RECOVERY.md) · [Resultados](TEST_RESULTS.md).
+
+Estado posterior al build: **PRIVATE_TEST_READY**, 354 casos y18 negativos, paquete/descarga verificados. [Descarga y hashes](BUILD_AND_PACKAGE.md), [evidencia](evidence/independent-download.json). Fuente compilada 02e9070497bfe0ec2fda83ea63fd2ca237fb6dfd; el checkpoint posterior sólo agrega documentación/evidencia. No es un release estable ni una confirmación del fix en gameplay.

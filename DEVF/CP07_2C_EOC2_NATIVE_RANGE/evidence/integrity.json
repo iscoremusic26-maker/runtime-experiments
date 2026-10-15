@@ -1,0 +1,59 @@
+{
+  "baseline": "7c588d2a06d307b0288256fc2383186129430401",
+  "source": "02e9070497bfe0ec2fda83ea63fd2ca237fb6dfd",
+  "baseline_leaves": 1603,
+  "previous_leaves_unchanged": 1599,
+  "only_existing_changed": [
+    "DEVF/CP07_2B_BOKOBLIN_EXPANSION_PILOT/provider/src/encounter_broker.hpp",
+    "DEVF/CP07_2B_BOKOBLIN_EXPANSION_PILOT/provider/src/mod.cpp",
+    "DEVF/CP07_2B_BOKOBLIN_EXPANSION_PILOT/provider/mod.json",
+    "DEVF/CP07_2B_BOKOBLIN_EXPANSION_PILOT/tests/expansion_lab.cpp"
+  ],
+  "all_other_previous_paths_blob_mode_type_unchanged": true,
+  "tags": [
+    {
+      "name": "DEVF_CP06_PARTIAL_SINGLE_SITE_HUMAN_RUNTIME_OBSERVED_2026-10-15",
+      "object": "5b9f28473654e26efe9514d0e2543b561511f3b3",
+      "sha": "3ab8ff2fdd42128ab75157338699b21ae6d768bd",
+      "verified": true
+    },
+    {
+      "name": "DEVF_CP06_PARTIAL_SINGLE_SITE_PRIVATE_TEST_READY",
+      "object": "feabf5382858b0969d7f272bde0c02f91d19ab31",
+      "sha": "1a57ce17347d2f9c229af4c424d8b05a5ad59353",
+      "verified": true
+    },
+    {
+      "name": "DEVF_CP05_AI_BOUNDED_HUMAN_RUNTIME_OBSERVED_2026-10-15",
+      "object": "fc289b8c75b87ebc46ff34003f7545cfa8a60c7a",
+      "sha": "3f6e2fc7a285dbce8cb520e0b4536ff56d542930",
+      "verified": true
+    },
+    {
+      "name": "DEVF_CP05_AI_BOUNDED_PRIVATE_TEST_READY",
+      "object": "83b2cea8815a8c01b29ad1f3df2a3731f7b667f4",
+      "sha": "7a7c8bc34841e6f85020cca93ff591e9cb9e789d",
+      "verified": true
+    },
+    {
+      "name": "DEVF_CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED_2026-10-14",
+      "object": "f21d0d95e0fc7d5fcbca15ae17ba6b50cdee564e",
+      "sha": "f7a6623f6d931bacef6f2c8e54f46f7476780ade",
+      "verified": true
+    },
+    {
+      "name": "DEVF_CP04_4_EOC2_BLACK_PRIVATE_TEST_READY",
+      "object": "21f9abb6b8dec176cc8b56d2652fb56a797ba45b",
+      "sha": "0a2ec044cbae476c6ca8f3e5387737791875f47c",
+      "verified": true
+    },
+    {
+      "name": "DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14",
+      "object": "08ffbae5e5da73658df77b3763de2fe6851f7a45",
+      "sha": "139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f",
+      "verified": true
+    }
+  ],
+  "source_mirror_exact": true,
+  "source_readback": true
+}
