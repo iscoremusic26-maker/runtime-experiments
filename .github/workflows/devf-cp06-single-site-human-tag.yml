@@ -1,0 +1,67 @@
+name: DEVF CP06 human closure fixed annotated tag only
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths:
+      - '.github/workflows/devf-cp06-single-site-human-tag.yml'
+permissions:
+  contents: write
+concurrency:
+  group: devf-cp06-single-site-human-fixed-tag
+  cancel-in-progress: false
+jobs:
+  seal-fixed-human-closure:
+    if: github.event.repository.private == true && github.repository == 'iscoremusic26-maker/Mods-Duskligh' && github.head_ref == 'feature/devf-cp06-multiinstance-second-site-pilot' && github.base_ref == 'feature/devf-cp06-partial-human-runtime-closure' && github.event.pull_request.base.sha == '3ab8ff2fdd42128ab75157338699b21ae6d768bd' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: 3ab8ff2fdd42128ab75157338699b21ae6d768bd
+          fetch-depth: 0
+      - name: Validate fixed closure and seal one annotated tag; no build or scripts
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $target = '3ab8ff2fdd42128ab75157338699b21ae6d768bd'
+          $parent = '1a57ce17347d2f9c229af4c424d8b05a5ad59353'
+          $tagName = 'DEVF_CP06_PARTIAL_SINGLE_SITE_HUMAN_RUNTIME_OBSERVED_2026-10-15'
+          if ((git rev-parse HEAD) -cne $target -or (git rev-parse "$target^") -cne $parent) { throw 'Literal closure or parent mismatch' }
+          $rows = @(git diff --name-status $parent $target)
+          if ($LASTEXITCODE -ne 0 -or $rows.Count -ne 5) { throw 'Closure diff mismatch' }
+          $expected = @('README.md','HUMAN_TEST.md','TEST_RESULTS.md','RECOVERY.md','HUMAN_RUNTIME_RESULTS_2026-10-15.md') | ForEach-Object { "DEVF/CP06_CONFIGURABLE_PLACEMENTS/$_" }
+          $seen = @()
+          foreach ($row in $rows) {
+            $parts = $row -split "\t"
+            if ($parts.Count -ne 2 -or $parts[0] -notin @('A','M') -or $parts[1] -notin $expected) { throw 'Non-documentary closure' }
+            $seen += $parts[1]
+          }
+          if (@(Compare-Object $expected $seen).Count -ne 0) { throw 'Expected five Markdown missing' }
+          $historical = @(
+          @('DEVF_CP06_PARTIAL_SINGLE_SITE_PRIVATE_TEST_READY','feabf5382858b0969d7f272bde0c02f91d19ab31','1a57ce17347d2f9c229af4c424d8b05a5ad59353'),
+          @('DEVF_CP05_AI_BOUNDED_HUMAN_RUNTIME_OBSERVED_2026-10-15','fc289b8c75b87ebc46ff34003f7545cfa8a60c7a','3f6e2fc7a285dbce8cb520e0b4536ff56d542930'),
+          @('DEVF_CP05_AI_BOUNDED_PRIVATE_TEST_READY','83b2cea8815a8c01b29ad1f3df2a3731f7b667f4','7a7c8bc34841e6f85020cca93ff591e9cb9e789d'),
+          @('DEVF_CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED_2026-10-14','f21d0d95e0fc7d5fcbca15ae17ba6b50cdee564e','f7a6623f6d931bacef6f2c8e54f46f7476780ade'),
+          @('DEVF_CP04_4_EOC2_BLACK_PRIVATE_TEST_READY','21f9abb6b8dec176cc8b56d2652fb56a797ba45b','0a2ec044cbae476c6ca8f3e5387737791875f47c'),
+          @('DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14','08ffbae5e5da73658df77b3763de2fe6851f7a45','139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f')
+          )
+          foreach ($entry in $historical) {
+            if ((git rev-parse $entry[0]) -cne $entry[1] -or (git cat-file -t $entry[1]) -ne 'tag' -or (git rev-parse "$($entry[0])^{}") -cne $entry[2]) { throw 'Historical annotated ref mismatch' }
+          }
+          $existing = @(git ls-remote --tags origin "refs/tags/$tagName" "refs/tags/$tagName^{}")
+          if ($LASTEXITCODE -ne 0) { throw 'Remote check failed' }
+          if ($existing.Count -ne 0) {
+            if ($existing.Count -ne 2 -or -not ($existing -cmatch "^$target\s")) { throw 'Existing tag conflict; never overwrite' }
+            if ((git cat-file -t "refs/tags/$tagName") -ne 'tag') { throw 'Existing ref not annotated' }
+            Write-Output "EXISTING_ANNOTATED_TAG target=$target"
+            exit 0
+          }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a $tagName $target -m 'CP06 PARTIAL single-site human observed: five independent cold-start trials; alternate presets, JSON disable and cold rollback. User logs analyzed in ChatGPT; no Codex gameplay. Multi-instance, second site and room reentry not verified; no new build.'
+          if ($LASTEXITCODE -ne 0) { throw 'Annotated tag creation failed' }
+          git push origin "refs/tags/$tagName"
+          if ($LASTEXITCODE -ne 0) { throw 'Non-forced tag push failed' }
+          $remote = @(git ls-remote --tags origin "refs/tags/$tagName" "refs/tags/$tagName^{}")
+          if ($LASTEXITCODE -ne 0 -or $remote.Count -ne 2 -or -not ($remote -cmatch "^$target\s")) { throw 'Remote annotated target mismatch' }
+          Write-Output "TAG_PUSHED_REQUIRE_API_READBACK target=$target"
