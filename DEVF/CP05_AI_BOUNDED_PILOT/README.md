@@ -1,9 +1,9 @@
-# CP05 — Piloto acotado de guardia E_OC2
+# CP05 — Guardia/persecución acotada por instancia, piloto privado
 
-Estado inicial: SOURCE_GATE_IN_PROGRESS; ningún TEST CP05 publicado. Base exacta f7a6623f6d931bacef6f2c8e54f46f7476780ade; no cambiar CP04.4 ni sus binarios.
+Estado: IMPLEMENTED_OFFLINE_VALIDATION_PENDING. Base f7a6623f6d931bacef6f2c8e54f46f7476780ade; checkpoint inicial c01bb2e9e0da87905f703929b516de05b4c6ae78. No build/game PASS heredado.
 
-Sello humano CP04.4 completado por run38671493020: tag anotado DEVF_CP04_4_EOC2_BLACK_HUMAN_RUNTIME_OBSERVED_2026-10-14, objeto f21d0d95e0fc7d5fcbca15ae17ba6b50cdee564e, destino f7a6623f6d931bacef6f2c8e54f46f7476780ade, leído por API. Workflow separado/tag-only en PR33; PR31/32 intactos.
+Un único E_OC2 DEVF negro y HP150, misma aparición/identidad/colores CP04.4, nuevo ID dev.devf.cp05_ai_guard v0.5.0. Instalar sólo este DEVF cuando haya paquete verificado; nunca simultáneo CP03/CP04. Mecanismo visual copiado sin cambios funcionales desde el baseline; no nueva auditoría/render/ARC.
 
-Hallazgo fuente40457c6: parámetros CP03 FFFF0100 y home.angle.x=0106 producen mPlayerRange=5000 y mMoveRange=600, no 1200/0. Guardar esta diferencia antes de implementar. Diseño candidato: guardia selectiva con percepción1200, retención1400 y ventana30 updates, reutilizando movimiento/retorno nativos y cambiando sólo mPlayerRange durante execute de la instancia autorizada, restaurado en POST. Sin nuevas acciones/teleport/timers nativos; dos umbrales provienen de constantes nativas, no offsets inventados. Pendiente demostrar core, adapter, MSVC/PE/package y descarga independiente. No se hereda PASS humano CP04 a IA CP05.
+Cambio AI medible: la instancia probada usa nativamente percepción5000 y leash600; el piloto usa percepción1200 en guardia,1400 durante interés y una gracia de hasta30 updates FIND fuera1400 con percepción nativa5000, antes de permitir desistimiento nativo. Sólo se acota mPlayerRange dentro de execute y se restaura5000 en POST. No modifica acciones, timers, mMoveRange, posiciones, velocidad, HIO ni otros actores. Retorno nativo a zona: WALK apunta home cuando distancia>=500; no garantiza pathfinding ni retorno exacto. Son 30 updates elegibles, NO segundos ni frames GPU.
 
-CP04.4 .dusk15287 SHA a1b1e750575253c8ec33193c385240337b8f1d5db6f3e9389fba08683c6d97f9 permanece inmutable; CP03 y refs anteriores intactos. CP06 fuera del alcance. Cloud offline; GitHub y Windows Actions disponibles.
+Ver SOURCE_AND_AI_GATE, AI_BEHAVIOR_SPEC, TEST_RESULTS, HUMAN_TEST y RECOVERY. Estado real final se entrega con SHA/Actions y evidencia; ningún TEST antes de gates. CP06/expansión fuera del alcance.
