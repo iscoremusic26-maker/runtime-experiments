@@ -1,9 +1,9 @@
-# CP06 — Piloto de catálogo y placements externos
+# CP06 — Catálogo externo, primer paso seguro
 
-Checkpoint inicial: SOURCE_AND_SERVICE_GATE_IN_PROGRESS. Base documental humana exacta3f6e2fc7a285dbce8cb520e0b4536ff56d542930; nueva carpeta/ramas, CP01–05 intactos.
+**CP06_PARTIAL — validación Windows pendiente. No CP06 MVP completo.**
+Archivo externo placements.json, leído una vez al inicio frío por HostService2.2 data_dir + FileService1.0. Dos presets reales seleccionables sin recompilar: black_guard (HP150/negro/AI CP05) y native_elite (HP220, sin HP write/tinte/guardia). Un único placement activo máximo; dos entradas pueden existir pero no estar activas a la vez.
 
-CP05 humano TAG_SEALED: DEVF_CP05_AI_BOUNDED_HUMAN_RUNTIME_OBSERVED_2026-10-15, objetofc289b8c75b87ebc46ff34003f7545cfa8a60c7a→3f6e2fc7a285dbce8cb520e0b4536ff56d542930, API readback y run38688503925 SUCCESS, PR36 tag-only sin merge. El informe histórico conserva TAG_PENDING de su momento; no se reescribe.
+Sólo se admite el sitio humano F_SP121/room3/layer6, XYZ(-1250,-6304.00830078125,60750). Cambiar yaw, preset, enable/remove sí; **mover XYZ a otro sitio NO**, devuelve SITE_NOT_VERIFIED. Dos activos devuelve MULTI_ACTIVE_NOT_SUPPORTED antes de hooks/StageService. No se presenta esta limitación como configurabilidad espacial completa.
 
-APIs leídas del SDK exacto40457c6: HostService2.2 data_dir persistente, distinto de mod_dir scratch borrado al inicio; FileService1.0 open/size/read/close/join. Su integración de locations opacos con data_dir está pendiente de fuente. StageService1.0 add_actor/remove_actor_edit; handles no equivalen a ActorId. No se presume identidad inequívoca sólo por coordenadas ni sitio2 seguro.
-
-Pendiente gates focales, parser/core y validación MSVC. No TEST CP06 ni GAMEPLAY_PASS. CP05 pendientes preservados: HOME_RETURN_WALKING_NOT_VERIFIED,30_UPDATE_GRACE_NOT_DIRECTLY_VERIFIED,CP05_ROLLBACK_PENDING,SAME_MODEL_EOC2_SIMULTANEOUS_PENDING. CP07/08 y expansión no iniciados.
+Se reutilizan visual/AI CP05 sin retocar colores/radios; headers originales permanecen en sus carpetas. Identidad exacta de un registro admitido, no ActorId fijo. placement_id/variant_id persistentes en config, ActorId efímero y generación/admission_epoch observados. Scene epoch general y dos actores simultáneos pendientes; no se inventa semántica que StageService no ofrece.
+No hot reload. No cambios host/SDK/ROM/saves, CP01–05 inmutables. CP07/08/expansión no iniciados.
