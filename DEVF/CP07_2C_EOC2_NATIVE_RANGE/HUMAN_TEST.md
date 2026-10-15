@@ -1,4 +1,7 @@
-# QA humana dirigida — todavía pendiente
+# QA humana dirigida — protocolo histórico
+**Estado posterior, 15-10-2026:** CP07_2C_FIX_RUNTIME_PASS_USER_OBSERVED_WINDOWS_DX12, acotado a las dos sesiones A_ONLY/BOTH y la declaración del usuario. Ver [acta humana del 15-10-2026](HUMAN_RUNTIME_RESULTS_2026-10-15.md). No repetir este protocolo para cerrar la incidencia. Los pasos siguientes se conservan como referencia del plan previo; no acreditan mediciones ni todos sus subcasos.
+
+## Protocolo conservado del build
 1. Respaldar saves y JSON. Cerrar Dusklight por completo. DX12 / 2.0.3.
 2. Sustituir únicamente proveedor 0.7.3 por 0.7.4. Reutilizar el MISMO Bokoblin Expansion 0.1.0 probado; retirar otros proveedores/probe. Conservar qa.json y placements.json (legacy NONE).
 3. A_ONLY: localizar A, atraerlo con seguridad más allá del límite previo nominal de 600; explorar 1000–1500 o más sólo si se dispone de distancia fiable y terreno seguro. No informar medidas a ojo como medición.

@@ -1,5 +1,5 @@
 # Resultados — CP07.2C
-Dictamen técnico: **CP07_2C_NATIVE_RANGE_5000_PRIVATE_TEST_READY**. Dictamen de gameplay: **HUMAN_RUNTIME_PENDING**, nunca FIX_RUNTIME_PASS todavía.
+Dictamen técnico: **CP07_2C_NATIVE_RANGE_5000_PRIVATE_TEST_READY**. Dictamen de gameplay **al build**: HUMAN_RUNTIME_PENDING. Dictamen posterior: **CP07_2C_FIX_RUNTIME_PASS_USER_OBSERVED_WINDOWS_DX12** (acotado); véase [acta humana del 15-10-2026](HUMAN_RUNTIME_RESULTS_2026-10-15.md).
 
 | Gate | Estado | Evidencia |
 |---|---|---|
@@ -12,7 +12,8 @@ Dictamen técnico: **CP07_2C_NATIVE_RANGE_5000_PRIVATE_TEST_READY**. Dictamen de
 | .dusk/manifest/DLL oficial | PACKAGE_VERIFIED | identidad 0.7.4, dos servicios 1.0, hooks0, sin imports nuevos |
 | Runner independiente descarga real | DOWNLOAD_VERIFIED | run 38812605127; SHA/bytes/CRC/70 fuentes/PE |
 | Consumidor 0.1.0, probe y proveedor 0.7.3 originales | DOWNLOAD_ABI_VERIFIED | ZIP/DLL/source originales; sin ejecución ni reempaquetado |
-| Rango útil/persecución/retirada | HUMAN_RUNTIME_PENDING | necesita próxima observación del usuario |
+| Rango útil/persecución/retirada, al build | HUMAN_RUNTIME_PENDING histórico | posteriormente cerrado por observación del usuario |
+| Comportamiento comparable a Bokoblins normales en A_ONLY/BOTH | USER_OBSERVED_RUNTIME_PASS acotado | declaración humana y dos extractos de logs; ver acta |
 | Patrullaje/home de executeWalk, cooperación general | NOT_CERTIFIED | se conservan rutas nativas; no eliminación de todo retorno |
 
 USER_REPORTED (fase previa CP07.2B): A_ONLY, BOTH, combate y ausencia de adicionales tras retirar consumidor funcionaron. También se observó regreso caminando hacia spawn. No se recibieron los rawlogs de esa prueba aquí; no se atribuye su análisis a Codex ni se repiten los gates de aparición como pendientes.
@@ -22,4 +23,6 @@ USER_REPORTED (fase previa CP07.2B): A_ONLY, BOTH, combate y ausencia de adicion
 Legacy: FIELD `455f6f6300000000ffff0100c49c4000c5c50011476d4e00010600000000ffff`; NORTH `455f6f6300000000ffff0100c49c4000c5c594ce4771fe00010600000000ffff`.
 
 Primer verificador falló por orden físico de modmeta, no por contenido ABI; corrección y run fallido conservados en [BUILD_AND_PACKAGE](BUILD_AND_PACKAGE.md). No se ocultó el fallo ni se regeneró el paquete.
-No se ejecutó juego, DLL del mod, GPU/DX12, medición de FPS, KCL/navegación ni cooperación real. No se asigna ActorId a un placement ni se certifica aislamiento universal.
+Codex y los runners no ejecutaron el juego/DLL/GPU. El usuario sí ejecutó las dos sesiones Windows/DX12 posteriores documentadas en el acta. No se midieron FPS, KCL/navegación ni cooperación universal. No se asigna ActorId a un placement ni se certifica aislamiento universal.
+
+Cierre exclusivamente documental desde el encargo 684d027c1c73be5d083dfa6754e10fe3fc2ae066; sin nuevas compilaciones ni cambios de binarios. Los recuentos de los logs son datos comunicados por ChatGPT, no recalculados aquí.

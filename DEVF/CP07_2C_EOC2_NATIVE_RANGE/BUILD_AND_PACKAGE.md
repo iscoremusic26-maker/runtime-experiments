@@ -1,5 +1,5 @@
 # Build y descarga — CP07.2C
-Estado: CP07_2C_NATIVE_RANGE_5000_PRIVATE_TEST_READY / HUMAN_RUNTIME_PENDING.
+Estado **al build**: CP07_2C_NATIVE_RANGE_5000_PRIVATE_TEST_READY / HUMAN_RUNTIME_PENDING. Cierre humano posterior: véase [acta del 15-10-2026](HUMAN_RUNTIME_RESULTS_2026-10-15.md), PASS acotado; no se reconstruye ni reempaqueta nada.
 
 - Fuente realmente compilada: 02e9070497bfe0ec2fda83ea63fd2ca237fb6dfd, padre literal 7c588d2a06d307b0288256fc2383186129430401; [PR47](https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/47).
 - CI build: 1c1a96cffbdf80199570423addec4c91ded46865, [run 38812099184](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38812099184) SUCCESS.
