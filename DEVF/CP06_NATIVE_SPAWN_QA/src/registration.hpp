@@ -29,7 +29,7 @@ struct Registration {
    const bool north=!dual||i==1;const Record bytes=record(north);
    ModResult result=MOD_ERROR;StageActorHandle h=0;
    try {result=svc->add_actor(ctx,stage,room,layer,bytes.data(),bytes.size(),&h);}
-   catch(...){reason="ADD_EXCEPTION";cleanup(ctx,svc);return MOD_ERROR;}
+   catch(...){handles[i]=h;reason="ADD_EXCEPTION";cleanup(ctx,svc);return MOD_ERROR;}
    handles[i]=h; // Only handles produced by this mod's own service call.
    if(result!=MOD_OK||!h||(i&&h==handles[0])){
     reason=result!=MOD_OK?"ADD_FAILED":!h?"ZERO_HANDLE":"DUPLICATE_HANDLE";

@@ -6,7 +6,7 @@ using namespace native_qa;
 namespace {
 int context_value;auto* ctx=reinterpret_cast<ModContext*>(&context_value);
 struct Fake {
- unsigned adds=0,removes=0,fail_at=0,throw_at=0,zero_at=0,duplicate_at=0,error_handle_at=0;
+ unsigned adds=0,removes=0,fail_at=0,throw_at=0,zero_at=0,duplicate_at=0,error_handle_at=0,throw_handle_at=0;
  bool remove_fail=false,remove_throw=false;Record records[2]{};StageActorHandle live[2]{},removed[8]{};
 } fake;
 void check(bool c){if(!c)throw std::runtime_error("LAB_ASSERT");}
@@ -17,6 +17,7 @@ ModResult add(ModContext* c,const char* s,uint8_t r,int8_t l,const void* bytes,s
  if(fake.fail_at==k)return MOD_ERROR;
  *out=fake.zero_at==k?0:fake.duplicate_at==k?101:100+k;
  if(*out)fake.live[k-1]=*out;
+ if(fake.throw_handle_at==k)throw std::runtime_error("FAKE_THROW_HANDLE");
  if(fake.error_handle_at==k)return MOD_ERROR;
  return MOD_OK;
 }
@@ -45,6 +46,7 @@ int main(){
  test("zero_second",[]{Registration r;fake.zero_at=2;check(r.initialize(ctx,&service,true)==MOD_ERROR&&fake.removes==1);});
  test("duplicate_handle",[]{Registration r;fake.duplicate_at=2;check(r.initialize(ctx,&service,true)==MOD_ERROR&&fake.removes==1);});
  test("error_with_returned_handle",[]{Registration r;fake.error_handle_at=2;check(r.initialize(ctx,&service,true)==MOD_ERROR&&fake.removes==2);});
+ test("throw_after_handle_rollback",[]{Registration r;fake.throw_handle_at=2;check(r.initialize(ctx,&service,true)==MOD_ERROR&&fake.removes==2&&!fake.live[0]&&!fake.live[1]);});
  test("remove_fail_retry_own_only",[]{Registration r;r.initialize(ctx,&service,true);fake.remove_fail=true;check(r.cleanup(ctx,&service)!=MOD_OK&&r.handles[0]==101&&r.handles[1]==102);fake.remove_fail=false;check(r.cleanup(ctx,&service)==MOD_OK&&!r.handles[0]&&!r.handles[1]);});
  test("remove_exception",[]{Registration r;r.initialize(ctx,&service,false);fake.remove_throw=true;check(r.cleanup(ctx,&service)==MOD_ERROR&&r.handles[0]==101);fake.remove_throw=false;r.cleanup(ctx,&service);});
  test("cleanup_idempotent",[]{Registration r;r.initialize(ctx,&service,false);r.cleanup(ctx,&service);r.cleanup(ctx,&service);check(fake.removes==1);});
