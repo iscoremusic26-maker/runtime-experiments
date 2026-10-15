@@ -1,6 +1,6 @@
 # CP04.4 — Canal efectivo y aislamiento por llamada de packet
 
-Estado: implementación preparada; gate de llamada del EXE PASS; build/ABI/paquete/descarga todavía pendientes. No declarar TEST_READY hasta verificarlos. HUMAN_RUNTIME_NOT_TESTED.
+Estado: CP04_4_EOC2_BLACK_PRIVATE_TEST_READY / CODE_ISOLATED_OFFLINE. MSVC, laboratorio, PE/ABI, PACKAGE_VERIFIED y DOWNLOAD_VERIFIED ejecutados. HUMAN_RUNTIME_NOT_TESTED.
 
 ## Recurso efectivo y matriz de control
 
@@ -15,7 +15,7 @@ E_oc2.arc real del commit privado6b32ef995814e6a20924d6b6dd3fe5886a5ef3e0: SHA25
 
 Los tres TEX oc2_fix CMPR128×128 del cuerpo/ojos apuntan a los mismos texels. No hay CLR0/CLR1 ni arrays de color; no se crea un buffer CLR0 ni se usa TextureService.
 
-Los cuatro materiales tienen stage0 RGB=(A=KONST K0 RGB0, B=TEXC, C=RASC, D=C0), ADD, bias0, escala4, clamp, PREV. **14 es GX_CC_KONST; ONE es12.** Alpha=(ZERO,KONST K3.a255,RASA,ZERO), ADD, escala1, clamp, PREV. La expresión RGB viva con C0=0 es4×textura×raster. Aurora calcula raster=MatColor×clamp(iluminación,0,1); multiplicar sólo MatColor RGB por(8,8,10)/255 conserva variación de textura/normales/luces y limita el valor nominal a(32,32,40)/255 antes de fog. Alpha no se cambia; C0/TEV/muerte nativos no se reescriben. El resultado estético y la influencia de fog necesitan prueba humana.
+Los cuatro materiales tienen stage0 RGB=(A=KONST K0 RGB0, B=TEXC, C=RASC, D=C0), ADD, bias0, escala4, clamp, PREV. **14 es GX_CC_KONST; ONE es12.** Alpha=(ZERO,KONST K3.a255,RASA,ZERO), ADD, escala1, clamp, PREV. La expresión RGB viva con C0=0 es4×textura×raster. Aurora calcula raster=MatColor×clamp(iluminación,0,1); multiplicar sólo MatColor RGB por(8,8,10)/255 conserva variación de textura/normales/luces y limita el valor nominal a(32,32,40)/255 antes de fog/conversión de salida/gamma. El slot alpha0 corresponde al índice1 de ColorBlock (el orden de emisión nativo es0,2,1,3). Alpha no se cambia; C0/TEV/muerte nativos no se reescriben. El resultado estético y la influencia de fog necesitan prueba humana.
 
 ## Ruta A elegida: comandos privados en la llamada del ShapePacket elegido
 
@@ -53,3 +53,5 @@ Aurora3227d76c60e1e782ca576610bce61c9e7744d8be:
 - lib/gx/command_processor.cpp:382–472/491–506, uniforms y merge. La revisión sellada de32 fuentes se conserva, no se ejecuta de nuevo.
 
 Gate binario focalizado run38655854048: EXE oficial SHAffa992…049, AMD64, llamada efectiva MatPacket.draw→ShapePacket.drawFast, sin inline sites. MULTI_NAME indica exactamente nombre MSVC, display y source-qualified de la MISMA función, sin nombre ajeno; se verificó el allowlist exacto. Se publica sólo metadata, no direcciones/bytes del EXE.
+
+Resultados ejecutados y enlaces: TEST_RESULTS.md y BUILD_AND_PACKAGE.md. La restauración no altera ModelData/Material/TEX1; el registro GX transitorio se restaura en stream. Los fake tests no ejecutan el callback nativo de la DLL ni validan GPU.

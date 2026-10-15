@@ -1,0 +1,46 @@
+name: DEVF CP04.4 EOC2 black verified recovery tag
+on:
+  pull_request:
+    types: [synchronize]
+    paths:
+      - '.github/workflows/devf-cp04-4-eoc2-black-recovery.yml'
+permissions:
+  contents: write
+jobs:
+  seal-private-test:
+    if: github.event.repository.private == true && github.head_ref == 'feature/devf-cp04-4-eoc2-black-implementation' && github.base_ref == 'feature/devf-cp04-4-black-bokoblin' && github.event.pull_request.base.sha == '0b2216eec658402aec2470e0df0080e399294225' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          fetch-depth: 0
+      - name: Verify immutable baselines and compiled graph; publish one new tag without overwrite
+        shell: pwsh
+        env:
+          CHECKPOINT_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          if ((git rev-parse HEAD) -ne $env:CHECKPOINT_SHA) { throw 'Head mismatch' }
+          git merge-base --is-ancestor 0b2216eec658402aec2470e0df0080e399294225 HEAD
+          if ($LASTEXITCODE -ne 0) { throw 'Sealed CP04.4 parent missing' }
+          $rows = git diff --name-status 0b2216eec658402aec2470e0df0080e399294225 HEAD
+          if ($LASTEXITCODE -ne 0) { throw 'Diff unavailable' }
+          foreach ($row in $rows) {
+            $parts = $row -split "\t"
+            if ($parts.Count -ne 2 -or $parts[0] -ne 'A' -or (-not $parts[1].StartsWith('DEVF/CP04_4_EOC2_BLACK_CONTINUATION/') -and $parts[1] -ne '.github/workflows/devf-cp04-4-eoc2-black-recovery.yml')) { throw 'Earlier file modified or scope exceeded' }
+            if ($parts[1] -match '\.(arc|bmd|bdl|iso|jpc|exe|dll|dusk|zip)$') { throw 'Binary/original asset committed in source branch' }
+          }
+          git diff --exit-code ee42f62d2bd2bbbfae9e61affb10c066fd0588af HEAD -- DEVF/CP04_4_EOC2_BLACK_CONTINUATION/src DEVF/CP04_4_EOC2_BLACK_CONTINUATION/tests DEVF/CP04_4_EOC2_BLACK_CONTINUATION/CMakeLists.txt DEVF/CP04_4_EOC2_BLACK_CONTINUATION/mod.json DEVF/CP04_4_EOC2_BLACK_CONTINUATION/reused-cp03.json DEVF/CP04_4_EOC2_BLACK_CONTINUATION/ci/audit.py DEVF/CP04_4_EOC2_BLACK_CONTINUATION/ci/run_windows.py DEVF/CP04_4_EOC2_BLACK_CONTINUATION/ci/reviewed-imports.json
+          if ($LASTEXITCODE -ne 0) { throw 'Compiled code ledger changed' }
+          if ((git rev-parse 'DEVF_CP03_HP150_HUMAN_RUNTIME_VERIFIED_2026-10-14^{}') -ne '139d9329f7a2d5d191b6e0ef7149ac9bbf82d29f') { throw 'CP03 tag changed' }
+          if ((git rev-parse 'DEVF_CP04_4_BLACK_BOKOBLIN_BLOCKED_WITH_EVIDENCE^{}') -ne '0b2216eec658402aec2470e0df0080e399294225') { throw 'Closed CP04.4 tag changed' }
+          git fsck --full
+          if ($LASTEXITCODE -ne 0) { throw 'Recovery fsck failed' }
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git tag -a DEVF_CP04_4_EOC2_BLACK_PRIVATE_TEST_READY $env:CHECKPOINT_SHA -m 'CP04.4 new native E_OC2 per-packet XF body TEST; exact ARC, 20 offline cases, MSVC/PE/package and real fresh download verified; HUMAN_RUNTIME_NOT_TESTED'
+          if ($LASTEXITCODE -ne 0) { throw 'Tag exists or cannot be created; no overwrite permitted' }
+          git push origin refs/tags/DEVF_CP04_4_EOC2_BLACK_PRIVATE_TEST_READY
+          if ($LASTEXITCODE -ne 0) { throw 'New tag publication failed' }
+          Write-Output "CP044_BLACK_RECOVERY_SEALED target=$env:CHECKPOINT_SHA baseline_and_compiled_graph_unchanged"
