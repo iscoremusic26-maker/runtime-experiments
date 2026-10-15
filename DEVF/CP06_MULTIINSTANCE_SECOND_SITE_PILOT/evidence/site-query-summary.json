@@ -1,0 +1,396 @@
+{
+  "status": "SITE2_PENDING",
+  "room_arc_sha256": "dc53106667811c4cde18b35edb5279357f00ebecaef2f9de546aea9a5a2b06af",
+  "candidates": [
+    {
+      "id": "north_of_site1",
+      "status": "STATIC_QUERY_ONLY_NOT_SITE_APPROVED",
+      "candidate": [
+        -1250,
+        -6327.600450915229,
+        61950
+      ],
+      "query": {
+        "visited_intersecting_cells": 38,
+        "leaf_lists": 20,
+        "prisms_decoded": 57
+      },
+      "support_prism": 2281,
+      "normal": [
+        -0.03340005874633789,
+        0.9970599412918091,
+        -0.06895005702972412
+      ],
+      "PLC": {
+        "exit_id": 63,
+        "object_through": false,
+        "link_through": false,
+        "special": 0,
+        "ground_code": 0,
+        "room": 3,
+        "normal_group": false,
+        "code_words": [
+          "0x3fff",
+          "0x40ff",
+          "0xffffff00",
+          "0x0",
+          "0x3000ff"
+        ]
+      },
+      "local_coverage": {
+        "100": {
+          "missing_area": 0,
+          "full_area": 40000,
+          "heights": [
+            -6337.865642759509,
+            -6317.33525907095
+          ],
+          "prisms": [
+            2281
+          ]
+        },
+        "501": {
+          "missing_area": 0,
+          "full_area": 1004004,
+          "heights": [
+            -6374.855453197145,
+            -6261.322709976178
+          ],
+          "prisms": [
+            2275,
+            2276,
+            2280,
+            2281,
+            2597,
+            2598,
+            2603,
+            2604
+          ]
+        }
+      },
+      "nearest_static_walls_in_queried_cells": [
+        {
+          "index": 444,
+          "distance": 802.7090788455913,
+          "normal": [
+            0.9422800540924072,
+            0,
+            -0.3348400592803955
+          ]
+        },
+        {
+          "index": 443,
+          "distance": 803.9812308607233,
+          "normal": [
+            0.9422800540924072,
+            0,
+            -0.3348400592803955
+          ]
+        },
+        {
+          "index": 441,
+          "distance": 810.2699868766857,
+          "normal": [
+            0.880079984664917,
+            0,
+            -0.4748300313949585
+          ]
+        },
+        {
+          "index": 509,
+          "distance": 816.3763776806272,
+          "normal": [
+            0.9422800540924072,
+            0,
+            -0.3348400592803955
+          ]
+        }
+      ],
+      "nearest_authored_room_records": [
+        {
+          "tag": "ACT6",
+          "index": 32,
+          "name": "flwr7",
+          "position": [
+            -600,
+            -6249.5927734375,
+            62630
+          ],
+          "xz": 940.6912352095134
+        },
+        {
+          "tag": "ACT6",
+          "index": 30,
+          "name": "flwr7",
+          "position": [
+            -475,
+            -6242.2919921875,
+            62500
+          ],
+          "xz": 950.3288904374107
+        },
+        {
+          "tag": "ACT6",
+          "index": 26,
+          "name": "Digpl",
+          "position": [
+            -500,
+            -6243.9775390625,
+            62650
+          ],
+          "xz": 1025.9142264341594
+        },
+        {
+          "tag": "ACT6",
+          "index": 33,
+          "name": "flwr7",
+          "position": [
+            -600,
+            -6251.40478515625,
+            62780
+          ],
+          "xz": 1054.229576515476
+        }
+      ],
+      "previous_volume_bounds": [
+        {
+          "name": "atkItem",
+          "tag": "SCOB",
+          "index": 5,
+          "circle_margin_minus501": 842.1213838803785
+        },
+        {
+          "name": "atkItem",
+          "tag": "SCOB",
+          "index": 6,
+          "circle_margin_minus501": 842.1214069971718
+        },
+        {
+          "name": "EvtArea",
+          "tag": "SCO6",
+          "index": 0,
+          "circle_margin_minus501": 2152.5308198049497
+        },
+        {
+          "name": "KY_chg",
+          "tag": "SCO6",
+          "index": 1,
+          "circle_margin_minus501": 717.0915038999137
+        },
+        {
+          "name": "ClearB",
+          "tag": "SCO6",
+          "index": 3,
+          "status": "BOUND_NOT_AVAILABLE"
+        },
+        {
+          "name": "KY_chg",
+          "tag": "SCO6",
+          "index": 0,
+          "status": "BOUND_NOT_AVAILABLE"
+        }
+      ],
+      "site2_approved": false,
+      "runtime": "NOT_TESTED"
+    },
+    {
+      "id": "south_of_site1",
+      "status": "STATIC_QUERY_ONLY_NOT_SITE_APPROVED",
+      "candidate": [
+        -1250,
+        -6351.869361310774,
+        59550
+      ],
+      "query": {
+        "visited_intersecting_cells": 17,
+        "leaf_lists": 8,
+        "prisms_decoded": 48
+      },
+      "support_prism": 2455,
+      "normal": [
+        -0.12390005588531494,
+        0.9915299415588379,
+        -0.03894996643066406
+      ],
+      "PLC": {
+        "exit_id": 63,
+        "object_through": false,
+        "link_through": false,
+        "special": 0,
+        "ground_code": 0,
+        "room": 3,
+        "normal_group": false,
+        "code_words": [
+          "0x3fff",
+          "0x40ff",
+          "0xffffff00",
+          "0x0",
+          "0x3000ff"
+        ]
+      },
+      "local_coverage": {
+        "100": {
+          "missing_area": 0,
+          "full_area": 40000,
+          "heights": [
+            -6368.293476760072,
+            -6336.342112139587
+          ],
+          "prisms": [
+            2277,
+            2455
+          ]
+        },
+        "501": {
+          "missing_area": 0,
+          "full_area": 1004004,
+          "heights": [
+            -6452.265291008257,
+            -6275.132032177106
+          ],
+          "prisms": [
+            2210,
+            2277,
+            2447,
+            2454,
+            2455,
+            2630,
+            2631
+          ]
+        }
+      },
+      "nearest_static_walls_in_queried_cells": [
+        {
+          "index": 511,
+          "distance": 1742.5358557781137,
+          "normal": [
+            0.8921799659729004,
+            0,
+            -0.4516899585723877
+          ]
+        },
+        {
+          "index": 446,
+          "distance": 1742.5552062504012,
+          "normal": [
+            0.8921799659729004,
+            0,
+            -0.4516899585723877
+          ]
+        },
+        {
+          "index": 445,
+          "distance": 1743.2142445855402,
+          "normal": [
+            0.8921799659729004,
+            0,
+            -0.4516899585723877
+          ]
+        },
+        {
+          "index": 512,
+          "distance": 1766.1064075037605,
+          "normal": [
+            0.8921799659729004,
+            0,
+            -0.4516899585723877
+          ]
+        }
+      ],
+      "nearest_authored_room_records": [
+        {
+          "tag": "ACT6",
+          "index": 7,
+          "name": "E_oc",
+          "position": [
+            -50,
+            -6201.49169921875,
+            60750
+          ],
+          "xz": 1697.0562748477141
+        },
+        {
+          "tag": "ACTR",
+          "index": 15,
+          "name": "Grass",
+          "position": [
+            287.0841064453125,
+            -6133.69287109375,
+            60989.0625
+          ],
+          "xz": 2105.594554797536
+        },
+        {
+          "tag": "ACTR",
+          "index": 13,
+          "name": "Grass",
+          "position": [
+            180.69061279296875,
+            -6164.7568359375,
+            61213.671875
+          ],
+          "xz": 2194.237848821302
+        },
+        {
+          "tag": "ACTR",
+          "index": 14,
+          "name": "Grass",
+          "position": [
+            393.47747802734375,
+            -6116.349609375,
+            61166.38671875
+          ],
+          "xz": 2305.1516751256327
+        }
+      ],
+      "previous_volume_bounds": [
+        {
+          "name": "atkItem",
+          "tag": "SCOB",
+          "index": 5,
+          "circle_margin_minus501": 3171.517573283418
+        },
+        {
+          "name": "atkItem",
+          "tag": "SCOB",
+          "index": 6,
+          "circle_margin_minus501": 3171.5175824950015
+        },
+        {
+          "name": "EvtArea",
+          "tag": "SCO6",
+          "index": 0,
+          "circle_margin_minus501": -222.9995756187227
+        },
+        {
+          "name": "KY_chg",
+          "tag": "SCO6",
+          "index": 1,
+          "circle_margin_minus501": -366.3223678576305
+        },
+        {
+          "name": "ClearB",
+          "tag": "SCO6",
+          "index": 3,
+          "status": "BOUND_NOT_AVAILABLE"
+        },
+        {
+          "name": "KY_chg",
+          "tag": "SCO6",
+          "index": 0,
+          "status": "BOUND_NOT_AVAILABLE"
+        }
+      ],
+      "site2_approved": false,
+      "runtime": "NOT_TESTED"
+    }
+  ],
+  "originals_published": false,
+  "game_executed": false,
+  "build_performed": false,
+  "source_base": "3ab8ff2fdd42128ab75157338699b21ae6d768bd",
+  "note": "New ±1200 Z queries from observed site1, not arbitrary whitelist additions. No reread of WRock/Digpl/render; old unsafe point excluded.",
+  "ci_commit": "98bbb027c91e4cabc9629f370971345c887a958c",
+  "run_id": 38744954662,
+  "job_id": 116456060543
+}

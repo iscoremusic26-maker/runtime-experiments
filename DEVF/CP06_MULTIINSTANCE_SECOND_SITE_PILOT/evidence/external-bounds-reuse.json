@@ -1,0 +1,176 @@
+{
+  "source_commit": "3ab8ff2fdd42128ab75157338699b21ae6d768bd",
+  "source_path": "DEVF/CP01/evidence/extra-collisions-verification.json",
+  "source_git_blob_sha1": "b0ed5a2a89fe8d99f4aa5254280af4dce5c9142a",
+  "method": "hypot(max(loX-x,x-hiX,0),max(loZ-z,z-hiZ,0))-501; reused author-state world AABBs only, no ARC re-decoding",
+  "candidates": [
+    {
+      "id": "north_of_site1",
+      "rows": [
+        {
+          "name": "mmvbg",
+          "index": 16,
+          "state": "physics",
+          "point_to_aabb_xz": 8250.693656640613,
+          "margin_minus_historical_501": 7749.693656640613
+        },
+        {
+          "name": "mmvbg",
+          "index": 16,
+          "state": "render_state_0",
+          "point_to_aabb_xz": 8242.722400739629,
+          "margin_minus_historical_501": 7741.722400739629
+        },
+        {
+          "name": "mmvbg",
+          "index": 16,
+          "state": "render_state_1",
+          "point_to_aabb_xz": 8397.688352125235,
+          "margin_minus_historical_501": 7896.688352125235
+        },
+        {
+          "name": "mmvbg",
+          "index": 19,
+          "state": "physics",
+          "point_to_aabb_xz": 20694.73391522338,
+          "margin_minus_historical_501": 20193.73391522338
+        },
+        {
+          "name": "mmvbg",
+          "index": 19,
+          "state": "render_state_0",
+          "point_to_aabb_xz": 20689.276704191263,
+          "margin_minus_historical_501": 20188.276704191263
+        },
+        {
+          "name": "mmvbg",
+          "index": 19,
+          "state": "render_state_1",
+          "point_to_aabb_xz": 20818.01289608987,
+          "margin_minus_historical_501": 20317.01289608987
+        },
+        {
+          "name": "mmvbg",
+          "index": 20,
+          "state": "physics",
+          "point_to_aabb_xz": 24924.809511787957,
+          "margin_minus_historical_501": 24423.809511787957
+        },
+        {
+          "name": "mmvbg",
+          "index": 20,
+          "state": "render_state_0",
+          "point_to_aabb_xz": 24917.481476709563,
+          "margin_minus_historical_501": 24416.481476709563
+        },
+        {
+          "name": "mmvbg",
+          "index": 20,
+          "state": "render_state_1",
+          "point_to_aabb_xz": 25032.484737350776,
+          "margin_minus_historical_501": 24531.484737350776
+        },
+        {
+          "name": "ClearB",
+          "index": 3,
+          "state": "physics",
+          "point_to_aabb_xz": 8208.998505855578,
+          "margin_minus_historical_501": 7707.998505855578
+        },
+        {
+          "name": "ClearB",
+          "index": 3,
+          "state": "initial_load_physics",
+          "point_to_aabb_xz": 8617.214892831245,
+          "margin_minus_historical_501": 8116.214892831245
+        }
+      ],
+      "min_margin": 7707.998505855578
+    },
+    {
+      "id": "south_of_site1",
+      "rows": [
+        {
+          "name": "mmvbg",
+          "index": 16,
+          "state": "physics",
+          "point_to_aabb_xz": 9711.324630129047,
+          "margin_minus_historical_501": 9210.324630129047
+        },
+        {
+          "name": "mmvbg",
+          "index": 16,
+          "state": "render_state_0",
+          "point_to_aabb_xz": 9703.203461542713,
+          "margin_minus_historical_501": 9202.203461542713
+        },
+        {
+          "name": "mmvbg",
+          "index": 16,
+          "state": "render_state_1",
+          "point_to_aabb_xz": 9850.952034688018,
+          "margin_minus_historical_501": 9349.952034688018
+        },
+        {
+          "name": "mmvbg",
+          "index": 19,
+          "state": "physics",
+          "point_to_aabb_xz": 18834.990848966812,
+          "margin_minus_historical_501": 18333.990848966812
+        },
+        {
+          "name": "mmvbg",
+          "index": 19,
+          "state": "render_state_0",
+          "point_to_aabb_xz": 18829.47047056966,
+          "margin_minus_historical_501": 18328.47047056966
+        },
+        {
+          "name": "mmvbg",
+          "index": 19,
+          "state": "render_state_1",
+          "point_to_aabb_xz": 18953.245223435675,
+          "margin_minus_historical_501": 18452.245223435675
+        },
+        {
+          "name": "mmvbg",
+          "index": 20,
+          "state": "physics",
+          "point_to_aabb_xz": 24496.442221910507,
+          "margin_minus_historical_501": 23995.442221910507
+        },
+        {
+          "name": "mmvbg",
+          "index": 20,
+          "state": "render_state_0",
+          "point_to_aabb_xz": 24489.603911024104,
+          "margin_minus_historical_501": 23988.603911024104
+        },
+        {
+          "name": "mmvbg",
+          "index": 20,
+          "state": "render_state_1",
+          "point_to_aabb_xz": 24593.31344903083,
+          "margin_minus_historical_501": 24092.31344903083
+        },
+        {
+          "name": "ClearB",
+          "index": 3,
+          "state": "physics",
+          "point_to_aabb_xz": 9714.272154764938,
+          "margin_minus_historical_501": 9213.272154764938
+        },
+        {
+          "name": "ClearB",
+          "index": 3,
+          "state": "initial_load_physics",
+          "point_to_aabb_xz": 10082.421949500258,
+          "margin_minus_historical_501": 9581.421949500258
+        }
+      ],
+      "min_margin": 9202.203461542713
+    }
+  ],
+  "meaning": "PASS_STATIC_SCREEN_ONLY; not future object motion or effective E_OC2 swept volume",
+  "performed_in": "functions.exec JavaScript; no gameplay"
+}
