@@ -1,0 +1,49 @@
+{
+  "run_id": 38761708755,
+  "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/38761708755",
+  "source": "0182b51eb7029d52468993a493b6d0664e6e764b",
+  "ci": "4ed8e08913a5cde42418050c62cd5fed3d008011",
+  "status": "FAILURE",
+  "compiler_and_lab": "PASS",
+  "cases": 109,
+  "error": "can only concatenate str (not \"int\") to str",
+  "root_cause": "New FileService negative used escaped backslash-zero instead of NUL, failed to find modmeta; stale ZIP entry string reached numeric bound. Corrected in a4b72680d7a6e0e360f52aef1b3a4554150c78a9. Runtime logic unchanged.",
+  "phases": [
+    {
+      "label": "compiler",
+      "exit": 0,
+      "seconds": 5.875
+    },
+    {
+      "label": "configure",
+      "exit": 0,
+      "seconds": 13.672
+    },
+    {
+      "label": "build",
+      "exit": 0,
+      "seconds": 17.656
+    },
+    {
+      "label": "config-io-registration-lab",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "headers",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "imports",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "exports",
+      "exit": 0,
+      "seconds": 0.016
+    }
+  ],
+  "package_ready": false
+}

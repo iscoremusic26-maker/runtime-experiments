@@ -1,0 +1,419 @@
+{
+  "status": "JSON_DUAL_NATIVE_BUILD_PASS_PACKAGE_VERIFIED_DOWNLOAD_PENDING",
+  "source_commit": "a4b72680d7a6e0e360f52aef1b3a4554150c78a9",
+  "ci_head": "af07099fbcffdfca1fae2c8280237c25c079b131",
+  "event_merge_sha": "600f001a661c4fb29206a377522c8c054262b3d4",
+  "run_id": "38761953150",
+  "started_utc": "2026-10-15T15:38:11.057182+00:00",
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "phases": [
+    {
+      "label": "compiler",
+      "exit": 0,
+      "seconds": 3.594
+    },
+    {
+      "label": "configure",
+      "exit": 0,
+      "seconds": 9.125
+    },
+    {
+      "label": "build",
+      "exit": 0,
+      "seconds": 10.375
+    },
+    {
+      "label": "config-io-registration-lab",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "headers",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "imports",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "exports",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "official-package",
+      "exit": 0,
+      "seconds": 0.312
+    }
+  ],
+  "game_executed": false,
+  "mod_DLL_executed": false,
+  "host_built": false,
+  "hooks": 0,
+  "personalization": false,
+  "source_ledger": {
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/CMakeLists.txt": "b8c3fb87557afe000fa4cf14fa7f1c3ecbff15f1460e622c58e7ff3f4d7ba9c2",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/HUMAN_TEST.md": "1cd3e33a2300719bbd1132977411583a0a32a013b84a164333cd15812ce3b395",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/mod.json": "2d07f3d2cb21f263b154fb25c27b173d3a77de5f785c617183a033c1e33d8630",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/README.md": "d5b991a3fad9370ca4425964727116c95a5d5e9de2e04d9a1176f0d2b61f62de",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/RECOVERY.md": "c4a4aca95fa50186c365bae761799f2b82a9d7d3621b518d72b6146f9ab30148",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/ci/audit_native.py": "dba0af37b371a20340f23f9edfe21bc6e90578a82f718d31e753b7c34c1210e9",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/ci/run_windows.py": "4bd4726f1690b0633050f33294bdaf6d91fae75f775454b046d22dbcc610e750",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/examples/both-enabled.json": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/examples/disabled.json": "6b7541e7d27e1f2ea01a407b07c6aae08702d3069cd7cc4d8bb6eaf086e1633c",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/examples/field-only.json": "2283f1de6a9c8c31297ed0ab40c59df57a2f7666f41b982c8d066964b75dd72e",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/examples/north-only.json": "ccb55cb8bba2d0d76b9e2d1f83d1397d1e0efce8ef498d8518af2c32424f7799",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/examples/placements.json": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/src/config_core.hpp": "9d42cb17c885f231ea9a73c0ea8cadaa66e4d0cebb92270868d55b229300824d",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/src/config_io.hpp": "e46bf84dd85e30d9270df4b90bc9d096949dd6f4363efd890af6294183f53bd0",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/src/mod.cpp": "e35796c7b00ccba6d664991e8f273a1bf5d6aeca707dab0e9ca442ec1142166d",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/src/native_records.hpp": "72a131c587f5331f703b46908b16fe0e2bb0eb4b12711f48eb82393d499feb71",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/src/registration.hpp": "97309c344c18f403e3282d9e1e52389392b2557cf177518c57fa150ecf67d004",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/src/runtime.hpp": "f451c7a289b8f6726b2a8d6a16e094655aa98be57922b0e381e1f83a84814022",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/tests/config_lab.cpp": "3609f1c2dbbedc5242c3601d4b32234dbf6fc9164aaff9769cbeb52f7f7247b1",
+    "DEVF/CP06_NATIVE_CONFIG_DUAL/tests/registration_cases.hpp": "629c80e177bab5e3283b2ff71cbe516a69e7a70680a19a54426f35b0706dc45c",
+    "DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/audit.py": "f943eec8d6b32b569bb06106e221c4d23b17b809b49bd5aa7e6a9f9398be7682",
+    "DEVF/CP06_CONFIGURABLE_PLACEMENTS/ci/reviewed-imports.json": "93871a91c05cae1e6c5018185d8fbfa31af6f45cb24cd67f2816ded7380b743d"
+  },
+  "offline_cases": 109,
+  "case_names": [
+    "A_one_north",
+    "B_two_distinct",
+    "record_native_contract",
+    "A_no_reinjection",
+    "B_no_reinjection",
+    "fail_first",
+    "fail_second_rollback_first",
+    "throw_first",
+    "throw_second_rollback",
+    "zero_first",
+    "zero_second",
+    "duplicate_handle",
+    "error_with_returned_handle",
+    "throw_after_handle_rollback",
+    "remove_fail_retry_own_only",
+    "remove_exception",
+    "cleanup_idempotent",
+    "cleanup_without_init",
+    "null_context",
+    "null_service",
+    "short_service",
+    "wrong_version",
+    "null_add",
+    "null_remove",
+    "json_both_two_exact_records",
+    "json_field_only",
+    "json_north_only",
+    "json_empty_placements",
+    "json_both_disabled",
+    "json_field_disabled_north_active",
+    "json_north_disabled_field_active",
+    "json_reference_placements_matches_both",
+    "json_deterministic_order",
+    "json_float32_equivalent",
+    "json_invalid_missing",
+    "json_invalid_empty",
+    "json_invalid_oversize",
+    "json_invalid_bom",
+    "json_invalid_syntax",
+    "json_invalid_trailing",
+    "json_invalid_duplicate_key",
+    "json_invalid_unknown_root_key",
+    "json_invalid_unknown_placement_key",
+    "json_invalid_unknown_variant_key",
+    "json_invalid_version",
+    "json_invalid_unknown_reference",
+    "json_invalid_black_guard",
+    "json_invalid_hp",
+    "json_invalid_tint",
+    "json_invalid_ai",
+    "json_invalid_profile",
+    "json_invalid_enemy",
+    "json_invalid_x",
+    "json_invalid_ground_y",
+    "json_invalid_z",
+    "json_invalid_nonfinite",
+    "json_invalid_nan",
+    "json_invalid_yaw",
+    "json_invalid_parameters",
+    "json_invalid_stage",
+    "json_invalid_room",
+    "json_invalid_layer",
+    "json_invalid_duplicate_id",
+    "json_invalid_duplicate_site",
+    "json_invalid_disabled_entry",
+    "json_invalid_three_entries",
+    "json_invalid_id_path",
+    "json_invalid_types",
+    "json_invalid_complexity",
+    "dir_error",
+    "dir_null",
+    "dir_throw",
+    "join_error",
+    "join_null",
+    "join_throw",
+    "open_error",
+    "open_zero",
+    "open_throw",
+    "open_handle_error",
+    "open_handle_throw",
+    "size_error",
+    "size_throw",
+    "zero_size",
+    "oversize",
+    "read_error",
+    "read_throw",
+    "short",
+    "growth",
+    "tail_error",
+    "close_error",
+    "close_throw",
+    "null_host",
+    "host_wrong_version",
+    "host_short_header",
+    "host_wrong_major",
+    "host_old_minor",
+    "file_wrong_major",
+    "file_short_header",
+    "stage_wrong_major",
+    "file_missing_read",
+    "file_missing_close",
+    "host_missing_data_dir",
+    "stage_missing_add",
+    "stage_missing_remove",
+    "runtime_stage_fail_second",
+    "runtime_stage_exception_second",
+    "runtime_no_frame_registration_or_io",
+    "restart_config_changes_2_1_1_0",
+    "no_partial_config_on_late_error"
+  ],
+  "record_hex": {
+    "NORTH": "455f6f6300000000ffff0100c49c4000c5c594ce4771fe00010600000000ffff",
+    "SITE1": "455f6f6300000000ffff0100c49c4000c5c50011476d4e00010600000000ffff"
+  },
+  "manifest": {
+    "id": "dev.devf.cp06_native_config_dual",
+    "version": "0.6.2",
+    "filename": "DEVF_CP06_NATIVE_CONFIG_DUAL_windows-amd64_a4b72680d7a6e0e360f52aef1b3a4554150c78a9.dusk",
+    "source_commit": "a4b72680d7a6e0e360f52aef1b3a4554150c78a9",
+    "ci_commit": "af07099fbcffdfca1fae2c8280237c25c079b131",
+    "build_run": "38761953150",
+    "stage": "F_SP121",
+    "room": 3,
+    "layer": 6,
+    "native_records": "CONFIGURED_0_TO_2",
+    "health_color_AI": "NATIVE_UNMODIFIED",
+    "hooks": 0,
+    "JSON_required": true,
+    "JSON_read": "COLD_START_ONLY",
+    "status": "JSON_DUAL_NATIVE_QA_BUILD_PASS_DOWNLOAD_PENDING",
+    "human_gate": "HUMAN_RUNTIME_PENDING",
+    "package_bytes": 28803,
+    "package_sha256": "2658f7771344e9334219b1416bdbd9ca97cf817b28300c7d347da8e0454c48bb",
+    "dll_bytes": 54272,
+    "dll_sha256": "e1cb5eb685efd1fc4d1950ea0f7b6aa3d3a1fcb7484ccf9902b373821d3c552d",
+    "manifest_sha256": "2d07f3d2cb21f263b154fb25c27b173d3a77de5f785c617183a033c1e33d8630"
+  },
+  "audit": {
+    "status": "PACKAGE_VERIFIED",
+    "package_bytes": 28803,
+    "package_sha256": "2658f7771344e9334219b1416bdbd9ca97cf817b28300c7d347da8e0454c48bb",
+    "dll_bytes": 54272,
+    "dll_sha256": "e1cb5eb685efd1fc4d1950ea0f7b6aa3d3a1fcb7484ccf9902b373821d3c552d",
+    "manifest_sha256": "2d07f3d2cb21f263b154fb25c27b173d3a77de5f785c617183a033c1e33d8630",
+    "members": [
+      {
+        "path": "mod.json",
+        "directory": false,
+        "bytes": 276,
+        "crc32": "ac2d29bd",
+        "sha256": "2d07f3d2cb21f263b154fb25c27b173d3a77de5f785c617183a033c1e33d8630"
+      },
+      {
+        "path": "lib/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/",
+        "directory": true,
+        "bytes": 0,
+        "crc32": "00000000",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lib/windows-amd64/mod.dll",
+        "directory": false,
+        "bytes": 54272,
+        "crc32": "c290b4d6",
+        "sha256": "e1cb5eb685efd1fc4d1950ea0f7b6aa3d3a1fcb7484ccf9902b373821d3c552d"
+      }
+    ],
+    "pe": {
+      "status": "JSON_NATIVE_ONLY_PE_ABI_PASS",
+      "machine": "AMD64",
+      "imports": {
+        "MSVCP140.dll": [
+          "?_Xlength_error@std@@YAXPEBD@Z",
+          "?_Xout_of_range@std@@YAXPEBD@Z"
+        ],
+        "VCRUNTIME140.dll": [
+          "_CxxThrowException",
+          "__C_specific_handler",
+          "__current_exception",
+          "__current_exception_context",
+          "__std_exception_copy",
+          "__std_exception_destroy",
+          "__std_terminate",
+          "__std_type_info_destroy_list",
+          "memcmp",
+          "memcpy",
+          "memmove",
+          "memset"
+        ],
+        "VCRUNTIME140_1.dll": [
+          "__CxxFrameHandler4"
+        ],
+        "api-ms-win-crt-stdio-l1-1-0.dll": [
+          "__stdio_common_vsprintf"
+        ],
+        "api-ms-win-crt-math-l1-1-0.dll": [
+          "floor"
+        ],
+        "api-ms-win-crt-runtime-l1-1-0.dll": [
+          "_cexit",
+          "_configure_narrow_argv",
+          "_crt_atexit",
+          "_execute_onexit_table",
+          "_initialize_narrow_environment",
+          "_initialize_onexit_table",
+          "_initterm",
+          "_initterm_e",
+          "_register_onexit_function",
+          "_seh_filter_dll",
+          "terminate"
+        ],
+        "api-ms-win-crt-heap-l1-1-0.dll": [
+          "_callnewh",
+          "free",
+          "malloc"
+        ],
+        "KERNEL32.dll": [
+          "DisableThreadLibraryCalls",
+          "GetCurrentProcessId",
+          "GetCurrentThreadId",
+          "GetSystemTimeAsFileTime",
+          "InitializeSListHead",
+          "QueryPerformanceCounter"
+        ]
+      },
+      "metadata": [
+        {
+          "kind": "header",
+          "abi": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.file",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.stage",
+          "major": 1,
+          "minor": 0
+        }
+      ],
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "hooks": 0,
+      "game_imports": 0,
+      "tls_or_delay_imports": false,
+      "DLL_executed": false
+    }
+  },
+  "negatives": [
+    {
+      "case": "x86",
+      "rejected": true
+    },
+    {
+      "case": "foreign_stage_service",
+      "rejected": true
+    },
+    {
+      "case": "missing_export",
+      "rejected": true
+    },
+    {
+      "case": "wrong_stage_major",
+      "rejected": true
+    },
+    {
+      "case": "extra_original_asset",
+      "rejected": true
+    },
+    {
+      "case": "traversal",
+      "rejected": true
+    },
+    {
+      "case": "foreign_file_service",
+      "rejected": true
+    },
+    {
+      "case": "wrong_file_major",
+      "rejected": true
+    }
+  ],
+  "examples": {
+    "examples/both-enabled.json": {
+      "bytes": 813,
+      "sha256": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2"
+    },
+    "examples/disabled.json": {
+      "bytes": 236,
+      "sha256": "6b7541e7d27e1f2ea01a407b07c6aae08702d3069cd7cc4d8bb6eaf086e1633c"
+    },
+    "examples/field-only.json": {
+      "bytes": 526,
+      "sha256": "2283f1de6a9c8c31297ed0ab40c59df57a2f7666f41b982c8d066964b75dd72e"
+    },
+    "examples/north-only.json": {
+      "bytes": 525,
+      "sha256": "ccb55cb8bba2d0d76b9e2d1f83d1397d1e0efce8ef498d8518af2c32424f7799"
+    },
+    "examples/placements.json": {
+      "bytes": 813,
+      "sha256": "4f6a1d75d9a476761a0b3dc3c2c8a88b8067c632c91640e7556242eecb9190a2"
+    }
+  },
+  "source_zip_bytes": 32773,
+  "source_zip_sha256": "f92c9131f4011f2b1caca9038d3cf8741aecc1717f98dc9cdbf6d3f44b6a590c"
+}

@@ -23,4 +23,4 @@ Copia/adaptación mínima del parser y IO de CP06 (blobs f952fc3db42a3d97036778f
 Base literal 89dad44ca07ddd414e946e6d910371b9b7a1e7a3. Fuentes/SDK oficial40457c6… sólo lectura, sin host/Aurora/importlib build. Archivos y paquetes anteriores intactos.
 El usuario reportó QA A correcto y dos adicionales vivos simultáneamente en QA B. El resumen de dusklight-20261015-101726.log fue analizado en ChatGPT: records=2/edit0=1/edit1=2 y PID147/148; Codex no recibió sus bytes ni atribuye cada PID a un placement. El adjunto10:17:12 era QA B truncado, no un log A. No se heredan reentrada, combate, FPS ni identidad personalizada de esas observaciones.
 
-Build, tests y descarga de esta versión: **PENDING** hasta evidencia nueva. Gameplay nuevo: HUMAN_RUNTIME_PENDING. Véase HUMAN_TEST.md; no repetir ensayos históricos.
+**JSON_DUAL_NATIVE_QA_BUILD_READY / HUMAN_RUNTIME_PENDING**. Build MSVC,109casos,8negativos, paquete y descarga REAL independientes PASS. Fuente compilada a4b72680d7a6e0e360f52aef1b3a4554150c78a9; informes posteriores no alteran el paquete. Véanse BUILD_AND_PACKAGE.md, TEST_RESULTS.md y HUMAN_TEST.md. No repetir ensayos históricos.
