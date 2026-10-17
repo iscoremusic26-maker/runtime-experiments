@@ -27,3 +27,7 @@ Save verifica hash externo antes y después de temporal, crea respaldo único ve
 
 ## Corrección focal de compatibilidad CP08
 La ruta CP08_OBSERVED exige recurso auténtico R03_00.arc (SHA Geometry.Hash), F_SP121/3/6 y variante00. Conserva una Geometry.LoadBytes(raw) histórica y delega en Config.Validate + Config.GeometryCheck sin reescribir sus cálculos, región ni tolerancia float32 de altura. CP08_OBSERVED es procedencia legacy, no certificado para puntos nuevos. La ruta QA_CANDIDATE conserva Place/Mesh.Ground sin cambios, inclusive room3. Al cambiar posición, capa o yaw se desactiva el marcador y pasa a QA_CANDIDATE. Seleccionar otra sala no modifica la colección. Los vectores humanos solo existen en tests.
+
+## Actualización de estado — 2026-10-17
+- Corrección sobre el host (código oficial 40457c6, `src/dusk/mods/svc/stage.cpp` L73–75, L139–154, L270–289): para `add_actor` el host exige sala exacta (rechaza 0xFF); el comodín (`-1`) existe solo para la capa. En la sección "Sala y capa" lo de "room exacta y layer exacta (host también admite wildcard)" debe leerse así. DEVF sigue prohibiendo el comodín de capa.
+- Observación humana (USER_TESTIMONY): R01/L6 observada en una sesión; el resto sigue sin certificar. Ver `DEVF/TRANSFER_01_HANDOFF_2026-10-17.md`.

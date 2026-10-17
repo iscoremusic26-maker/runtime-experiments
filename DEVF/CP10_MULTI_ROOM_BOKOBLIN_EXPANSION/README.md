@@ -10,3 +10,6 @@ Abra el editor -> CP10 edición multi-room -> CISO/Catálogo -> seleccione recur
 Schema1 sigue intacto en editor de compatibilidad y en los mods nuevos. Para combinar sus tres ubicaciones con nuevas salas: cargar R03 desde catálogo, usar **Copiar legacy schema1**, confirmar copia y guardar schema2 en otro archivo. No hay migración automática.
 
 Solo se entregan herramienta, dos mods y fuentes propias. No incluye mapas/ARC/CISO/KCL/PLC. El CISO se lee localmente, sin Dolphin ni Link. Ver HUMAN_TEST.md. No hot reload, ActorId, personalización, CP11 o certificación universal.
+
+## Actualización de estado — 2026-10-17
+Build y descarga independiente en CI: success (run 38988277707). QA humana (USER_TESTIMONY): F_SP121/R03/L6 (tres originales) y F_SP121/R01/L6 (bokoblin-004) observados en Windows/DX12. La frase de que ninguna capa nueva está observada deja de ser exacta para R01/L6; el resto del alcance sigue PENDING (`CP10_FULL_SCOPE_PENDING`). Sin PASS universal. Ver `DEVF/TRANSFER_01_HANDOFF_2026-10-17.md`.

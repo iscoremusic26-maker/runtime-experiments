@@ -10,3 +10,6 @@ HUMAN_RUNTIME_PENDING. No repetir importación CP09 ni QA histórica CP08.
 8. Rollback: cerrar, retirar pareja CP10, restaurar exactamente pareja CP08 y encounters.json/placements.json respaldados; usar editor CP09 original. No tocar saves/ROM. Una sala nueva observada no equivale a dos; enviar observación + extractos de log sin disco/ARC.
 
 Recursos locales o capas bloqueados no deben forzarse cambiando hashes/JSON a mano. Ni catálogo ni registro prueban suelo dinámico o aparición. El paquete no instala nada automáticamente.
+
+## Actualización de estado — 2026-10-17
+Lo anterior era el protocolo previo a la QA. Resultados aportados por el usuario (USER_TESTIMONY): se instaló la pareja DEVF_Provider_0.10.0_TEST / BokoblinExpansion_0.3.0_TEST; copia schema1→schema2 conservó los tres puntos; los tres originales aparecieron (F_SP121/R03/L6); bokoblin-004 (R01/L6) apareció correctamente. La capa 6 en R01 quedó observada en esa sesión; no se generaliza a otras salas/capas ni a otros estados de juego. **Siguen PENDING** (pasos 7 y siguientes): desactivar bokoblin-004 y reiniciar, y una segunda sala nueva distinta de R01 y R03. Ver `DEVF/TRANSFER_01_HANDOFF_2026-10-17.md`.

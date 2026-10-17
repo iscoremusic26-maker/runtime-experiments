@@ -1,2 +1,8 @@
 # Resultados CP10
 Implementación preparada; build MSVC/.NET, pruebas y descarga independiente PENDING hasta run real. No asignar PASS por inspección. Suite enlaza 42 casos CP08 y71 importador CP09, runtime CP08 original, tests CP10 de contrato/rollback/geometría/UI y corpus C#→C++. Fixtures nuevas sintéticas; un ARC auténtico R03 autorizado. No hay CISO comercial ni otras salas auténticas en CI. Human runtime CP10 PENDING. Se actualizará este archivo con evidencia del run final.
+
+## Actualización de estado — 2026-10-17 (nota fechada; lo anterior se conserva como historia)
+- **CI (consultado por API GET):** run 38988277707, completed/success, intento 1, head `aff0b5d9f522a1944a15e5cd522a187a5f9b9a6b`; jobs `build` e `independent-download` success; fuente fijada `42fc87455624bde8b898a26a0512f708f02a3b26`. Artefacto TEST id 12083854081, expira 2026-11-16T00:54:16Z (informado). No equivale a pruebas en juego. Los recuentos de casos del run final no se verificaron en esta actualización.
+- **Observación humana (USER_TESTIMONY, Windows/Dusklight 2.0.3/D3D12; logs resumidos, no abiertos por Claude):** sesión A: 3 Bokoblins originales en F_SP121/R03/L6 `CP10_CP08_COMPATIBILITY_HUMAN_RUNTIME_PASS_WINDOWS_DX12`. Sesión B: bokoblin-004 apareció en F_SP121/R01/L6 `CP10_FIRST_MULTIROOM_HUMAN_RUNTIME_PASS_WINDOWS_DX12`. Ambos limitados a esas salas/capas y sesiones.
+- **PENDING (`CP10_FULL_SCOPE_PENDING`):** desactivación individual de bokoblin-004, otra sala nueva (no R01/R03), otras capas/estados. El `MANIFEST.json` empaquetado dice `HUMAN_RUNTIME_PENDING` porque se generó en la build, antes de la QA; no se modificó.
+- Detalle: `DEVF/TRANSFER_01_HANDOFF_2026-10-17.md`.

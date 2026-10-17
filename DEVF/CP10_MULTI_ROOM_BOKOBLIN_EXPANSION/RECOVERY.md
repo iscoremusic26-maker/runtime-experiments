@@ -7,3 +7,6 @@ No reset/force/merge/retag. Los cambios nuevos se revierten retirando CP10, sin 
 Si falla CI, no distribuir TEST_READY. Reproducir workflow nuevo con source SHA literal y inputs privados existentes; no requiere CISO comercial ni recompilar host. CP11 no iniciado.
 
 Reanudación: el run38960997596 compiló MSVC/.NET y pasó43 casos runtime CP10, pero falló en FLOOR_AMBIGUOUS al migrar legacy; no produjo paquete válido. La corrección está en PlacementGeometry.Check y delega al validador histórico solo para identidad legacy exacta. La CI repite todos los gates sobre source pin nuevo, sin sustituir artefactos anteriores.
+
+## Actualización de estado — 2026-10-17
+El run de CI final es 38988277707 (success, head `aff0b5d9f522a1944a15e5cd522a187a5f9b9a6b`, fuente `42fc87455624bde8b898a26a0512f708f02a3b26`), posterior al run fallido 38960997596 mencionado arriba. Artefacto TEST id 12083854081 expira 2026-11-16T00:54:16Z: archivar localmente con su MANIFEST y SHA si se desea conservarlo. Sin cambios en el procedimiento de recuperación.
