@@ -7,3 +7,7 @@ Blue da una oportunidad acotada al aliado antes de nuevos golpes. El grito inici
 Se mantienen CP15 niveles1/2/3, tasas1.15/1.30 y bloqueos20/17/15; CP10.6 bonus650/250 solo por proximidad real; Red/Black y visuales anteriores sin cambios. CP14 `LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED` es una incidencia humana PREVIA conocida; CP16 no la resuelve ni certifica robo de vida.
 
 Se entrega solo una Expansion nueva. Conservar Provider/editor CP13 0.13.0 y JSON propios; no instalar dos Expansion. Ver HUMAN_TEST.md y RECOVERY.md. No instalar hasta CI Windows y descarga independiente positivas; evidencia humana CP16 pendiente.
+
+## Entrega verificada
+
+[Descargar Expansion CP16 TEST](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39173568043/artifacts/12153502586) · [Run final SUCCESS](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39173568043). Fuente compilada `e364fdb1489f7e61a0e0719a62fb627b5749f730`, CI `a5c33dcc065d6cf7861d00bbe28b40e88b7b2911`. Build y descarga independiente PASS; gameplay sigue HUMAN_RUNTIME_PENDING. Hashes y detalles en TEST_RESULTS.md / VERIFIED_PACKAGE.json. Conservar Provider/editor y JSON; sustituir únicamente la Expansion, con arranque frío.

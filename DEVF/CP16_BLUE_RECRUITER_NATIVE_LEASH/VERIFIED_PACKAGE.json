@@ -1,0 +1,176 @@
+{
+  "status": "SOURCE_IMPLEMENTED_LAB_PASS_WINDOWS_MSVC_PASS_INDEPENDENT_DOWNLOAD_PASS_HUMAN_RUNTIME_PENDING",
+  "source_compiled": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
+  "ci_commit": "a5c33dcc065d6cf7861d00bbe28b40e88b7b2911",
+  "sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "source_pr": "https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/72",
+  "ci_pr": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/pull/57",
+  "workflow": {
+    "run_id": 39173568043,
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39173568043",
+    "conclusion": "success",
+    "build_job": 117811511221,
+    "independent_download_job": 117812394406,
+    "jobs": "SUCCESS"
+  },
+  "artifact": {
+    "id": 12153502586,
+    "name": "DEVF_CP16_BLUE_RECRUITER_TEST_39173568043",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39173568043/artifacts/12153502586",
+    "expires_at_utc": "2026-11-17T22:48:48Z",
+    "expires_at_america_panama": "2026-11-17 17:48:48 -05:00",
+    "expired": false,
+    "github_outer_zip_bytes": 1192869
+  },
+  "zip": {
+    "filename": "DEVF_CP16_BLUE_RECRUITER_TEST.zip",
+    "bytes": 1192534,
+    "sha256": "f665bf0c9eecc3d8ff21f96fa6049719a04363dc39a6f34f6fa4c64bba6c3302"
+  },
+  "expansion": {
+    "filename": "BokoblinExpansion_0.13.0_CP16_TEST.dusk",
+    "mod_id": "dev.bokoblin.expansion",
+    "version": "0.13.0",
+    "bytes": 99543,
+    "sha256": "216e19d91f67039e3ac999c38b0b8bdeb1881f445672bed01e23f959c829ef7b",
+    "dll_bytes": 229376,
+    "dll_sha256": "2dffc8c0eeec1c52f994d745332d0bff895f7fe3f0a60b5cc3fa46757f0b17f5",
+    "manifest_sha256": "f611740d906c68b4c2785b02d5c31fd9562500867ef43e2f9c0a52ecbd1374d6"
+  },
+  "checks": {
+    "cpp_cases": {
+      "cp15_lab_cases": 38,
+      "cp16_lab_cases": 56,
+      "cp14_lab_cases": 16,
+      "cp13_runtime_cases": 26,
+      "runtime_lab_cases": 66,
+      "black_lab_cases": 26,
+      "variant_lab_cases": 30,
+      "damage_lab_cases": 22,
+      "dynamic_lab_cases": 28,
+      "strokes_lab_cases": 36,
+      "perf_lab_cases": 4,
+      "cp12_lab_cases": 7,
+      "visual_lab_cases": 22,
+      "eye_lab_cases": 9,
+      "texture_lab_cases": 20
+    },
+    "cp13_editor": 39,
+    "cp08_app": 42,
+    "cp09_importer": 71,
+    "multi": 110,
+    "names": 25,
+    "expansion_negatives": 7,
+    "provider_regression_negatives": 19,
+    "official_import_symbols": true,
+    "pe_abi": "CP16_PE_ABI_PASS",
+    "game_imports": [
+      "?checkBck@daE_OC_c@@QEAA_NH@Z",
+      "?dComIfGp_event_runCheck@@YAHXZ",
+      "?dComIfGp_getItemLifeCount@@YAMXZ",
+      "?dComIfGp_getLinkPlayer@@YAPEAVdaPy_py_c@@XZ",
+      "?dComIfGp_getStartStageName@@YAPEBDXZ",
+      "?dComIfGp_isEnableNextStage@@YAHXZ",
+      "?dComIfGp_particle_getEmitter@@YAPEAVJPABaseEmitter@@I@Z",
+      "?dComIfGp_particle_set@@YAIIGPEBUcXyz@@PEBVdKy_tevstr_c@@PEBVcsXyz@@0EPEAVdPa_levelEcallBack@@CPEBUGXColor@@40@Z",
+      "?dComIfGs_getLife@@YAGXZ",
+      "?execute@daE_OC_c@@QEAAHXZ",
+      "?fopAcIt_Judge@@YAPEAXP6APEAXPEAX0@Z0@Z",
+      "?fpcM_IsCreating@@YAHI@Z",
+      "?fpcSch_JudgeByID@@YAPEAXPEAX0@Z",
+      "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+      "?getResource@JPAResourceManager@@QEBAPEAVJPAResource@@G@Z",
+      "?loadGXTexObj@J3DTexture@@QEAAXG@Z",
+      "?mEmitterMng@dPa_control_c@@2PEAVJPAEmitterManager@@EA",
+      "?searchPlayer@daE_OC_c@@QEAA_NXZ",
+      "?setActionMode@daE_OC_c@@QEAAXHH@Z",
+      "GXDestroyTexObj"
+    ],
+    "hooks": [
+      "?execute@daE_OC_c@@QEAAHXZ"
+    ],
+    "printf_format_warnings": 0,
+    "source_blobs": 376,
+    "crc": "PASS",
+    "download_bytes_sha_source_ledger": true
+  },
+  "runtime_provenance": {
+    "identical_to_cp14": 22,
+    "identical_to_cp15": 22,
+    "outside_cp16_adapter_unchanged": true,
+    "closed_actor_assignments": [
+      "a->field_0x6c0=",
+      "a->field_0x6c2=",
+      "a->health=",
+      "a->health=",
+      "a->health=",
+      "a->health=",
+      "a->mWatchPos.x=",
+      "a->mWatchPos.x=",
+      "a->mWatchPos.x=",
+      "a->mWatchPos.x=",
+      "a->mWatchPos.x=",
+      "a->mWatchPos.y=",
+      "a->mWatchPos.y=",
+      "a->mWatchPos.y=",
+      "a->mWatchPos.y=",
+      "a->mWatchPos.y=",
+      "a->mWatchPos.z=",
+      "a->mWatchPos.z=",
+      "a->mWatchPos.z=",
+      "a->mWatchPos.z=",
+      "a->mWatchPos.z="
+    ],
+    "native_setter_calls": [
+      "devf_recruit::Wait,0",
+      "devf_recruit::Sound,0",
+      "devf_recruit::Watch,3",
+      "devf_recruit::Find,2",
+      "devf_recruit::Watch,0"
+    ],
+    "native_source": {
+      "revision": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "cpp_sha256": "a4b3e8a44e0d8e093c7d4b398e293bdbefcac5ab49e0f1fe915417a1af8be03d",
+      "typed_members_source_verified": true
+    }
+  },
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "preservation": {
+    "base": "933f249bbf422606d35dd8b55bf1afcbe30722f3",
+    "source": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
+    "baseline_blobs": 2082,
+    "changed_historical_blobs": 0
+  },
+  "provider_shipped": false,
+  "editor_shipped": false,
+  "user_keeps_provider": {
+    "filename": "DEVF_Provider_0.13.0_CP13_TEST.dusk",
+    "bytes": 130335,
+    "sha256": "3a3c874e71cf8b63c43fb54340e11778011c486026897d6c29d3d6ad2e67634e",
+    "dll_sha256": "2932b3e2c1b188ae89f22545e94431a81e71d79c96c076038ae286af9a328c83",
+    "run_id": 39153841948,
+    "artifact_id": 12146112007
+  },
+  "game_executed": false,
+  "human_runtime": "PENDING",
+  "known_prior_cp14_issue": "USER_REPORTED LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED; CP16 does not fix or certify Link lifesteal attribution",
+  "prior_runs": [
+    {
+      "id": 39172622838,
+      "status": "FAIL_MSVC_RESIDUAL_EVASION_INIT_TELEMETRY_NO_TEST_PACKAGE"
+    },
+    {
+      "id": 39172880087,
+      "status": "SUCCESS_INTERMEDIATE_53_CASES_NOT_FINAL_DELIVERY"
+    },
+    {
+      "id": 39173249440,
+      "status": "SUCCESS_INTERMEDIATE_54_CASES_NOT_FINAL_DELIVERY"
+    }
+  ]
+}
