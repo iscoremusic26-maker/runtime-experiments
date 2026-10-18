@@ -8,6 +8,6 @@ Diagnóstico limitado al ledger existente, no censo del nivel. Las ofertas no pr
 
 Fuente base documental1a61173bfe0e5da3e5e1144c687a399c78a0e660; CP16 realmente compilado e364fdb1489f7e61a0e0719a62fb627b5749f730. PR72 y CI57 quedan históricos. SDK40457c6adb381928e4b5fef6ed459ed291edd5e2.
 
-Estado al implementar:53 casos FIX01 locales ASan/UBSan PASS (LeakSanitizer no ejecutable en este entorno ptrace). Build Windows/descarga pendientes hasta evidencia de Actions. FIX01 HUMAN_RUNTIME_PENDING. El PASS humano favorable corresponde a0.13.0, no a este TEST. Incidente Red LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED sigue pendiente.
+Estado verificado:53 casos FIX01 locales ASan/UBSan PASS (LeakSanitizer no ejecutable en este entorno ptrace). Windows MSVC y descarga independiente PASS: run39177118453 (build + independent-download SUCCESS).53 FIX01 +56 CP16 históricos y regresiones PASS. [Descargar TEST privado](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39177118453/artifacts/12155150789), artifact DEVF_CP16_FIX01_TEST_39177118453, vence17-11-2026 18:37:51 America/Panama. FIX01 HUMAN_RUNTIME_PENDING. El PASS humano favorable corresponde a0.13.0, no a este TEST. Incidente Red LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED sigue pendiente.
 
 Ver HUMAN_TEST.md y RECOVERY.md antes de instalar. No modifica host/SDK/ROM/saves, Provider, editor, API ni archivos JSON.

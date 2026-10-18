@@ -8,3 +8,5 @@
 6. Ante crash, bucle, estados forzados, duplicados o caída perceptible grave: detener, cerrar y rollback. No continuar ensayos de riesgo. Retirar FIX01 y restaurar0.13.0 exacto (SHA en RECOVERY); no tocar ROM/saves.
 
 Codex no ejecutó el juego. Sonidos, animaciones, navegación y mejora real requieren reporte del usuario después de esta entrega. No repetir los gates de aparición anteriores.
+
+TEST verificado: [artifact](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39177118453/artifacts/12155150789), [run](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39177118453). .dusk103638bytes SHA256f5d601f5e9d7a7f8e141a59aa1b0ee811bcbf2dfac16c1add6a40033e2e729b6. Solo Expansion; manual de rollback incluido.

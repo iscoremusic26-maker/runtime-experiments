@@ -31,3 +31,7 @@ Fundamento exacto: d_a_e_oc.cpp@40457c6, damage_check~638–700 usa debounce10 o
 ## CI y procedencia
 
 Workflow nuevo apilado sobre CI CP16; source exacto pinneado, mismo SDK/importlib oficiales, MSVC x64, package oficial. Se ejecuta lab CP16 histórico56 sin alterar golden y FIX01 shared-policy53; CP15 y regresiones siguen su contexto histórico. Provider/editor CP13 se reconstruyen solo para regresión, no se entregan. SourceZip/ledger registra origen exacto; dos documentos CP16 del espejo conservan su blob de fuente compilada e364, no los cierres posteriores1a611 (excepciones explícitas de origen documental). Runtime previo coincide con1a611/e364. Descarga independiente verifica bytes/CRC/SHA/PE/ABI/imports/manifest/source real. CI no observa juego, audio ni rendimiento humano.
+
+## Cierre observado de CI
+
+Run39177118453 build+independent-download SUCCESS sobre fuentee6b85b123e0895c23dce6415c54b8a25773e4504/CIec88e78fdd45da95203d068e0709c467403b48d5.417 blobs verificados;23 archivos runtime iguales. El CPP oficial Windows tiene SHA rawa4b3e8a44e0d8e093c7d4b398e293bdbefcac5ab49e0f1fe915417a1af8be03d y normalizado LF e258bcbd1bd10d76bb4da243d837007f0173964aee3fc073b75cd92ab0d7e9a4 (misma fuente pinneada, finales de línea distintos). Unsafe bits:1canary,2hidden,4deleting,8event,16transition,32ground. Table13312B frente aCP16 12032B (+1280B), Diagnostics32B; arrays fijos, O64 por llamada/150 ejecuciones propias. No hay medición de FPS humano FIX01.

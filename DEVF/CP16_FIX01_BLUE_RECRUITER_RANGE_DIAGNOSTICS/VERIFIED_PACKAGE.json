@@ -1,0 +1,174 @@
+{
+  "checkpoint": "DEVF_CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS",
+  "status": "SOURCE_IMPLEMENTED_LAB_PASS_WINDOWS_MSVC_PASS_INDEPENDENT_DOWNLOAD_PASS",
+  "human": "HUMAN_RUNTIME_PENDING",
+  "game_executed": false,
+  "source_compiled": "e6b85b123e0895c23dce6415c54b8a25773e4504",
+  "source_parent_documentary": "1a61173bfe0e5da3e5e1144c687a399c78a0e660",
+  "baseline_cp16_compiled": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
+  "ci_commit": "ec88e78fdd45da95203d068e0709c467403b48d5",
+  "source_branch": "feature/devf-cp16-fix01-range-diagnostics",
+  "ci_branch": "ci/devf-cp16-fix01-range-diagnostics",
+  "source_pr": 73,
+  "ci_pr": 58,
+  "workflow_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39177118453",
+  "run_id": 39177118453,
+  "jobs": [
+    {
+      "id": 117821964101,
+      "name": "build",
+      "conclusion": "success"
+    },
+    {
+      "id": 117822609788,
+      "name": "independent-download",
+      "conclusion": "success"
+    }
+  ],
+  "artifact": {
+    "id": 12155150789,
+    "name": "DEVF_CP16_FIX01_TEST_39177118453",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39177118453/artifacts/12155150789",
+    "github_wrapper_bytes": 1341401,
+    "github_wrapper_digest": "sha256:0704877180a3fe4d69959fcca5e5e800b9634777a229b1f37db0172871a92db1",
+    "expires_at_utc": "2026-11-17T23:37:51Z",
+    "expires_at_America_Panama": "2026-11-17T18:37:51-05:00"
+  },
+  "zip": {
+    "filename": "DEVF_CP16_FIX01_TEST.zip",
+    "bytes": 1341092,
+    "sha256": "c9602e4295ae595362ac03fced3c4fa3f21173752f24ed430884bf733bbd63b5"
+  },
+  "expansion": {
+    "id": "dev.bokoblin.expansion",
+    "version": "0.13.1",
+    "filename": "BokoblinExpansion_0.13.1_CP16_FIX01_TEST.dusk",
+    "bytes": 103638,
+    "sha256": "f5d601f5e9d7a7f8e141a59aa1b0ee811bcbf2dfac16c1add6a40033e2e729b6",
+    "dll_bytes": 238592,
+    "dll_sha256": "ce86a178ce8d36ce7b160c4a54d9474b6356e9e6a213ae0f4abf96bf170a0776",
+    "manifest_sha256": "9b2c250350af12d6e72ecbbd188bd12b27c9d155935df0fc647954425e736eb6"
+  },
+  "audit": {
+    "PE": "AMD64",
+    "ABI": "CP16_FIX01_PE_ABI_PASS",
+    "execute_hook_PRE_POST_only": true,
+    "reviewed_game_imports_byte_identical": true,
+    "source_ledger_verified": true,
+    "CRC": "PASS",
+    "downloaded_from_published_artifact": true,
+    "expansion_negative_cases": [
+      {
+        "case": "x86",
+        "rejected": true
+      },
+      {
+        "case": "wrong_execute_hook",
+        "rejected": true
+      },
+      {
+        "case": "wrong_hook_service",
+        "rejected": true
+      },
+      {
+        "case": "wrong_export",
+        "rejected": true
+      },
+      {
+        "case": "wrong_encounter_service",
+        "rejected": true
+      },
+      {
+        "case": "original_arc_forbidden",
+        "rejected": true
+      },
+      {
+        "case": "path_escape",
+        "rejected": true
+      }
+    ],
+    "provider_negative_cases_regression_only": 19,
+    "loose_DLL": false,
+    "game_assets": false
+  },
+  "lab": {
+    "fix01": 53,
+    "cp16_historical": 56,
+    "cp15_historical": 38,
+    "cp14_on_actual_fix01_runtime": 16,
+    "cpp_case_count_reported": 459,
+    "cpp_case_count_excludes_legacy_lab_unreported_count": true,
+    "editor_counts_reported": {
+      "CP13": 39,
+      "CP08": 42,
+      "CP09": 71,
+      "multi_including_names": 110,
+      "names_repeated_in_multi": 25
+    },
+    "local_ASan_UBSan": "PASS",
+    "local_leak_sanitizer": "NOT_RUN_PTRACE_ENVIRONMENT",
+    "table_bytes": 13312,
+    "diagnostics_bytes": 32,
+    "printf_format_warnings": 0
+  },
+  "source_pin": {
+    "path": "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/SOURCE_CI_CP16_FIX01.json",
+    "ci_git_blob": "eaf51afeeefd5fa1d97349a0cba16dafe97feb60",
+    "count": 417,
+    "historical_document_origins": {
+      "DEVF/CP16_BLUE_RECRUITER_NATIVE_LEASH/TEST_RESULTS.md": {
+        "source_commit": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
+        "git_blob": "db72284363f5c4724f5dcce03b97d0462c8ccb43",
+        "reason": "Immutable original CP16 CI documentation; not compiled runtime. Documentary closure changed source docs only."
+      },
+      "DEVF/CP16_BLUE_RECRUITER_NATIVE_LEASH/README.md": {
+        "source_commit": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
+        "git_blob": "8fee7150318e43641a85416482629d577ff6e4dd",
+        "reason": "Immutable original CP16 CI documentation; not compiled runtime. Documentary closure changed source docs only."
+      }
+    }
+  },
+  "preservation": {
+    "source": {
+      "baseline_blobs": 2124,
+      "changed_old": [],
+      "new": 41
+    },
+    "CI": {
+      "baseline_blobs": 823,
+      "changed_old": [],
+      "new": 43
+    },
+    "runtime_files_byte_identical_to_cp16": 23,
+    "outside_recruitment_adapter_except_version_init_unchanged": true,
+    "provider_editor_JSON_API_not_changed": true,
+    "provider_regression_build_shipped": false,
+    "user_keeps_provider": {
+      "filename": "DEVF_Provider_0.13.0_CP13_TEST.dusk",
+      "bytes": 130335,
+      "sha256": "3a3c874e71cf8b63c43fb54340e11778011c486026897d6c29d3d6ad2e67634e",
+      "dll_sha256": "2932b3e2c1b188ae89f22545e94431a81e71d79c96c076038ae286af9a328c83",
+      "run_id": 39153841948,
+      "artifact_id": 12146112007
+    },
+    "baseline_expansion": {
+      "filename": "BokoblinExpansion_0.13.0_CP16_TEST.dusk",
+      "bytes": 99543,
+      "sha256": "216e19d91f67039e3ac999c38b0b8bdeb1881f445672bed01e23f959c829ef7b"
+    }
+  },
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "WindowsSDKVersion": "10.0.26100.0\\",
+    "VSCMD_ARG_TGT_ARCH": "x64"
+  },
+  "sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+  "limitations": [
+    "Original CP16 human partial PASS does not certify FIX01.",
+    "Three generic caller aborts in the old log lack exact failing fields; DAMAGE5 association is not retrospective proof.",
+    "Grace10 is bounded normal-hit policy based on native debounce/source FSM, not measured animation duration.",
+    "Tracked ledger only, not global census; bounded/sampled candidate details.",
+    "Red LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED remains pending."
+  ]
+}
