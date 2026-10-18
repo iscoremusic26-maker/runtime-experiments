@@ -1,0 +1,16 @@
+{
+ "status": "CP15_WINDOWS_CI_PASS_HUMAN_PENDING",
+ "source_compiled": "9fddfd9d445ade5d1ae5b4cc6f7d8380fc99f336",
+ "ci_commit": "ea52ba92248a150dda0a74fe3d4b43f014bd27e4",
+ "run_id": 39166668585,
+ "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39166668585",
+ "artifact": {"id": 12150912657, "name": "DEVF_CP15_BLUE_AI_TEST_39166668585", "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39166668585/artifacts/12150912657", "expires_at_utc": "2026-11-17T21:13:30Z"},
+ "zip": {"filename": "DEVF_CP15_BLUE_AI_TEST.zip", "bytes": 1053866, "sha256": "2a0463d750656d0f849493935dc77aaaa1c5a22964e4653078b9b756186d2083"},
+ "expansion": {"filename": "BokoblinExpansion_0.12.0_CP15_TEST.dusk", "version": "0.12.0", "bytes": 95511, "sha256": "7444fe51a1eeec8b050775e2991473db08fb3f770b3b7f3028dddbe334d7670d", "dll_bytes": 212480, "dll_sha256": "39519969fc7d4bc81e723aef8ba2a9b0d3439572e6779613ceb8fdc797d6a36f", "pe": "CP15_PE_ABI_PASS", "negatives_rejected": 7, "hooks": ["daE_OC_c::execute PRE+POST"], "new_game_imports": ["?checkBeforeBg@daE_OC_c@@QEAAHXZ", "?checkBeforeFloorBg@daE_OC_c@@QEAA_NM@Z", "?checkBck@daE_OC_c@@QEAA_NH@Z", "?gndCheck@fopAcM_gc_c@@SA_NPEBUcXyz@@@Z", "?mGroundY@fopAcM_gc_c@@2MA", "?dComIfGp_event_runCheck@@YAHXZ"]},
+ "requires_provider": {"filename": "DEVF_Provider_0.13.0_CP13_TEST.dusk", "sha256": "3a3c874e71cf8b63c43fb54340e11778011c486026897d6c29d3d6ad2e67634e", "from_run": 39153841948, "shipped_in_cp15": false},
+ "provider_regression_build": {"shipped": false, "dll_sha256": "43082c334ec0d826c5e777d612f7ff01c28e3c841eb87471839cebc608b72dde", "note": "MSVC build is not byte-reproducible; source unchanged and pinned; audit + 19 negatives pass"},
+ "tests": {"cp15_lab": 38, "cp14_lab_on_cp15_runtime": 16, "cp13_runtime": 26, "runtime_lab": 66, "black_lab": 26, "variant_lab": 30, "damage_lab": 22, "dynamic_lab": 28, "strokes_lab": 36, "perf_lab": 4, "cp12_lab": 7, "visual_lab": 22, "eye_lab": 9, "texture_lab": 20, "CP13_editor": 39, "CP08_app": 42, "CP09_importer": 71, "multi_editor": 110, "name_resolver": 25, "printf_format_warnings": 0, "pinned_blobs": 335},
+ "runtime_provenance": {"identical_to_cp14": 22, "new": 2, "mod_cpp_cp14_lines_replaced": 2, "mod_cpp_lines_added": 144},
+ "verification": {"independent_download_ci": "PASS", "independent_download_local": "PASS (zip/dusk SHA256, manifest, CRC)", "game_executed": false},
+ "human": "HUMAN_RUNTIME_PENDING"
+}
