@@ -1,0 +1,88 @@
+{
+  "status": "CP13_WINDOWS_CI_PASS_HUMAN_PENDING",
+  "engineering_scope": "CP13_PARTIAL_WITH_EXPLICIT_GEOMETRY_BLOCKERS",
+  "source_compiled": "c3257bdd360c717fb906aa9e2c942ad9e98a1bd6",
+  "ci_commit": "d126316a01d3243a805f899a1ffe9ec77ce90723",
+  "run_id": 39153841948,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39153841948",
+  "artifact": {
+    "id": 12146112007,
+    "name": "DEVF_CP13_HYRULE_FIELD_TEST_39153841948",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39153841948/artifacts/12146112007",
+    "expires_at_utc": "2026-11-17T18:25:23Z",
+    "expires_at_panama": "2026-11-17 13:25:23 America/Panama"
+  },
+  "zip": {
+    "filename": "DEVF_CP13_HYRULE_FIELD_TEST.zip",
+    "bytes": 66608917,
+    "sha256": "2f118703d7c23d55f3bf9eb18bdbf9b4ab731f1f7ee5011b255226b75f1e33e0"
+  },
+  "editor": {
+    "machine": "AMD64",
+    "bytes": 161967639,
+    "sha256": "1b6c72ae8b81d2b23409e311f60ca8f942b01ba2e70e0b484c6a7f547f3a45de",
+    "self_contained": true
+  },
+  "provider": {
+    "filename": "DEVF_Provider_0.13.0_CP13_TEST.dusk",
+    "bytes": 130335,
+    "sha256": "3a3c874e71cf8b63c43fb54340e11778011c486026897d6c29d3d6ad2e67634e",
+    "dll_bytes": 296960,
+    "dll_sha256": "2932b3e2c1b188ae89f22545e94431a81e71d79c96c076038ae286af9a328c83"
+  },
+  "expansion": {
+    "filename": "BokoblinExpansion_0.10.0_CP13_TEST.dusk",
+    "bytes": 80597,
+    "sha256": "e216c9989114e42744ca0a88402c416736c0a3ad8e743e81ce3630fd6197a218",
+    "dll_bytes": 178688,
+    "dll_sha256": "7fdb6681904c675220f09fbde19d1811c8a2b7c0988a5177c28ef6996a3a692b"
+  },
+  "tests": {
+    "CP08_app": 42,
+    "CP09_importer": 71,
+    "multi_editor_regressions": 110,
+    "name_resolver": 25,
+    "CP13_editor": 39,
+    "CP13_core": 26,
+    "CP12_hook_body_unchanged_except_version": true,
+    "labs": {
+      "cp13_runtime_cases": 26,
+      "runtime_lab_cases": 66,
+      "black_lab_cases": 26,
+      "variant_lab_cases": 30,
+      "damage_lab_cases": 22,
+      "dynamic_lab_cases": 28,
+      "strokes_lab_cases": 36,
+      "perf_lab_cases": 4,
+      "cp12_lab_cases": 7,
+      "visual_lab_cases": 22,
+      "eye_lab_cases": 9,
+      "texture_lab_cases": 20
+    },
+    "provider_negatives": 19,
+    "expansion_negatives": 7
+  },
+  "verification": {
+    "independent_download": "PASS",
+    "CRC": "PASS",
+    "source_ledger": true,
+    "toolchain": {
+      "VCToolsVersion": "14.51.36231",
+      "WindowsSDKVersion": "10.0.26100.0\\",
+      "VSCMD_ARG_TGT_ARCH": "x64"
+    },
+    "historical_integrity": {
+      "base": "ee27d038b8572eb3e41ac6184654dc5c476681d2",
+      "source": "c3257bdd360c717fb906aa9e2c942ad9e98a1bd6",
+      "changed_existing": [],
+      "missing": [],
+      "added": 63,
+      "added_outside_cp13": [],
+      "same_existing_blobs": 1940
+    },
+    "game_executed": false,
+    "additional_real_rooms": "NOT_AVAILABLE_IN_CI",
+    "room6": "USER_SCREENSHOT_KCL_DEGENERATE_LOCAL_DIAGNOSTIC_PENDING",
+    "STG_shared_collision": "NOT_PROVEN_NOT_IMPLEMENTED"
+  }
+}

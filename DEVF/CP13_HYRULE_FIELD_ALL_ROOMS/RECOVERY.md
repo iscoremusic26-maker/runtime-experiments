@@ -6,3 +6,5 @@ Fuente compilada exacta en SOURCE_CI_CP13.json del espejo y MANIFEST.json del ZI
 Cerrar Dusklight, respaldar y retirar pareja CP13; restaurar los archivos originales CP12 Provider0.10.0, Editor0.10.2 y Expansion0.9.0 (78705 bytes, SHA2561b5098e677527860585a3e920830715c331f4197e0a865800901c692a6af25e2). Restaurar encounters.json y placements.json respaldados. Los backups de guardado son exclusivos y verificados. Catálogo/CISO y saves permanecen intactos. No borrar recursos ni instalar dos mods con el mismo ID.
 
 Si hay salas bloqueadas, exportar el reporte local de metadatos y conservar intenciones separadas. No editar hashes o enabled a mano para saltar geometría. Siguiente acción mínima: resolver el recurso concreto reportado y su asociación auténtica, nunca inferir suelo o layer de otra sala.
+
+Cierre verificable: source compilada c3257bdd360c717fb906aa9e2c942ad9e98a1bd6; CI d126316a01d3243a805f899a1ffe9ec77ce90723; run 39153841948 build + independent-download SUCCESS. Ver TEST_RESULTS.md y VERIFIED_PACKAGE.json para hashes/caducidad. Un commit documental posterior no cambia esos bytes. HUMAN_RUNTIME_PENDING y bloqueos geométricos explícitos permanecen.
