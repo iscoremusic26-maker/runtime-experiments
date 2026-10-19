@@ -35,3 +35,11 @@ J3DFrameCtrl::checkPass usa [frame,frame+rate). A frame10/rate3, checkFrame10 y1
 ## Escrituras, coste y diagnóstico
 
 Delta cerrado: dos sitios setPlaySpeed (POST propio/restore condicional shutdown), un sitio native B sound; CERO setActionMode/speedF/home/range/posición/colisión/Link/HP/cooldown nativo. Un hook execute PRE+POST conservado. La política por Red es O1; las consultas oficiales de ID y BG conservan su coste propio del motor, pendiente de observación humana; cleanup4 slots/update. Logs transiciones900/sesión y48/generación, contadores aunque se supriman detalles y hasta40 resúmenes cada900 management passes/cierre. No direcciones/rutas privadas, no strings dinámicos por frame. RATE_APPLIED significa readback, contacto de esfera tiene target/desenlace UNKNOWN y nunca se etiqueta interrupción confirmada. Red, Blue y Black no comparten trackers ni RNG.
+
+## Cierre de evidencia Windows y descarga
+
+Run39184082946 SUCCESS (build117842721230, independent-download117843631054). Fuente compilada8fbaea77df4fe547676ca2462a6db633f3788273; CIa14ca4e264d7b629bb6b02745510300f16bc08ae. MSVC14.51.36231 x64/SDK10.0.26100.0;0 warnings printf.462 blobs y8 oficiales verificados.24 runtimefiles y todo bloque noRed de mod.cpp preservados. Las suites UI/Provider se ejecutan para regresión pero no se entregan esos binarios.
+
+COFF real de5214B, SHA2563d1dc82e70c0c5e148ae2d667ce6fab9d353a4b151109d9bcb8e4e504b65a0ef. MSVC calcula sizeof(daAlink)=18912, daPy=1832, E_OC=5104, mProcID u16 en16708 (0x4144), var2=16744; virtuales const charge/spin/jump en slots bytes360/368/376. Esos números son resultados del compilador, NO offsets hardcoded usados por el mod. El getter tipado y los stubs generados se verifican desde COFF y dumpbin, sin cargar Game DLL ni ejecutar probes. Confirmar la lectura física por canario/observación humana sigue pendiente.
+
+El ZIP y SourceZip/ledger/manifest/PE/DLL fueron descargados y recomprobados en otro runner; CRC y SHA PASS. SourceZip y README/manifest empaquetados capturan el momento previo a la descarga independiente; el acta actual y el artifact de verificación12157457479 registran el cierre posterior. No se reempaqueta para modificar ese snapshot.

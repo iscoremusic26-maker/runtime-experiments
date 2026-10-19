@@ -8,6 +8,8 @@ Aproximación: se observa y utiliza FIND nativo, sin forzar modo, marcha, timer,
 
 Una compensación acotada reproduce el SFX B12.5 que el else-if nativo omite cuando un salto3 cruza10 y12.5 juntos. No altera hitboxes ni fotogramas. Audio/escudo/contacto físico aún requieren QA humana.
 
-Estado de implementación:64 LAB locales ASan/UBSan PASS; gate de fuente24 archivos runtime idénticos aFIX01. Windows, ABI y descarga pendientes hasta el run real. HUMAN_RUNTIME_PENDING; RED_LINK_CHARGE_DETECT_SOURCE_ABI_PENDING. No jugar ni instalar desde Codex.
+Estado verificado: SOURCE_IMPLEMENTED + LAB_PASS + WINDOWS_MSVC_PASS + INDEPENDENT_DOWNLOAD_PASS + HUMAN_RUNTIME_PENDING.64 CP17 MSVC y locales ASan/UBSan, regresiones,24 archivos runtime idénticos aFIX01 y462 blobs pinneados PASS. RED_LINK_CHARGE_DETECT_SOURCE_AND_MSVC_ABI_PASS_HUMAN_PENDING. No se ejecutó juego ni se leyó un objeto Link físico desde el laboratorio.
+
+[Descargar TEST privado](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39184082946/artifacts/12157032798), artifact DEVF_CP17_RED_AGGRESSIVE_AI_TEST_39184082946; [run39184082946](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39184082946), build+independent-download SUCCESS. Caduca17-11-2026 20:13:35 America/Panama. Fuente REAL compilada8fbaea77df4fe547676ca2462a6db633f3788273; CIa14ca4e264d7b629bb6b02745510300f16bc08ae. El cierre posterior solo cambia documentación; hashes y límites en VERIFIED_PACKAGE.json.
 
 Ver HUMAN_TEST y RECOVERY. CP14 LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED sigue pendiente; el lector CP17 no usa ni relaja ese canario.

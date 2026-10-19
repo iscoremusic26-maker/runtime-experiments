@@ -7,3 +7,9 @@ Rollback: cerrar completamente Dusklight; retirar SOLO Expansion0.14.0 y restaur
 El código/policy/lab, source gate24 runtimefiles, CMake y CI están segregados en CP17. SOURCE_CI_CP17.json fija el source real y blobs del mirror; documentos históricos conservan su origen compilado explícito. SourceZip/ledger y VERIFIED_PACKAGE.json distinguirán implementación compilada del cierre documental posterior. Si se corta antes de CI/descarga PASS, no declarar paquete listo.
 
 Siguiente acción mínima tras entrega válida: HUMAN_TEST, no CP18. Contacto/audio/escudo/lectura física de Link y éxito del intento reactivo requieren observación real. El boost1.5 de marcha no está implementado por el riesgo de prioridad en action(); no es una función oculta que se deba activar. CP14 canary permanece independiente.
+
+## Checkpoint recuperable de entrega
+
+Ramas feature/devf-cp17-red-aggressive-ai y ci/devf-cp17-red-aggressive-ai, PR74/59 draft. Fuente REAL compilada8fbaea77df4fe547676ca2462a6db633f3788273; CIa14ca4e264d7b629bb6b02745510300f16bc08ae. Run39184082946 SUCCESS ambos jobs, artifact12157032798 y verificador12157457479. VERIFIED_PACKAGE.json contiene hashes/tamaños, expiración real, toolchain, ABI y límites. El commit posterior de esta acta solo cambia docs; el SHA compilado sigue siendo el anterior.
+
+Histórico de fallos preservado en TEST_RESULTS:39182819992 encoding,39183207051 helper EXE/GXDestroyTexObj,39183741446 lector COFF off-by-one. El último run corrige los tres sin alterar la IA ni relajar gates. Próxima acción mínima: HUMAN_TEST de Red solo, luego cargas/pasividad/mixed variants. No CP18. Cualquier problema físico de x3/lectura Link requiere reporte del usuario y rollback frío, no un PASS deducido de logs.

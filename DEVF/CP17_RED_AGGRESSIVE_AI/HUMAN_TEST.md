@@ -9,3 +9,5 @@
 7. Detener ante crash, rate3 persistente, ataques invisibles/sin contacto, audio grave, invulnerabilidad falsa, teletransporte o caída acusada de fluidez. Cerrar y rollback frío exacto a0.13.1 según RECOVERY. No modificar ROM/saves.
 
 Prueba humana CP17 aún PENDING. El reporte previo positivo de Blue FIX01 no certifica Red. Si el canario CP17 falla, solo respuestas reactivas quedan deshabilitadas y se requiere revisar esa lectura concreta; no relajar CP14 ni fingir captura.
+
+TEST privado verificado: [artifact](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39184082946/artifacts/12157032798), [run](https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39184082946). Expansion0.14.0=113055B, SHA256d3b888d13c6ca23c91761337e7a2cbbf43794e6ea78f5d9f6f497f9c48fcc461. Caduca17-11-2026 20:13:35 Panama. Ver primero canario CP17 y mensajes LINK_REACTIVE_SAMPLE_OBSERVED (PRE actual) frente a NOT_SAMPLED_POST; un POST no muestreado no implica que Link desapareciera. Si hay fallo del lector específico, reportar el evento exacto sin dar por probado un intento reactivo.
