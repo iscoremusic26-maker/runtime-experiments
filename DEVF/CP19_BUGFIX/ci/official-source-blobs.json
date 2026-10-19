@@ -17,5 +17,14 @@
   "include/f_op/f_op_actor.h": "2ac262ced12943c5156fe050472d2c58dd7ed113",
   "src/d/actor/d_a_alink.cpp": "ef4fdca2403e65d33315fd84cbfb043d199e6394",
   "include/f_op/f_op_actor_mng.h": "29dfac13894b1ebc34560d295ac56382927ac93d",
-  "src/f_op/f_op_actor_mng.cpp": "207a0471b3acf8dc936c2aab46f8a033042178e8"
+  "src/f_op/f_op_actor_mng.cpp": "207a0471b3acf8dc936c2aab46f8a033042178e8",
+  "src/Z2AudioLib/Z2SceneMgr.cpp": "09d5df10130c36c83ea8a85390d05e3bac615a79",
+  "include/Z2AudioLib/Z2SceneMgr.h": "739c53bb103cee696489181507d0ae169fde7d4c",
+  "libs/JSystem/src/JAudio2/JASWaveArcLoader.cpp": "5ba257c423e2e134b18423f6c83615938a40a834",
+  "src/Z2AudioLib/Z2Creature.cpp": "f7d7a2924a19b3e6a4da5507b287cb54381be349",
+  "src/Z2AudioLib/Z2SoundObjMgr.cpp": "013dbd1c545a3a561aea974b744e0d6c51305a84",
+  "src/Z2AudioLib/Z2SeqMgr.cpp": "0658f7eb54028ab5e9ea5433ca7df139e9f586d2",
+  "src/d/d_cc_uty.cpp": "91fc6677c17e8360315d468bfe3a2167e87b953d",
+  "src/d/d_kankyo.cpp": "3b7f4d9ad46ec6a61b289cc92caba58e768f4130",
+  "src/d/d_attention.cpp": "49c7465d48477e8ea4e5ef43da8077939b21b232"
 }

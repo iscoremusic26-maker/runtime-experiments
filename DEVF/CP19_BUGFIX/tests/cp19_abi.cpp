@@ -1,6 +1,7 @@
 #include <d/actor/d_a_alink.h>
 #include <d/actor/d_a_e_oc.h>
 #include <m_Do/m_Do_ext.h>
+#include <Z2AudioLib/Z2AudioMgr.h>
 #include <cstddef>
 #include <cstdio>
 #include <type_traits>
@@ -34,8 +35,16 @@ __declspec(dllexport) extern const unsigned long long cp17_abi_layout[] = {
 __declspec(dllexport) extern const unsigned long long cp17f1_abi_layout[] = {
  0x4350313746314142ull,offsetof(daAlink_c,mTargetedActor),offsetof(daAlink_c,mLinkAcch),offsetof(fopAc_ac_c,speed),offsetof(fopAc_ac_c,speedF),offsetof(fopAc_ac_c,gravity),offsetof(fopAc_ac_c,shape_angle),offsetof(daE_OC_c,field_0x6c2),offsetof(daE_OC_c,mSphs_at),sizeof(dCcD_Sph),offsetof(daAlink_c,mTgCyls)
 };
+// CP19: Link cut type (Helm Splitter mask), attention flags, E_OC invulnerability timer and sound object last-hit flag, Z2 scene/seq managers' fields.
+static_assert(std::is_same_v<decltype(((daPy_py_c*)nullptr)->mCutType),u8>&&daPy_py_c::CUT_TYPE_HEAD_JUMP==5&&daPy_py_c::CUT_TYPE_TURN_RIGHT==8);
+static_assert(std::is_same_v<decltype(((daE_OC_c*)nullptr)->field_0x6cc),s16>&&std::is_same_v<decltype(((daE_OC_c*)nullptr)->mSound),Z2CreatureEnemy>&&std::is_same_v<decltype(((Z2CreatureEnemy*)nullptr)->field_0xa3),u8>);
+static_assert(std::is_same_v<decltype(((Z2SceneMgr*)nullptr)->requestSeWave_2),u8>&&std::is_same_v<decltype(((Z2SeqMgr*)nullptr)->mBattleDistState),u8>&&std::is_base_of_v<Z2SceneMgr,Z2AudioMgr>&&std::is_base_of_v<Z2SeqMgr,Z2AudioMgr>&&std::is_base_of_v<Z2SoundObjMgr,Z2AudioMgr>);
+static_assert(fopAc_AttnFlag_BATTLE_e==4,"BATTLE flag value from the official header");
 // CP18: Black adapter fields (FIND timer, leash flag, range, state, room, home) read from the same compiled official headers.
 __declspec(dllexport) extern const unsigned long long cp18_abi_layout[] = {
  0x4350313842414231ull,offsetof(daE_OC_c,field_0x6c0),offsetof(daE_OC_c,field_0x6c2),offsetof(daE_OC_c,field_0x6e3),offsetof(daE_OC_c,mMoveRange),offsetof(daE_OC_c,mOcState),offsetof(daE_OC_c,mActionMode),offsetof(fopAc_ac_c,current),offsetof(actor_place,roomNo),offsetof(fopAc_ac_c,home),sizeof(daE_OC_c)
+};
+__declspec(dllexport) extern const unsigned long long cp19_abi_layout[] = {
+ 0x4350313942554731ull,offsetof(daPy_py_c,mCutType),offsetof(fopAc_ac_c,attention_info),offsetof(daE_OC_c,field_0x6cc),offsetof(daE_OC_c,mSound),offsetof(Z2CreatureEnemy,field_0xa3),offsetof(Z2SceneMgr,requestSeWave_1),offsetof(Z2SceneMgr,loadedDemoWave),offsetof(Z2SeqMgr,mBattleDistState),offsetof(Z2SeqMgr,field_0xc4),sizeof(Z2AudioMgr),unsigned(fopAc_AttnFlag_BATTLE_e)
 };
 }

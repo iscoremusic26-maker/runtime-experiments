@@ -1,88 +1,109 @@
-"""CP18 closed delta against CP17 FIX01: Black adapter/policy only plus seven marked integration lines and the version/header; Red, Blue FIX01, CP14,
-CP10.6 and every other runtime file byte-preserved; the reviewed game import set is exactly CP17 FIX01's."""
-import re,json,hashlib
-N='CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT';O='CP17_FIX01_RED_X2_JUMP_INTERCEPT'
-NEW_A='// ---- CP18 Black fury chain / same-room hunt:';NEW_B='// ---- end CP18 Black ----\n'
-# The only lines outside the Black block that differ from CP17 FIX01 (each removed exactly once, then the remainder must equal CP17 FIX01 byte for byte).
-LINES=['#include "black_ai_policy.hpp"\n',
- 'bool black_ai_hunting(const devf_dyn::Entry* d)noexcept;void black_ai_damage(daE_OC_c* a,std::uint32_t id,const devf_dyn::Entry* d,bool start)noexcept;   // CP18: defined in the Black block\n',
- ' if(d->variant==devf_variant::Variant::Black&&(ev.kind==devf_dyn::Ev::FuryStart||ev.kind==devf_dyn::Ev::FuryRefresh))black_ai_damage(a,id,d,ev.kind==devf_dyn::Ev::FuryStart);   // CP18: read-only forwarding of CP10.6\'s own HP-loss event\n',
- ' if(r.order.active&&black_ai_hunting(d))devf_recruit::abort(r,recruit_log,"BLACK_HUNT_LOCKED_SAME_ROOM_PRIORITY_OVER_RECRUIT_ORDER");   // CP18: a provoked Black is not a callable companion\n',
- ' if(entry&&!fresh)black_ai_pre(a,id,entry);   // CP18: Black-only; after recruitment, so a released SOUND_WATCH lease is already visible\n',
- ' black_ai_post(a,fopAcM_GetID(a),e);         // CP18: Black-only fresh-blow rate, chain readback and hunt measurement after CP10.6\n']
-SWAPS=[('recruit_poll();red_ai_poll();black_ai_poll();red_watch();','recruit_poll();red_ai_poll();red_watch();'),(' red_ai_shutdown();black_ai_shutdown();recruit_shutdown();\n',' red_ai_shutdown();recruit_shutdown();\n'),('kVersion="0.15.0"','kVersion="0.14.1"')]
+"""CP19 closed delta against CP18 (compiled 71bfcb3): four runtime files change (mod.cpp, red/black/recruit policies), one is new (cp19_policy.hpp); every
+other runtime file is byte-identical. Removed lines are an exact reviewed list; added lines outside the CP19 block carry a CP19 marker; closed write surface."""
+import re,json,hashlib,difflib
+N='CP19_BUGFIX';O='CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT'
+A='// ---- CP19 fixes:';B='// ---- end CP19 ----\n'
+CHANGED=['mod.cpp','red_ai_policy.hpp','black_ai_policy.hpp','blue_recruit_policy.hpp']
+# sha256 prefixes of the exact CP18 lines each changed file may lose (reviewed one by one; see IMPLEMENTATION.md "Source delta").
+def h(s):return hashlib.sha256(s.encode()).hexdigest()[:16]
+REMOVED={
+ 'mod.cpp':['constexpr const char* kVersion="0.15.0";',' const bool safe=devf_recruit::usable(r.f)&&!r.f.hit&&!r.f.leash_out;','   if(a->mActionMode==devf_recruit::Sound&&a->mOcState==0)devf_recruit::consumed(r,recruit_log);',
+  ' if(f.mode==devf_variant::A_ATTACK&&f.stopped&&d->fury&&p)f.los=fopAcM_otherBgCheck(a,p)==0;',' red_ai_shutdown();black_ai_shutdown();recruit_shutdown();'],
+ 'blue_recruit_policy.hpp':[' if(!leash(f,s.f.pos))return Skip::NativeLeash;',' if(!leash(r.f,s->f.pos))return reject("RECEIVER_NATIVE_LEASH_REJECTED");'],
+ 'red_ai_policy.hpp':[' if(dist<kForceDist&&!force_block(s,a,l,kForceFacing,true)){','  return forced(s,a,s.intent_cause,"REACTION_NATIVE_ATTACK_STARTED_IN_RANGE",emit);','struct Command{bool force=false,zero_speed=false,rush=false;float speed=0;Cause cause=Cause::Normal;const char* why="NONE";};'],
+ 'black_ai_policy.hpp':['enum class Op:std::uint8_t{None,Chain,Pursue,FuryFind3,KeepFind0,Redirect};','   if(dist<kChainReach&&dy<=kChainHeight&&gap<kChainFacing&&!a.wall&&a.los){',' if(!fury_on)s.lockout_logged=false;','  if(op==Op::Chain){',
+  ' s.decided=true;++s.seq;s.blow_start=s.ticks;s.contact=s.link_contact=s.shield=s.registered=false;',
+  ' else if(a.mode==Find&&a.state==4&&a.lockout>0){c.lockout=true;c.lockout_value=0;if(!s.lockout_logged){s.lockout_logged=true;emit("BLACK_FURY_LOCKOUT_CLEARED","FIND4_POST_ATTACK_LOCKOUT_OF_THIS_BLACK_ONLY_WHILE_FURY");}}'],
+}
+# Lines that change only by appending a CP19 token to a list or a log format (prefix match, the CP19 version must contain the marker).
+PREFIX={
+ 'mod.cpp':[(' char text[1700];std::snprintf(text,sizeof(text),"DEVF_CP18_BLACK_AI event=%s','active_min_dist'),('  event,kVersion,a.id,a.gen,a.room,a.stage,s.ticks,','s.active_min'),('MOD_EXPORT ModResult mod_update(ModError*){','cp19_poll()')],
+ 'red_ai_policy.hpp':[(' for(const char* p:{"JUMP_","INTERCEPT",','CLOSE_IN_STARTED'),('template<class Emit>inline void cancel(State&s,Emit&&emit,const char*why)noexcept{','CLOSE_IN_UNREACHABLE')],
+ 'black_ai_policy.hpp':[(' ra::State sweep;Point link_pos{};bool link_pos_valid=false;','ra::State sweep'),(' for(const char* p:{"BLACK_HUNT","BLACK_CHAIN",','BLACK_STRIKE'),('inline bool chain_detail(const char*e)noexcept{','BLACK_STRIKE_STARTED'),
+  ('struct Command{bool set_mode=false,zero_speed=false,timer=false,lockout=false','close=false'),('   }else set(Find,3,Op::Pursue,dist>','FURY_OUTSIDE_STRIKE_DISTANCE')],
+ 'blue_recruit_policy.hpp':[(' for(auto& r:t.entries){const auto&o=r.order;if(!o.active||o.caller!=s.f.id','!context(r.f,s.f))continue;')],
+}
+MARK=re.compile(r'CP19|cp19|close|Close|CLOSE|kStrike|Strike|STRIKE|active_min|0\.16\.0|ra::kStrike')
 def code(s):return '\n'.join(l.split('//')[0].strip() for l in s.splitlines() if l.split('//')[0].strip())
-def cut(text,a,b):i=text.index(a);j=text.index(b,i)+len(b);return text[i:j],text[:i]+text[j:]
+def delta(old,new):
+ rem=[];add=[];hunks=[]
+ for op,a1,a2,b1,b2 in difflib.SequenceMatcher(None,old,new,autojunk=False).get_opcodes():
+  if op in('replace','delete'):rem+=old[a1:a2]
+  if op in('replace','insert'):add+=new[b1:b2];hunks.append(new[b1:b2])
+ return rem,add,hunks
 def check(repo,task):
  rt=task/'runtime/DEVF';oldrt=repo/'DEVF'/O/'runtime/DEVF'
- new=(rt/N/'expansion/mod.cpp').read_text(encoding='utf-8');old=(oldrt/O/'expansion/mod.cpp').read_text(encoding='utf-8')
- adapter,normal=cut(new,NEW_A,NEW_B)
- assert normal.count(NEW_A)==0 and adapter.count('\n')>100
- for l in LINES:assert normal.count(l)==1,('integration line',l[:60]);normal=normal.replace(l,'')
- for a,b in SWAPS:assert normal.count(a)==1,a;normal=normal.replace(a,b)
- h='// (CP17 FIX01 header follows.)\n';assert normal.count(h)==1;normal=normal[normal.index(h)+len(h):]
- assert normal==old,'Non-Black runtime changed against CP17 FIX01'
  identical=0
  for p in rt.rglob('*'):
   if not p.is_file():continue
   rel=p.relative_to(rt).as_posix()
-  if rel in [N+'/expansion/mod.cpp',N+'/expansion/black_ai_policy.hpp']:continue
+  if rel in [N+'/expansion/'+f for f in CHANGED]+[N+'/expansion/cp19_policy.hpp']:continue
   prior=oldrt/(rel.replace(N+'/',O+'/',1) if rel.startswith(N+'/') else rel)
   assert p.read_bytes()==prior.read_bytes(),rel;identical+=1
- assert identical==25,identical
- assert (rt/N/'expansion/red_ai_policy.hpp').read_bytes()==(oldrt/O/'expansion/red_ai_policy.hpp').read_bytes(),'Red policy must be byte-identical'
- oldimp=json.loads((repo/'DEVF'/O/'ci/reviewed-imports.json').read_text(encoding='utf-8'));imp=json.loads((task/'ci/reviewed-imports.json').read_text(encoding='utf-8'))
- assert imp==oldimp,'CP18 adds no import'
- ad=code(adapter);active=code(new)
- # Closed write surface of the Black adapter (all on the executing Black `a`): exactly these, nothing on Link/HP/ATP/flags/frames/home/range/leash/position.
+ assert identical==23,identical
+ summary={}
+ for f in CHANGED:
+  old=(oldrt/O/'expansion'/f).read_text(encoding='utf-8');new=(rt/N/'expansion'/f).read_text(encoding='utf-8')
+  if f=='mod.cpp':
+   i=new.index(A);j=new.index(B,i)+len(B);block=new[i:j];newc=new[:i]+new[j:]
+  else:block='';newc=new
+  rem,add,hunks=delta(old.splitlines(),newc.splitlines())
+  allowed=set(REMOVED[f]);pre=PREFIX[f]
+  for l in rem:
+   if l in allowed:allowed.discard(l);continue
+   m=[q for q in pre if l.startswith(q[0])];assert len(m)==1,(f,'unreviewed removed line',l[:100])
+   assert sum(1 for x in add if x.startswith(m[0][0]) and m[0][1] in x)==1,(f,'replacement not marked',l[:100])
+  assert not allowed,(f,'expected removals missing',sorted(allowed))
+  for hk in hunks:assert any(MARK.search(l) for l in hk) or all(any(l.startswith(q[0]) for q in pre) for l in hk),(f,'added hunk without a CP19 marker',hk[0][:120])   # every inserted/replaced hunk is marked
+  summary[f]=dict(removed=len(rem),added=len(add))
+  if f=='mod.cpp':modblock=block;modnew=new
+ ad=code(modblock);full=code(modnew)
  writes=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',ad))
- assert writes==['a->field_0x6c0=','a->field_0x6c2=','a->speedF='],writes
- assert ad.count('a->setActionMode(cmd.mode,cmd.state)')==1 and ad.count('setActionMode(')==1
- assert ad.count('->setPlaySpeed(')==2 and ad.count('mSphs_at[0].SetC(')==1 and ad.count('mSphs_at[1].SetC(')==1 and ad.count('.SetR(')==2
- assert not re.findall(r'\b(?:p|k|v)->[\w\.\[\]]+\s*=(?!=)',ad),'Link writes'
- for x in ['mMoveRange=','home.pos.x=','home.pos.y=','home.pos.z=','current.pos.x=','current.pos.y=','current.pos.z=','field_0x6e3=','SetAtAtp(','OnAtSetBit(','OffAtSetBit(','setFrame(','setFrameF(','setRate(','mProcID=','ClrAtHit','SetAtHit','OnAtHit','startCreature','setDamagePoint','dComIfGs_setLife','mSphs_cc[0].Set','mSphs_cc[1].Set','->fury=','.fury=','setBck(','mWatchPos','a->health=']:assert x not in ad,x
- assert ad.count('e->variant!=devf_variant::Variant::Black')==2 and 'recruits.find(' not in ad
- oldwrites=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',code(old)));newwrites=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',code(normal)));assert newwrites==oldwrites
- assert active.count('DEFINE_HOOK(')==1 and active.count('hook::add_pre<')==1 and active.count('hook::add_post<')==1 and active.count('setPlaySpeed(')==7
- assert 'kVersion="0.15.0"' in new and 'Z2SE_' not in new
- policy=(rt/N/'expansion/black_ai_policy.hpp').read_text(encoding='utf-8');pc=code(policy)
- assert not re.search(r'\b(daAlink_c|daPy_py_c|daE_OC_c|fopAc_ac_c)\s*\*',pc),'game pointer in value policy'
- for token in ['kNormal=1.15f,kFury=2.0f','kChainReach=400.,kChainHeight=200.','kChainFacing=0x1000','kBounceWindow=45,kBounceLimit=3,kBlockedTicks=90','#include "red_ai_policy.hpp"','ra::sweep(s.sweep,r,l)']:assert token in pc or token in policy,token
- for gone in ['std::sqrt','std::atan2','std::lround','<cmath>','std::sin','std::cos','kFuryTicks=','->fury=','.fury=']:assert gone not in pc,gone   # no CRT math; never writes the CP10.6 fury
+ assert writes==['a->attention_info.flags=','a->field_0x6cc=','a->health=','a->mSound.field_0xa3='],writes
+ assert ad.count('a->setActionMode(')==3 and ad.count('p->mCutType=')==2 and ad.count('sm->loadSeWave(')==1 and ad.count('sm->eraseSeWave(')==2
+ assert len(re.findall(r'\b(?:p|k|v)->[\w\.\[\]]+\s*=(?!=)',full))==2,'the only Link writes are the HEAD_JUMP mask and its restore'
+ for x in ['mMoveRange=','home.pos.x=','current.pos.x=','field_0x6e3=','SetAtAtp(','OnAtSetBit(','ClrAtHit','SetAtHit','setDamagePoint','dComIfGs_setLife','unMuteSceneBgm','bgmAllUnMute','muteSceneBgm','setBattle','stopBattleBgm','startCreature','startSound(']:assert x not in ad,x
+ oldfull=code((oldrt/O/'expansion/mod.cpp').read_text(encoding='utf-8'))
+ ow=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',oldfull));nw=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',full))
+ extra=list(nw)
+ for w in ow:extra.remove(w)
+ assert sorted(extra)==sorted(writes+['a->field_0x6c2=','a->field_0x6c2=','a->field_0x6c2=','a->speedF=','a->speedF=','a->speedF=','a->speedF=']),extra   # + Red/Black close-in speed and lease
+ assert full.count('DEFINE_HOOK(')==1 and full.count('hook::add_pre<')==1 and full.count('hook::add_post<')==1 and 'kVersion="0.16.0"' in full
+ oldimp=json.loads((repo/'DEVF'/O/'ci/reviewed-imports.json').read_text(encoding='utf-8'));imp=json.loads((task/'ci/reviewed-imports.json').read_text(encoding='utf-8'))
+ added=['?mAudioMgrPtr@Z2AudioMgr@@2PEAV1@EA','?loadSeWave@Z2SceneMgr@@QEAA_NI@Z','?eraseSeWave@Z2SceneMgr@@QEAA_NI@Z','?getWaveLoadStatus@Z2SceneMgr@@QEAAHII@Z','?checkMasterSwordEquip@daPy_py_c@@SAHXZ','?dComIfGs_getSelectEquipSword@@YAEXZ']
+ assert set(imp)==set(oldimp)
+ for k in oldimp:assert sorted(imp[k])==sorted(oldimp[k]+(added if k=='dusklight.exe' else [])),k
+ pol=(rt/N/'expansion/cp19_policy.hpp').read_text(encoding='utf-8');pc=code(pol)
+ assert not re.search(r'\b(daAlink_c|daPy_py_c|daE_OC_c|fopAc_ac_c|Z2SceneMgr|Z2AudioMgr)\s*\*',pc),'game pointer in value policy'
+ for t in ['kFieldSeWave1=0x4a,kOcWave=0x5e','kHelmMaster=100,kHelmOrdon=50','kCutHeadJump=5,kCutTurnRight=8','kPermitCalm=150','kResidualTicks=30']:assert t in pc,t
+ assert 'constexpr double kStrike=240.,kNativeAttackMax=400.' in (rt/N/'expansion/red_ai_policy.hpp').read_text(encoding='utf-8')
+ for gone in ['std::sqrt','<cmath>','std::atan2']:assert gone not in pc,gone
  official=repo/'.official';facts={}
  for rel,expected in json.loads((task/'ci/official-source-blobs.json').read_text(encoding="utf-8")).items():
   p=official/rel
   if not p.exists():continue
   raw=p.read_text(encoding='utf-8').encode();blob=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest();assert blob==expected,rel
   facts[rel]=dict(git_blob=blob,normalized_sha256=hashlib.sha256(raw).hexdigest())
- if official.exists():assert len(facts)==19
+ if official.exists():assert len(facts)==28
  if facts:
   rd=lambda rel:(official/rel).read_text(encoding="utf-8")
   src=rd('src/d/actor/d_a_e_oc.cpp')
-  # The end branch the chain pre-empts, the FIND state 0 pause, the FIND state 4 abandon checks, the leash update and the native entries reused.
-  for text in ['            if (mpMorf->isStop()) {\n                setBck(0x1c, 2, 0.0f, 1.0f);\n                mSound.startCreatureVoice(Z2SE_EN_OC_V_WAIT_ST, -1);\n                if (field_0x6e3) {\n                    setActionMode(E_OC_ACTION_MOVE_OUT, 0);',
-               '            setBck(0x1c, 2, 5.0f, 1.0f);\n            mSound.startCreatureVoice(Z2SE_EN_OC_V_WAIT_ST, -1);\n            if (field_0x6e3) {\n                setActionMode(E_OC_ACTION_MOVE_OUT, 0);\n                break;',
-               '                    field_0x6c2 = field_0x6c0 + 0x14;\n                    if (checkBck(0x1c) == 0) {\n                        setBck(0x1c, 2, 5.0f, 1.0f);\n                        mSound.startCreatureVoice(Z2SE_EN_OC_V_WAIT_ST, -1);',
-               '                if (field_0x6c0 == 0) {\n                    if (!searchPlayer2()) {\n                        setActionMode(E_OC_ACTION_WAIT, 0);\n                    } else if (field_0x6e3) {\n                        setActionMode(E_OC_ACTION_MOVE_OUT, 0);',
-               'if (home.pos.absXZ(current.pos) > mMoveRange + 300.0f) {','} else if (home.pos.absXZ(current.pos) < mMoveRange - 100.0f) {',
-               '                if (cM_rndF(1.0f) < 0.5f) {\n                    setBck(5, 0, 5.0f, 1.0f);','if (cLib_chaseF(&speedF, 0.0f, 1.0f)) {','mOldActionMode = mActionMode;\n    mActionMode = i_action;\n    mOcState = i_state;\n    field_0x6c0 = field_0x6c2 = 0;',
-               'if (mOcState < 3 || !setWatchMode()) {','if (checkBeforeFloorBg(200.0f)) {','mpMorf->getFrame() >= 14.0f && mpMorf->getFrame() <= 22.0f','mpMorf->setPlaySpeed(-1.0);',
-               '    if (field_0x6c0) {\n        --field_0x6c0;\n    }\n    if (field_0x6c2) {\n        --field_0x6c2;\n    }']:assert text in src,text[:80]
-  assert src.index('damage_check();')<src.index('    if (mMoveRange) {')<src.index('checkWaterSurface()) {')<src.index('checkFall();\n    field_0x566 = 0;')<src.index('        executeAttack();')<src.index('fopAcM_posMoveF(this, mStts.GetCCMoveP());')<src.index('mpMorf->play(0, dComIfGp_getReverb')
-  assert src.count('Z2SE_EN_OC_V_WAIT_ST')==9,'every V_WAIT_ST source site accounted for: attack end x2, FIND x4, WATCH x2, setWaitStSound x1'
-  assert 'void daE_OC_c::setWaitStSound() {\n    if (checkBck(0x1c)) {\n        if (mpMorf->checkFrame(0.0f)) {\n            mSound.startCreatureVoice(Z2SE_EN_OC_V_WAIT_ST, -1);' in src and 'void daE_OC_c::setFootNoteSound() {' in src,'the per-tick idle-clip voice only exists while BCK 0x1C is the clip'
-  assert 'bool isStop() { return mFrameCtrl.checkState(1) || mFrameCtrl.getRate() == 0.0f; }' in rd('include/m_Do/m_Do_ext.h')
-  j3d=rd('libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp');assert '        if (mFrame >= mEnd) {\n            mFrame = mEnd - 0.001f;\n            mRate = 0.0f;\n            mState |= (u8)1;' in j3d and 'mFrame <= passFrame && passFrame < next_frame' in j3d
-  al=rd('src/d/actor/d_a_alink.cpp');assert 'roomID = dComIfG_Bgsp().GetRoomId(mLinkAcch.m_gnd);\n\n        if (roomID != fopAcM_GetRoomNo(this)) {' in al and '            fopAcM_SetRoomNo(this, roomID);' in al
-  mng=rd('include/f_op/f_op_actor_mng.h');assert 'inline void fopAcM_SetRoomNo(fopAc_ac_c* actor, s8 roomNo) {\n    actor->current.roomNo = roomNo;' in mng and 'inline s8 fopAcM_GetRoomNo(const fopAc_ac_c* i_actor) {' in mng
-  assert 'cXyz dist = (*fopAcM_GetPosition_p(i_actorB) - *fopAcM_GetPosition_p(i_actorA));\n    return dist.abs();' in rd('src/f_op/f_op_actor_mng.cpp')
-  assert 'fopAcM_SetRoomNo' not in src,'E_OC never changes its own room: the Black native room is constant'
-  hdr=rd('include/d/actor/d_a_e_oc.h')
-  for t in ['/* 0x690 */ f32 mMoveRange;','/* 0x6c0 */ s16 field_0x6c0;','/* 0x6c2 */ s16 field_0x6c2;','/* 0x6e3 */ u8 field_0x6e3;','/* 0x6b0 */ int mOcState;']:assert t in hdr,t
-  assert 'void cM3dGSph::SetC(const cXyz& p) {' in rd('src/SSystem/SComponent/c_m3d_g_sph.cpp')
-  assert 'if (step * (*pvalue - target) >= 0) {' in rd('src/SSystem/SComponent/c_lib.cpp')
- return dict(identical_runtime_files_to_cp17_fix01=identical,outside_black_adapter_unchanged=True,integration_lines=len(LINES)+len(SWAPS)-1,red_policy_byte_identical=True,black_adapter_assignments=writes,added_game_imports=[],official_source=facts),dict(
-  cp18='Black native B/C x1.15; blows started during the CP10.6 fury x2 (even phase, CP17 FIX01 sweep reused). Fury chain: at the PRE of a complete clip the native ATTACK state 0 (in reach) or FIND state 3 (out of reach) replaces the executeAttack end branch (setBck 0x1C + V_WAIT_ST); FIND state 0 becomes FIND state 3 and the FIND state 4 lockout is cleared while fury>0. Same-room hunt armed by the forwarded CP10.6 HP-loss event, FIND4 timer held at 2, abandon modes re-enter the native FIND, reset on Link room/stage epoch change or actor end.',
-  cp17_fix01='Red adapter, Red policy (byte-identical), Blue FIX01, CP14 and 25 runtime files byte-identical to CP17 FIX01; CP17 FIX01 53-case lab kept as regression.',
-  budget='64 entries, fixed-size state, no heap per frame, O1 per own execute plus one Link read and four slot checks per management pass; 600 routine + 800 critical lines per session, 40 + 120 per generation; chained-blow detail 6 per fury episode; 40 summaries.',
-  evidence='Lab on a source port of the daE_OC_c paths; not engine animation, audio or collision. Human runtime pending.')
+  for t in ['        if (daPy_getPlayerActorClass()->getCutType() == daPy_py_c::CUT_TYPE_HEAD_JUMP) {\n            health = 0;\n        }','    if (health <= 1) {\n        attention_info.flags = 0;',
+            '            setActionMode(E_OC_ACTION_DAMAGE, my_val);\n            field_0x6cc = 3 + NREG_S(7);\n            return;','        case daPy_py_c::CUT_TYPE_TURN_RIGHT:\n        case daPy_py_c::CUT_TYPE_LARGE_TURN_RIGHT:\n        case daPy_py_c::CUT_TYPE_HEAD_JUMP:\n            return 6;',
+            'attention_info.flags = fopAc_AttnFlag_BATTLE_e;','mSound.setEnemyName("E_oc");','    if (field_0x6cc) {\n        return;\n    }','                if (health < 1) {\n                    setActionMode(E_OC_ACTION_DEATH, 0);']:assert t in src,t[:70]
+  assert src.count('attention_info.flags = ')==2,'create() BATTLE and the damage_check health<=1 clear are the only writers'
+  cc=rd('src/d/d_cc_uty.cpp')
+  for t in ['if (player_p->checkMasterSwordEquip()) {\n                    i_AtInfo->mAttackPower *= 2;','if (i_AtInfo->mAttackPower != 0 && i_enemy->health <= 0) {\n            i_AtInfo->mHitStatus = 2;\n            i_enemy->health = 0;','dusk::AchievementSystem::get().signal("enemy_killed");','i_AtInfo->mpSound->startCollisionSE(getHitId(i_AtInfo->mpCollider, uvar8),\n                                                    getMapInfo(i_AtInfo->mHitStatus));','    } else if (param_0 == 2) {\n        map_info = 32;']:assert t in cc,t[:70]
+  scn=rd('src/Z2AudioLib/Z2SceneMgr.cpp')
+  for t in ['    case Z2SCENE_HYRULE_FIELD:\n        se_wave1 = 0x4a;','            case 2:\n            case 3:\n            case 4:\n                se_wave2 = 0x5e;','            case 0:\n            case 5:\n            case 7:\n                se_wave2 = 0x5f;','            case 9:\n            case 10:\n            case 11:\n                se_wave2 = 0x60;','            case 1:\n            case 6:\n            case 15:\n                se_wave2 = 0x4b;','bool Z2SceneMgr::loadSeWave(u32 wave) {','s32 Z2SceneMgr::getWaveLoadStatus(u32 wave, u32 bank) {','        if (requestSeWave_2 != 0 && loadSeWave(requestSeWave_2)) {\n            loadedSeWave_2 = requestSeWave_2;\n        } else {\n            loadedSeWave_2 = 0;']:assert t in scn,t[:70]
+  arc=rd('libs/JSystem/src/JAudio2/JASWaveArcLoader.cpp');assert '    if (mStatus != 0) {\n        return false;\n    }' in arc and 'bool JASWaveArc::erase() {\n    return mHeap.free();' in arc
+  assert 'if (strcmp(dComIfGp_getStartStageName(), "F_SP121") == 0) {\n                    mDoAud_load2ndDynamicWave();' in rd('src/d/d_kankyo.cpp')
+  cr=rd('src/Z2AudioLib/Z2Creature.cpp');assert '        case 0x20:\n        case 0x24: {\n            field_0xa3 = 1;' in cr and 'void Z2CreatureEnemy::setLinkSearch(bool isLinkSearch) {\n    if (field_0xa3 == 0) {' in cr
+  om=rd('src/Z2AudioLib/Z2SoundObjMgr.cpp');assert '                if (enemy->field_0xa3 != 0) {\n                    bVar7 = true;' in om and '    } else if (!bVar7) {\n        Z2GetSeqMgr()->setBattleSearched(local_96);' in om
+  assert '                } else if (mBattleDistState <= 2) {' in rd('src/Z2AudioLib/Z2SeqMgr.cpp')
+  assert '    if (i_actor->attention_info.flags == 0) {\n        return 0;' in rd('src/d/d_attention.cpp')
+  pl=rd('include/d/actor/d_a_player.h');assert '/* 0x05 */ CUT_TYPE_HEAD_JUMP,' in pl and '/* 0x08 */ CUT_TYPE_TURN_RIGHT,' in pl and 'u8 getCutType() const { return mCutType; }' in pl
+ return dict(identical_runtime_files_to_cp18=identical,changed_files=summary,cp19_block_assignments=writes,link_writes='mCutType HEAD_JUMP<->TURN_RIGHT only',added_game_imports=added,official_source=facts),dict(
+  cp19='A F_SP121 SE wave 0x5e loaded/erased through Z2SceneMgr for field rooms without the E_OC wave; B attention BATTLE restored on survivors (health>=2); C 0-HP live mode completed through BIG_DAMAGE 0, residual last-hit flag cleared; D Blue call leash permission; E/G x2 blows from <=240 after a native final approach; F Helm Splitter exact 100/50.',
+  cp18='23 runtime files byte-identical to CP18; CP18 43-case lab kept as regression on its own folder; CP17 FIX01 53-case lab kept.',
+  evidence='Lab on source ports (E_OC, Z2SceneMgr/JASWaveArc, damage_check/cc_at_check); not engine audio, collision or animation. Human runtime pending.')

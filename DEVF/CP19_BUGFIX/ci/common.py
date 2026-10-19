@@ -4,8 +4,9 @@ TASK=Path(__file__).resolve().parents[1];REPO=TASK.parents[1]
 SOURCE_HOST="40457c6adb381928e4b5fef6ed459ed291edd5e2"
 SOURCE_AURORA="3227d76c60e1e782ca576610bce61c9e7744d8be"
 EXE_NAME="DEVF Map Editor CP13.exe" # rebuilt from the unchanged CP13 source for regression tests only; NOT shipped
-DUSK_NAME="BokoblinExpansion_0.15.0_CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT_TEST.dusk"
+DUSK_NAME="BokoblinExpansion_0.16.0_CP19_BUGFIX_TEST.dusk"
 CP14_DIR="DEVF/CP14_RED_BOKOBLIN_LIFESTEAL_GROUP_REGEN_GOLD"
+CP18_DIR="DEVF/CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT"   # CP18 0.15.0 (compiled 71bfcb3): the CP19 base, its 43-case lab runs as regression
 CP17F1_DIR="DEVF/CP17_FIX01_RED_X2_JUMP_INTERCEPT"   # CP17 FIX01 0.14.1 (compiled 77e2da4): the CP18 base, its 53-case Red lab runs as regression
 CP17_DIR="DEVF/CP17_RED_AGGRESSIVE_AI"   # historical CP17 0.14.0 (compiled snapshot 8fbaea7 in the CI mirror): 64-case lab regression only
 CP13_DIR="DEVF/CP13_HYRULE_FIELD_ALL_ROOMS"

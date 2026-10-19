@@ -1,4 +1,4 @@
-"""CP18 (CP17 FIX01 probe + Black fields): read the actual MSVC COFF probe (CP17 layout + FIX01 fields and checkCutJumpMode); no game DLL is loaded, no native function is stubbed or executed."""
+"""CP19 (CP17 FIX01 + CP18 + CP19 fields): read the actual MSVC COFF probe (CP17 layout + FIX01 fields and checkCutJumpMode); no game DLL is loaded, no native function is stubbed or executed."""
 import hashlib,struct
 
 def virtual_slot(body):
@@ -58,6 +58,14 @@ def verify(path):
  assert cp18['eoc_move_range_offset']+4<=cp18['eoc_bytes'] and cp18['eoc_state_offset']==cp18['eoc_mode_offset']+8 and cp18['place_room_offset']==0x12
  assert cp18['eoc_timer_6c0_offset']-cp18['eoc_mode_offset']==0x6c0-0x6a8 and cp18['eoc_leash_6e3_offset']-cp18['eoc_mode_offset']==0x6e3-0x6a8,'scalar-only run from mActionMode to field_0x6e3 keeps the header spacing'
  layout['cp18']=cp18
+ f9=struct.unpack('<12Q',data('cp19_abi_layout',12*8))
+ assert f9[0]==0x4350313942554731
+ k9=['magic','player_cut_type_offset','actor_attention_offset','eoc_invuln_6cc_offset','eoc_sound_offset','enemy_lasthit_a3_offset','scene_request_se1_offset','scene_loaded_demo_offset','seq_battle_dist_offset','seq_field_c4_offset','audio_mgr_bytes','attn_battle_flag']
+ cp19=dict(zip(k9,f9));cp19['magic']='0x4350313942554731'
+ assert cp19['player_cut_type_offset']<layout['player_bytes'] and cp19['eoc_invuln_6cc_offset']==cp18['eoc_timer_6c0_offset']+12 and cp19['eoc_sound_offset']<layout['eoc_bytes']
+ assert cp19['scene_loaded_demo_offset']-cp19['scene_request_se1_offset']==0x16-0x0d,'Z2SceneMgr u8 wave fields contiguous as in the header'
+ assert cp19['seq_field_c4_offset']-cp19['seq_battle_dist_offset']==0xc4-0xbe and cp19['attn_battle_flag']!=0
+ layout['cp19']=cp19
  stubs={}
  for s in ['cp17_const_charge','cp17_const_spin','cp17_const_jump','cp17f1_const_cut_jump_mode','cp17_typed_proc']:
   section,value=symbols[s];pos,size=sections[section-1];body=raw[pos+value:pos+min(size,value+40)];assert body
@@ -73,4 +81,4 @@ def verify(path):
  slots=[stubs[s]['compiler_virtual_slot_bytes'] for s in ['cp17_const_charge','cp17_const_spin','cp17_const_jump']]
  assert slots[1]==slots[0]+8 and slots[2]==slots[1]+8,'Consecutive source virtual declarations must have distinct compiler-generated slots'
  jm=stubs['cp17f1_const_cut_jump_mode']['compiler_virtual_slot_bytes'];assert jm not in slots and jm>slots[2],'checkCutJumpMode is a later, distinct const virtual of daPy_py_c'
- return dict(status='CP18_MSVC_COFF_SOURCE_ABI_PASS',machine='AMD64',coff_reader_boundary_tests=3,bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest(),layout=layout,compiler_probes=stubs,game_DLL_loaded=False,game_object_read=False,probe_functions_executed=False,meaning='Actual official SDK headers compiled by MSVC; layout/const virtual codegen verified, not physical runtime Link data')
+ return dict(status='CP19_MSVC_COFF_SOURCE_ABI_PASS',machine='AMD64',coff_reader_boundary_tests=3,bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest(),layout=layout,compiler_probes=stubs,game_DLL_loaded=False,game_object_read=False,probe_functions_executed=False,meaning='Actual official SDK headers compiled by MSVC; layout/const virtual codegen verified, not physical runtime Link data')

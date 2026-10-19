@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
-project(DEVFCP18BlackFuryChainSameRoomHunt LANGUAGES C CXX)
+project(DEVFCP19Bugfix LANGUAGES C CXX)
 if(NOT WIN32 OR NOT MSVC OR NOT CMAKE_SIZEOF_VOID_P EQUAL 8)
  message(FATAL_ERROR "Windows x64 MSVC required")
 endif()
@@ -16,8 +16,8 @@ set(CP106 "${CMAKE_CURRENT_SOURCE_DIR}/../CP10_6_DYNAMIC_BLUE_BLACK")
 set(CP106A "${CMAKE_CURRENT_SOURCE_DIR}/../CP10_6A_VISUAL_FEEDBACK_BLUE_BLACK")
 set(CP13 "${CMAKE_CURRENT_SOURCE_DIR}/../CP13_HYRULE_FIELD_ALL_ROOMS")   # CP14: provider, editor, mod.json and cp13_lab reused from CP13 unchanged
 add_subdirectory("${DUSK_SOURCE}/sdk" sdk EXCLUDE_FROM_ALL)
-# CP18 ships only the Expansion (0.15.0). Provider 0.13.0 and editor 0.13.0 (CP13) are rebuilt here from their unchanged CP13 sources for regression only.
-add_mod(bokoblin_expansion FEATURES game SOURCES runtime/DEVF/CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT/expansion/mod.cpp runtime/DEVF/CP12_GROUP_COMBAT_FPS_AND_VARIANT_EYES/expansion/perf_clock.cpp MOD_JSON expansion/mod.json)   # CP12: perf_clock.cpp isolates <windows.h>
+# CP19 ships only the Expansion (0.16.0). Provider 0.13.0 and editor 0.13.0 (CP13) are rebuilt here from their unchanged CP13 sources for regression only.
+add_mod(bokoblin_expansion FEATURES game SOURCES runtime/DEVF/CP19_BUGFIX/expansion/mod.cpp runtime/DEVF/CP12_GROUP_COMBAT_FPS_AND_VARIANT_EYES/expansion/perf_clock.cpp MOD_JSON expansion/mod.json)   # CP12: perf_clock.cpp isolates <windows.h>
 target_compile_options(bokoblin_expansion PRIVATE /utf-8 /EHsc /Zc:__cplusplus /Zc:inline- /GL-)
 target_compile_definitions(bokoblin_expansion PRIVATE DEVF_SOURCE_SHA="${DEVF_SOURCE_SHA}")
 add_executable(map_lab "${CP102}/tests/map_lab.cpp")
@@ -90,10 +90,13 @@ target_compile_options(cp17_lab PRIVATE /utf-8 /EHsc /GL-)
 add_executable(cp17f1_lab ../CP17_FIX01_RED_X2_JUMP_INTERCEPT/tests/cp17f1_lab.cpp)   # CP17 FIX01 Red lab on its own folder (Red policy byte-identical in CP18, source gate)
 target_compile_features(cp17f1_lab PRIVATE cxx_std_20)
 target_compile_options(cp17f1_lab PRIVATE /utf-8 /EHsc /GL-)
-add_executable(cp18_lab tests/cp18_lab.cpp)   # CP18: the DLL's Black policy + real CP10.6 against a source port of the daE_OC_c paths it depends on
+add_executable(cp18_lab ../CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT/tests/cp18_lab.cpp)   # CP18 0.15.0 lab on its own compiled folder (historical regression)
 target_compile_features(cp18_lab PRIVATE cxx_std_20)
 target_compile_options(cp18_lab PRIVATE /utf-8 /EHsc /GL-)
-add_library(cp18_abi OBJECT tests/cp18_abi.cpp)
-target_compile_features(cp18_abi PRIVATE cxx_std_20)
-target_link_libraries(cp18_abi PRIVATE dusklight_mod_feature_game)
-target_compile_options(cp18_abi PRIVATE /utf-8 /EHsc /Zc:__cplusplus)
+add_executable(cp19_lab tests/cp19_lab.cpp)   # CP19: the DLL's CP19/Black/Red/recruit policies + real CP10.6 against source ports (E_OC, Z2SceneMgr waves, damage_check/cc_at_check)
+target_compile_features(cp19_lab PRIVATE cxx_std_20)
+target_compile_options(cp19_lab PRIVATE /utf-8 /EHsc /GL-)
+add_library(cp19_abi OBJECT tests/cp19_abi.cpp)
+target_compile_features(cp19_abi PRIVATE cxx_std_20)
+target_link_libraries(cp19_abi PRIVATE dusklight_mod_feature_game)
+target_compile_options(cp19_abi PRIVATE /utf-8 /EHsc /Zc:__cplusplus)
