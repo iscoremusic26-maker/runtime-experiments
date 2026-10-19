@@ -1,0 +1,36 @@
+MUTANT a_resident_before_gate KILLED FAIL no audio call while not ready
+MUTANT a_claims_scene_group KILLED FAIL room 10 after the scene erased its copy: own load
+MUTANT a_ready_on_request KILLED FAIL AUDIO_LOAD_READY
+MUTANT a_loads_during_transition KILLED FAIL nothing during a stage transition
+MUTANT a_no_retry_backoff KILLED FAIL later, once free
+MUTANT a_never_gives_up KILLED FAIL bounded, one reservation
+MUTANT a_reservation_keep_ignored KILLED FAIL three spaced refusals then give up
+MUTANT a_wrong_family_wave KILLED FAIL ready
+MUTANT a_interferes_with_scene_loading KILLED FAIL own block present: still no load call while the scene's load is in flight
+MUTANT a_need_ignored KILLED FAIL no DEVF Bokoblin, no encounters: nothing
+MUTANT a_lost_not_detected KILLED FAIL no stale READY once the group left the own block
+MUTANT a_slow_load_logged_every_pass KILLED FAIL one line, no fake ready
+MUTANT a_shutdown_forgets_nothing KILLED FAIL no call, one line
+MUTANT a_foreign_line_every_pass KILLED FAIL scene's own 0x5e: no reservation, no load
+MUTANT a_native_cause_inverted KILLED FAIL cause measured
+MUTANT f1_gate_ignores_init KILLED FAIL one readiness fact alone is not readiness
+MUTANT f1_gate_ignores_audio_heap KILLED FAIL one readiness fact alone is not readiness
+MUTANT f1_gate_lines_every_pass KILLED FAIL one bounded line
+MUTANT b_no_fury_check KILLED FAIL x1.15 blow: no chip
+MUTANT b_no_duplicate_check KILLED FAIL one charge, the other sphere and frames are duplicates
+MUTANT b_no_registration_check KILLED FAIL not charged to the new blow
+MUTANT b_judged_after_sequence_change KILLED FAIL judged against the blow before the sequence change
+MUTANT b_fury_read_every_post KILLED FAIL fury ending during the blow keeps the fury blow
+MUTANT b_generation_inherits KILLED FAIL generation 2 with the same blow number inherits nothing
+MUTANT b_dead_black_charges KILLED FAIL live only
+MUTANT b_two_units KILLED FAIL pending -1
+MUTANT b_meter_negative KILLED FAIL clamped at 0; native death decides
+MUTANT b_at_shield_alone KILLED FAIL at shield bit from hit mark 8 alone is not a shield block
+MUTANT b_tg_object_not_checked KILLED FAIL tg hit object of another attacker
+MUTANT b_at_object_not_checked KILLED FAIL at hit object another cylinder
+MUTANT b_flash_wrong_colour_time KILLED FAIL setDamageColorTime 32-(30%16)
+MUTANT b_flash_lowers_native KILLED FAIL max
+MUTANT b_flash_never_ends KILLED FAIL 30 ticks, native peak R0
+MUTANT b_flash_wrong_peak KILLED FAIL daAlink_c::draw formula
+MUTANT b_flash_green_channel KILLED FAIL daAlink_c::draw formula
+CP19F2_MUTATIONS killed=35 total=35

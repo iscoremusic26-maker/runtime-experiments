@@ -1,0 +1,78 @@
+{
+  "checkpoint": "CP20_EXPLICIT_BLUE_RED_BLACK",
+  "statuses": [
+    "SOURCE_IMPLEMENTED",
+    "LAB_PASS",
+    "WINDOWS_MSVC_PASS",
+    "INDEPENDENT_DOWNLOAD_PASS",
+    "HUMAN_RUNTIME_PENDING"
+  ],
+  "source_commit": "2ce550395ff69d2c9046a2d3e0b635024307ce1e",
+  "ci_commit": "d8b07d029c4f98ca62d4d2eaaf935d87eea290d2",
+  "source_pr": "https://github.com/iscoremusic26-maker/Mods-Duskligh/pull/80",
+  "ci_pr": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/pull/65",
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39325015857",
+  "artifact_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39325015857/artifacts/12222186921",
+  "artifact_outer_zip": {
+    "bytes": 68491353,
+    "sha256": "b294de1310806fe7afb03229aa4b42d0b011b7dc467f632b592eeb376bd88455"
+  },
+  "download_verification": {
+    "status": "INDEPENDENT_DOWNLOAD_PASS",
+    "source_commit": "2ce550395ff69d2c9046a2d3e0b635024307ce1e",
+    "ci_commit": "d8b07d029c4f98ca62d4d2eaaf935d87eea290d2",
+    "run_id": "39325015857",
+    "artifact_id": 12222186921,
+    "expires_at": "2026-11-18T21:12:05Z",
+    "zip": {
+      "filename": "DEVF_CP20_EXPLICIT_BLUE_RED_BLACK_TEST.zip",
+      "bytes": 68839714,
+      "sha256": "96e3710fe62325c6527071b24eebf433d8470e7d510c01f8f39d8594c7abff79"
+    },
+    "outputs": {
+      "BokoblinExpansion_0.16.3_CP20_TEST.dusk": {
+        "bytes": 154219,
+        "sha256": "717e80a4c289fccd1f6b8004b5bdf83a74a23b21c6eb10449565c5d2753036b5"
+      },
+      "DEVF_Provider_0.14.0_CP20_TEST.dusk": {
+        "bytes": 130685,
+        "sha256": "38a581161efb85d7e1ab7efc1382474892143676c936f5ebc3353d5cfdf13609"
+      },
+      "DEVF Map Editor CP20.exe": {
+        "bytes": 161984023,
+        "sha256": "7c38b5fccd834bed8e4097f98aa0c5f04a1511e656ce0a185ab45be33d2d96c0"
+      }
+    },
+    "source_ledger_verified": true,
+    "PE_imports_hooks_ABI": "PASS",
+    "CRC": "PASS",
+    "human": "HUMAN_RUNTIME_PENDING",
+    "game_executed": false
+  },
+  "required_versions": {
+    "provider": "0.14.0",
+    "editor": "0.14.0",
+    "expansion": "0.16.3"
+  },
+  "tests": {
+    "cpp_cp20": 141,
+    "shared_parser_documents": 85,
+    "csharp_cp20": 110,
+    "old_expansion_decoder": 9,
+    "windows_baseline_phases": 38,
+    "windows_cp20_phases": 19,
+    "windows_all_phases_exit_zero": true,
+    "local_regression_cases": 559,
+    "local_fix02_mutants_killed": 35,
+    "local_fix02_mutants_total": 35,
+    "expansion_pe_negatives": 25,
+    "provider_pe_negatives": 19,
+    "editor_synthetic_marker_rendering": "PASS",
+    "source_abi": "CP19F2_MSVC_COFF_SOURCE_ABI_PASS",
+    "frozen_runtime_files": 23,
+    "frozen_provider_files": 12
+  },
+  "game_executed": false,
+  "host_changed": false,
+  "merged_to_main": false
+}
