@@ -46,8 +46,8 @@ try:
    raw=f.read_bytes();raw.decode("utf-8");assert not raw.startswith(b"\xef\xbb\xbf"),("BOM",f.name)
  for f in [TASK/"expansion/mod.json",RT/"CP17_FIX01_RED_X2_JUMP_INTERCEPT/expansion/red_ai_policy.hpp",TASK/"tests/cp17f1_lab.cpp"]:assert f.read_bytes().isascii(),("non-ASCII",f.name)
  result["utf8_controls"]="PASS"
- rcode=strip(redai)
- assert "kBurst=2.0f" in rcode and "3.0f" not in rcode.replace("13.0f","").replace("23.0f","") and "kChargePercent" not in rcode,"x2 only; no x3 or 70% roll in gameplay code"
+ aicode=strip(redai)
+ assert "kBurst=2.0f" in aicode and "3.0f" not in aicode.replace("13.0f","").replace("23.0f","") and "kChargePercent" not in aicode,"x2 only; no x3 or 70% roll in gameplay code"
  assert pcode.count("kGeometry{2.4f,0.70f,0.60f,1.0f,720,650,0.10f,0.99498744f,0.0f}")==1 and "geometry_for(Variant) noexcept {return kGeometry;}" in pcode and "kAlphaCap=255" in pcode
  assert code.count("setLocalTranslation(zero)")==1 and code.count("setLocalScale(one)")==1 and code.count("setDirection(dir)")==1 and "up(0.0f,1.0f,0.0f)" not in code and code.count("mLocalRot.x=0;")==1
  eyes=(RT/"CP12_GROUP_COMBAT_FPS_AND_VARIANT_EYES/expansion/variant_eyes.hpp").read_text(encoding="utf-8");ecode=strip(eyes)
@@ -103,7 +103,7 @@ try:
  lab16=run("cp16-blue-recruit-lab",[BUILD/"cp16_lab.exe"]);assert "CP16_LAB_PASS cases=56" in lab16;result["cp16_lab_cases"]=len(re.findall("CASE_PASS ",lab16));assert result["cp16_lab_cases"]==56
  labfix=run("cp16-fix01-lab",[BUILD/"fix01_lab.exe"]);assert "FIX01_LAB_PASS cases=53" in labfix;result["fix01_lab_cases"]=len(re.findall("CASE_PASS ",labfix));assert result["fix01_lab_cases"]==53
  lab17=run("cp17-historical-red-ai-lab",[BUILD/"cp17_lab.exe"]);assert "CP17_LAB_PASS cases=64" in lab17;result["cp17_lab_cases"]=len(re.findall("CASE_PASS ",lab17));assert result["cp17_lab_cases"]==64
- lab17f1=run("cp17f1-red-x2-intercept-lab",[BUILD/"cp17f1_lab.exe"]);assert "CP17F1_LAB_PASS cases=" in lab17f1;result["cp17f1_lab_cases"]=len(re.findall("CASE_PASS ",lab17f1));assert "CP17F1_LAB_PASS cases=52 " in lab17f1 and result["cp17f1_lab_cases"]==52
+ lab17f1=run("cp17f1-red-x2-intercept-lab",[BUILD/"cp17f1_lab.exe"]);assert "CP17F1_LAB_PASS cases=" in lab17f1;result["cp17f1_lab_cases"]=len(re.findall("CASE_PASS ",lab17f1));assert "CP17F1_LAB_PASS cases=53 " in lab17f1 and result["cp17f1_lab_cases"]==53
  result["cp17f1_lab_metrics"]=[l for l in lab17f1.splitlines() if l.startswith(("COVERAGE ","TIMING ","STATE_BYTES "))]
  import abi_probe
  probe_objects=list(BUILD.rglob("cp17f1_abi.cpp.obj"));assert len(probe_objects)==1

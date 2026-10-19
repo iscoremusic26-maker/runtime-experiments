@@ -9,6 +9,6 @@ Sustituye **solo** la Expansion CP17 0.14.0. Provider/editor CP13 0.13.0, APIs, 
 - Telemetría: muestras de Link solo en transición, reserva crítica, `SESSION_COUNTERS` + `CAUSE_SUMMARY`.
 - Blue FIX01 (2800XZ/250Y, correa 100, llamadas, grito, gracia 10, bonus 650/250, tasas 1.15/1.30, lockouts 17/15), Black y Red CP14 (330 HP, 3 HP/s, aura/ojos, regen x2, lifesteal) sin cambios.
 
-Estado: **SOURCE_IMPLEMENTED / LAB_PASS (local g++ ASan/UBSan: 52 casos FIX01 + 22/22 mutantes) / WINDOWS_MSVC_PENDING / INDEPENDENT_DOWNLOAD_PENDING / HUMAN_RUNTIME_PENDING**. El enlace del TEST se añadirá solo tras build + descarga independiente verificados.
+Estado: **SOURCE_IMPLEMENTED / LAB_PASS (local g++ ASan/UBSan: 53 casos FIX01 + 22/22 mutantes) / WINDOWS_MSVC_PENDING / INDEPENDENT_DOWNLOAD_PENDING / HUMAN_RUNTIME_PENDING**. El enlace del TEST se añadirá solo tras build + descarga independiente verificados.
 
 Ver IMPLEMENTATION, HUMAN_TEST, RECOVERY y TEST_RESULTS. El canario CP14 sigue independiente y no se relaja.

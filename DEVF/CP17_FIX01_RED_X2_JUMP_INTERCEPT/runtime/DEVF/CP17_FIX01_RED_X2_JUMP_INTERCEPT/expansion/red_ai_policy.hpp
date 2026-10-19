@@ -3,7 +3,6 @@
 // The adapter (mod.cpp) samples native state, calls pre()/post()/rush_post()/sweep() and applies only the bounded commands they return.
 #include "../../CP10_4_VARIANT_IDENTITY_HP/expansion/variant_policy.hpp"
 #include <array>
-#include <cmath>
 #include <cstdint>
 #include <cstring>
 namespace devf_red_ai {
@@ -25,14 +24,20 @@ struct Point{float x=0,y=0,z=0;};
 inline bool finite(float x)noexcept{return x==x&&x>=-10000000.f&&x<=10000000.f;}
 inline bool finite(Point p)noexcept{return finite(p.x)&&finite(p.y)&&finite(p.z);}
 inline double xz2(Point a,Point b)noexcept{double x=double(a.x)-b.x,z=double(a.z)-b.z;return x*x+z*z;}
-inline double d3(Point a,Point b)noexcept{double x=double(a.x)-b.x,y=double(a.y)-b.y,z=double(a.z)-b.z;return std::sqrt(x*x+y*y+z*z);}
+// No CRT math in the DLL (reviewed imports): Newton square root from above (monotone, exact to rounding) and a polynomial atan2 (|err| < 2.1e-4 rad, about 2 s16 units against facing bounds of 0x1000+).
+inline double root(double x)noexcept{if(!(x>0))return 0;double r=x>1?x:1;for(int i=0;i<80;++i){const double n=0.5*(r+x/r);if(!(n<r))break;r=n;}return r;}
+inline double arctan2(double y,double x)noexcept{
+ const double ax=x<0?-x:x,ay=y<0?-y:y;if(ax==0&&ay==0)return 0;const double a=ax>ay?ay/ax:ax/ay,s=a*a;
+ double r=((-0.0464964749*s+0.15931422)*s-0.327622764)*s*a+a;if(ay>ax)r=1.5707963267948966-r;if(x<0)r=3.141592653589793-r;return y<0?-r:r;
+}
+inline double d3(Point a,Point b)noexcept{double x=double(a.x)-b.x,y=double(a.y)-b.y,z=double(a.z)-b.z;return root(x*x+y*y+z*z);}
 inline double absd(double x)noexcept{return x<0?-x:x;}
 inline Point add(Point a,Point b)noexcept{return {a.x+b.x,a.y+b.y,a.z+b.z};}
 inline Point sub(Point a,Point b)noexcept{return {a.x-b.x,a.y-b.y,a.z-b.z};}
 inline Point scale(Point a,float k)noexcept{return {a.x*k,a.y*k,a.z*k};}
-inline double len(Point a)noexcept{return std::sqrt(double(a.x)*a.x+double(a.y)*a.y+double(a.z)*a.z);}
+inline double len(Point a)noexcept{return root(double(a.x)*a.x+double(a.y)*a.y+double(a.z)*a.z);}
 // Native s16 yaw convention (cM_atan2s(dx,dz)); used only for facing bounds, never written.
-inline int yaw(Point from,Point to)noexcept{const double a=std::atan2(double(to.x)-from.x,double(to.z)-from.z)*32768.0/3.14159265358979323846;long v=std::lround(a);return int(std::int16_t(std::uint16_t(v&0xffff)));}
+inline int yaw(Point from,Point to)noexcept{const double a=arctan2(double(to.x)-from.x,double(to.z)-from.z)*32768.0/3.141592653589793;const long v=a>=0?long(a+0.5):-long(-a+0.5);return int(std::int16_t(std::uint16_t(std::uint32_t(v)&0xffffu)));}
 inline int angle_gap(int a,int b)noexcept{const int d=int(std::int16_t(std::uint16_t((a-b)&0xffff)));return d<0?-d:d;}
 // cLib_chaseF port (c_lib.cpp): step toward target, clamped on arrival.
 inline float chase(float v,float target,float step)noexcept{if(v>target)step=-step;v+=step;if(step*(v-target)>=0)v=target;return v;}
@@ -169,7 +174,7 @@ inline Plan plan(const Actor&a,const Link&l)noexcept{
  for(int k=1;k<=60;++k){vv+=g;if(vv<-60)vv=-60;yy+=vv;if(vv<0&&yy<=ground){land=k;break;}}
  p.land=land;if(land<0)return p;
  yy=l.pos.y;vv=l.vel.y;for(int k=1;k<=kClose+1&&k<land;++k){vv+=g;if(vv<-60)vv=-60;yy+=vv;if(k<kOpen)continue;
-  const Point at{float(l.pos.x+l.vel.x*k),float(yy),float(l.pos.z+l.vel.z*k)};const double d=std::sqrt(xz2(a.pos,at)),h=yy-a.pos.y;
+  const Point at{float(l.pos.x+l.vel.x*k),float(yy),float(l.pos.z+l.vel.z*k)};const double d=root(xz2(a.pos,at)),h=yy-a.pos.y;
   const bool in=d<=kReachXZ&&h<=kReachY;if(k>kOpen)p.later+=in;if(k>kClose)continue;
   p.count+=in;if((in&&!p.reach)||(in==p.reach&&d<p.best)){p.best=d;p.best_y=h;p.best_k=k;p.reach=in;}}
  return p;
@@ -292,7 +297,7 @@ template<class Emit>inline Command pre(State&s,Actor&a,const Link&l,Emit&&emit)n
 struct RushPost{bool write=false;float value=0;};
 template<class Emit>inline RushPost rush_post(State&s,const Actor&a,Emit&&emit)noexcept{
  RushPost out;if(!s.rush_written)return out;s.rush_written=false;
- const double moved=std::sqrt(xz2(s.rush_from,a.pos));
+ const double moved=root(xz2(s.rush_from,a.pos));
  if(absd(double(a.speed)-s.rush_r)<=1e-3){out={true,s.rush_n};++s.rush_ticks;s.rush_moved+=moved;s.rush_native+=s.rush_n;}
  else if(absd(double(a.speed)-s.rush_x)<=1e-3){out={true,s.rush_v0};++s.rush_preempted;++s.rush_ticks;s.rush_moved+=moved;s.rush_native+=s.rush_v0;emit("RUSH_TICK_PREEMPTED_BY_NATIVE",s.intent_cause,"NATIVE_WATCH_OR_FLOOR_STOP_BEFORE_CHASE_SPEED_RESTORED_TO_PRE_VALUE");}
  else{s.rush=false;emit("RUSH_RELEASED",s.intent_cause,"NATIVE_OR_FOREIGN_SPEED_WRITE_OBSERVED_NOT_OVERWRITTEN");}
@@ -355,7 +360,7 @@ template<class Emit>inline Rate post(State&s,const Actor&a,Emit&&emit)noexcept{
 // current tip and skipped tip. On the tick past the native window (pose 24) only native pose 23 is registered (or exact pose 22 as a fallback).
 // Interpolated radii shrink by an error bound (second difference / 8) so they stay inside the region the native spheres sweep.
 inline bool reaches(Point c,float rad,Point link)noexcept{
- const double h=std::sqrt(xz2(c,link)),dh=h>kLinkR?h-kLinkR:0.0;const double top=double(link.y)+kLinkH;
+ const double h=root(xz2(c,link)),dh=h>kLinkR?h-kLinkR:0.0;const double top=double(link.y)+kLinkH;
  const double y=double(c.y)<double(link.y)?double(link.y):double(c.y)>top?top:double(c.y);const double dy=y-c.y;return dh*dh+dy*dy<=double(rad)*rad;
 }
 struct Sweep{bool write0=false,write1=false;Point c0{},c1{};float r0=0,r1=0;const char* why="NONE";};

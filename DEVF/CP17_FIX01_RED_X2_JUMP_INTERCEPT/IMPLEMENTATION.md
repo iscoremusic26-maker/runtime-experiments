@@ -119,7 +119,7 @@ Tiempos del laboratorio (física portada de Link; no observados en juego):
   - `speedF` de la aproximación y su restauración.
   - `SetC`/`SetR` de `mSphs_at[0/1]` durante una pasada.
 - Nada se escribe en Link, HP, AtHit, ATP, fotogramas, temporizadores, `home` ni posición.
-- **Imports:** CP17 menos `startCreatureSound`, más `cM3dGSph::SetC`/`SetR`. Un solo hook `execute` con PRE y POST.
+- **Imports:** CP17 menos `startCreatureSound`, más `cM3dGSph::SetC`/`SetR`. Un solo hook `execute` con PRE y POST. La política no usa matemáticas del CRT (raíz de Newton y atan2 polinómica propias, error ≤2,1e-4 rad), para no añadir imports `api-ms-win-crt-math` no revisados.
 - **Memoria:** 64 ranuras × 336 B = 21 504 B estáticos, sin heap por fotograma y sin censos globales.
 - **CPU:** coste O(1) por ejecución propia.
 - **Preservación:** fuera del bloque Red, `mod.cpp` es idéntico a CP17 (la puerta de fuente lo compara). Los 24 ficheros de runtime son idénticos byte a byte. Blue FIX01, Black, CP14 y la clasificación no cambian.

@@ -133,6 +133,9 @@ std::vector<Swing> swings(){
 }
 int main(){
  test("constants_x2_exact_normal_115_rush_15_no_x3",[]{need(r::kBurst==2.0f&&r::kNormal==1.15f&&r::kRush==1.5f,"rates");need(r::kRandomPercent==12&&r::kPassive==105&&r::kIntent==90,"cadence");need(r::kOpen==8&&r::kClose==12,"window");});
+ test("crt_free_root_and_arctan2_exact_enough",[]{double worst=0;for(double x=1e-6;x<1e15;x*=1.37){const double a=r::root(x),b=std::sqrt(x);need(std::fabs(a-b)<=1e-12*b+1e-15,"root");}
+  for(int i=0;i<20000;++i){const double ang=(i-10000)*0.000314159,y=std::sin(ang)*(1+i%7),x=std::cos(ang)*(1+i%7);worst=std::max(worst,std::fabs(r::arctan2(y,x)-std::atan2(y,x)));}need(worst<2.5e-4,"atan2 error below 2.5e-4 rad");
+  need(r::yaw({0,0,0},{1,0,0})==0x4000&&r::yaw({0,0,0},{0,0,1})==0&&r::yaw({0,0,0},{-1,0,0})==-0x4000&&(std::abs(r::yaw({0,0,0},{0,0,-1}))==0x8000||r::yaw({0,0,0},{0,0,-1})==-0x8000),"s16 yaw convention (cM_atan2s(dx,dz))");std::printf("ATAN2_MAX_ERR_RAD %.2e\n",worst);});
  test("fresh_blow_normal_115_and_random_x2_once",[]{Lab L;L.s().next_random=100000;auto x=L.start();need(x.write&&x.value==r::kNormal&&x.cause==r::Cause::Normal,"normal");L.finish();
   Lab R;R.s().combat=true;R.l.motion=r::Motion::Offensive;unsigned bursts=0;for(int i=0;i<400;++i){R.find_tick();auto y=R.start();if(!y.write&&R.s().pending){auto z=R.apply2();need(z.write&&z.value==r::kBurst&&z.cause==r::Cause::Random&&R.a.frame==2,"random x2 at frame 2");++bursts;}else need(y.value==r::kNormal,"normal at frame1");R.finish();}need(bursts>0,"random reachable");});
  test("x2_even_phase_window_ticks_8_to_12",[]{auto t=trace(5,2.0f);need(t.active==5,"5 active ticks");need(t.active_pre==std::vector<float>({14,16,18,20,22}),"pre frames");need(t.poses==std::vector<float>({16,18,20,22,24}),"poses");

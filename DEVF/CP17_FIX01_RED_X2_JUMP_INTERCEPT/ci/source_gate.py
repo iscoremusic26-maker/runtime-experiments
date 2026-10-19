@@ -45,7 +45,7 @@ def check(repo,task):
  policy=(rt/N/'expansion/red_ai_policy.hpp').read_text(encoding="utf-8");pc=code(policy)
  assert not re.search(r'\b(daAlink_c|daPy_py_c|daE_OC_c|fopAc_ac_c)\s*\*',pc),'game pointer in value policy'
  for token in ['kNormal=1.15f,kBurst=2.0f,kRush=1.5f,kFindSpeed=20.0f','kRandomPercent=12,kRandomMin=120,kRandomMax=210,kReactiveCooldown=45','kPassive=105,kPassiveMin=180,kPassiveMax=300,kIntent=90','kOpen=8,kClose=12','kProcCutJump=0x26,kProcCutJumpLand=0x27,kProcLargeJump=0x30,kProcLargeJumpLand=0x31','kReactRadius=900.','kHeight=200.','kLeashMargin=100.','kTipR=45.f,kHiltR=30.f,kLinkR=35.f']:assert token in pc,token
- for gone in ['kChargePercent','kBurst=3.0f','lost_b_sfx','before_blow','chance(s,kChargePercent)']:assert gone not in pc,gone
+ for gone in ['kChargePercent','kBurst=3.0f','lost_b_sfx','before_blow','chance(s,kChargePercent)','std::sqrt','std::atan2','std::lround','<cmath>','std::sin','std::cos']:assert gone not in pc and gone not in policy,gone   # no CRT math imports beyond the reviewed set
  assert re.search(r'inline Jump jump_view\(',pc) and 'proc==kProcCutJump' in pc and 'proc==kProcLargeJump' in pc
  official=repo/'.official';facts={}
  for rel,expected in json.loads((task/'ci/official-source-blobs.json').read_text(encoding="utf-8")).items():
