@@ -19,16 +19,16 @@ def download(artifact):
  assert len(data)<=400_000_000
  return data
 run=os.environ["GITHUB_RUN_ID"];arts=api("actions/runs/"+run+"/artifacts")["artifacts"]
-artifact=next(a for a in arts if a["name"]=="DEVF_CP17_FIX01_RED_X2_JUMP_INTERCEPT_TEST_"+run)
-evidence=next(a for a in arts if a["name"]=="DEVF_CP17F1_TEXT_"+run)
+artifact=next(a for a in arts if a["name"]=="DEVF_CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT_TEST_"+run)
+evidence=next(a for a in arts if a["name"]=="DEVF_CP18_TEXT_"+run)
 with zipfile.ZipFile(io.BytesIO(download(evidence))) as z:
  assert z.testzip() is None
  result=json.loads(z.read("result.json"))
 with zipfile.ZipFile(io.BytesIO(download(artifact))) as outer:
- assert outer.testzip() is None and outer.namelist()==["DEVF_CP17_FIX01_RED_X2_JUMP_INTERCEPT_TEST.zip"];bundle=outer.read(outer.namelist()[0])
+ assert outer.testzip() is None and outer.namelist()==["DEVF_CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT_TEST.zip"];bundle=outer.read(outer.namelist()[0])
 assert len(bundle)==result["zip"]["bytes"] and sha(bundle)==result["zip"]["sha256"]
-pin=json.loads((TASK/"SOURCE_CI_CP17F1.json").read_text(encoding="utf-8"))
-work=Path(os.environ["RUNNER_TEMP"])/"cp17f1-independent";work.mkdir()
+pin=json.loads((TASK/"SOURCE_CI_CP18.json").read_text(encoding="utf-8"))
+work=Path(os.environ["RUNNER_TEMP"])/"cp18-independent";work.mkdir()
 with zipfile.ZipFile(io.BytesIO(bundle)) as z:
  assert z.testzip() is None and len(z.namelist())==len(set(z.namelist()))
  assert all(not n.startswith(("/","\\")) and ".." not in Path(n).parts and "\\" not in n for n in z.namelist())
@@ -48,7 +48,7 @@ with zipfile.ZipFile(io.BytesIO(bundle)) as z:
  with zipfile.ZipFile(pkgpath) as pz:
   assert pz.testzip() is None;audit.safe_members(pz);dllraw=pz.read("lib/windows-amd64/mod.dll");manifest_inside=pz.read("mod.json")
  assert sha(dllraw)==m["dll_sha256"] and len(dllraw)==m["dll_bytes"] and sha(manifest_inside)==m["manifest_sha256"]
- dllpath=work/"expansion.dll";dllpath.write_bytes(dllraw);pe=audit.inspect_pe(dllpath);assert pe["status"]=="CP17F1_PE_ABI_PASS"
+ dllpath=work/"expansion.dll";dllpath.write_bytes(dllraw);pe=audit.inspect_pe(dllpath);assert pe["status"]=="CP18_PE_ABI_PASS"
  expected=json.loads((TASK/"ci/reviewed-imports.json").read_text())["dusklight.exe"]
  assert pe["imports"]["dusklight.exe"]==sorted(expected)
  assert pe["hook_bound_imports"]==["?execute@daE_OC_c@@QEAAHXZ"]
@@ -57,9 +57,9 @@ with zipfile.ZipFile(io.BytesIO(bundle)) as z:
   for name,h in result["source_ledger"].items():
    assert sha(src.read(name))==h and sha((REPO/name).read_bytes())==h and git_blob(src.read(name))==pin["source_blobs"][name]
  tr=json.loads(z.read("TEST_RESULTS.json"))
- assert tr["cp17_link_abi_source_layout"]["status"]=="CP17F1_MSVC_COFF_SOURCE_ABI_PASS" and tr["cp17_link_abi_source_layout"]["game_DLL_loaded"] is False and tr["cp17_link_abi_source_layout"]["layout"]["proc_width"]==2
- assert tr["cp15_lab_cases"]==38 and tr["cp16_lab_cases"]==56 and tr["cp14_lab_cases"]==16 and tr["fix01_lab_cases"]==53 and tr["cp17_lab_cases"]==64 and tr["cp17f1_lab_cases"]==53 and tr["runtime_provenance"]["identical_runtime_files_to_cp17"]==24 and tr["runtime_provenance"]["cp14_forwarding_lines"]==1 and tr["runtime_provenance"]["outside_red_adapter_unchanged"] is True and tr["provider_regression"]["shipped"] is False
+ assert tr["cp17_link_abi_source_layout"]["status"]=="CP18_MSVC_COFF_SOURCE_ABI_PASS" and "cp18" in tr["cp17_link_abi_source_layout"]["layout"] and tr["cp17_link_abi_source_layout"]["game_DLL_loaded"] is False and tr["cp17_link_abi_source_layout"]["layout"]["proc_width"]==2
+ assert tr["cp15_lab_cases"]==38 and tr["cp16_lab_cases"]==56 and tr["cp14_lab_cases"]==16 and tr["fix01_lab_cases"]==53 and tr["cp17_lab_cases"]==64 and tr["cp17f1_lab_cases"]==53 and tr["cp18_lab_cases"]==43 and tr["runtime_provenance"]["identical_runtime_files_to_cp17_fix01"]==25 and tr["runtime_provenance"]["red_policy_byte_identical"] is True and tr["runtime_provenance"]["outside_black_adapter_unchanged"] is True and tr["runtime_provenance"]["added_game_imports"]==[] and tr["provider_regression"]["shipped"] is False
  assert tr["name_tests"]["cases"]==25 and tr["multi_tests"]["status"]=="CP10_STATIC_LAB_PASS" and tr["runtime_lab_cases"]==66 and tr["black_lab_cases"]==26 and tr["texture_lab_cases"]==20 and tr["variant_lab_cases"]==30 and tr["damage_lab_cases"]==22 and tr["dynamic_lab_cases"]==28 and tr["visual_lab_cases"]==22 and tr["eye_lab_cases"]==9 and tr["strokes_lab_cases"]==36 and tr["perf_lab_cases"]==4 and tr["cp12_lab_cases"]==7 and tr["cp13_runtime_cases"]>=26 and tr["cp13_editor_tests"]["status"]=="CP13_EDITOR_LAB_PASS"
- report=dict(status="DOWNLOAD_VERIFIED",run_id=run,artifact_id=artifact["id"],artifact_name=artifact["name"],expires_at=artifact["expires_at"],source_commit=result["source_commit"],ci_commit=result["ci_commit"],zip=result["zip"],source_ledger_verified=True,bytes_and_sha256_checked_on_downloaded_zip=True,package_audited_pe_abi_hooks_imports=True,cp17_lab_cases=tr["cp17_lab_cases"],cp17f1_lab_cases=tr["cp17f1_lab_cases"],cp17_link_abi_source_layout=tr["cp17_link_abi_source_layout"],no_loose_dll_no_game_assets=True,requires_provider=manifest["requires_provider"],expansion=manifest["package"],CRC="PASS",game_executed=False)
-out=Path(os.environ["RUNNER_TEMP"])/"cp17f1-download-evidence";out.mkdir();(out/"download-result.json").write_text(json.dumps(report,indent=2)+"\n")
-print("CP17F1_DOWNLOAD_RESULT="+json.dumps(report,separators=(",",":")),flush=True)
+ report=dict(status="DOWNLOAD_VERIFIED",run_id=run,artifact_id=artifact["id"],artifact_name=artifact["name"],expires_at=artifact["expires_at"],source_commit=result["source_commit"],ci_commit=result["ci_commit"],zip=result["zip"],source_ledger_verified=True,bytes_and_sha256_checked_on_downloaded_zip=True,package_audited_pe_abi_hooks_imports=True,cp17_lab_cases=tr["cp17_lab_cases"],cp17f1_lab_cases=tr["cp17f1_lab_cases"],cp18_lab_cases=tr["cp18_lab_cases"],cp17_link_abi_source_layout=tr["cp17_link_abi_source_layout"],no_loose_dll_no_game_assets=True,requires_provider=manifest["requires_provider"],expansion=manifest["package"],CRC="PASS",game_executed=False)
+out=Path(os.environ["RUNNER_TEMP"])/"cp18-download-evidence";out.mkdir();(out/"download-result.json").write_text(json.dumps(report,indent=2)+"\n")
+print("CP18_DOWNLOAD_RESULT="+json.dumps(report,separators=(",",":")),flush=True)

@@ -1,4 +1,4 @@
-"""CP17 FIX01 0.14.1 (CP17 gates; reviewed imports: CP17 set minus the 0.14.0 B-SFX sound call, plus the native sphere setters cM3dGSph::SetC/SetR). CP16 (same gates as CP12/CP13/CP14; the reviewed read-only game imports of CP14 plus native setActionMode/searchPlayer/scene-transition check; obsolete evasion probes removed): strict PE/ZIP audit (one execute hook target with PRE+POST, no drawFast/XF; private J3DTexture import reviewed). Base: CP10.2 for the Black-variant Expansion (hooks + game imports), self-contained.
+"""CP18 0.15.0: reviewed import set identical to CP17 FIX01 0.14.1 (Black adapter adds no import). CP17 FIX01 0.14.1 (CP17 gates; reviewed imports: CP17 set minus the 0.14.0 B-SFX sound call, plus the native sphere setters cM3dGSph::SetC/SetR). CP16 (same gates as CP12/CP13/CP14; the reviewed read-only game imports of CP14 plus native setActionMode/searchPlayer/scene-transition check; obsolete evasion probes removed): strict PE/ZIP audit (one execute hook target with PRE+POST, no drawFast/XF; private J3DTexture import reviewed). Base: CP10.2 for the Black-variant Expansion (hooks + game imports), self-contained.
 Derived from the human-verified CP04.4 audit (hook metadata, PMF import binding) and the CP10 expansion audit (services)."""
 import hashlib,json,stat,struct,zipfile
 from pathlib import Path
@@ -101,14 +101,14 @@ def inspect_pe(path):
     if sorted(r['target'] for r in records if r['kind']=='hook_mem')!=sorted(HOOK_NAMES) or set(bound)!=HOOK_IMPORTS:raise RuntimeError('Typed hook surface/PMF import binding mismatch')
     if len(records)!=1+len(EXPECTED_SERVICES)+len(HOOK_NAMES):raise RuntimeError('Duplicate or extra metadata')
     if b'J3DShapePacket::drawFast' in raw or 'GXCallDisplayList' in imports.get('dusklight.exe',[]):raise RuntimeError('Old XF/drawFast tint route must be absent')
-    return {'status':'CP17F1_PE_ABI_PASS','machine':'AMD64','imports':imports,'metadata':records,'exports':pe_exports(raw),'hook_bound_imports':sorted(bound),'tls_or_delay_imports':False,'game_or_dll_executed':False}
+    return {'status':'CP18_PE_ABI_PASS','machine':'AMD64','imports':imports,'metadata':records,'exports':pe_exports(raw),'hook_bound_imports':sorted(bound),'tls_or_delay_imports':False,'game_or_dll_executed':False}
 def verify_package(package,dll,project):
     pe=inspect_pe(dll)
     with zipfile.ZipFile(package) as z:
         members=safe_members(z);manifest=z.read('mod.json');inside=z.read('lib/windows-amd64/mod.dll')
     if manifest!=(project/'expansion/mod.json').read_bytes() or inside!=dll.read_bytes():raise RuntimeError('Package manifest or DLL mismatch')
     parsed=json.loads(manifest)
-    if (parsed['id'],parsed['version'])!=('dev.bokoblin.expansion','0.14.1'):raise RuntimeError('Package identity/version')
+    if (parsed['id'],parsed['version'])!=('dev.bokoblin.expansion','0.15.0'):raise RuntimeError('Package identity/version')
     return {'status':'PACKAGE_VERIFIED','package_bytes':package.stat().st_size,'package_sha256':sha(package.read_bytes()),'dll_bytes':len(inside),'dll_sha256':sha(inside),'manifest_sha256':sha(manifest),'members':members,'pe':pe,'original_assets_included':False}
 def negatives(dll,work):
     result=[];raw=dll.read_bytes()
@@ -122,8 +122,8 @@ def negatives(dll,work):
     for name,before,after in [('wrong_execute_hook',b'daE_OC_c::execute',b'daE_OC_c::executX'),('wrong_hook_service',b'dev.twilitrealm.dusklight.hook',b'dev.twilitrealm.dusklight.hoox'),('wrong_export',b'mod_update',b'mod_updatX'),('wrong_encounter_service',b'dev.devf.encounter_placement',b'dev.devf.encounter_placemenX')]:
         if before not in raw:raise RuntimeError('Negative marker missing: '+name)
         reject(name,raw.replace(before,after))
-    if b'?startCreatureSound@Z2CreatureEnemy@@' in raw:raise RuntimeError('0.14.0 B SFX compensation import must be absent in 0.14.1')
-    for name,before in [('unreviewed_CP17F1_sphere_centre_symbol',b'?SetC@cM3dGSph@@QEAAXAEBUcXyz@@@Z'),('unreviewed_CP17F1_sphere_radius_symbol',b'?SetR@cM3dGSph@@QEAAXM@Z'),('unreviewed_CP17_LOS_symbol',b'?fopAcM_otherBgCheck@@YAHPEBVfopAc_ac_c@@0@Z')]:
+    if b'?startCreatureSound@Z2CreatureEnemy@@' in raw:raise RuntimeError('0.14.0 B SFX compensation import must stay absent')
+    for name,before in [('unreviewed_CP17F1_sphere_centre_symbol',b'?SetC@cM3dGSph@@QEAAXAEBUcXyz@@@Z'),('unreviewed_CP17F1_sphere_radius_symbol',b'?SetR@cM3dGSph@@QEAAXM@Z'),('unreviewed_CP17_LOS_symbol',b'?fopAcM_otherBgCheck@@YAHPEBVfopAc_ac_c@@0@Z'),('unreviewed_CP18_native_mode_entry_symbol',b'?setActionMode@daE_OC_c@@QEAAXHH@Z'),('unreviewed_CP18_clip_check_symbol',b'?checkBck@daE_OC_c@@QEAA_NH@Z')]:
         if before not in raw:raise RuntimeError('New import negative marker missing: '+name)
         after=before[:-1]+b'X';reject(name,raw.replace(before,after))
     def bad_zip(name,entries):
@@ -140,8 +140,11 @@ def negatives(dll,work):
 
 def package_negatives(package,dll,project,work):
     with zipfile.ZipFile(package) as z:manifest=json.loads(z.read('mod.json'));raw=z.read('lib/windows-amd64/mod.dll')
-    manifest['version']='0.14.0';p=work/'negative-cp17f1-previous-version.dusk'
-    with zipfile.ZipFile(p,'w') as z:z.writestr('mod.json',json.dumps(manifest));z.writestr('lib/windows-amd64/mod.dll',raw)
-    try:verify_package(p,dll,project)
-    except RuntimeError:return [dict(case='CP17F1_previous_0_14_0_manifest_version',rejected=True)]
-    raise RuntimeError('CP17 FIX01 wrong manifest version survived')
+    out=[]
+    for version in ['0.14.1','0.14.0']:
+        manifest['version']=version;p=work/('negative-cp18-previous-version-'+version+'.dusk')
+        with zipfile.ZipFile(p,'w') as z:z.writestr('mod.json',json.dumps(manifest));z.writestr('lib/windows-amd64/mod.dll',raw)
+        try:verify_package(p,dll,project)
+        except RuntimeError:out.append(dict(case='CP18_previous_'+version.replace('.','_')+'_manifest_version',rejected=True));continue
+        raise RuntimeError('CP18 wrong manifest version survived: '+version)
+    return out

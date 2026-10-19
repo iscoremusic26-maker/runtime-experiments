@@ -2,11 +2,11 @@ import datetime,json,os,re,shutil,subprocess,sys,zipfile
 from pathlib import Path
 from common import *
 import audit
-# CP17 FIX01 (0.14.1): Red x2/interception/rush/contact coverage. Historical CP15/CP16/CP17 labs remain on their own historical headers only.
+# CP18 (0.15.0): Black x1.15/x2, fury chain, same-room hunt. CP17 FIX01 (Red) and historical CP15/CP16/CP17 labs remain on their own headers.
 # Provider 0.13.0 and editor 0.13.0 are CP13's: rebuilt here from their unchanged CP13 sources for the regression labs and audits, NOT shipped.
-WORK=Path(os.environ["RUNNER_TEMP"])/"devf-cp17f1";BUILD=WORK/"build";EVIDENCE=WORK/"evidence";DIST=WORK/"deliver";OUT=WORK/"artifact"
+WORK=Path(os.environ["RUNNER_TEMP"])/"devf-cp18";BUILD=WORK/"build";EVIDENCE=WORK/"evidence";DIST=WORK/"deliver";OUT=WORK/"artifact"
 for p in [WORK,BUILD,EVIDENCE,DIST,OUT]:p.mkdir(parents=True,exist_ok=True)
-pin=json.loads((TASK/"SOURCE_CI_CP17F1.json").read_text(encoding="utf-8"));source=pin["source_commit"]
+pin=json.loads((TASK/"SOURCE_CI_CP18.json").read_text(encoding="utf-8"));source=pin["source_commit"]
 assert re.fullmatch("[0-9a-f]{40}",source)
 result=dict(status="FAILED",source_commit=source,ci_commit=subprocess.check_output(["git","rev-parse","HEAD"],text=True).strip(),run_id=os.environ["GITHUB_RUN_ID"],game_executed=False,provider="CP13 provider 0.13.0 source rebuilt for regression only, not shipped",toolchain={k:os.environ.get(k) for k in ["VCToolsVersion","WindowsSDKVersion","VSCMD_ARG_TGT_ARCH"]},phases=[])
 def run(label,args,cwd=None):
@@ -27,9 +27,10 @@ try:
   raw=(REPO/name).read_bytes();assert git_blob(raw)==h,name
  result["pinned_blobs_verified"]=len(pin["source_blobs"])
  RT=TASK/"runtime/DEVF";C14=REPO/CP14_DIR/"runtime/DEVF"
- mod=(RT/"CP17_FIX01_RED_X2_JUMP_INTERCEPT/expansion/mod.cpp").read_text(encoding="utf-8")
- blue=(RT/"CP17_FIX01_RED_X2_JUMP_INTERCEPT/expansion/blue_ai_policy.hpp").read_text(encoding="utf-8")
- redai=(RT/"CP17_FIX01_RED_X2_JUMP_INTERCEPT/expansion/red_ai_policy.hpp").read_text(encoding="utf-8")
+ mod=(RT/"CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT/expansion/mod.cpp").read_text(encoding="utf-8")
+ blue=(RT/"CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT/expansion/blue_ai_policy.hpp").read_text(encoding="utf-8")
+ redai=(RT/"CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT/expansion/red_ai_policy.hpp").read_text(encoding="utf-8")
+ blackai=(RT/"CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT/expansion/black_ai_policy.hpp").read_text(encoding="utf-8")
  red=(RT/"CP14_RED_BOKOBLIN_LIFESTEAL_GROUP_REGEN_GOLD/expansion/red_policy.hpp").read_text(encoding="utf-8")
  pol=(RT/"CP12_GROUP_COMBAT_FPS_AND_VARIANT_EYES/expansion/strokes_policy.hpp").read_text(encoding="utf-8")
  code=strip(mod);pcode=strip(pol);rcode=strip(red);bcode=strip(blue)
@@ -39,14 +40,15 @@ try:
   assert f not in code,("forbidden in mod.cpp: "+f)
  assert "kResource=0x0B9D" in pcode and "en.set(res," in pcode and "never_used" in pcode and "0x0A58" in pcode.split("kNeverUsed[]=")[1].split(";")[0]
  assert code.count("DEFINE_HOOK(")==1 and code.count("hook::add_pre<")==1 and code.count("hook::add_post<")==1 and code.count("dComIfGp_particle_set(")==1
- assert 'kVersion="0.14.1"' in code
- # UTF-8 controls: every FIX01 text file decodes as strict UTF-8 without BOM; mod.json and policy/adapter are ASCII-only (no locale-dependent bytes).
+ assert 'kVersion="0.15.0"' in code
+ # UTF-8 controls: every CP18 text file decodes as strict UTF-8 without BOM; mod.json and policy/adapter are ASCII-only (no locale-dependent bytes).
  for f in TASK.rglob("*"):
   if f.is_file() and f.suffix.lower() in [".cpp",".hpp",".py",".json",".md",".txt"]:
    raw=f.read_bytes();raw.decode("utf-8");assert not raw.startswith(b"\xef\xbb\xbf"),("BOM",f.name)
- for f in [TASK/"expansion/mod.json",RT/"CP17_FIX01_RED_X2_JUMP_INTERCEPT/expansion/red_ai_policy.hpp",TASK/"tests/cp17f1_lab.cpp"]:assert f.read_bytes().isascii(),("non-ASCII",f.name)
+ for f in [TASK/"expansion/mod.json",RT/"CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT/expansion/red_ai_policy.hpp",RT/"CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT/expansion/black_ai_policy.hpp",TASK/"tests/cp18_lab.cpp"]:assert f.read_bytes().isascii(),("non-ASCII",f.name)
  result["utf8_controls"]="PASS"
  aicode=strip(redai)
+ bcode2=strip(blackai);assert "kNormal=1.15f,kFury=2.0f" in bcode2 and "3.0f" not in bcode2,"Black x1.15 / x2 only"
  assert "kBurst=2.0f" in aicode and "3.0f" not in aicode.replace("13.0f","").replace("23.0f","") and "kChargePercent" not in aicode,"x2 only; no x3 or 70% roll in gameplay code"
  assert pcode.count("kGeometry{2.4f,0.70f,0.60f,1.0f,720,650,0.10f,0.99498744f,0.0f}")==1 and "geometry_for(Variant) noexcept {return kGeometry;}" in pcode and "kAlphaCap=255" in pcode
  assert code.count("setLocalTranslation(zero)")==1 and code.count("setLocalScale(one)")==1 and code.count("setDirection(dir)")==1 and "up(0.0f,1.0f,0.0f)" not in code and code.count("mLocalRot.x=0;")==1
@@ -58,7 +60,7 @@ try:
  assert code.count("LOG_LEVEL_ERROR")==1 and "event=PERF_WINDOW" in code and "level_note=MEASUREMENT_NOT_AN_ERROR" in code and "<windows.h>" not in code
  assert clock.count("#include <windows.h>")==1 and clock.count("extern \"C\"")==2 and "QueryPerformanceCounter" in clock and "GetSystemTimeAsFileTime" in clock
  assert "devf_perf::complete_snapshot(table,normal_table,s," in code and code.count("getLayerNo(0)")==2 and "devf_perf::LogBudget log_budget;" in code
- assert code.count("devf_perf::find_used(")==18 and "vledger.find(" not in code and "ledger.find(" not in code   # CP13: 5; CP14 adds regen_multiplier + the claim confirmation
+ assert code.count("devf_perf::find_used(")==21 and "vledger.find(" not in code and "ledger.find(" not in code   # CP13: 5; CP14 adds regen_multiplier + the claim confirmation; CP18 adds 3 in the Black block
  assert "  if(created){" in code and code.count("setGlobalPrmColor(")==1 and code.count("setGlobalEnvColor(")==1 and code.count("setGlobalAlpha(")==1
  assert code.count("setGlobalDynamicsScale(")==1 and code.count("setGlobalParticleScale(")==1
  assert "kGeometry{2.4f,0.70f,0.60f,1.0f,720,650,0.10f,0.99498744f,0.0f}" in pcode and "kBlueColour{80,190,255,30,90,170}" in pcode and "kBlackColour{255,32,24,130,0,6}" in pcode
@@ -71,7 +73,7 @@ try:
   assert f not in code and f not in rcode,("no pixel / human claims: "+f)
  assert len(re.findall(r"mVolumeSweep\s*=(?!=)",code))==1 and len(re.findall(r"mVolumeMinRad\s*=(?!=)",code))==1 and "route=SHARED_BODY_HUGGING_STROKES" in code and "SHARED_CANONICAL_RING" not in code
  # ---- CP14 gates: Red route contained, Link read-only, one lifesteal write, x2 never more ----
- assert code.count("dComIfGp_getLinkPlayer()")==4 and code.count("dComIfGs_getLife()")==2 and code.count("dComIfGp_getItemLifeCount()")==1   # CP14 red watch + CP15 Blue AI
+ assert code.count("dComIfGp_getLinkPlayer()")==6 and code.count("dComIfGs_getLife()")==2 and code.count("dComIfGp_getItemLifeCount()")==1   # CP14 red watch + CP15 Blue AI
  for f in ["setDamagePoint","setItemLifeCount","dComIfGs_setLife","SetTgHit","ClrTgHit","ClrAtHit","OnTgShieldHit","OnAtShieldHit","GetTgHitAc","GetAtHitAc"]:
   assert f not in code,("CP14 must only READ Link / collider state: "+f)
  assert not re.findall(r"\bk->[\w\.\[\]]+\s*=(?!=)",code) and not re.findall(r"\bra->[\w\.\[\]]+\s*=(?!=)",code) and not re.findall(r"\bk->mTgCyls\[i\]\.Set",code)
@@ -96,7 +98,7 @@ try:
  result["official_import_symbols_verified"]=True
  libpath=WORK/"windows-amd64.lib";libpath.write_bytes(lib)
  run("configure",["cmake","-S",TASK,"-B",BUILD,"-G","Ninja","-DCMAKE_BUILD_TYPE=Release","-DDUSK_SOURCE="+str(official),"-DDEVF_SOURCE_SHA="+source,"-DDUSK_GAME_EXE="+str(libpath)])
- msvc_text=run("msvc",["cmake","--build",BUILD,"--target","bokoblin_expansion","devf_map_provider","cp15_lab","cp16_lab","fix01_lab","cp17_lab","cp17f1_lab","cp17f1_abi","cp14_regress_lab","cp13_lab","map_lab","legacy_lab","black_lab","texture_lab","variant_lab","damage_lab","dynamic_damage_lab","visual_lab","eye_lab","strokes_lab","perf_lab","cp12_lab","api_c_abi","--parallel","2"])
+ msvc_text=run("msvc",["cmake","--build",BUILD,"--target","bokoblin_expansion","devf_map_provider","cp15_lab","cp16_lab","fix01_lab","cp17_lab","cp17f1_lab","cp18_lab","cp18_abi","cp14_regress_lab","cp13_lab","map_lab","legacy_lab","black_lab","texture_lab","variant_lab","damage_lab","dynamic_damage_lab","visual_lab","eye_lab","strokes_lab","perf_lab","cp12_lab","api_c_abi","--parallel","2"])
  assert "C4477" not in msvc_text and "C4473" not in msvc_text,"printf format mismatch reported by MSVC"
  result["printf_format_warnings"]=0
  lab15=run("cp15-blue-ai-lab",[BUILD/"cp15_lab.exe"]);assert "CP15_LAB_PASS cases=38" in lab15;result["cp15_lab_cases"]=len(re.findall("CASE_PASS ",lab15));assert result["cp15_lab_cases"]==38
@@ -105,12 +107,14 @@ try:
  lab17=run("cp17-historical-red-ai-lab",[BUILD/"cp17_lab.exe"]);assert "CP17_LAB_PASS cases=64" in lab17;result["cp17_lab_cases"]=len(re.findall("CASE_PASS ",lab17));assert result["cp17_lab_cases"]==64
  lab17f1=run("cp17f1-red-x2-intercept-lab",[BUILD/"cp17f1_lab.exe"]);assert "CP17F1_LAB_PASS cases=" in lab17f1;result["cp17f1_lab_cases"]=len(re.findall("CASE_PASS ",lab17f1));assert "CP17F1_LAB_PASS cases=53 " in lab17f1 and result["cp17f1_lab_cases"]==53
  result["cp17f1_lab_metrics"]=[l for l in lab17f1.splitlines() if l.startswith(("COVERAGE ","TIMING ","STATE_BYTES "))]
+ lab18=run("cp18-black-fury-chain-hunt-lab",[BUILD/"cp18_lab.exe"]);result["cp18_lab_cases"]=len(re.findall("CASE_PASS ",lab18));assert "CP18_LAB_PASS cases=43" in lab18 and result["cp18_lab_cases"]==43
+ result["cp18_lab_metrics"]=[l for l in lab18.splitlines() if l.startswith("STATE_BYTES ")]
  import abi_probe
- probe_objects=list(BUILD.rglob("cp17f1_abi.cpp.obj"));assert len(probe_objects)==1
+ probe_objects=list(BUILD.rglob("cp18_abi.cpp.obj"));assert len(probe_objects)==1
  result["cp17_link_abi_source_layout"]=abi_probe.verify(probe_objects[0])
- (EVIDENCE/"cp17f1-msvc-source-abi.json").write_text(json.dumps(result["cp17_link_abi_source_layout"],indent=2)+"\n",encoding="utf-8")
- result["phases"].append(dict(label="cp17f1-msvc-coff-source-layout",exit=0))
- disasm17=run("cp17f1-const-virtual-dispatch-disassembly",["dumpbin","/disasm",probe_objects[0]]);assert all(n in disasm17 for n in ["cp17_const_charge","cp17_const_spin","cp17_const_jump","cp17f1_const_cut_jump_mode","cp17_typed_proc"])
+ (EVIDENCE/"cp18-msvc-source-abi.json").write_text(json.dumps(result["cp17_link_abi_source_layout"],indent=2)+"\n",encoding="utf-8")
+ result["phases"].append(dict(label="cp18-msvc-coff-source-layout",exit=0))
+ disasm17=run("cp18-const-virtual-dispatch-disassembly",["dumpbin","/disasm",probe_objects[0]]);assert all(n in disasm17 for n in ["cp17_const_charge","cp17_const_spin","cp17_const_jump","cp17f1_const_cut_jump_mode","cp17_typed_proc"])
  lab14=run("cp14-red-lab-on-cp16-runtime",[BUILD/"cp14_regress_lab.exe"]);assert "CP14_LAB_PASS cases=16" in lab14;result["cp14_lab_cases"]=len(re.findall("CASE_PASS ",lab14));assert result["cp14_lab_cases"]==16
  lab13=run("cp13-runtime-lab",[BUILD/"cp13_lab.exe"]);assert "CP13_LAB_PASS" in lab13;result["cp13_runtime_cases"]=len(re.findall("CASE_PASS ",lab13));assert result["cp13_runtime_cases"]>=26
  run("legacy-runtime-lab",[BUILD/"legacy_lab.exe"])
@@ -185,7 +189,7 @@ try:
  run("expansion-package",["cmake","--build",BUILD,"--target","bokoblin_expansion_package"])
  assert dll.read_bytes()==before
  pkg=BUILD/"mods/bokoblin_expansion.dusk";verified=audit.verify_package(pkg,dll,TASK);neg.extend(audit.package_negatives(pkg,dll,TASK,WORK))
- assert verified["pe"]["status"]=="CP17F1_PE_ABI_PASS"
+ assert verified["pe"]["status"]=="CP18_PE_ABI_PASS"
  shutil.copyfile(pkg,DIST/DUSK_NAME);result["package"]=dict(filename=DUSK_NAME,**{k:v for k,v in verified.items() if k!="members"},negatives=neg)
  for what in ["headers","imports","exports"]:run("expansion-"+what,["dumpbin","/"+what,dll])
  import provider_audit
@@ -198,13 +202,13 @@ try:
  with zipfile.ZipFile(DIST/"SOURCE_COMPILED.zip","w",zipfile.ZIP_DEFLATED) as z:
   for p in source_paths:z.write(p,p.relative_to(REPO).as_posix())
  for name in ["README.md","IMPLEMENTATION.md","HUMAN_TEST.md","RECOVERY.md"]:shutil.copyfile(TASK/name,DIST/name)
- (DIST/"TEST_RESULTS.json").write_text(json.dumps({k:result[k] for k in ["cp15_lab_cases","cp16_lab_cases","fix01_lab_cases","cp17_lab_cases","cp17f1_lab_cases","cp17f1_lab_metrics","cp17_link_abi_source_layout","cp14_lab_cases","cp13_editor_tests","cp13_runtime_cases","app_tests","importer_tests","multi_tests","name_tests","runtime_lab_cases","black_lab_cases","texture_lab_cases","variant_lab_cases","damage_lab_cases","dynamic_lab_cases","visual_lab_cases","eye_lab_cases","strokes_lab_cases","perf_lab_cases","cp12_lab_cases","source_checks","runtime_provenance","independent_geometry_height","provider_regression"]},indent=2)+"\n")
+ (DIST/"TEST_RESULTS.json").write_text(json.dumps({k:result[k] for k in ["cp15_lab_cases","cp16_lab_cases","fix01_lab_cases","cp17_lab_cases","cp17f1_lab_cases","cp17f1_lab_metrics","cp18_lab_cases","cp18_lab_metrics","cp17_link_abi_source_layout","cp14_lab_cases","cp13_editor_tests","cp13_runtime_cases","app_tests","importer_tests","multi_tests","name_tests","runtime_lab_cases","black_lab_cases","texture_lab_cases","variant_lab_cases","damage_lab_cases","dynamic_lab_cases","visual_lab_cases","eye_lab_cases","strokes_lab_cases","perf_lab_cases","cp12_lab_cases","source_checks","runtime_provenance","independent_geometry_height","provider_regression"]},indent=2)+"\n")
  for p in DIST.rglob("*"):
   if p.is_file() and p.suffix.lower() in [".arc",".kcl",".plc",".bmd",".bti",".png",".dds",".cmpr",".dll",".ciso",".iso",".exe"]:raise RuntimeError("Original/derived asset, image, loose DLL or EXE forbidden")
  manifest=dict(source_commit=source,ci_commit=result["ci_commit"],run_id=result["run_id"],sdk_headers=SOURCE_HOST,status="WINDOWS_BUILD_VERIFIED_PACKAGE_VERIFIED_DOWNLOAD_PENDING",human="HUMAN_RUNTIME_PENDING",map_data_included=False,requires_provider=CP13_PROVIDER,package=result["package"],files={p.relative_to(DIST).as_posix():dict(bytes=p.stat().st_size,sha256=sha(p.read_bytes())) for p in DIST.rglob("*") if p.is_file()})
  (DIST/"MANIFEST.json").write_text(json.dumps(manifest,indent=2)+"\n")
  (DIST/"SHA256SUMS.txt").write_text("".join(v["sha256"]+"  "+k+"\n" for k,v in manifest["files"].items()))
- bundle=OUT/"DEVF_CP17_FIX01_RED_X2_JUMP_INTERCEPT_TEST.zip"
+ bundle=OUT/"DEVF_CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT_TEST.zip"
  with zipfile.ZipFile(bundle,"w",zipfile.ZIP_DEFLATED,compresslevel=6) as z:
   for p in DIST.rglob("*"):
    if p.is_file():z.write(p,p.relative_to(DIST).as_posix())
@@ -216,4 +220,4 @@ except Exception as e:
  result["error"]=str(e);raise
 finally:
  (EVIDENCE/"result.json").write_text(json.dumps(result,indent=2)+"\n")
- print("CP17F1_BUILD_RESULT="+json.dumps({k:v for k,v in result.items() if k!="source_ledger"},separators=(",",":")),flush=True)
+ print("CP18_BUILD_RESULT="+json.dumps({k:v for k,v in result.items() if k!="source_ledger"},separators=(",",":")),flush=True)

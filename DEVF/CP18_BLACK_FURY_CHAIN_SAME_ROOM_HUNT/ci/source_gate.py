@@ -1,77 +1,88 @@
-"""CP17 FIX01 closed delta against CP17: Red adapter/policy only, one read-only CP14 forwarding line, version/header; Blue FIX01/CP14/Black byte-preserved."""
+"""CP18 closed delta against CP17 FIX01: Black adapter/policy only plus seven marked integration lines and the version/header; Red, Blue FIX01, CP14,
+CP10.6 and every other runtime file byte-preserved; the reviewed game import set is exactly CP17 FIX01's."""
 import re,json,hashlib
-N='CP17_FIX01_RED_X2_JUMP_INTERCEPT';O='CP17_RED_AGGRESSIVE_AI'
-OLD_A='// ---- CP17 Red aggressive AI:';OLD_B='// ---- end CP17 Red aggressive AI ----'
-NEW_A='// ---- CP17 FIX01 Red x2 / jump interception:';NEW_B='// ---- end CP17 FIX01 Red ----'
-FORWARD='   red_ai_damage_confirmed(d->id,d->generation);   // CP17 FIX01: read-only forwarding of CP14\'s own attribution\n'
+N='CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT';O='CP17_FIX01_RED_X2_JUMP_INTERCEPT'
+NEW_A='// ---- CP18 Black fury chain / same-room hunt:';NEW_B='// ---- end CP18 Black ----\n'
+# The only lines outside the Black block that differ from CP17 FIX01 (each removed exactly once, then the remainder must equal CP17 FIX01 byte for byte).
+LINES=['#include "black_ai_policy.hpp"\n',
+ 'bool black_ai_hunting(const devf_dyn::Entry* d)noexcept;void black_ai_damage(daE_OC_c* a,std::uint32_t id,const devf_dyn::Entry* d,bool start)noexcept;   // CP18: defined in the Black block\n',
+ ' if(d->variant==devf_variant::Variant::Black&&(ev.kind==devf_dyn::Ev::FuryStart||ev.kind==devf_dyn::Ev::FuryRefresh))black_ai_damage(a,id,d,ev.kind==devf_dyn::Ev::FuryStart);   // CP18: read-only forwarding of CP10.6\'s own HP-loss event\n',
+ ' if(r.order.active&&black_ai_hunting(d))devf_recruit::abort(r,recruit_log,"BLACK_HUNT_LOCKED_SAME_ROOM_PRIORITY_OVER_RECRUIT_ORDER");   // CP18: a provoked Black is not a callable companion\n',
+ ' if(entry&&!fresh)black_ai_pre(a,id,entry);   // CP18: Black-only; after recruitment, so a released SOUND_WATCH lease is already visible\n',
+ ' black_ai_post(a,fopAcM_GetID(a),e);         // CP18: Black-only fresh-blow rate, chain readback and hunt measurement after CP10.6\n']
+SWAPS=[('recruit_poll();red_ai_poll();black_ai_poll();red_watch();','recruit_poll();red_ai_poll();red_watch();'),(' red_ai_shutdown();black_ai_shutdown();recruit_shutdown();\n',' red_ai_shutdown();recruit_shutdown();\n'),('kVersion="0.15.0"','kVersion="0.14.1"')]
 def code(s):return '\n'.join(l.split('//')[0].strip() for l in s.splitlines() if l.split('//')[0].strip())
 def cut(text,a,b):i=text.index(a);j=text.index(b,i)+len(b);return text[i:j],text[:i]+text[j:]
 def check(repo,task):
  rt=task/'runtime/DEVF';oldrt=repo/'DEVF'/O/'runtime/DEVF'
  new=(rt/N/'expansion/mod.cpp').read_text(encoding='utf-8');old=(oldrt/O/'expansion/mod.cpp').read_text(encoding='utf-8')
- adapter,normal=cut(new,NEW_A,NEW_B);_,oldnormal=cut(old,OLD_A,OLD_B)
- assert normal.count(FORWARD)==1,'exactly one CP14 forwarding line';normal=normal.replace(FORWARD,'')
- header=normal.index('// (CP16 FIX01 header follows.)\n');normal=normal[header+len('// (CP16 FIX01 header follows.)\n'):]
- normal=normal.replace('kVersion="0.14.1"','kVersion="0.14.0"')
- oldnormal=oldnormal.replace('#include <Z2AudioLib/Z2SeMgr.h>\n','')   # only the removed 0.14.0 B SFX compensation used it
- assert normal==oldnormal,'Non-Red CP17 runtime changed'
+ adapter,normal=cut(new,NEW_A,NEW_B)
+ assert normal.count(NEW_A)==0 and adapter.count('\n')>100
+ for l in LINES:assert normal.count(l)==1,('integration line',l[:60]);normal=normal.replace(l,'')
+ for a,b in SWAPS:assert normal.count(a)==1,a;normal=normal.replace(a,b)
+ h='// (CP17 FIX01 header follows.)\n';assert normal.count(h)==1;normal=normal[normal.index(h)+len(h):]
+ assert normal==old,'Non-Black runtime changed against CP17 FIX01'
  identical=0
  for p in rt.rglob('*'):
   if not p.is_file():continue
   rel=p.relative_to(rt).as_posix()
-  if rel in [N+'/expansion/mod.cpp',N+'/expansion/red_ai_policy.hpp']:continue
+  if rel in [N+'/expansion/mod.cpp',N+'/expansion/black_ai_policy.hpp']:continue
   prior=oldrt/(rel.replace(N+'/',O+'/',1) if rel.startswith(N+'/') else rel)
   assert p.read_bytes()==prior.read_bytes(),rel;identical+=1
- assert identical==24,identical
+ assert identical==25,identical
+ assert (rt/N/'expansion/red_ai_policy.hpp').read_bytes()==(oldrt/O/'expansion/red_ai_policy.hpp').read_bytes(),'Red policy must be byte-identical'
  oldimp=json.loads((repo/'DEVF'/O/'ci/reviewed-imports.json').read_text(encoding='utf-8'));imp=json.loads((task/'ci/reviewed-imports.json').read_text(encoding='utf-8'))
- added=['?SetC@cM3dGSph@@QEAAXAEBUcXyz@@@Z','?SetR@cM3dGSph@@QEAAXM@Z'];removed=['?startCreatureSound@Z2CreatureEnemy@@UEAAPEAVZ2SoundHandlePool@@VJAISoundID@@IC@Z']
- for key in oldimp:assert sorted(imp[key])==sorted([s for s in oldimp[key] if s not in removed]+(added if key=='dusklight.exe' else [])),key
- assert set(imp)==set(oldimp)
- active=code(new);ad=code(adapter)
- # Closed write surface of the Red adapter (all on the executing Red `a`): exactly these assignments/calls, nothing on Link/HP/flags/frames/timers/position.
+ assert imp==oldimp,'CP18 adds no import'
+ ad=code(adapter);active=code(new)
+ # Closed write surface of the Black adapter (all on the executing Black `a`): exactly these, nothing on Link/HP/ATP/flags/frames/home/range/leash/position.
  writes=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',ad))
- assert writes==['a->speedF=','a->speedF=','a->speedF='],writes
- assert ad.count('a->setActionMode(devf_variant::A_ATTACK,0)')==1 and ad.count('setActionMode(')==1
- assert ad.count('->setPlaySpeed(')==2 and ad.count('.SetC(')==2 and ad.count('.SetR(')==2 and ad.count('mSphs_at[0].SetC(')==1 and ad.count('mSphs_at[1].SetC(')==1
+ assert writes==['a->field_0x6c0=','a->field_0x6c2=','a->speedF='],writes
+ assert ad.count('a->setActionMode(cmd.mode,cmd.state)')==1 and ad.count('setActionMode(')==1
+ assert ad.count('->setPlaySpeed(')==2 and ad.count('mSphs_at[0].SetC(')==1 and ad.count('mSphs_at[1].SetC(')==1 and ad.count('.SetR(')==2
  assert not re.findall(r'\b(?:p|k|v)->[\w\.\[\]]+\s*=(?!=)',ad),'Link writes'
- for x in ['mMoveRange=','home.pos','current.pos.x=','current.pos.y=','current.pos.z=','SetAtAtp(','OnAtSetBit(','OffAtSetBit(','setFrame(','setFrameF(','setRate(','field_0x6c0=','field_0x6c2=','mProcID=','a->health','ClrAtHit','SetAtHit','OnAtHit','startCreatureSound','setDamagePoint','dComIfGs_setLife','mSphs_cc']:assert x not in ad,x
- oldwrites=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',code(oldnormal)));newwrites=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',code(normal)));assert newwrites==oldwrites
- assert active.count('DEFINE_HOOK(')==1 and active.count('hook::add_pre<')==1 and active.count('hook::add_post<')==1
- assert active.count('setPlaySpeed(')==5
- assert 'recruits.find(' not in ad,'Red must use its aligned slot, not scan recruitment ledger per actor'
- assert ad.count('e->variant!=devf_variant::Variant::Red')==1 and ad.count('d->generation!=e->generation')==1
- assert 'LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED' in new and 'kVersion="0.14.1"' in new
- assert 'kBurst' in ad and '3.0f' not in ad and 'Z2SE_' not in new
- policy=(rt/N/'expansion/red_ai_policy.hpp').read_text(encoding="utf-8");pc=code(policy)
+ for x in ['mMoveRange=','home.pos.x=','home.pos.y=','home.pos.z=','current.pos.x=','current.pos.y=','current.pos.z=','field_0x6e3=','SetAtAtp(','OnAtSetBit(','OffAtSetBit(','setFrame(','setFrameF(','setRate(','mProcID=','ClrAtHit','SetAtHit','OnAtHit','startCreature','setDamagePoint','dComIfGs_setLife','mSphs_cc[0].Set','mSphs_cc[1].Set','->fury=','.fury=','setBck(','mWatchPos','a->health=']:assert x not in ad,x
+ assert ad.count('e->variant!=devf_variant::Variant::Black')==2 and 'recruits.find(' not in ad
+ oldwrites=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',code(old)));newwrites=sorted(re.findall(r'\ba->[A-Za-z_0-9\.\[\]]+\s*=(?!=)',code(normal)));assert newwrites==oldwrites
+ assert active.count('DEFINE_HOOK(')==1 and active.count('hook::add_pre<')==1 and active.count('hook::add_post<')==1 and active.count('setPlaySpeed(')==7
+ assert 'kVersion="0.15.0"' in new and 'Z2SE_' not in new
+ policy=(rt/N/'expansion/black_ai_policy.hpp').read_text(encoding='utf-8');pc=code(policy)
  assert not re.search(r'\b(daAlink_c|daPy_py_c|daE_OC_c|fopAc_ac_c)\s*\*',pc),'game pointer in value policy'
- for token in ['kNormal=1.15f,kBurst=2.0f,kRush=1.5f,kFindSpeed=20.0f','kRandomPercent=12,kRandomMin=120,kRandomMax=210,kReactiveCooldown=45','kPassive=105,kPassiveMin=180,kPassiveMax=300,kIntent=90','kOpen=8,kClose=12','kProcCutJump=0x26,kProcCutJumpLand=0x27,kProcLargeJump=0x30,kProcLargeJumpLand=0x31','kReactRadius=900.','kHeight=200.','kLeashMargin=100.','kTipR=45.f,kHiltR=30.f,kLinkR=35.f']:assert token in pc,token
- for gone in ['kChargePercent','kBurst=3.0f','lost_b_sfx','before_blow','chance(s,kChargePercent)','std::sqrt','std::atan2','std::lround','<cmath>','std::sin','std::cos']:assert gone not in pc and gone not in policy,gone   # no CRT math imports beyond the reviewed set
- assert re.search(r'inline Jump jump_view\(',pc) and 'proc==kProcCutJump' in pc and 'proc==kProcLargeJump' in pc
+ for token in ['kNormal=1.15f,kFury=2.0f','kChainReach=400.,kChainHeight=200.','kChainFacing=0x1000','kBounceWindow=45,kBounceLimit=3,kBlockedTicks=90','#include "red_ai_policy.hpp"','ra::sweep(s.sweep,r,l)']:assert token in pc or token in policy,token
+ for gone in ['std::sqrt','std::atan2','std::lround','<cmath>','std::sin','std::cos','kFuryTicks=','->fury=','.fury=']:assert gone not in pc,gone   # no CRT math; never writes the CP10.6 fury
  official=repo/'.official';facts={}
  for rel,expected in json.loads((task/'ci/official-source-blobs.json').read_text(encoding="utf-8")).items():
   p=official/rel
   if not p.exists():continue
   raw=p.read_text(encoding='utf-8').encode();blob=hashlib.sha1(b'blob '+str(len(raw)).encode()+b'\0'+raw).hexdigest();assert blob==expected,rel
   facts[rel]=dict(git_blob=blob,normalized_sha256=hashlib.sha256(raw).hexdigest())
- if official.exists():assert len(facts)==17
+ if official.exists():assert len(facts)==19
  if facts:
   rd=lambda rel:(official/rel).read_text(encoding="utf-8")
-  src=rd('src/d/actor/d_a_e_oc.cpp');j3d=rd('libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp');alink=rd('include/d/actor/d_a_alink.h');cut_inc=rd('src/d/actor/d_a_alink_cut.inc')
-  for text in ['if (mpMorf->checkFrame(10.0f))','else if (mpMorf->checkFrame(12.5f))','mpMorf->getFrame() >= 14.0f && mpMorf->getFrame() <= 22.0f','mpMorf->setPlaySpeed(-1.0);','current.pos.x += (my_float - field_0x6a0)','mpMorf->play(0,','mSphs_at[0].OffAtSetBit();','cLib_chaseF(&speedF, 20.0f + nREG_F(0), 1.0f);',
-               'cLib_chaseF(&speedF, -3.0f, 1.0f);','if (pl_dist < 400.0f && pl_dist > 200.0f) {','if (cLib_chaseF(&speedF, 0.0f, 1.0f)) {','if (mOcState < 3 || !setWatchMode()) {','if (checkBeforeFloorBg(200.0f)) {',
-               'my_vec_lhs.set(0.0f, 0.0f, 70.0f);','mSphs_at[0].SetR(45.0f);','my_vec_lhs.set(0.0f, 0.0f, 20.0f);','mSphs_at[1].SetR(30.0f);','dComIfG_Ccsp()->Set(&mSphs_at[1]);','fopAcM_posMoveF(this, mStts.GetCCMoveP());','field_0x6c0 = field_0x6c2 = 0;']:assert text in src,text
-  assert src.index('damage_check();')<src.index('checkFall();')<src.index('executeFind();')<src.index('fopAcM_posMoveF(this, mStts.GetCCMoveP());')<src.index('mpMorf->play(0, dComIfGp_getReverb')
-  for text in ['mFrame <= passFrame && passFrame < next_frame','f32 next_frame = mFrame + mRate;']:assert text in j3d,text
-  for text in ['virtual BOOL checkCutCharge() const { return mProcID == PROC_CUT_TURN_MOVE; }','u16 mProcID;','mProcID == PROC_CUT_TURN_MOVE && mProcVar2.field_0x300c == 0','mProcID == PROC_CUT_TURN_MOVE && mProcVar2.field_0x300c != 0','virtual BOOL checkCutJumpMode() const { return mProcID == PROC_CUT_JUMP; }','fopAc_ac_c* mTargetedActor;','dBgS_LinkAcch mLinkAcch;','/* 0x026 */ PROC_CUT_JUMP,','/* 0x030 */ PROC_CUT_LARGE_JUMP,']:assert text in alink,text
-  for text in ['speed.y = mpHIO->mCut.mCutJump.m.mBaseJumpSpeedV;','if (mLinkAcch.ChkGroundHit()) {\n        procCutJumpLandInit(field_0x3198);','!checkModeFlg(2) && frameCtrl->getFrame() >= 5.0f','speed.y = mpHIO->mCut.mCutLargeJump.m.mCutSpeedV;','procCutLargeJumpLandInit(field_0x3198);','if (squareDist > 500.0f) {']:assert text in cut_inc,text
-  assert 'void cM3dGSph::SetC(const cXyz& p) {' in rd('src/SSystem/SComponent/c_m3d_g_sph.cpp') and 'mRadius = r;' in rd('src/SSystem/SComponent/c_m3d_g_sph.cpp')
-  ccs=rd('src/SSystem/SComponent/c_cc_s.cpp');assert 'void cCcS::ClrAtHitInf() {\n    for (cCcD_Obj** obj = mpObjAt; obj < mpObjAt + mObjAtCount; ++obj) {' in ccs and 'CalcArea();\n    ChkAtTg();' in ccs
+  src=rd('src/d/actor/d_a_e_oc.cpp')
+  # The end branch the chain pre-empts, the FIND state 0 pause, the FIND state 4 abandon checks, the leash update and the native entries reused.
+  for text in ['            if (mpMorf->isStop()) {\n                setBck(0x1c, 2, 0.0f, 1.0f);\n                mSound.startCreatureVoice(Z2SE_EN_OC_V_WAIT_ST, -1);\n                if (field_0x6e3) {\n                    setActionMode(E_OC_ACTION_MOVE_OUT, 0);',
+               '            setBck(0x1c, 2, 5.0f, 1.0f);\n            mSound.startCreatureVoice(Z2SE_EN_OC_V_WAIT_ST, -1);\n            if (field_0x6e3) {\n                setActionMode(E_OC_ACTION_MOVE_OUT, 0);\n                break;',
+               '                    field_0x6c2 = field_0x6c0 + 0x14;\n                    if (checkBck(0x1c) == 0) {\n                        setBck(0x1c, 2, 5.0f, 1.0f);\n                        mSound.startCreatureVoice(Z2SE_EN_OC_V_WAIT_ST, -1);',
+               '                if (field_0x6c0 == 0) {\n                    if (!searchPlayer2()) {\n                        setActionMode(E_OC_ACTION_WAIT, 0);\n                    } else if (field_0x6e3) {\n                        setActionMode(E_OC_ACTION_MOVE_OUT, 0);',
+               'if (home.pos.absXZ(current.pos) > mMoveRange + 300.0f) {','} else if (home.pos.absXZ(current.pos) < mMoveRange - 100.0f) {',
+               '                if (cM_rndF(1.0f) < 0.5f) {\n                    setBck(5, 0, 5.0f, 1.0f);','if (cLib_chaseF(&speedF, 0.0f, 1.0f)) {','mOldActionMode = mActionMode;\n    mActionMode = i_action;\n    mOcState = i_state;\n    field_0x6c0 = field_0x6c2 = 0;',
+               'if (mOcState < 3 || !setWatchMode()) {','if (checkBeforeFloorBg(200.0f)) {','mpMorf->getFrame() >= 14.0f && mpMorf->getFrame() <= 22.0f','mpMorf->setPlaySpeed(-1.0);',
+               '    if (field_0x6c0) {\n        --field_0x6c0;\n    }\n    if (field_0x6c2) {\n        --field_0x6c2;\n    }']:assert text in src,text[:80]
+  assert src.index('damage_check();')<src.index('    if (mMoveRange) {')<src.index('checkWaterSurface()) {')<src.index('checkFall();\n    field_0x566 = 0;')<src.index('        executeAttack();')<src.index('fopAcM_posMoveF(this, mStts.GetCCMoveP());')<src.index('mpMorf->play(0, dComIfGp_getReverb')
+  assert src.count('Z2SE_EN_OC_V_WAIT_ST')==9,'every V_WAIT_ST source site accounted for: attack end x2, FIND x4, WATCH x2, setWaitStSound x1'
+  assert 'void daE_OC_c::setWaitStSound() {\n    if (checkBck(0x1c)) {\n        if (mpMorf->checkFrame(0.0f)) {\n            mSound.startCreatureVoice(Z2SE_EN_OC_V_WAIT_ST, -1);' in src and 'void daE_OC_c::setFootNoteSound() {' in src,'the per-tick idle-clip voice only exists while BCK 0x1C is the clip'
+  assert 'bool isStop() { return mFrameCtrl.checkState(1) || mFrameCtrl.getRate() == 0.0f; }' in rd('include/m_Do/m_Do_ext.h')
+  j3d=rd('libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp');assert '        if (mFrame >= mEnd) {\n            mFrame = mEnd - 0.001f;\n            mRate = 0.0f;\n            mState |= (u8)1;' in j3d and 'mFrame <= passFrame && passFrame < next_frame' in j3d
+  al=rd('src/d/actor/d_a_alink.cpp');assert 'roomID = dComIfG_Bgsp().GetRoomId(mLinkAcch.m_gnd);\n\n        if (roomID != fopAcM_GetRoomNo(this)) {' in al and '            fopAcM_SetRoomNo(this, roomID);' in al
+  mng=rd('include/f_op/f_op_actor_mng.h');assert 'inline void fopAcM_SetRoomNo(fopAc_ac_c* actor, s8 roomNo) {\n    actor->current.roomNo = roomNo;' in mng and 'inline s8 fopAcM_GetRoomNo(const fopAc_ac_c* i_actor) {' in mng
+  assert 'cXyz dist = (*fopAcM_GetPosition_p(i_actorB) - *fopAcM_GetPosition_p(i_actorA));\n    return dist.abs();' in rd('src/f_op/f_op_actor_mng.cpp')
+  assert 'fopAcM_SetRoomNo' not in src,'E_OC never changes its own room: the Black native room is constant'
+  hdr=rd('include/d/actor/d_a_e_oc.h')
+  for t in ['/* 0x690 */ f32 mMoveRange;','/* 0x6c0 */ s16 field_0x6c0;','/* 0x6c2 */ s16 field_0x6c2;','/* 0x6e3 */ u8 field_0x6e3;','/* 0x6b0 */ int mOcState;']:assert t in hdr,t
+  assert 'void cM3dGSph::SetC(const cXyz& p) {' in rd('src/SSystem/SComponent/c_m3d_g_sph.cpp')
   assert 'if (step * (*pvalue - target) >= 0) {' in rd('src/SSystem/SComponent/c_lib.cpp')
-  hio=rd('src/d/actor/d_a_alink_HIO_data.inc');assert '    25.0f,\n    27.0f,\n    15.0f,\n    13.0f,' in hio and '    20.0f,\n    33.0f,\n    2.0f,\n    6.0f,' in hio and '    -3.4f,' in hio
-  assert '35.0f,\n            180.0f,' in rd('src/d/actor/d_a_alink.cpp')
- return dict(identical_runtime_files_to_cp17=identical,outside_red_adapter_unchanged=True,cp14_forwarding_lines=1,red_adapter_assignments=writes,added_game_imports=added,removed_game_imports=removed,official_source=facts),dict(
-  cp17_fix01='Red fast blow exactly x2 (decided at fresh frame 1, applied at frame 2: even phase, five native AT registrations); normal x1.15. Per tick of an owned x2 blow the two native AT spheres cover the skipped native pose (one collision pass). Interception of PROC26/PROC30 only by a bounded native ATTACK start; every eligible charge episode reacts; separate reactive/random cooldowns; FIND state-4 rush exact x1.5 of the native chase, restored after posMoveF; transition-only Link sample telemetry with a critical log reserve.',
-  cp17='Non-Red runtime and 24 runtime files byte-identical to CP17; CP17 64-case lab kept as historical regression on its own compiled snapshot.',
-  cp14='Lifesteal/status/collider canary, gold/group regen unchanged; one read-only line forwards a CP14-confirmed hit to CP17 telemetry.',
-  budget='64 entries, fixed-size state, no heap per frame, O1 per own execute; logs 700 routine + 300 critical reserve per session, 40 + 24 per generation; 40 summaries.',
-  contact='Lab geometry on synthetic swings only; not engine collision, audio or animation. Human runtime pending.')
+ return dict(identical_runtime_files_to_cp17_fix01=identical,outside_black_adapter_unchanged=True,integration_lines=len(LINES)+len(SWAPS)-1,red_policy_byte_identical=True,black_adapter_assignments=writes,added_game_imports=[],official_source=facts),dict(
+  cp18='Black native B/C x1.15; blows started during the CP10.6 fury x2 (even phase, CP17 FIX01 sweep reused). Fury chain: at the PRE of a complete clip the native ATTACK state 0 (in reach) or FIND state 3 (out of reach) replaces the executeAttack end branch (setBck 0x1C + V_WAIT_ST); FIND state 0 becomes FIND state 3 and the FIND state 4 lockout is cleared while fury>0. Same-room hunt armed by the forwarded CP10.6 HP-loss event, FIND4 timer held at 2, abandon modes re-enter the native FIND, reset on Link room/stage epoch change or actor end.',
+  cp17_fix01='Red adapter, Red policy (byte-identical), Blue FIX01, CP14 and 25 runtime files byte-identical to CP17 FIX01; CP17 FIX01 53-case lab kept as regression.',
+  budget='64 entries, fixed-size state, no heap per frame, O1 per own execute plus one Link read and four slot checks per management pass; 600 routine + 800 critical lines per session, 40 + 120 per generation; chained-blow detail 6 per fury episode; 40 summaries.',
+  evidence='Lab on a source port of the daE_OC_c paths; not engine animation, audio or collision. Human runtime pending.')

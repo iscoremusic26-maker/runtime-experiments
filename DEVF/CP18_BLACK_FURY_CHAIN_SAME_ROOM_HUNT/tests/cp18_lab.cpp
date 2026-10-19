@@ -47,6 +47,8 @@ struct Oc{
    case b::Wait:wait(e);break;case b::Find:find(e);break;case b::Attack:attack(e);break;case b::Damage:damage(e);break;case b::Watch:watch(e);break;
    case b::MoveOut:move_out(e);break;case b::FindStay:find_stay(e);break;default:break;
   }
+  // setFootNoteSound -> setWaitStSound: while the clip is BCK 0x1C, checkFrame(0) (incl. the loop wrap) emits V_WAIT_ST again.
+  if(bck==0x1c&&((frame<=0&&0<frame+rate)||(attr==2&&frame+rate>=end)))voice("WAIT_ST");
   const double r=angle*3.141592653589793/32768.0;pos.x+=float(speed*std::sin(r));pos.z+=float(speed*std::cos(r));
   play();
  }

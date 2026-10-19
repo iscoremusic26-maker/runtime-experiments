@@ -1,6 +1,6 @@
 {
   "id": "dev.bokoblin.expansion",
-  "name": "Bokoblin Expansion CP17 FIX01 RED X2 JUMP INTERCEPT TEST",
-  "version": "0.14.1",
-  "description": "Private CP17 FIX01 Red-only: native B/C x1.15 normal, x2 fast (charge every eligible episode, passivity, random 12%), Jump Attack/Jump Strike interception, x1.5 FIND rush, x2 contact coverage; Blue FIX01, Black and Red CP14 unchanged. Human QA pending."
+  "name": "Bokoblin Expansion CP18 BLACK FURY CHAIN SAME ROOM HUNT TEST",
+  "version": "0.15.0",
+  "description": "Private CP18 Black-only: native B/C x1.15, x2 during the CP10.6 fury with chained native blows (no idle clip, wait voice or lockout between them), same-room persistent hunt after real damage reset on Link room change; Red 0.14.1, Blue FIX01 and CP14 unchanged. Human QA pending."
 }
