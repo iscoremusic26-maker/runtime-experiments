@@ -94,7 +94,8 @@ template<class Emit>inline void end_pursuit(State&s,Emit&&emit)noexcept{
  s.measuring=false;s.measure_ticks=0;s.moved=s.native_sum=0;s.dist_start=s.dist_now=-1;
 }
 template<class Emit>inline void reset(State&s,Emit&&emit,const char*ev,const char*why)noexcept{
- if(!s.hunt)return;end_pursuit(s,emit);emit(ev,why);
+ if(!s.hunt)return;
+ end_pursuit(s,emit);emit(ev,why);
  s.hunt=false;s.hunt_room=-1;s.hunt_stage=0;s.hold_logged=s.timer_logged=s.stay_logged=false;s.bounce=0;s.blocked_until=0;s.last_redirect=0;
 }
 template<class Emit>inline void finish_blow(State&s,Emit&&emit)noexcept{
@@ -142,7 +143,7 @@ template<class Emit>inline Command pre(State&s,const Actor&a,const Link&l,Rooms&
     finish_blow(s,emit);
     set(Attack,0,Op::Chain,a.state==3?"FURY_NATIVE_RECOIL_COMPLETE_NEXT_NATIVE_ATTACK_STATE0":"FURY_NATIVE_CLIP_COMPLETE_NEXT_NATIVE_ATTACK_STATE0");c.zero_speed=a.speed!=0;s.chained=true;
    }else set(Find,3,Op::Pursue,dist>=kChainReach?"FURY_OUT_OF_REACH_NATIVE_FIND3_APPROACH":dy>kChainHeight?"FURY_LINK_HEIGHT_NATIVE_FIND3":gap>=kChainFacing?"FURY_NOT_FACING_NATIVE_FIND3_TURNS":a.wall?"FURY_WALL_CONTACT_NATIVE_FIND3":"FURY_NO_LINE_OF_SIGHT_NATIVE_FIND3");
-  }else if(hunting&&leash!=0)set(Find,0,Op::KeepFind0,"HUNT_ATTACK_END_NATIVE_MOVE_OUT_REPLACED_BY_NATIVE_FIND0_PAUSE_KEPT");
+  }else if(hunting&&leash!=0){set(Find,0,Op::KeepFind0,"HUNT_ATTACK_END_NATIVE_MOVE_OUT_REPLACED_BY_NATIVE_FIND0_PAUSE_KEPT");emit("BLACK_HUNT_NATIVE_ABANDON_PREVENTED",c.why);}
   return c;
  }
  // 2. Fury: native FIND state 0 would play setBck(0x1C)+V_WAIT_ST and arm the 20-tick lockout (after damage, fall or a floor stop).
