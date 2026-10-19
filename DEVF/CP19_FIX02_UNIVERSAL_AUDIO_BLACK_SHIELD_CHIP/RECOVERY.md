@@ -7,4 +7,6 @@ Rollback si FIX02 falla (con el juego cerrado por completo): retira la Expansion
 
 Si 0.16.1 tampoco sirve: CP18 0.15.0, `BokoblinExpansion_0.15.0_CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT_TEST.dusk`, 138 755 B, SHA-256 `c2f25da000731779ef0acde2913468cf7401543ec60d60be0a94cc5b622cc8d4`.
 
+Paquete FIX02 (el que se retira): `BokoblinExpansion_0.16.2_CP19_FIX02_TEST.dusk`, 151 985 B, SHA-256 `2e11259916504da2bf127d0ab20f9b3db4776e3d2e10c9d05f0c752bc4053fea` (run 39312607981, artifact 12217026541). Fuente compilada `a0dd9e5`, CI `db30418`, PR draft #79 y #64.
+
 Provider/editor 0.13.0, JSON y partidas no cambian. FIX02 no guarda nada en disco: la reserva ARAM y el grupo de sonido viven solo en memoria durante la sesión. Nunca dos Expansion a la vez.

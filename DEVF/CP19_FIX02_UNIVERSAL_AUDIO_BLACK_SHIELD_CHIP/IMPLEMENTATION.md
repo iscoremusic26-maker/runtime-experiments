@@ -64,8 +64,8 @@ Base: CP19 FIX01 0.16.1, fuente compilada `5c8ce0025a63f7c6a130a407609b2ad353998
   - `TevKColor` de Link, restaurado tras cada modelo;
   - `JASWaveArcLoader::sAramHeap`, puesto y repuesto alrededor de una llamada.
 - Escrituras sobre actores: idénticas a FIX01. Escrituras previas sobre Link (`mCutType`): sin cambios.
-- Imports: FIX01 más 13 revisados en la librería oficial.
-- Hooks: `daE_OC_c::execute` PRE/POST y `daAlink_c::modelDraw` PRE/POST.
+- Imports: FIX01 más 13 revisados en la librería oficial, menos `eraseSeWave` (ya no se usa): 45.
+- Hooks: `daE_OC_c::execute` PRE/POST y `daAlink_c::modelDraw` PRE/POST. El puntero a miembro de `daAlink_c` mide 24 B en MSVC, así que va en el registro extendido del SDK (`MOD_META_HOOK_MEM_EXT`), que el auditor PE valida y une al import.
 
 ## Límites reales
 
