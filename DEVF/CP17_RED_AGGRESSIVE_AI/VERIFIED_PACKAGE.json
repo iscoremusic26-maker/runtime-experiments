@@ -1,320 +1,325 @@
 {
-  "checkpoint": "CP17_RED_AGGRESSIVE_AI",
-  "status": "SOURCE_IMPLEMENTED_LAB_PASS_WINDOWS_MSVC_PASS_INDEPENDENT_DOWNLOAD_PASS_HUMAN_RUNTIME_PENDING",
+  "status": "REVALIDATION_PENDING",
   "human": "HUMAN_RUNTIME_PENDING",
-  "RED_LINK_CHARGE_DETECT": "SOURCE_AND_MSVC_COFF_ABI_PASS_HUMAN_PENDING",
-  "native_contact_shield_audio_interrupt": "SOURCE_EXCERPT_LAB_ONLY_HUMAN_PENDING",
-  "approach": "NATIVE_FIND_ONLY_NO_1_5_SPEED_BOOST",
-  "source_compiled": "8fbaea77df4fe547676ca2462a6db633f3788273",
-  "ci_commit": "a14ca4e264d7b629bb6b02745510300f16bc08ae",
-  "source_parent_FIX01_documentary": "ccc40ce68f9143ac71af7809653ed1d913be4516",
-  "FIX01_baseline_compiled": "e6b85b123e0895c23dce6415c54b8a25773e4504",
-  "source_branch": "feature/devf-cp17-red-aggressive-ai",
-  "ci_branch": "ci/devf-cp17-red-aggressive-ai",
-  "source_pr": 74,
-  "ci_pr": 59,
-  "workflow_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39184082946",
-  "run_id": 39184082946,
-  "jobs": [
-    {
-      "id": 117842721230,
-      "name": "build",
-      "conclusion": "success"
-    },
-    {
-      "id": 117843631054,
-      "name": "independent-download",
-      "conclusion": "success"
-    }
-  ],
-  "artifact": {
-    "id": 12157032798,
-    "name": "DEVF_CP17_RED_AGGRESSIVE_AI_TEST_39184082946",
-    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39184082946/artifacts/12157032798",
-    "github_wrapper_bytes": 1510297,
-    "github_wrapper_digest": "sha256:53900470e2caa24d79e55e00fb28dbe5306852b6d5823e69146dcd2053f2abd9",
-    "expires_at_utc": "2026-11-18T01:13:35Z",
-    "expires_at_America_Panama": "2026-11-17T20:13:35-05:00"
-  },
-  "verification_artifact": 12157457479,
-  "zip": {
-    "filename": "DEVF_CP17_RED_AGGRESSIVE_AI_TEST.zip",
-    "bytes": 1509884,
-    "sha256": "f70d8df32659bbc1d0d80cd80400462c010fd87974daba36403ebe9b05a58166"
-  },
-  "expansion": {
-    "id": "dev.bokoblin.expansion",
-    "version": "0.14.0",
-    "filename": "BokoblinExpansion_0.14.0_CP17_RED_AGGRESSIVE_AI_TEST.dusk",
-    "bytes": 113055,
-    "sha256": "d3b888d13c6ca23c91761337e7a2cbbf43794e6ea78f5d9f6f497f9c48fcc461",
-    "dll_bytes": 263680,
-    "dll_sha256": "886e7cb4260a80e8ca30f47ac8beae5d44ab82f7794c12211d0ee3286d874664",
-    "manifest_sha256": "949a3cb11cc3448e5fca2b7076616791a0f25bfe89bebb669fc98f5a143b8ae9"
-  },
-  "abi_and_imports": {
-    "PE": "CP17_PE_ABI_PASS",
-    "hook": "single daE_OC_c::execute PRE/POST",
-    "exports": [
-      "mod_ctx",
-      "mod_initialize",
-      "mod_meta",
-      "mod_shutdown",
-      "mod_update"
-    ],
-    "required_services": [
+  "reason": "Two Red policy continuity regressions added; previous snapshot retained, not the final delivery.",
+  "previous_verified": {
+    "checkpoint": "CP17_RED_AGGRESSIVE_AI",
+    "status": "SOURCE_IMPLEMENTED_LAB_PASS_WINDOWS_MSVC_PASS_INDEPENDENT_DOWNLOAD_PASS_HUMAN_RUNTIME_PENDING",
+    "human": "HUMAN_RUNTIME_PENDING",
+    "RED_LINK_CHARGE_DETECT": "SOURCE_AND_MSVC_COFF_ABI_PASS_HUMAN_PENDING",
+    "native_contact_shield_audio_interrupt": "SOURCE_EXCERPT_LAB_ONLY_HUMAN_PENDING",
+    "approach": "NATIVE_FIND_ONLY_NO_1_5_SPEED_BOOST",
+    "source_compiled": "8fbaea77df4fe547676ca2462a6db633f3788273",
+    "ci_commit": "a14ca4e264d7b629bb6b02745510300f16bc08ae",
+    "source_parent_FIX01_documentary": "ccc40ce68f9143ac71af7809653ed1d913be4516",
+    "FIX01_baseline_compiled": "e6b85b123e0895c23dce6415c54b8a25773e4504",
+    "source_branch": "feature/devf-cp17-red-aggressive-ai",
+    "ci_branch": "ci/devf-cp17-red-aggressive-ai",
+    "source_pr": 74,
+    "ci_pr": 59,
+    "workflow_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39184082946",
+    "run_id": 39184082946,
+    "jobs": [
       {
-        "kind": "import",
-        "id": "dev.twilitrealm.dusklight.host",
-        "major": 2,
-        "minor": 2
+        "id": 117842721230,
+        "name": "build",
+        "conclusion": "success"
       },
       {
-        "kind": "import",
-        "id": "dev.twilitrealm.dusklight.file",
-        "major": 1,
-        "minor": 0
-      },
-      {
-        "kind": "import",
-        "id": "dev.twilitrealm.dusklight.log",
-        "major": 1,
-        "minor": 0
-      },
-      {
-        "kind": "import",
-        "id": "dev.devf.encounter_placement",
-        "major": 1,
-        "minor": 0
-      },
-      {
-        "kind": "import",
-        "id": "dev.twilitrealm.dusklight.hook",
-        "major": 1,
-        "minor": 1
-      },
-      {
-        "kind": "import",
-        "id": "dev.twilitrealm.dusklight.game",
-        "major": 2,
-        "minor": 0
+        "id": 117843631054,
+        "name": "independent-download",
+        "conclusion": "success"
       }
     ],
-    "new_imports": [
-      "?fopAcM_otherBgCheck@@YAHPEBVfopAc_ac_c@@0@Z",
-      "?startCreatureSound@Z2CreatureEnemy@@UEAAPEAVZ2SoundHandlePool@@VJAISoundID@@IC@Z"
-    ],
-    "official_library_symbols_verified": true,
-    "link_source_abi": {
-      "status": "CP17_MSVC_COFF_SOURCE_ABI_PASS",
-      "machine": "AMD64",
-      "coff_reader_boundary_tests": 3,
-      "bytes": 5214,
-      "sha256": "3d1dc82e70c0c5e148ae2d667ce6fab9d353a4b151109d9bcb8e4e504b65a0ef",
-      "layout": {
-        "magic": "0x4350313741424931",
-        "pointer_bytes": 8,
-        "alink_bytes": 18912,
-        "player_bytes": 1832,
-        "eoc_bytes": 5104,
-        "proc_width": 2,
-        "proc_offset": 16708,
-        "procvar2_offset": 16744,
-        "player_damage_timer_offset": 1644,
-        "eoc_mode_offset": 2248,
-        "eoc_morf_offset": 1752,
-        "morf_framectrl_offset": 24,
-        "const_pmf_bytes": 8,
-        "proc_max": 352
-      },
-      "compiler_probes": {
-        "cp17_const_charge": {
-          "code_hex": "488b0148ffa068010000",
-          "compiler_virtual_slot_bytes": 360
+    "artifact": {
+      "id": 12157032798,
+      "name": "DEVF_CP17_RED_AGGRESSIVE_AI_TEST_39184082946",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39184082946/artifacts/12157032798",
+      "github_wrapper_bytes": 1510297,
+      "github_wrapper_digest": "sha256:53900470e2caa24d79e55e00fb28dbe5306852b6d5823e69146dcd2053f2abd9",
+      "expires_at_utc": "2026-11-18T01:13:35Z",
+      "expires_at_America_Panama": "2026-11-17T20:13:35-05:00"
+    },
+    "verification_artifact": 12157457479,
+    "zip": {
+      "filename": "DEVF_CP17_RED_AGGRESSIVE_AI_TEST.zip",
+      "bytes": 1509884,
+      "sha256": "f70d8df32659bbc1d0d80cd80400462c010fd87974daba36403ebe9b05a58166"
+    },
+    "expansion": {
+      "id": "dev.bokoblin.expansion",
+      "version": "0.14.0",
+      "filename": "BokoblinExpansion_0.14.0_CP17_RED_AGGRESSIVE_AI_TEST.dusk",
+      "bytes": 113055,
+      "sha256": "d3b888d13c6ca23c91761337e7a2cbbf43794e6ea78f5d9f6f497f9c48fcc461",
+      "dll_bytes": 263680,
+      "dll_sha256": "886e7cb4260a80e8ca30f47ac8beae5d44ab82f7794c12211d0ee3286d874664",
+      "manifest_sha256": "949a3cb11cc3448e5fca2b7076616791a0f25bfe89bebb669fc98f5a143b8ae9"
+    },
+    "abi_and_imports": {
+      "PE": "CP17_PE_ABI_PASS",
+      "hook": "single daE_OC_c::execute PRE/POST",
+      "exports": [
+        "mod_ctx",
+        "mod_initialize",
+        "mod_meta",
+        "mod_shutdown",
+        "mod_update"
+      ],
+      "required_services": [
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.host",
+          "major": 2,
+          "minor": 2
         },
-        "cp17_const_spin": {
-          "code_hex": "488b0148ffa070010000",
-          "compiler_virtual_slot_bytes": 368
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.file",
+          "major": 1,
+          "minor": 0
         },
-        "cp17_const_jump": {
-          "code_hex": "488b0148ffa078010000",
-          "compiler_virtual_slot_bytes": 376
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.log",
+          "major": 1,
+          "minor": 0
         },
-        "cp17_typed_proc": {
-          "code_hex": "0fb78144410000c3",
-          "compiler_u16_offset": 16708
+        {
+          "kind": "import",
+          "id": "dev.devf.encounter_placement",
+          "major": 1,
+          "minor": 0
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.hook",
+          "major": 1,
+          "minor": 1
+        },
+        {
+          "kind": "import",
+          "id": "dev.twilitrealm.dusklight.game",
+          "major": 2,
+          "minor": 0
         }
+      ],
+      "new_imports": [
+        "?fopAcM_otherBgCheck@@YAHPEBVfopAc_ac_c@@0@Z",
+        "?startCreatureSound@Z2CreatureEnemy@@UEAAPEAVZ2SoundHandlePool@@VJAISoundID@@IC@Z"
+      ],
+      "official_library_symbols_verified": true,
+      "link_source_abi": {
+        "status": "CP17_MSVC_COFF_SOURCE_ABI_PASS",
+        "machine": "AMD64",
+        "coff_reader_boundary_tests": 3,
+        "bytes": 5214,
+        "sha256": "3d1dc82e70c0c5e148ae2d667ce6fab9d353a4b151109d9bcb8e4e504b65a0ef",
+        "layout": {
+          "magic": "0x4350313741424931",
+          "pointer_bytes": 8,
+          "alink_bytes": 18912,
+          "player_bytes": 1832,
+          "eoc_bytes": 5104,
+          "proc_width": 2,
+          "proc_offset": 16708,
+          "procvar2_offset": 16744,
+          "player_damage_timer_offset": 1644,
+          "eoc_mode_offset": 2248,
+          "eoc_morf_offset": 1752,
+          "morf_framectrl_offset": 24,
+          "const_pmf_bytes": 8,
+          "proc_max": 352
+        },
+        "compiler_probes": {
+          "cp17_const_charge": {
+            "code_hex": "488b0148ffa068010000",
+            "compiler_virtual_slot_bytes": 360
+          },
+          "cp17_const_spin": {
+            "code_hex": "488b0148ffa070010000",
+            "compiler_virtual_slot_bytes": 368
+          },
+          "cp17_const_jump": {
+            "code_hex": "488b0148ffa078010000",
+            "compiler_virtual_slot_bytes": 376
+          },
+          "cp17_typed_proc": {
+            "code_hex": "0fb78144410000c3",
+            "compiler_u16_offset": 16708
+          }
+        },
+        "game_DLL_loaded": false,
+        "game_object_read": false,
+        "probe_functions_executed": false,
+        "meaning": "Actual official SDK headers compiled by MSVC; layout/const virtual codegen verified, not physical runtime Link data"
       },
-      "game_DLL_loaded": false,
-      "game_object_read": false,
-      "probe_functions_executed": false,
-      "meaning": "Actual official SDK headers compiled by MSVC; layout/const virtual codegen verified, not physical runtime Link data"
+      "game_executed": false,
+      "DLL_executed": false
     },
-    "game_executed": false,
-    "DLL_executed": false
-  },
-  "lab": {
-    "cp17_policy_native_excerpt_cases": 64,
-    "coff_reader_boundary_checks": 3,
-    "cp16_fix01": 53,
-    "cp16_historical": 56,
-    "cp15_historical": 38,
-    "cp14_on_cp17_runtime": 16,
-    "cpp_reported_case_count": 523,
-    "cpp_count_excludes_legacy_lab_unreported_count": true,
-    "editor": {
-      "CP13": 39,
-      "CP08": 42,
-      "CP09": 71,
-      "multi": 110,
-      "names": 25,
-      "names_are_also_included_in_multi": true
+    "lab": {
+      "cp17_policy_native_excerpt_cases": 64,
+      "coff_reader_boundary_checks": 3,
+      "cp16_fix01": 53,
+      "cp16_historical": 56,
+      "cp15_historical": 38,
+      "cp14_on_cp17_runtime": 16,
+      "cpp_reported_case_count": 523,
+      "cpp_count_excludes_legacy_lab_unreported_count": true,
+      "editor": {
+        "CP13": 39,
+        "CP08": 42,
+        "CP09": 71,
+        "multi": 110,
+        "names": 25,
+        "names_are_also_included_in_multi": true
+      },
+      "local_ASan_UBSan": "PASS",
+      "local_LeakSanitizer": "NOT_RUN_PTRACE_ENVIRONMENT",
+      "Red_state_bytes": 128,
+      "Red_table_bytes": 8192,
+      "printf_format_warnings": 0,
+      "expansion_negatives": [
+        {
+          "case": "x86",
+          "rejected": true
+        },
+        {
+          "case": "wrong_execute_hook",
+          "rejected": true
+        },
+        {
+          "case": "wrong_hook_service",
+          "rejected": true
+        },
+        {
+          "case": "wrong_export",
+          "rejected": true
+        },
+        {
+          "case": "wrong_encounter_service",
+          "rejected": true
+        },
+        {
+          "case": "unreviewed_CP17_sound_symbol",
+          "rejected": true
+        },
+        {
+          "case": "unreviewed_CP17_LOS_symbol",
+          "rejected": true
+        },
+        {
+          "case": "original_arc_forbidden",
+          "rejected": true
+        },
+        {
+          "case": "path_escape",
+          "rejected": true
+        },
+        {
+          "case": "CP17_wrong_manifest_version",
+          "rejected": true
+        }
+      ],
+      "provider_regression_negatives": 19
     },
-    "local_ASan_UBSan": "PASS",
-    "local_LeakSanitizer": "NOT_RUN_PTRACE_ENVIRONMENT",
-    "Red_state_bytes": 128,
-    "Red_table_bytes": 8192,
-    "printf_format_warnings": 0,
-    "expansion_negatives": [
+    "download": {
+      "status": "DOWNLOAD_VERIFIED",
+      "CRC": "PASS",
+      "source_ledger_verified": true,
+      "bytes_and_sha256_checked_on_downloaded_zip": true,
+      "package_audited_pe_abi_hooks_imports": true,
+      "source_pin_blob": "ae10ff09df71cd21076c76f9bec816c6705db23d",
+      "source_pin_ci_path": "DEVF/CP17_RED_AGGRESSIVE_AI/SOURCE_CI_CP17.json",
+      "pinned_blobs": 462,
+      "historical_document_origins": {
+        "DEVF/CP16_BLUE_RECRUITER_NATIVE_LEASH/TEST_RESULTS.md": {
+          "source_commit": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
+          "git_blob": "db72284363f5c4724f5dcce03b97d0462c8ccb43",
+          "reason": "Immutable original CP16 CI documentation; not compiled runtime. Documentary closure changed source docs only."
+        },
+        "DEVF/CP16_BLUE_RECRUITER_NATIVE_LEASH/README.md": {
+          "source_commit": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
+          "git_blob": "8fee7150318e43641a85416482629d577ff6e4dd",
+          "reason": "Immutable original CP16 CI documentation; not compiled runtime. Documentary closure changed source docs only."
+        },
+        "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/HUMAN_TEST.md": {
+          "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
+          "git_blob": "fa0d373692deb090a081e71b371ffa3503482572",
+          "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
+        },
+        "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/IMPLEMENTATION.md": {
+          "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
+          "git_blob": "99d848c0e007da21a6835b12a1fd8990efff560a",
+          "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
+        },
+        "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/README.md": {
+          "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
+          "git_blob": "0b6a72effa1021824c9943ee1565ddcc4bd7be96",
+          "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
+        },
+        "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/RECOVERY.md": {
+          "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
+          "git_blob": "1c761b2623acbe04536572221739ad0b620f0893",
+          "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
+        },
+        "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/TEST_RESULTS.md": {
+          "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
+          "git_blob": "0929603c8fe07aa27a1502e68106a7412f2d6596",
+          "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
+        }
+      }
+    },
+    "preservation": {
+      "source_base_blobs": 2166,
+      "source_old_changes": [],
+      "CI_base_blobs": 866,
+      "CI_old_changes": [],
+      "unchanged_runtime_files": 24,
+      "non_Red_mod_cpp_unchanged": true,
+      "provider_editor_JSON_API_unchanged": true,
+      "provider_rebuild_shipped": false,
+      "user_keeps_provider": {
+        "filename": "DEVF_Provider_0.13.0_CP13_TEST.dusk",
+        "bytes": 130335,
+        "sha256": "3a3c874e71cf8b63c43fb54340e11778011c486026897d6c29d3d6ad2e67634e",
+        "dll_sha256": "2932b3e2c1b188ae89f22545e94431a81e71d79c96c076038ae286af9a328c83",
+        "run_id": 39153841948,
+        "artifact_id": 12146112007
+      },
+      "rollback": {
+        "filename": "BokoblinExpansion_0.13.1_CP16_FIX01_TEST.dusk",
+        "bytes": 103638,
+        "sha256": "f5d601f5e9d7a7f8e141a59aa1b0ee811bcbf2dfac16c1add6a40033e2e729b6"
+      }
+    },
+    "failed_runs_preserved": [
       {
-        "case": "x86",
-        "rejected": true
+        "id": 39182819992,
+        "reason": "Windows default encoding for UTF8 source in gate; no MSVC/package"
       },
       {
-        "case": "wrong_execute_hook",
-        "rejected": true
+        "id": 39183207051,
+        "reason": "ABI helper EXE unresolved GXDestroyTexObj; replaced with authentic COFF inspection, no game stubs"
       },
       {
-        "case": "wrong_hook_service",
-        "rejected": true
-      },
-      {
-        "case": "wrong_export",
-        "rejected": true
-      },
-      {
-        "case": "wrong_encounter_service",
-        "rejected": true
-      },
-      {
-        "case": "unreviewed_CP17_sound_symbol",
-        "rejected": true
-      },
-      {
-        "case": "unreviewed_CP17_LOS_symbol",
-        "rejected": true
-      },
-      {
-        "case": "original_arc_forbidden",
-        "rejected": true
-      },
-      {
-        "case": "path_escape",
-        "rejected": true
-      },
-      {
-        "case": "CP17_wrong_manifest_version",
-        "rejected": true
+        "id": 39183741446,
+        "reason": "COFF inspector off-by-one for final indirect jump; actual MSVC and64 CP17 tests passed, no package"
       }
     ],
-    "provider_regression_negatives": 19
-  },
-  "download": {
-    "status": "DOWNLOAD_VERIFIED",
-    "CRC": "PASS",
-    "source_ledger_verified": true,
-    "bytes_and_sha256_checked_on_downloaded_zip": true,
-    "package_audited_pe_abi_hooks_imports": true,
-    "source_pin_blob": "ae10ff09df71cd21076c76f9bec816c6705db23d",
-    "source_pin_ci_path": "DEVF/CP17_RED_AGGRESSIVE_AI/SOURCE_CI_CP17.json",
-    "pinned_blobs": 462,
-    "historical_document_origins": {
-      "DEVF/CP16_BLUE_RECRUITER_NATIVE_LEASH/TEST_RESULTS.md": {
-        "source_commit": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
-        "git_blob": "db72284363f5c4724f5dcce03b97d0462c8ccb43",
-        "reason": "Immutable original CP16 CI documentation; not compiled runtime. Documentary closure changed source docs only."
-      },
-      "DEVF/CP16_BLUE_RECRUITER_NATIVE_LEASH/README.md": {
-        "source_commit": "e364fdb1489f7e61a0e0719a62fb627b5749f730",
-        "git_blob": "8fee7150318e43641a85416482629d577ff6e4dd",
-        "reason": "Immutable original CP16 CI documentation; not compiled runtime. Documentary closure changed source docs only."
-      },
-      "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/HUMAN_TEST.md": {
-        "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
-        "git_blob": "fa0d373692deb090a081e71b371ffa3503482572",
-        "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
-      },
-      "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/IMPLEMENTATION.md": {
-        "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
-        "git_blob": "99d848c0e007da21a6835b12a1fd8990efff560a",
-        "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
-      },
-      "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/README.md": {
-        "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
-        "git_blob": "0b6a72effa1021824c9943ee1565ddcc4bd7be96",
-        "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
-      },
-      "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/RECOVERY.md": {
-        "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
-        "git_blob": "1c761b2623acbe04536572221739ad0b620f0893",
-        "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
-      },
-      "DEVF/CP16_FIX01_BLUE_RECRUITER_RANGE_DIAGNOSTICS/TEST_RESULTS.md": {
-        "source_commit": "e6b85b123e0895c23dce6415c54b8a25773e4504",
-        "git_blob": "0929603c8fe07aa27a1502e68106a7412f2d6596",
-        "reason": "Immutable FIX01 implementation documentation; later source closure changed documents, not compiled runtime."
-      }
-    }
-  },
-  "preservation": {
-    "source_base_blobs": 2166,
-    "source_old_changes": [],
-    "CI_base_blobs": 866,
-    "CI_old_changes": [],
-    "unchanged_runtime_files": 24,
-    "non_Red_mod_cpp_unchanged": true,
-    "provider_editor_JSON_API_unchanged": true,
-    "provider_rebuild_shipped": false,
-    "user_keeps_provider": {
-      "filename": "DEVF_Provider_0.13.0_CP13_TEST.dusk",
-      "bytes": 130335,
-      "sha256": "3a3c874e71cf8b63c43fb54340e11778011c486026897d6c29d3d6ad2e67634e",
-      "dll_sha256": "2932b3e2c1b188ae89f22545e94431a81e71d79c96c076038ae286af9a328c83",
-      "run_id": 39153841948,
-      "artifact_id": 12146112007
+    "sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "toolchain": {
+      "VCToolsVersion": "14.51.36231",
+      "WindowsSDKVersion": "10.0.26100.0\\",
+      "VSCMD_ARG_TGT_ARCH": "x64"
     },
-    "rollback": {
-      "filename": "BokoblinExpansion_0.13.1_CP16_FIX01_TEST.dusk",
-      "bytes": 103638,
-      "sha256": "f5d601f5e9d7a7f8e141a59aa1b0ee811bcbf2dfac16c1add6a40033e2e729b6"
-    }
-  },
-  "failed_runs_preserved": [
-    {
-      "id": 39182819992,
-      "reason": "Windows default encoding for UTF8 source in gate; no MSVC/package"
-    },
-    {
-      "id": 39183207051,
-      "reason": "ABI helper EXE unresolved GXDestroyTexObj; replaced with authentic COFF inspection, no game stubs"
-    },
-    {
-      "id": 39183741446,
-      "reason": "COFF inspector off-by-one for final indirect jump; actual MSVC and64 CP17 tests passed, no package"
-    }
-  ],
-  "sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
-  "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
-  "toolchain": {
-    "VCToolsVersion": "14.51.36231",
-    "WindowsSDKVersion": "10.0.26100.0\\",
-    "VSCMD_ARG_TGT_ARCH": "x64"
-  },
-  "limitations": [
-    "No native movement speed1.5 boost; bounded intent follows native FIND without forcing modes/timers/physics.",
-    "Native x3 frame sampling/SFX compensation source-port tests do not certify physical contacts, shield, audio or interruption in game.",
-    "Link PROC/const virtual layout is MSVC source ABI verified; physical read-only canary/charge detection awaits user.",
-    "CP14 LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED remains independent and unchanged.",
-    "User's positive FIX01 report185830 is communicated evidence; rawlog not read in CP17 session."
-  ]
+    "limitations": [
+      "No native movement speed1.5 boost; bounded intent follows native FIND without forcing modes/timers/physics.",
+      "Native x3 frame sampling/SFX compensation source-port tests do not certify physical contacts, shield, audio or interruption in game.",
+      "Link PROC/const virtual layout is MSVC source ABI verified; physical read-only canary/charge detection awaits user.",
+      "CP14 LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED remains independent and unchanged.",
+      "User's positive FIX01 report185830 is communicated evidence; rawlog not read in CP17 session."
+    ]
+  }
 }

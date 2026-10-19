@@ -1,3 +1,9 @@
+# CP17 — revalidación de continuidad pendiente
+
+66 casos locales ASan/UBSan PASS; nuevo caso de carga continua ante LOS/daño/recoil sin reroll y caso de guardia pasiva que pausa ante recoil seguro. Build/descarga del nuevo source PENDING; HUMAN_RUNTIME_PENDING. Run39184082946 fue SUCCESS del snapshot8fbaea77, pero no certifica esta revisión.
+
+## Histórico preservado del snapshot anterior
+
 # CP17 — cierre técnico verificado (18-10-2026 America/Panama)
 
 **SOURCE_IMPLEMENTED / LAB_PASS / WINDOWS_MSVC_PASS / INDEPENDENT_DOWNLOAD_PASS / HUMAN_RUNTIME_PENDING**.

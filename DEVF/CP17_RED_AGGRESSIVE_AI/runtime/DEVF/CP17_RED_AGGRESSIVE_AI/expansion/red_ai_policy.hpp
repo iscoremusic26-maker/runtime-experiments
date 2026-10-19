@@ -63,15 +63,18 @@ template<class Emit>inline void pre(State&s,const Actor&a,const Link&l,Emit&&emi
  ++s.ticks;s.random_allowed=l.present&&l.basic&&l.safe&&context(a,l);s.pre_valid=safe(a);s.pre_mode=a.mode;s.pre_state=a.state;s.pre_frame=a.frame;s.pre_b=a.b;s.pre_c=a.c;s.sfx_pending=false;
  const bool inblow=blow(a);
  if(!domain(a)){cancel(s,emit,"IDENTITY_CONTEXT_DOMAIN");s.pre_valid=false;return;}
+ // A validated end is the only transient observation that clears a consumed charge episode. Brief priority/LOS loss cannot reroll the same held charge.
+ if(l.present&&l.basic&&l.canary&&l.id==s.link_id&&context(a,l)&&l.charge==Charge::None){s.episode=Charge::None;s.episode_done=false;}
  if(s.combat&&s.ticks-s.last_threat>=kCalm&&(!safe(a)||!fight(a.mode)||!l.present))s.combat=false;
- if(!safe(a)||!fight(a.mode)||(a.mode==Attack&&a.state>=3)||a.incoming){cancel(s,emit,a.incoming?"RECRUITMENT_OWNS_RECEIVER_NO_RED_RUSH":"NATIVE_PRIORITY_DAMAGE_GUARD_LEASH_EVENT_OR_OTHER_MODE");s.passive=0;s.episode=Charge::None;s.episode_done=false;return;}
+ if(!safe(a)||!fight(a.mode)||(a.mode==Attack&&a.state>=3)||a.incoming){cancel(s,emit,a.incoming?"RECRUITMENT_OWNS_RECEIVER_NO_RED_RUSH":"NATIVE_PRIORITY_DAMAGE_GUARD_LEASH_EVENT_OR_OTHER_MODE");const double d=xz2(a.pos,l.pos);const bool pause_guard=s.combat&&safe(a)&&a.mode==Attack&&a.state==3&&a.rate<0&&viable(a,l)&&l.charge==Charge::None&&(l.motion==Motion::Guard||l.motion==Motion::Quiet)&&d>=kPassiveMinDist*kPassiveMinDist&&d<=kPassiveMaxDist*kPassiveMaxDist;
+  if(!pause_guard)s.passive=0;return;}
  if(l.id!=s.link_id){cancel(s,emit,"LINK_ID_CHANGED_OR_ABSENT");s.link_id=l.id;s.episode=Charge::None;s.episode_done=false;s.passive=0;s.link_fault=false;s.link_pass_logged=false;s.combat=false;}
  if(l.present&&l.basic&&a.perceived&&context(a,l)){s.combat=true;s.last_threat=s.ticks;}
  if(s.combat&&s.ticks-s.last_threat>=kCalm){s.combat=false;cancel(s,emit,"150_OWN_EXECUTES_WITHOUT_CURRENT_NATIVE_PERCEPTION");}
  if(l.present&&l.basic&&l.canary&&!s.link_pass_logged){s.link_pass_logged=true;emit("INDEPENDENT_LINK_STATE_CANARY_PASS",Cause::Normal,"PROC_DOMAIN_AND_CONST_VIRTUAL_SEMANTICS_COHERENT_NOT_PHYSICAL_LAYOUT_HUMAN_CERTIFICATION");}
  if(l.present&&l.basic&&!l.canary&&!s.link_fault){s.link_fault=true;emit("INDEPENDENT_LINK_STATE_CANARY_FAILED_REACTIVE_DISABLED",Cause::Normal,"CP14_CANARY_UNCHANGED_NORMAL_REMAINS_RANDOM_REQUIRES_SAFE_BASIC_LINK");}
  const bool ok=s.combat&&!s.link_fault&&viable(a,l);
- if(!ok){cancel(s,emit,"LINK_REACTIVE_SAMPLE_CONTEXT_LOS_GROUND_LEASH_OR_CANARY_UNSAFE");s.passive=0;s.episode=Charge::None;s.episode_done=false;return;}
+ if(!ok){cancel(s,emit,"LINK_REACTIVE_SAMPLE_CONTEXT_LOS_GROUND_LEASH_OR_CANARY_UNSAFE");s.passive=0;return;}
  if(s.episode!=l.charge){s.episode=l.charge;s.episode_done=false;if(l.charge!=Charge::None)emit("ACTUAL_CHARGE_DETECTED",l.charge==Charge::Spin?Cause::ChargeSpin:Cause::ChargeJump,"VALIDATED_PROC_AND_CONST_VIRTUALS_NOT_A_HIT_OR_INTERRUPT");}
  if(s.intent){
   const bool charge_intent=s.intent_cause==Cause::ChargeSpin||s.intent_cause==Cause::ChargeJump;

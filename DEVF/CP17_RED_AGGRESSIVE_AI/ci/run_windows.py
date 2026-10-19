@@ -93,7 +93,7 @@ try:
  lab15=run("cp15-blue-ai-lab",[BUILD/"cp15_lab.exe"]);assert "CP15_LAB_PASS cases=38" in lab15;result["cp15_lab_cases"]=len(re.findall("CASE_PASS ",lab15));assert result["cp15_lab_cases"]==38
  lab16=run("cp16-blue-recruit-lab",[BUILD/"cp16_lab.exe"]);assert "CP16_LAB_PASS cases=56" in lab16;result["cp16_lab_cases"]=len(re.findall("CASE_PASS ",lab16));assert result["cp16_lab_cases"]==56
  labfix=run("cp16-fix01-lab",[BUILD/"fix01_lab.exe"]);assert "FIX01_LAB_PASS cases=53" in labfix;result["fix01_lab_cases"]=len(re.findall("CASE_PASS ",labfix));assert result["fix01_lab_cases"]==53
- lab17=run("cp17-red-ai-lab",[BUILD/"cp17_lab.exe"]);assert "CP17_LAB_PASS cases=64" in lab17;result["cp17_lab_cases"]=len(re.findall("CASE_PASS ",lab17));assert result["cp17_lab_cases"]==64
+ lab17=run("cp17-red-ai-lab",[BUILD/"cp17_lab.exe"]);assert "CP17_LAB_PASS cases=66" in lab17;result["cp17_lab_cases"]=len(re.findall("CASE_PASS ",lab17));assert result["cp17_lab_cases"]==66
  import abi_probe
  probe_objects=list(BUILD.rglob("cp17_abi.cpp.obj"));assert len(probe_objects)==1
  result["cp17_link_abi_source_layout"]=abi_probe.verify(probe_objects[0])

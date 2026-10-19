@@ -13,3 +13,7 @@ Siguiente acción mínima tras entrega válida: HUMAN_TEST, no CP18. Contacto/au
 Ramas feature/devf-cp17-red-aggressive-ai y ci/devf-cp17-red-aggressive-ai, PR74/59 draft. Fuente REAL compilada8fbaea77df4fe547676ca2462a6db633f3788273; CIa14ca4e264d7b629bb6b02745510300f16bc08ae. Run39184082946 SUCCESS ambos jobs, artifact12157032798 y verificador12157457479. VERIFIED_PACKAGE.json contiene hashes/tamaños, expiración real, toolchain, ABI y límites. El commit posterior de esta acta solo cambia docs; el SHA compilado sigue siendo el anterior.
 
 Histórico de fallos preservado en TEST_RESULTS:39182819992 encoding,39183207051 helper EXE/GXDestroyTexObj,39183741446 lector COFF off-by-one. El último run corrige los tres sin alterar la IA ni relajar gates. Próxima acción mínima: HUMAN_TEST de Red solo, luego cargas/pasividad/mixed variants. No CP18. Cualquier problema físico de x3/lectura Link requiere reporte del usuario y rollback frío, no un PASS deducido de logs.
+
+## Revalidación final en curso
+
+Desde cierre7abc4ca0f461f5756312b0e8ce56edb095797b08 se corrigen dos casos de continuidad de política Red y se añaden regresiones. Source/CI/artifact finales se fijarán tras nuevo build+download. El artifact113055B del run39184082946 permanece intacto como snapshot previo, no como entrega más reciente. No cambiar el rollback FIX01 original.
