@@ -1,21 +1,17 @@
-# QA humana CP18 0.15.0 — Windows/DX12, arranques fríos
+# QA humana CP19 0.16.0 — Windows/DX12, arranques fríos
 
-Prueba privada. Nada de esto se ha observado todavía en el juego: son instrucciones, no resultados.
+Prueba privada. Son instrucciones, no resultados: nada de esto se ha observado aún en el juego.
 
-0. **Preparación.** Cerrar Dusklight por completo. Guardar copia de `BokoblinExpansion_0.14.1_CP17_FIX01_RED_X2_JUMP_INTERCEPT_TEST.dusk`, de los JSON y de las partidas. Sustituir **solo** la Expansion por `BokoblinExpansion_0.15.0_CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT_TEST.dusk`. Provider y editor 0.13.0 y los JSON no cambian. Nunca dos Expansion a la vez ni hot reload. En el log debe aparecer `BLACK_AI_ARMED version=0.15.0`.
+0. **Preparación.** Cerrar Dusklight. Guardar copia de `BokoblinExpansion_0.15.0_CP18_BLACK_FURY_CHAIN_SAME_ROOM_HUNT_TEST.dusk`, de los JSON y de las partidas. Sustituir **solo** la Expansion por `BokoblinExpansion_0.16.0_CP19_BUGFIX_TEST.dusk`; Provider/editor 0.13.0 y JSON iguales. Nunca dos Expansion ni hot reload. Mismos encuentros que en el log del 19-10 (Hyrule Field, salas 7 y 10).
 
-A. **Black sin provocar.** Acercarse sin golpearle. Esperado: golpes B/C algo más rápidos (x1,15), con sus pausas normales de espera entre golpes; HP, aura y ojos como en 0.14.1; Blue y Red iguales. Un Blue que grita puede seguir llamando a este Black. Log: `BLACK_NATIVE_ATTACK_STARTED reason=NATIVE_BC_X1_15…`, `BLACK_RATE_APPLIED_READBACK owned_rate=1.15`.
+1. **A — audio.** En las salas 7 y 10 (antes mudas): ¿se oyen voces, pasos, ataques, daño, caída/muerte y el choque con el escudo de los Bokoblin añadidos? Probar uno y varios, cerca y lejos. Pasar a una sala con Bokoblin de fábrica (2/3/6) y volver. Log: `FIELD_SE_WAVE_LOAD_REQUESTED`, `FIELD_SE_WAVE_RELEASED`; si aparece `FIELD_SE_WAVE_LOAD_REFUSED` o siguen mudos, anotarlo (sería STOP_BLOCKED_AUDIO).
+2. **B — Z-target.** Combatir largo; derribarlos y dejar que se levanten; dejarlos con poca vida y esperar a que regeneren. ¿Alguno vivo deja de poder fijarse? Log: `ATTENTION_BATTLE_RESTORED`.
+3. **C — música.** Pelear con varios Bokoblin, rematar con Jump Attack (y con otros golpes) y quedarse en la sala sin cambiar. ¿La música vuelve a su volumen normal? Log: `ZERO_HP_LIVE_MODE_COMPLETED_NATIVE_DEATH_PATH`, `RESIDUAL_LASTHIT_FLAG_CLEARED`, `BGM_BATTLE_STATE` (estado 3 = sin batalla).
+4. **D — Blue.** Con aliados lejos de su posición inicial: que un Blue los llame antes y después de morir. Deben acudir andando y pelear sin volver a casa; tras morir el Blue, siguen mientras peleen contigo y se calman si dejas de pelear. Log: `BLUE_CALL_LEASH_PERMISSION_GRANTED/NATIVE_FIND/ENDED/BLOCKED_BY_GEOMETRY`.
+5. **E — Red.** Cargar Spin y Jump Strike a 250–400 de un Red: debe acercarse y golpear desde cerca; si te alejas, no debe golpear al aire. Log: `CLOSE_IN_STARTED`, `CLOSE_IN_MEASURED`, `NATIVE_ATTACK_FORCED`, `CLOSE_IN_UNREACHABLE`.
+6. **F — Helm Splitter.** Contra Bokoblin con más de 100 HP (Black/Red/Blue según tus encuentros): con la Espada Maestra cada Helm Splitter quita 100 HP, con la de Ordon 50, y el enemigo sobrevive con derribo; con 100 HP o menos (50 con Ordon) muere como siempre. Log: `HELM_SPLITTER_EXACT_DAMAGE_APPLIED value_a=antes value_b=después`, `HELM_SPLITTER_NATIVE_LETHAL`. Jump Attack, Jump Strike, giros y bombas no deben cambiar.
+7. **G — golpes x2.** Black en furia y Red reaccionando: ¿siguen pareciendo atravesar a Link o el escudo? ¿suena el choque con el escudo? Log: `BLACK_STRIKE_STARTED`, `BLACK_NATIVE_ATTACK_ENDED … active_min_dist=`.
+8. **Regresión.** Black furia/caza CP18, Red CP17 FIX01, Blue FIX01, aura/ojos/regeneración y FPS a 1080p como en 0.15.0.
+9. **Parada segura.** Ante crash, cuelgue de audio, actores fuera del mapa, golpes a través de paredes, daño sin contacto, logros falsos o FPS claramente peores: cerrar, guardar el log, rollback frío a 0.15.0 (RECOVERY) y anotar evento y `actor_id`.
 
-B. **Primer golpe y furia.** Quitarle HP de verdad (espada, flecha…). Esperado: aura/ojos de furia y ATP 6 como siempre durante 300 tics (~10 s) desde el último daño. Durante la furia: golpes B/C a x2, **uno tras otro**, sin la animación ni la voz de espera intermedia y sin la pausa de 20 tics. Probar a corta distancia y moviéndose; con escudo levantado debe rebotar (retroceso nativo completo) y volver a atacar. Escuchar si cada golpe conserva su voz y su sonido de impacto. Log: `BLACK_DAMAGE_RECOGNIZED_EXISTING_CP10_6`, `BLACK_HUNT_LOCKED_FIRST_DAMAGE`, `BLACK_CHAIN_NEXT_ATTACK_STARTED`, `BLACK_NATIVE_WAIT_TRANSITION_AVOIDED`, `BLACK_RATE_APPLIED_READBACK owned_rate=2.00`, `BLACK_NATIVE_CONTACT_LINK`, `BLACK_NATIVE_SHIELD_BLOCK`. Anotar: ¿se oye alguna voz de espera entre golpes encadenados? ¿algún golpe atraviesa pared o daña sin contacto visual? ¿se corta alguna animación?
-
-C. **Fin de la furia.** Sin volver a dañarle, esperar a que se apague el aura. Esperado: vuelve a x1,15 con pausas nativas, ATP 3, ojos normales; **sigue persiguiéndote** (Hunt). Log: `BLACK_FURY_END` (CP10.6) sin `BLACK_HUNT_RESET…`.
-
-D. **Hunt en la misma sala.** Huir al otro extremo de la sala, salir de su campo de visión, rodear obstáculos transitables. Esperado: no vuelve a su puesto ni se queda esperando; sigue acercándose a distancia de golpe, sin teletransportes ni aceleraciones raras. Si el terreno lo impide (barranco, pared), puede quedarse quieto mirando o pegado al obstáculo: eso se registra (`BLACK_HUNT_PURSUIT_BLOCKED_BY_GEOMETRY`), no es éxito. Log: `BLACK_HUNT_NATIVE_ABANDON_PREVENTED`, `BLACK_HUNT_PURSUIT_MEASURED`.
-
-E. **Cambio de sala.** Salir de la sala A a la B: Black **no** debe seguirte. Volver a A (si es posible, A→B→A sin detenerse en B): no debe recordar el aggro; se comporta como antes del daño hasta que vuelvas a quitarle HP. Log: `BLACK_HUNT_RESET_PLAYER_ROOM_CHANGED` y, con daño nuevo, otro `BLACK_HUNT_LOCKED_FIRST_DAMAGE`. En Hyrule Field cada sala del mapa cuenta como sala distinta.
-
-F. **Integración.** Blue llamando compañeros antes y después de dañar al Black (tras el daño, el Black provocado no acude a la llamada: `BLACK_HUNT_LOCKED_SAME_ROOM_PRIORITY_OVER_RECRUIT_ORDER`). Red CP17 FIX01 igual que en 0.14.1. Dos Black a la vez: solo el dañado persigue. Ojos, aura, regeneración y daño normales. 1080p DX12: anotar fluidez subjetiva. `PERF_WINDOW … MEASUREMENT_NOT_AN_ERROR` no es un error.
-
-G. **Parada segura.** Ante crash, caída fuera del mapa, bloqueo, daño sin contacto visual, golpes a través de paredes, falta de audio nativo, impactos dobles, pérdida clara de FPS o persecución a otra sala: cerrar el juego, conservar el log, rollback frío según RECOVERY y anotar evento, hora y `actor_id`.
-
-Separar siempre lo que se ve y oye en el juego de lo que dice el log. Ningún contador sustituye la observación. Estado: HUMAN_RUNTIME_PENDING.
+Separar lo visto/oído en el juego de lo que dice el log. Estado: HUMAN_RUNTIME_PENDING.
