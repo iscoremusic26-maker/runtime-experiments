@@ -1,0 +1,75 @@
+{
+  "statuses": [
+    "SOURCE_IMPLEMENTED",
+    "LAB_PASS",
+    "WINDOWS_MSVC_PASS",
+    "INDEPENDENT_DOWNLOAD_PASS",
+    "HUMAN_RUNTIME_PENDING"
+  ],
+  "compiled_source": "192a7731623d69baacdd37011db60ce894d9de18",
+  "compiled_ci": "341c7a341980c3982d2a1e2671e7852f3ef1d550",
+  "download": {
+    "status": "INDEPENDENT_DOWNLOAD_PASS",
+    "source_commit": "192a7731623d69baacdd37011db60ce894d9de18",
+    "ci_commit": "341c7a341980c3982d2a1e2671e7852f3ef1d550",
+    "run_id": "39359746319",
+    "artifact_id": 12237111893,
+    "expires_at": "2026-11-19T02:42:15Z",
+    "zip": {
+      "filename": "DEVF_CP21_PRIVATE_TEST.zip",
+      "bytes": 8813285,
+      "sha256": "8f9a38b997e97a56c349e214d5dfd69ece4c05a393512a122c842004e64618db"
+    },
+    "outputs": {
+      "BokoblinExpansion_0.17.0.dusk": {
+        "bytes": 1912586,
+        "sha256": "083de98ca6a9e5918470ebbc31f720e700bdb25dedc4b52d19f863cfc7611e2a"
+      },
+      "EnemyVariantFramework_0.15.0.dusk": {
+        "bytes": 103765,
+        "sha256": "51f24f178969dd22d438ecfcc7336c043e7d72f05c29a91248a8f41f405ef1d5"
+      }
+    },
+    "source_ledger_verified": true,
+    "PE_imports_hooks_ABI": "PASS",
+    "CRC": "PASS",
+    "human": "HUMAN_RUNTIME_PENDING",
+    "game_executed": false
+  },
+  "official_manifest_document": {
+    "git_blob": "a138ab329166fd5a9fde0e04bbd15a5d7af9d570",
+    "checkout_sha256": "1d6f0056548219aacb0f25c992c8ae5bccc54dbdf5125e9ec63f3b1fdf1c6ce5",
+    "git_bytes_sha256": "815dee47100b1a1c59aba12a881486f1bf0ad716c97cafbffb619607f36daf27",
+    "checkout_newline_difference_only": true
+  },
+  "runtime_executed": false,
+  "local_download_verification": {
+    "status": "LOCAL_INDEPENDENT_DOWNLOAD_PASS",
+    "source": "192a7731623d69baacdd37011db60ce894d9de18",
+    "ci": "341c7a341980c3982d2a1e2671e7852f3ef1d550",
+    "game_executed": false,
+    "bundle": {
+      "filename": "DEVF_CP21_PRIVATE_TEST.zip",
+      "bytes": 8813285,
+      "sha256": "8f9a38b997e97a56c349e214d5dfd69ece4c05a393512a122c842004e64618db"
+    },
+    "source_ledger_blobs": 887
+  },
+  "local_audit_dependencies_from_pinned_CI": [
+    {
+      "path": "DEVF/CP07_2B_BOKOBLIN_EXPANSION_PILOT/ci/reviewed-imports-delta.json",
+      "git_blob": "20a1a928d6dc3a90e3f0916878111f072c17ba7e",
+      "ci_commit": "341c7a341980c3982d2a1e2671e7852f3ef1d550"
+    },
+    {
+      "path": "DEVF/CP07_2B_BOKOBLIN_EXPANSION_PILOT/ci/native-read-imports.json",
+      "git_blob": "1e37ab8a3e466991f179f0ead02e68d0acbeeeab",
+      "ci_commit": "341c7a341980c3982d2a1e2671e7852f3ef1d550"
+    }
+  ],
+  "evidence_artifacts": {
+    "windows": 12236689019,
+    "download": 12237355463,
+    "bundle": 12237111893
+  }
+}
