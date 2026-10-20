@@ -27,7 +27,7 @@ def verify(root=ROOT):
  assert len(original)==19164 and sha(original)=='67a1d7109949e9a18071ff06592f24c2cf0d54093cf76cc07efd6dad730e74aa'
  j=json.loads(lf);rows=j['encounters'];assert len(rows)==32 and all(r['enabled'] for r in rows)
  from collections import Counter
- assert Counter(r['variant'] for r in rows)=={'blue':15,'red':7,'black':10}
+ assert Counter(r['bokoblin_variant'] for r in rows)=={'blue':15,'red':7,'black':10}
  assert len(j['resources'])==6
  result['encounters']={'bytes':len(b),'sha256':sha(b),'original_crlf_bytes':len(original),'original_crlf_sha256':sha(original),'newline_difference_only':b!=original,'count':32}
  return result
