@@ -1,0 +1,29 @@
+name: CP21 frozen input integrity
+on:
+  pull_request:
+    types: [opened, synchronize]
+    paths: ['DEVF/CP21_PUBLIC_RELEASE/**', '.github/workflows/devf-cp21-input-integrity.yml']
+permissions:
+  contents: read
+jobs:
+  inputs:
+    if: github.event.repository.private == true && github.head_ref == 'feature/devf-cp21-public-package' && github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: windows-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+          persist-credentials: false
+      - shell: pwsh
+        run: |
+          python DEVF/CP21_PUBLIC_RELEASE/inputs/verify_inputs.py | Tee-Object -FilePath CP21_INPUT_VERIFICATION.json
+          if ($LASTEXITCODE -ne 0) { throw 'CP21 input integrity failed' }
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: CP21_FROZEN_INPUTS_${{ github.run_id }}
+          path: |
+            DEVF/CP21_PUBLIC_RELEASE/inputs/
+            CP21_INPUT_VERIFICATION.json
+          retention-days: 30
+          if-no-files-found: error
