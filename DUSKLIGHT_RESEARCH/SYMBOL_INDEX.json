@@ -7481,5 +7481,113 @@
     "evidence_ids": [
       "CALLBACK-017"
     ]
+  },
+  {
+    "symbol": "daObj_Lv3waterB_Execute",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_lv3WaterB.cpp",
+      "line_start": 94,
+      "line_end": 99,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_lv3WaterB.cpp#L94-L99"
+    },
+    "signature": "static int daObj_Lv3waterB_Execute(obj_lv3WaterB_class*)",
+    "purpose": "Consumidor de action que actualiza agua/modelo/fondo",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Instancia creada y recursos válidos"
+    ],
+    "risks": [
+      "Static interno; sin export/ABI Windows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-061"
+    ]
+  },
+  {
+    "symbol": "dBgS::SplGrpChk",
+    "kind": "method",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_bg_s.cpp",
+      "line_start": 1301,
+      "line_end": 1345,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L1301-L1345"
+    },
+    "signature": "bool dBgS::SplGrpChk(dBgS_SplGrpChk*)",
+    "purpose": "Dispatcher real de superficie/agua",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fondos usados/listos; filtros de consulta"
+    ],
+    "risks": [
+      "Resultado depende de geometría y momento"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-062"
+    ]
+  },
+  {
+    "symbol": "dBgW::RwgSplGrpChk",
+    "kind": "method",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_bg_w.cpp",
+      "line_start": 2030,
+      "line_end": 2061,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_w.cpp#L2030-L2061"
+    },
+    "signature": "bool dBgW::RwgSplGrpChk(u16, dBgS_SplGrpChk*)",
+    "purpose": "Selecciona cruce Y más alto aceptado en rango",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Grupos/bounds/polypass previos"
+    ],
+    "risks": [
+      "Asset concreto no inspeccionado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-062"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::setWaterY",
+    "kind": "method",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 8933,
+      "line_end": 8946,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L8933-L8946"
+    },
+    "signature": "void daAlink_c::setWaterY()",
+    "purpose": "Copia altura/atributo de Acch o sentinel",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Resultado WaterHit ya calculado"
+    ],
+    "risks": [
+      "No sustituye cálculo de colisión ni prueba natación"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-062"
+    ]
   }
 ]

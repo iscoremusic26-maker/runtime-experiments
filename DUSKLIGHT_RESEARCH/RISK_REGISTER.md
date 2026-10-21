@@ -45,3 +45,5 @@ R-25 — BST: alta/baja de registro y mapa activo difieren; frameEnd invoca WSYS
 CP-R18 · R-26: unregister OK no prueba create queue vacía; forceDelete transforma Delete=0 en finalización y UNAVAILABLE no revierte borrados. Request-only sin profile sustituto falla al resolverlo; reutilización numérica y perfiles retenidos durante unload son riesgos condicionados (PLAYER-040..045), no crash observado.
 
 CP-R20 · R-27: Config unsubscribe no cancela callbacks capturados; la escritura recursiva del mismo nombre altera valor sin notificación anidada y el actual se lee por callback. Destruir variable/userdata en notify no queda cubierto por copia de la lista. CALLBACK-015..018; sin fallo runtime observado.
+
+CP-R21 · R-28: modelo visible, fondo registrado y resultado de consulta de agua son estados distintos; no inferir retiro de collision por puntero de modelo nulo ni persistencia por cambio de altura. Matriz/backing deben sobrevivir al fondo registrado; orden entre perfiles y geometría DZB no probados. PRES-060..064.

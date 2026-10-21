@@ -55,3 +55,5 @@ CP-R18: stage record → lookup profile → create request por nombre → actor 
 CP-R19: screen/archivo prestado → MAT1 material propio → TBX2 Ex condicionado → texto propio y font prestado → dibujo → clean y pane destructor. Flags del consumidor no prueban contenido del asset (PRES-056..059).
 
 CP-R20: UiService binding toggle → ConfigVar::setValue → copia core subscriptions → bridge snapshots SDK; unsubscribe/unregister retiran registro vivo, no la copia en curso. Valor efectivo → dirty → save es una ruta distinta (CALLBACK-014..018).
+
+CP-R21: escritor de estado B_OB → actor de agua → matriz prestada de modelo/fondo → Move → consulta registrada SplGrpChk → Acch → Link.mWaterY; colisión y visibilidad se retiran por rutas diferentes. Recarga consulta flag stage, no altura persistida (PRES-060..064).

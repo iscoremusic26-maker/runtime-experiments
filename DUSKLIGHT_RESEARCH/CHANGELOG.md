@@ -89,3 +89,7 @@ Padre remoto verificado 3d0de345494491cf417601bdb794f8f4cfc4618c. +4 evidencias 
 ## CP-R20 — ConfigService: notificación, snapshots y consumidor UI
 
 Padre remoto verificado d565c3ad7b93badeaa116702c994d479be99656a. +5 evidencias (4 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 símbolos (2 slots oficiales,2 localizadores);0 fichas nuevas. CALLBACK-014..018 contrastan notificación Config síncrona, orden de snapshot, retiro sin revalidación, mutación recursiva y toggle UI con relookup. SDK-004 ampliado; MOD_OK no certifica flush ni snapshot agotado. Sin configuración personal consultada. Sin mod,build ni runtime; solo atlas.
+
+## CP-R21 — Agua: fondo móvil, consulta y recarga
+
+Padre remoto verificado 1e50777525d111ec86f650f427ba961efcbdf983. +5 evidencias STATIC_CROSSCHECKED,+4 símbolos;0 fichas nuevas; ambiente sigue READ parcial. PRES-060..064 contrastan Obj_Lv3WaterB, escritor externo, transformación de fondo, consulta Acch/Link y cleanup/reload. Malla concreta/orden entre perfiles condicionan resultado; modelo oculto no prueba registro retirado. Sin agua/clima universal ni efecto runtime demostrado. Sin mod,build ni runtime; solo atlas.
