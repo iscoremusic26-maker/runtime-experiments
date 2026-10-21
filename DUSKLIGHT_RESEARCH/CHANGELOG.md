@@ -77,3 +77,7 @@ Padre remoto verificado 25d8a4f2b45d4ed3d88ecbeeb0c6d6345384ab60. +4 evidencias,
 ## CP-R17 — BST: publicación de mapas,retirada y consumidor SE
 
 Padre remoto verificado 904e7f1d59e09752fa418e5a7b6dc79cc299a540. +4 evidencias (3 contrastadas,1 inferencia condicionada),+3 símbolos,+0 informes/+0 archivos frente a CP-R16; una cadena audio nueva. CP-R14 swpush PLAYER-035..039; CP-R15 KYTAG06/paletas/fog PRES-048..051; CP-R16 retry sidecar/caché WORLD-034..037 y corrección de clasificación save_slot_written. CP-R17 completo en audio_particles_effects,PRES-052..055,tres símbolos BST. FrameEnd llama WSYS; única sync BST localizada entra por lifecycleApplied (init/requests). Retiro no marca dirty ni publica mapa; consumidor SE captura shared_ptr. Edición posterior a init sin nuevo lifecycle puede diferirse (inferencia condicionada). Q-08 parcial,no bug/audio runtime probado. Cadenas nuevas de esta continuación:4;sin promoción global,documentos nuevos0. Sin mod,build ni runtime; solo atlas.
+
+## CP-R18 — ActorService: solicitudes, borrado forzado y teardown
+
+Padre remoto verificado 1ca9ccbd38dc6e266e4ba39d9a15680caa6f9f43. +6 evidencias (5 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 símbolos internos; 0 fichas nuevas; Q-03 parcial. PLAYER-040..045 contrastan request-only, publicación temprana del actor, forceDelete, cancelación/profile lookup y consumidor stage. No todas las creaciones pendientes escapan; no se acredita drenaje ni unload seguro. HOOK-029/PLAYER-023 ampliados, sin invalidar sus límites. Sin mod,build ni runtime; solo atlas.

@@ -49,3 +49,5 @@ CP-R15: KYTAG06 tipo11 darkworld/layer/stay room→colpat gather→exeKankyo→d
 CP-R16: éxito vanilla→notificación→flush IDs dirty→IO por mod→dirty conservado/reintento por evento; invalidación save manager borra caché sin flush. WORLD-034..037. No transacción conjunta ni ACK de sidecar en servicio.
 
 CP-R17: registro BST→(sync lifecycle,NO sync BST en frameEnd observado)→mapa activo shared_ptr→Z2SoundMgr/JAISe/JAISound. PRES-052..055; retirada del SlotMap no prueba fin de mapa ni reproducción.
+
+CP-R18: stage record → lookup profile → create request por nombre → actor queue → delete queue → slot/profile. ActorHandle generacional no viaja en la petición; unregister barre las dos últimas colas de instancia, no toda petición pendiente (PLAYER-040..045). Loader deactivation no aporta veto al resultado.

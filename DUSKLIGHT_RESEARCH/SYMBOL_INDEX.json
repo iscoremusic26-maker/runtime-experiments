@@ -1682,14 +1682,20 @@
     ],
     "integration": "OFFICIAL_SERVICE",
     "conditions": [
-      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido.",
+      "CP-R18: request-only no se inspecciona; actor ya publicado se barre; forceDelete puede forzar Delete=1"
     ],
     "risks": [
       "No es un export C++ verificado del ejecutable."
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "SDK-001"
+      "SDK-001",
+      "PLAYER-040",
+      "PLAYER-041",
+      "PLAYER-042",
+      "PLAYER-043",
+      "PLAYER-045"
     ]
   },
   {
@@ -7167,6 +7173,116 @@
     "evidence_ids": [
       "PRES-053",
       "PRES-054"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::actor_impl::request_delete_all_actors_of_name",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line_start": 146,
+      "line_end": 157,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L146-L157"
+    },
+    "signature": "void request_delete_all_actors_of_name(s16 name)",
+    "purpose": "Barrido actor queue que ignora retorno individual de delete",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Solo actores ya publicados en actor queue"
+    ],
+    "risks": [
+      "No inspecciona create queue"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-041",
+      "PLAYER-042"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::actor_impl::finish_delete_all_actors_of_name",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line_start": 159,
+      "line_end": 178,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L159-L178"
+    },
+    "signature": "bool finish_delete_all_actors_of_name(s16 name)",
+    "purpose": "Adelanta timer y finaliza delete tags coincidentes",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "forceDelete activo durante barrido"
+    ],
+    "risks": [
+      "Delete del mod no puede diferir por retorno0"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-042"
+    ]
+  },
+  {
+    "symbol": "fpcCtRq_Cancel",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_pc/f_pc_create_req.cpp",
+      "line_start": 61,
+      "line_end": 74,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_create_req.cpp#L61-L74"
+    },
+    "signature": "BOOL fpcCtRq_Cancel(create_request* i_req)",
+    "purpose": "Cancela request y proceso asociado cuando es posible",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "No invocado directamente por unregister"
+    ],
+    "risks": [
+      "Puede retornar FALSE; no barrera universal"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-041",
+      "PLAYER-043"
+    ]
+  },
+  {
+    "symbol": "fpcPf_Get",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_pc/f_pc_profile.cpp",
+      "line_start": 24,
+      "line_end": 40,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_profile.cpp#L24-L40"
+    },
+    "signature": "process_profile_definition DUSK_CONST* fpcPf_Get(s16 i_profname)",
+    "purpose": "Resuelve profile custom y limita fallback vanilla en PC",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "TARGET_PC"
+    ],
+    "risks": [
+      "Nombre dinámico sin generación; no certifica ABI"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-043"
     ]
   }
 ]

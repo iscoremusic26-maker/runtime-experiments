@@ -41,3 +41,5 @@ R-23 — Solicitar colpat no aplica color inmediatamente: gather compartido pued
 R-24 — Retry de sidecar depende de evento futuro y vida de SaveStore; invalidate_save borra dirty sin flush. Menú/toast vanilla no recibe resultado del flushvoid. WORLD-034..037; sin IO personal ni crash reproducido. Corrección índice save_slot_written: API interna,POTENTIAL_REQUIRES_VERIFICATION,contrato observe_saves sigue oficial.
 
 R-25 — BST: alta/baja de registro y mapa activo difieren; frameEnd invoca WSYS y remove_sound_table no marca dirty. Sin lifecycleApplied posterior,edición puede quedar pendiente o retirada seguir publicada. Sonido captura shared_ptr de datos. PRES-052..055; inferencia condicionada,sin audio runtime ni fix de host.
+
+CP-R18 · R-26: unregister OK no prueba create queue vacía; forceDelete transforma Delete=0 en finalización y UNAVAILABLE no revierte borrados. Request-only sin profile sustituto falla al resolverlo; reutilización numérica y perfiles retenidos durante unload son riesgos condicionados (PLAYER-040..045), no crash observado.

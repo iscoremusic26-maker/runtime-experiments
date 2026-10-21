@@ -2,26 +2,40 @@
   {
     "system_id": "actors_ai_npcs",
     "coverage": "CROSSCHECKED",
-    "scope": "Rutas seleccionadas; profundidad original STATIC_CROSSCHECKED_SELECTIVE; no auditoría integral del sistema.",
+    "scope": "Ciclo de vida selectivo: profiles/peticiones/actor queue/delete queue y retiro ActorService CP-R18; IA/NPC muestreados, sin promoción global.",
     "reports": [
       "systems/actors_ai_npcs.md"
     ],
     "files_examined": [
       "include/d/actor/d_a_npc_aru.h",
       "include/d/actor/d_a_npc_shad.h",
+      "include/f_op/f_op_actor_mng.h",
+      "include/f_pc/f_pc_manager.h",
       "sdk/include/mods/svc/actor.h",
+      "src/c/c_dylink.cpp",
       "src/d/actor/d_a_e_tt.cpp",
       "src/d/actor/d_a_npc.cpp",
       "src/d/actor/d_a_npc4.cpp",
       "src/d/actor/d_a_npc_aru.cpp",
       "src/d/actor/d_a_npc_shad.cpp",
       "src/d/d_path.cpp",
+      "src/d/d_stage.cpp",
+      "src/dusk/mods/loader/loader.cpp",
+      "src/dusk/mods/loader/natives.cpp",
       "src/dusk/mods/svc/actor.cpp",
+      "src/dusk/mods/svc/actor.hpp",
+      "src/dusk/mods/svc/internal.hpp",
+      "src/dusk/mods/svc/registry.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_create_req.cpp",
+      "src/f_pc/f_pc_delete_tag.cpp",
       "src/f_pc/f_pc_deletor.cpp",
       "src/f_pc/f_pc_executor.cpp",
-      "src/f_pc/f_pc_manager.cpp"
+      "src/f_pc/f_pc_manager.cpp",
+      "src/f_pc/f_pc_profile.cpp",
+      "src/f_pc/f_pc_stdcreate_req.cpp"
     ],
     "pending": [
       "Más familias AI/NPC",
@@ -31,26 +45,41 @@
     "paths": [
       "include/d/actor/d_a_npc_aru.h",
       "include/d/actor/d_a_npc_shad.h",
+      "include/f_op/f_op_actor_mng.h",
+      "include/f_pc/f_pc_manager.h",
       "sdk/include/mods/svc/actor.h",
+      "src/c/c_dylink.cpp",
       "src/d/actor/d_a_e_tt.cpp",
       "src/d/actor/d_a_npc.cpp",
       "src/d/actor/d_a_npc4.cpp",
       "src/d/actor/d_a_npc_aru.cpp",
       "src/d/actor/d_a_npc_shad.cpp",
       "src/d/d_path.cpp",
+      "src/d/d_stage.cpp",
+      "src/dusk/mods/loader/loader.cpp",
+      "src/dusk/mods/loader/natives.cpp",
       "src/dusk/mods/svc/actor.cpp",
+      "src/dusk/mods/svc/actor.hpp",
+      "src/dusk/mods/svc/internal.hpp",
+      "src/dusk/mods/svc/registry.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_create_req.cpp",
+      "src/f_pc/f_pc_delete_tag.cpp",
       "src/f_pc/f_pc_deletor.cpp",
       "src/f_pc/f_pc_executor.cpp",
-      "src/f_pc/f_pc_manager.cpp"
+      "src/f_pc/f_pc_manager.cpp",
+      "src/f_pc/f_pc_profile.cpp",
+      "src/f_pc/f_pc_stdcreate_req.cpp"
     ],
     "dependencies": [
       "runtime_and_lifecycle",
       "stages_rooms_layers",
       "resources_archives_overlays",
       "movement_physics_collision",
-      "flags_events_progression"
+      "flags_events_progression",
+      "sdk_services"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -62,7 +91,13 @@
       "PLAYER-026",
       "PLAYER-027",
       "ROOT-004",
-      "SDK-001"
+      "SDK-001",
+      "PLAYER-040",
+      "PLAYER-041",
+      "PLAYER-042",
+      "PLAYER-043",
+      "PLAYER-044",
+      "PLAYER-045"
     ]
   },
   {
