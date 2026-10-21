@@ -1,0 +1,2014 @@
+[
+  {
+    "symbol": "ServiceHeader",
+    "kind": "struct",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/api.h",
+      "line_start": 107,
+      "line_end": 111,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L107-L111"
+    },
+    "signature": "struct ServiceHeader { uint32_t struct_size; uint16_t major_version; uint16_t minor_version; }",
+    "purpose": "Prefijo de tablas de servicio y contrato de versión.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Respectar versión y tamaño; SERVICE_HAS para campos posteriores"
+    ],
+    "risks": [
+      "Tabla privada mal formada puede incumplir contrato"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-002"
+    ]
+  },
+  {
+    "symbol": "ModMetaHookMemExt",
+    "kind": "struct",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/api.h",
+      "line_start": 245,
+      "line_end": 254,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L245-L254"
+    },
+    "signature": "struct ModMetaHookMemExt",
+    "purpose": "Registro de materializador de pointer-to-member extendido Microsoft.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-009"
+    ]
+  },
+  {
+    "symbol": "ModRuntimeService",
+    "kind": "struct",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/runtime.h",
+      "line_start": 8,
+      "line_end": 15,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/runtime.h#L8-L15"
+    },
+    "signature": "struct ModRuntimeService",
+    "purpose": "Contrato activate/update/deactivate para runtime delegado.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Proveedor exportado con ABI/tamaño correctos"
+    ],
+    "risks": [
+      "Delegado y proveedor tienen contextos distintos"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-024"
+    ]
+  },
+  {
+    "symbol": "mods::HookImpl<Tag,R,A...>::trampoline",
+    "kind": "method",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/hook.hpp",
+      "line_start": 53,
+      "line_end": 90,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L53-L90"
+    },
+    "signature": "static R trampoline(A... args)",
+    "purpose": "Enmarca pre, llamada original y post usando slots de argumentos locales.",
+    "dependencies": [],
+    "integration": "TYPED_HOOK",
+    "conditions": [
+      "Firma admitida por template y target declarado/resuelto"
+    ],
+    "risks": [
+      "Retener args/retval fuera de llamada",
+      "Cancelación rompe invariantes"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-004"
+    ]
+  },
+  {
+    "symbol": "mods::hook::install<Entry>",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/hook.hpp",
+      "line_start": 169,
+      "line_end": 186,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L169-L186"
+    },
+    "signature": "ModResult install(const HookService* hooks)",
+    "purpose": "Instala trampoline de Entry y obtiene g_orig.",
+    "dependencies": [],
+    "integration": "TYPED_HOOK",
+    "conditions": [
+      "FEATURES game; hook declarado; servicio y resolved_target no NULL"
+    ],
+    "risks": [
+      "Install puede fallar; no prueba que cada call site sea interceptado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-003"
+    ]
+  },
+  {
+    "symbol": "mods::hook::uninstall<Entry>",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/hook.hpp",
+      "line_start": 240,
+      "line_end": 255,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L240-L255"
+    },
+    "signature": "ModResult uninstall(const HookService* hooks)",
+    "purpose": "Retira registro propio usando su slot original y limpia estado local si éxito.",
+    "dependencies": [],
+    "integration": "TYPED_HOOK",
+    "conditions": [
+      "HookService minor con uninstall y target instalado"
+    ],
+    "risks": [
+      "No restaura mutaciones game-side"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-007"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::hook_install",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 394,
+      "line_end": 450,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L394-L450"
+    },
+    "signature": "ModResult hook_install(ModContext* context, void* fnAddr, void* trampolineFn, void** outOriginal)",
+    "purpose": "Valida target declarado y crea o comparte backend/candidato.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-006"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::hook_replace",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 483,
+      "line_end": 515,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L483-L515"
+    },
+    "signature": "ModResult hook_replace(ModContext* context, void* fnAddr, HookReplaceFn callback, const HookOptions* options)",
+    "purpose": "Registra único replace según política conflicto/prioridad/override.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-005"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::hook_uninstall",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 518,
+      "line_end": 574,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L518-L574"
+    },
+    "signature": "ModResult hook_uninstall(ModContext* context, void* fnAddr, void** originalFnSlot)",
+    "purpose": "Retira candidato y callbacks del contexto y eventualmente entrega backend.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-007"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::hook_dispatch_pre",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 576,
+      "line_end": 628,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L576-L628"
+    },
+    "signature": "ModResult hook_dispatch_pre(ModContext*, void* fnAddr, void* args, void* retval, int* outSkipOriginal)",
+    "purpose": "Ejecuta pre ordenados y replace o señala cancelación.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-004"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::hook_dispatch_post",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 630,
+      "line_end": 652,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L630-L652"
+    },
+    "signature": "ModResult hook_dispatch_post(ModContext*, void* fnAddr, void* args, void* retval)",
+    "purpose": "Ejecuta post registrados con captura de excepciones.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-004"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::resolve_member_record",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 772,
+      "line_end": 886,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L772-L886"
+    },
+    "signature": "void* resolve_member_record(const unsigned char* pmf, size_t pmfSize, const char* vtableSymbol, const char* displayName, std::string& why)",
+    "purpose": "Resuelve miembro C++ según ABI, overrider y vtable.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-009"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::hook_remove_mod",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 888,
+      "line_end": 928,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L888-L928"
+    },
+    "signature": "void hook_remove_mod(LoadedMod& mod)",
+    "purpose": "Borra ownership del mod y entrega detours a otros candidatos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-007"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::hook_resolve",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 961,
+      "line_end": 976,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L961-L976"
+    },
+    "signature": "ModResult hook_resolve(ModContext*, const char* symbol, void** outAddr, HookSymbolFlags* outFlags)",
+    "purpose": "Traduce resultados del manifiesto al contrato HookService.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-008"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::hook_resolve_mod_records",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/hook.cpp",
+      "line_start": 993,
+      "line_end": 1047,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L993-L1047"
+    },
+    "signature": "void hook_resolve_mod_records(LoadedMod& mod)",
+    "purpose": "Resuelve metadata y forma conjunto de targets permitido por contexto.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-003"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::manifest::resolve",
+    "kind": "function",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/manifest.cpp",
+      "line_start": 362,
+      "line_end": 395,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/manifest.cpp#L362-L395"
+    },
+    "signature": "ResolveStatus resolve(const char* name, void** outAddr, HookSymbolFlags* outFlags)",
+    "purpose": "Busca hash/nombre en manifiesto y entrega imagenBase+rva o ambigüedad.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-008"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::activate_mod",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line_start": 209,
+      "line_end": 294,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L209-L294"
+    },
+    "signature": "bool ModLoader::activate_mod(LoadedMod& mod)",
+    "purpose": "Resuelve imports/hook metadata y llama init nativo/delegado.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-016"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::deactivate_mod",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line_start": 296,
+      "line_end": 338,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L296-L338"
+    },
+    "signature": "void ModLoader::deactivate_mod(LoadedMod& mod)",
+    "purpose": "Teardown ordenado de shutdown, exports, módulos y nativo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-017"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::tick",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line_start": 1237,
+      "line_end": 1266,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L1237-L1266"
+    },
+    "signature": "void ModLoader::tick()",
+    "purpose": "Punto de aplicación lifecycle y update por tick del juego.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-018"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::shutdown",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line_start": 1268,
+      "line_end": 1283,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L1268-L1283"
+    },
+    "signature": "void ModLoader::shutdown()",
+    "purpose": "Retira mods en orden inverso, imágenes y servicios.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-017"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::reload_bundle",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line_start": 610,
+      "line_end": 664,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L610-L664"
+    },
+    "signature": "bool ModLoader::reload_bundle(LoadedMod& mod)",
+    "purpose": "Relee bundle/manifest y recompone graph si imports/exports cambian.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-020"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::apply_lifecycle_change",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line_start": 706,
+      "line_end": 756,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L706-L756"
+    },
+    "signature": "void ModLoader::apply_lifecycle_change(LoadedMod& target, const bool reload, const PackageCandidate* replacement)",
+    "purpose": "Apaga dependientes, recarga target y reanuda conjunto en orden.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-020"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::load_native",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/natives.cpp",
+      "line_start": 386,
+      "line_end": 530,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L386-L530"
+    },
+    "signature": "void ModLoader::load_native(LoadedMod& mod, const std::string& dllEntry, const std::vector<std::string>& runtimeEntries)",
+    "purpose": "Extrae DLL/runtime por generación y valida exports/metadatos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-013"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::unload_native",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/natives.cpp",
+      "line_start": 563,
+      "line_end": 573,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L563-L573"
+    },
+    "signature": "void ModLoader::unload_native(LoadedMod& mod)",
+    "purpose": "Retira imagen a cola de descarga diferida.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-019"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::ModLoader::drain_retired_natives",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/natives.cpp",
+      "line_start": 575,
+      "line_end": 584,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L575-L584"
+    },
+    "signature": "void ModLoader::drain_retired_natives()",
+    "purpose": "Descarga imágenes retiradas y limpia directorios de generación.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-019"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::loader::sort_mods",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/depgraph.cpp",
+      "line_start": 110,
+      "line_end": 204,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/depgraph.cpp#L110-L204"
+    },
+    "signature": "void sort_mods(std::vector<std::unique_ptr<LoadedMod>>& mods)",
+    "purpose": "Ordena proveedores/importadores y detecta ciclos requeridos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-015"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::fail_mod",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/context.cpp",
+      "line_start": 21,
+      "line_end": 37,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/context.cpp#L21-L37"
+    },
+    "signature": "void fail_mod(LoadedMod& mod, ModResult code, std::string_view message)",
+    "purpose": "Marca error y encola teardown seguro sin descargar en callback.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-019"
+    ]
+  },
+  {
+    "symbol": "fapGm_Execute",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_ap/f_ap_game.cpp",
+      "line_start": 811,
+      "line_end": 844,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L811-L844"
+    },
+    "signature": "void fapGm_Execute()",
+    "purpose": "En PC ejecuta tick de mods antes del management de procesos y gamemode tick después.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Fuente exacta; disponibilidad binaria Windows y runtime no probadas"
+    ],
+    "risks": [
+      "Lifetime de imagen/contexto",
+      "No retener punteros tras detach"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-018"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::actor_impl::actor_remove_mod",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/actor.cpp",
+      "line_start": 359,
+      "line_end": 373,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L359-L373"
+    },
+    "signature": "void actor_remove_mod(LoadedMod& mod)",
+    "purpose": "Intenta unregister de cada perfil propio y registra fallos sin propagarlos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Mecanismo interno, no contrato mod-linkable",
+      "Disponibilidad binaria no verificada"
+    ],
+    "risks": [
+      "Cleanup parcial",
+      "Lifetime de callbacks y dependencia externa"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-029"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::gfx_mod_deactivating",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/gfx.cpp",
+      "line_start": 176,
+      "line_end": 187,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L176-L187"
+    },
+    "signature": "void gfx_mod_deactivating(LoadedMod& mod)",
+    "purpose": "Retira tipos gráficos del mod y sincroniza worker antes de shutdown.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Mecanismo interno, no contrato mod-linkable",
+      "Disponibilidad binaria no verificada"
+    ],
+    "risks": [
+      "Cleanup parcial",
+      "Lifetime de callbacks y dependencia externa"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "HOOK-030"
+    ]
+  },
+  {
+    "symbol": "ActorService",
+    "kind": "service",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/actor.h",
+      "line_start": 74,
+      "line_end": 91,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/actor.h#L74-L91"
+    },
+    "signature": "typedef struct ActorService ActorService;",
+    "purpose": "Perfiles propios y creación de actores; register_actor exige tamaño >= fopAc_ac_c y cinco callbacks; asigna ProfileName desde fpcNm_MAX_NUM. unregister_actor fuerza solicitudes de borrado y devuelve MOD_UNAVAILABLE si quedan instancias.",
+    "dependencies": [
+      "fopAcM_create",
+      "fopAcM_createChild",
+      "fopAcM_delete",
+      "dStage_searchName",
+      "fopAc_ac_c"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.actor major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Las funciones de spawn no validan params antes de desreferenciarlo. MOD_OK no certifica que create_function haya terminado. El ID no equivale a puntero vigente."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-001"
+    ]
+  },
+  {
+    "symbol": "AudioResService",
+    "kind": "service",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/audio_res.h",
+      "line_start": 272,
+      "line_end": 432,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/audio_res.h#L272-L432"
+    },
+    "signature": "typedef struct AudioResService AudioResService;",
+    "purpose": "Añade/reemplaza waves y entradas de tabla de efectos/streams; los datos se cargan desde el bundle y los registros pertenecen al mod. Los mapas activos se sincronizan al cambiar lifecycle y al final del frame.",
+    "dependencies": [
+      "wsys::insert_replace_wave",
+      "bst::replace_sound_table_effect",
+      "LoadedMod"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.audio_res major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "No es un API genérico para emitir audio posicional. Banco, efecto y stream son identidades distintas; comprobar formato y bucles. No se validó reproducción."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-002"
+    ]
+  },
+  {
+    "symbol": "CameraService",
+    "kind": "service",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/camera.h",
+      "line_start": 80,
+      "line_end": 100,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/camera.h#L80-L100"
+    },
+    "signature": "typedef struct CameraService CameraService;",
+    "purpose": "get_camera construye snapshot de una view_class perspectiva; convierte a matrices column-major y clip WebGPU según reversed-Z. Operadores ordenados por prioridad descendente y secuencia ascendente: gana el primero que devuelve true.",
+    "dependencies": [
+      "view_class",
+      "dCamera_c",
+      "aurora::gfx::uses_reversed_z"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.camera major 1 minor >= 1",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "El puntero view requiere vigencia; no basta no ser NULL. OperatorState es temporal. Sólo hilo del juego; retirar operador al abandonar su contexto."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-003"
+    ]
+  },
+  {
+    "symbol": "ConfigService",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/config.h",
+      "line_start": 70,
+      "line_end": 101,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/config.h#L70-L101"
+    },
+    "signature": "typedef struct ConfigService ConfigService;",
+    "purpose": "Variables tipadas bajo mod.<ID escapado>.<nombre>; registro restaura valor guardado sin notificar. Suscripciones sólo del propietario. Escrituras marcan dirty y frameEnd guarda con debounce de dos segundos; shutdown fuerza flush.",
+    "dependencies": [
+      "config::Register",
+      "config::subscribe",
+      "config::save"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.config major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "No usar para datos por slot. unregister elimina callbacks/registro y conserva valor persistido para posterior registro. Snapshots de string sólo durante callback."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-004"
+    ]
+  },
+  {
+    "symbol": "FileService",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/file.h",
+      "line_start": 73,
+      "line_end": 116,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L73-L116"
+    },
+    "signature": "typedef struct FileService FileService;",
+    "purpose": "Acceso a localizaciones del sistema, streams, buffers, selector y exportación. Streams y buffers tienen ownership por mod; un selector global pendiente puede producir MOD_CONFLICT; detach anula callback pendiente y libera recursos.",
+    "dependencies": [
+      "borealis::io::open",
+      "borealis::file_select::capabilities",
+      "SlotMap"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.file major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Servicio se publica sólo si el backend permite algún selector. Ruta/localización no siempre es filesystem nativo; join/create_child devuelven almacenamiento interno reutilizado. No garantiza atomicidad al escribir."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-005"
+    ]
+  },
+  {
+    "symbol": "FlowService",
+    "kind": "service",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/flow.h",
+      "line_start": 156,
+      "line_end": 180,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/flow.h#L156-L180"
+    },
+    "signature": "typedef struct FlowService FlowService;",
+    "purpose": "Construcción diferida de grafos: begin, IDs/nodos/edges, patches y commit. commit rechaza nodos sin completar y destinos/consultas de otro propietario, y activa patches juntos. remove_graph retira sus patches.",
+    "dependencies": [
+      "flow::GraphRecord",
+      "flow::validate_node_owner",
+      "flow::valid_target_owner"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.flow major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Pools finitos devuelven MOD_UNAVAILABLE al agotarse. No se admite seguir rellenando después de commit. No confundir Flow con el event manager de escenas completo."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-006"
+    ]
+  },
+  {
+    "symbol": "GameService",
+    "kind": "service",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/game.h",
+      "line_start": 22,
+      "line_end": 24,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h#L22-L24"
+    },
+    "signature": "typedef struct GameService GameService;",
+    "purpose": "Marcador sin operaciones: GameService sólo contiene ServiceHeader. El SDK lo importa para FEATURES game y usa major 2 como época ABI de las estructuras del juego.",
+    "dependencies": [
+      "ServiceHeader"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.game major 2 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Tener este import no demuestra offsets, vtables o firma de un hook concreto. No proporciona get_player ni controles del loop."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-007"
+    ]
+  },
+  {
+    "symbol": "GameModeService",
+    "kind": "service",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/game_mode.h",
+      "line_start": 42,
+      "line_end": 47,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game_mode.h#L42-L47"
+    },
+    "signature": "typedef struct GameModeService GameModeService;",
+    "purpose": "Registra modo con callbacks de activación, play, partida, selección y tick. El ID efectivo concatena id local + _ + mod ID y pasa a minúsculas; save_name se valida y puede aislar archivo de partida.",
+    "dependencies": [
+      "gamemode::getGameModeManager",
+      "fail_mod",
+      "LoadedMod"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.gamemode major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Callbacks que fallan o lanzan excepción deshabilitan mod. Estado de selección vive hasta completar selección. unregister/is_active presuponen contexto/punteros válidos."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-008"
+    ]
+  },
+  {
+    "symbol": "GfxService",
+    "kind": "service",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/gfx.h",
+      "line_start": 294,
+      "line_end": 349,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/gfx.h#L294-L349"
+    },
+    "signature": "typedef struct GfxService GfxService;",
+    "purpose": "Registra tipos draw/compute, hooks de etapa, buffers por frame, passes y presentación externa mediante handles WGPU. push_draw devuelve MOD_UNAVAILABLE si Aurora no acepta el comando. Detach retira registros y libera referencias gráficas a ventanas.",
+    "dependencies": [
+      "aurora::gfx::push_custom_draw",
+      "wgpuGetProcAddress",
+      "window_release_for_graphics"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.gfx major 1 minor >= 4",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Callbacks draw/compute son del worker de render: sólo handles de contexto y wgpu, ningún otro servicio. Handles del host prestados; objetos GPU creados por mod requieren release propio; validar layout por frame."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-009"
+    ]
+  },
+  {
+    "symbol": "HookService",
+    "kind": "service",
+    "system_id": "hooking_abi",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/hook.h",
+      "line_start": 73,
+      "line_end": 138,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.h#L73-L138"
+    },
+    "signature": "typedef struct HookService HookService;",
+    "purpose": "Tabla oficial para install, pre, post, replace, dispatch, resolve y uninstall; registros se retiran en detach. Contrato requiere trampoline de firma exacta; resolve diferencia no disponible, manifest incompatible y nombre ambiguo.",
+    "dependencies": [
+      "ServiceModule",
+      "LoadedMod"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.hook major 1 minor >= 1",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Servicio presente no certifica un símbolo hookeable. La convivencia, desinstalación y ABI se estudian en HOOKING_AND_ABI.md."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-010"
+    ]
+  },
+  {
+    "symbol": "HostService",
+    "kind": "service",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/host.h",
+      "line_start": 39,
+      "line_end": 117,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/host.h#L39-L117"
+    },
+    "signature": "typedef struct HostService HostService;",
+    "purpose": "Obtiene servicios por ID/major/minor, publica export declarado deferred y comunica fallos; expone identidad y directorios. data_dir crea <ConfigPath>/mod_data/<mod-id>; mod_dir/native_dir son rutas del mod cargado.",
+    "dependencies": [
+      "find_service",
+      "publish_deferred_service",
+      "SlotMap",
+      "ConfigPath"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.host major 2 minor >= 2",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "get_service no crea dependencia estática. Punteros a servicios de otro mod requieren observar detach; las watches propias se eliminan antes de notificar a otros. data_dir puede fallar."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-011"
+    ]
+  },
+  {
+    "symbol": "HttpService",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/http.h",
+      "line_start": 87,
+      "line_end": 96,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/http.h#L87-L96"
+    },
+    "signature": "typedef struct HttpService HttpService;",
+    "purpose": "Peticiones HTTPS asíncronas GET/POST/HEAD; exige import HTTP declarado; máximo 16 pendientes por mod, cuerpos y cabeceras limitados. Callback se entrega en frameBegin y resultado sólo vive durante la llamada.",
+    "dependencies": [
+      "borealis::http::start",
+      "borealis::http::available",
+      "declares_import"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.http major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "get_service dinámico sin import no basta: MOD_UNSUPPORTED. Backend puede no publicar servicio. Cancel solicita cancelación; callback aún puede llegar si mod sigue activo; deactivating retira tareas."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-012"
+    ]
+  },
+  {
+    "symbol": "InterpService",
+    "kind": "service",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/interp.h",
+      "line_start": 22,
+      "line_end": 82,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.h#L22-L82"
+    },
+    "signature": "typedef struct InterpService InterpService;",
+    "purpose": "Registra matriz final con key estable, consulta reemplazo e invalida matriz. Servicio guarda conjunto de keys por mod y las olvida en detach; forget inexistente devuelve MOD_OK.",
+    "dependencies": [
+      "interp::record_final_mtx",
+      "interp::forget_mtx",
+      "interp::lookup_replacement"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.interp major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "No es sistema de animación; key/punteros deben mantener identidad y vigencia del objeto entre ticks. Liberar actor requiere olvidar sus keys antes de reutilizar dirección."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-013"
+    ]
+  },
+  {
+    "symbol": "ItemService",
+    "kind": "service",
+    "system_id": "inventory_equipment",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/item.h",
+      "line_start": 71,
+      "line_end": 109,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L71-L109"
+    },
+    "signature": "typedef struct ItemService ItemService;",
+    "purpose": "Overrides y resolvers de checks; preview no concede ítem. give_item valida flags y encola concesión FIFO; frameEnd procesa y espera condiciones de gameplay; al cambiar save slot se limpia cola.",
+    "dependencies": [
+      "item_give_enqueue",
+      "item_check_resolve",
+      "item_gives_tick"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.item major 2 minor >= 3",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "MOD_OK de give_item sólo confirma encolado. Resolvers sin efectos secundarios por previews repetidas. pending grants/observadores se retiran al detach."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-014"
+    ]
+  },
+  {
+    "symbol": "LogService",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/log.h",
+      "line_start": 26,
+      "line_end": 41,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/log.h#L26-L41"
+    },
+    "signature": "typedef struct LogService LogService;",
+    "purpose": "write y accesos trace/debug/info/warn/error emiten por log::Source::Mod con ID tomado del contexto; mensaje NULL se convierte a cadena vacía.",
+    "dependencies": [
+      "log::emit",
+      "mod_id_from_context"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.log major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Sin retorno de persistencia; logging no prueba que la operación del juego ocurriera. No registrar secretos ni bytes de assets."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-015"
+    ]
+  },
+  {
+    "symbol": "MessageService",
+    "kind": "service",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/message.h",
+      "line_start": 110,
+      "line_end": 123,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/message.h#L110-L123"
+    },
+    "signature": "typedef struct MessageService MessageService;",
+    "purpose": "Override fijo o callback por grupo/message/language y mensajes nuevos con variantes; copia texto validado. register_message valida campos reservados de INF1 y lenguajes sin duplicar; pool finito.",
+    "dependencies": [
+      "flow::valid_encoded_text",
+      "flow::MessageRecord",
+      "flow::OverrideRecord"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.message major 1 minor >= 1",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Texto codificado del juego, no texto arbitrario UTF-8 por existencia del API. Quitar override/message sólo propio. Limpieza compartida con FlowService en detach."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-016"
+    ]
+  },
+  {
+    "symbol": "NetService",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/net.h",
+      "line_start": 119,
+      "line_end": 143,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/net.h#L119-L143"
+    },
+    "signature": "typedef struct NetService NetService;",
+    "purpose": "TCP/UDP y resolución asíncrona mediante eventos poll. connect exige import NET declarado y backend; conecta por hostname o literal, mientras listen/datagram requieren bind literal. close solicita cierre; detach borra estado de sockets.",
+    "dependencies": [
+      "borealis::net::available",
+      "borealis::net::parse_endpoint",
+      "declares_import"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.net major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "No asume mensajes delimitados en TCP. Datos de evento prestados hasta siguiente poll/deactivate; handles CLOSED/RESOLVED caducan al devolver evento. Límites de cola y transporte."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-017"
+    ]
+  },
+  {
+    "symbol": "OverlayService",
+    "kind": "service",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/overlay.h",
+      "line_start": 31,
+      "line_end": 51,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/overlay.h#L31-L51"
+    },
+    "signature": "typedef struct OverlayService OverlayService;",
+    "purpose": "Overlay de ruta de disco desde archivo del bundle o buffer copiado; resolución case-insensitive, runtime gana sobre estático de su mod y mod posterior gana. sync actualiza tabla de DVD y avisa a JKRArchive.",
+    "dependencies": [
+      "aurora_dvd_overlay_files",
+      "JKRArchive::notifyOverlayFilesChanged",
+      "ModBundle"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.overlay major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Aplicación en frame boundary; bytes ya leídos no se revierten automáticamente. Abiertos conservan shared bundle/buffer durante reload. Al quitar, requerir nueva lectura/recarga cuando proceda."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-018"
+    ]
+  },
+  {
+    "symbol": "ResourceService",
+    "kind": "service",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/resource.h",
+      "line_start": 31,
+      "line_end": 50,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/resource.h#L31-L50"
+    },
+    "signature": "typedef struct ResourceService ResourceService;",
+    "purpose": "Lectura de res/ del propio bundle con path seguro; copia en malloc y rastrea ownership. free sólo libera buffer vivo del mod; detach reclama pendientes. Archivo vacío devuelve data NULL, size 0, MOD_OK.",
+    "dependencies": [
+      "ModBundle",
+      "utils::is_safe_resource_path"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.resource major 1 minor >= 1",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Reutilizar out_buffer sin free pierde referencia anterior. file_exists/directory_exists tienen rama de error que retorna entero no cero desde bool: validar argumentos antes y no usar como guardia de seguridad."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-019"
+    ]
+  },
+  {
+    "symbol": "SaveService",
+    "kind": "service",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/save.h",
+      "line_start": 33,
+      "line_end": 62,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L33-L62"
+    },
+    "signature": "typedef struct SaveService SaveService;",
+    "purpose": "Blobs por ID de mod, archivo CARD activo y slot; límite combinado 65536 bytes por mod/slot. set_blob copia a memoria y marca dirty; get admite consulta de tamaño; peek consulta otro slot activo del mismo archivo.",
+    "dependencies": [
+      "save_manager::resolve_storage",
+      "mDoMemCd_GetFileName",
+      "borealis::io::atomic_replace"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.save major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "No es un editor del save vanilla ni save síncrono. onWritten precede flush de sidecars; error de sidecar conserva dirty para futuro intento. Retirar mod elimina observadores, no blobs persistidos."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-020"
+    ]
+  },
+  {
+    "symbol": "StageService",
+    "kind": "service",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/stage.h",
+      "line_start": 20,
+      "line_end": 40,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h#L20-L40"
+    },
+    "signature": "typedef struct StageService StageService;",
+    "purpose": "Edita registros actor al parsear DZS/DZR: patch/delete identifican CRC original; add copia registro. Sólo tamaños 0x20/0x23, nombre stage <=8; room 0xff/layer -1 wildcard salvo add exige room concreto. Conflicto gana mod posterior y luego secuencia.",
+    "dependencies": [
+      "dComIfGp_getStartStageName",
+      "dComIfG_play_c::getLayerNo",
+      "utils::crc32"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.stage major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "No modifica KCL/geometría ni actores vivos retroactivamente. Remover handle retira edición futura; actor ya creado exige política de lifecycle propia. Comprobar semántica layer -1 del dato real."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-021"
+    ]
+  },
+  {
+    "symbol": "TextureService",
+    "kind": "service",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/texture.h",
+      "line_start": 63,
+      "line_end": 82,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/texture.h#L63-L82"
+    },
+    "signature": "typedef struct TextureService TextureService;",
+    "purpose": "Reemplazo por puntero de texel GX o hash de contenido+TLUT/tamaño/formato. register_data copia bytes; register_file valida nombre estilo tex1 y archivo bundle antes de registrar; prioridad por mod.",
+    "dependencies": [
+      "aurora::texture::ReplacementKey",
+      "aurora::texture::unregister_replacement"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.texture major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Un puntero de textura sólo identifica esa asignación viva; no volverlo identidad persistente. Decodificación de archivo es lazy; registro no prueba aspecto correcto en DX12."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-022"
+    ]
+  },
+  {
+    "symbol": "UiService",
+    "kind": "service",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/ui.h",
+      "line_start": 354,
+      "line_end": 456,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/ui.h#L354-L456"
+    },
+    "signature": "typedef struct UiService UiService;",
+    "purpose": "UI de documentos del host: panel de mod, controles, ventanas, diálogos, tabs, listas, estilos y context menus. Handles por propietario. Detach fuerza hide, elimina estilos y restaura documento cubierto.",
+    "dependencies": [
+      "ui::ModWindow",
+      "ui::unregister_scoped_styles",
+      "ui::uncover_top_document"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.ui major 2 minor >= 3",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "No sustituye automáticamente HUD J2D del juego. Compatibilidad Ui v1.5 existe junto v2.3, pero v1 dialog_add_action retorna MOD_UNSUPPORTED; no asumir paridad total por registro."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-023"
+    ]
+  },
+  {
+    "symbol": "WebSocketService",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/websocket.h",
+      "line_start": 91,
+      "line_end": 104,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/websocket.h#L91-L104"
+    },
+    "signature": "typedef struct WebSocketService WebSocketService;",
+    "purpose": "Conexión y polling de WebSocket; permite wss y ws sólo localhost/127.0.0.1/::1. connect exige import declarado. send requiere que el evento OPEN ya se haya publicado; CLOSED borra handle.",
+    "dependencies": [
+      "borealis::ws::available",
+      "borealis::url::parse",
+      "declares_import"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.websocket major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Backend opcional, colas/límites y datos temporales. No usar handle después de CLOSED; deactivating retira conexiones y snapshots de poll."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-024"
+    ]
+  },
+  {
+    "symbol": "WindowService",
+    "kind": "service",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/window.h",
+      "line_start": 90,
+      "line_end": 100,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/window.h#L90-L100"
+    },
+    "signature": "typedef struct WindowService WindowService;",
+    "purpose": "Crea ventanas SDL3 externas con flags y tamaño, devuelve información lógica/píxeles/escalado; gestiona referencias gráficas. destroy_window devuelve MOD_CONFLICT si hay present target reteniendo ventana.",
+    "dependencies": [
+      "SDL_CreateWindowWithProperties",
+      "SDL_DestroyWindow",
+      "SlotMap"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ID dev.twilitrealm.dusklight.window major 1 minor >= 0",
+      "Contexto del propietario válido; respetar struct_size y lifetime."
+    ],
+    "risks": [
+      "Retirar target gráfico antes de ventana. Detach elimina ventanas del mod; no confundir WindowService nativo con ventana documental UiService."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-025"
+    ]
+  },
+  {
+    "symbol": "ActorService::create_actor",
+    "kind": "method",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/actor.h",
+      "line_start": 81,
+      "line_end": 82,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/actor.h#L81-L82"
+    },
+    "signature": "ModResult (*create_actor)( ModContext* ctx, ProfileName name, const ActorSpawnParams* params, ActorId* outId);",
+    "purpose": "Ranura oficial create_actor; Perfiles propios y creación de actores; register_actor exige tamaño >= fopAc_ac_c y cinco callbacks; asigna ProfileName desde fpcNm_MAX_NUM. unregister_actor fuerza solicitudes de borrado y devuelve MOD_UNAVAILABLE si quedan instancias. Límite: Las funciones de spawn no validan params antes de desreferenciarlo. MOD_OK no certifica que create_function haya terminado. El ID no equivale a puntero vigente.",
+    "dependencies": [
+      "ActorService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-001"
+    ]
+  },
+  {
+    "symbol": "ActorService::unregister_actor",
+    "kind": "method",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/actor.h",
+      "line_start": 78,
+      "line_end": 78,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/actor.h#L78-L78"
+    },
+    "signature": "ModResult (*unregister_actor)(ModContext* ctx, ActorHandle handle);",
+    "purpose": "Ranura oficial unregister_actor; Perfiles propios y creación de actores; register_actor exige tamaño >= fopAc_ac_c y cinco callbacks; asigna ProfileName desde fpcNm_MAX_NUM. unregister_actor fuerza solicitudes de borrado y devuelve MOD_UNAVAILABLE si quedan instancias. Límite: Las funciones de spawn no validan params antes de desreferenciarlo. MOD_OK no certifica que create_function haya terminado. El ID no equivale a puntero vigente.",
+    "dependencies": [
+      "ActorService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-001"
+    ]
+  },
+  {
+    "symbol": "StageService::add_actor",
+    "kind": "method",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/stage.h",
+      "line_start": 36,
+      "line_end": 37,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h#L36-L37"
+    },
+    "signature": "ModResult (*add_actor)(ModContext* ctx, const char* stage, uint8_t room, int8_t layer, const void* record, size_t record_size, StageActorHandle* out_handle);",
+    "purpose": "Ranura oficial add_actor; Edita registros actor al parsear DZS/DZR: patch/delete identifican CRC original; add copia registro. Sólo tamaños 0x20/0x23, nombre stage <=8; room 0xff/layer -1 wildcard salvo add exige room concreto. Conflicto gana mod posterior y luego secuencia. Límite: No modifica KCL/geometría ni actores vivos retroactivamente. Remover handle retira edición futura; actor ya creado exige política de lifecycle propia. Comprobar semántica layer -1 del dato real.",
+    "dependencies": [
+      "StageService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-021"
+    ]
+  },
+  {
+    "symbol": "StageService::patch_actor",
+    "kind": "method",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/stage.h",
+      "line_start": 30,
+      "line_end": 31,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h#L30-L31"
+    },
+    "signature": "ModResult (*patch_actor)(ModContext* ctx, const char* stage, uint8_t room, int8_t layer, uint32_t record_crc, const void* record, size_t record_size, StageActorHandle* out_handle);",
+    "purpose": "Ranura oficial patch_actor; Edita registros actor al parsear DZS/DZR: patch/delete identifican CRC original; add copia registro. Sólo tamaños 0x20/0x23, nombre stage <=8; room 0xff/layer -1 wildcard salvo add exige room concreto. Conflicto gana mod posterior y luego secuencia. Límite: No modifica KCL/geometría ni actores vivos retroactivamente. Remover handle retira edición futura; actor ya creado exige política de lifecycle propia. Comprobar semántica layer -1 del dato real.",
+    "dependencies": [
+      "StageService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-021"
+    ]
+  },
+  {
+    "symbol": "StageService::remove_actor_edit",
+    "kind": "method",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/stage.h",
+      "line_start": 39,
+      "line_end": 39,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h#L39-L39"
+    },
+    "signature": "ModResult (*remove_actor_edit)(ModContext* ctx, StageActorHandle handle);",
+    "purpose": "Ranura oficial remove_actor_edit; Edita registros actor al parsear DZS/DZR: patch/delete identifican CRC original; add copia registro. Sólo tamaños 0x20/0x23, nombre stage <=8; room 0xff/layer -1 wildcard salvo add exige room concreto. Conflicto gana mod posterior y luego secuencia. Límite: No modifica KCL/geometría ni actores vivos retroactivamente. Remover handle retira edición futura; actor ya creado exige política de lifecycle propia. Comprobar semántica layer -1 del dato real.",
+    "dependencies": [
+      "StageService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-021"
+    ]
+  },
+  {
+    "symbol": "SaveService::set_blob",
+    "kind": "method",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/save.h",
+      "line_start": 37,
+      "line_end": 37,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L37-L37"
+    },
+    "signature": "ModResult (*set_blob)(ModContext* ctx, const char* name, const void* data, size_t size);",
+    "purpose": "Ranura oficial set_blob; Blobs por ID de mod, archivo CARD activo y slot; límite combinado 65536 bytes por mod/slot. set_blob copia a memoria y marca dirty; get admite consulta de tamaño; peek consulta otro slot activo del mismo archivo. Límite: No es un editor del save vanilla ni save síncrono. onWritten precede flush de sidecars; error de sidecar conserva dirty para futuro intento. Retirar mod elimina observadores, no blobs persistidos.",
+    "dependencies": [
+      "SaveService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-020"
+    ]
+  },
+  {
+    "symbol": "SaveService::observe_saves",
+    "kind": "method",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/save.h",
+      "line_start": 53,
+      "line_end": 54,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L53-L54"
+    },
+    "signature": "ModResult (*observe_saves)(ModContext* ctx, SaveEventFn on_new_save, SaveEventFn on_save_loaded, SaveEventFn on_save_written, void* user_data, SaveObserverHandle* out_handle);",
+    "purpose": "Ranura oficial observe_saves; Blobs por ID de mod, archivo CARD activo y slot; límite combinado 65536 bytes por mod/slot. set_blob copia a memoria y marca dirty; get admite consulta de tamaño; peek consulta otro slot activo del mismo archivo. Límite: No es un editor del save vanilla ni save síncrono. onWritten precede flush de sidecars; error de sidecar conserva dirty para futuro intento. Retirar mod elimina observadores, no blobs persistidos.",
+    "dependencies": [
+      "SaveService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-020"
+    ]
+  },
+  {
+    "symbol": "SaveService::peek_blob",
+    "kind": "method",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/save.h",
+      "line_start": 59,
+      "line_end": 60,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L59-L60"
+    },
+    "signature": "ModResult (*peek_blob)( ModContext* ctx, uint32_t slot, const char* name, void* buf, size_t* inout_size);",
+    "purpose": "Ranura oficial peek_blob; Blobs por ID de mod, archivo CARD activo y slot; límite combinado 65536 bytes por mod/slot. set_blob copia a memoria y marca dirty; get admite consulta de tamaño; peek consulta otro slot activo del mismo archivo. Límite: No es un editor del save vanilla ni save síncrono. onWritten precede flush de sidecars; error de sidecar conserva dirty para futuro intento. Retirar mod elimina observadores, no blobs persistidos.",
+    "dependencies": [
+      "SaveService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-020"
+    ]
+  },
+  {
+    "symbol": "ResourceService::load",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/resource.h",
+      "line_start": 40,
+      "line_end": 40,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/resource.h#L40-L40"
+    },
+    "signature": "ModResult (*load)(ModContext* ctx, const char* relative_path, ResourceBuffer* out_buffer);",
+    "purpose": "Ranura oficial load; Lectura de res/ del propio bundle con path seguro; copia en malloc y rastrea ownership. free sólo libera buffer vivo del mod; detach reclama pendientes. Archivo vacío devuelve data NULL, size 0, MOD_OK. Límite: Reutilizar out_buffer sin free pierde referencia anterior. file_exists/directory_exists tienen rama de error que retorna entero no cero desde bool: validar argumentos antes y no usar como guardia de seguridad.",
+    "dependencies": [
+      "ResourceService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-019"
+    ]
+  },
+  {
+    "symbol": "ResourceService::file_exists",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/resource.h",
+      "line_start": 48,
+      "line_end": 48,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/resource.h#L48-L48"
+    },
+    "signature": "bool (*file_exists)(ModContext* ctx, char const* relative_path);",
+    "purpose": "Ranura oficial file_exists; Lectura de res/ del propio bundle con path seguro; copia en malloc y rastrea ownership. free sólo libera buffer vivo del mod; detach reclama pendientes. Archivo vacío devuelve data NULL, size 0, MOD_OK. Límite: Reutilizar out_buffer sin free pierde referencia anterior. file_exists/directory_exists tienen rama de error que retorna entero no cero desde bool: validar argumentos antes y no usar como guardia de seguridad.",
+    "dependencies": [
+      "ResourceService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-019"
+    ]
+  },
+  {
+    "symbol": "HostService::watch_mod_lifecycle",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/host.h",
+      "line_start": 95,
+      "line_end": 96,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/host.h#L95-L96"
+    },
+    "signature": "ModResult (*watch_mod_lifecycle)( ModContext* ctx, ModLifecycleFn fn, void* user_data, uint64_t* out_handle);",
+    "purpose": "Ranura oficial watch_mod_lifecycle; Obtiene servicios por ID/major/minor, publica export declarado deferred y comunica fallos; expone identidad y directorios. data_dir crea <ConfigPath>/mod_data/<mod-id>; mod_dir/native_dir son rutas del mod cargado. Límite: get_service no crea dependencia estática. Punteros a servicios de otro mod requieren observar detach; las watches propias se eliminan antes de notificar a otros. data_dir puede fallar.",
+    "dependencies": [
+      "HostService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-011"
+    ]
+  },
+  {
+    "symbol": "GameModeService::register_game_mode",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/game_mode.h",
+      "line_start": 44,
+      "line_end": 44,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game_mode.h#L44-L44"
+    },
+    "signature": "ModResult (*register_game_mode)(ModContext* ctx, const GameModeDesc* desc);",
+    "purpose": "Ranura oficial register_game_mode; Registra modo con callbacks de activación, play, partida, selección y tick. El ID efectivo concatena id local + _ + mod ID y pasa a minúsculas; save_name se valida y puede aislar archivo de partida. Límite: Callbacks que fallan o lanzan excepción deshabilitan mod. Estado de selección vive hasta completar selección. unregister/is_active presuponen contexto/punteros válidos.",
+    "dependencies": [
+      "GameModeService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-008"
+    ]
+  },
+  {
+    "symbol": "ItemService::give_item",
+    "kind": "method",
+    "system_id": "inventory_equipment",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/item.h",
+      "line_start": 94,
+      "line_end": 95,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L94-L95"
+    },
+    "signature": "ModResult (*give_item)( ModContext* ctx, const char* check_name, uint8_t item_no, uint32_t flags);",
+    "purpose": "Ranura oficial give_item; Overrides y resolvers de checks; preview no concede ítem. give_item valida flags y encola concesión FIFO; frameEnd procesa y espera condiciones de gameplay; al cambiar save slot se limpia cola. Límite: MOD_OK de give_item sólo confirma encolado. Resolvers sin efectos secundarios por previews repetidas. pending grants/observadores se retiran al detach.",
+    "dependencies": [
+      "ItemService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+    ],
+    "risks": [
+      "No es un export C++ verificado del ejecutable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-014"
+    ]
+  }
+]

@@ -1,0 +1,145 @@
+[
+  {
+    "system_id": "actors_ai_npcs",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "audio_particles_effects",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "cameras_rendering",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "cutscenes_dialogue",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "hooking_abi",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "HOOKING_AND_ABI.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "hud_ui_text",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "inventory_equipment",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "models_animations_materials",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "resources_archives_overlays",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "runtime_and_lifecycle",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "systems/runtime_and_lifecycle.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "save_load",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "sdk_services",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  },
+  {
+    "system_id": "stages_rooms_layers",
+    "coverage": "CROSSCHECKED",
+    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "reports": [
+      "SDK_AND_SERVICES.md"
+    ],
+    "pending": [
+      "Disponibilidad binaria Windows y runtime no comprobados."
+    ]
+  }
+]

@@ -1,0 +1,2405 @@
+{
+  "schema_version": 1,
+  "checkpoint": "CP-R01",
+  "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "evidence": [
+    {
+      "id": "HOOK-001",
+      "claim": "La ABI nativa exige ModResult de cuatro bytes, ServiceHeader versionado y registros modmeta alineados a ocho bytes; el parser exige exactamente un header y ABI_VERSION coincidente.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 49,
+          "line_end": 59,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L49-L59"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 107,
+          "line_end": 118,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L107-L118"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 130,
+          "line_end": 146,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L130-L146"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "line_start": 175,
+          "line_end": 229,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L175-L229"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "line_start": 325,
+          "line_end": 339,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L325-L339"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-002",
+      "claim": "El registro empareja id y major, exige minor suficiente, rechaza duplicados; SERVICE_HAS mide el final del campo y debe acompañarse de NULL para campos posteriores al minor importado. No valida todas las funciones de una tabla privada.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 76,
+          "line_end": 118,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L76-L118"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 31,
+          "line_end": 49,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L31-L49"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 81,
+          "line_end": 108,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L81-L108"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 145,
+          "line_end": 160,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L145-L160"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 362,
+          "line_end": 392,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L362-L392"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-003",
+      "claim": "DEFINE_HOOK emite metadatos tipados; DEFINE_HOOK_SYMBOL exige firma manual y todos los targets se resuelven/declararan antes de inicializar. Instalar target no declarado devuelve INVALID_ARGUMENT.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.hpp",
+          "line_start": 100,
+          "line_end": 169,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L100-L169"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 228,
+          "line_end": 236,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L228-L236"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 98,
+          "line_end": 115,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L98-L115"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 993,
+          "line_end": 1046,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L993-L1046"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-004",
+      "claim": "HookImpl genera un trampoline C++ con this explícito, argumentos direccionables y retorno inicializado con `R{}`; pre puede cancelar original y reemplazo, post se ejecuta tras cualquiera de esos caminos.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.hpp",
+          "line_start": 15,
+          "line_end": 90,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L15-L90"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 576,
+          "line_end": 651,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L576-L651"
+        }
+      ],
+      "limitations": [
+        "No demuestra compatibilidad para cualquier firma C++ ni para estructuras retornadas arbitrarias."
+      ]
+    },
+    {
+      "id": "HOOK-005",
+      "claim": "Prioridad descendente y orden de registro gobiernan pre y post; replace tiene un único slot y takeover lo sobrescribe. No existe pila de reemplazos previos que restaure el slot al retirar al ganador.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 138,
+          "line_end": 153,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L138-L153"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 453,
+          "line_end": 515,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L453-L515"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 888,
+          "line_end": 898,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L888-L898"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-006",
+      "claim": "El primer install crea backend y candidatos posteriores comparten original; funchook parchea entrada, y se advierte que llamadas inline no quedan cubiertas.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 244,
+          "line_end": 298,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L244-L298"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 394,
+          "line_end": 450,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L394-L450"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-007",
+      "claim": "uninstall exige ModContext y el originalFnSlot exacto, borra callbacks del mod para ese target y entrega backend al candidato superviviente o lo retira. Fallo de uninstall/handoff puede dejar operación fallida y detach fatal protege contra DLL con detour vivo.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 300,
+          "line_end": 391,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L300-L391"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 518,
+          "line_end": 574,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L518-L574"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 888,
+          "line_end": 927,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L888-L927"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-008",
+      "claim": "resolve usa manifiesto embebido validado contra identidad del ejecutable: Windows GUID/age PDB; devuelve UNSUPPORTED sin manifest, UNAVAILABLE ausente, CONFLICT ambiguo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/manifest.cpp",
+          "line_start": 110,
+          "line_end": 152,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/manifest.cpp#L110-L152"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/manifest.cpp",
+          "line_start": 242,
+          "line_end": 296,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/manifest.cpp#L242-L296"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/manifest.cpp",
+          "line_start": 362,
+          "line_end": 394,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/manifest.cpp#L362-L394"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 960,
+          "line_end": 975,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L960-L975"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-009",
+      "claim": "Windows x64 sigue stubs de importación/incremental linking y decodifica pointer-to-member virtual; prefiere overrider por display name y rechaza ajustes secundarios no resolubles. Registro extendido materializa hasta 24 bytes.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 162,
+          "line_end": 186,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L162-L186"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 772,
+          "line_end": 838,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L772-L838"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 231,
+          "line_end": 254,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L231-L254"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/meta.hpp",
+          "line_start": 296,
+          "line_end": 331,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/meta.hpp#L296-L331"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 1032,
+          "line_end": 1035,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L1032-L1035"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-010",
+      "claim": "La ruta CMake Windows con code mods habilitados usa funchook; prepatch se habilita para Apple arm64. Estas opciones no prueban el backend de un ejecutable Windows no inspeccionado.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "CMakeLists.txt",
+          "line_start": 94,
+          "line_end": 116,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/CMakeLists.txt#L94-L116"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "CMakeLists.txt",
+          "line_start": 283,
+          "line_end": 300,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/CMakeLists.txt#L283-L300"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 269,
+          "line_end": 298,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L269-L298"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-011",
+      "claim": "add_mod acepta fmt/game/webgpu; game y webgpu requieren enlace host. En Windows se usa import library .lib y datos DUSK_GAME_DATA dllimport; encabezado o símbolo local no garantiza export enlazable.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/ModSDK.cmake",
+          "line_start": 139,
+          "line_end": 212,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/ModSDK.cmake#L139-L212"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/ModSDK.cmake",
+          "line_start": 275,
+          "line_end": 298,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/ModSDK.cmake#L275-L298"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/global.h",
+          "line_start": 123,
+          "line_end": 128,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/global.h#L123-L128"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/WindowsExports.cmake",
+          "line_start": 5,
+          "line_end": 8,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/WindowsExports.cmake#L5-L8"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/WindowsExports.cmake",
+          "line_start": 57,
+          "line_end": 91,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/WindowsExports.cmake#L57-L91"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-012",
+      "claim": "GameABIConfig comparte TARGET_PC VERSION=0 PARTIAL_DEBUG y assets/GZ2E01; fuerza global.h y agrega game_feature.cpp. No valida offsets para otra arquitectura/version/conjunto de defines.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/GameABIConfig.cmake",
+          "line_start": 6,
+          "line_end": 19,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/GameABIConfig.cmake#L6-L19"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/GameABIConfig.cmake",
+          "line_start": 39,
+          "line_end": 60,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/GameABIConfig.cmake#L39-L60"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-013",
+      "claim": "Un .dusk nativo Windows MSVC x64 busca lib/windows-amd64/mod.dll y carga con LoadLibraryExW SEARCH_DLL_LOAD_DIR|DEFAULT_DIRS; otros recursos de la plataforma se extraen en directorio por generación.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "line_start": 25,
+          "line_end": 35,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L25-L35"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "line_start": 386,
+          "line_end": 403,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L386-L403"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "line_start": 429,
+          "line_end": 485,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L429-L485"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/native_module.cpp",
+          "line_start": 10,
+          "line_end": 19,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/native_module.cpp#L10-L19"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-014",
+      "claim": "load_native exige cinco exports mod_meta/mod_ctx/mod_initialize/mod_update/mod_shutdown y valida metadatos antes de aceptar la biblioteca.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "line_start": 488,
+          "line_end": 528,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L488-L528"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-015",
+      "claim": "Imports obligatorios y opcionales forman grafo proveedor->consumidor; los ciclos requeridos fallan, los ciclos opcionales pierden una arista de orden y conservan resolución.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/depgraph.cpp",
+          "line_start": 21,
+          "line_end": 80,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/depgraph.cpp#L21-L80"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/depgraph.cpp",
+          "line_start": 110,
+          "line_end": 204,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/depgraph.cpp#L110-L204"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 396,
+          "line_end": 438,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L396-L438"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-016",
+      "claim": "activate_mod registra exports, resuelve imports y hooks y llama initialize; solo éxito fija initialized. Un fallo de initialize limpia servicios pero no entra a mod_shutdown; el rollback de estado externo de init debe ser propio.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 209,
+          "line_end": 294,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L209-L294"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 296,
+          "line_end": 334,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L296-L334"
+        }
+      ],
+      "limitations": [
+        "La obligación de rollback propio es recomendación derivada de los guards observados."
+      ]
+    },
+    {
+      "id": "HOOK-017",
+      "claim": "deactivate_mod invoca módulos deactivating, shutdown si inicializado, elimina exports, invoca módulos detached y retira nativo. Excepciones/errores de shutdown se registran y continúa teardown.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 296,
+          "line_end": 338,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L296-L338"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 210,
+          "line_end": 224,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L210-L224"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-018",
+      "claim": "tick empieza con frameBegin y cambios pendientes, recorre updates de mods activos y acaba frameEnd. fapGm_Execute llama duskExecute/tick antes de fpcM_Management; no garantiza correspondencia uno a uno con cada frame presentado.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 1237,
+          "line_end": 1266,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L1237-L1266"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 748,
+          "line_end": 751,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L748-L751"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 807,
+          "line_end": 843,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L807-L843"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-019",
+      "claim": "fail_mod marca inactivo, retira exports y encola disable sin teardown inmediato; bibliotecas retiradas se descargan realmente al siguiente apply_pending_requests.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/context.cpp",
+          "line_start": 21,
+          "line_end": 37,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/context.cpp#L21-L37"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 537,
+          "line_end": 548,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L537-L548"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 1100,
+          "line_end": 1108,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L1100-L1108"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "line_start": 563,
+          "line_end": 583,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L563-L583"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-020",
+      "claim": "Disable/reload recolecta dependientes y apaga en orden inverso, recarga manifiesto e imagen, reconstruye grafo si cambia y reactiva proveedores antes de consumidores; required ausente suspende consumidor.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 581,
+          "line_end": 607,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L581-L607"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 610,
+          "line_end": 663,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L610-L663"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 666,
+          "line_end": 755,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L666-L755"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-021",
+      "claim": "Reload fallido deja target fallido; no hay restauración automática de la imagen vieja. mod ID cambiado devuelve CONFLICT; nativeInPlace rechaza reload sin paquete de reemplazo.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 610,
+          "line_end": 629,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L610-L629"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 738,
+          "line_end": 755,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L738-L755"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 900,
+          "line_end": 909,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L900-L909"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-022",
+      "claim": "El contrato prohíbe hooks cuya función permanece en stack toda sesión, porque el cambio lifecycle entre frames no garantiza su descarga segura.",
+      "level": "DOC_CONTRACT",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "docs/modding.md",
+          "line_start": 1469,
+          "line_end": 1491,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/docs/modding.md#L1469-L1491"
+        }
+      ],
+      "limitations": [
+        "No se ejecutó un caso real de unload."
+      ]
+    },
+    {
+      "id": "HOOK-023",
+      "claim": "RES_DIR, OVERLAY_DIR y TEXTURES_DIR se copian explícitamente al stage; mod.json y lib/plataforma se empaquetan como ZIP .dusk. No se generan paquetes en esta campaña.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/ModSDK.cmake",
+          "line_start": 305,
+          "line_end": 375,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/ModSDK.cmake#L305-L375"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/ModSDK.cmake",
+          "line_start": 401,
+          "line_end": 415,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/ModSDK.cmake#L401-L415"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-024",
+      "claim": "Un mod puede ser asset-only, native o delegado a runtime @major.minor; runtime y código nativo juntos son conflicto y el host valida activate/update/deactivate del proveedor.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/manifest.cpp",
+          "line_start": 77,
+          "line_end": 112,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/manifest.cpp#L77-L112"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/natives.cpp",
+          "line_start": 532,
+          "line_end": 551,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L532-L551"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 213,
+          "line_end": 216,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L213-L216"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 237,
+          "line_end": 271,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L237-L271"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/runtime.h",
+          "line_start": 5,
+          "line_end": 15,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/runtime.h#L5-L15"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-025",
+      "claim": "Las excepciones C++ de callbacks son atrapadas, marcan el mod fallido y se difiere teardown; pre fallido continúa, replace fallido devuelve error y el trampoline puede ejecutar original. No hay captura de corrupción de memoria ni garantía de concurrencia.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 125,
+          "line_end": 135,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L125-L135"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 591,
+          "line_end": 627,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L591-L627"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 640,
+          "line_end": 649,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L640-L649"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.hpp",
+          "line_start": 37,
+          "line_end": 44,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L37-L44"
+        }
+      ],
+      "limitations": [
+        "La ausencia de garantía de concurrencia se limita a implementación revisada, sin auditoría completa de todos los hilos."
+      ]
+    },
+    {
+      "id": "HOOK-026",
+      "claim": "Existe diferencia de precisión documental: la prosa Hooking by name agrupa missing/ambiguous/no manifest como UNAVAILABLE al instalar; HookService.resolve por separado distingue UNSUPPORTED/UNAVAILABLE/CONFLICT.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "docs/modding.md",
+          "line_start": 1380,
+          "line_end": 1411,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/docs/modding.md#L1380-L1411"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.h",
+          "line_start": 114,
+          "line_end": 129,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.h#L114-L129"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 961,
+          "line_end": 975,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L961-L975"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.hpp",
+          "line_start": 169,
+          "line_end": 182,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L169-L182"
+        }
+      ],
+      "limitations": []
+    },
+    {
+      "id": "HOOK-027",
+      "claim": "FEATURES game agrega sdk/src/game_feature.cpp, que emite import requerido GameService; major 2 es época ABI sin operaciones. El check protege la época declarada, no certifica layout/firma concretos ni presencia de símbolo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/GameABIConfig.cmake",
+          "line_start": 39,
+          "line_end": 60,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/GameABIConfig.cmake#L39-L60"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/src/game_feature.cpp",
+          "line_start": 1,
+          "line_end": 5,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/src/game_feature.cpp#L1-L5"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/game.h",
+          "line_start": 9,
+          "line_end": 26,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h#L9-L26"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 362,
+          "line_end": 392,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L362-L392"
+        }
+      ],
+      "limitations": [
+        "Análisis estático; no runtime Windows."
+      ]
+    },
+    {
+      "id": "HOOK-028",
+      "claim": "hook_install comparte backend entre candidatos por dirección y copia original a cada slot sin comparar firmas/trampolines. El éxito de install no certifica que dos mods coincidan en ABI; cada candidato debe respetar firma del target.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 394,
+          "line_end": 450,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L394-L450"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.h",
+          "line_start": 75,
+          "line_end": 89,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.h#L75-L89"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.hpp",
+          "line_start": 100,
+          "line_end": 125,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L100-L125"
+        }
+      ],
+      "limitations": [
+        "Análisis estático; no runtime Windows."
+      ]
+    },
+    {
+      "id": "HOOK-029",
+      "claim": "ActorService intenta retirar perfiles propios antes de shutdown; si unregister_actor no completa borrado devuelve UNAVAILABLE y conserva perfil. actor_remove_mod sólo registra el fallo y ModLoader continúa teardown/unload; no se debe declarar garantizada la seguridad del unload con actores propios vivos.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 193,
+          "line_end": 218,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L193-L218"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 359,
+          "line_end": 372,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L359-L372"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 395,
+          "line_end": 401,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L395-L401"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 296,
+          "line_end": 338,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L296-L338"
+        }
+      ],
+      "limitations": [
+        "Análisis estático; no runtime Windows.",
+        "La posibilidad de callback colgante se infiere del perfil conservado y descarga diferida; no es un crash reproducido."
+      ]
+    },
+    {
+      "id": "HOOK-030",
+      "claim": "GfxService retira tipos draw/encoder task del propietario y llama aurora::gfx::synchronize antes de mod_shutdown mediante modDeactivating; el detalle de sincronización reside en dependencia externa.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 166,
+          "line_end": 187,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L166-L187"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 1460,
+          "line_end": 1470,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L1460-L1470"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 296,
+          "line_end": 308,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L296-L308"
+        }
+      ],
+      "limitations": [
+        "Análisis estático; no runtime Windows."
+      ]
+    },
+    {
+      "id": "SDK-REGISTRY",
+      "claim": "25 IDs declarados por encabezados y 26 módulos candidatos registrados (dos majors UI); clave ID+major, minor mínimo y imports opcionales/requeridos implementados.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 28,
+          "line_end": 110,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L28-L110"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 145,
+          "line_end": 242,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L145-L242"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 263,
+          "line_end": 301,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L263-L301"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 358,
+          "line_end": 393,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L358-L393"
+        }
+      ],
+      "limitations": [
+        "Disponibilidad efectiva de algunos módulos depende del backend; no se enumeró una instancia del juego.",
+        "register_module omite módulos no disponibles; el conteo no certifica disponibilidad runtime."
+      ]
+    },
+    {
+      "id": "SDK-001",
+      "claim": "Perfiles propios y creación de actores; register_actor exige tamaño >= fopAc_ac_c y cinco callbacks; asigna ProfileName desde fpcNm_MAX_NUM. unregister_actor fuerza solicitudes de borrado y devuelve MOD_UNAVAILABLE si quedan instancias. Límite: Las funciones de spawn no validan params antes de desreferenciarlo. MOD_OK no certifica que create_function haya terminado. El ID no equivale a puntero vigente.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/actor.h",
+          "line_start": 74,
+          "line_end": 91,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/actor.h#L74-L91"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 65,
+          "line_end": 137,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L65-L137"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 200,
+          "line_end": 339,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L200-L339"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/actor.h",
+          "line_start": 6,
+          "line_end": 8,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/actor.h#L6-L8"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-002",
+      "claim": "Añade/reemplaza waves y entradas de tabla de efectos/streams; los datos se cargan desde el bundle y los registros pertenecen al mod. Los mapas activos se sincronizan al cambiar lifecycle y al final del frame. Límite: No es un API genérico para emitir audio posicional. Banco, efecto y stream son identidades distintas; comprobar formato y bucles. No se validó reproducción.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/audio_res.h",
+          "line_start": 272,
+          "line_end": 432,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/audio_res.h#L272-L432"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/audio_res.cpp",
+          "line_start": 15,
+          "line_end": 55,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/audio_res.cpp#L15-L55"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/wsys.cpp",
+          "line_start": 149,
+          "line_end": 205,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/wsys.cpp#L149-L205"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/wsys.cpp",
+          "line_start": 260,
+          "line_end": 295,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/wsys.cpp#L260-L295"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/bst.cpp",
+          "line_start": 217,
+          "line_end": 299,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/bst.cpp#L217-L299"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/audio_res.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/audio_res.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-003",
+      "claim": "get_camera construye snapshot de una view_class perspectiva; convierte a matrices column-major y clip WebGPU según reversed-Z. Operadores ordenados por prioridad descendente y secuencia ascendente: gana el primero que devuelve true. Límite: El puntero view requiere vigencia; no basta no ser NULL. OperatorState es temporal. Sólo hilo del juego; retirar operador al abandonar su contexto.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/camera.h",
+          "line_start": 80,
+          "line_end": 100,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/camera.h#L80-L100"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/camera.cpp",
+          "line_start": 56,
+          "line_end": 139,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/camera.cpp#L56-L139"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/camera.cpp",
+          "line_start": 142,
+          "line_end": 250,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/camera.cpp#L142-L250"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_camera.cpp",
+          "line_start": 1059,
+          "line_end": 1070,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_camera.cpp#L1059-L1070"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/camera.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/camera.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-004",
+      "claim": "Variables tipadas bajo mod.<ID escapado>.<nombre>; registro restaura valor guardado sin notificar. Suscripciones sólo del propietario. Escrituras marcan dirty y frameEnd guarda con debounce de dos segundos; shutdown fuerza flush. Límite: No usar para datos por slot. unregister elimina callbacks/registro y conserva valor persistido para posterior registro. Snapshots de string sólo durante callback.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/config.h",
+          "line_start": 70,
+          "line_end": 101,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/config.h#L70-L101"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/config.cpp",
+          "line_start": 143,
+          "line_end": 227,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/config.cpp#L143-L227"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/config.cpp",
+          "line_start": 42,
+          "line_end": 57,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/config.cpp#L42-L57"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/config.cpp",
+          "line_start": 329,
+          "line_end": 421,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/config.cpp#L329-L421"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/config.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/config.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-005",
+      "claim": "Acceso a localizaciones del sistema, streams, buffers, selector y exportación. Streams y buffers tienen ownership por mod; un selector global pendiente puede producir MOD_CONFLICT; detach anula callback pendiente y libera recursos. Límite: Servicio se publica sólo si el backend permite algún selector. Ruta/localización no siempre es filesystem nativo; join/create_child devuelven almacenamiento interno reutilizado. No garantiza atomicidad al escribir.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/file.h",
+          "line_start": 73,
+          "line_end": 116,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L73-L116"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 279,
+          "line_end": 365,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L279-L365"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 128,
+          "line_end": 140,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L128-L140"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 513,
+          "line_end": 580,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L513-L580"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 635,
+          "line_end": 704,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L635-L704"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/file.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-006",
+      "claim": "Construcción diferida de grafos: begin, IDs/nodos/edges, patches y commit. commit rechaza nodos sin completar y destinos/consultas de otro propietario, y activa patches juntos. remove_graph retira sus patches. Límite: Pools finitos devuelven MOD_UNAVAILABLE al agotarse. No se admite seguir rellenando después de commit. No confundir Flow con el event manager de escenas completo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/flow.h",
+          "line_start": 156,
+          "line_end": 180,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/flow.h#L156-L180"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/flow.cpp",
+          "line_start": 1049,
+          "line_end": 1219,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L1049-L1219"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/flow.cpp",
+          "line_start": 1220,
+          "line_end": 1270,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L1220-L1270"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/flow.cpp",
+          "line_start": 1427,
+          "line_end": 1435,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L1427-L1435"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/flow.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/flow.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-007",
+      "claim": "Marcador sin operaciones: GameService sólo contiene ServiceHeader. El SDK lo importa para FEATURES game y usa major 2 como época ABI de las estructuras del juego. Límite: Tener este import no demuestra offsets, vtables o firma de un hook concreto. No proporciona get_player ni controles del loop.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/game.h",
+          "line_start": 22,
+          "line_end": 24,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h#L22-L24"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/game.cpp",
+          "line_start": 1,
+          "line_end": 21,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/game.cpp#L1-L21"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/game.h",
+          "line_start": 18,
+          "line_end": 20,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h#L18-L20"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/game.h",
+          "line_start": 9,
+          "line_end": 24,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h#L9-L24"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-008",
+      "claim": "Registra modo con callbacks de activación, play, partida, selección y tick. El ID efectivo concatena id local + _ + mod ID y pasa a minúsculas; save_name se valida y puede aislar archivo de partida. Límite: Callbacks que fallan o lanzan excepción deshabilitan mod. Estado de selección vive hasta completar selección. unregister/is_active presuponen contexto/punteros válidos.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/game_mode.h",
+          "line_start": 42,
+          "line_end": 47,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game_mode.h#L42-L47"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/game_mode.cpp",
+          "line_start": 31,
+          "line_end": 100,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/game_mode.cpp#L31-L100"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/game_mode.cpp",
+          "line_start": 115,
+          "line_end": 216,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/game_mode.cpp#L115-L216"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/game_mode.h",
+          "line_start": 6,
+          "line_end": 8,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game_mode.h#L6-L8"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-009",
+      "claim": "Registra tipos draw/compute, hooks de etapa, buffers por frame, passes y presentación externa mediante handles WGPU. push_draw devuelve MOD_UNAVAILABLE si Aurora no acepta el comando. Detach retira registros y libera referencias gráficas a ventanas. Límite: Callbacks draw/compute son del worker de render: sólo handles de contexto y wgpu, ningún otro servicio. Handles del host prestados; objetos GPU creados por mod requieren release propio; validar layout por frame.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/gfx.h",
+          "line_start": 294,
+          "line_end": 349,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/gfx.h#L294-L349"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 603,
+          "line_end": 642,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L603-L642"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/gfx.h",
+          "line_start": 20,
+          "line_end": 32,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/gfx.h#L20-L32"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 1013,
+          "line_end": 1055,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L1013-L1055"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 1061,
+          "line_end": 1119,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L1061-L1119"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/gfx.h",
+          "line_start": 34,
+          "line_end": 36,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/gfx.h#L34-L36"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-010",
+      "claim": "Tabla oficial para install, pre, post, replace, dispatch, resolve y uninstall; registros se retiran en detach. Contrato requiere trampoline de firma exacta; resolve diferencia no disponible, manifest incompatible y nombre ambiguo. Límite: Servicio presente no certifica un símbolo hookeable. La convivencia, desinstalación y ABI se estudian en HOOKING_AND_ABI.md.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.h",
+          "line_start": 73,
+          "line_end": 138,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.h#L73-L138"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/hook.cpp",
+          "line_start": 1049,
+          "line_end": 1060,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/hook.cpp#L1049-L1060"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.h",
+          "line_start": 73,
+          "line_end": 140,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.h#L73-L140"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.h",
+          "line_start": 23,
+          "line_end": 25,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.h#L23-L25"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-011",
+      "claim": "Obtiene servicios por ID/major/minor, publica export declarado deferred y comunica fallos; expone identidad y directorios. data_dir crea <ConfigPath>/mod_data/<mod-id>; mod_dir/native_dir son rutas del mod cargado. Límite: get_service no crea dependencia estática. Punteros a servicios de otro mod requieren observar detach; las watches propias se eliminan antes de notificar a otros. data_dir puede fallar.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/host.h",
+          "line_start": 39,
+          "line_end": 117,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/host.h#L39-L117"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/host.cpp",
+          "line_start": 21,
+          "line_end": 107,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/host.cpp#L21-L107"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/host.cpp",
+          "line_start": 116,
+          "line_end": 208,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/host.cpp#L116-L208"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/host.h",
+          "line_start": 14,
+          "line_end": 16,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/host.h#L14-L16"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-012",
+      "claim": "Peticiones HTTPS asíncronas GET/POST/HEAD; exige import HTTP declarado; máximo 16 pendientes por mod, cuerpos y cabeceras limitados. Callback se entrega en frameBegin y resultado sólo vive durante la llamada. Límite: get_service dinámico sin import no basta: MOD_UNSUPPORTED. Backend puede no publicar servicio. Cancel solicita cancelación; callback aún puede llegar si mod sigue activo; deactivating retira tareas.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/http.h",
+          "line_start": 87,
+          "line_end": 96,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/http.h#L87-L96"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/http.cpp",
+          "line_start": 308,
+          "line_end": 346,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/http.cpp#L308-L346"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/http.cpp",
+          "line_start": 33,
+          "line_end": 60,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/http.cpp#L33-L60"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/http.cpp",
+          "line_start": 213,
+          "line_end": 292,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/http.cpp#L213-L292"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/http.cpp",
+          "line_start": 421,
+          "line_end": 510,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/http.cpp#L421-L510"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/http.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/http.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-013",
+      "claim": "Registra matriz final con key estable, consulta reemplazo e invalida matriz. Servicio guarda conjunto de keys por mod y las olvida en detach; forget inexistente devuelve MOD_OK. Límite: No es sistema de animación; key/punteros deben mantener identidad y vigencia del objeto entre ticks. Liberar actor requiere olvidar sus keys antes de reutilizar dirección.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/interp.h",
+          "line_start": 22,
+          "line_end": 82,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.h#L22-L82"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/interp.cpp",
+          "line_start": 25,
+          "line_end": 89,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/interp.cpp#L25-L89"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/interp.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-014",
+      "claim": "Overrides y resolvers de checks; preview no concede ítem. give_item valida flags y encola concesión FIFO; frameEnd procesa y espera condiciones de gameplay; al cambiar save slot se limpia cola. Límite: MOD_OK de give_item sólo confirma encolado. Resolvers sin efectos secundarios por previews repetidas. pending grants/observadores se retiran al detach.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/item.h",
+          "line_start": 71,
+          "line_end": 109,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L71-L109"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/item.cpp",
+          "line_start": 17,
+          "line_end": 101,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/item.cpp#L17-L101"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/item.h",
+          "line_start": 16,
+          "line_end": 25,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L16-L25"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/item.cpp",
+          "line_start": 145,
+          "line_end": 158,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/item.cpp#L145-L158"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_gives.cpp",
+          "line_start": 367,
+          "line_end": 420,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_gives.cpp#L367-L420"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/item.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-015",
+      "claim": "write y accesos trace/debug/info/warn/error emiten por log::Source::Mod con ID tomado del contexto; mensaje NULL se convierte a cadena vacía. Límite: Sin retorno de persistencia; logging no prueba que la operación del juego ocurriera. No registrar secretos ni bytes de assets.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/log.h",
+          "line_start": 26,
+          "line_end": 41,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/log.h#L26-L41"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/log.cpp",
+          "line_start": 10,
+          "line_end": 34,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/log.cpp#L10-L34"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/log.h",
+          "line_start": 14,
+          "line_end": 16,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/log.h#L14-L16"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-016",
+      "claim": "Override fijo o callback por grupo/message/language y mensajes nuevos con variantes; copia texto validado. register_message valida campos reservados de INF1 y lenguajes sin duplicar; pool finito. Límite: Texto codificado del juego, no texto arbitrario UTF-8 por existencia del API. Quitar override/message sólo propio. Limpieza compartida con FlowService en detach.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/message.h",
+          "line_start": 110,
+          "line_end": 123,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/message.h#L110-L123"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/flow.cpp",
+          "line_start": 1272,
+          "line_end": 1387,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L1272-L1387"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/flow.cpp",
+          "line_start": 1389,
+          "line_end": 1444,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L1389-L1444"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/message.h",
+          "line_start": 94,
+          "line_end": 126,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/message.h#L94-L126"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/message.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/message.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-017",
+      "claim": "TCP/UDP y resolución asíncrona mediante eventos poll. connect exige import NET declarado y backend; conecta por hostname o literal, mientras listen/datagram requieren bind literal. close solicita cierre; detach borra estado de sockets. Límite: No asume mensajes delimitados en TCP. Datos de evento prestados hasta siguiente poll/deactivate; handles CLOSED/RESOLVED caducan al devolver evento. Límites de cola y transporte.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/net.h",
+          "line_start": 119,
+          "line_end": 143,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/net.h#L119-L143"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/net.cpp",
+          "line_start": 188,
+          "line_end": 231,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/net.cpp#L188-L231"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/net.h",
+          "line_start": 94,
+          "line_end": 109,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/net.h#L94-L109"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/net.cpp",
+          "line_start": 233,
+          "line_end": 343,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/net.cpp#L233-L343"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/net.cpp",
+          "line_start": 512,
+          "line_end": 574,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/net.cpp#L512-L574"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/net.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/net.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-018",
+      "claim": "Overlay de ruta de disco desde archivo del bundle o buffer copiado; resolución case-insensitive, runtime gana sobre estático de su mod y mod posterior gana. sync actualiza tabla de DVD y avisa a JKRArchive. Límite: Aplicación en frame boundary; bytes ya leídos no se revierten automáticamente. Abiertos conservan shared bundle/buffer durante reload. Al quitar, requerir nueva lectura/recarga cuando proceda.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/overlay.h",
+          "line_start": 31,
+          "line_end": 51,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/overlay.h#L31-L51"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/overlay.cpp",
+          "line_start": 27,
+          "line_end": 40,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/overlay.cpp#L27-L40"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/overlay.cpp",
+          "line_start": 53,
+          "line_end": 116,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/overlay.cpp#L53-L116"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/overlay.cpp",
+          "line_start": 184,
+          "line_end": 210,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/overlay.cpp#L184-L210"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/overlay.cpp",
+          "line_start": 291,
+          "line_end": 346,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/overlay.cpp#L291-L346"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/overlay.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/overlay.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-019",
+      "claim": "Lectura de res/ del propio bundle con path seguro; copia en malloc y rastrea ownership. free sólo libera buffer vivo del mod; detach reclama pendientes. Archivo vacío devuelve data NULL, size 0, MOD_OK. Límite: Reutilizar out_buffer sin free pierde referencia anterior. file_exists/directory_exists tienen rama de error que retorna entero no cero desde bool: validar argumentos antes y no usar como guardia de seguridad.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/resource.h",
+          "line_start": 31,
+          "line_end": 50,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/resource.h#L31-L50"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/resource.cpp",
+          "line_start": 43,
+          "line_end": 95,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/resource.cpp#L43-L95"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/resource.h",
+          "line_start": 8,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/resource.h#L8-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/resource.cpp",
+          "line_start": 97,
+          "line_end": 116,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/resource.cpp#L97-L116"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 49,
+          "line_end": 58,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L49-L58"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/resource.h",
+          "line_start": 15,
+          "line_end": 17,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/resource.h#L15-L17"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-020",
+      "claim": "Blobs por ID de mod, archivo CARD activo y slot; límite combinado 65536 bytes por mod/slot. set_blob copia a memoria y marca dirty; get admite consulta de tamaño; peek consulta otro slot activo del mismo archivo. Límite: No es un editor del save vanilla ni save síncrono. onWritten precede flush de sidecars; error de sidecar conserva dirty para futuro intento. Retirar mod elimina observadores, no blobs persistidos.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/save.h",
+          "line_start": 33,
+          "line_end": 62,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L33-L62"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 525,
+          "line_end": 601,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L525-L601"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/save.h",
+          "line_start": 16,
+          "line_end": 59,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L16-L59"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 107,
+          "line_end": 182,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L107-L182"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 287,
+          "line_end": 294,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L287-L294"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 439,
+          "line_end": 448,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L439-L448"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 632,
+          "line_end": 667,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L632-L667"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/save.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-021",
+      "claim": "Edita registros actor al parsear DZS/DZR: patch/delete identifican CRC original; add copia registro. Sólo tamaños 0x20/0x23, nombre stage <=8; room 0xff/layer -1 wildcard salvo add exige room concreto. Conflicto gana mod posterior y luego secuencia. Límite: No modifica KCL/geometría ni actores vivos retroactivamente. Remover handle retira edición futura; actor ya creado exige política de lifecycle propia. Comprobar semántica layer -1 del dato real.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/stage.h",
+          "line_start": 20,
+          "line_end": 40,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h#L20-L40"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/stage.cpp",
+          "line_start": 79,
+          "line_end": 155,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/stage.cpp#L79-L155"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/stage.cpp",
+          "line_start": 176,
+          "line_end": 307,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/stage.cpp#L176-L307"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_stage.cpp",
+          "line_start": 1625,
+          "line_end": 1645,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L1625-L1645"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_stage.cpp",
+          "line_start": 1740,
+          "line_end": 1765,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L1740-L1765"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_stage.cpp",
+          "line_start": 2602,
+          "line_end": 2630,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L2602-L2630"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/stage.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-022",
+      "claim": "Reemplazo por puntero de texel GX o hash de contenido+TLUT/tamaño/formato. register_data copia bytes; register_file valida nombre estilo tex1 y archivo bundle antes de registrar; prioridad por mod. Límite: Un puntero de textura sólo identifica esa asignación viva; no volverlo identidad persistente. Decodificación de archivo es lazy; registro no prueba aspecto correcto en DX12.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/texture.h",
+          "line_start": 63,
+          "line_end": 82,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/texture.h#L63-L82"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/texture.cpp",
+          "line_start": 337,
+          "line_end": 389,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/texture.cpp#L337-L389"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/texture.h",
+          "line_start": 16,
+          "line_end": 61,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/texture.h#L16-L61"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/texture.cpp",
+          "line_start": 392,
+          "line_end": 460,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/texture.cpp#L392-L460"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/texture.h",
+          "line_start": 9,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/texture.h#L9-L11"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-023",
+      "claim": "UI de documentos del host: panel de mod, controles, ventanas, diálogos, tabs, listas, estilos y context menus. Handles por propietario. Detach fuerza hide, elimina estilos y restaura documento cubierto. Límite: No sustituye automáticamente HUD J2D del juego. Compatibilidad Ui v1.5 existe junto v2.3, pero v1 dialog_add_action retorna MOD_UNSUPPORTED; no asumir paridad total por registro.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/ui.h",
+          "line_start": 354,
+          "line_end": 456,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/ui.h#L354-L456"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/ui.cpp",
+          "line_start": 1490,
+          "line_end": 1531,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/ui.cpp#L1490-L1531"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/ui.h",
+          "line_start": 354,
+          "line_end": 458,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/ui.h#L354-L458"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/ui_v1.hpp",
+          "line_start": 5,
+          "line_end": 8,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/ui_v1.hpp#L5-L8"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/ui.cpp",
+          "line_start": 2229,
+          "line_end": 2238,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/ui.cpp#L2229-L2238"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/ui.cpp",
+          "line_start": 2326,
+          "line_end": 2341,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/ui.cpp#L2326-L2341"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/ui.h",
+          "line_start": 11,
+          "line_end": 13,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/ui.h#L11-L13"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-024",
+      "claim": "Conexión y polling de WebSocket; permite wss y ws sólo localhost/127.0.0.1/::1. connect exige import declarado. send requiere que el evento OPEN ya se haya publicado; CLOSED borra handle. Límite: Backend opcional, colas/límites y datos temporales. No usar handle después de CLOSED; deactivating retira conexiones y snapshots de poll.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/websocket.h",
+          "line_start": 91,
+          "line_end": 104,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/websocket.h#L91-L104"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/websocket.cpp",
+          "line_start": 60,
+          "line_end": 75,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/websocket.cpp#L60-L75"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/websocket.cpp",
+          "line_start": 140,
+          "line_end": 164,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/websocket.cpp#L140-L164"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/websocket.cpp",
+          "line_start": 290,
+          "line_end": 339,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/websocket.cpp#L290-L339"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/websocket.cpp",
+          "line_start": 355,
+          "line_end": 391,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/websocket.cpp#L355-L391"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/websocket.h",
+          "line_start": 10,
+          "line_end": 12,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/websocket.h#L10-L12"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    },
+    {
+      "id": "SDK-025",
+      "claim": "Crea ventanas SDL3 externas con flags y tamaño, devuelve información lógica/píxeles/escalado; gestiona referencias gráficas. destroy_window devuelve MOD_CONFLICT si hay present target reteniendo ventana. Límite: Retirar target gráfico antes de ventana. Detach elimina ventanas del mod; no confundir WindowService nativo con ventana documental UiService.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/window.h",
+          "line_start": 90,
+          "line_end": 100,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/window.h#L90-L100"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/window.cpp",
+          "line_start": 65,
+          "line_end": 139,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/window.cpp#L65-L139"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/window.cpp",
+          "line_start": 136,
+          "line_end": 155,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/window.cpp#L136-L155"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/window.cpp",
+          "line_start": 194,
+          "line_end": 216,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/window.cpp#L194-L216"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/window.cpp",
+          "line_start": 305,
+          "line_end": 350,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/window.cpp#L305-L350"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/window.h",
+          "line_start": 11,
+          "line_end": 13,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/window.h#L11-L13"
+        }
+      ],
+      "limitations": [
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+      ]
+    }
+  ]
+}
