@@ -1,20 +1,31 @@
-# Atlas técnico de Dusklight 2.0.3 para investigación de mods .dusk
+# Atlas técnico general de Dusklight 2.0.3 para mods .dusk
 
-**Fuente fijada:** `TwilitRealm/dusklight` @ `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`). **Objetivo:** Windows x64, DirectX 12, GZ2E01 USA. Investigación general, sin mod objetivo.
+Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`); objetivo Windows x64 / DirectX 12 / GZ2E01 USA. **CP-R05: investigación estática y síntesis; sin mod objetivo.** La cobertura es selectiva y se declara por sistema, sin afirmar comprensión completa del juego.
 
-**CP-R03: atlas técnico ampliado con fichas de jugador, actores, física, presentación, recursos, memoria e histórico.** Checkpoint de auditoría e inventario inicial conservado. El árbol disponible se ha inventariado y clasificado; el análisis transversal de implementaciones se incorpora por bloques. La cobertura real, los límites y los próximos pasos se actualizarán con cada checkpoint. No se afirma investigación profunda de todos los archivos ni ejecución del juego.
+## Acceso rápido
 
-- [Entradas, hashes y límites](SOURCE_PIN.md).
-- [Inventario y clasificación](INVENTORY.md), [resumen JSON](INVENTORY_SUMMARY.json), [todos los archivos](FILE_INVENTORY.tsv), [todos los directorios](DIRECTORY_INDEX.tsv).
-- [Continuidad del checkpoint](CONTINUATION.md) y [cambios documentales](CHANGELOG.md).
-- [Instrucciones para consultar y mantener](AGENTS.md); [utilidad de inventario de solo lectura](tools/inventory.py).
+- [Continuación exacta](CONTINUATION.md), [cobertura real](RESEARCH_COVERAGE.md), [métricas](RESEARCH_METRICS.json) y [checkpoints](CHANGELOG.md).
+- [Arquitectura y tick](ARCHITECTURE.md), [SDK y 25 servicios](SDK_AND_SERVICES.md), [hooks/ABI](HOOKING_AND_ABI.md), [matriz de integración .dusk](DUSK_INTEGRATION_MATRIX.md) y [dependencias](SYSTEM_DEPENDENCIES.md).
+- [Índice de sistemas](SYSTEM_INDEX.json), [202 registros de símbolos](SYMBOL_INDEX.json), [184 evidencias](EVIDENCE_LEDGER.json) y [validación de referencias](VALIDATION_REPORT.json).
+- [Riesgos](RISK_REGISTER.md), [preguntas pendientes](OPEN_QUESTIONS.md) y [hallazgos históricos reutilizables](PRIOR_RESEARCH.md).
+- [Pin y excepciones](SOURCE_PIN.md), [inventario R00](INVENTORY.md), [archivos](FILE_INVENTORY.tsv), [directorios](DIRECTORY_INDEX.tsv) y [siete erratas de clasificación](INVENTORY_ERRATA.json). El inventario original se conserva; no se duplica.
 
-Contenido técnico publicado: [servicios SDK](SDK_AND_SERVICES.md), [hooks/ABI](HOOKING_AND_ABI.md), [loader/runtime](systems/runtime_and_lifecycle.md), [evidencia](EVIDENCE_LEDGER.json), [símbolos](SYMBOL_INDEX.json), [sistemas](SYSTEM_INDEX.json) y [cobertura](RESEARCH_COVERAGE.md). Los informes restantes se incorporan por bloques. La existencia de una ruta en el inventario no demuestra que sea exportada, hookeable ni segura en Windows.
+## Fichas por sistema
 
-**NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED.**
+| Área | Informes |
+| --- | --- |
+| Ejecución y ownership | [Runtime/loader](systems/runtime_and_lifecycle.md), [memoria/heaps](systems/memory_ownership.md), [cancelación de callbacks](systems/callback_ownership_and_cancellation.md) |
+| Jugador y mundo | [Jugador/controles](systems/player_and_controls.md), [física/colisión](systems/movement_physics_collision.md), [combate](systems/combat_damage.md), [actores/IA/NPC](systems/actors_ai_npcs.md), [stages/salas/capas](systems/stages_rooms_layers.md) |
+| Estado y narrativa | [Inventario/equipamiento](systems/inventory_equipment.md), [flags/eventos/progreso](systems/flags_events_progression.md), [save/load](systems/save_load.md), [secuencias/diálogos](systems/cutscenes_dialogue.md) |
+| Presentación | [Recursos/ARC/overlays](systems/resources_archives_overlays.md), [cámaras/render](systems/cameras_rendering.md), [modelos/animación/materiales](systems/models_animations_materials.md), [HUD/UI/texto](systems/hud_ui_text.md), [audio/partículas](systems/audio_particles_effects.md), [entorno/clima/tiempo](systems/environment_weather_time.md) |
+| Rutas menos comunes | [Caballo, canoa, Midna, pesca, ganado, puzzles y pendientes](systems/other_systems.md) |
 
-Fichas incorporadas CP-R02: [stages/salas/capas](systems/stages_rooms_layers.md), [save/load](systems/save_load.md), [flags y eventos](systems/flags_events_progression.md), [inventario](systems/inventory_equipment.md), [secuencias y diálogos](systems/cutscenes_dialogue.md).
+## Cómo usarlo
 
-[Opciones de integración .dusk](DUSK_INTEGRATION_MATRIX.md). Fichas nuevas: [jugador](systems/player_and_controls.md), [física](systems/movement_physics_collision.md), [combate](systems/combat_damage.md), [actores/NPC](systems/actors_ai_npcs.md), [otros sistemas](systems/other_systems.md), [recursos](systems/resources_archives_overlays.md), [cámaras/render](systems/cameras_rendering.md), [modelos](systems/models_animations_materials.md), [HUD](systems/hud_ui_text.md), [audio/partículas](systems/audio_particles_effects.md), [entorno](systems/environment_weather_time.md), [memoria](systems/memory_ownership.md), [histórico](PRIOR_RESEARCH.md).
+Partir del sistema o símbolo, leer sus condiciones y evidence_ids, abrir el ledger y seguir el enlace permanente al SHA/rango. Las clasificaciones OFFICIAL_SERVICE/TYPED_HOOK/etc. describen mecanismos; no prueban resolución o instalación de un target Windows. READ y CROSSCHECKED se refieren a rutas citadas; los 19367 archivos inventariados no son archivos comprendidos.
 
-CP-R04: [ownership y cancelación de callbacks](systems/callback_ownership_and_cancellation.md), con contraste de SaveService/HostService/CameraService y límites de snapshots.
+Los 26 candidatos de módulo incluyen dos versiones de UiService y dependen de disponibilidad; las 209 ranuras públicas no fueron auditadas una por una. No se ejecutó el juego ni se verificó el backend DX12. Cuatro submódulos faltan; el histórico CI conserva su procedencia y no se promueve a runtime.
+
+Mantenimiento: [AGENTS.md](AGENTS.md). Validación editorial: `python DUSKLIGHT_RESEARCH/tools/validate_atlas.py RUTA_FUENTE_CERTIFICADA`. Esta utilidad comprueba JSON, IDs, relaciones, enlaces relativos y rangos disponibles; no ejecuta el juego ni certifica compatibilidad binaria.
+
+**NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED.** Sin PR nuevo, merge, tag ni release. No hay ejecución de fondo.

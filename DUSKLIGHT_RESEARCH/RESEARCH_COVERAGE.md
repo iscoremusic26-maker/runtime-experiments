@@ -1,11 +1,56 @@
-# Cobertura real — CP-R03
+# Cobertura real — CP-R05
 
-R00 conserva el inventario de19367 archivos/488 directorios. No se reejecutó en esta continuación ni se usa como porcentaje de comprensión.
+## Alcance y denominadores
 
-Publicado: 25 contratos SDK y fronteras seleccionadas de implementación; hooks/loader/ABI;19 fichas de sistemas (incluida memoria), más histórico reutilizable. En SYSTEM_INDEX cada área distingue READ de CROSSCHECKED selectivo: modelos/HUD/clima/minijuegos conservan profundidad muestreada. No se auditaron todas las209 ranuras ni todos los actores/estados.
+Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Acumulado:183 evidencias y202 registros de símbolos. Evidencia histórica CI se limita a jobs/estados observados; no hay ejecución del juego ni verificación binaria nueva.
+Se publican **19 fichas de sistemas, 184 evidencias y 202 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 5 READ y 5 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los borradores técnicos recuperados se incorporan en este checkpoint después de corregir precisiones TGSC, banks,ARC,texturas yGfx. Pendientes: síntesis de arquitectura/dependencias/riesgos/preguntas; validación binaria Windows y runtime, submódulos ausentes y flujos completos señalados por cada ficha.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 202 registros.
 
-CP-R04 incorpora cuatro evidencias y dos slots: contraste de dispatch Save/Host/Camera. Su inferencia de cancelación tardía no equivale a crash observado.
+## Estado por área
+
+| Sistema | Nivel | Alcance / informe |
+| --- | --- | --- |
+| `actors_ai_npcs` | CROSSCHECKED | [systems/actors_ai_npcs.md](systems/actors_ai_npcs.md) |
+| `audio_particles_effects` | CROSSCHECKED | [systems/audio_particles_effects.md](systems/audio_particles_effects.md) |
+| `cameras_rendering` | CROSSCHECKED | [systems/cameras_rendering.md](systems/cameras_rendering.md) |
+| `cutscenes_dialogue` | CROSSCHECKED | [systems/cutscenes_dialogue.md](systems/cutscenes_dialogue.md) |
+| `hooking_abi` | CROSSCHECKED | [HOOKING_AND_ABI.md](HOOKING_AND_ABI.md) |
+| `hud_ui_text` | READ | [systems/hud_ui_text.md](systems/hud_ui_text.md) |
+| `inventory_equipment` | CROSSCHECKED | [systems/inventory_equipment.md](systems/inventory_equipment.md) |
+| `models_animations_materials` | READ | [systems/models_animations_materials.md](systems/models_animations_materials.md) |
+| `resources_archives_overlays` | CROSSCHECKED | [systems/resources_archives_overlays.md](systems/resources_archives_overlays.md) |
+| `runtime_and_lifecycle` | CROSSCHECKED | [systems/runtime_and_lifecycle.md](systems/runtime_and_lifecycle.md) |
+| `save_load` | CROSSCHECKED | [systems/save_load.md](systems/save_load.md) |
+| `sdk_services` | CROSSCHECKED | [SDK_AND_SERVICES.md](SDK_AND_SERVICES.md) |
+| `stages_rooms_layers` | CROSSCHECKED | [systems/stages_rooms_layers.md](systems/stages_rooms_layers.md) |
+| `flags_events_progression` | CROSSCHECKED | [systems/flags_events_progression.md](systems/flags_events_progression.md) |
+| `movement_physics_collision` | CROSSCHECKED | [systems/movement_physics_collision.md](systems/movement_physics_collision.md) |
+| `player_and_controls` | CROSSCHECKED | [systems/player_and_controls.md](systems/player_and_controls.md) |
+| `combat_damage` | CROSSCHECKED | [systems/combat_damage.md](systems/combat_damage.md) |
+| `other_systems` | READ | [systems/other_systems.md](systems/other_systems.md) |
+| `environment_weather_time` | READ | [systems/environment_weather_time.md](systems/environment_weather_time.md) |
+| `memory_ownership` | CROSSCHECKED | [systems/memory_ownership.md](systems/memory_ownership.md) |
+| `platform_backend` | READ | [systems/memory_ownership.md](systems/memory_ownership.md) |
+| `prior_research` | CROSSCHECKED | [PRIOR_RESEARCH.md](PRIOR_RESEARCH.md) |
+| `callback_ownership_and_cancellation` | CROSSCHECKED | [systems/callback_ownership_and_cancellation.md](systems/callback_ownership_and_cancellation.md) |
+| `build_tooling` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
+| `documentation` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
+| `game_support` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
+| `port_support` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
+| `external_dependencies` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
+
+CROSSCHECKED: declaraciones/contrato, implementación y usos seleccionados contrastados con límites explícitos. READ: implementación consultada con flujo/dependencias todavía parciales. INVENTARIED: rutas localizadas; no prueba comprensión. Cada evidencia conserva su propio nivel y puede ser más limitado que una parte ya contrastada del mismo sistema.
+
+## Calidad y límites
+
+Se validan estructura JSON, unicidad, IDs cruzados, dependencias, enlaces relativos y rangos de código del pin. El reporte distingue ocurrencias de citas de rangos únicos. Las referencias históricas usan metadatos de archivos recuperados por SHA; CI observada se limita a estados/jobs. Esta verificación editorial no certifica semántica completa, exportaciones, compilación ni runtime.
+
+Cuatro submódulos no disponibles localmente; diferencia Android excluida de afirmaciones; offsets/STATIC_ASSERT históricos no miden ABI Windows. Pendientes concretos en OPEN_QUESTIONS, incluidos callbacks Item/Message, fallos de sidecar, teardown de perfiles, símbolos binarios y profundidad de modelos/HUD/clima/NPC/minijuegos.
+
+Todas las fichas recuperadas de subtareas están integradas en los checkpoints remotos; no se computa un mensaje finished como artefacto. Sin pruebas nuevas de Windows/juego ni mods producidos.
+
+## Tiempo observado
+
+Continuación observada desde 2026-10-21T13:48:44Z hasta 2026-10-21T14:15:46Z antes de publicar: 1622 segundos de sesión. No equivale a CPU ni a suma de trabajo paralelo; tiempo efectivo de investigación N/D. La pausa entre sesiones se excluye. La sesión anterior duró aproximadamente 13 minutos según el encargo, sin añadirla como horas medidas.

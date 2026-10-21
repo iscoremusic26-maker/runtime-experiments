@@ -93,3 +93,7 @@ python DUSKLIGHT_RESEARCH/tools/inventory.py RUTA_FUENTE RUTA_SALIDA_SEPARADA
 ```
 
 Los conteos son de archivos existentes del árbol principal; no equivalen a archivos compilados para Windows. `files.cmake`, los CMake y las condiciones TARGET_PC deben consultarse para determinar participación en un target. La utilidad rechaza una salida situada dentro de la fuente analizada.
+
+## Precisiones posteriores a R00
+
+[INVENTORY_ERRATA.json](INVENTORY_ERRATA.json) corrige siete clasificaciones nominales sin reejecutar ni duplicar FILE_INVENTORY.tsv. Los 14879 archivos de assets/ incluyen 14876 encabezados y tres imágenes de branding; el clasificador inicial llamó encabezados a las tres imágenes. MemCard tiene cuatro rutas que pertenecen al puente de guardado. Las rutas y conteos totales de R00 se conservan. El sistema semántico y sus dependencias se consultan en SYSTEM_INDEX; una etiqueta automática no acredita comprensión.

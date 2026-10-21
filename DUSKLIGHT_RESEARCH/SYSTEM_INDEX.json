@@ -27,6 +27,42 @@
       "Más familias AI/NPC",
       "Cancelación/unload asíncrono",
       "Ownership de actores originales"
+    ],
+    "paths": [
+      "include/d/actor/d_a_npc_aru.h",
+      "include/d/actor/d_a_npc_shad.h",
+      "sdk/include/mods/svc/actor.h",
+      "src/d/actor/d_a_e_tt.cpp",
+      "src/d/actor/d_a_npc.cpp",
+      "src/d/actor/d_a_npc4.cpp",
+      "src/d/actor/d_a_npc_aru.cpp",
+      "src/d/actor/d_a_npc_shad.cpp",
+      "src/d/d_path.cpp",
+      "src/dusk/mods/svc/actor.cpp",
+      "src/f_op/f_op_actor.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/f_pc/f_pc_deletor.cpp",
+      "src/f_pc/f_pc_executor.cpp",
+      "src/f_pc/f_pc_manager.cpp"
+    ],
+    "dependencies": [
+      "runtime_and_lifecycle",
+      "stages_rooms_layers",
+      "resources_archives_overlays",
+      "movement_physics_collision",
+      "flags_events_progression"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PLAYER-019",
+      "PLAYER-020",
+      "PLAYER-021",
+      "PLAYER-024",
+      "PLAYER-025",
+      "PLAYER-026",
+      "PLAYER-027",
+      "ROOT-004",
+      "SDK-001"
     ]
   },
   {
@@ -50,6 +86,30 @@
       "JAudio threads completos",
       "wave/JAISoundID mapping GZ2E01",
       "runtime audio/particles"
+    ],
+    "paths": [
+      "sdk/include/mods/svc/audio_res.h",
+      "src/Z2AudioLib/Z2AudioMgr.cpp",
+      "src/Z2AudioLib/Z2SeMgr.cpp",
+      "src/d/d_particle.cpp",
+      "src/dusk/mods/svc/audio_res/audio_res.cpp",
+      "src/dusk/mods/svc/audio_res/bst.cpp",
+      "src/dusk/mods/svc/audio_res/wsys.cpp"
+    ],
+    "dependencies": [
+      "resources_archives_overlays",
+      "memory_ownership",
+      "stages_rooms_layers"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PRES-022",
+      "PRES-023",
+      "PRES-024",
+      "PRES-025",
+      "PRES-027",
+      "PRES-028",
+      "SDK-002"
     ]
   },
   {
@@ -72,6 +132,33 @@
       "DX12 runtime",
       "Aurora/Dawn pin internals",
       "cámaras cinematográficas especializadas"
+    ],
+    "paths": [
+      "sdk/include/mods/svc/camera.h",
+      "sdk/include/mods/svc/gfx.h",
+      "src/d/d_camera.cpp",
+      "src/dusk/mods/svc/camera.cpp",
+      "src/dusk/mods/svc/gfx.cpp",
+      "src/dusk/presentation.cpp",
+      "src/m_Do/m_Do_graphic.cpp"
+    ],
+    "dependencies": [
+      "models_animations_materials",
+      "sdk_services",
+      "runtime_and_lifecycle"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "CALLBACK-003",
+      "PRES-007",
+      "PRES-008",
+      "PRES-009",
+      "PRES-010",
+      "PRES-011",
+      "PRES-012",
+      "PRES-013",
+      "SDK-003",
+      "SDK-009"
     ]
   },
   {
@@ -96,6 +183,30 @@
       "Todos los builtins y bindings Luau",
       "THP/staffroll y event_list/STB por recurso no auditados",
       "Detach con conversación activa no probado"
+    ],
+    "paths": [
+      "sdk/include/mods/svc/flow.h",
+      "sdk/include/mods/svc/message.h",
+      "src/d/d_demo.cpp",
+      "src/d/d_event.cpp",
+      "src/d/d_event_manager.cpp",
+      "src/d/d_msg_flow.cpp",
+      "src/d/d_s_play.cpp",
+      "src/dusk/mods/svc/flow.cpp"
+    ],
+    "dependencies": [
+      "flags_events_progression",
+      "resources_archives_overlays",
+      "sdk_services"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "SDK-006",
+      "SDK-016",
+      "WORLD-018",
+      "WORLD-023",
+      "WORLD-026",
+      "WORLD-027"
     ]
   },
   {
@@ -107,6 +218,28 @@
     ],
     "pending": [
       "Disponibilidad binaria Windows y runtime no comprobados."
+    ],
+    "paths": [
+      "sdk/include/mods/api.h",
+      "sdk/include/mods/svc/hook.h",
+      "sdk/include/mods/svc/hook.hpp",
+      "src/dusk/mods/manifest.cpp",
+      "src/dusk/mods/svc/hook.cpp"
+    ],
+    "dependencies": [
+      "sdk_services",
+      "runtime_and_lifecycle"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "HOOK-003",
+      "HOOK-004",
+      "HOOK-005",
+      "HOOK-006",
+      "HOOK-007",
+      "HOOK-008",
+      "HOOK-009",
+      "SDK-010"
     ]
   },
   {
@@ -126,6 +259,27 @@
       "fonts/J2D lifecycle",
       "todos los menús",
       "charset BMG"
+    ],
+    "paths": [
+      "sdk/include/mods/svc/message.h",
+      "sdk/include/mods/svc/ui.h",
+      "sdk/include/mods/svc/window.h",
+      "src/d/d_meter2.cpp",
+      "src/dusk/language.cpp",
+      "src/dusk/mods/svc/flow.cpp"
+    ],
+    "dependencies": [
+      "resources_archives_overlays",
+      "sdk_services",
+      "inventory_equipment"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PRES-019",
+      "PRES-020",
+      "PRES-021",
+      "SDK-023",
+      "SDK-025"
     ]
   },
   {
@@ -148,6 +302,27 @@
       "Todos los handlers/checks/ownership y persistencia",
       "Prioridad y committed checks completos",
       "HUD selección herramientas y bottle/bomb-bag completos"
+    ],
+    "paths": [
+      "sdk/include/mods/svc/flow.h",
+      "sdk/include/mods/svc/item.h",
+      "src/d/d_item.cpp",
+      "src/d/d_save.cpp",
+      "src/dusk/mods/item_checks.cpp",
+      "src/dusk/mods/item_gives.cpp",
+      "src/dusk/mods/svc/item.cpp"
+    ],
+    "dependencies": [
+      "flags_events_progression",
+      "cutscenes_dialogue",
+      "actors_ai_npcs"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "SDK-014",
+      "WORLD-019",
+      "WORLD-020",
+      "WORLD-021"
     ]
   },
   {
@@ -168,6 +343,26 @@
       "formatos BMD/BCK completos",
       "morf per actor",
       "skin/LOD/platform runtime"
+    ],
+    "paths": [
+      "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "sdk/include/mods/svc/interp.h",
+      "src/d/d_resorce.cpp",
+      "src/dusk/mods/svc/texture.cpp",
+      "src/m_Do/m_Do_ext.cpp"
+    ],
+    "dependencies": [
+      "resources_archives_overlays",
+      "memory_ownership",
+      "cameras_rendering"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PRES-015",
+      "PRES-016",
+      "PRES-017",
+      "SDK-013"
     ]
   },
   {
@@ -190,6 +385,31 @@
       "DVD scheduler completo",
       "Aurora internals",
       "reload real con consumidores vivos"
+    ],
+    "paths": [
+      "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
+      "libs/JSystem/src/JKernel/JKRArchivePub.cpp",
+      "sdk/include/mods/svc/overlay.h",
+      "sdk/include/mods/svc/resource.h",
+      "sdk/include/mods/svc/texture.h",
+      "src/d/d_resorce.cpp",
+      "src/dusk/mods/svc/overlay.cpp",
+      "src/dusk/mods/svc/resource.cpp"
+    ],
+    "dependencies": [
+      "memory_ownership",
+      "runtime_and_lifecycle"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PRES-001",
+      "PRES-002",
+      "PRES-003",
+      "PRES-004",
+      "PRES-005",
+      "SDK-018",
+      "SDK-019",
+      "SDK-022"
     ]
   },
   {
@@ -201,6 +421,45 @@
     ],
     "pending": [
       "Disponibilidad binaria Windows y runtime no comprobados."
+    ],
+    "paths": [
+      "sdk/include/mods/runtime.h",
+      "sdk/include/mods/svc/game.h",
+      "sdk/include/mods/svc/game_mode.h",
+      "sdk/include/mods/svc/host.h",
+      "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/loader/depgraph.cpp",
+      "src/dusk/mods/loader/loader.cpp",
+      "src/dusk/mods/loader/natives.cpp",
+      "src/dusk/mods/svc/actor.cpp",
+      "src/dusk/mods/svc/gfx.cpp",
+      "src/f_ap/f_ap_game.cpp",
+      "src/f_pc/f_pc_manager.cpp"
+    ],
+    "dependencies": [
+      "sdk_services",
+      "hooking_abi"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "ARCH-001",
+      "CALLBACK-002",
+      "HOOK-013",
+      "HOOK-015",
+      "HOOK-016",
+      "HOOK-017",
+      "HOOK-018",
+      "HOOK-019",
+      "HOOK-020",
+      "HOOK-024",
+      "HOOK-029",
+      "HOOK-030",
+      "PLAYER-019",
+      "SDK-007",
+      "SDK-008",
+      "SDK-011",
+      "WORLD-009",
+      "ARCH-001"
     ]
   },
   {
@@ -224,6 +483,29 @@
       "Migración legacy de sidecars no auditada completa",
       "Crash/fallo real I/O y atomic_replace externo",
       "Game-mode save_name y boot/quickload completo"
+    ],
+    "paths": [
+      "docs/modding.md",
+      "include/d/d_save.h",
+      "sdk/include/mods/svc/save.h",
+      "src/d/d_file_select.cpp",
+      "src/d/d_menu_save.cpp",
+      "src/d/d_save.cpp",
+      "src/dusk/autosave.cpp",
+      "src/dusk/mods/svc/save.cpp"
+    ],
+    "dependencies": [
+      "sdk_services",
+      "runtime_and_lifecycle"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "CALLBACK-001",
+      "SDK-020",
+      "WORLD-010",
+      "WORLD-012",
+      "WORLD-013",
+      "WORLD-017"
     ]
   },
   {
@@ -235,6 +517,26 @@
     ],
     "pending": [
       "Disponibilidad binaria Windows y runtime no comprobados."
+    ],
+    "paths": [
+      "sdk/include/mods/api.h",
+      "sdk/include/mods/svc/config.h",
+      "sdk/include/mods/svc/file.h",
+      "sdk/include/mods/svc/http.h",
+      "sdk/include/mods/svc/log.h",
+      "sdk/include/mods/svc/net.h",
+      "sdk/include/mods/svc/websocket.h"
+    ],
+    "dependencies": [],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "HOOK-002",
+      "SDK-004",
+      "SDK-005",
+      "SDK-012",
+      "SDK-015",
+      "SDK-017",
+      "SDK-024"
     ]
   },
   {
@@ -263,6 +565,38 @@
       "Validación Windows de símbolos y recursos GZ2E01",
       "Navegación/geometry/editing no validado",
       "Discrepancia sizeof TGSC 0x24 frente a StageService 0x23: confirmar uso mod sin alterar host/SDK"
+    ],
+    "paths": [
+      "docs/modding.md",
+      "include/d/d_stage.h",
+      "sdk/include/mods/svc/stage.h",
+      "src/d/d_bg_w_kcol.cpp",
+      "src/d/d_com_inf_game.cpp",
+      "src/d/d_resorce.cpp",
+      "src/d/d_s_play.cpp",
+      "src/d/d_s_room.cpp",
+      "src/d/d_stage.cpp",
+      "src/dusk/mods/svc/stage.cpp",
+      "src/f_pc/f_pc_manager.cpp"
+    ],
+    "dependencies": [
+      "resources_archives_overlays",
+      "flags_events_progression",
+      "runtime_and_lifecycle"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "SDK-021",
+      "WORLD-001",
+      "WORLD-002",
+      "WORLD-003",
+      "WORLD-004",
+      "WORLD-005",
+      "WORLD-007",
+      "WORLD-008",
+      "WORLD-017",
+      "WORLD-030",
+      "WORLD-033"
     ]
   },
   {
@@ -287,6 +621,26 @@
       "Índice semántico de todos los flags",
       "Zone/one-zone y dungeon init/cleanup completos",
       "Dependencias de storyline completas y rollback persistente"
+    ],
+    "paths": [
+      "include/d/d_save.h",
+      "sdk/include/mods/svc/flow.h",
+      "sdk/include/mods/svc/game.h",
+      "src/d/d_com_inf_game.cpp",
+      "src/d/d_event.cpp",
+      "src/d/d_msg_flow.cpp",
+      "src/d/d_save.cpp",
+      "src/d/d_stage.cpp",
+      "src/dusk/mods/svc/flow.cpp"
+    ],
+    "dependencies": [
+      "save_load",
+      "stages_rooms_layers"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "WORLD-015",
+      "WORLD-016"
     ]
   },
   {
@@ -307,6 +661,23 @@
       "cCcS completo",
       "Formatos/cargadores de geometría",
       "Frecuencias runtime y fronteras de escena"
+    ],
+    "paths": [
+      "src/d/actor/d_a_alink.cpp",
+      "src/d/d_bg_s_acch.cpp",
+      "src/d/d_bg_w_kcol.cpp",
+      "src/d/d_cc_s.cpp",
+      "src/d/d_s_play.cpp",
+      "src/f_op/f_op_actor_mng.cpp"
+    ],
+    "dependencies": [],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PLAYER-010",
+      "PLAYER-011",
+      "PLAYER-012",
+      "PLAYER-034",
+      "WORLD-031"
     ]
   },
   {
@@ -334,6 +705,38 @@
       "Procedimientos completos y herramientas",
       "Transformación y controles en Windows",
       "Manifest y resolución de hooks"
+    ],
+    "paths": [
+      "docs/modding.md",
+      "include/f_op/f_op_actor.h",
+      "include/global.h",
+      "libs/JSystem/src/JUtility/JUTGamePad.cpp",
+      "sdk/include/mods/svc/game.h",
+      "sdk/include/mods/svc/hook.hpp",
+      "src/d/actor/d_a_alink.cpp",
+      "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_alink_wolf.inc",
+      "src/dusk/action_bindings.cpp",
+      "src/dusk/action_bindings.h",
+      "src/m_Do/m_Do_controller_pad.cpp"
+    ],
+    "dependencies": [
+      "actors_ai_npcs",
+      "movement_physics_collision",
+      "cameras_rendering",
+      "flags_events_progression"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PLAYER-001",
+      "PLAYER-002",
+      "PLAYER-003",
+      "PLAYER-004",
+      "PLAYER-005",
+      "PLAYER-006",
+      "PLAYER-007",
+      "PLAYER-008",
+      "PLAYER-034"
     ]
   },
   {
@@ -353,6 +756,24 @@
       "Todos los consumidores y excepciones de daño",
       "Bosses y proyectiles",
       "Coexistencia runtime"
+    ],
+    "paths": [
+      "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_e_tt.cpp",
+      "src/d/d_cc_s.cpp",
+      "src/d/d_cc_uty.cpp"
+    ],
+    "dependencies": [
+      "movement_physics_collision",
+      "actors_ai_npcs",
+      "audio_particles_effects"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PLAYER-014",
+      "PLAYER-015",
+      "PLAYER-016",
+      "PLAYER-017"
     ]
   },
   {
@@ -377,6 +798,31 @@
       "Pesca y minijuegos completos",
       "Puzzles por familia",
       "Recompensas/persistencia"
+    ],
+    "paths": [
+      "src/d/actor/d_a_canoe.cpp",
+      "src/d/actor/d_a_cow.cpp",
+      "src/d/actor/d_a_horse.cpp",
+      "src/d/actor/d_a_mg_fish.cpp",
+      "src/d/actor/d_a_mg_fshop.cpp",
+      "src/d/actor/d_a_mg_rod.cpp",
+      "src/d/actor/d_a_midna.cpp",
+      "src/d/actor/d_a_obj_lv6Lblock.cpp",
+      "src/d/actor/d_a_obj_swspinner.cpp"
+    ],
+    "dependencies": [
+      "actors_ai_npcs",
+      "player_and_controls",
+      "flags_events_progression"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PLAYER-028",
+      "PLAYER-029",
+      "PLAYER-030",
+      "PLAYER-031",
+      "PLAYER-032",
+      "PLAYER-033"
     ]
   },
   {
@@ -396,6 +842,24 @@
       "lifecycle proceso kankyo completo",
       "agua/clima todas regiones",
       "weather tags y calendarios"
+    ],
+    "paths": [
+      "src/d/d_kankyo.cpp",
+      "src/d/d_kankyo_wether.cpp",
+      "src/d/d_kyeff.cpp",
+      "src/d/d_kyeff2.cpp"
+    ],
+    "dependencies": [
+      "stages_rooms_layers",
+      "save_load",
+      "audio_particles_effects"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "PRES-029",
+      "PRES-030",
+      "PRES-031",
+      "PRES-033"
     ]
   },
   {
@@ -415,6 +879,23 @@
     "pending": [
       "Disposers/árbol completo de heaps, race/shutdown y backends externos.",
       "Exports/allocator CRT de DLL Windows y lifetime con consumidores reales."
+    ],
+    "paths": [
+      "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
+      "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "src/dusk/OSThread.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/m_Do/m_Do_ext.cpp"
+    ],
+    "dependencies": [
+      "runtime_and_lifecycle"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "ROOT-001",
+      "ROOT-004",
+      "ROOT-005",
+      "ROOT-006"
     ]
   },
   {
@@ -431,7 +912,15 @@
     ],
     "pending": [
       "Implementación Aurora/Dawn/DX12 y dependencias transitivas ausentes."
-    ]
+    ],
+    "paths": [
+      "CMakeLists.txt",
+      "sdk/CMakeLists.txt",
+      "src/dusk/OSThread.cpp"
+    ],
+    "dependencies": [],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": []
   },
   {
     "system_id": "prior_research",
@@ -456,6 +945,32 @@
       "Canary: no se examinó log original ni causa/resolución.",
       "No se reprodujo CI ni descargaron binarios ni paquetes.",
       "Auditorías binarias y runtime humanos previos permanecen reportes históricos."
+    ],
+    "paths": [
+      "cmake/ModSDK.cmake",
+      "sdk/include/mods/api.h",
+      "sdk/include/mods/meta.hpp",
+      "sdk/include/mods/svc/stage.h",
+      "src/Z2AudioLib/Z2AudioMgr.cpp",
+      "src/Z2AudioLib/Z2SceneMgr.cpp",
+      "src/dusk/mods/svc/registry.cpp",
+      "src/dusk/mods/svc/stage.cpp",
+      "src/m_Do/m_Do_audio.cpp"
+    ],
+    "dependencies": [],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "HIST-001",
+      "HIST-002",
+      "HIST-003",
+      "HIST-004",
+      "HIST-005",
+      "HIST-006",
+      "HIST-007",
+      "HIST-008",
+      "HIST-009",
+      "HIST-010",
+      "HIST-011"
     ]
   },
   {
@@ -475,6 +990,130 @@
     ],
     "pending": [
       "Item/Message y garantías explícitas de fin de callbacks; sin generalización de concurrencia."
+    ],
+    "paths": [
+      "sdk/include/mods/svc/camera.h",
+      "sdk/include/mods/svc/host.h",
+      "sdk/include/mods/svc/save.h",
+      "src/dusk/mods/svc/camera.cpp",
+      "src/dusk/mods/svc/host.cpp",
+      "src/dusk/mods/svc/save.cpp"
+    ],
+    "dependencies": [
+      "sdk_services",
+      "save_load",
+      "runtime_and_lifecycle",
+      "cameras_rendering"
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": [
+      "CALLBACK-001",
+      "CALLBACK-002"
     ]
+  },
+  {
+    "system_id": "build_tooling",
+    "coverage": "INVENTARIED",
+    "scope": "Rutas nominales de soporte; no se acredita revisión integral de implementaciones.",
+    "reports": [
+      "SYSTEM_DEPENDENCIES.md",
+      "INVENTORY.md"
+    ],
+    "paths": [
+      "CMakeLists.txt",
+      "CMakePresets.json",
+      "cmake/",
+      "tools/",
+      "ci/",
+      ".github/"
+    ],
+    "dependencies": [],
+    "pending": [
+      "Lectura por mecanismo según prioridad; sin contarlo como sistema estudiado."
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": []
+  },
+  {
+    "system_id": "documentation",
+    "coverage": "INVENTARIED",
+    "scope": "Rutas nominales de soporte; no se acredita revisión integral de implementaciones.",
+    "reports": [
+      "SYSTEM_DEPENDENCIES.md",
+      "INVENTORY.md"
+    ],
+    "paths": [
+      "docs/",
+      "README.md"
+    ],
+    "dependencies": [],
+    "pending": [
+      "Lectura por mecanismo según prioridad; sin contarlo como sistema estudiado."
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": []
+  },
+  {
+    "system_id": "game_support",
+    "coverage": "INVENTARIED",
+    "scope": "Rutas nominales de soporte; no se acredita revisión integral de implementaciones.",
+    "reports": [
+      "SYSTEM_DEPENDENCIES.md",
+      "INVENTORY.md"
+    ],
+    "paths": [
+      "src/helpers/",
+      "include/helpers/",
+      "include/d/dolzel.pch"
+    ],
+    "dependencies": [],
+    "pending": [
+      "Lectura por mecanismo según prioridad; sin contarlo como sistema estudiado."
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": []
+  },
+  {
+    "system_id": "port_support",
+    "coverage": "INVENTARIED",
+    "scope": "Rutas nominales de soporte; no se acredita revisión integral de implementaciones.",
+    "reports": [
+      "SYSTEM_DEPENDENCIES.md",
+      "INVENTORY.md"
+    ],
+    "paths": [
+      "src/dusk/achievements.cpp",
+      "src/dusk/config.cpp",
+      "src/dusk/discord_presence.cpp",
+      "src/dusk/livesplit.cpp",
+      "src/dusk/iso_validate.cpp"
+    ],
+    "dependencies": [],
+    "pending": [
+      "Lectura por mecanismo según prioridad; sin contarlo como sistema estudiado."
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": []
+  },
+  {
+    "system_id": "external_dependencies",
+    "coverage": "INVENTARIED",
+    "scope": "Rutas nominales de soporte; no se acredita revisión integral de implementaciones.",
+    "reports": [
+      "SYSTEM_DEPENDENCIES.md",
+      "INVENTORY.md"
+    ],
+    "paths": [
+      "extern/aurora",
+      "extern/borealis",
+      "mods/cosmetics",
+      "mods/randomizer"
+    ],
+    "dependencies": [],
+    "pending": [
+      "Elegir mecanismo transversal si resulta necesario; contenidos de gitlinks no leídos."
+    ],
+    "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
+    "evidence_ids": []
   }
 ]

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R04",
+  "checkpoint": "CP-R05",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -6516,6 +6516,33 @@
       "limitations": [
         "Inspección estática; no se reprodujo reentrancia, concurrencia ni fallo runtime.",
         "No se generaliza a todos los servicios ni se afirma descarga de DLL dentro de callback."
+      ]
+    },
+    {
+      "id": "ARCH-001",
+      "claim": "En el camino normal sin shutdown/DVD error, fpcM_Management procesa borrado condicionado, prioridades y creación antes de pre-execute, ejecución y draw; captura y separatePresentation alteran rutas. fapGm_Execute llama antes al tick del loader.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_manager.cpp",
+          "line_start": 52,
+          "line_end": 118,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_manager.cpp#L52-L118"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 807,
+          "line_end": 843,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L807-L843"
+        }
+      ],
+      "limitations": [
+        "El orden describe un camino con gates explícitos, no todos los frames ni todas las condiciones de pausa/captura.",
+        "No se ejecutó scheduler, juego ni GPU."
       ]
     }
   ],

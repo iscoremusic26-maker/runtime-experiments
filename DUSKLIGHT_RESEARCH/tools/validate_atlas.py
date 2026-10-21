@@ -21,9 +21,12 @@ def main():
     evidence=ledger['evidence'];ids={x['id'] for x in evidence};sids={x['system_id'] for x in systems}
     assert len(ids)==len(evidence),'Duplicate evidence ID'
     assert len(sids)==len(systems),'Duplicate system ID'
+    for x in systems:
+        assert set(x.get('dependencies',[]))<=sids,('Missing dependency',x['system_id'])
+        assert set(x.get('evidence_ids',[]))<=ids,('Missing system evidence',x['system_id'])
     remote={(x['repo'],x['commit'],x['path']):x['line_count'] for x in ledger.get('remote_source_metadata',[])}
     for x in ledger.get('historical_ci_observed',[]):remote[(x['repo'],x['head_sha'],x['path'])]=x['workflow_line_count']
-    counts={};refs=0;unknown=set()
+    counts={};refs=0;unique_ranges=set();unknown=set()
     def check(q):
         nonlocal refs
         key=(q['repo'],q['commit'],q['path'])
@@ -35,7 +38,7 @@ def main():
         elif key in remote:n=remote[key]
         else:unknown.add(key);return
         assert 1<=q['line_start']<=q['line_end']<=n,(q,n)
-        refs+=1
+        refs+=1;unique_ranges.add((*key,q['line_start'],q['line_end']))
     for x in evidence:
         assert x['level'] in LEVELS,x['id']
         for q in x['sources']:check(q)
@@ -55,6 +58,8 @@ def main():
         if p.suffix=='.json':parse_json(p)
         if p.suffix!='.md':continue
         text=p.read_text()
+        for evidence_id in re.findall(r'\b(?:SDK|HOOK|WORLD|PLAYER|PRES|ROOT|HIST|CALLBACK|ARCH)-\d{3}\b',text):
+            assert evidence_id in ids,('Unknown evidence ID in Markdown',name,evidence_id)
         for target in re.findall(r'\]\(([^)]+)\)',text):
             if '://' in target or target.startswith('#'):continue
             dest=(p.parent/urllib.parse.unquote(target.split('#')[0])).resolve()
@@ -63,7 +68,7 @@ def main():
         for repo,commit,path,a,b in re.findall(r'https://github.com/([^/]+/[^/]+)/blob/([0-9a-f]{40})/([^#)]+)#L(\d+)(?:-L(\d+))?',text):
             check(dict(repo=repo,commit=commit,path=urllib.parse.unquote(path),line_start=int(a),line_end=int(b or a)))
     assert not unknown,('Remote source metadata missing; fetch exact cited file',sorted(unknown))
-    result=dict(checkpoint=ledger['checkpoint'],evidence=len(evidence),symbol_records=len(symbols),systems=len(systems),validated_code_ranges=refs,cited_upstream_files=len(counts),checked_atlas_files=len(paths),runtime_tested=False,scope='Editorial/reference validation only; does not certify semantic correctness, exports, build or game runtime.')
+    result=dict(checkpoint=ledger['checkpoint'],evidence=len(evidence),symbol_records=len(symbols),systems=len(systems),validated_code_range_occurrences=refs,unique_code_ranges=len(unique_ranges),cited_upstream_files=len(counts),checked_atlas_files=len(paths),runtime_tested=False,scope='Editorial/reference validation only; duplicate citations count as occurrences. Does not certify semantic correctness, exports, build or game runtime.')
     (atlas/'VALIDATION_REPORT.json').write_text(json.dumps(result,ensure_ascii=False,indent=2)+'\n')
     print(json.dumps(result,ensure_ascii=False))
 if __name__=='__main__':main()

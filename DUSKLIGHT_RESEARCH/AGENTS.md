@@ -14,3 +14,5 @@ Estas instrucciones son locales a `DUSKLIGHT_RESEARCH/`. No garantizan carga aut
 10. Los scripts deben escribir fuera de la fuente analizada y emitir metadatos. No ejecutar descargas o builds como efecto colateral de un índice.
 
 Los archivos históricos del repositorio tienen contexto y permisos de sus propios encargos. En este atlas se reutilizan solamente descubrimientos generales con procedencia precisa, sin reabrir proyectos ni modificar checkpoints cerrados.
+
+Continuidad desde CP-R01: comprobar el HEAD remoto actual y conservar esta misma rama. Publicar contribuciones útiles en intervalos cortos (aproximadamente 3–5 minutos activos) antes de abrir otra lectura costosa; no repetir el inventario ni hashes salvo necesidad concreta. No crear un PR nuevo sin petición posterior. Un resultado de subagente cuenta únicamente tras integrar su contenido y comprobar el commit remoto; limitar lecturas paralelas a 2–3. La pausa entre sesiones no se registra como investigación.

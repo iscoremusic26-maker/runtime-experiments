@@ -23,3 +23,9 @@ Integrados13 informes recuperados de jugador/actores/presentación/memoria/hist�
 ## CP-R04 — cancelación de callbacks y precisión de citas
 
 Nueva lectura transversal: Save copia registros completos, Host revalida handles y Camera revalida handle+owner activo. Se documenta inferencia condicionada de userdata vencida sin afirmar fallo runtime. Cuatro evidencias y dos slots nuevos; corregido anclaje histórico CP00 de L15 a L12 tras consultar archivo exacto.
+
+## CP-R05 — síntesis, dependencias y handoff
+
+Añadidos ARCHITECTURE, SYSTEM_DEPENDENCIES, RISK_REGISTER, OPEN_QUESTIONS y métricas. ARCH-001 contrasta el orden del scheduler con sus gates. SYSTEM_INDEX incluye rutas, dependencias y estados; soporte inventariado se mantiene separado de áreas leídas. Siete erratas nominales corrigen branding/MemCard sin duplicar FILE_INVENTORY. Se precisa la diferencia entre ocurrencias y rangos únicos de referencias, y la fila AudioRes no afirma sync BST por frame frente a PRES-024. Índice maestro y handoff reescritos alrededor del estado publicado.
+
+Esta continuación tuvo checkpoints cortos R01, R02/R02a, R03, R04 y R05, sin crear PR ni modificar producción. El intervalo inactivo entre sesiones no cuenta como investigación. Ver RESEARCH_METRICS para tiempo de sesión observado y límites de medición.

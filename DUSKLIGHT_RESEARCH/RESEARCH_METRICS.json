@@ -1,0 +1,50 @@
+{
+  "checkpoint": "CP-R05",
+  "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "baseline_inventory": {
+    "checkpoint": "CP-R00",
+    "files": 19367,
+    "directories_with_descendant_files": 488,
+    "reinventoried_in_this_continuation": false
+  },
+  "canonical_system_entries": 28,
+  "system_coverage_counts": {
+    "CROSSCHECKED": 18,
+    "READ": 5,
+    "INVENTARIED": 5
+  },
+  "system_reports": 19,
+  "sdk_public_c_service_contracts": 25,
+  "sdk_module_candidates": 26,
+  "sdk_public_function_slots_located": 209,
+  "sdk_all_slots_semantically_audited": false,
+  "evidence_records": 184,
+  "evidence_levels": {
+    "STATIC_CROSSCHECKED": 124,
+    "SOURCE_OBSERVED": 49,
+    "DOC_CONTRACT": 5,
+    "STATIC_INFERRED": 4,
+    "CI_OBSERVED": 2
+  },
+  "symbol_records": 202,
+  "symbol_integration_classification": {
+    "OFFICIAL_SERVICE": 61,
+    "POTENTIAL_REQUIRES_VERIFICATION": 136,
+    "TYPED_HOOK": 5
+  },
+  "classification_counts_are_not_runtime_tests": true,
+  "runtime_integration_tests": 0,
+  "game_executed": false,
+  "all_symbol_call_chains_studied": false,
+  "unresolved_question_groups": 14,
+  "missing_submodules": 4,
+  "session_timing": {
+    "current_session_started_utc": "2026-10-21T13:48:44Z",
+    "measured_before_publish_utc": "2026-10-21T14:15:46Z",
+    "observed_session_elapsed_seconds": 1622,
+    "effective_research_cpu_seconds": null,
+    "previous_session_minutes": "Aproximadamente 13, según encargo de continuidad; no medido de nuevo.",
+    "paused_interval_excluded": true,
+    "note": "Tiempo de sesión observado, no horas efectivas ni suma de tiempo de agentes. Sin ejecución de fondo."
+  }
+}

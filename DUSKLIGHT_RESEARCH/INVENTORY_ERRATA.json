@@ -1,0 +1,50 @@
+{
+  "applies_to_checkpoint": "CP-R00",
+  "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "policy": "Aplicar estas excepciones al consultar FILE_INVENTORY.tsv; se conserva el índice original y no se duplica.",
+  "corrections": [
+    {
+      "path": "assets/aurora-powered.png",
+      "origin": "port_branding_assets",
+      "kind": "resource",
+      "system_id": "hud_ui_text",
+      "reason": "Imagen de branding, no encabezado regional."
+    },
+    {
+      "path": "assets/clion.png",
+      "origin": "port_branding_assets",
+      "kind": "resource",
+      "system_id": "hud_ui_text",
+      "reason": "Imagen de branding, no encabezado regional."
+    },
+    {
+      "path": "assets/org-icon.svg",
+      "origin": "port_branding_assets",
+      "kind": "resource",
+      "system_id": "hud_ui_text",
+      "reason": "Imagen de branding, no encabezado regional."
+    },
+    {
+      "path": "src/m_Do/m_Do_MemCard.cpp",
+      "system_id": "save_load",
+      "reason": "Puente MemCard; clasificación nominal original lo dejó en runtime."
+    },
+    {
+      "path": "src/m_Do/m_Do_MemCardRWmng.cpp",
+      "system_id": "save_load",
+      "reason": "Puente MemCard; clasificación nominal original lo dejó en runtime."
+    },
+    {
+      "path": "include/m_Do/m_Do_MemCard.h",
+      "system_id": "save_load",
+      "reason": "Puente MemCard; clasificación nominal original lo dejó en runtime."
+    },
+    {
+      "path": "include/m_Do/m_Do_MemCardRWmng.h",
+      "system_id": "save_load",
+      "reason": "Puente MemCard; clasificación nominal original lo dejó en runtime."
+    }
+  ],
+  "corrected_asset_header_count": 14876,
+  "asset_branding_files": 3
+}
