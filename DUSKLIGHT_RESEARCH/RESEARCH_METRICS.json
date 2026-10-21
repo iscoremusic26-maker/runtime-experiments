@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R22",
+  "checkpoint": "CP-R23",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -18,18 +18,18 @@
   "sdk_module_candidates": 26,
   "sdk_public_function_slots_located": 209,
   "sdk_all_slots_semantically_audited": false,
-  "evidence_records": 260,
+  "evidence_records": 266,
   "evidence_levels": {
-    "STATIC_CROSSCHECKED": 195,
+    "STATIC_CROSSCHECKED": 200,
     "SOURCE_OBSERVED": 49,
     "DOC_CONTRACT": 5,
-    "STATIC_INFERRED": 9,
+    "STATIC_INFERRED": 10,
     "CI_OBSERVED": 2
   },
-  "symbol_records": 263,
+  "symbol_records": 267,
   "symbol_integration_classification": {
     "OFFICIAL_SERVICE": 66,
-    "POTENTIAL_REQUIRES_VERIFICATION": 192,
+    "POTENTIAL_REQUIRES_VERIFICATION": 196,
     "TYPED_HOOK": 5
   },
   "classification_counts_are_not_runtime_tests": true,
@@ -40,29 +40,25 @@
   "missing_submodules": 4,
   "session_timing": {
     "current_session_started_utc": null,
-    "measured_before_publish_utc": "2026-10-21T19:27:08.408844+00:00",
+    "measured_before_publish_utc": "2026-10-21T20:04:08.035737+00:00",
     "observed_session_elapsed_seconds": null,
     "effective_research_cpu_seconds": null,
     "paused_interval_excluded": true,
     "note": "Duración de esta continuación N/D; no sumar sesiones previas ni pausas."
   },
   "current_session_baseline": {
-    "commit": "1ca9ccbd38dc6e266e4ba39d9a15680caa6f9f43",
-    "evidence": 237,
-    "symbols": 246,
+    "commit": "105ea48f71ea29909c0700a7376b88f2d6da548f",
+    "evidence": 260,
+    "symbols": 263,
     "atlas_files": 48
   },
   "net_added_this_session": {
-    "evidence": 23,
-    "symbols": 17,
+    "evidence": 6,
+    "symbols": 4,
     "new_documents": 0
   },
   "checkpoints_this_session": [
-    "CP-R18",
-    "CP-R19",
-    "CP-R20",
-    "CP-R21",
-    "CP-R22"
+    "CP-R23"
   ],
   "atlas_files": 48
 }

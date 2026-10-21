@@ -7647,5 +7647,124 @@
     "evidence_ids": [
       "WORLD-040"
     ]
+  },
+  {
+    "symbol": "daTagMyna2_c::execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_tag_myna2.cpp",
+      "line_start": 20,
+      "line_end": 50,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_tag_myna2.cpp#L20-L50"
+    },
+    "signature": "s32 daTagMyna2_c::execute()",
+    "purpose": "Gates y solicitud tipo1 con latch de switch en aceptación",
+    "dependencies": [
+      "fopAcM_create",
+      "daNpc_myna2_c::waitHovering"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "No evento; switchOFF; XZ<extent; timer0"
+    ],
+    "risks": [
+      "No observa completar petición ni conserva ID"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-046",
+      "PLAYER-051"
+    ]
+  },
+  {
+    "symbol": "daNpc_myna2_c::waitHovering",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc_myna2.cpp",
+      "line_start": 821,
+      "line_end": 855,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc_myna2.cpp#L821-L855"
+    },
+    "signature": "int daNpc_myna2_c::waitHovering(void*)",
+    "purpose": "Acción tipo1, FIRST_TALK y salida por distancia",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tipo1; acción normal; gates de lobo/labels/posición"
+    ],
+    "risks": [
+      "Clear usa room actual; delete solo solicitado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-048",
+      "PLAYER-050"
+    ]
+  },
+  {
+    "symbol": "daNpc_myna2_c::doEvent",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc_myna2.cpp",
+      "line_start": 716,
+      "line_end": 795,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc_myna2.cpp#L716-L795"
+    },
+    "signature": "BOOL daNpc_myna2_c::doEvent()",
+    "purpose": "Consume staff/cuts y termina índices según END",
+    "dependencies": [
+      "dEvent_manager_c::getMyActIdx",
+      "dEvent_manager_c::cutEnd",
+      "dEvent_manager_c::endCheck"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Evento activo; staff/handler válidos"
+    ],
+    "risks": [
+      "Assets no consultados; no prueba recompensa"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-048",
+      "PLAYER-049",
+      "PLAYER-050"
+    ]
+  },
+  {
+    "symbol": "daNpc_myna2_c::ECut_gameGoalSuccess",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc_myna2.cpp",
+      "line_start": 1167,
+      "line_end": 1261,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc_myna2.cpp#L1167-L1261"
+    },
+    "signature": "int daNpc_myna2_c::ECut_gameGoalSuccess(int)",
+    "purpose": "Variante separada de resultado; score y presentación condicionados",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tipo3 y evento4 seleccionados con datos válidos"
+    ],
+    "risks": [
+      "No llega directamente del tag tipo1; petición item no concesión"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-049"
+    ]
   }
 ]

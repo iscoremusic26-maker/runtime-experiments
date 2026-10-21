@@ -933,13 +933,17 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "READ global; se añade swpush contacto→debounce→switch→geometría/recarga/cleanup,además de muestras previas.",
+    "scope": "READ global: Epona/canoa/Midna/pesca/puzzles previos; CP-R23 Tag MYNA2→tipo1→FIRST_TALK→retirada contrastado con assets pendientes; variantes de resultado comparadas.",
     "reports": [
       "systems/other_systems.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_swpush.h",
+      "include/d/actor/d_a_player.h",
+      "include/d/actor/d_a_tag_myna2.h",
       "include/d/d_com_inf_game.h",
+      "include/d/d_save.h",
       "include/f_op/f_op_actor_mng.h",
       "src/d/actor/d_a_canoe.cpp",
       "src/d/actor/d_a_cow.cpp",
@@ -948,12 +952,16 @@
       "src/d/actor/d_a_mg_fshop.cpp",
       "src/d/actor/d_a_mg_rod.cpp",
       "src/d/actor/d_a_midna.cpp",
+      "src/d/actor/d_a_npc4.cpp",
+      "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
+      "src/d/actor/d_a_tag_myna2.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
       "src/d/d_bg_w.cpp",
+      "src/d/d_event_manager.cpp",
       "src/d/d_save.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
@@ -965,8 +973,12 @@
       "Recompensas/persistencia"
     ],
     "paths": [
+      "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_swpush.h",
+      "include/d/actor/d_a_player.h",
+      "include/d/actor/d_a_tag_myna2.h",
       "include/d/d_com_inf_game.h",
+      "include/d/d_save.h",
       "include/f_op/f_op_actor_mng.h",
       "src/d/actor/d_a_canoe.cpp",
       "src/d/actor/d_a_cow.cpp",
@@ -975,12 +987,16 @@
       "src/d/actor/d_a_mg_fshop.cpp",
       "src/d/actor/d_a_mg_rod.cpp",
       "src/d/actor/d_a_midna.cpp",
+      "src/d/actor/d_a_npc4.cpp",
+      "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
+      "src/d/actor/d_a_tag_myna2.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
       "src/d/d_bg_w.cpp",
+      "src/d/d_event_manager.cpp",
       "src/d/d_save.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
@@ -992,7 +1008,8 @@
       "flags_events_progression",
       "movement_physics_collision",
       "memory_ownership",
-      "resources_archives_overlays"
+      "resources_archives_overlays",
+      "cutscenes_dialogue"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1006,7 +1023,13 @@
       "PLAYER-036",
       "PLAYER-037",
       "PLAYER-038",
-      "PLAYER-039"
+      "PLAYER-039",
+      "PLAYER-046",
+      "PLAYER-047",
+      "PLAYER-048",
+      "PLAYER-049",
+      "PLAYER-050",
+      "PLAYER-051"
     ]
   },
   {

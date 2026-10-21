@@ -47,3 +47,5 @@ CP-R18 · R-26: unregister OK no prueba create queue vacía; forceDelete transfo
 CP-R20 · R-27: Config unsubscribe no cancela callbacks capturados; la escritura recursiva del mismo nombre altera valor sin notificación anidada y el actual se lee por callback. Destruir variable/userdata en notify no queda cubierto por copia de la lista. CALLBACK-015..018; sin fallo runtime observado.
 
 CP-R21 · R-28: modelo visible, fondo registrado y resultado de consulta de agua son estados distintos; no inferir retiro de collision por puntero de modelo nulo ni persistencia por cambio de altura. Matriz/backing deben sobrevivir al fondo registrado; orden entre perfiles y geometría DZB no probados. PRES-060..064.
+
+CP-R23 · R-29: switch del tag MYNA2 se activa al aceptar petición, sin comprobar fallo posterior. Clear de NPC usa room actual y destructor no revierte switch; puede inhibirse reentrada o duplicarse solicitud al apagarlo externamente bajo gates. PLAYER-046/050/051; inferencia condicionada, sin fallo runtime.

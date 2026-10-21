@@ -97,3 +97,7 @@ Padre remoto verificado 1e50777525d111ec86f650f427ba961efcbdf983. +5 evidencias 
 ## CP-R22 — TGSC: stride, CRC, endian y adiciones
 
 Padre remoto verificado d5545fee53df860ac9ed2dc07890648bb2ec5f35. +3 evidencias STATIC_CROSSCHECKED,+2 localizadores;0 fichas nuevas; Q-07 parcial y redacción histórica de símbolo rectificada. WORLD-038..040 contrastan TGSC stride frente a tramo CRC/edición, BE y transporte de adición a append. Entrada stage_tgsc_data_class rectificada para no afirmar sizeof Windows0x24; WORLD-033 conserva validez. Sin nuevo layout medido ni serializer/mod generado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R23 — MYNA2: activador, NPC, evento y retirada
+
+Padre remoto verificado 105ea48f71ea29909c0700a7376b88f2d6da548f. +6 evidencias (5 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 localizadores;0 fichas nuevas; Q-12 READ selectivo. PLAYER-046..051: Tag pide tipo1 y marca switch en aceptación; tipo1 selecciona FIRST_TALK y tiene retirada por distancia; failure/goal/success son variantes separadas. Efecto demo/cut/reset contrastado; assets y recompensa final no probados. Fuente MYNA2 local contrastada con cuatro blobs remotos exactos. Sin mod,build ni runtime; solo atlas.

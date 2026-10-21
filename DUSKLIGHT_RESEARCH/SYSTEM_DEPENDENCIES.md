@@ -59,3 +59,5 @@ CP-R20: UiService binding toggle → ConfigVar::setValue → copia core subscrip
 CP-R21: escritor de estado B_OB → actor de agua → matriz prestada de modelo/fondo → Move → consulta registrada SplGrpChk → Acch → Link.mWaterY; colisión y visibilidad se retiran por rutas diferentes. Recarga consulta flag stage, no altura persistida (PRES-060..064).
 
 CP-R22: TGSC puntero tipado/stride → tramo base+escala → CRC de bytes → patch/append; adición SDK vector owned → temporal → append → request. Registro binario endian, stride y longitud pública son magnitudes distintas (WORLD-038..040).
+
+CP-R23: Tag MYNA2 gates→request ID/switch→NPC tipo1/fases→daNpcF acción→orderEvent→staff/cut→estado demo→reset; salida normal→switchOFF/delete→destructor. Variantes2/3 tienen otro origen y no son continuación automática del tag (PLAYER-046..051).
