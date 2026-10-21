@@ -1,13 +1,13 @@
-# Continuidad — CP-R03
+# Continuidad — CP-R04
 
-Fuente:40457c6adb381928e4b5fef6ed459ed291edd5e2; árbol:e4b79b565b2842f711f7c9f2390f56ef11063157. Objetivo: Windows x64/DX12/GZ2E01. Rama research/dusklight-203-dusk-atlas; padre remoto verificado:a8b4be74f36746c54240b73786a15de27c049c96. Obtener el SHA del commit actual del HEAD/historial.
+Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2`; árbol `e4b79b565b2842f711f7c9f2390f56ef11063157`. Objetivo: Windows x64 / DirectX 12 / GZ2E01 USA. Rama `research/dusklight-203-dusk-atlas`; padre remoto verificado CP-R03 `b2278941d931d71463a3410d2c7668da1e297d19`. El HEAD del commit que contiene este handoff se consulta en GitHub.
 
-Este checkpoint integra los borradores técnicos recuperados:18 fichas totales de sistemas,SDK,hooks,matriz de integración e histórico;179 evidencias y200 símbolos. Cobertura READ/CROSSCHECKED selectiva en SYSTEM_INDEX,no comprensión universal. Los informes y revisiones fueron accesibles,no reconstruidos desde mensajes de “finished”.
+Publicados acumulados: matriz SDK, hooks/ABI, matriz de integración, 19 fichas (18 áreas previas más callbacks), histórico, 183 evidencias y 202 símbolos. CP-R04 añade contraste de cancelación Save/Host/Camera: Save retira de la lista viva pero mantiene snapshot ya copiado; no liberar userdata por asumir cancelación inmediata. Es análisis estático, no una prueba de fallo ni de concurrencia.
 
-Primera acción siguiente: comprobar HEAD remoto,leer RESEARCH_COVERAGE y elaborar síntesis ARCHITECTURE,SYSTEM_DEPENDENCIES,RISK_REGISTER y OPEN_QUESTIONS con los IDs ya existentes. Auditar enlaces y JSON antes de publicar. Profundizar luego los huecos concretos de cada ficha,sin repetir inventario ni source hashes. Un posible siguiente flujo pequeño: cancelación de observers entre callbacks,con contrato y dos implementaciones de servicio contrastadas.
+Primera acción siguiente: comprobar HEAD, leer cobertura y crear síntesis ARCHITECTURE, SYSTEM_DEPENDENCIES, RISK_REGISTER y OPEN_QUESTIONS a partir de las evidencias existentes; no repetir inventario o hashes. Después profundizar un hueco concreto, por ejemplo Item/Message y fin de callbacks. Todos los borradores técnicos recuperados ya están publicados; ningún mensaje de subagente se cuenta por sí solo como artefacto.
 
-Límites:cuatro submódulos ausentes;TARGET_PC cambia layouts;ningún hook nuevo resolvió en el binario Windows;ningún juego ejecutado. CI histórica solo documenta estados de jobs/reportes separados de runtime. No se recompiló ni produjo .dusk.
+Límites vigentes: cuatro submódulos ausentes; layouts TARGET_PC sin medición Windows; ningún hook nuevo resolvió en el binario; ningún juego ejecutado. Modelos, HUD, clima y minijuegos conservan profundidad muestreada, indicada por ficha.
 
-Solo DUSKLIGHT_RESEARCH;sin nuevos PR,merge,tag,release ni force. Comprobar HEAD antes de escribir y usar expected_sha;verificar ref,diff y archivo remoto. Persistir cada3–5 minutos activos;no abrir otra lectura antes de salvar la anterior. No tocar producción,SDK,upstream,PR80/81 ni CI65/66. No hay ejecución de fondo.
+Persistir cada 3–5 minutos activos; no iniciar otra lectura sin salvar el bloque anterior. Máximo 2–3 estudios paralelos tras checkpoint seguro. Solo commits bajo DUSKLIGHT_RESEARCH; sin nuevos PR, merge, tags, releases o force. Usar conector GitHub con HEAD comprobado y expected_sha; verificar ref, diff y archivo remoto. No tocar producción, SDK, upstream, PR #80/#81 o CI #65/#66.
 
-NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED.
+NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED. No hay ejecución de fondo.

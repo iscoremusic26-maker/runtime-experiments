@@ -19,3 +19,7 @@ CP-R02a: validación de relaciones detectó sistema de física no declarado para
 ## CP-R03 — recuperación de fichas y síntesis de integración
 
 Integrados13 informes recuperados de jugador/actores/presentación/memoria/histórico y matriz .dusk. Revisadas invalidaciones ARC,expectativas externas de texturas,sincronización Gfx condicionada y punteros de viento. Se conserva profundidad selectiva; no se promueve CI a runtime.
+
+## CP-R04 — cancelación de callbacks y precisión de citas
+
+Nueva lectura transversal: Save copia registros completos, Host revalida handles y Camera revalida handle+owner activo. Se documenta inferencia condicionada de userdata vencida sin afirmar fallo runtime. Cuatro evidencias y dos slots nuevos; corregido anclaje histórico CP00 de L15 a L12 tras consultar archivo exacto.

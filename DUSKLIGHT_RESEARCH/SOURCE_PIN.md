@@ -38,7 +38,7 @@ Las ubicaciones upstream se declaran en [`.gitmodules`, L1-L12](https://github.c
 
 Los tres repositorios indicados fueron accesibles mediante el conector GitHub. Los directorios locales `Mods-Duskligh` y `codex-cp00-inputs` no aportaban un HEAD utilizable del repositorio documental. `git ls-remote` falló por conexión al proxy; `gh auth status` no confirmó credenciales válidas. Se empleó el conector para leer y persistir; no se buscó ningún secreto ni se cambió el proxy. Esto no bloquea la investigación estática.
 
-Se leyó primero `docs/modding.md`, SDK, servicios y ejemplos. Se examinó el [handoff CP00 fijado](https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/747ecc410162ed76f9aa68dbe9e9e2ad4e4d8c3f/DEVF/DEVF_CP00_HANDOFF.md#L1-L15): aquella evidencia separa compilación Windows de juego/DX12 no probado. La instrucción histórica de no iniciar otro proyecto no es un contrato del SDK ni sustituye este encargo general. El material posterior se referencia en PRIOR_RESEARCH.md cuando haya sido contrastado.
+Se leyó primero `docs/modding.md`, SDK, servicios y ejemplos. Se examinó el [handoff CP00 fijado](https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/747ecc410162ed76f9aa68dbe9e9e2ad4e4d8c3f/DEVF/DEVF_CP00_HANDOFF.md#L1-L12): aquella evidencia separa compilación Windows de juego/DX12 no probado. La instrucción histórica de no iniciar otro proyecto no es un contrato del SDK ni sustituye este encargo general. El material posterior se referencia en PRIOR_RESEARCH.md cuando haya sido contrastado.
 
 ## Reproducción y niveles
 

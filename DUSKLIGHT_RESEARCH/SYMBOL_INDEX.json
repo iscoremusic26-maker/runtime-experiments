@@ -1834,7 +1834,8 @@
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "SDK-020"
+      "SDK-020",
+      "CALLBACK-001"
     ]
   },
   {
@@ -1953,7 +1954,8 @@
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "SDK-011"
+      "SDK-011",
+      "CALLBACK-002"
     ]
   },
   {
@@ -4670,7 +4672,8 @@
     "evidence_ids": [
       "PRES-007",
       "PRES-008",
-      "PRES-009"
+      "PRES-009",
+      "CALLBACK-003"
     ]
   },
   {
@@ -5644,6 +5647,62 @@
     "evidence_level": "SOURCE_OBSERVED",
     "evidence_ids": [
       "ROOT-006"
+    ]
+  },
+  {
+    "symbol": "SaveService::unobserve_saves",
+    "kind": "method",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/save.h",
+      "line_start": 56,
+      "line_end": 56,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L56-L56"
+    },
+    "signature": "ModResult (*unobserve_saves)(ModContext*, SaveObserverHandle)",
+    "purpose": "Retira registro del llamador; semántica de dispatch en evidencia asociada.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto y handle del propietario válidos.",
+      "Respetar fase game-thread del servicio y vigencia de userdata."
+    ],
+    "risks": [
+      "Retirada de registro no equivale universalmente a drenar callback ya capturado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-001"
+    ]
+  },
+  {
+    "symbol": "HostService::unwatch_mod_lifecycle",
+    "kind": "method",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/host.h",
+      "line_start": 97,
+      "line_end": 97,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/host.h#L97-L97"
+    },
+    "signature": "ModResult (*unwatch_mod_lifecycle)(ModContext*, uint64_t)",
+    "purpose": "Retira registro del llamador; semántica de dispatch en evidencia asociada.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto y handle del propietario válidos.",
+      "Respetar fase game-thread del servicio y vigencia de userdata."
+    ],
+    "risks": [
+      "Retirada de registro no equivale universalmente a drenar callback ya capturado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-002"
     ]
   }
 ]

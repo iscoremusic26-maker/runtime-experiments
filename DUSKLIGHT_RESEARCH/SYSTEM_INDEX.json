@@ -457,5 +457,24 @@
       "No se reprodujo CI ni descargaron binarios ni paquetes.",
       "Auditorías binarias y runtime humanos previos permanecen reportes históricos."
     ]
+  },
+  {
+    "system_id": "callback_ownership_and_cancellation",
+    "coverage": "CROSSCHECKED",
+    "scope": "Registro,retirada y dispatch de Save/Host/Camera; sin ejecución de reentrancia.",
+    "reports": [
+      "systems/callback_ownership_and_cancellation.md"
+    ],
+    "files_examined": [
+      "sdk/include/mods/svc/save.h",
+      "sdk/include/mods/svc/host.h",
+      "sdk/include/mods/svc/camera.h",
+      "src/dusk/mods/svc/save.cpp",
+      "src/dusk/mods/svc/host.cpp",
+      "src/dusk/mods/svc/camera.cpp"
+    ],
+    "pending": [
+      "Item/Message y garantías explícitas de fin de callbacks; sin generalización de concurrencia."
+    ]
   }
 ]

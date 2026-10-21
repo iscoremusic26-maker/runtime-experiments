@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R03",
+  "checkpoint": "CP-R04",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -6369,6 +6369,154 @@
       "limitations": [
         "No se leyeron ROM/ARC/AW/BAA ni se reprodujo análisis binario."
       ]
+    },
+    {
+      "id": "CALLBACK-001",
+      "claim": "SaveService notify copia registros completos y no revalida la existencia del handle; unobserve modifica solo la lista viva.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/save.h",
+          "line_start": 20,
+          "line_end": 60,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/save.h#L20-L60"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 302,
+          "line_end": 318,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L302-L318"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 594,
+          "line_end": 624,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L594-L624"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 439,
+          "line_end": 448,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L439-L448"
+        }
+      ],
+      "limitations": [
+        "Inspección estática; no se reprodujo reentrancia, concurrencia ni fallo runtime.",
+        "No se generaliza a todos los servicios ni se afirma descarga de DLL dentro de callback."
+      ]
+    },
+    {
+      "id": "CALLBACK-002",
+      "claim": "HostService toma snapshot de handles de watchers y busca cada uno de nuevo antes de callback; unwatch borra por propietario.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/host.h",
+          "line_start": 87,
+          "line_end": 97,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/host.h#L87-L97"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/host.cpp",
+          "line_start": 121,
+          "line_end": 175,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/host.cpp#L121-L175"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/loader.cpp",
+          "line_start": 323,
+          "line_end": 338,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L323-L338"
+        }
+      ],
+      "limitations": [
+        "Inspección estática; no se reprodujo reentrancia, concurrencia ni fallo runtime.",
+        "No se generaliza a todos los servicios ni se afirma descarga de DLL dentro de callback."
+      ]
+    },
+    {
+      "id": "CALLBACK-003",
+      "claim": "CameraService vuelve a comprobar mod activo y existencia del handle antes de invocar cada operador del snapshot ordenado.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/camera.h",
+          "line_start": 90,
+          "line_end": 100,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/camera.h#L90-L100"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/camera.cpp",
+          "line_start": 142,
+          "line_end": 171,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/camera.cpp#L142-L171"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/camera.cpp",
+          "line_start": 187,
+          "line_end": 240,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/camera.cpp#L187-L240"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_camera.cpp",
+          "line_start": 1059,
+          "line_end": 1070,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_camera.cpp#L1059-L1070"
+        }
+      ],
+      "limitations": [
+        "Inspección estática; no se reprodujo reentrancia, concurrencia ni fallo runtime.",
+        "No se generaliza a todos los servicios ni se afirma descarga de DLL dentro de callback."
+      ]
+    },
+    {
+      "id": "CALLBACK-004",
+      "claim": "Retirar un observer Save B desde callback A no garantiza que la copia pendiente de B deje de invocarse en ese mismo notify si el mod sigue activo; liberar su userdata inmediatamente puede vencer su lifetime.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 302,
+          "line_end": 318,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L302-L318"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/save.cpp",
+          "line_start": 616,
+          "line_end": 624,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L616-L624"
+        }
+      ],
+      "limitations": [
+        "Inspección estática; no se reprodujo reentrancia, concurrencia ni fallo runtime.",
+        "No se generaliza a todos los servicios ni se afirma descarga de DLL dentro de callback."
+      ]
     }
   ],
   "remote_source_metadata": [
@@ -6441,6 +6589,13 @@
       "path": "DEVF/CP19_BUGFIX/IMPLEMENTATION.md",
       "blob_sha": "55387e074edb57b9bfdac03dac2179891c310c14",
       "line_count": 41
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "747ecc410162ed76f9aa68dbe9e9e2ad4e4d8c3f",
+      "path": "DEVF/DEVF_CP00_HANDOFF.md",
+      "blob_sha": "3d14765123a600db326b1cbb08f5e13201717d70",
+      "line_count": 12
     }
   ],
   "historical_ci_observed": [
