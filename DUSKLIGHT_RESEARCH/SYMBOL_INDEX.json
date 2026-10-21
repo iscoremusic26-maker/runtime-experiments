@@ -7066,5 +7066,107 @@
     "evidence_ids": [
       "WORLD-036"
     ]
+  },
+  {
+    "symbol": "dusk::mods::svc::audio_res::bst::frame_end",
+    "kind": "function",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/audio_res/bst.cpp",
+      "line_start": 177,
+      "line_end": 181,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/bst.cpp#L177-L181"
+    },
+    "signature": "void dusk::mods::svc::audio_res::bst::frame_end()",
+    "purpose": "Ruta dirty BST que llama sincronización de WSYS.",
+    "dependencies": [
+      "AudioResService",
+      "SoundEffectReplacementSlot",
+      "ModLoader"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Audio del juego habilitado,ID/categoría y contexto válidos; puntos internos de sync,no API invocable por mod.",
+      "Sin audio reproducido,backend/ABI/export Windows ni frecuencia runtime comprobados."
+    ],
+    "risks": [
+      "MOD_OK de registro/retirada no confirma mapa activo ni sonido terminado.",
+      "shared_ptr retiene datos,no DLL/userdata; sincronización de mapa no es barrera universal de reproducción."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-052",
+      "PRES-055"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::audio_res::bst::sync_audio_replacements",
+    "kind": "function",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/audio_res/bst.cpp",
+      "line_start": 183,
+      "line_end": 215,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/bst.cpp#L183-L215"
+    },
+    "signature": "void dusk::mods::svc::audio_res::bst::sync_audio_replacements()",
+    "purpose": "Reconstruir mapas BST desde registros de mods activos.",
+    "dependencies": [
+      "AudioResService",
+      "SoundEffectReplacementSlot",
+      "ModLoader"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Audio del juego habilitado,ID/categoría y contexto válidos; puntos internos de sync,no API invocable por mod.",
+      "Sin audio reproducido,backend/ABI/export Windows ni frecuencia runtime comprobados."
+    ],
+    "risks": [
+      "MOD_OK de registro/retirada no confirma mapa activo ni sonido terminado.",
+      "shared_ptr retiene datos,no DLL/userdata; sincronización de mapa no es barrera universal de reproducción."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-052",
+      "PRES-053"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::audio_res::bst::get_override_for_se",
+    "kind": "function",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/audio_res/bst.cpp",
+      "line_start": 138,
+      "line_end": 154,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/bst.cpp#L138-L154"
+    },
+    "signature": "std::shared_ptr<SoundEffectReplacementSlot> dusk::mods::svc::audio_res::bst::get_override_for_se(JAISoundID)",
+    "purpose": "Consultar snapshot activo SE con referencia compartida.",
+    "dependencies": [
+      "AudioResService",
+      "SoundEffectReplacementSlot",
+      "ModLoader"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Audio del juego habilitado,ID/categoría y contexto válidos; puntos internos de sync,no API invocable por mod.",
+      "Sin audio reproducido,backend/ABI/export Windows ni frecuencia runtime comprobados."
+    ],
+    "risks": [
+      "MOD_OK de registro/retirada no confirma mapa activo ni sonido terminado.",
+      "shared_ptr retiene datos,no DLL/userdata; sincronización de mapa no es barrera universal de reproducción."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-053",
+      "PRES-054"
+    ]
   }
 ]

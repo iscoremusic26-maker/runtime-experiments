@@ -68,18 +68,26 @@
   {
     "system_id": "audio_particles_effects",
     "coverage": "CROSSCHECKED",
-    "scope": "Rutas seleccionadas; profundidad original IMPLEMENTATION_TRACED; no auditoría integral del sistema.",
+    "scope": "Rutas audio/partículas seleccionadas y edición BST→sync lifecycle→consumidor SE/ownership contrastados; sin audio runtime.",
     "reports": [
       "systems/audio_particles_effects.md"
     ],
     "files_examined": [
+      "libs/JSystem/include/JSystem/JAudio2/JAISound.h",
+      "libs/JSystem/src/JAudio2/JAISe.cpp",
+      "libs/JSystem/src/JAudio2/JAISeMgr.cpp",
+      "libs/JSystem/src/JAudio2/JAISound.cpp",
+      "libs/JSystem/src/JAudio2/JAUSoundTable.cpp",
       "sdk/include/mods/svc/audio_res.h",
-      "src/dusk/mods/svc/audio_res/audio_res.cpp",
-      "src/dusk/mods/svc/audio_res/wsys.cpp",
-      "src/dusk/mods/svc/audio_res/bst.cpp",
       "src/Z2AudioLib/Z2AudioMgr.cpp",
       "src/Z2AudioLib/Z2SeMgr.cpp",
-      "src/d/d_particle.cpp"
+      "src/Z2AudioLib/Z2SoundMgr.cpp",
+      "src/d/d_particle.cpp",
+      "src/dusk/mods/loader/loader.cpp",
+      "src/dusk/mods/svc/audio_res/audio_res.cpp",
+      "src/dusk/mods/svc/audio_res/bst.cpp",
+      "src/dusk/mods/svc/audio_res/wsys.cpp",
+      "src/dusk/mods/svc/registry.cpp"
     ],
     "pending": [
       "BST frame_end discrepancy",
@@ -88,18 +96,28 @@
       "runtime audio/particles"
     ],
     "paths": [
+      "libs/JSystem/include/JSystem/JAudio2/JAISound.h",
+      "libs/JSystem/src/JAudio2/JAISe.cpp",
+      "libs/JSystem/src/JAudio2/JAISeMgr.cpp",
+      "libs/JSystem/src/JAudio2/JAISound.cpp",
+      "libs/JSystem/src/JAudio2/JAUSoundTable.cpp",
       "sdk/include/mods/svc/audio_res.h",
       "src/Z2AudioLib/Z2AudioMgr.cpp",
       "src/Z2AudioLib/Z2SeMgr.cpp",
+      "src/Z2AudioLib/Z2SoundMgr.cpp",
       "src/d/d_particle.cpp",
+      "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/audio_res/audio_res.cpp",
       "src/dusk/mods/svc/audio_res/bst.cpp",
-      "src/dusk/mods/svc/audio_res/wsys.cpp"
+      "src/dusk/mods/svc/audio_res/wsys.cpp",
+      "src/dusk/mods/svc/registry.cpp"
     ],
     "dependencies": [
       "resources_archives_overlays",
       "memory_ownership",
-      "stages_rooms_layers"
+      "stages_rooms_layers",
+      "runtime_and_lifecycle",
+      "sdk_services"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -109,7 +127,11 @@
       "PRES-025",
       "PRES-027",
       "PRES-028",
-      "SDK-002"
+      "SDK-002",
+      "PRES-052",
+      "PRES-053",
+      "PRES-054",
+      "PRES-055"
     ]
   },
   {

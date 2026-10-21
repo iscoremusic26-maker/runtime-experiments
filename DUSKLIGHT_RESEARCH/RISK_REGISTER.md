@@ -39,3 +39,5 @@ R-22 — Presión detectada,flag filtrada,recorrido terminado,switch RAM y save 
 R-23 — Solicitar colpat no aplica color inmediatamente: gather compartido puede diferirse o ser sobrescrito; tag tipo11 no restaura estado al borrar/salir del gate. El fog global y por tevstr son distintos. PRES-048..051; sin render/runtime ni rollback probado.
 
 R-24 — Retry de sidecar depende de evento futuro y vida de SaveStore; invalidate_save borra dirty sin flush. Menú/toast vanilla no recibe resultado del flushvoid. WORLD-034..037; sin IO personal ni crash reproducido. Corrección índice save_slot_written: API interna,POTENTIAL_REQUIRES_VERIFICATION,contrato observe_saves sigue oficial.
+
+R-25 — BST: alta/baja de registro y mapa activo difieren; frameEnd invoca WSYS y remove_sound_table no marca dirty. Sin lifecycleApplied posterior,edición puede quedar pendiente o retirada seguir publicada. Sonido captura shared_ptr de datos. PRES-052..055; inferencia condicionada,sin audio runtime ni fix de host.

@@ -1,12 +1,12 @@
-# Cobertura real — CP-R16
+# Cobertura real — CP-R17
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **21 fichas de sistemas, 233 evidencias y 243 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **21 fichas de sistemas, 237 evidencias y 246 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 243 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 246 registros.
 
 ## Estado por área
 
@@ -78,3 +78,5 @@ CP-R14: +5 evidencias,+5 símbolos,+0 informes/+0 archivos frente a CP-R13; una 
 CP-R15: +4 evidencias,+3 símbolos,+0 informes/+0 archivos frente a CP-R14; una cadena ambiental nueva. Los niveles canónicos permanecen18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED; no acreditan cobertura integral.
 
 CP-R16: +4 evidencias,+3 símbolos,+0 informes/+0 archivos frente a CP-R15; corrección de integración de un símbolo interno (OFFICIAL_SERVICE→POTENTIAL_REQUIRES_VERIFICATION),sin borrar evidencia. Los niveles canónicos permanecen18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED; no acreditan cobertura integral.
+
+CP-R17: +4 evidencias (3 contrastadas,1 inferencia condicionada),+3 símbolos,+0 informes/+0 archivos frente a CP-R16; una cadena audio nueva. Los niveles canónicos permanecen18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED; no acreditan cobertura integral.
