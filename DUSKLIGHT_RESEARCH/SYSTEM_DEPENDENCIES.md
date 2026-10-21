@@ -43,3 +43,5 @@ CP-R12: MessageService → estado compartido flow.cpp → JMessage/TControl y dM
 CP-R13: file-select SaveLoaded→GameMode Speedrun→onGameFrame/overlap y,por separado,UI Overlay→LiveSplit Context→send/poll. PORT-006..009; Borealis ausente bloquea entrega/cierre/copias de transporte.
 
 CP-R14: Acch GroundCheck→dBgS/dBgW ride→swpush flags/timers/modo→switch RAM y vértices→lector al recargar→Release/heap. PLAYER-035..039; no wiring de stage concreto ni persistencia CARD inferida.
+
+CP-R15: KYTAG06 tipo11 darkworld/layer/stay room→colpat gather→exeKankyo→drawKankyo/setLight/paletas→fog global→partículas6..11/GX. PRES-048..051; no ownership por tag ni orden universal/external DX12 probado.

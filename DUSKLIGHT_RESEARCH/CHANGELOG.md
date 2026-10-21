@@ -65,3 +65,7 @@ Padre CP-R12 893106a330b128d4743f51de54e03d7cb84f8f4c. Ficha real nueva,cuatro e
 ## CP-R14 — swpush contacto,debounce,switch y cleanup
 
 Padre remoto verificado 36c71128be0cda32b4ee5ef30dd0ace49ff92404. +5 evidencias,+5 símbolos,+0 informes/+0 archivos frente a CP-R13; una cadena nueva de puzzle/colisión. CP-R14 completo en systems/other_systems.md: PLAYER-035..039 y cinco símbolos daObjSwpush::Act_c. Dispatcher Acch/dBgS/dBgW→rideCB→contadores/modos→switch al finalizar recorrido→colisión/recarga→Release/heap. Sin prueba de wiring entre colocaciones ni durabilidad CARD. RELEASE/error/create parcial conservan límites; other_systems sigue READ global. Sin mod,build ni runtime; solo atlas.
+
+## CP-R15 — patrones ambientales por layer y fog consumidor
+
+Padre remoto verificado 9a1e2434daaa1c32faa48f3db32aba028ef85e26. +4 evidencias,+3 símbolos,+0 informes/+0 archivos frente a CP-R14; una cadena ambiental nueva. CP-R14: swpush PLAYER-035..039,cadena contacto/switch/cleanup. CP-R15 completo en environment_weather_time: PRES-048..051 y tres símbolos,type11 KYTAG06→gather→paletas/fog→partículas. Cambio solicitado y aplicado son fases distintas; Delete tipo11 no revierte estado global. Ambiente sigue READ; otras variantes/agua/orden exacto y backend pendientes. Sin mod,build ni runtime; solo atlas.

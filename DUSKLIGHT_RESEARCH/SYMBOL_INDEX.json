@@ -6866,5 +6866,105 @@
     "evidence_ids": [
       "PLAYER-039"
     ]
+  },
+  {
+    "symbol": "daKytag06_type_11_Execute",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag06.cpp",
+      "line_start": 772,
+      "line_end": 787,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag06.cpp#L772-L787"
+    },
+    "signature": "static void daKytag06_type_11_Execute(kytag06_class*)",
+    "purpose": "Selector ambiental por darkworld/layer/stay room.",
+    "dependencies": [
+      "g_env_light",
+      "dScnKy_env_light_c",
+      "stage_palette_info_class"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto ambiental/stage/cámara válidos y fase de scheduler/draw adecuada.",
+      "Colpat es índice de selección,no RGB ni archivo de paleta independiente; Windows sin certificar."
+    ],
+    "risks": [
+      "Estado global compartido sin ownership por tag; Delete no restaura snapshot.",
+      "Solicitar patrón no equivale a color presentado ni sincronización GPU."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-048"
+    ]
+  },
+  {
+    "symbol": "dKy_change_colpat",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 9462,
+      "line_end": 9467,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L9462-L9467"
+    },
+    "signature": "void dKy_change_colpat(u8)",
+    "purpose": "Escribir gather de patrón a consumir por kankyo.",
+    "dependencies": [
+      "g_env_light",
+      "dScnKy_env_light_c",
+      "stage_palette_info_class"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto ambiental/stage/cámara válidos y fase de scheduler/draw adecuada.",
+      "Colpat es índice de selección,no RGB ni archivo de paleta independiente; Windows sin certificar."
+    ],
+    "risks": [
+      "Estado global compartido sin ownership por tag; Delete no restaura snapshot.",
+      "Solicitar patrón no equivale a color presentado ni sincronización GPU."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-049",
+      "PRES-051"
+    ]
+  },
+  {
+    "symbol": "dKy_GxFog_set",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 9408,
+      "line_end": 9411,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L9408-L9411"
+    },
+    "signature": "void dKy_GxFog_set()",
+    "purpose": "Aplicar fog ambiental global en consumidor GX.",
+    "dependencies": [
+      "g_env_light",
+      "dScnKy_env_light_c",
+      "stage_palette_info_class"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto ambiental/stage/cámara válidos y fase de scheduler/draw adecuada.",
+      "Colpat es índice de selección,no RGB ni archivo de paleta independiente; Windows sin certificar."
+    ],
+    "risks": [
+      "Estado global compartido sin ownership por tag; Delete no restaura snapshot.",
+      "Solicitar patrón no equivale a color presentado ni sincronización GPU."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-050"
+    ]
   }
 ]

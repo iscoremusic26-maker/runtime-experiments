@@ -913,7 +913,7 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "READ global; avance normal/KYTAG11,rollover y estado/audio seleccionados CROSSCHECKED.",
+    "scope": "READ global; tiempo y cadena KYTAG06 tipo11→gather/paletas→fog/partículas contrastados selectivamente.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
@@ -921,12 +921,14 @@
       "include/d/d_kankyo_static.h",
       "include/d/d_save.h",
       "include/m_Do/m_Do_audio.h",
+      "src/d/actor/d_a_kytag06.cpp",
       "src/d/actor/d_a_kytag11.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_kankyo.cpp",
       "src/d/d_kankyo_wether.cpp",
       "src/d/d_kyeff.cpp",
-      "src/d/d_kyeff2.cpp"
+      "src/d/d_kyeff2.cpp",
+      "src/d/d_particle.cpp"
     ],
     "pending": [
       "Orden relativo de varios tags/perfiles,agua/clima/tablas de iluminación completos.",
@@ -936,17 +938,20 @@
       "include/d/d_kankyo_static.h",
       "include/d/d_save.h",
       "include/m_Do/m_Do_audio.h",
+      "src/d/actor/d_a_kytag06.cpp",
       "src/d/actor/d_a_kytag11.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_kankyo.cpp",
       "src/d/d_kankyo_wether.cpp",
       "src/d/d_kyeff.cpp",
-      "src/d/d_kyeff2.cpp"
+      "src/d/d_kyeff2.cpp",
+      "src/d/d_particle.cpp"
     ],
     "dependencies": [
       "stages_rooms_layers",
       "save_load",
-      "audio_particles_effects"
+      "audio_particles_effects",
+      "cameras_rendering"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -957,7 +962,11 @@
       "PRES-040",
       "PRES-041",
       "PRES-042",
-      "PRES-043"
+      "PRES-043",
+      "PRES-048",
+      "PRES-049",
+      "PRES-050",
+      "PRES-051"
     ]
   },
   {

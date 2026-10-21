@@ -35,3 +35,5 @@ R-20 — Message retira registro pero candidatos copiados no revalidan handle/ac
 R-21 — Conexión LiveSplit/toast no confirma comandos ni timer remoto: send ignora retorno,startPending se consume antes de comandos y no se rearma al reconectar; retry cuenta llamadas UI,no segundos. PORT-006..009. Backend Borealis ausente,no transporte ni fallo observado.
 
 R-22 — Presión detectada,flag filtrada,recorrido terminado,switch RAM y save duradero son hitos distintos. Swpush Delete devuelve1 incluso si Release informa error; no acredita drenaje de callback ni reversión de switch. PLAYER-035..039; sin fallo runtime inducido.
+
+R-23 — Solicitar colpat no aplica color inmediatamente: gather compartido puede diferirse o ser sobrescrito; tag tipo11 no restaura estado al borrar/salir del gate. El fog global y por tevstr son distintos. PRES-048..051; sin render/runtime ni rollback probado.
