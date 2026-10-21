@@ -39,3 +39,5 @@ CP-R10: runtime_and_lifecycle → HUD/fileSel → recursos/heaps; framework f_op
 CP-R11: models_animations_materials → archive/refcount → actor solid heap → morf/BCK/BTK → execute/draw → actor wrapper teardown. PRES-044..047; luz/audio son consumidores auxiliares,no nuevos contratos SDK.
 
 CP-R12: MessageService → estado compartido flow.cpp → JMessage/TControl y dMsgObject selección → ActiveBinding → reset/destructor. CALLBACK-009..013 separa registro/callback/userData de bytes copiados; FlowModule realiza detach conjunto.
+
+CP-R13: file-select SaveLoaded→GameMode Speedrun→onGameFrame/overlap y,por separado,UI Overlay→LiveSplit Context→send/poll. PORT-006..009; Borealis ausente bloquea entrega/cierre/copias de transporte.

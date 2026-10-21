@@ -57,3 +57,7 @@ Padre CP-R10 e44139795c4e0beb1e1bf608bd894d0656a06c4b. Cuatro evidencias y cuatr
 ## CP-R12 — MessageService y lifetime de dispatch/texto
 
 Padre CP-R11 b90b9ebef217c8fd21510e152819e0570271d92d. Cinco evidencias nuevas (cuatro contrastadas,una inferencia condicionada),cuatro símbolos,+0 documentos. Se distingue snapshot sin revalidación,retirada por dueño y texto compartido retenido por control/processor; consumidores JMessage y selección dMsgObject. No repetir prioridades de WORLD-025/PRES-020 ni prometer reentrancia.
+
+## CP-R13 — soporte interno speedrun/LiveSplit
+
+Padre CP-R12 893106a330b128d4743f51de54e03d7cb84f8f4c. Ficha real nueva,cuatro evidencias y tres símbolos; evento SaveLoaded→modo/contador y UI→conexión/envío/cierre separados. Sin LiveSplitService público,ACK ni backend Borealis auditados. Ninguna conexión ni dato personal abierto. Neto desde CP-R09:+19 evidencias,+17 símbolos,+1 documento; cuatro cadenas representativas de familias distintas.

@@ -31,3 +31,5 @@ R-18 — Aceptación de cambio no significa destino ejecutándose: file-select i
 R-19 — Animación parcialmente aplicada y estado compartido: AutoMata instala BCK antes de validar BTK; entry/remove BTK mutan tabla y remove no restaura animator anterior. PRES-044..047. Retorno0 no equivale a sin efectos; no hay coexistencia/runtime demostrado.
 
 R-20 — Message retira registro pero candidatos copiados no revalidan handle/active; bytes seleccionados sobreviven por binding,NO por ello userdata/DLL. Callback debe entregar texto legible durante copia posterior al retorno. CALLBACK-009..013; ninguna liberación segura universal ni coexistencia/runtime certificada.
+
+R-21 — Conexión LiveSplit/toast no confirma comandos ni timer remoto: send ignora retorno,startPending se consume antes de comandos y no se rearma al reconectar; retry cuenta llamadas UI,no segundos. PORT-006..009. Backend Borealis ausente,no transporte ni fallo observado.

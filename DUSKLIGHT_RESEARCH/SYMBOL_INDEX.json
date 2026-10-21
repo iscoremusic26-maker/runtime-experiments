@@ -6600,5 +6600,105 @@
     "evidence_ids": [
       "CALLBACK-011"
     ]
+  },
+  {
+    "symbol": "dusk::speedrun::onGameFrame",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/livesplit.cpp",
+      "line_start": 82,
+      "line_end": 96,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L82-L96"
+    },
+    "signature": "void dusk::speedrun::onGameFrame()",
+    "purpose": "Contador interno de llamadas fuera de overlap.",
+    "dependencies": [
+      "borealis::net::Context",
+      "GameMode",
+      "fopOvlpM_IsDoingReq"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado interno del port; no LiveSplitService público en registro examinado.",
+      "Respetar callers/gates del modo y UI; hilo/ABI/export de integración no certificados."
+    ],
+    "risks": [
+      "Contador local/conexión/comando emitido/efecto remoto son hitos distintos.",
+      "Sin resultado de send comprobado ni auditoría del backend ausente."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-006"
+    ]
+  },
+  {
+    "symbol": "dusk::speedrun::updateLiveSplit",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/livesplit.cpp",
+      "line_start": 150,
+      "line_end": 180,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L150-L180"
+    },
+    "signature": "void dusk::speedrun::updateLiveSplit()",
+    "purpose": "Poll/reintento/envío separados del contador de modo.",
+    "dependencies": [
+      "borealis::net::Context",
+      "GameMode",
+      "fopOvlpM_IsDoingReq"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado interno del port; no LiveSplitService público en registro examinado.",
+      "Respetar callers/gates del modo y UI; hilo/ABI/export de integración no certificados."
+    ],
+    "risks": [
+      "Contador local/conexión/comando emitido/efecto remoto son hitos distintos.",
+      "Sin resultado de send comprobado ni auditoría del backend ausente."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-007",
+      "PORT-008"
+    ]
+  },
+  {
+    "symbol": "dusk::speedrun::disconnectLiveSplit",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/livesplit.cpp",
+      "line_start": 130,
+      "line_end": 136,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L130-L136"
+    },
+    "signature": "void dusk::speedrun::disconnectLiveSplit()",
+    "purpose": "Retirar contexto/socket/flags; no prueba reset de timer remoto.",
+    "dependencies": [
+      "borealis::net::Context",
+      "GameMode",
+      "fopOvlpM_IsDoingReq"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado interno del port; no LiveSplitService público en registro examinado.",
+      "Respetar callers/gates del modo y UI; hilo/ABI/export de integración no certificados."
+    ],
+    "risks": [
+      "Contador local/conexión/comando emitido/efecto remoto son hitos distintos.",
+      "Sin resultado de send comprobado ni auditoría del backend ausente."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-009"
+    ]
   }
 ]

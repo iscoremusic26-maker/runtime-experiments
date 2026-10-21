@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R12",
+  "checkpoint": "CP-R13",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -8113,6 +8113,254 @@
       "limitations": [
         "Rutas estáticas seleccionadas; ningún callback ejecutado,fallo reproducido o unload probado.",
         "La interfaz examinada no establece barrera general de cancelación ni permiso de reentrancia."
+      ]
+    },
+    {
+      "id": "PORT-006",
+      "claim": "Modo speedrun registra SaveLoaded→start y Tick→onGameFrame; consumidor file-select PC invoca SaveLoaded después de cargar slot en memoria. onGameFrame cuenta llamadas running fuera de overlap y updateLiveSplit convierte frameCount con divisor30; distinto de SpeedrunInfo timestamps.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/speedrun.cpp",
+          "line_start": 26,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/speedrun.cpp#L26-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_select.cpp",
+          "line_start": 1477,
+          "line_end": 1490,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_select.cpp#L1477-L1490"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/game_mode.hpp",
+          "line_start": 56,
+          "line_end": 61,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/game_mode.hpp#L56-L61"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/game_mode.hpp",
+          "line_start": 90,
+          "line_end": 95,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/game_mode.hpp#L90-L95"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 834,
+          "line_end": 842,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L834-L842"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 78,
+          "line_end": 117,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L78-L117"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 162,
+          "line_end": 179,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L162-L179"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/speedrun.h",
+          "line_start": 9,
+          "line_end": 45,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/speedrun.h#L9-L45"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_overlap_mng.cpp",
+          "line_start": 64,
+          "line_end": 69,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_overlap_mng.cpp#L64-L69"
+        }
+      ],
+      "limitations": [
+        "Solo callers/estado del port; no conexión LiveSplit ni configuración personal abierta.",
+        "Borealis ausente: garantías de copia,entrega,cierre,errores y threading externos no auditadas.",
+        "Sin certificación de temporización real,protocolo remoto o disponibilidad Windows."
+      ]
+    },
+    {
+      "id": "PORT-007",
+      "claim": "LiveSplit es estado interno con Context/SocketId y endpoint; settings y launch caller conectan con gates,Overlay solo poll/update si documento válido,modo activo y liveSplitEnabled,en plataformas no móviles. Connected genera toast de conexión,no confirmación de timer.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 15,
+          "line_end": 25,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L15-L25"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 119,
+          "line_end": 148,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L119-L148"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/overlay.cpp",
+          "line_start": 270,
+          "line_end": 274,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/overlay.cpp#L270-L274"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/overlay.cpp",
+          "line_start": 316,
+          "line_end": 326,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/overlay.cpp#L316-L326"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/settings.cpp",
+          "line_start": 1325,
+          "line_end": 1339,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/settings.cpp#L1325-L1339"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/imgui/ImGuiConsole.cpp",
+          "line_start": 303,
+          "line_end": 308,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/imgui/ImGuiConsole.cpp#L303-L308"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/ui.cpp",
+          "line_start": 501,
+          "line_end": 511,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/ui.cpp#L501-L511"
+        }
+      ],
+      "limitations": [
+        "Solo callers/estado del port; no conexión LiveSplit ni configuración personal abierta.",
+        "Borealis ausente: garantías de copia,entrega,cierre,errores y threading externos no auditadas.",
+        "Sin certificación de temporización real,protocolo remoto o disponibilidad Windows."
+      ]
+    },
+    {
+      "id": "PORT-008",
+      "claim": "send_cmd formatea CRLF y omite envío sin conexión; ignora resultado send. Poll solo trata Connected/Closed del socket actual. Update reintenta cada30 llamadas cuando SocketId0 y consume startPending antes de enviar; reconectar no vuelve a armar startPending.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 27,
+          "line_end": 74,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L27-L74"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 98,
+          "line_end": 108,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L98-L108"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 150,
+          "line_end": 179,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L150-L179"
+        }
+      ],
+      "limitations": [
+        "Solo callers/estado del port; no conexión LiveSplit ni configuración personal abierta.",
+        "Borealis ausente: garantías de copia,entrega,cierre,errores y threading externos no auditadas.",
+        "Sin certificación de temporización real,protocolo remoto o disponibilidad Windows."
+      ]
+    },
+    {
+      "id": "PORT-009",
+      "claim": "Desactivar speedrun restaura overrides,desconecta según setting y resetea estados; disconnect destruye Context y limpia socket/flags,pero no es reset de run. Reversión de ConfigVar speedrun es capa temporal,distinta del valor persistente. Interior de transporte/cierre/ownership de send no disponible en gitlink Borealis.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/speedrun.cpp",
+          "line_start": 13,
+          "line_end": 24,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/speedrun.cpp#L13-L24"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/speedrun.cpp",
+          "line_start": 96,
+          "line_end": 103,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/speedrun.cpp#L96-L103"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/config_var.hpp",
+          "line_start": 294,
+          "line_end": 328,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/config_var.hpp#L294-L328"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 111,
+          "line_end": 136,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L111-L136"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/livesplit.cpp",
+          "line_start": 182,
+          "line_end": 184,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/livesplit.cpp#L182-L184"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 263,
+          "line_end": 296,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L263-L296"
+        }
+      ],
+      "limitations": [
+        "Solo callers/estado del port; no conexión LiveSplit ni configuración personal abierta.",
+        "Borealis ausente: garantías de copia,entrega,cierre,errores y threading externos no auditadas.",
+        "Sin certificación de temporización real,protocolo remoto o disponibilidad Windows."
       ]
     }
   ],

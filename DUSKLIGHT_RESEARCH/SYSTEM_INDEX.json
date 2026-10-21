@@ -1173,23 +1173,34 @@
   {
     "system_id": "port_support",
     "coverage": "READ",
-    "scope": "Logros internos contrastados: señal→check→UI/persistencia; resto del soporte conserva inventario nominal.",
+    "scope": "READ global; logros y speedrun/LiveSplit contrastados en cadenas seleccionadas; otros auxiliares nominales.",
     "reports": [
       "systems/port_achievements.md",
+      "systems/port_speedrun_livesplit.md",
       "SYSTEM_DEPENDENCIES.md"
     ],
     "paths": [
+      "src/d/d_file_select.cpp",
       "src/d/d_menu_letter.cpp",
       "src/dusk/achievements.cpp",
       "src/dusk/achievements.h",
       "src/dusk/config.cpp",
+      "src/dusk/config_var.hpp",
       "src/dusk/discord_presence.cpp",
+      "src/dusk/game_mode.hpp",
+      "src/dusk/imgui/ImGuiConsole.cpp",
       "src/dusk/io.cpp",
       "src/dusk/iso_validate.cpp",
       "src/dusk/livesplit.cpp",
       "src/dusk/mods/svc/registry.cpp",
+      "src/dusk/speedrun.cpp",
+      "src/dusk/speedrun.h",
       "src/dusk/ui/achievements.cpp",
-      "src/f_ap/f_ap_game.cpp"
+      "src/dusk/ui/overlay.cpp",
+      "src/dusk/ui/settings.cpp",
+      "src/dusk/ui/ui.cpp",
+      "src/f_ap/f_ap_game.cpp",
+      "src/f_op/f_op_overlap_mng.cpp"
     ],
     "dependencies": [
       "runtime_and_lifecycle",
@@ -1197,8 +1208,8 @@
       "flags_events_progression"
     ],
     "pending": [
-      "Resto de checks de logros, errores de JSON/IO y modo/reset completos.",
-      "Speedrun/LiveSplit,presence,diagnostics y otros auxiliares aún nominales."
+      "Resto de checks de logros,errores y modo/reset completos.",
+      "LiveSplit backend/protocolo/ACK y todas las rutas reset; presence/diagnostics/configuración completa pendientes."
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1206,14 +1217,22 @@
       "PORT-002",
       "PORT-003",
       "PORT-004",
-      "PORT-005"
+      "PORT-005",
+      "PORT-006",
+      "PORT-007",
+      "PORT-008",
+      "PORT-009"
     ],
     "files_examined": [
+      "src/d/d_menu_letter.cpp",
       "src/dusk/achievements.cpp",
       "src/dusk/achievements.h",
-      "src/dusk/ui/achievements.cpp",
       "src/dusk/io.cpp",
-      "src/d/d_menu_letter.cpp"
+      "src/dusk/livesplit.cpp",
+      "src/dusk/speedrun.cpp",
+      "src/dusk/speedrun.h",
+      "src/dusk/ui/achievements.cpp",
+      "src/dusk/ui/overlay.cpp"
     ]
   },
   {

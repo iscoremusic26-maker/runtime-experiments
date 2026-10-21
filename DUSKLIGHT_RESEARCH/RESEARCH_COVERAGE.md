@@ -1,12 +1,12 @@
-# Cobertura real — CP-R12
+# Cobertura real — CP-R13
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **20 fichas de sistemas, 216 evidencias y 229 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **21 fichas de sistemas, 220 evidencias y 232 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 229 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 232 registros.
 
 ## Estado por área
 
@@ -38,7 +38,7 @@ Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implem
 | `build_tooling` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
 | `documentation` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
 | `game_support` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
-| `port_support` | READ | [systems/port_achievements.md](systems/port_achievements.md) |
+| `port_support` | READ | [logros](systems/port_achievements.md), [speedrun/LiveSplit](systems/port_speedrun_livesplit.md) |
 | `external_dependencies` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
 
 CROSSCHECKED: declaraciones/contrato, implementación y usos seleccionados contrastados con límites explícitos. READ: implementación consultada con flujo/dependencias todavía parciales. INVENTARIED: rutas localizadas; no prueba comprensión. Cada evidencia conserva su propio nivel y puede ser más limitado que una parte ya contrastada del mismo sistema.
@@ -70,3 +70,5 @@ Esta continuación CP-R10 se registra por separado; duración observada N/D. No 
 CP-R11 añade una cadena distinta de recursos gráficos (AutoMata→morf/BCK/BTK→cleanup): +4 evidencias,+4 símbolos,+0 documentos frente a CP-R10. Models permanece READ global. Neto CP-R09→11:+10 evidencias,+10 símbolos,+0 documentos; dos cadenas representativas nuevas,no familias completas.
 
 CP-R12 añade cadena Message callback→copia de texto→binding→retirada/reset,con consumidor: +5 evidencias,+4 símbolos,+0 documentos. Neto CP-R09→12:+15/+14/+0; tres cadenas representativas. Sin promoción de cobertura global ni runtime.
+
+CP-R13: una cadena de soporte speedrun/LiveSplit (evento/modo/contador→UI/red/cierre),+4 evidencias,+3 símbolos,+1 ficha. Neto CP-R09→13:+19 evidencias (201→220),+17 símbolos (215→232),+1 documento (47→48 archivos;20→21 fichas),cuatro cadenas representativas. Los estados28/18/6/4 no cambian; red/temporización externas no probadas.
