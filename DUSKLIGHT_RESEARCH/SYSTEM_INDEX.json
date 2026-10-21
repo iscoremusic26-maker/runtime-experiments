@@ -518,7 +518,7 @@
   {
     "system_id": "runtime_and_lifecycle",
     "coverage": "CROSSCHECKED",
-    "scope": "Loader y transición file-select→PLAY contrastados selectivamente; sin bootstrap/gates completos ni runtime.",
+    "scope": "CROSSCHECKED selectiva: scheduler/callbacks previos, escena nominal y error task overlap/destino CP-R24; rollback global/reset/captura pendientes.",
     "reports": [
       "systems/runtime_and_lifecycle.md"
     ],
@@ -532,6 +532,7 @@
       "sdk/include/mods/svc/game.h",
       "sdk/include/mods/svc/game_mode.h",
       "sdk/include/mods/svc/host.h",
+      "src/d/d_s_logo.cpp",
       "src/d/d_s_name.cpp",
       "src/d/d_s_play.cpp",
       "src/dusk/mods/loader/context.cpp",
@@ -561,7 +562,9 @@
       "hooking_abi",
       "resources_archives_overlays",
       "hud_ui_text",
-      "memory_ownership"
+      "memory_ownership",
+      "stages_rooms_layers",
+      "port_support"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -587,7 +590,22 @@
       "ARCH-004",
       "ARCH-005",
       "ARCH-006",
-      "ARCH-007"
+      "ARCH-007",
+      "ARCH-008",
+      "ARCH-009",
+      "ARCH-010",
+      "ARCH-011"
+    ],
+    "files_examined": [
+      "src/d/d_s_logo.cpp",
+      "src/f_ap/f_ap_game.cpp",
+      "src/f_op/f_op_overlap_mng.cpp",
+      "src/f_op/f_op_overlap_req.cpp",
+      "src/f_op/f_op_scene_mng.cpp",
+      "src/f_op/f_op_scene_req.cpp",
+      "src/f_pc/f_pc_deletor.cpp",
+      "src/f_pc/f_pc_manager.cpp",
+      "src/f_pc/f_pc_node_req.cpp"
     ]
   },
   {

@@ -7766,5 +7766,87 @@
     "evidence_ids": [
       "PLAYER-049"
     ]
+  },
+  {
+    "symbol": "dScnLogo_c::nextSceneChange",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_s_logo.cpp",
+      "line_start": 785,
+      "line_end": 864,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_logo.cpp#L785-L864"
+    },
+    "signature": "void dScnLogo_c::nextSceneChange()",
+    "purpose": "Consumidor PC de cambio que consume stage solicitado sin ACK",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Ruta StageRequested.set/SaveRequested0 sin reset/opening"
+    ],
+    "risks": [
+      "Otras ramas separadas; no confirma carga"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-008"
+    ]
+  },
+  {
+    "symbol": "fopOvlpReq_Handler",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_overlap_req.cpp",
+      "line_start": 141,
+      "line_end": 157,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_overlap_req.cpp#L141-L157"
+    },
+    "signature": "int fopOvlpReq_Handler(overlap_request_class*)",
+    "purpose": "Propaga error del task al manager overlap",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Request de overlap existente"
+    ],
+    "risks": [
+      "Scene consume bools, no este resultado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-009"
+    ]
+  },
+  {
+    "symbol": "fopOvlpM_Cancel",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_overlap_mng.cpp",
+      "line_start": 101,
+      "line_end": 118,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_overlap_mng.cpp#L101-L118"
+    },
+    "signature": "int fopOvlpM_Cancel()",
+    "purpose": "Retira manager si Done acepta borrar task",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Delete task aceptado o managerNULL"
+    ],
+    "risks": [
+      "No libera flag privado scene ni espera destructor"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-010",
+      "ARCH-011"
+    ]
   }
 ]

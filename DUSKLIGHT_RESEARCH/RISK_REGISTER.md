@@ -49,3 +49,5 @@ CP-R20 · R-27: Config unsubscribe no cancela callbacks capturados; la escritura
 CP-R21 · R-28: modelo visible, fondo registrado y resultado de consulta de agua son estados distintos; no inferir retiro de collision por puntero de modelo nulo ni persistencia por cambio de altura. Matriz/backing deben sobrevivir al fondo registrado; orden entre perfiles y geometría DZB no probados. PRES-060..064.
 
 CP-R23 · R-29: switch del tag MYNA2 se activa al aceptar petición, sin comprobar fallo posterior. Clear de NPC usa room actual y destructor no revierte switch; puede inhibirse reentrada o duplicarse solicitud al apagarlo externamente bajo gates. PLAYER-046/050/051; inferencia condicionada, sin fallo runtime.
+
+CP-R24 · R-30: dos estados overlap (puntero manager y exclusión scene) no se limpian por las mismas rutas. Error temprano puede dejar wait y cancelación tardía puede conservar exclusión. ARCH-009..011; inferencia condicionada, sin bloqueo runtime probado ni garantía de permanencia.

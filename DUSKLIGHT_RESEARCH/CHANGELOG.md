@@ -101,3 +101,7 @@ Padre remoto verificado d5545fee53df860ac9ed2dc07890648bb2ec5f35. +3 evidencias 
 ## CP-R23 — MYNA2: activador, NPC, evento y retirada
 
 Padre remoto verificado 105ea48f71ea29909c0700a7376b88f2d6da548f. +6 evidencias (5 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 localizadores;0 fichas nuevas; Q-12 READ selectivo. PLAYER-046..051: Tag pide tipo1 y marca switch en aceptación; tipo1 selecciona FIRST_TALK y tiene retirada por distancia; failure/goal/success son variantes separadas. Efecto demo/cut/reset contrastado; assets y recompensa final no probados. Fuente MYNA2 local contrastada con cuatro blobs remotos exactos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R24 — Escenas: error de overlap, cancelación y exclusión
+
+Padre remoto verificado 24bc5eda073dffddfd7079c11a62874694770316. +4 evidencias (3 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+3 localizadores;0 fichas nuevas; Q-09 parcial. ARCH-008..011 distinguen rechazo inicial, task overlap ausente y fallo destino; managerNULL no equivale a señal de error al wait ni limpieza de exclusión scene. Logo StageRequested consume flags sin comprobar ChangeReq. Sin deadlock ni rollback runtime demostrado. Sin mod,build ni runtime; solo atlas.
