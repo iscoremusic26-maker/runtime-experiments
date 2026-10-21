@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R02",
+  "checkpoint": "CP-R03",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -3429,6 +3429,3036 @@
         "Distinguir padding de estructura y bytes significativos; no modificar host/SDK.",
         "No inferir tamaño Windows a partir de comentario o assert histórico; no se afirma fallo runtime."
       ]
+    },
+    {
+      "id": "PLAYER-001",
+      "claim": "`daAlink_c` contiene el despacho común del jugador humano y lobo: `m_procInitTable` liga procedimientos a modos; `commonProcInit` ejecuta cleanup del estado anterior y actualiza conjuntamente `mpProcFunc`, `mProcID` y `mModeFlg`. Escribir solamente el ID no reproduce esta transición.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 1028,
+          "line_end": 1042,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L1028-L1042"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 15041,
+          "line_end": 15161,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L15041-L15161"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-002",
+      "claim": "La cadena de controles observada es `mDoCPd_c::read` → `JUTGamePad::read` → `PADRead`; en PC también actualiza los action bindings. La conversión escribe flags held/trigger, sticks y analógicos; el port suprime botones consumidos por el puntero de menús.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_controller_pad.cpp",
+          "line_start": 82,
+          "line_end": 154,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_controller_pad.cpp#L82-L154"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JUtility/JUTGamePad.cpp",
+          "line_start": 90,
+          "line_end": 103,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JUtility/JUTGamePad.cpp#L90-L103"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-003",
+      "claim": "`daAlink_c::setStickData` reinicia botones/trigger y distingue demos/eventos, muerte/pausa, bloqueo de Midna y entrada normal. La dirección normal combina stick y yaw de cámara; la caña puede suministrar un stick distinto. No es una copia universal del dispositivo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 9399,
+          "line_end": 9472,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L9399-L9472"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 9494,
+          "line_end": 9525,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L9494-L9525"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-004",
+      "claim": "El mapa adicional `dusk::getActionBinds` enumera seis acciones (cámara subjetiva, Midna, mapa, minimapa, menú y turbo). `updateActionBindings` consulta teclado/ratón/controlador y filtra documentos visibles; este mapa no constituye por sí solo un remapeador SDK de todas las acciones de Link.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/action_bindings.cpp",
+          "line_start": 19,
+          "line_end": 29,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/action_bindings.cpp#L19-L29"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/action_bindings.cpp",
+          "line_start": 54,
+          "line_end": 108,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/action_bindings.cpp#L54-L108"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-005",
+      "claim": "En `daAlink_c::execute`, se actualizan referencias a actores y atención/demo antes de `setStickData`; luego el procedimiento actual corre antes de `posMove`, y después se aplica `mLinkAcch.CrrPos`. El humano actualiza objetos/combos/escudo mientras el lobo usa rutas específicas de combo y mordida.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 17981,
+          "line_end": 18020,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L17981-L18020"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 18236,
+          "line_end": 18330,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L18236-L18330"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-006",
+      "claim": "Los estados WAIT/MOVE humanos y WOLF_WAIT/WOLF_MOVE comparten `commonProcInit`, pero usan comprobadores de siguiente acción y mezclas de animación diferentes. El lobo tiene además un estado DASH con timers y límites propios. No se deduce simetría de parámetros entre formas.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 15630,
+          "line_end": 15696,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L15630-L15696"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_wolf.inc",
+          "line_start": 2550,
+          "line_end": 2654,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_wolf.inc#L2550-L2654"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-007",
+      "claim": "La creación publica los globals de jugador antes de esperar al event manager y las cargas de archivos/modelos. Un global no nulo no acredita que el modelo o la colisión estén listos. El destructor libera archivos/heaps y borra ambos globals; la función Delete puede demorar el destructor por cambios de ropa/escudo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 4937,
+          "line_end": 5008,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L4937-L5008"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 19867,
+          "line_end": 19919,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L19867-L19919"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-008",
+      "claim": "Los fragmentos de herramientas, natación, montura, daño, demos y lobo son `.inc` incluidos por `d_a_alink.cpp`; no son unidades de compilación independientes. Para alias de símbolo por translation unit hay que contrastar la unidad emitida y su manifest, no deducir un alias desde el nombre del `.inc`.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 1923,
+          "line_end": 1975,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L1923-L1975"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "docs/modding.md",
+          "line_start": 1380,
+          "line_end": 1410,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/docs/modding.md#L1380-L1410"
+        }
+      ],
+      "limitations": [
+        "No se inspeccionó un manifest de símbolos Windows para estas funciones."
+      ]
+    },
+    {
+      "id": "PLAYER-009",
+      "claim": "`GameService` 2.0 modela la época ABI del código del juego. `fopAc_ac_c` conserva comentarios de layout original pero añade campos TARGET_PC, y `STATIC_ASSERT` se vacía fuera de MWERKS. Ni `/* 0x562 */ health` ni `Size: 0x568` certifican offsets/tamaño en Windows x64.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/game.h",
+          "line_start": 10,
+          "line_end": 25,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/game.h#L10-L25"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/f_op/f_op_actor.h",
+          "line_start": 278,
+          "line_end": 343,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor.h#L278-L343"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/global.h",
+          "line_start": 62,
+          "line_end": 73,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/global.h#L62-L73"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-010",
+      "claim": "`fopAcM_posMoveF` calcula velocidad por ángulo horizontal y gravedad con límite de caída, suma velocidad y desplazamiento de colisión a posición. No realiza por sí mismo una corrección contra paredes/suelo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 808,
+          "line_end": 841,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L808-L841"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_e_tt.cpp",
+          "line_start": 1094,
+          "line_end": 1096,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_tt.cpp#L1094-L1096"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_npc.cpp",
+          "line_start": 1378,
+          "line_end": 1383,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc.cpp#L1378-L1383"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-011",
+      "claim": "`dBgS_Acch::Set` guarda punteros a posición actual/anterior, velocidad, ángulos y círculos del actor. `CrrPos` reutiliza polígonos previos para fondo móvil, reinicia chequeos, corrige pared/techo/suelo y consulta agua según flags. Estos punteros y polígonos dependen de la vida del actor y del fondo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s_acch.cpp",
+          "line_start": 96,
+          "line_end": 127,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_acch.cpp#L96-L127"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s_acch.cpp",
+          "line_start": 310,
+          "line_end": 453,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_acch.cpp#L310-L453"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-012",
+      "claim": "El movimiento de Link añade a la integración base animación, pendientes, botas, agua, forma lobo y límites de flotación/caída. La corrección de fondo corre posteriormente y algunas ramas restauran coordenadas para botas magnéticas o natación. Una escritura de posición antes de esta secuencia puede quedar corregida o sustituida.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 13013,
+          "line_end": 13075,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L13013-L13075"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 13101,
+          "line_end": 13178,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L13101-L13178"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 18316,
+          "line_end": 18338,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L18316-L18338"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-013",
+      "claim": "Colisión de combate y colisión de mundo son rutas distintas: `dScnPly_Draw` llama `dComIfG_Ccsp()->Move` y limpia flags de fondo; más adelante mueve el fondo cuando no está pausado. `dCcS::Move` delega a `cCcS::Move`. El nombre Draw de esa fase del juego no demuestra ejecución por cada frame GPU.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_play.cpp",
+          "line_start": 545,
+          "line_end": 558,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_play.cpp#L545-L558"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_play.cpp",
+          "line_start": 599,
+          "line_end": 618,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_play.cpp#L599-L618"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_cc_s.cpp",
+          "line_start": 738,
+          "line_end": 755,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_cc_s.cpp#L738-L755"
+        }
+      ],
+      "limitations": [
+        "La frecuencia de presentación/simulación requiere el trazado completo del runtime; no se mide aquí."
+      ]
+    },
+    {
+      "id": "PLAYER-014",
+      "claim": "`dCcS::SetAtTgGObjInf` establece datos At/Tg, prueba escudo, acumula daño en Stts si no hay escudo, invoca callbacks de impacto y genera hitmarks con contadores de efectos. Un contacto físico, un callback y una pérdida de HP son fases diferentes.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_cc_s.cpp",
+          "line_start": 530,
+          "line_end": 607,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_cc_s.cpp#L530-L607"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-015",
+      "claim": "`at_power_check` deriva atacante, tipo de impacto y potencia desde el collider. `cc_at_check` aplica modificadores de arma/tipo/material y settings PC, resta `i_enemy->health`, clampa muerte, emite señales de logros, reproduce collision SE y puede activar hitstop. No es una función pura de cálculo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_cc_uty.cpp",
+          "line_start": 314,
+          "line_end": 369,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_cc_uty.cpp#L314-L369"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_cc_uty.cpp",
+          "line_start": 372,
+          "line_end": 520,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_cc_uty.cpp#L372-L520"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-016",
+      "claim": "El daño del jugador sigue otra ruta: `checkDamageAction` distingue guardia y materiales y llama `setDamagePoint`; este aplica multiplicadores (incluidos settings PC), armadura/rupias o cola de variación de vida, efectos y timer de invulnerabilidad. La salud base de un enemigo no representa automáticamente la vida de Link.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_damage.inc",
+          "line_start": 148,
+          "line_end": 240,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_damage.inc#L148-L240"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_damage.inc",
+          "line_start": 629,
+          "line_end": 750,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_damage.inc#L629-L750"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-017",
+      "claim": "No todos los enemigos tratan `health` como contador autónomo: Tektite acumula daño en otro campo, reescribe `health=100` o `0` y después llama `cc_at_check`; el resultado elige DAMAGE/DEATH y cooldown. Esto invalida una extrapolación universal de un hook de HP o de la pareja health/campo adyacente.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_e_tt.cpp",
+          "line_start": 182,
+          "line_end": 248,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_tt.cpp#L182-L248"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-018",
+      "claim": "La muerte del Tektite desactiva su receptor/atención, avanza animación/efectos, crea desaparición, solicita borrado y persiste un switch de sala. Su Delete libera los dos recursos y el objeto de audio. Solicitar borrado genérico no reproduce todos esos efectos narrativos y de recursos.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_e_tt.cpp",
+          "line_start": 812,
+          "line_end": 893,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_tt.cpp#L812-L893"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_e_tt.cpp",
+          "line_start": 1174,
+          "line_end": 1191,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_tt.cpp#L1174-L1191"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-019",
+      "claim": "El process manager atiende borrado, cambios de prioridad y creación antes del recorrido de ejecución; `fpcEx_Execute` exige init_state=2 y proceso no pausado. `fopAc_Execute` añade pausa global, aprobación de eventos, condiciones de suspensión y copia current→old antes del método del actor. Una actualización de mod no equivale a una ejecución efectiva del actor.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_manager.cpp",
+          "line_start": 52,
+          "line_end": 115,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_manager.cpp#L52-L115"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_executor.cpp",
+          "line_start": 35,
+          "line_end": 40,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_executor.cpp#L35-L40"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor.cpp",
+          "line_start": 323,
+          "line_end": 349,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp#L323-L349"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-020",
+      "claim": "`fopAc_Create` inicializa parámetros/home/current/parent/escala y consulta switches de aparición de enemigos antes del Create específico; solamente al completar la fase lo encola para dibujar. `fopAcM_create` fabrica append y devuelve un ID de solicitud; `fopAcM_SearchByID` puede devolver éxito con puntero nulo si aún se está creando.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor.cpp",
+          "line_start": 443,
+          "line_end": 555,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp#L443-L555"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 152,
+          "line_end": 173,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L152-L173"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 258,
+          "line_end": 269,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L258-L269"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-021",
+      "claim": "El borrado tiene consentimiento, cola y finalización: `fpcDt_ToDeleteQ` consulta timing/layers y estado; `fopAc_Delete` llama el Delete específico y solamente al completar elimina muestras de interpolación, colas, heap, referencia de demo y objetos de audio.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_deletor.cpp",
+          "line_start": 18,
+          "line_end": 123,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_deletor.cpp#L18-L123"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor.cpp",
+          "line_start": 404,
+          "line_end": 439,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp#L404-L439"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-022",
+      "claim": "ActorService registra un profile con callbacks del mod y nombre stage; exige tamaño mínimo y los cinco callbacks, rechaza nombre de otro actor mod, y asigna ProfileName dinámico. Crear por nombre usa el argument de `dStage_searchName`, sustituyendo el argument recibido. No se debe persistir un ProfileName dinámico como identidad estable entre cargas.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 56,
+          "line_end": 123,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L56-L123"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 239,
+          "line_end": 250,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L239-L250"
+        }
+      ],
+      "limitations": [
+        "Persistencia estable entre ejecuciones no está contratada; la recomendación de no guardar ProfileName es una inferencia de la asignación por slot."
+      ]
+    },
+    {
+      "id": "PLAYER-023",
+      "claim": "`unregister_actor` es del propietario del profile, intenta forzar/barrer eliminación y retorna MOD_UNAVAILABLE si quedan actores; entonces retiene el slot. `actor_remove_mod` solo registra error si esa operación falla. No hay una prueba de que cualquier actor asíncrono pueda retirarse sin riesgo durante hot reload.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 193,
+          "line_end": 217,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L193-L217"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/actor.cpp",
+          "line_start": 359,
+          "line_end": 372,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/actor.cpp#L359-L372"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-024",
+      "claim": "El ejemplo Tektite enlaza percepción por distancia/rango de home y línea de vista, estados WAIT/CHASE/ATTACK/DAMAGE/DEATH, movimiento/Acch, animación/audio y registro del collider. Los parámetros de spawn también eligen archivos y switch de persistencia. Su IA no prueba un servicio universal de navegación o percepción.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_e_tt.cpp",
+          "line_start": 477,
+          "line_end": 528,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_tt.cpp#L477-L528"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_e_tt.cpp",
+          "line_start": 1037,
+          "line_end": 1163,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_tt.cpp#L1037-L1163"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_e_tt.cpp",
+          "line_start": 1230,
+          "line_end": 1298,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_tt.cpp#L1230-L1298"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 2071,
+          "line_end": 2089,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L2071-L2089"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-025",
+      "claim": "`dPath_GetRoomPath` obtiene paths del stage con room=-1 o de datos de sala; valida índice/ausencia. `dPath_GetPnt` y `dPath_GetNextRoomPath` retornan referencias a puntos/paths alojados en esos datos, no copias de vida indefinida ni un navmesh general.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_path.cpp",
+          "line_start": 39,
+          "line_end": 98,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_path.cpp#L39-L98"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-026",
+      "claim": "Hay familias NPC diferentes. `daNpcT_c::execute` prioriza evtProc sobre action, mueve/corrige fondo y actualiza animación, atención, colisión y pedidos de evento; `evtProc` administra talk/demo/cut. `daNpcF_c::execute` usa main y otra secuencia. Fado deriva de daNpcT_c, mientras Shad deriva de daNpcF_c: una base no cubre todos los NPC.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_npc.cpp",
+          "line_start": 1368,
+          "line_end": 1429,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc.cpp#L1368-L1429"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_npc.cpp",
+          "line_start": 1893,
+          "line_end": 1938,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc.cpp#L1893-L1938"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_npc4.cpp",
+          "line_start": 561,
+          "line_end": 614,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc4.cpp#L561-L614"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_npc_aru.h",
+          "line_start": 40,
+          "line_end": 48,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_npc_aru.h#L40-L48"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_npc_shad.h",
+          "line_start": 40,
+          "line_end": 44,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_npc_shad.h#L40-L44"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-027",
+      "claim": "Ambas familias delegan diálogo a `mFlow.doFlow` y sincronizan animaciones; el talk de Shad puede crear un item de presentación y pedir DEFAULT_GETITEM antes de volver a wait. Interceptar solo el texto no reproduce el contrato de diálogo/progresión.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_npc.cpp",
+          "line_start": 2545,
+          "line_end": 2587,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc.cpp#L2545-L2587"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_npc4.cpp",
+          "line_start": 1391,
+          "line_end": 1423,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc4.cpp#L1391-L1423"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_npc_shad.cpp",
+          "line_start": 1468,
+          "line_end": 1506,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc_shad.cpp#L1468-L1506"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-028",
+      "claim": "Epona es actor propio de lista 4, anterior a Link lista 5. Create espera a Link/recursos, rechaza otro caballo global y puede restaurar estado de reinicio; execute lee demos/stick, despacha m_proc, mueve/corrige fondo; destructor libera recurso/audio y borra el global si es suyo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_horse.cpp",
+          "line_start": 664,
+          "line_end": 730,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_horse.cpp#L664-L730"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_horse.cpp",
+          "line_start": 4427,
+          "line_end": 4431,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_horse.cpp#L4427-L4431"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_horse.cpp",
+          "line_start": 4477,
+          "line_end": 4514,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_horse.cpp#L4477-L4514"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_horse.cpp",
+          "line_start": 4674,
+          "line_end": 4716,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_horse.cpp#L4674-L4716"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 19928,
+          "line_end": 19942,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L19928-L19942"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-029",
+      "claim": "La canoa selecciona recurso según parámetros/progresión, configura varios chequeadores de fondo y colliders, y en execute usa el estado de Link, dirección forzada/agua; puede forzar posición y reconstruir puntos delantero/trasero. No es un simple accesorio visual del jugador.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_canoe.cpp",
+          "line_start": 92,
+          "line_end": 155,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_canoe.cpp#L92-L155"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_canoe.cpp",
+          "line_start": 617,
+          "line_end": 687,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_canoe.cpp#L617-L687"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_canoe.cpp",
+          "line_start": 810,
+          "line_end": 842,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_canoe.cpp#L810-L842"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-030",
+      "claim": "Midna tiene execute propio que lee transformación/forma de Link, demos y conversación y actualiza flags de entrada, posición y montura de Link. `setStickData` del jugador también consulta su bloqueo. Una intervención sobre controles depende de ambos actores y del evento activo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_midna.cpp",
+          "line_start": 3215,
+          "line_end": 3249,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_midna.cpp#L3215-L3249"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 9445,
+          "line_end": 9452,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L9445-L9452"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-031",
+      "claim": "Pesca está repartida entre la caña `dmg_rod_Execute` (input/PC mirror), parámetros y recursos de `dmg_rod_Create`, y el actor de peces `daMg_Fish_Execute` (estado/revisión/región y action). Estas rutas fueron localizadas y examinadas parcialmente; faltan la máquina completa, capturas y persistencia.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_mg_rod.cpp",
+          "line_start": 5796,
+          "line_end": 5860,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_mg_rod.cpp#L5796-L5860"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_mg_rod.cpp",
+          "line_start": 6359,
+          "line_end": 6390,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_mg_rod.cpp#L6359-L6390"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_mg_fish.cpp",
+          "line_start": 3219,
+          "line_end": 3260,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_mg_fish.cpp#L3219-L3260"
+        }
+      ],
+      "limitations": [
+        "PARTIAL: no se trazó el minijuego completo ni todas las variantes del disco."
+      ]
+    },
+    {
+      "id": "PLAYER-032",
+      "claim": "El ganado/minijuego usa otro despacho por puntero de proceso: daCow_c::action actualiza timers/daño y llama mProcess; Execute enlaza movimiento, Acch, efectos, animación y colisión. Create tiene parámetros que solo producen efectos de entrada y devuelven error de fase, además de la ruta de recurso normal.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_cow.cpp",
+          "line_start": 2831,
+          "line_end": 2858,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_cow.cpp#L2831-L2858"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_cow.cpp",
+          "line_start": 2928,
+          "line_end": 2965,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_cow.cpp#L2928-L2965"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_cow.cpp",
+          "line_start": 3126,
+          "line_end": 3155,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_cow.cpp#L3126-L3155"
+        }
+      ],
+      "limitations": [
+        "PARTIAL: rutinas de corral/captura y recompensas no trazadas en su totalidad."
+      ]
+    },
+    {
+      "id": "PLAYER-033",
+      "claim": "Puzzles de fondo móvil combinan switches y geometría: el switch de Spinner compara estado/rotación y escribe switches mientras actualiza matriz/MoveBG; el bloque L6 detecta cambio de switch, despacha WAIT/LIFT_UP/LIFT_DOWN y actualiza posición con sonido. Reponer el switch puede no deshacer instantáneamente una animación o una geometría ya movida.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swspinner.cpp",
+          "line_start": 99,
+          "line_end": 178,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swspinner.cpp#L99-L178"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_lv6Lblock.cpp",
+          "line_start": 39,
+          "line_end": 76,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_lv6Lblock.cpp#L39-L76"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_lv6Lblock.cpp",
+          "line_start": 79,
+          "line_end": 140,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_lv6Lblock.cpp#L79-L140"
+        }
+      ],
+      "limitations": [
+        "Sin prueba del juego ni resolución de símbolos del ejecutable Windows en esta campaña."
+      ]
+    },
+    {
+      "id": "PLAYER-034",
+      "claim": "La documentación presenta explícitamente hooks tipados de `daAlink_c::posMove` y `execute`, con FEATURES game; `hook.hpp` también lo exige. Eso acredita una ruta de contrato y tipos, no la resolución de esos símbolos ni la convivencia de hooks en nuestro ejecutable Windows.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "docs/modding.md",
+          "line_start": 1315,
+          "line_end": 1345,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/docs/modding.md#L1315-L1345"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/hook.hpp",
+          "line_start": 1,
+          "line_end": 5,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/hook.hpp#L1-L5"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 13013,
+          "line_end": 13022,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L13013-L13022"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 17814,
+          "line_end": 17819,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L17814-L17819"
+        }
+      ],
+      "limitations": [
+        "Sin manifest Windows, sin instalar hook, sin prueba de ejecución/coexistencia."
+      ]
+    },
+    {
+      "id": "PRES-001",
+      "claim": "ResourceService lee res/ del bundle propio, copia a malloc y registra ownership; free rechaza buffers ajenos y detach reclama allocations.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/resource.h",
+          "line_start": 9,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/resource.h#L9-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/resource.cpp",
+          "line_start": 20,
+          "line_end": 97,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/resource.cpp#L20-L97"
+        }
+      ],
+      "limitations": [
+        "No carga directamente archivos del disco ni monta ARC."
+      ]
+    },
+    {
+      "id": "PRES-002",
+      "claim": "Los overlays se sincronizan según active_mods, con estáticos antes de runtime; la sincronización notifica generación ARC.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/overlay.cpp",
+          "line_start": 70,
+          "line_end": 113,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/overlay.cpp#L70-L113"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/overlay.cpp",
+          "line_start": 185,
+          "line_end": 211,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/overlay.cpp#L185-L211"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/overlay.h",
+          "line_start": 16,
+          "line_end": 29,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/overlay.h#L16-L29"
+        }
+      ],
+      "limitations": [
+        "La resolución final de DVD depende de Aurora no descargado."
+      ]
+    },
+    {
+      "id": "PRES-003",
+      "claim": "OpenOverlayFile mantiene bytes propios/shared; cbOpen toma copia de metadata protegida por mutex y tolera ID invalidado por resync.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/overlay.cpp",
+          "line_start": 115,
+          "line_end": 175,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/overlay.cpp#L115-L175"
+        }
+      ],
+      "limitations": [
+        "No demuestra ausencia universal de carreras en Aurora."
+      ]
+    },
+    {
+      "id": "PRES-004",
+      "claim": "JKRArchive invalida la asociación activa por generación pero retiene allocations antiguas hasta retirada explícita o eliminación del archivo.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
+          "line_start": 373,
+          "line_end": 445,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRArchivePri.cpp#L373-L445"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
+          "line_start": 515,
+          "line_end": 539,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRArchivePri.cpp#L515-L539"
+        }
+      ],
+      "limitations": [
+        "Un consumidor ya convertido a J3D no se reconstruye automáticamente.",
+        "removeOverlayResource(true) y removeAllOverlayResources invalidan buffers incluso con archive montado."
+      ]
+    },
+    {
+      "id": "PRES-005",
+      "claim": "dRes_info_c inicia mount asíncrono; setRes retorna pendiente mientras sync no completa; resources usan heap y count controla destrucción.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_resorce.cpp",
+          "line_start": 53,
+          "line_end": 69,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_resorce.cpp#L53-L69"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_resorce.cpp",
+          "line_start": 601,
+          "line_end": 657,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_resorce.cpp#L601-L657"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_resorce.cpp",
+          "line_start": 808,
+          "line_end": 871,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_resorce.cpp#L808-L871"
+        }
+      ],
+      "limitations": [
+        "No se inspeccionó toda la implementación DVD thread."
+      ]
+    },
+    {
+      "id": "PRES-006",
+      "claim": "getResInfoLoaded puede devolver null durante carga; TARGET_PC reconstruye slots explícitamente destruidos con placement new.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_resorce.cpp",
+          "line_start": 887,
+          "line_end": 921,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_resorce.cpp#L887-L921"
+        }
+      ],
+      "limitations": [
+        "No usar offsets/layout GC como equivalentes a PC."
+      ]
+    },
+    {
+      "id": "PRES-007",
+      "claim": "CameraService convierte matrices GX a columnas WebGPU considerando reversed-Z; valida frustum y requiere game_view no nulo.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/camera.cpp",
+          "line_start": 55,
+          "line_end": 128,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/camera.cpp#L55-L128"
+        }
+      ],
+      "limitations": [
+        "No valida que un void* arbitrario sea un view_class vivo."
+      ]
+    },
+    {
+      "id": "PRES-008",
+      "claim": "Operadores de cámara se ordenan por prioridad descendente y secuencia ascendente; primer true aplica Reset y termina; solo cámara principal.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/camera.cpp",
+          "line_start": 142,
+          "line_end": 171,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/camera.cpp#L142-L171"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/camera.cpp",
+          "line_start": 187,
+          "line_end": 243,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/camera.cpp#L187-L243"
+        }
+      ],
+      "limitations": [
+        "Debe mantenerse vivo user_data hasta unregister/detach."
+      ]
+    },
+    {
+      "id": "PRES-009",
+      "claim": "dCamera_c::Run salta la lógica normal cuando cámara detached/debug u operador toma control.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_camera.cpp",
+          "line_start": 1058,
+          "line_end": 1075,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_camera.cpp#L1058-L1075"
+        }
+      ],
+      "limitations": [
+        "No demuestra comportamiento cinematográfico de todas las cámaras."
+      ]
+    },
+    {
+      "id": "PRES-010",
+      "claim": "GfxService es WebGPU C API; servicios en game thread y draws/computes en render worker con handles prestados de vigencia limitada.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/gfx.h",
+          "line_start": 16,
+          "line_end": 39,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/gfx.h#L16-L39"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 1061,
+          "line_end": 1118,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L1061-L1118"
+        }
+      ],
+      "limitations": [
+        "No ofrece garantía de handle D3D12 nativo; Aurora/Dawn backend no inspeccionado."
+      ]
+    },
+    {
+      "id": "PRES-011",
+      "claim": "Cinco fases Gfx tienen call sites en m_Do_graphic; etapa y struct_size se validan al registrar.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_graphic.cpp",
+          "line_start": 2331,
+          "line_end": 2338,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_graphic.cpp#L2331-L2338"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_graphic.cpp",
+          "line_start": 2363,
+          "line_end": 2370,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_graphic.cpp#L2363-L2370"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_graphic.cpp",
+          "line_start": 2392,
+          "line_end": 2399,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_graphic.cpp#L2392-L2399"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_graphic.cpp",
+          "line_start": 2756,
+          "line_end": 2762,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_graphic.cpp#L2756-L2762"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_graphic.cpp",
+          "line_start": 2817,
+          "line_end": 2823,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_graphic.cpp#L2817-L2823"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 1304,
+          "line_end": 1328,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L1304-L1328"
+        }
+      ],
+      "limitations": [
+        "Presencia de call site no certifica shader DX12."
+      ]
+    },
+    {
+      "id": "PRES-012",
+      "claim": "Gfx deactivating extrae registros bajo mutex, desregistra tipos Aurora y sincroniza; detached retira superficies/claims de WindowService.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 176,
+          "line_end": 186,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L176-L186"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 1013,
+          "line_end": 1032,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L1013-L1032"
+        }
+      ],
+      "limitations": [
+        "No sustituye release de objetos GPU propiedad del mod."
+      ]
+    },
+    {
+      "id": "PRES-013",
+      "claim": "Servicio Gfx contiene workaround AuroraGXSync y compatibilidad explícita de tamaños al resolver attachments.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 31,
+          "line_end": 33,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L31-L33"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/gfx.cpp",
+          "line_start": 1339,
+          "line_end": 1389,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L1339-L1389"
+        }
+      ],
+      "limitations": [
+        "Thread safety completa y coste de sincronización no medidos."
+      ]
+    },
+    {
+      "id": "PRES-014",
+      "claim": "J3D resources se seleccionan por tipo de nodo ARC; loadResource carga modelos y animaciones, convierte DZB/KCL.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_resorce.cpp",
+          "line_start": 327,
+          "line_end": 351,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_resorce.cpp#L327-L351"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_resorce.cpp",
+          "line_start": 419,
+          "line_end": 533,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_resorce.cpp#L419-L533"
+        }
+      ],
+      "limitations": [
+        "Compatibilidad de un asset concreto no verificada."
+      ]
+    },
+    {
+      "id": "PRES-015",
+      "claim": "mDoExt_bckAnm instala matriz de animación en nodo raíz o joint indicado; play actualiza J3DFrameCtrl.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 118,
+          "line_end": 145,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L118-L145"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 234,
+          "line_end": 270,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L234-L270"
+        }
+      ],
+      "limitations": [
+        "Compartir J3DModelData implica efectos compartidos que deben analizarse por actor."
+      ]
+    },
+    {
+      "id": "PRES-016",
+      "claim": "J3DModel update llama calc y entry; entry toca j3dSys y registra material interpolation en TARGET_PC; viewCalc intercambia buffers.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+          "line_start": 435,
+          "line_end": 458,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L435-L458"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+          "line_start": 516,
+          "line_end": 568,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L516-L568"
+        }
+      ],
+      "limitations": [
+        "No hay contrato SDK general para editar arbitrariamente el grafo J3D."
+      ]
+    },
+    {
+      "id": "PRES-017",
+      "claim": "mDoExt_modelEntryDL tiene ruta específica de frame interpolado que recalcula material/diff y retorna sin lógica normal.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 343,
+          "line_end": 406,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L343-L406"
+        }
+      ],
+      "limitations": [
+        "No asumir que frame render equivale a tick simulado."
+      ]
+    },
+    {
+      "id": "PRES-018",
+      "claim": "Texturas se registran desde textures/*.dds o png; posterior posición de mod tiene prioridad; keepalive se conserva hasta unregister.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/texture.cpp",
+          "line_start": 35,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/texture.cpp#L35-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/texture.cpp",
+          "line_start": 83,
+          "line_end": 94,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/texture.cpp#L83-L94"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/texture.cpp",
+          "line_start": 139,
+          "line_end": 195,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/texture.cpp#L139-L195"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/texture.cpp",
+          "line_start": 217,
+          "line_end": 237,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/texture.cpp#L217-L237"
+        }
+      ],
+      "limitations": [
+        "Garantía interna del lock Aurora se observa como dependencia, no verificada aquí.",
+        "Concurrencia/quiescencia externa de Aurora procede de comentario del host; solo orden local/callback fueron observados."
+      ]
+    },
+    {
+      "id": "PRES-019",
+      "claim": "HUD dMeter2 lee estado save/play, ejecuta submedidores y usa heaps propios; _draw puede omitirse por configuración y _delete destruye heaps.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_meter2.cpp",
+          "line_start": 69,
+          "line_end": 170,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_meter2.cpp#L69-L170"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_meter2.cpp",
+          "line_start": 268,
+          "line_end": 301,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_meter2.cpp#L268-L301"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_meter2.cpp",
+          "line_start": 347,
+          "line_end": 435,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_meter2.cpp#L347-L435"
+        }
+      ],
+      "limitations": [
+        "HUD contiene reconciliación de flags; no es capa puramente visual."
+      ]
+    },
+    {
+      "id": "PRES-020",
+      "claim": "MessageService valida texto codificado terminado, copia overrides y resuelve por grupo/id/idioma con prioridad y secuencia.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/flow.cpp",
+          "line_start": 455,
+          "line_end": 481,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L455-L481"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/flow.cpp",
+          "line_start": 514,
+          "line_end": 566,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L514-L566"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/flow.cpp",
+          "line_start": 1272,
+          "line_end": 1315,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L1272-L1315"
+        }
+      ],
+      "limitations": [
+        "No equivale a aceptar strings UTF-8 arbitrarios ni a traducir fonts."
+      ]
+    },
+    {
+      "id": "PRES-021",
+      "claim": "Lenguajes disponibles dependen de región/plataforma/revisión; NA no Wii revision2 ofrece English, y msg_folder distingue Msgus/Msguk.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/language.cpp",
+          "line_start": 8,
+          "line_end": 38,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/language.cpp#L8-L38"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/language.cpp",
+          "line_start": 59,
+          "line_end": 76,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/language.cpp#L59-L76"
+        }
+      ],
+      "limitations": [
+        "No se extrajo ni redistribuyó contenido del disco."
+      ]
+    },
+    {
+      "id": "PRES-022",
+      "claim": "AudioResService separa waves de tablas y streams; wave ID no es JAISound ID; stream requiere ruta .ast en DVD/overlay.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/audio_res.h",
+          "line_start": 284,
+          "line_end": 310,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/audio_res.h#L284-L310"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/audio_res.h",
+          "line_start": 393,
+          "line_end": 405,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/audio_res.h#L393-L405"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/audio_res.cpp",
+          "line_start": 15,
+          "line_end": 55,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/audio_res.cpp#L15-L55"
+        }
+      ],
+      "limitations": [
+        "Opus depende de build; sin audio runtime."
+      ]
+    },
+    {
+      "id": "PRES-023",
+      "claim": "WSYS carga bytes del bundle, detecta contenedor, valida loops, registra slot owned y reemplaza mapa compartido con mutex.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/wsys.cpp",
+          "line_start": 66,
+          "line_end": 114,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/wsys.cpp#L66-L114"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/wsys.cpp",
+          "line_start": 149,
+          "line_end": 205,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/wsys.cpp#L149-L205"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/wsys.cpp",
+          "line_start": 258,
+          "line_end": 294,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/wsys.cpp#L258-L294"
+        }
+      ],
+      "limitations": [
+        "No extrapolar política de prioridad de otros servicios: usa emplace para claves repetidas."
+      ]
+    },
+    {
+      "id": "PRES-024",
+      "claim": "bst::frame_end llama wsys::sync_audio_replacements si sound_replacements_dirty; lifecycleApplied llama ambos sync.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/bst.cpp",
+          "line_start": 171,
+          "line_end": 184,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/bst.cpp#L171-L184"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/audio_res/audio_res.cpp",
+          "line_start": 30,
+          "line_end": 55,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/audio_res/audio_res.cpp#L30-L55"
+        }
+      ],
+      "limitations": [
+        "Posible discrepancia de actualización de tablas en runtime; requiere trace de lifecycle y prueba; no corregida."
+      ]
+    },
+    {
+      "id": "PRES-025",
+      "claim": "AudioMgr gframeProcess procesa speech/SE/BGM y reset; startSound y startLevelSound rechazan durante resetting.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2AudioMgr.cpp",
+          "line_start": 153,
+          "line_end": 229,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2AudioMgr.cpp#L153-L229"
+        }
+      ],
+      "limitations": [
+        "No ofrece API SDK genérica de reproducción en este análisis."
+      ]
+    },
+    {
+      "id": "PRES-026",
+      "claim": "SE playback tiene despacho específico por sound ID y reverb/posición/pitch/volumen; algunos sonidos activan ruta multi-trigger.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SeMgr.cpp",
+          "line_start": 117,
+          "line_end": 157,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SeMgr.cpp#L117-L157"
+        }
+      ],
+      "limitations": [
+        "No tratar un ID numérico como sonido universal en todas versiones."
+      ]
+    },
+    {
+      "id": "PRES-027",
+      "claim": "Partículas de escena leen PsceneNNN.jpc, crean resource manager en heap propio; removeScene invalida emisores y destruye recursos.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_particle.cpp",
+          "line_start": 1231,
+          "line_end": 1322,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_particle.cpp#L1231-L1322"
+        }
+      ],
+      "limitations": [
+        "ID de partícula puede no estar cargado en escena actual."
+      ]
+    },
+    {
+      "id": "PRES-028",
+      "claim": "Partículas separan calc3D grupos 0-13, calc2D 14-16 y menu 17-18; cleanup de emitter corta callbacks y abandona immortal.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_particle.cpp",
+          "line_start": 925,
+          "line_end": 959,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_particle.cpp#L925-L959"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_particle.cpp",
+          "line_start": 1329,
+          "line_end": 1376,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_particle.cpp#L1329-L1376"
+        }
+      ],
+      "limitations": [
+        "Un callback/puntero registrado desde mod no queda automáticamente cubierto por ownership SDK."
+      ]
+    },
+    {
+      "id": "PRES-029",
+      "claim": "setDaytime lee date/time del save, atiende eventos/mensajes/timepass y escribe fecha/hora y notifica audio.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 1529,
+          "line_end": 1546,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L1529-L1546"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 1648,
+          "line_end": 1663,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L1648-L1663"
+        }
+      ],
+      "limitations": [
+        "Cambiar tiempo no es modificación visual aislada."
+      ]
+    },
+    {
+      "id": "PRES-030",
+      "claim": "Weather inicializa flags/contadores/pointers, usa ramas stage/room y destruye packets al desmontar.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo_wether.cpp",
+          "line_start": 241,
+          "line_end": 310,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L241-L310"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo_wether.cpp",
+          "line_start": 317,
+          "line_end": 340,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L317-L340"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo_wether.cpp",
+          "line_start": 414,
+          "line_end": 450,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L414-L450"
+        }
+      ],
+      "limitations": [
+        "No inspeccionadas todas las condiciones meteorológicas."
+      ]
+    },
+    {
+      "id": "PRES-031",
+      "claim": "Rain setter escribe raincnt y base_raincnt; registro wind conserva puntero e índice y wind_cut borra entry válida.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo_wether.cpp",
+          "line_start": 1388,
+          "line_end": 1403,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L1388-L1403"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo_wether.cpp",
+          "line_start": 1538,
+          "line_end": 1541,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L1538-L1541"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo_wether.cpp",
+          "line_start": 1373,
+          "line_end": 1388,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L1373-L1388"
+        }
+      ],
+      "limitations": [
+        "Vigencia de WIND_INFLUENCE debe superar registro; retirar antes de unload."
+      ]
+    },
+    {
+      "id": "PRES-032",
+      "claim": "Weather proc depende de stage/daytime/darkworld y estación Fishing Pond; no existe evidencia aquí de servicio SDK weather.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo_wether.cpp",
+          "line_start": 1092,
+          "line_end": 1137,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L1092-L1137"
+        }
+      ],
+      "limitations": [
+        "Ausencia de servicio weather se contrasta con matriz completa SDK; hooks aún potenciales."
+      ]
+    },
+    {
+      "id": "PRES-033",
+      "claim": "settingTevStruct usa room/posición y tipo; update ambiental llama setDaytime, weather proc, color, audio-position y flush.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 3673,
+          "line_end": 3712,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L3673-L3712"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 4798,
+          "line_end": 4804,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L4798-L4804"
+        }
+      ],
+      "limitations": [
+        "No se auditaron todas las ramas de iluminación."
+      ]
+    },
+    {
+      "id": "PRES-034",
+      "claim": "Proceso KYEFF conecta create/init, execute/weather-move/audio framework, draw y delete/weather-delete; KYEFF2 separa segunda capa.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kyeff.cpp",
+          "line_start": 60,
+          "line_end": 97,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kyeff.cpp#L60-L97"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kyeff.cpp",
+          "line_start": 113,
+          "line_end": 117,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kyeff.cpp#L113-L117"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kyeff2.cpp",
+          "line_start": 12,
+          "line_end": 43,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kyeff2.cpp#L12-L43"
+        }
+      ],
+      "limitations": [
+        "Scheduler total de kankyo y todas las prioridades quedan pendientes."
+      ]
+    },
+    {
+      "id": "PRES-035",
+      "claim": "ResourceService file_exists/directory_exists bool retornan MOD_INVALID_ARGUMENT=5 en rama inválida, convirtiéndose a true.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/resource.cpp",
+          "line_start": 99,
+          "line_end": 116,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/resource.cpp#L99-L116"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 48,
+          "line_end": 58,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L48-L58"
+        }
+      ],
+      "limitations": [
+        "Observación estática; no se llamó a servicios ni se modificó host."
+      ]
+    },
+    {
+      "id": "ROOT-001",
+      "claim": "TARGET_PC mantiene el heap JKR actual como variable thread_local; becomeCurrentHeap reemplaza el heap y devuelve el previo.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 40,
+          "line_end": 53,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L40-L53"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 200,
+          "line_end": 204,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L200-L204"
+        }
+      ],
+      "limitations": [
+        "El heap actual de un hilo no autoriza usar objetos gameplay desde ese hilo."
+      ]
+    },
+    {
+      "id": "ROOT-002",
+      "claim": "Las macros JKR_NEW y JKR_DELETE PC seleccionan sobrecargas con JKRHeapToken; no son una sustitución universal de todo new/delete de una DLL.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
+          "line_start": 236,
+          "line_end": 278,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JKernel/JKRHeap.h#L236-L278"
+        }
+      ],
+      "limitations": [
+        "No se midió la configuración de CRT/allocator de ninguna DLL futura."
+      ]
+    },
+    {
+      "id": "ROOT-003",
+      "claim": "La sobrecarga PC con token usa el heap actual y fallback aligned; Windows empareja _aligned_malloc con _aligned_free al no encontrar heap propietario.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 521,
+          "line_end": 595,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L521-L595"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 627,
+          "line_end": 640,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L627-L640"
+        }
+      ],
+      "limitations": [
+        "No liberar memoria de servicios ni de otro allocator por inferencia de procedencia."
+      ]
+    },
+    {
+      "id": "ROOT-004",
+      "claim": "El callback de construcción de heap de actor se ejecuta con heap temporal y restaura el previo al retorno normal; eliminar heap destruye el solid heap y pone el campo a NULL.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 372,
+          "line_end": 385,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L372-L385"
+        }
+      ],
+      "limitations": [
+        "No hay guard RAII visible en este wrapper para excepciones; no afirmar seguridad si el callback lanza."
+      ]
+    },
+    {
+      "id": "ROOT-005",
+      "claim": "entrySolidHeap enmascara flags del tamaño, duplica el tamaño de reserva en TARGET_PC y puede llamar de nuevo el callback al intentar una reserva ajustada.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 625,
+          "line_end": 670,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L625-L670"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 717,
+          "line_end": 753,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L717-L753"
+        }
+      ],
+      "limitations": [
+        "Duplicar estimación no prueba layout idéntico ni doble tamaño exacto de cada objeto."
+      ]
+    },
+    {
+      "id": "ROOT-006",
+      "claim": "La sobrecarga conveniente de createSolidHeapToCurrent conserva un único mDoExt_SaveCurrentHeap y exige mainThread y ausencia de heap salvado; restore lo restablece y lo borra.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 986,
+          "line_end": 1009,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L986-L1009"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 1118,
+          "line_end": 1127,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1118-L1127"
+        }
+      ],
+      "limitations": [
+        "Son invariantes expresadas por asserts; no asumir que siempre se aplican en distribución."
+      ]
+    },
+    {
+      "id": "ROOT-007",
+      "claim": "fapGm_Execute ejecuta duskExecute/ModLoader::tick antes de fpcM_Management; después calcula partículas menú, GameMode tick y achievements.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 748,
+          "line_end": 751,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L748-L751"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 807,
+          "line_end": 843,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L807-L843"
+        }
+      ],
+      "limitations": [
+        "No equiparar frame de simulación, callbacks de actor y presentación GPU."
+      ]
+    },
+    {
+      "id": "ROOT-008",
+      "claim": "CMake habilita interfaces Aurora DVD/CARD/THP/RmlUi y configura exportaciones/manifest de símbolos cuando DUSK_ENABLE_CODE_MODS está activo.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "CMakeLists.txt",
+          "line_start": 73,
+          "line_end": 82,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/CMakeLists.txt#L73-L82"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "CMakeLists.txt",
+          "line_start": 383,
+          "line_end": 392,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/CMakeLists.txt#L383-L392"
+        }
+      ],
+      "limitations": [
+        "Las configuraciones fuente no prueban la tabla de exports del ejecutable distribuido."
+      ]
+    },
+    {
+      "id": "ROOT-009",
+      "claim": "El SDK configura superficies de servicios/game/WebGPU separadas de configurar el juego entero y permite seleccionar binario/stub en Windows/Apple/Android.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/CMakeLists.txt",
+          "line_start": 1,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/CMakeLists.txt#L1-L11"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/CMakeLists.txt",
+          "line_start": 28,
+          "line_end": 38,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/CMakeLists.txt#L28-L38"
+        }
+      ],
+      "limitations": [
+        "No se descargó stub ni se compiló ningún módulo."
+      ]
+    },
+    {
+      "id": "ROOT-010",
+      "claim": "El adaptador PC OSThread almacena std::thread y mutex/CV en side table, usa puntero de hilo actual TLS y mutex recursivo para interrupciones.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/OSThread.cpp",
+          "line_start": 35,
+          "line_end": 69,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/OSThread.cpp#L35-L69"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/OSThread.cpp",
+          "line_start": 93,
+          "line_end": 115,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/OSThread.cpp#L93-L115"
+        }
+      ],
+      "limitations": [
+        "No se auditó todas las operaciones de scheduling ni comportamiento de shutdown real."
+      ]
+    },
+    {
+      "id": "HIST-001",
+      "claim": "CP21 diferencia fuente compilada 192a773... de cierre documental fe47c8... y baseline compilado CP20 de su cierre; CP20 conserva snapshots históricos de regresión explícitos.",
+      "level": "DOC_CONTRACT",
+      "sources": [
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md",
+          "line_start": 18,
+          "line_end": 26,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md#L18-L26"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP20_EXPLICIT_BLUE_RED_BLACK/SOURCE_AUDIT.md",
+          "line_start": 3,
+          "line_end": 11,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP20_EXPLICIT_BLUE_RED_BLACK/SOURCE_AUDIT.md#L3-L11"
+        }
+      ],
+      "limitations": [
+        "Datos de procedencia reportados; no se recompiló."
+      ]
+    },
+    {
+      "id": "HIST-002",
+      "claim": "GitHub Actions run 39325015857, head d8b07d029c4f98ca62d4d2eaaf935d87eea290d2: run completed/success; jobs build e independent-download completed/success, intento 1.",
+      "level": "CI_OBSERVED",
+      "sources": [
+        {
+          "repo": "iscoremusic26-maker/codex-cp00-inputs",
+          "commit": "d8b07d029c4f98ca62d4d2eaaf935d87eea290d2",
+          "path": ".github/workflows/devf-cp20-explicit-blue-red-black.yml",
+          "line_start": 11,
+          "line_end": 49,
+          "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/blob/d8b07d029c4f98ca62d4d2eaaf935d87eea290d2/.github/workflows/devf-cp20-explicit-blue-red-black.yml#L11-L49"
+        },
+        {
+          "repo": "iscoremusic26-maker/codex-cp00-inputs",
+          "commit": "d8b07d029c4f98ca62d4d2eaaf935d87eea290d2",
+          "path": ".github/workflows/devf-cp20-explicit-blue-red-black.yml",
+          "line_start": 91,
+          "line_end": 116,
+          "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/blob/d8b07d029c4f98ca62d4d2eaaf935d87eea290d2/.github/workflows/devf-cp20-explicit-blue-red-black.yml#L91-L116"
+        }
+      ],
+      "limitations": [
+        "Estados y pasos consultados, no logs completos ni artefactos; no prueba juego vivo."
+      ],
+      "observations": {
+        "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39325015857",
+        "api_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39325015857",
+        "run_id": 39325015857,
+        "head_sha": "d8b07d029c4f98ca62d4d2eaaf935d87eea290d2",
+        "status": "completed",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "id": 118308460609,
+            "name": "build",
+            "status": "completed",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6
+              },
+              {
+                "name": "Run actions/setup-dotnet@d4c94342e560b34958eacfc5d055d21461ed1c5d",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7
+              },
+              {
+                "name": "Run ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8
+              },
+              {
+                "name": "Frozen CP19 FIX02 full Windows regression and binary audits",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9
+              },
+              {
+                "name": "CP20 integrated pair and editor, parser corpus, ABI, PE and package audits",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10
+              },
+              {
+                "name": "Text evidence",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11
+              },
+              {
+                "name": "Private TEST bundle",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12
+              },
+              {
+                "name": "Post Run actions/setup-dotnet@d4c94342e560b34958eacfc5d055d21461ed1c5d",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 19
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 20
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 21
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 22
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 23
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 24
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 25
+              }
+            ]
+          },
+          {
+            "id": 118310610334,
+            "name": "independent-download",
+            "status": "completed",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2
+              },
+              {
+                "name": "Download published artifact and independently verify bytes, SHA256, CRC, PE ABI, hooks, imports and source ledger",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3
+              },
+              {
+                "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "HIST-003",
+      "claim": "GitHub Actions run 39359746319, head 341c7a341980c3982d2a1e2671e7852f3ef1d550: run completed/success; jobs build e independent-download completed/success, intento 1.",
+      "level": "CI_OBSERVED",
+      "sources": [
+        {
+          "repo": "iscoremusic26-maker/codex-cp00-inputs",
+          "commit": "341c7a341980c3982d2a1e2671e7852f3ef1d550",
+          "path": ".github/workflows/devf-cp21-public-package.yml",
+          "line_start": 11,
+          "line_end": 49,
+          "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/blob/341c7a341980c3982d2a1e2671e7852f3ef1d550/.github/workflows/devf-cp21-public-package.yml#L11-L49"
+        },
+        {
+          "repo": "iscoremusic26-maker/codex-cp00-inputs",
+          "commit": "341c7a341980c3982d2a1e2671e7852f3ef1d550",
+          "path": ".github/workflows/devf-cp21-public-package.yml",
+          "line_start": 97,
+          "line_end": 122,
+          "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/blob/341c7a341980c3982d2a1e2671e7852f3ef1d550/.github/workflows/devf-cp21-public-package.yml#L97-L122"
+        }
+      ],
+      "limitations": [
+        "Estados y pasos consultados, no logs completos ni artefactos; no prueba juego vivo."
+      ],
+      "observations": {
+        "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39359746319",
+        "api_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/runs/39359746319",
+        "run_id": 39359746319,
+        "head_sha": "341c7a341980c3982d2a1e2671e7852f3ef1d550",
+        "status": "completed",
+        "conclusion": "success",
+        "jobs": [
+          {
+            "id": 118422869348,
+            "name": "build",
+            "status": "completed",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 5
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 6
+              },
+              {
+                "name": "Run actions/setup-dotnet@d4c94342e560b34958eacfc5d055d21461ed1c5d",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 7
+              },
+              {
+                "name": "Run ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8
+              },
+              {
+                "name": "Frozen CP19 FIX02 full Windows regression and binary audits",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9
+              },
+              {
+                "name": "CP20 integrated pair and editor, parser corpus, ABI, PE and package audits",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 10
+              },
+              {
+                "name": "CP21 public entrypoints, frozen data, no UI, MSVC ABI and actual package audit",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 11
+              },
+              {
+                "name": "Text evidence",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 12
+              },
+              {
+                "name": "Private TEST bundle",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 13
+              },
+              {
+                "name": "Post Run actions/setup-dotnet@d4c94342e560b34958eacfc5d055d21461ed1c5d",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 21
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 22
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 23
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 24
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 25
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 26
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 27
+              }
+            ]
+          },
+          {
+            "id": 118424910938,
+            "name": "independent-download",
+            "status": "completed",
+            "conclusion": "success",
+            "steps": [
+              {
+                "name": "Set up job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 1
+              },
+              {
+                "name": "Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 2
+              },
+              {
+                "name": "Download published artifact and independently verify bytes, SHA256, CRC, PE ABI, hooks, imports and source ledger",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 3
+              },
+              {
+                "name": "Run actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 4
+              },
+              {
+                "name": "Post Run actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 8
+              },
+              {
+                "name": "Complete job",
+                "status": "completed",
+                "conclusion": "success",
+                "number": 9
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "HIST-004",
+      "claim": "CP21 mantiene HUMAN_RUNTIME_PENDING y declara que laboratorio/compilación no prueban aparición, terreno, combate, audio ni reingreso.",
+      "level": "DOC_CONTRACT",
+      "sources": [
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md",
+          "line_start": 38,
+          "line_end": 47,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md#L38-L47"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP21_PUBLIC_RELEASE/HUMAN_TEST.md",
+          "line_start": 3,
+          "line_end": 12,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP21_PUBLIC_RELEASE/HUMAN_TEST.md#L3-L12"
+        }
+      ],
+      "limitations": [
+        "No se consultó juego ni datos del usuario."
+      ]
+    },
+    {
+      "id": "HIST-005",
+      "claim": "El constructor de Z2AudioMgr publica mAudioMgrPtr antes de init; JAUSectionHeap se crea en init, mientras getWaveLoadStatus lo desreferencia; readiness necesita más que singleton no nulo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2AudioMgr.cpp",
+          "line_start": 22,
+          "line_end": 31,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2AudioMgr.cpp#L22-L31"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2AudioMgr.cpp",
+          "line_start": 107,
+          "line_end": 118,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2AudioMgr.cpp#L107-L118"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SceneMgr.cpp",
+          "line_start": 1990,
+          "line_end": 2001,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SceneMgr.cpp#L1990-L2001"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_audio.cpp",
+          "line_start": 118,
+          "line_end": 182,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_audio.cpp#L118-L182"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP19_FIX01_STARTUP_AUDIO_READINESS/IMPLEMENTATION.md",
+          "line_start": 15,
+          "line_end": 28,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP19_FIX01_STARTUP_AUDIO_READINESS/IMPLEMENTATION.md#L15-L28"
+        }
+      ],
+      "limitations": [
+        "Se contrasta el mecanismo de disponibilidad, no se reproduce ni diagnostica exactamente el crash histórico."
+      ]
+    },
+    {
+      "id": "HIST-006",
+      "claim": "El SDK contiene registro de hook miembro extendido con capacidad 24 y materialización nativa; las plantillas seleccionan la forma mediante sizeof, coherente con el reporte MSVC histórico.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 235,
+          "line_end": 254,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L235-L254"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/meta.hpp",
+          "line_start": 306,
+          "line_end": 331,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/meta.hpp#L306-L331"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/IMPLEMENTATION.md",
+          "line_start": 60,
+          "line_end": 68,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/IMPLEMENTATION.md#L60-L68"
+        }
+      ],
+      "limitations": [
+        "No se midió sizeof en MSVC aquí; 24 bytes no es tamaño universal de todos los punteros a miembro."
+      ]
+    },
+    {
+      "id": "HIST-007",
+      "claim": "El cierre CP21 conserva LINK_LAYOUT_CANARY_FAILED_LIFESTEAL_DISABLED como pendiente y exige observación humana y traza antes de declararlo corregido.",
+      "level": "DOC_CONTRACT",
+      "sources": [
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md",
+          "line_start": 45,
+          "line_end": 47,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md#L45-L47"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP21_PUBLIC_RELEASE/HUMAN_TEST.md",
+          "line_start": 9,
+          "line_end": 12,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP21_PUBLIC_RELEASE/HUMAN_TEST.md#L9-L12"
+        }
+      ],
+      "limitations": [
+        "Log original, causa y resolución no examinados; NOT_VERIFIED respecto al fallo vivo."
+      ]
+    },
+    {
+      "id": "HIST-008",
+      "claim": "StageService registra ediciones con handle/mod/secuencia; creación posterior recorre registros; remover handle o mod borra registros sin destruir directamente actores en esas funciones.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/stage.h",
+          "line_start": 13,
+          "line_end": 39,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/stage.h#L13-L39"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/stage.cpp",
+          "line_start": 139,
+          "line_end": 165,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/stage.cpp#L139-L165"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/stage.cpp",
+          "line_start": 200,
+          "line_end": 219,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/stage.cpp#L200-L219"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP21_PUBLIC_RELEASE/RECOVERY.md",
+          "line_start": 3,
+          "line_end": 7,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP21_PUBLIC_RELEASE/RECOVERY.md#L3-L7"
+        }
+      ],
+      "limitations": [
+        "No se ejecutaron carga/recarga/destrucción en juego; receipt no implica actor creado."
+      ]
+    },
+    {
+      "id": "HIST-009",
+      "claim": "El contrato oficial separa majors, minors aditivos e imports declarados frente a lookup dinámico; registry resuelve ID+major y minor mínimo. Servicios privados históricos no son APIs oficiales.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/api.h",
+          "line_start": 76,
+          "line_end": 118,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/api.h#L76-L118"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 145,
+          "line_end": 160,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L145-L160"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP20_EXPLICIT_BLUE_RED_BLACK/IMPLEMENTATION.md",
+          "line_start": 5,
+          "line_end": 7,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP20_EXPLICIT_BLUE_RED_BLACK/IMPLEMENTATION.md#L5-L7"
+        }
+      ],
+      "limitations": [
+        "No se reutilizan tamaños ni IDs privados como parte del SDK."
+      ]
+    },
+    {
+      "id": "HIST-010",
+      "claim": "ModSDK.cmake incluye res en paquete y copia assets bajo ARG_RES_DIR; la comprobación del checkout no sustituye auditoría del bundle.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "cmake/ModSDK.cmake",
+          "line_start": 350,
+          "line_end": 358,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/cmake/ModSDK.cmake#L350-L358"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md",
+          "line_start": 24,
+          "line_end": 26,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md#L24-L26"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md",
+          "line_start": 36,
+          "line_end": 43,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md#L36-L43"
+        }
+      ],
+      "limitations": [
+        "No se construyeron ni descargaron bundles en esta campaña."
+      ]
+    },
+    {
+      "id": "HIST-011",
+      "claim": "La auditoría histórica de audio separa inferencia de identidad de grupo, disponibilidad/exports y verificación audible; sus offsets y estrategia residente no se certifican de nuevo.",
+      "level": "DOC_CONTRACT",
+      "sources": [
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/SOURCE_AUDIT.md",
+          "line_start": 15,
+          "line_end": 33,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/SOURCE_AUDIT.md#L15-L33"
+        },
+        {
+          "repo": "iscoremusic26-maker/Mods-Duskligh",
+          "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+          "path": "DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/IMPLEMENTATION.md",
+          "line_start": 70,
+          "line_end": 76,
+          "url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/blob/fe47c8b828939829914d466a425cb1e2c0223cd9/DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/IMPLEMENTATION.md#L70-L76"
+        }
+      ],
+      "limitations": [
+        "No se leyeron ROM/ARC/AW/BAA ni se reprodujo análisis binario."
+      ]
+    }
+  ],
+  "remote_source_metadata": [
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP20_EXPLICIT_BLUE_RED_BLACK/SOURCE_AUDIT.md",
+      "blob_sha": "f7d59381f74a5c97ae0864ce6e1e16a8b5bb5d3f",
+      "line_count": 14
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP20_EXPLICIT_BLUE_RED_BLACK/IMPLEMENTATION.md",
+      "blob_sha": "f9ad6acb7d71a75f3ac3e6a9d2c7f01574e5422b",
+      "line_count": 16
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP20_EXPLICIT_BLUE_RED_BLACK/RECOVERY.md",
+      "blob_sha": "01a7c2217c4354aae02868bd78bdb736fbb1d879",
+      "line_count": 8
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP21_PUBLIC_RELEASE/DELIVERY.md",
+      "blob_sha": "d7b4715071f8b05dc0be7e4fe37fb5b9a7eed984",
+      "line_count": 54
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP21_PUBLIC_RELEASE/RECOVERY.md",
+      "blob_sha": "9047b6cb7c6d48bb04d7d8a0a7d31ab55cd4efee",
+      "line_count": 8
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP21_PUBLIC_RELEASE/HUMAN_TEST.md",
+      "blob_sha": "1a6ccd1dfb3d4d7b41a3e249309f9ad84c2bf8d5",
+      "line_count": 13
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/SOURCE_AUDIT.md",
+      "blob_sha": "cf1481b7f67bad8f77a15d1d534c0a15ae5a1b53",
+      "line_count": 51
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/IMPLEMENTATION.md",
+      "blob_sha": "a22c228540f750d5201f73b7f9d9c57359d9ace4",
+      "line_count": 76
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP19_FIX01_STARTUP_AUDIO_READINESS/IMPLEMENTATION.md",
+      "blob_sha": "73cd28004c07a32d08a9531662c1670c2d886af5",
+      "line_count": 44
+    },
+    {
+      "repo": "iscoremusic26-maker/Mods-Duskligh",
+      "commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "path": "DEVF/CP19_BUGFIX/IMPLEMENTATION.md",
+      "blob_sha": "55387e074edb57b9bfdac03dac2179891c310c14",
+      "line_count": 41
+    }
+  ],
+  "historical_ci_observed": [
+    {
+      "repo": "iscoremusic26-maker/codex-cp00-inputs",
+      "run_id": 39325015857,
+      "head_sha": "d8b07d029c4f98ca62d4d2eaaf935d87eea290d2",
+      "path": ".github/workflows/devf-cp20-explicit-blue-red-black.yml",
+      "workflow_blob_sha": "fb237c5c93d2486a4cb01a3b3687d7061d5e4520",
+      "workflow_line_count": 120
+    },
+    {
+      "repo": "iscoremusic26-maker/codex-cp00-inputs",
+      "run_id": 39359746319,
+      "head_sha": "341c7a341980c3982d2a1e2671e7852f3ef1d550",
+      "path": ".github/workflows/devf-cp21-public-package.yml",
+      "workflow_blob_sha": "050ba422d19522ff253c3cb65f525035b8605bc0",
+      "workflow_line_count": 126
     }
   ]
 }

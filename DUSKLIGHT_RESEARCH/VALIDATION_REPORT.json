@@ -1,0 +1,11 @@
+{
+  "checkpoint": "CP-R03",
+  "evidence": 179,
+  "symbol_records": 200,
+  "systems": 22,
+  "validated_code_ranges": 983,
+  "cited_upstream_files": 142,
+  "checked_atlas_files": 21,
+  "runtime_tested": false,
+  "scope": "Editorial/reference validation only; does not certify semantic correctness, exports, build or game runtime."
+}

@@ -2,34 +2,76 @@
   {
     "system_id": "actors_ai_npcs",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Rutas seleccionadas; profundidad original STATIC_CROSSCHECKED_SELECTIVE; no auditoría integral del sistema.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/actors_ai_npcs.md"
+    ],
+    "files_examined": [
+      "include/d/actor/d_a_npc_aru.h",
+      "include/d/actor/d_a_npc_shad.h",
+      "sdk/include/mods/svc/actor.h",
+      "src/d/actor/d_a_e_tt.cpp",
+      "src/d/actor/d_a_npc.cpp",
+      "src/d/actor/d_a_npc4.cpp",
+      "src/d/actor/d_a_npc_aru.cpp",
+      "src/d/actor/d_a_npc_shad.cpp",
+      "src/d/d_path.cpp",
+      "src/dusk/mods/svc/actor.cpp",
+      "src/f_op/f_op_actor.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/f_pc/f_pc_deletor.cpp",
+      "src/f_pc/f_pc_executor.cpp",
+      "src/f_pc/f_pc_manager.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "Más familias AI/NPC",
+      "Cancelación/unload asíncrono",
+      "Ownership de actores originales"
     ]
   },
   {
     "system_id": "audio_particles_effects",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Rutas seleccionadas; profundidad original IMPLEMENTATION_TRACED; no auditoría integral del sistema.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/audio_particles_effects.md"
+    ],
+    "files_examined": [
+      "sdk/include/mods/svc/audio_res.h",
+      "src/dusk/mods/svc/audio_res/audio_res.cpp",
+      "src/dusk/mods/svc/audio_res/wsys.cpp",
+      "src/dusk/mods/svc/audio_res/bst.cpp",
+      "src/Z2AudioLib/Z2AudioMgr.cpp",
+      "src/Z2AudioLib/Z2SeMgr.cpp",
+      "src/d/d_particle.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "BST frame_end discrepancy",
+      "JAudio threads completos",
+      "wave/JAISoundID mapping GZ2E01",
+      "runtime audio/particles"
     ]
   },
   {
     "system_id": "cameras_rendering",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Rutas seleccionadas; profundidad original IMPLEMENTATION_TRACED; no auditoría integral del sistema.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/cameras_rendering.md"
+    ],
+    "files_examined": [
+      "sdk/include/mods/svc/camera.h",
+      "sdk/include/mods/svc/gfx.h",
+      "src/dusk/mods/svc/camera.cpp",
+      "src/dusk/mods/svc/gfx.cpp",
+      "src/d/d_camera.cpp",
+      "src/m_Do/m_Do_graphic.cpp",
+      "src/dusk/presentation.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "DX12 runtime",
+      "Aurora/Dawn pin internals",
+      "cámaras cinematográficas especializadas"
     ]
   },
   {
@@ -69,13 +111,21 @@
   },
   {
     "system_id": "hud_ui_text",
-    "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "coverage": "READ",
+    "scope": "Rutas seleccionadas; profundidad original FLOW_SAMPLED; no auditoría integral del sistema.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/hud_ui_text.md"
+    ],
+    "files_examined": [
+      "src/d/d_meter2.cpp",
+      "src/dusk/mods/svc/flow.cpp",
+      "sdk/include/mods/svc/message.h",
+      "src/dusk/language.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "fonts/J2D lifecycle",
+      "todos los menús",
+      "charset BMG"
     ]
   },
   {
@@ -102,24 +152,44 @@
   },
   {
     "system_id": "models_animations_materials",
-    "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "coverage": "READ",
+    "scope": "Rutas seleccionadas; profundidad original FLOW_SAMPLED; no auditoría integral del sistema.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/models_animations_materials.md"
+    ],
+    "files_examined": [
+      "src/d/d_resorce.cpp",
+      "src/m_Do/m_Do_ext.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "src/dusk/mods/svc/texture.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "formatos BMD/BCK completos",
+      "morf per actor",
+      "skin/LOD/platform runtime"
     ]
   },
   {
     "system_id": "resources_archives_overlays",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Rutas seleccionadas; profundidad original IMPLEMENTATION_TRACED; no auditoría integral del sistema.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/resources_archives_overlays.md"
+    ],
+    "files_examined": [
+      "sdk/include/mods/svc/resource.h",
+      "sdk/include/mods/svc/overlay.h",
+      "src/dusk/mods/svc/resource.cpp",
+      "src/dusk/mods/svc/overlay.cpp",
+      "src/d/d_resorce.cpp",
+      "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
+      "libs/JSystem/src/JKernel/JKRArchivePub.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "DVD scheduler completo",
+      "Aurora internals",
+      "reload real con consumidores vivos"
     ]
   },
   {
@@ -221,13 +291,171 @@
   },
   {
     "system_id": "movement_physics_collision",
-    "coverage": "READ",
-    "scope": "Solo rutas citadas en el informe de stages; no cobertura general del sistema.",
+    "coverage": "CROSSCHECKED",
+    "scope": "Rutas seleccionadas; profundidad original STATIC_CROSSCHECKED_SELECTIVE; no auditoría integral del sistema.",
     "reports": [
-      "systems/stages_rooms_layers.md"
+      "systems/movement_physics_collision.md"
+    ],
+    "files_examined": [
+      "src/d/actor/d_a_alink.cpp",
+      "src/d/d_bg_s_acch.cpp",
+      "src/d/d_cc_s.cpp",
+      "src/d/d_s_play.cpp",
+      "src/f_op/f_op_actor_mng.cpp"
     ],
     "pending": [
-      "Completar ficha y trazado transversal del subsistema."
+      "cCcS completo",
+      "Formatos/cargadores de geometría",
+      "Frecuencias runtime y fronteras de escena"
+    ]
+  },
+  {
+    "system_id": "player_and_controls",
+    "coverage": "CROSSCHECKED",
+    "scope": "Rutas seleccionadas; profundidad original STATIC_CROSSCHECKED_SELECTIVE; no auditoría integral del sistema.",
+    "reports": [
+      "systems/player_and_controls.md"
+    ],
+    "files_examined": [
+      "docs/modding.md",
+      "include/f_op/f_op_actor.h",
+      "include/global.h",
+      "libs/JSystem/src/JUtility/JUTGamePad.cpp",
+      "sdk/include/mods/svc/game.h",
+      "sdk/include/mods/svc/hook.hpp",
+      "src/d/actor/d_a_alink.cpp",
+      "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_alink_wolf.inc",
+      "src/dusk/action_bindings.cpp",
+      "src/dusk/action_bindings.h",
+      "src/m_Do/m_Do_controller_pad.cpp"
+    ],
+    "pending": [
+      "Procedimientos completos y herramientas",
+      "Transformación y controles en Windows",
+      "Manifest y resolución de hooks"
+    ]
+  },
+  {
+    "system_id": "combat_damage",
+    "coverage": "CROSSCHECKED",
+    "scope": "Rutas seleccionadas; profundidad original STATIC_CROSSCHECKED_SELECTIVE; no auditoría integral del sistema.",
+    "reports": [
+      "systems/combat_damage.md"
+    ],
+    "files_examined": [
+      "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_e_tt.cpp",
+      "src/d/d_cc_s.cpp",
+      "src/d/d_cc_uty.cpp"
+    ],
+    "pending": [
+      "Todos los consumidores y excepciones de daño",
+      "Bosses y proyectiles",
+      "Coexistencia runtime"
+    ]
+  },
+  {
+    "system_id": "other_systems",
+    "coverage": "READ",
+    "scope": "Rutas seleccionadas; profundidad original SOURCE_EXAMINED_PARTIAL; no auditoría integral del sistema.",
+    "reports": [
+      "systems/other_systems.md"
+    ],
+    "files_examined": [
+      "src/d/actor/d_a_canoe.cpp",
+      "src/d/actor/d_a_cow.cpp",
+      "src/d/actor/d_a_horse.cpp",
+      "src/d/actor/d_a_mg_fish.cpp",
+      "src/d/actor/d_a_mg_fshop.cpp",
+      "src/d/actor/d_a_mg_rod.cpp",
+      "src/d/actor/d_a_midna.cpp",
+      "src/d/actor/d_a_obj_lv6Lblock.cpp",
+      "src/d/actor/d_a_obj_swspinner.cpp"
+    ],
+    "pending": [
+      "Pesca y minijuegos completos",
+      "Puzzles por familia",
+      "Recompensas/persistencia"
+    ]
+  },
+  {
+    "system_id": "environment_weather_time",
+    "coverage": "READ",
+    "scope": "Rutas seleccionadas; profundidad original FLOW_SAMPLED; no auditoría integral del sistema.",
+    "reports": [
+      "systems/environment_weather_time.md"
+    ],
+    "files_examined": [
+      "src/d/d_kankyo.cpp",
+      "src/d/d_kankyo_wether.cpp",
+      "src/d/d_kyeff.cpp",
+      "src/d/d_kyeff2.cpp"
+    ],
+    "pending": [
+      "lifecycle proceso kankyo completo",
+      "agua/clima todas regiones",
+      "weather tags y calendarios"
+    ]
+  },
+  {
+    "system_id": "memory_ownership",
+    "coverage": "CROSSCHECKED",
+    "scope": "Rutas seleccionadas; profundidad original IMPLEMENTATION_TRACED_SELECTIVE; no auditoría integral del sistema.",
+    "reports": [
+      "systems/memory_ownership.md"
+    ],
+    "files_examined": [
+      "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
+      "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "src/dusk/OSThread.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/m_Do/m_Do_ext.cpp"
+    ],
+    "pending": [
+      "Disposers/árbol completo de heaps, race/shutdown y backends externos.",
+      "Exports/allocator CRT de DLL Windows y lifetime con consumidores reales."
+    ]
+  },
+  {
+    "system_id": "platform_backend",
+    "coverage": "READ",
+    "scope": "Rutas seleccionadas; profundidad original BOUNDARY_SAMPLED; no auditoría integral del sistema.",
+    "reports": [
+      "systems/memory_ownership.md"
+    ],
+    "files_examined": [
+      "CMakeLists.txt",
+      "sdk/CMakeLists.txt",
+      "src/dusk/OSThread.cpp"
+    ],
+    "pending": [
+      "Implementación Aurora/Dawn/DX12 y dependencias transitivas ausentes."
+    ]
+  },
+  {
+    "system_id": "prior_research",
+    "coverage": "CROSSCHECKED",
+    "scope": "Rutas seleccionadas; profundidad original STATIC_CROSSCHECKED_SELECTIVE; no auditoría integral del sistema.",
+    "reports": [
+      "PRIOR_RESEARCH.md"
+    ],
+    "files_examined": [
+      "src/Z2AudioLib/Z2AudioMgr.cpp",
+      "src/Z2AudioLib/Z2SceneMgr.cpp",
+      "src/m_Do/m_Do_audio.cpp",
+      "sdk/include/mods/api.h",
+      "sdk/include/mods/meta.hpp",
+      "sdk/include/mods/svc/stage.h",
+      "src/dusk/mods/svc/stage.cpp",
+      "src/dusk/mods/svc/registry.cpp",
+      "cmake/ModSDK.cmake"
+    ],
+    "pending": [
+      "No auditar íntegros 3382 registros históricos sin pregunta concreta.",
+      "Canary: no se examinó log original ni causa/resolución.",
+      "No se reprodujo CI ni descargaron binarios ni paquetes.",
+      "Auditorías binarias y runtime humanos previos permanecen reportes históricos."
     ]
   }
 ]

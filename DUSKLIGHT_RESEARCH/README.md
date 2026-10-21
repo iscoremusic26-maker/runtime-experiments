@@ -2,7 +2,7 @@
 
 **Fuente fijada:** `TwilitRealm/dusklight` @ `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`). **Objetivo:** Windows x64, DirectX 12, GZ2E01 USA. Investigación general, sin mod objetivo.
 
-**CP-R02: hooks, loader, contratos SDK, escenas, guardado y progresión con evidencia estática.** Checkpoint de auditoría e inventario inicial conservado. El árbol disponible se ha inventariado y clasificado; el análisis transversal de implementaciones se incorpora por bloques. La cobertura real, los límites y los próximos pasos se actualizarán con cada checkpoint. No se afirma investigación profunda de todos los archivos ni ejecución del juego.
+**CP-R03: atlas técnico ampliado con fichas de jugador, actores, física, presentación, recursos, memoria e histórico.** Checkpoint de auditoría e inventario inicial conservado. El árbol disponible se ha inventariado y clasificado; el análisis transversal de implementaciones se incorpora por bloques. La cobertura real, los límites y los próximos pasos se actualizarán con cada checkpoint. No se afirma investigación profunda de todos los archivos ni ejecución del juego.
 
 - [Entradas, hashes y límites](SOURCE_PIN.md).
 - [Inventario y clasificación](INVENTORY.md), [resumen JSON](INVENTORY_SUMMARY.json), [todos los archivos](FILE_INVENTORY.tsv), [todos los directorios](DIRECTORY_INDEX.tsv).
@@ -14,3 +14,5 @@ Contenido técnico publicado: [servicios SDK](SDK_AND_SERVICES.md), [hooks/ABI](
 **NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED.**
 
 Fichas incorporadas CP-R02: [stages/salas/capas](systems/stages_rooms_layers.md), [save/load](systems/save_load.md), [flags y eventos](systems/flags_events_progression.md), [inventario](systems/inventory_equipment.md), [secuencias y diálogos](systems/cutscenes_dialogue.md).
+
+[Opciones de integración .dusk](DUSK_INTEGRATION_MATRIX.md). Fichas nuevas: [jugador](systems/player_and_controls.md), [física](systems/movement_physics_collision.md), [combate](systems/combat_damage.md), [actores/NPC](systems/actors_ai_npcs.md), [otros sistemas](systems/other_systems.md), [recursos](systems/resources_archives_overlays.md), [cámaras/render](systems/cameras_rendering.md), [modelos](systems/models_animations_materials.md), [HUD](systems/hud_ui_text.md), [audio/partículas](systems/audio_particles_effects.md), [entorno](systems/environment_weather_time.md), [memoria](systems/memory_ownership.md), [histórico](PRIOR_RESEARCH.md).

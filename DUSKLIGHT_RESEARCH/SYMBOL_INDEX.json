@@ -1885,14 +1885,17 @@
     ],
     "integration": "OFFICIAL_SERVICE",
     "conditions": [
-      "Llamar mediante tabla de servicio importada, con contexto propietario válido."
+      "Llamar mediante tabla de servicio importada, con contexto propietario válido.",
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
     ],
     "risks": [
-      "No es un export C++ verificado del ejecutable."
+      "No es un export C++ verificado del ejecutable.",
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "SDK-019"
+      "SDK-019",
+      "PRES-001"
     ]
   },
   {
@@ -2391,15 +2394,20 @@
     "integration": "POTENTIAL_REQUIRES_VERIFICATION",
     "conditions": [
       "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
-      "Revalidar estado de escena y no retener punteros tras cleanup."
+      "Revalidar estado de escena y no retener punteros tras cleanup.",
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
     ],
     "risks": [
       "Transición de escena y vigencia de punteros.",
-      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+      "Hook conflicts y compatibilidad de ABI si se usa hooking.",
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
     ],
     "evidence_level": "SOURCE_OBSERVED",
     "evidence_ids": [
-      "WORLD-009"
+      "WORLD-009",
+      "PLAYER-019"
     ]
   },
   {
@@ -3198,6 +3206,2444 @@
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
       "WORLD-033"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::create",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 4900,
+      "line_end": 5008
+    },
+    "signature": "int daAlink_c::create()",
+    "purpose": "Publica jugador y espera eventos/recursos/heap durante creación por fases.",
+    "dependencies": [
+      "EventManager",
+      "ResourceService",
+      "actor framework"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-007"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::execute",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 17814,
+      "line_end": 18338
+    },
+    "signature": "int daAlink_c::execute()",
+    "purpose": "Coordina input, procedimientos, equipamiento, movimiento y colisión de Link.",
+    "dependencies": [
+      "mDoCPd_c",
+      "daMidna_c",
+      "dBgS_Acch"
+    ],
+    "integration": "TYPED_HOOK",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-005",
+      "PLAYER-034"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::setStickData",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 9399,
+      "line_end": 9525
+    },
+    "signature": "void daAlink_c::setStickData()",
+    "purpose": "Deriva entrada efectiva de controles, demos, pausa, cámara y herramientas.",
+    "dependencies": [
+      "mDoCPd_c",
+      "dCam_getControledAngleY",
+      "daMidna_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-003"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::commonProcInit",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 15041,
+      "line_end": 15161
+    },
+    "signature": "void daAlink_c::commonProcInit(daAlink_PROC i_procID)",
+    "purpose": "Limpia estado anterior y cambia función/ID/modo del procedimiento.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "Cambiar solo mProcID omite cleanup y deja modo/función inconsistentes.",
+      "No se validó el rango de IDs aceptables fuera de los call sites originales."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-001"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::procMove",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 15679,
+      "line_end": 15696
+    },
+    "signature": "int daAlink_c::procMove()",
+    "purpose": "Estado de movimiento humano con transición/animación y límite de demo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-006"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::procWolfMove",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink_wolf.inc",
+      "line_start": 2606,
+      "line_end": 2619
+    },
+    "signature": "int daAlink_c::procWolfMove()",
+    "purpose": "Estado de movimiento lobo con transición y animación específicas.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-006",
+      "PLAYER-008"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::procWolfDashInit",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink_wolf.inc",
+      "line_start": 2621,
+      "line_end": 2654
+    },
+    "signature": "int daAlink_c::procWolfDashInit()",
+    "purpose": "Inicializa dash lobo y velocidades/timer según condiciones.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-006"
+    ]
+  },
+  {
+    "symbol": "mDoCPd_c::read",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_controller_pad.cpp",
+      "line_start": 82,
+      "line_end": 134
+    },
+    "signature": "void mDoCPd_c::read()",
+    "purpose": "Lee gamepads y aplica supresión PC de botones de menús.",
+    "dependencies": [
+      "JUTGamePad::read",
+      "dusk::menu_pointer"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-002"
+    ]
+  },
+  {
+    "symbol": "JUTGamePad::read",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JUtility/JUTGamePad.cpp",
+      "line_start": 90,
+      "line_end": 103
+    },
+    "signature": "u32 JUTGamePad::read()",
+    "purpose": "Lee PAD y actualiza action bindings PC antes del clamp.",
+    "dependencies": [
+      "PADRead",
+      "dusk::updateActionBindings"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-002"
+    ]
+  },
+  {
+    "symbol": "dusk::updateActionBindings",
+    "kind": "function",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/action_bindings.cpp",
+      "line_start": 54,
+      "line_end": 108
+    },
+    "signature": "void dusk::updateActionBindings()",
+    "purpose": "Muestrea las seis acciones adicionales, estados previos y visibilidad de UI.",
+    "dependencies": [
+      "SDL input",
+      "dusk::ui::any_document_visible"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-004"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::posMove",
+    "kind": "method",
+    "system_id": "movement_physics_collision",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 13013,
+      "line_end": 13178
+    },
+    "signature": "void daAlink_c::posMove()",
+    "purpose": "Integra movimiento de Link con animación, pendiente, agua y equipo.",
+    "dependencies": [
+      "dBgS_Acch",
+      "transAnimeProc",
+      "mHIO"
+    ],
+    "integration": "TYPED_HOOK",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "CrrPos y posteriores ramas pueden corregir o restaurar posición.",
+      "Evitar saltar original sin reconstruir estados de física y animación."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-012",
+      "PLAYER-034"
+    ]
+  },
+  {
+    "symbol": "fopAcM_calcSpeed",
+    "kind": "function",
+    "system_id": "movement_physics_collision",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "line_start": 808,
+      "line_end": 822
+    },
+    "signature": "void fopAcM_calcSpeed(fopAc_ac_c* i_actor)",
+    "purpose": "Deriva velocidad por speedF/yaw/gravedad y máximo de caída.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-010"
+    ]
+  },
+  {
+    "symbol": "fopAcM_posMoveF",
+    "kind": "function",
+    "system_id": "movement_physics_collision",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "line_start": 838,
+      "line_end": 841
+    },
+    "signature": "void fopAcM_posMoveF(fopAc_ac_c* i_actor, const cXyz* i_movePos)",
+    "purpose": "Calcula y aplica velocidad más desplazamiento opcional de colisión.",
+    "dependencies": [
+      "fopAcM_calcSpeed",
+      "fopAcM_posMove"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-010"
+    ]
+  },
+  {
+    "symbol": "dBgS_Acch::Set",
+    "kind": "method",
+    "system_id": "movement_physics_collision",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_bg_s_acch.cpp",
+      "line_start": 96,
+      "line_end": 114
+    },
+    "signature": "void dBgS_Acch::Set(cXyz*, cXyz*, fopAc_ac_c*, int, dBgS_AcchCir*, cXyz*, csXyz*, csXyz*)",
+    "purpose": "Vincula el corrector a memoria de posición/velocidad y círculos del actor.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "Los punteros son prestados; liberar/cambiar su almacenamiento invalida Acch."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-011"
+    ]
+  },
+  {
+    "symbol": "dBgS_Acch::CrrPos",
+    "kind": "method",
+    "system_id": "movement_physics_collision",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_bg_s_acch.cpp",
+      "line_start": 310,
+      "line_end": 453
+    },
+    "signature": "void dBgS_Acch::CrrPos(dBgS& bgs)",
+    "purpose": "Corrige posición y resultados de pared/suelo/techo/agua/fondo móvil.",
+    "dependencies": [
+      "dBgS",
+      "GroundCheck",
+      "LineCheck"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-011"
+    ]
+  },
+  {
+    "symbol": "dCcS::SetAtTgGObjInf",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_cc_s.cpp",
+      "line_start": 530,
+      "line_end": 607
+    },
+    "signature": "void dCcS::SetAtTgGObjInf(bool, bool, cCcD_Obj*, cCcD_Obj*, cCcD_GObjInf*, cCcD_GObjInf*, cCcD_Stts*, cCcD_Stts*, cCcD_GStts*, cCcD_GStts*, cXyz*)",
+    "purpose": "Publica colisión At/Tg, escudo, daño acumulado, callbacks y hitmarks.",
+    "dependencies": [
+      "dCcD_GObjInf",
+      "cCcD_Stts",
+      "ProcAtTgHitmark"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-014"
+    ]
+  },
+  {
+    "symbol": "at_power_check",
+    "kind": "function",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_cc_uty.cpp",
+      "line_start": 314,
+      "line_end": 369
+    },
+    "signature": "fopAc_ac_c* at_power_check(dCcU_AtInfo* i_AtInfo)",
+    "purpose": "Clasifica atacante/tipo/potencia de un collider existente.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "Requiere collider y contexto coherentes; no es API de daño sintético."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-015"
+    ]
+  },
+  {
+    "symbol": "cc_at_check",
+    "kind": "function",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_cc_uty.cpp",
+      "line_start": 372,
+      "line_end": 520
+    },
+    "signature": "fopAc_ac_c* cc_at_check(fopAc_ac_c* i_enemy, dCcU_AtInfo* i_AtInfo)",
+    "purpose": "Aplica daño de enemigo y efectos/audio/pausa/modificadores.",
+    "dependencies": [
+      "at_power_check",
+      "daPy_py_c",
+      "Z2Sound",
+      "dScnPly_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-015"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::setDamagePoint",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink_damage.inc",
+      "line_start": 178,
+      "line_end": 230
+    },
+    "signature": "int daAlink_c::setDamagePoint(int, BOOL, BOOL, int)",
+    "purpose": "Solicita variación de vida/rupias y efectos/timer de daño de Link.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-016"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::damageMagnification",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink_damage.inc",
+      "line_start": 148,
+      "line_end": 175
+    },
+    "signature": "f32 daAlink_c::damageMagnification(BOOL, int)",
+    "purpose": "Calcula multiplicador por settings PC, forma y ropa.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-016"
+    ]
+  },
+  {
+    "symbol": "daE_TT_c::damage_check",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_e_tt.cpp",
+      "line_start": 182,
+      "line_end": 248
+    },
+    "signature": "void daE_TT_c::damage_check()",
+    "purpose": "Ejemplo de política de daño propia anterior y posterior al helper común.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "health se reescribe desde acumulador propio; no tratar como HP universal."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-017"
+    ]
+  },
+  {
+    "symbol": "fpcEx_Execute",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_pc/f_pc_executor.cpp",
+      "line_start": 35,
+      "line_end": 40
+    },
+    "signature": "int fpcEx_Execute(base_process_class* i_proc)",
+    "purpose": "Ejecuta solo un proceso inicializado y no pausado.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-019"
+    ]
+  },
+  {
+    "symbol": "fopAcM_SearchByID",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "line_start": 152,
+      "line_end": 162
+    },
+    "signature": "s32 fopAcM_SearchByID(fpc_ProcID, fopAc_ac_c**)",
+    "purpose": "Consulta un ID; durante creación el out actor es nulo aunque retorna 1.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "Retorno 1 no significa puntero listo.",
+      "Volver a resolver ID al cambiar escena y verificar identidad/tipo."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-020"
+    ]
+  },
+  {
+    "symbol": "fopAcM_create",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "line_start": 258,
+      "line_end": 269
+    },
+    "signature": "fpc_ProcID fopAcM_create(s16, u16, u32, const cXyz*, int, const csXyz*, const cXyz*, s8, createFunc, u32, u8) [firma TARGET_PC]",
+    "purpose": "Construye append y devuelve solicitud de creación por profile.",
+    "dependencies": [
+      "fpcM_Create",
+      "createAppend"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "Firma con IF_DUSK_ARG depende del target; no copiar ABI de GC.",
+      "ID válido no demuestra fase completa."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-020"
+    ]
+  },
+  {
+    "symbol": "fpcDt_ToDeleteQ",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_pc/f_pc_deletor.cpp",
+      "line_start": 76,
+      "line_end": 123
+    },
+    "signature": "int fpcDt_ToDeleteQ(base_process_class* i_proc)",
+    "purpose": "Consulta timing/layers y solicita salida a cola de eliminación.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-021"
+    ]
+  },
+  {
+    "symbol": "fopAcM_DeleteHeap",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "line_start": 372,
+      "line_end": 379
+    },
+    "signature": "void fopAcM_DeleteHeap(fopAc_ac_c* i_actor)",
+    "purpose": "Destruye solid heap del actor y anula su campo heap.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook.",
+      "FEATURES game y ABI correctos cuando proceda; export/resolución del target no observados.",
+      "Contexto de actor/heap vigente y retorno normal; usar allocator propietario."
+    ],
+    "risks": [
+      "Todos los objetos/punteros alojados en el heap pierden vigencia.",
+      "Vigencia ligada al heap; restaurar contexto y no cruzar allocators.",
+      "Sin validación Windows runtime."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-021",
+      "ROOT-004"
+    ]
+  },
+  {
+    "symbol": "daE_TT_c::checkPlayerSearch",
+    "kind": "method",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_e_tt.cpp",
+      "line_start": 477,
+      "line_end": 485
+    },
+    "signature": "bool daE_TT_c::checkPlayerSearch()",
+    "purpose": "Combina límite de home, distancia al jugador y obstrucción de fondo.",
+    "dependencies": [
+      "fopAcM_otherBgCheck"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-024"
+    ]
+  },
+  {
+    "symbol": "daE_TT_c::action",
+    "kind": "method",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_e_tt.cpp",
+      "line_start": 1037,
+      "line_end": 1097
+    },
+    "signature": "void daE_TT_c::action()",
+    "purpose": "Despacha estados y encadena movimiento, fondo y animación/audio.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-024"
+    ]
+  },
+  {
+    "symbol": "dPath_GetRoomPath",
+    "kind": "function",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_path.cpp",
+      "line_start": 50,
+      "line_end": 71
+    },
+    "signature": "dPath* dPath_GetRoomPath(int path_index, int room_no)",
+    "purpose": "Obtiene path desde datos de stage o sala con validación de índice.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "Puntero prestado de datos de sala; no conservar tras unload.",
+      "Room distinto de -1 requiere rango válido 0..63."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-025"
+    ]
+  },
+  {
+    "symbol": "daNpcT_c::execute",
+    "kind": "method",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc.cpp",
+      "line_start": 1368,
+      "line_end": 1429
+    },
+    "signature": "int daNpcT_c::execute()",
+    "purpose": "Alterna eventos/acción NPC y coordina física, animación y colisión.",
+    "dependencies": [
+      "evtProc",
+      "dBgS_Acch",
+      "setCollision"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-026"
+    ]
+  },
+  {
+    "symbol": "daNpcT_c::evtProc",
+    "kind": "method",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc.cpp",
+      "line_start": 1893,
+      "line_end": 1938
+    },
+    "signature": "BOOL daNpcT_c::evtProc()",
+    "purpose": "Gestiona talk/demo/cut y sincronización de animación de mensajes.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-026"
+    ]
+  },
+  {
+    "symbol": "daNpcF_c::execute",
+    "kind": "method",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc4.cpp",
+      "line_start": 561,
+      "line_end": 614
+    },
+    "signature": "BOOL daNpcF_c::execute()",
+    "purpose": "Actualiza la familia NPC F mediante main y contratos propios.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-026"
+    ]
+  },
+  {
+    "symbol": "daNpcT_c::talkProc",
+    "kind": "method",
+    "system_id": "actors_ai_npcs",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc.cpp",
+      "line_start": 2545,
+      "line_end": 2587
+    },
+    "signature": "BOOL daNpcT_c::talkProc(int*, BOOL, fopAc_ac_c**, BOOL)",
+    "purpose": "Avanza message flow y selección de animaciones/fin de diálogo.",
+    "dependencies": [
+      "dMsgFlow_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-027"
+    ]
+  },
+  {
+    "symbol": "daHorse_c::execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_horse.cpp",
+      "line_start": 4380,
+      "line_end": 4514
+    },
+    "signature": "int daHorse_c::execute()",
+    "purpose": "Coordina escena/input/procedimiento/física de Epona.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-028"
+    ]
+  },
+  {
+    "symbol": "daCanoe_c::create",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_canoe.cpp",
+      "line_start": 92,
+      "line_end": 155
+    },
+    "signature": "int daCanoe_c::create()",
+    "purpose": "Selecciona archivo por parámetros/progresión e inicializa Acch/colliders.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-029"
+    ]
+  },
+  {
+    "symbol": "daMidna_c::execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_midna.cpp",
+      "line_start": 3215,
+      "line_end": 3249
+    },
+    "signature": "int daMidna_c::execute()",
+    "purpose": "Sincroniza forma, demo, disponibilidad de entrada y montura con Link.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-030"
+    ]
+  },
+  {
+    "symbol": "dmg_rod_Execute",
+    "kind": "function",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_mg_rod.cpp",
+      "line_start": 5796,
+      "line_end": 5860
+    },
+    "signature": "static int dmg_rod_Execute(dmg_rod_class* i_this)",
+    "purpose": "Entrada del actor de caña, región/input y adaptación PC.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo local: comprobar manifest y alias de TU src/d/actor/d_a_mg_rod.cpp.",
+      "Firma exacta, actor inicializado y juego en estado de pesca."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-031"
+    ]
+  },
+  {
+    "symbol": "daCow_c::Execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_cow.cpp",
+      "line_start": 2928,
+      "line_end": 2965
+    },
+    "signature": "int daCow_c::Execute()",
+    "purpose": "Encadena rutina del ganado y movimiento/animación/colisión.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-032"
+    ]
+  },
+  {
+    "symbol": "daObjSwSpinner_c::Execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_swspinner.cpp",
+      "line_start": 111,
+      "line_end": 178
+    },
+    "signature": "int daObjSwSpinner_c::Execute(Mtx** param_0)",
+    "purpose": "Consume rotación del Spinner, escribe switches y mueve matriz de fondo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-033"
+    ]
+  },
+  {
+    "symbol": "daLv6Lblock_c::moveBlock",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_lv6Lblock.cpp",
+      "line_start": 88,
+      "line_end": 107
+    },
+    "signature": "void daLv6Lblock_c::moveBlock()",
+    "purpose": "Detecta cambio de switch y despacha modo de bloque móvil.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Native .dusk con FEATURES game y GameService ABI 2.0.",
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+    ],
+    "risks": [
+      "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
+      "La evidencia estática no acredita coexistencia con otros hooks ni hot reload."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-033"
+    ]
+  },
+  {
+    "symbol": "ResourceService::free",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/resource.h",
+      "line_start": 46,
+      "line_end": 46
+    },
+    "signature": "void (*free)(ModContext*, ResourceBuffer*)",
+    "purpose": "Libera buffer registrado del mod propietario.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-001"
+    ]
+  },
+  {
+    "symbol": "OverlayService::add_file",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/overlay.h",
+      "line_start": 39,
+      "line_end": 40
+    },
+    "signature": "ModResult (*add_file)(ModContext*, const char*, const char*, OverlayHandle*)",
+    "purpose": "Registra archivo propio como overlay DVD.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-002",
+      "PRES-003",
+      "PRES-004"
+    ]
+  },
+  {
+    "symbol": "OverlayService::add_buffer",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/overlay.h",
+      "line_start": 46,
+      "line_end": 47
+    },
+    "signature": "ModResult (*add_buffer)(ModContext*, const char*, const void*, size_t, OverlayHandle*)",
+    "purpose": "Copia buffer para overlay DVD.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-002",
+      "PRES-003",
+      "PRES-004"
+    ]
+  },
+  {
+    "symbol": "OverlayService::remove",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/overlay.h",
+      "line_start": 50,
+      "line_end": 50
+    },
+    "signature": "ModResult (*remove)(ModContext*, OverlayHandle)",
+    "purpose": "Retira overlay registrado por el mod.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-002",
+      "PRES-003",
+      "PRES-004"
+    ]
+  },
+  {
+    "symbol": "JKRArchive::getOverlayData",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
+      "line_start": 393,
+      "line_end": 445
+    },
+    "signature": "void* JKRArchive::getOverlayData(SDIFileEntry*, u32*)",
+    "purpose": "Busca/carga overlay interno ARC por generación.",
+    "dependencies": [
+      "DVDOpen",
+      "DVDReadPrio"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [
+      "Punteros antiguos permanecen hasta cleanup del archive."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-004"
+    ]
+  },
+  {
+    "symbol": "dRes_info_c::setRes()",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_resorce.cpp",
+      "line_start": 601,
+      "line_end": 657
+    },
+    "signature": "int dRes_info_c::setRes()",
+    "purpose": "Sondea montaje y construye recursos en heap.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "mDMCommand válido o archivo ya montado."
+    ],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-005"
+    ]
+  },
+  {
+    "symbol": "dRes_control_c::syncRes",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_resorce.cpp",
+      "line_start": 833,
+      "line_end": 852
+    },
+    "signature": "int dRes_control_c::syncRes(const char*, dRes_info_c*, int)",
+    "purpose": "Devuelve fase del archivo registrado.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-005"
+    ]
+  },
+  {
+    "symbol": "dRes_control_c::deleteRes",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_resorce.cpp",
+      "line_start": 855,
+      "line_end": 871
+    },
+    "signature": "int dRes_control_c::deleteRes(const char*, dRes_info_c*, int)",
+    "purpose": "Reduce referencia y destruye al llegar a cero.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-005"
+    ]
+  },
+  {
+    "symbol": "CameraService::get_camera",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/camera.h",
+      "line_start": 88,
+      "line_end": 88
+    },
+    "signature": "ModResult (*get_camera)(ModContext*, const void*, CameraInfo*)",
+    "purpose": "Snapshot matrices de vista viva.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-007",
+      "PRES-008",
+      "PRES-009"
+    ]
+  },
+  {
+    "symbol": "CameraService::register_camera_operator",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/camera.h",
+      "line_start": 97,
+      "line_end": 98
+    },
+    "signature": "ModResult (*register_camera_operator)(ModContext*, const CameraOperatorDesc*, CameraOperatorHandle*)",
+    "purpose": "Registra operador priorizado de cámara principal.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-007",
+      "PRES-008",
+      "PRES-009"
+    ]
+  },
+  {
+    "symbol": "CameraService::unregister_camera_operator",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/camera.h",
+      "line_start": 99,
+      "line_end": 99
+    },
+    "signature": "ModResult (*unregister_camera_operator)(ModContext*, CameraOperatorHandle)",
+    "purpose": "Retira operador del mod.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-007",
+      "PRES-008",
+      "PRES-009"
+    ]
+  },
+  {
+    "symbol": "dCamera_c::Run",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_camera.cpp",
+      "line_start": 1058,
+      "line_end": 1075
+    },
+    "signature": "bool dCamera_c::Run()",
+    "purpose": "Despacha cámara PC antes de seguimiento normal.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-009"
+    ]
+  },
+  {
+    "symbol": "GfxService::get_device_info",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/gfx.h",
+      "line_start": 297,
+      "line_end": 297
+    },
+    "signature": "ModResult (*get_device_info)(ModContext*, GfxDeviceInfo*)",
+    "purpose": "Expone handles WGPU prestados.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-010",
+      "PRES-011",
+      "PRES-012",
+      "PRES-013"
+    ]
+  },
+  {
+    "symbol": "GfxService::register_stage_hook",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/gfx.h",
+      "line_start": 319,
+      "line_end": 320
+    },
+    "signature": "ModResult (*register_stage_hook)(ModContext*, GfxStage, const GfxStageHookDesc*, GfxStageHookHandle*)",
+    "purpose": "Registra callback en fase de grabación.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-010",
+      "PRES-011",
+      "PRES-012",
+      "PRES-013"
+    ]
+  },
+  {
+    "symbol": "GfxService::get_scene_target_layout",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/gfx.h",
+      "line_start": 348,
+      "line_end": 348
+    },
+    "signature": "ModResult (*get_scene_target_layout)(ModContext*, GfxRenderTargetLayout*)",
+    "purpose": "Obtiene configuración actual de targets de escena.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-010",
+      "PRES-011",
+      "PRES-012",
+      "PRES-013"
+    ]
+  },
+  {
+    "symbol": "GfxService::resolve_pass",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/gfx.h",
+      "line_start": 323,
+      "line_end": 324
+    },
+    "signature": "ModResult (*resolve_pass)(ModContext*, const GfxResolveDesc*, GfxResolvedTargets*)",
+    "purpose": "Resuelve attachments de frame con tamaños compatibles.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-010",
+      "PRES-011",
+      "PRES-012",
+      "PRES-013"
+    ]
+  },
+  {
+    "symbol": "mDoExt_modelUpdateDL",
+    "kind": "function",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 361,
+      "line_end": 378
+    },
+    "signature": "void mDoExt_modelUpdateDL(J3DModel*)",
+    "purpose": "Actualiza modelo/display list y view matrices.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-017"
+    ]
+  },
+  {
+    "symbol": "mDoExt_modelEntryDL",
+    "kind": "function",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 380,
+      "line_end": 406
+    },
+    "signature": "void mDoExt_modelEntryDL(J3DModel*)",
+    "purpose": "Entry de modelo con rama de presentación interpolada.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-017"
+    ]
+  },
+  {
+    "symbol": "mDoExt_baseAnm::play",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 142,
+      "line_end": 145
+    },
+    "signature": "int mDoExt_baseAnm::play()",
+    "purpose": "Avanza frame controller y devuelve stop.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-015"
+    ]
+  },
+  {
+    "symbol": "mDoExt_bckAnm::entry",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 262,
+      "line_end": 265
+    },
+    "signature": "void mDoExt_bckAnm::entry(J3DModelData*, f32)",
+    "purpose": "Instala calculador en joint raíz.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-015"
+    ]
+  },
+  {
+    "symbol": "J3DModel::calcAnmMtx",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "line_start": 435,
+      "line_end": 442
+    },
+    "signature": "void J3DModel::calcAnmMtx()",
+    "purpose": "Calcula jerarquía de joints.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-016"
+    ]
+  },
+  {
+    "symbol": "J3DModel::calcWeightEnvelopeMtx",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "line_start": 445,
+      "line_end": 451
+    },
+    "signature": "void J3DModel::calcWeightEnvelopeMtx()",
+    "purpose": "Calcula matrices de envelopes según flags/LOD.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-016"
+    ]
+  },
+  {
+    "symbol": "J3DModel::update",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "line_start": 453,
+      "line_end": 456
+    },
+    "signature": "void J3DModel::update()",
+    "purpose": "Ejecuta calc y entry.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-016"
+    ]
+  },
+  {
+    "symbol": "J3DModel::entry",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "line_start": 516,
+      "line_end": 545
+    },
+    "signature": "void J3DModel::entry()",
+    "purpose": "Encola joints/materiales para dibujo e interpolación PC.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-016"
+    ]
+  },
+  {
+    "symbol": "J3DModel::viewCalc",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "line_start": 548,
+      "line_end": 568
+    },
+    "signature": "void J3DModel::viewCalc()",
+    "purpose": "Intercambia buffers matrices y prepara vista.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-016"
+    ]
+  },
+  {
+    "symbol": "dMeter2_c::_execute",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_meter2.cpp",
+      "line_start": 268,
+      "line_end": 301
+    },
+    "signature": "int dMeter2_c::_execute()",
+    "purpose": "Lee y reconcilia estado de HUD, avanza medidores.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-019"
+    ]
+  },
+  {
+    "symbol": "dMeter2_c::_draw",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_meter2.cpp",
+      "line_start": 347,
+      "line_end": 384
+    },
+    "signature": "int dMeter2_c::_draw()",
+    "purpose": "Encola map/subcontenidos/HUD si configuración lo permite.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-019"
+    ]
+  },
+  {
+    "symbol": "dMeter2_c::_delete",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_meter2.cpp",
+      "line_start": 387,
+      "line_end": 435
+    },
+    "signature": "int dMeter2_c::_delete()",
+    "purpose": "Destruye presentación y heaps propios.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-019"
+    ]
+  },
+  {
+    "symbol": "MessageService::override_message",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/message.h",
+      "line_start": 113,
+      "line_end": 114
+    },
+    "signature": "ModResult (*override_message)(ModContext*, uint16_t, uint16_t, uint8_t, const uint8_t*, size_t, MessageOverrideHandle*)",
+    "purpose": "Copia texto codificado sustituto por idioma.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-020"
+    ]
+  },
+  {
+    "symbol": "MessageService::register_message",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/message.h",
+      "line_start": 119,
+      "line_end": 121
+    },
+    "signature": "ModResult (*register_message)(ModContext*, uint16_t, const MessageVariantData*, size_t, MessageId*, MessageHandle*)",
+    "purpose": "Registra mensaje custom con variantes.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-020"
+    ]
+  },
+  {
+    "symbol": "dusk::language::available_languages",
+    "kind": "function",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/language.cpp",
+      "line_start": 25,
+      "line_end": 38
+    },
+    "signature": "std::span<const GameLanguage> available_languages(const iso::DiscInfo&) noexcept",
+    "purpose": "Selecciona idiomas por disco.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-021"
+    ]
+  },
+  {
+    "symbol": "dusk::language::msg_folder",
+    "kind": "function",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/language.cpp",
+      "line_start": 59,
+      "line_end": 76
+    },
+    "signature": "const char* msg_folder() noexcept",
+    "purpose": "Resuelve carpeta Msg según idioma/región.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-021"
+    ]
+  },
+  {
+    "symbol": "AudioResService::replace_wave",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/audio_res.h",
+      "line_start": 305,
+      "line_end": 311
+    },
+    "signature": "ModResult (*replace_wave)(ModContext*, AudioWaveBank, uint16_t, const char*, const AudioWaveInfo*, AudioWaveHandle*)",
+    "purpose": "Sustituye wave de un banco desde bundle.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-022",
+      "PRES-023",
+      "PRES-024"
+    ]
+  },
+  {
+    "symbol": "AudioResService::remove_wave",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/audio_res.h",
+      "line_start": 343,
+      "line_end": 343
+    },
+    "signature": "ModResult (*remove_wave)(ModContext*, AudioWaveHandle)",
+    "purpose": "Retira wave owned.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-022",
+      "PRES-023",
+      "PRES-024"
+    ]
+  },
+  {
+    "symbol": "AudioResService::replace_sound_table_stream",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/audio_res.h",
+      "line_start": 402,
+      "line_end": 407
+    },
+    "signature": "ModResult (*replace_sound_table_stream)(ModContext*, uint16_t, const char*, const AudioSoundTableStreamInfo*, AudioSoundTableHandle*)",
+    "purpose": "Sustituye entrada stream hacia DVD .ast.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Importar ABI compatible; ModContext válido; respetar fase y ownership del contrato."
+    ],
+    "risks": [
+      "No probado en Windows/DX12 en esta campaña; respetar vigencia de buffers/callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-022",
+      "PRES-023",
+      "PRES-024"
+    ]
+  },
+  {
+    "symbol": "Z2AudioMgr::gframeProcess",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/Z2AudioLib/Z2AudioMgr.cpp",
+      "line_start": 172,
+      "line_end": 183
+    },
+    "signature": "void Z2AudioMgr::gframeProcess()",
+    "purpose": "Procesa audio por frame y reset.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-025"
+    ]
+  },
+  {
+    "symbol": "Z2AudioMgr::startSound",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/Z2AudioLib/Z2AudioMgr.cpp",
+      "line_start": 214,
+      "line_end": 221
+    },
+    "signature": "bool Z2AudioMgr::startSound(JAISoundID, JAISoundHandle*, const JGeometry::TVec3<f32>*)",
+    "purpose": "Despacha sonido si no resetting.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-025"
+    ]
+  },
+  {
+    "symbol": "dPa_control_c::readScene",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_particle.cpp",
+      "line_start": 1254,
+      "line_end": 1269
+    },
+    "signature": "bool dPa_control_c::readScene(u8, mDoDvdThd_toMainRam_c**)",
+    "purpose": "Solicita JPC de escena en DVD thread.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-027"
+    ]
+  },
+  {
+    "symbol": "dPa_control_c::removeScene",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_particle.cpp",
+      "line_start": 1310,
+      "line_end": 1322
+    },
+    "signature": "void dPa_control_c::removeScene(bool)",
+    "purpose": "Destruye emisores/resource managers de escena.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-027",
+      "PRES-028"
+    ]
+  },
+  {
+    "symbol": "dPa_control_c::calc3D",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_particle.cpp",
+      "line_start": 1329,
+      "line_end": 1338
+    },
+    "signature": "void dPa_control_c::calc3D()",
+    "purpose": "Avanza grupos de partículas 3D y registro level.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-028"
+    ]
+  },
+  {
+    "symbol": "dScnKy_env_light_c::setDaytime",
+    "kind": "method",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 1529,
+      "line_end": 1546
+    },
+    "signature": "void dScnKy_env_light_c::setDaytime()",
+    "purpose": "Lee y actualiza reloj con reglas de eventos/room.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-029"
+    ]
+  },
+  {
+    "symbol": "dScnKy_env_light_c::settingTevStruct",
+    "kind": "method",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 3673,
+      "line_end": 3712
+    },
+    "signature": "void dScnKy_env_light_c::settingTevStruct(int, cXyz*, dKy_tevstr_c*)",
+    "purpose": "Prepara contexto de iluminación según posición/tipo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [
+      "Dependencias de stage/room/estado de iluminación deben contrastarse por consumidor."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-033"
+    ]
+  },
+  {
+    "symbol": "dKyw_rain_set",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo_wether.cpp",
+      "line_start": 1538,
+      "line_end": 1541
+    },
+    "signature": "void dKyw_rain_set(int)",
+    "purpose": "Escribe contadores lluvia actual/base.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-031"
+    ]
+  },
+  {
+    "symbol": "dKyw_pntwind_cut",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo_wether.cpp",
+      "line_start": 1400,
+      "line_end": 1403
+    },
+    "signature": "void dKyw_pntwind_cut(WIND_INFLUENCE*)",
+    "purpose": "Retira puntero de influencia puntual indexada.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-031"
+    ]
+  },
+  {
+    "symbol": "dKyw_wether_delete",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo_wether.cpp",
+      "line_start": 317,
+      "line_end": 340
+    },
+    "signature": "void dKyw_wether_delete()",
+    "purpose": "Libera packets meteorológicos inicializados.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [],
+    "risks": [],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-030"
+    ]
+  },
+  {
+    "symbol": "JKRHeap::becomeCurrentHeap",
+    "kind": "method",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "line_start": 200,
+      "line_end": 204
+    },
+    "signature": "JKRHeap* JKRHeap::becomeCurrentHeap()",
+    "purpose": "Selecciona heap para el hilo actual y devuelve el anterior.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "FEATURES game y ABI correctos cuando proceda; export/resolución del target no observados.",
+      "Contexto de actor/heap vigente y retorno normal; usar allocator propietario."
+    ],
+    "risks": [
+      "Vigencia ligada al heap; restaurar contexto y no cruzar allocators.",
+      "Sin validación Windows runtime."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "ROOT-001"
+    ]
+  },
+  {
+    "symbol": "JKRHeap::alloc",
+    "kind": "method",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "line_start": 214,
+      "line_end": 224
+    },
+    "signature": "void* JKRHeap::alloc(u32 size, int alignment, JKRHeap* heap)",
+    "purpose": "Despacha a heap explícito o actual; devuelve NULL sin ambos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "FEATURES game y ABI correctos cuando proceda; export/resolución del target no observados.",
+      "Contexto de actor/heap vigente y retorno normal; usar allocator propietario."
+    ],
+    "risks": [
+      "Vigencia ligada al heap; restaurar contexto y no cruzar allocators.",
+      "Sin validación Windows runtime."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "ROOT-001"
+    ]
+  },
+  {
+    "symbol": "fopAcM_callCallback",
+    "kind": "function",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "line_start": 381,
+      "line_end": 386
+    },
+    "signature": "s32 fopAcM_callCallback(fopAc_ac_c*, heapCallbackFunc, JKRHeap*)",
+    "purpose": "Invoca construcción de recursos bajo heap seleccionado y restaura al retorno normal.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "FEATURES game y ABI correctos cuando proceda; export/resolución del target no observados.",
+      "Contexto de actor/heap vigente y retorno normal; usar allocator propietario."
+    ],
+    "risks": [
+      "Vigencia ligada al heap; restaurar contexto y no cruzar allocators.",
+      "Sin validación Windows runtime."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "ROOT-004"
+    ]
+  },
+  {
+    "symbol": "fopAcM_entrySolidHeap",
+    "kind": "function",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_actor_mng.cpp",
+      "line_start": 717,
+      "line_end": 753
+    },
+    "signature": "bool fopAcM_entrySolidHeap(fopAc_ac_c*, heapCallbackFunc, u32)",
+    "purpose": "Configura flags y estimación PC antes de intentar construcción del heap.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "FEATURES game y ABI correctos cuando proceda; export/resolución del target no observados.",
+      "Contexto de actor/heap vigente y retorno normal; usar allocator propietario."
+    ],
+    "risks": [
+      "Vigencia ligada al heap; restaurar contexto y no cruzar allocators.",
+      "Sin validación Windows runtime."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "ROOT-005"
+    ]
+  },
+  {
+    "symbol": "mDoExt_createSolidHeapToCurrent",
+    "kind": "function",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 1000,
+      "line_end": 1009
+    },
+    "signature": "JKRSolidHeap* mDoExt_createSolidHeapToCurrent(u32, JKRHeap*, u32)",
+    "purpose": "Conserva heap actual en slot global para restauración posterior.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "FEATURES game y ABI correctos cuando proceda; export/resolución del target no observados.",
+      "Contexto de actor/heap vigente y retorno normal; usar allocator propietario."
+    ],
+    "risks": [
+      "Vigencia ligada al heap; restaurar contexto y no cruzar allocators.",
+      "Sin validación Windows runtime."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "ROOT-006"
+    ]
+  },
+  {
+    "symbol": "mDoExt_restoreCurrentHeap",
+    "kind": "function",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 1118,
+      "line_end": 1127
+    },
+    "signature": "void mDoExt_restoreCurrentHeap()",
+    "purpose": "Restaura heap salvado y limpia slot; presupone hilo principal.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "FEATURES game y ABI correctos cuando proceda; export/resolución del target no observados.",
+      "Contexto de actor/heap vigente y retorno normal; usar allocator propietario."
+    ],
+    "risks": [
+      "Vigencia ligada al heap; restaurar contexto y no cruzar allocators.",
+      "Sin validación Windows runtime."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "ROOT-006"
     ]
   }
 ]

@@ -1,9 +1,9 @@
-# Cobertura real — CP-R02
+# Cobertura real — CP-R03
 
-R00 conserva19367 archivos y488 directorios inventariados; las cifras no miden comprensión. No se repitió el inventario en esta continuación.
+R00 conserva el inventario de19367 archivos/488 directorios. No se reejecutó en esta continuación ni se usa como porcentaje de comprensión.
 
-CROSSCHECKED selectivo: hooks/loader/orden de tick; contratos de25 servicios SDK con fronteras de implementación seleccionadas; stages/salas/capas, save/load, flags/eventos/progreso, inventario/equipamiento y secuencias/diálogos. No auditoría íntegra de cada estado o método. Los26 módulos son candidatos sujetos a disponibilidad;209 ranuras públicas localizadas no equivalen a209 rutas auditadas.
+Publicado:25 contratos SDK y fronteras seleccionadas de implementación; hooks/loader/ABI;18 fichas de sistemas (incluida memoria), más histórico reutilizable. En SYSTEM_INDEX cada área distingue READ de CROSSCHECKED selectivo: modelos/HUD/clima/minijuegos conservan profundidad muestreada. No se auditaron todas las209 ranuras ni todos los actores/estados.
 
-Acumulado:89 evidencias y109 símbolos; 431 rangos de ledger/índice validados en 93 archivos fuente citados. Esto no significa lectura completa de esos archivos. La referencia de KCL al sistema de física se declaró explícitamente en SYSTEM_INDEX tras detectarse ausente durante consolidación.
+Acumulado:179 evidencias y200 registros de símbolos. Evidencia histórica CI se limita a jobs/estados observados; no hay ejecución del juego ni verificación binaria nueva.
 
-Pendientes de publicación: borradores de jugador/física/actores, presentación/recursos, memoria e histórico. Huecos: submódulos ausentes, disponibilidad binaria Windows, callbacks reentrantes y teardown de actores propios que rechazan borrado. Sin compilación nueva ni ejecución del juego.
+Los borradores técnicos recuperados se incorporan en este checkpoint después de corregir precisiones TGSC, banks,ARC,texturas yGfx. Pendientes: síntesis de arquitectura/dependencias/riesgos/preguntas; validación binaria Windows y runtime, submódulos ausentes y flujos completos señalados por cada ficha.
