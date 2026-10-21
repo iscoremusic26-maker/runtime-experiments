@@ -71,3 +71,5 @@ CP-R26: CVar/callback UI explícito→discord.initialize→initialized→main01 
 CP-R27: idioma→msg_folder→PLAY mount archive1→HUD zel_XX.bmg→stage pointer→changeGroup parse/bind→getString/Explain. Archivo99→índice lógico9; commandDone,parseOK y texto listo son fases distintas (PRES-068..073).
 
 CP-R28: m_Do_main/Aurora SDL→Window lookup→callback game-thread; teardown inverso Gfx→Window libera claim antes de destruir SDL window (CALLBACK-019..022). Entrega/backend externo sin verificar.
+
+CP-R29: KYTAG07 posee LIGHT_INFLUENCE→kankyo presta puntero→selector por posición→settingTevStruct tipo0/J3D; IsDelete/room/overlap→cola framework→Delete/cut antes de liberar actor. PRES-074..077; no registro owned ni servicio de luz dedicado.

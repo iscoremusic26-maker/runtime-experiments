@@ -8224,5 +8224,120 @@
     "evidence_ids": [
       "CALLBACK-022"
     ]
+  },
+  {
+    "symbol": "dKy_plight_priority_set",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 9151,
+      "line_end": 9165,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L9151-L9165"
+    },
+    "signature": "void dKy_plight_priority_set(LIGHT_INFLUENCE* light_inf_p)",
+    "purpose": "Registra puntero con índice negativo sin ACK",
+    "dependencies": [
+      "g_env_light.pointlight",
+      "LIGHT_INFLUENCE"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Storage vivo; capacidad50"
+    ],
+    "risks": [
+      "Retorno void no prueba registro; sin ownership SDK"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-075"
+    ]
+  },
+  {
+    "symbol": "dKy_plight_cut",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 9167,
+      "line_end": 9183,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L9167-L9183"
+    },
+    "signature": "void dKy_plight_cut(LIGHT_INFLUENCE* light_inf_p)",
+    "purpose": "Retira slot por índice de influencia",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Índice de registro válido"
+    ],
+    "risks": [
+      "No busca identidad ni resetea índice"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-075",
+      "PRES-077"
+    ]
+  },
+  {
+    "symbol": "dKy_light_influence_id",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 888,
+      "line_end": 967,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L888-L967"
+    },
+    "signature": "int dKy_light_influence_id(cXyz position, int param_1)",
+    "purpose": "Selecciona influencia según distancia y marcas",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tabla/punteros válidos; gates por stage/plataforma"
+    ],
+    "risks": [
+      "No nearest universal ni visibilidad comprobada"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-076"
+    ]
+  },
+  {
+    "symbol": "daKytag07_IsDelete",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag07.cpp",
+      "line_start": 32,
+      "line_end": 40,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag07.cpp#L32-L40"
+    },
+    "signature": "static int daKytag07_IsDelete(kytag07_class* i_this)",
+    "purpose": "Marca salida99 y decide si permite borrado",
+    "dependencies": [
+      "fopOvlpM_IsDoingReq",
+      "fpcDt_ToQueue"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor vivo; framework consulta"
+    ],
+    "risks": [
+      "Rechazo ya muta estado; overlap puede saltar fade"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-077"
+    ]
   }
 ]

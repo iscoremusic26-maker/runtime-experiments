@@ -121,3 +121,7 @@ Padre remoto verificado a750edfa56d6a4d6c80b0621d0180b03c2e0c08d. +6 evidencias 
 ## CP-R28 — WindowService: evento dirigido, consumo y retirada
 
 Padre remoto verificado 4fca4d1963d8808456766152787b7b92ae1eed0b. +4 evidencias CALLBACK-019..022 y +3 símbolos; ningún documento nuevo. CALLBACK-019..022 contrastan contrato,caller main/launchUI,consumo por SDL ID,event prestado,error y teardown Gfx→Window. Sin entrega Aurora ni unload Windows probados. Sin mod,build ni runtime; solo atlas.
+
+## CP-R29 — KYTAG07: influencia prestada, selección y retirada diferida
+
+Padre remoto verificado 75606d6e033d0d498320003fb47dd370189a4442. +4 evidencias PRES-074..077 y +4 símbolos; ningún documento nuevo. PRES-074..077 contrastan KYTAG07→puntero pointlight→selección/settingTevStruct y retirada99/room/overlap→cut. La pista dungeonlight se descarta; fallo de capacidad/índice,orden/visibilidad Windows pendientes. Sin mod,build ni runtime; solo atlas.

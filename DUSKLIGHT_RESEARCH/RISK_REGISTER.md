@@ -59,3 +59,5 @@ CP-R26 · R-32: initialized es estado del wrapper de presencia, no ACK ni conexi
 CP-R27 · R-33: mount sync indica Done aun con archiveNULL; cambiar ID ignora parse/bind y no prueba backing válido. Mismo ID/idioma nuevo no recarga bytes; s_resources no posee archive. PRES-069/070/072/073; sin fallo runtime ni fallback inglés observado.
 
 CP-R28 · R-34: consumo no acredita callback; close no destruye, destroy con claim retorna CONFLICT. Copiar fn/userdata no drena llamada ni mantiene biblioteca; WindowEvent local no puede retenerse. CALLBACK-019..022; sin fallo runtime.
+
+CP-R29 · R-35: registro prioritario void puede saturarse aun con Create COMPLEATE; cut depende de índice y no comprueba identidad. IsDelete rechazado ya marca99 y solo desvanece fuera de home room; overlap permite retirar con potencia alta. PRES-074..077; riesgos condicionados,sin fallo visual/runtime observado.

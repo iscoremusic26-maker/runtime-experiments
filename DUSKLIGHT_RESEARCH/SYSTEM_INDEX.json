@@ -1090,21 +1090,26 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "READ ambiental global; reloj/KYTAG06 y agua Obj_Lv3WaterB→matriz→consulta Acch/Link contrastados selectivamente; assets y orden entre perfiles pendientes.",
+    "scope": "READ global; reloj/KYTAG11,paletas/KYTAG06,agua y KYTAG07 punto/selección/retiro CP-R29 contrastados selectivamente.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_kytag07.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
       "include/d/d_bg_s.h",
       "include/d/d_com_inf_game.h",
+      "include/d/d_kankyo.h",
       "include/d/d_kankyo_static.h",
       "include/d/d_save.h",
       "include/m_Do/m_Do_audio.h",
+      "src/SSystem/SComponent/c_lib.cpp",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
       "src/d/actor/d_a_kytag06.cpp",
+      "src/d/actor/d_a_kytag07.cpp",
       "src/d/actor/d_a_kytag11.cpp",
+      "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
@@ -1117,23 +1122,33 @@
       "src/d/d_kyeff.cpp",
       "src/d/d_kyeff2.cpp",
       "src/d/d_particle.cpp",
-      "src/f_op/f_op_actor.cpp"
+      "src/f_op/f_op_actor.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/f_op/f_op_overlap_mng.cpp",
+      "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_deletor.cpp",
+      "src/f_pc/f_pc_manager.cpp"
     ],
     "pending": [
       "Orden relativo de varios tags/perfiles,agua/clima/tablas de iluminación completos.",
       "Otros escritores del tiempo y comportamiento visual/audible runtime."
     ],
     "paths": [
+      "include/d/actor/d_a_kytag07.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
       "include/d/d_bg_s.h",
       "include/d/d_com_inf_game.h",
+      "include/d/d_kankyo.h",
       "include/d/d_kankyo_static.h",
       "include/d/d_save.h",
       "include/m_Do/m_Do_audio.h",
+      "src/SSystem/SComponent/c_lib.cpp",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
       "src/d/actor/d_a_kytag06.cpp",
+      "src/d/actor/d_a_kytag07.cpp",
       "src/d/actor/d_a_kytag11.cpp",
+      "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
@@ -1146,7 +1161,12 @@
       "src/d/d_kyeff.cpp",
       "src/d/d_kyeff2.cpp",
       "src/d/d_particle.cpp",
-      "src/f_op/f_op_actor.cpp"
+      "src/f_op/f_op_actor.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/f_op/f_op_overlap_mng.cpp",
+      "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_deletor.cpp",
+      "src/f_pc/f_pc_manager.cpp"
     ],
     "dependencies": [
       "stages_rooms_layers",
@@ -1154,7 +1174,9 @@
       "audio_particles_effects",
       "cameras_rendering",
       "movement_physics_collision",
-      "actors_ai_npcs"
+      "actors_ai_npcs",
+      "models_animations_materials",
+      "runtime_and_lifecycle"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1174,7 +1196,11 @@
       "PRES-061",
       "PRES-062",
       "PRES-063",
-      "PRES-064"
+      "PRES-064",
+      "PRES-074",
+      "PRES-075",
+      "PRES-076",
+      "PRES-077"
     ]
   },
   {
