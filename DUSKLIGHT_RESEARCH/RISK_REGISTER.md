@@ -27,3 +27,5 @@ R-16 — Persistencia interna del port no debe confundirse con SaveService: Achi
 R-17 — Cambiar un único valor de tiempo no controla todos los escritores: avance normal y KYTAG11 tienen condiciones distintas, y el flag de control se limpia. El rollover modifica fecha y un bit temporal; setters escriben estado en memoria, no confirman guardado CARD. PRES-040..043; sin efecto runtime probado.
 
 R-18 — Aceptación de cambio no significa destino ejecutándose: file-select ignora retorno y continúa mutando estado; delete-before-create destruye UI/heap antes de conocer éxito de PLAY. Cancelación/ReRequest no prueban rollback. ARCH-002..007; riesgos de punteros de R-07 ahora contrastados para esta escena, sin afirmar invalidación universal ni fallo runtime.
+
+R-19 — Animación parcialmente aplicada y estado compartido: AutoMata instala BCK antes de validar BTK; entry/remove BTK mutan tabla y remove no restaura animator anterior. PRES-044..047. Retorno0 no equivale a sin efectos; no hay coexistencia/runtime demostrado.

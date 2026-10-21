@@ -49,3 +49,7 @@ Contrastadas condiciones del avance normal,ruta KYTAG11,parametrización y flag 
 ## CP-R10 — file-select → PLAY, fases y ownership
 
 Desde CP-R09 remoto 03f2a405fbab7f8d2caed286bffd37728eaf07d4. Se contrastan caller/gates PC, aceptación, cola delete-before-create, destructor UI/heap, entrada PLAY, overlap/pausa y cancelación/ReRequest. Seis evidencias y seis símbolos nuevos; cero documentos nuevos. Se deduplica la referencia repetida ARCH-001 en runtime del SYSTEM_INDEX, sin borrar evidencia. Q-09 permanece parcial; sin mod,build o ejecución.
+
+## CP-R11 — J3D/morf/BCK/BTK con consumidor y teardown
+
+Padre CP-R10 e44139795c4e0beb1e1bf608bd894d0656a06c4b. Cuatro evidencias y cuatro símbolos nuevos,+0 documentos. Cadena AutoMata resLoad/heap→setAnm→execute/draw→resDelete/heap teardown; setAnm puede fallar después de cambiar BCK. Models conserva READ global; sin assets modificados ni runtime.

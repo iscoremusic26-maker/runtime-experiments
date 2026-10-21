@@ -6332,5 +6332,138 @@
     "evidence_ids": [
       "ARCH-005"
     ]
+  },
+  {
+    "symbol": "daObj_AutoMata_c::CreateHeap",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_automata.cpp",
+      "line_start": 122,
+      "line_end": 135,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L122-L135"
+    },
+    "signature": "int daObj_AutoMata_c::CreateHeap()",
+    "purpose": "Vincular datos de archive con instancia morf/model.",
+    "dependencies": [
+      "J3DModelData",
+      "mDoExt_McaMorfSO",
+      "mDoExt_btkAnm"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor,archive y heap vigentes; fase execute/draw adecuada.",
+      "No presume recursos privados ni resolución Windows."
+    ],
+    "risks": [
+      "Datos/animaciones prestados; tabla de materiales mutada temporalmente.",
+      "setAnm puede fallar tras cambiar BCK; heap teardown invalida instancias."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-044"
+    ]
+  },
+  {
+    "symbol": "daObj_AutoMata_c::setAnm",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_automata.cpp",
+      "line_start": 234,
+      "line_end": 256,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L234-L256"
+    },
+    "signature": "int daObj_AutoMata_c::setAnm(int, bool)",
+    "purpose": "Selección BCK/BTK con fallo parcialmente mutante.",
+    "dependencies": [
+      "J3DModelData",
+      "mDoExt_McaMorfSO",
+      "mDoExt_btkAnm"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor,archive y heap vigentes; fase execute/draw adecuada.",
+      "No presume recursos privados ni resolución Windows."
+    ],
+    "risks": [
+      "Datos/animaciones prestados; tabla de materiales mutada temporalmente.",
+      "setAnm puede fallar tras cambiar BCK; heap teardown invalida instancias."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-045"
+    ]
+  },
+  {
+    "symbol": "daObj_AutoMata_c::Draw",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_automata.cpp",
+      "line_start": 192,
+      "line_end": 207,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L192-L207"
+    },
+    "signature": "int daObj_AutoMata_c::Draw()",
+    "purpose": "Adjuntar,usar y retirar BTK en tabla de materiales.",
+    "dependencies": [
+      "J3DModelData",
+      "mDoExt_McaMorfSO",
+      "mDoExt_btkAnm"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor,archive y heap vigentes; fase execute/draw adecuada.",
+      "No presume recursos privados ni resolución Windows."
+    ],
+    "risks": [
+      "Datos/animaciones prestados; tabla de materiales mutada temporalmente.",
+      "setAnm puede fallar tras cambiar BCK; heap teardown invalida instancias."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-046"
+    ]
+  },
+  {
+    "symbol": "mDoExt_McaMorfSO::modelCalc",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 1826,
+      "line_end": 1835,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1826-L1835"
+    },
+    "signature": "void mDoExt_McaMorfSO::modelCalc()",
+    "purpose": "Instalar frame/calculador en raíz y calcular modelo.",
+    "dependencies": [
+      "J3DModelData",
+      "mDoExt_McaMorfSO",
+      "mDoExt_btkAnm"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor,archive y heap vigentes; fase execute/draw adecuada.",
+      "No presume recursos privados ni resolución Windows."
+    ],
+    "risks": [
+      "Datos/animaciones prestados; tabla de materiales mutada temporalmente.",
+      "setAnm puede fallar tras cambiar BCK; heap teardown invalida instancias."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-044",
+      "PRES-046"
+    ]
   }
 ]

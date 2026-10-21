@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R10",
+  "checkpoint": "CP-R11",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -7662,6 +7662,226 @@
       ],
       "limitations": [
         "Cadena estática file-select→PLAY; no ejecución ni fallos inducidos. No cubre todas las escenas,pausas o políticas de recuperación."
+      ]
+    },
+    {
+      "id": "PRES-044",
+      "claim": "AutoMata espera archive,crea morf/model en callback de solid heap y devuelve ERROR si heap falla. J3DModel retiene puntero ModelData,con buffers propios; recursos BCK/BTK siguen referenciados,no deep-copy por instancia.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_automata.cpp",
+          "line_start": 83,
+          "line_end": 135,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L83-L135"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 1581,
+          "line_end": 1662,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1581-L1662"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 3877,
+          "line_end": 3914,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L3877-L3914"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+          "line_start": 46,
+          "line_end": 73,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L46-L73"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 381,
+          "line_end": 385,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L381-L385"
+        }
+      ],
+      "limitations": [
+        "Consumidor representativo único; no todos los actores,fallos,disposers o formatos.",
+        "Sin render,juego ni ABI/export Windows verificados."
+      ]
+    },
+    {
+      "id": "PRES-045",
+      "claim": "setAnm toma BCK/BTK del archive y puede retornar fallo después de instalar BCK si BTK falta; no es transacción. Wrappers retienen punteros y el BTK busca IDs de materiales.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_automata.cpp",
+          "line_start": 222,
+          "line_end": 256,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L222-L256"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 1750,
+          "line_end": 1792,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1750-L1792"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 188,
+          "line_end": 207,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L188-L207"
+        }
+      ],
+      "limitations": [
+        "Consumidor representativo único; no todos los actores,fallos,disposers o formatos.",
+        "Sin render,juego ni ABI/export Windows verificados."
+      ]
+    },
+    {
+      "id": "PRES-046",
+      "claim": "AutoMata avanza morf/BTK solo en room residente,consume/reset play speed y calcula matrices; Draw aplica luz,entry BTK→entryDL→remove. Entry/remove mutan tabla de materiales,no descargan recurso. PC distingue presentación no simulada.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_automata.cpp",
+          "line_start": 143,
+          "line_end": 207,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L143-L207"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_automata.cpp",
+          "line_start": 269,
+          "line_end": 276,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L269-L276"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 1794,
+          "line_end": 1806,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1794-L1806"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 1820,
+          "line_end": 1835,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1820-L1835"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 380,
+          "line_end": 406,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L380-L406"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/m_Do/m_Do_ext.h",
+          "line_start": 64,
+          "line_end": 81,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/m_Do/m_Do_ext.h#L64-L81"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
+          "line_start": 75,
+          "line_end": 98,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp#L75-L98"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
+          "line_start": 221,
+          "line_end": 261,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp#L221-L261"
+        }
+      ],
+      "limitations": [
+        "Consumidor representativo único; no todos los actores,fallos,disposers o formatos.",
+        "Sin render,juego ni ABI/export Windows verificados."
+      ]
+    },
+    {
+      "id": "PRES-047",
+      "claim": "Delete AutoMata invoca destructor,stopZelAnime y resDelete; después wrapper actor elimina muestras interp/colas y destruye heap. stopZelAnime elimina objeto de sonido,no es destructor general de modelo. resDelete solo actúa con phase.id2 y no propaga resultado interno de deleteObjectResMain.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_automata.cpp",
+          "line_start": 68,
+          "line_end": 81,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L68-L81"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_automata.cpp",
+          "line_start": 137,
+          "line_end": 140,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_automata.cpp#L137-L140"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor.cpp",
+          "line_start": 404,
+          "line_end": 439,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp#L404-L439"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 372,
+          "line_end": 385,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L372-L385"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 1853,
+          "line_end": 1857,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1853-L1857"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_com_inf_game.cpp",
+          "line_start": 1361,
+          "line_end": 1377,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L1361-L1377"
+        }
+      ],
+      "limitations": [
+        "Consumidor representativo único; no todos los actores,fallos,disposers o formatos.",
+        "Sin render,juego ni ABI/export Windows verificados."
       ]
     }
   ],

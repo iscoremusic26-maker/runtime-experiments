@@ -347,28 +347,35 @@
   {
     "system_id": "models_animations_materials",
     "coverage": "READ",
-    "scope": "Rutas seleccionadas; profundidad original FLOW_SAMPLED; no auditoría integral del sistema.",
+    "scope": "READ global; cadena AutoMata archive→morf/BCK/BTK→execute/draw→teardown contrastada,además de muestreo J3D previo.",
     "reports": [
       "systems/models_animations_materials.md"
     ],
     "files_examined": [
-      "src/d/d_resorce.cpp",
-      "src/m_Do/m_Do_ext.cpp",
-      "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
-      "src/dusk/mods/svc/texture.cpp"
-    ],
-    "pending": [
-      "formatos BMD/BCK completos",
-      "morf per actor",
-      "skin/LOD/platform runtime"
-    ],
-    "paths": [
-      "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
-      "sdk/include/mods/svc/interp.h",
+      "src/d/actor/d_a_obj_automata.cpp",
       "src/d/d_resorce.cpp",
       "src/dusk/mods/svc/texture.cpp",
+      "src/m_Do/m_Do_ext.cpp"
+    ],
+    "pending": [
+      "Formatos BMD/BCK completos,otros morf por actor,skin/LOD y platform runtime.",
+      "Todos los fallos de alloc/disposers,sharing simultáneo y orden GPU no auditados."
+    ],
+    "paths": [
+      "include/m_Do/m_Do_ext.h",
+      "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "sdk/include/mods/svc/interp.h",
+      "src/d/actor/d_a_obj_automata.cpp",
+      "src/d/d_com_inf_game.cpp",
+      "src/d/d_resorce.cpp",
+      "src/dusk/mods/svc/texture.cpp",
+      "src/f_op/f_op_actor.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
       "src/m_Do/m_Do_ext.cpp"
     ],
     "dependencies": [
@@ -381,7 +388,11 @@
       "PRES-015",
       "PRES-016",
       "PRES-017",
-      "SDK-013"
+      "SDK-013",
+      "PRES-044",
+      "PRES-045",
+      "PRES-046",
+      "PRES-047"
     ]
   },
   {

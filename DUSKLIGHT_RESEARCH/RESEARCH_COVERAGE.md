@@ -1,12 +1,12 @@
-# Cobertura real — CP-R10
+# Cobertura real — CP-R11
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **20 fichas de sistemas, 207 evidencias y 221 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **20 fichas de sistemas, 211 evidencias y 225 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 221 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 225 registros.
 
 ## Estado por área
 
@@ -66,3 +66,5 @@ CP-R09 añade cuatro evidencias y dos símbolos del reloj ambiental/KYTAG11/roll
 CP-R10: una cadena adicional file-select→PLAY contrastada (ARCH-002..007); +6 evidencias,+6 símbolos,+0 documentos desde CP-R09. Runtime conserva CROSSCHECKED selectivo; Q-09 parcial. No se cuenta como seis rutas independientes ni bootstrap completo.
 
 Esta continuación CP-R10 se registra por separado; duración observada N/D. No se acumula el intervalo entre sesiones.
+
+CP-R11 añade una cadena distinta de recursos gráficos (AutoMata→morf/BCK/BTK→cleanup): +4 evidencias,+4 símbolos,+0 documentos frente a CP-R10. Models permanece READ global. Neto CP-R09→11:+10 evidencias,+10 símbolos,+0 documentos; dos cadenas representativas nuevas,no familias completas.
