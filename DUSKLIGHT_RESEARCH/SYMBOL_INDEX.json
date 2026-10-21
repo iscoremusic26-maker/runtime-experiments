@@ -2798,17 +2798,20 @@
     "dependencies": [
       "SaveService"
     ],
-    "integration": "OFFICIAL_SERVICE",
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
     "conditions": [
       "El mod usa SaveService::observe_saves; no invoca notificación interna."
     ],
     "risks": [
-      "CARD y sidecars no tienen transacción conjunta observada."
+      "CARD y sidecars no tienen transacción conjunta observada.",
+      "Corrección CP-R16: notificación interna del host,no slot público invocable de SaveService."
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
       "WORLD-012",
-      "WORLD-013"
+      "WORLD-013",
+      "WORLD-035",
+      "WORLD-037"
     ]
   },
   {
@@ -6965,6 +6968,103 @@
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
       "PRES-050"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::flush_save_sidecars",
+    "kind": "function",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/save.cpp",
+      "line_start": 287,
+      "line_end": 294,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L287-L294"
+    },
+    "signature": "void flush_save_sidecars(const std::string&, SaveStore&)",
+    "purpose": "Reintentar IDs dirty y retirar solo éxitos.",
+    "dependencies": [
+      "SaveStore",
+      "borealis::io::atomic_replace"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado SaveStore válido/cargado y nombre CARD pertinente; no invocar helpers internos desde mod.",
+      "IO/backend Borealis/Aurora ausentes y Windows durability no certificados."
+    ],
+    "risks": [
+      "Dirty conserva RAM mientras exista caché,no una cola durable ni ACK de disco.",
+      "Invalidar/reiniciar puede perder estado sin flush; resultado vanilla no informa sidecar."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-034",
+      "WORLD-035"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::write_mod_sidecar",
+    "kind": "function",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/save.cpp",
+      "line_start": 107,
+      "line_end": 162,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L107-L162"
+    },
+    "signature": "bool write_mod_sidecar(const std::filesystem::path&, const std::string&, const SaveStore&)",
+    "purpose": "Escribir/borrar sidecar de mod con ruta de error acotada.",
+    "dependencies": [
+      "SaveStore",
+      "borealis::io::atomic_replace"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado SaveStore válido/cargado y nombre CARD pertinente; no invocar helpers internos desde mod.",
+      "IO/backend Borealis/Aurora ausentes y Windows durability no certificados."
+    ],
+    "risks": [
+      "Dirty conserva RAM mientras exista caché,no una cola durable ni ACK de disco.",
+      "Invalidar/reiniciar puede perder estado sin flush; resultado vanilla no informa sidecar."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-034"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::invalidate_save",
+    "kind": "function",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/save.cpp",
+      "line_start": 490,
+      "line_end": 492,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/save.cpp#L490-L492"
+    },
+    "signature": "void invalidate_save(std::string_view)",
+    "purpose": "Invalidar caché completa,sin persistir dirty.",
+    "dependencies": [
+      "SaveStore",
+      "borealis::io::atomic_replace"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado SaveStore válido/cargado y nombre CARD pertinente; no invocar helpers internos desde mod.",
+      "IO/backend Borealis/Aurora ausentes y Windows durability no certificados."
+    ],
+    "risks": [
+      "Dirty conserva RAM mientras exista caché,no una cola durable ni ACK de disco.",
+      "Invalidar/reiniciar puede perder estado sin flush; resultado vanilla no informa sidecar."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-036"
     ]
   }
 ]

@@ -520,19 +520,20 @@
   {
     "system_id": "save_load",
     "coverage": "CROSSCHECKED",
-    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados.",
+    "scope": "Serialización/SDK y reintento sidecar/error/caché contrastados selectivamente; sin IO/runtime real.",
     "reports": [
       "systems/save_load.md"
     ],
     "files_examined": [
       "docs/modding.md",
-      "sdk/include/mods/svc/save.h",
-      "src/dusk/mods/svc/save.cpp",
-      "src/d/d_save.cpp",
       "include/d/d_save.h",
+      "sdk/include/mods/svc/save.h",
       "src/d/d_file_select.cpp",
       "src/d/d_menu_save.cpp",
-      "src/dusk/autosave.cpp"
+      "src/d/d_save.cpp",
+      "src/dusk/autosave.cpp",
+      "src/dusk/mods/svc/save.cpp",
+      "src/dusk/save_manager.cpp"
     ],
     "pending": [
       "Migración legacy de sidecars no auditada completa",
@@ -547,11 +548,13 @@
       "src/d/d_menu_save.cpp",
       "src/d/d_save.cpp",
       "src/dusk/autosave.cpp",
-      "src/dusk/mods/svc/save.cpp"
+      "src/dusk/mods/svc/save.cpp",
+      "src/dusk/save_manager.cpp"
     ],
     "dependencies": [
       "sdk_services",
-      "runtime_and_lifecycle"
+      "runtime_and_lifecycle",
+      "port_support"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -560,7 +563,11 @@
       "WORLD-010",
       "WORLD-012",
       "WORLD-013",
-      "WORLD-017"
+      "WORLD-017",
+      "WORLD-034",
+      "WORLD-035",
+      "WORLD-036",
+      "WORLD-037"
     ]
   },
   {

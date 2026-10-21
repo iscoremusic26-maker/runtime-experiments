@@ -45,3 +45,5 @@ CP-R13: file-select SaveLoaded→GameMode Speedrun→onGameFrame/overlap y,por s
 CP-R14: Acch GroundCheck→dBgS/dBgW ride→swpush flags/timers/modo→switch RAM y vértices→lector al recargar→Release/heap. PLAYER-035..039; no wiring de stage concreto ni persistencia CARD inferida.
 
 CP-R15: KYTAG06 tipo11 darkworld/layer/stay room→colpat gather→exeKankyo→drawKankyo/setLight/paletas→fog global→partículas6..11/GX. PRES-048..051; no ownership por tag ni orden universal/external DX12 probado.
+
+CP-R16: éxito vanilla→notificación→flush IDs dirty→IO por mod→dirty conservado/reintento por evento; invalidación save manager borra caché sin flush. WORLD-034..037. No transacción conjunta ni ACK de sidecar en servicio.

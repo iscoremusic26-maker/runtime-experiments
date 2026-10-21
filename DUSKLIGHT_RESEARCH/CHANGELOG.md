@@ -69,3 +69,7 @@ Padre remoto verificado 36c71128be0cda32b4ee5ef30dd0ace49ff92404. +5 evidencias,
 ## CP-R15 — patrones ambientales por layer y fog consumidor
 
 Padre remoto verificado 9a1e2434daaa1c32faa48f3db32aba028ef85e26. +4 evidencias,+3 símbolos,+0 informes/+0 archivos frente a CP-R14; una cadena ambiental nueva. CP-R14: swpush PLAYER-035..039,cadena contacto/switch/cleanup. CP-R15 completo en environment_weather_time: PRES-048..051 y tres símbolos,type11 KYTAG06→gather→paletas/fog→partículas. Cambio solicitado y aplicado son fases distintas; Delete tipo11 no revierte estado global. Ambiente sigue READ; otras variantes/agua/orden exacto y backend pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R16 — sidecars: error,reintento y vida de caché
+
+Padre remoto verificado 25d8a4f2b45d4ed3d88ecbeeb0c6d6345384ab60. +4 evidencias,+3 símbolos,+0 informes/+0 archivos frente a CP-R15; corrección de integración de un símbolo interno (OFFICIAL_SERVICE→POTENTIAL_REQUIRES_VERIFICATION),sin borrar evidencia. CP-R14 swpush PLAYER-035..039; CP-R15 KYTAG06/paletas/fog PRES-048..051; CP-R16 completo en save_load,WORLD-034..037,helpers flush/write/invalidate. Fallo conserva dirty hasta siguiente evento/vida de caché; JSON usa estado actual de3slots. Invalidate elimina store,sin flush. Menú/autosave no recibe resultado de sidecar. Corrección trazable del símbolo save_slot_written a integración interna; no cambio de contrato público ni producción. Sin mod,build ni runtime; solo atlas.
