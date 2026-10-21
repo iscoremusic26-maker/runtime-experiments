@@ -1,4 +1,4 @@
-# Cobertura — CP-R01
+# Cobertura — CP-R02
 
 R00 conserva 19367 rutas inventariadas; no se recalcularon hashes ni se rehízo el inventario en esta continuación. Se recuperaron borradores técnicos y se contrastaron init fallida, teardown y replace contra el código fijado.
 
@@ -9,3 +9,5 @@ R00 conserva 19367 rutas inventariadas; no se recalcularon hashes ni se rehízo 
 Borradores recuperados aún no incorporados en este checkpoint: mundos/guardado, jugador/física/actores, presentación/recursos, histórico y memoria. No cuentan todavía como cobertura publicada. El índice SYSTEM_INDEX describe solo las fronteras ya documentadas, no comprensión completa de esas áreas.
 
 Pendientes: pruebas de disponibilidad binaria, callbacks reentrantes, teardown de actores propios que rechazan borrado, submódulos ausentes, bootstrap completo y semántica de áreas restantes.
+
+CP-R02 incorpora cinco fichas con rutas contrastadas: stages/salas/capas, save/load, flags/eventos/progreso, inventario/equipamiento y secuencias/diálogos. Se precisan TGSC frente a padding/asserts PC, bancos de flags activos/persistentes y orden CARD/callback/sidecar. Totales acumulados: 89 evidencias; 109 símbolos. Los borradores publicados en este checkpoint dejan de estar pendientes; jugador/presentación/histórico/memoria siguen locales, sin contarlos como publicación.

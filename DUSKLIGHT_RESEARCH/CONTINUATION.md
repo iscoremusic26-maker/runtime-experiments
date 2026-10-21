@@ -1,4 +1,4 @@
-# Continuidad — CP-R01
+# Continuidad — CP-R02
 
 Fuente `40457c6adb381928e4b5fef6ed459ed291edd5e2`; objetivo Windows x64 / DX12 / GZ2E01. Continuación de la rama research/dusklight-203-dusk-atlas sobre CP-R00 `27d51db56ff1899eb13ca975d59ef3d1e1acf708`. El SHA del commit que contiene este handoff se obtiene del historial de esta rama; no se inventa autorreferencia.
 
@@ -11,3 +11,5 @@ Próximo bloque concreto: publicar SaveService y StageService/ActorService con f
 No crear PR nuevo; commits solo bajo DUSKLIGHT_RESEARCH. Releer HEAD antes de cada escritura, actualizar ref sin force con SHA esperado, comprobar commit y archivos remotos. No tocar PR fuente80/81, CI65/66 ni otras ramas. No compilar mods ni ejecutar el juego. No hay ejecución de fondo.
 
 NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED.
+
+CP-R02 parte del CP-R01 remoto verificado `f163cfc605ff92757aef3c5f7b492a1e63ef7459`. Añade cinco fichas world/save/events con 33 evidencias, corrección TGSC y bancos de switches. Primera acción siguiente: comprobar HEAD y publicar jugador/física/actores recuperados, luego presentación; aplicar review_presentation antes de publicar recursos. Releer cobertura acumulada; no repetir R00 ni crear PR.

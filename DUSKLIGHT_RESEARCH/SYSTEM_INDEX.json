@@ -35,12 +35,25 @@
   {
     "system_id": "cutscenes_dialogue",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/cutscenes_dialogue.md"
+    ],
+    "files_examined": [
+      "sdk/include/mods/svc/flow.h",
+      "sdk/include/mods/svc/message.h",
+      "src/dusk/mods/svc/flow.cpp",
+      "src/d/d_msg_flow.cpp",
+      "src/d/d_event.cpp",
+      "src/d/d_event_manager.cpp",
+      "src/d/d_demo.cpp",
+      "src/d/d_s_play.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "JMessage render/control completo",
+      "Todos los builtins y bindings Luau",
+      "THP/staffroll y event_list/STB por recurso no auditados",
+      "Detach con conversación activa no probado"
     ]
   },
   {
@@ -68,12 +81,23 @@
   {
     "system_id": "inventory_equipment",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/inventory_equipment.md"
+    ],
+    "files_examined": [
+      "sdk/include/mods/svc/item.h",
+      "src/dusk/mods/svc/item.cpp",
+      "src/dusk/mods/item_gives.cpp",
+      "src/dusk/mods/item_checks.cpp",
+      "src/d/d_item.cpp",
+      "src/d/d_save.cpp",
+      "sdk/include/mods/svc/flow.h"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "Todos los handlers/checks/ownership y persistencia",
+      "Prioridad y committed checks completos",
+      "HUD selección herramientas y bottle/bomb-bag completos"
     ]
   },
   {
@@ -112,12 +136,24 @@
   {
     "system_id": "save_load",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/save_load.md"
+    ],
+    "files_examined": [
+      "docs/modding.md",
+      "sdk/include/mods/svc/save.h",
+      "src/dusk/mods/svc/save.cpp",
+      "src/d/d_save.cpp",
+      "include/d/d_save.h",
+      "src/d/d_file_select.cpp",
+      "src/d/d_menu_save.cpp",
+      "src/dusk/autosave.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "Migración legacy de sidecars no auditada completa",
+      "Crash/fallo real I/O y atomic_replace externo",
+      "Game-mode save_name y boot/quickload completo"
     ]
   },
   {
@@ -134,12 +170,53 @@
   {
     "system_id": "stages_rooms_layers",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados.",
     "reports": [
-      "SDK_AND_SERVICES.md"
+      "systems/stages_rooms_layers.md"
+    ],
+    "files_examined": [
+      "docs/modding.md",
+      "sdk/include/mods/svc/stage.h",
+      "src/dusk/mods/svc/stage.cpp",
+      "include/d/d_stage.h",
+      "src/d/d_stage.cpp",
+      "src/d/d_s_room.cpp",
+      "src/d/d_s_play.cpp",
+      "src/d/d_com_inf_game.cpp",
+      "src/f_pc/f_pc_manager.cpp",
+      "src/d/d_resorce.cpp",
+      "src/d/d_bg_w_kcol.cpp"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "room-reentry completo/objectSetCheck/MULT",
+      "Retención de buffers StageService parcheados y recarga de ARC",
+      "Validación Windows de símbolos y recursos GZ2E01",
+      "Navegación/geometry/editing no validado",
+      "Discrepancia sizeof TGSC 0x24 frente a StageService 0x23: confirmar uso mod sin alterar host/SDK"
+    ]
+  },
+  {
+    "system_id": "flags_events_progression",
+    "coverage": "CROSSCHECKED",
+    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados.",
+    "reports": [
+      "systems/flags_events_progression.md"
+    ],
+    "files_examined": [
+      "sdk/include/mods/svc/flow.h",
+      "sdk/include/mods/svc/game.h",
+      "src/d/d_save.cpp",
+      "include/d/d_save.h",
+      "src/d/d_stage.cpp",
+      "src/d/d_com_inf_game.cpp",
+      "src/d/d_msg_flow.cpp",
+      "src/d/d_event.cpp",
+      "src/dusk/mods/svc/flow.cpp"
+    ],
+    "pending": [
+      "Índice semántico de todos los flags",
+      "Zone/one-zone y dungeon init/cleanup completos",
+      "Dependencias de storyline completas y rollback persistente"
     ]
   }
 ]

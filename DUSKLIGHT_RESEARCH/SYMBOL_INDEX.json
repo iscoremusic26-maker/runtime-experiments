@@ -2010,5 +2010,1194 @@
     "evidence_ids": [
       "SDK-014"
     ]
+  },
+  {
+    "symbol": "dStage_dt_c_decode",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2308,
+      "line_end": 2332
+    },
+    "signature": "static void dStage_dt_c_decode(void*, dStage_dt_c*, FuncTable*, int)",
+    "purpose": "Despacha chunks DZS/DZR por tag a funciones consumidoras.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-001"
+    ]
+  },
+  {
+    "symbol": "dStage_dt_c_offsetToPtr",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2422,
+      "line_end": 2437
+    },
+    "signature": "static void dStage_dt_c_offsetToPtr(void*)",
+    "purpose": "Establece bases de offsets de nodos; PC difiere de consola.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-002"
+    ]
+  },
+  {
+    "symbol": "dStage_actorCreate",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 1635,
+      "line_end": 1663
+    },
+    "signature": "static void dStage_actorCreate(stage_actor_data_class*, fopAcM_prm_class*, size_t)",
+    "purpose": "Aplica edición SDK y resuelve profile/nombre para solicitar creación.",
+    "dependencies": [
+      "StageService",
+      "fopAcM_Create"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-004"
+    ]
+  },
+  {
+    "symbol": "dStage_playerInit",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 1692,
+      "line_end": 1751
+    },
+    "signature": "static int dStage_playerInit(dStage_dt_c*, void*, int, void*)",
+    "purpose": "Selecciona punto de entrada o restart y consulta puntos editados PC.",
+    "dependencies": [
+      "dComIfGp_getStartStagePoint",
+      "StageService"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-008"
+    ]
+  },
+  {
+    "symbol": "dStage_dt_c_roomLoader",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2799,
+      "line_end": 2814
+    },
+    "signature": "void dStage_dt_c_roomLoader(void*, dStage_dt_c*, int)",
+    "purpose": "Inicializa tablas de datos y capa de room.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-001",
+      "WORLD-003"
+    ]
+  },
+  {
+    "symbol": "dStage_dt_c_roomReLoader",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2816,
+      "line_end": 2836
+    },
+    "signature": "void dStage_dt_c_roomReLoader(void*, dStage_dt_c*, int)",
+    "purpose": "Decodifica actores y eventos de sala, añade registros SDK y actores por capa.",
+    "dependencies": [
+      "StageService"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-001",
+      "WORLD-005"
+    ]
+  },
+  {
+    "symbol": "dStage_Create",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2869,
+      "line_end": 2896
+    },
+    "signature": "void dStage_Create()",
+    "purpose": "Consume stage.dzs y crea sala inicial/ambiente/event manager.",
+    "dependencies": [
+      "dStage_dt_c_stageLoader",
+      "dComIfGp_evmng_create"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-007"
+    ]
+  },
+  {
+    "symbol": "dStage_Delete",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2898,
+      "line_end": 2932
+    },
+    "signature": "void dStage_Delete()",
+    "purpose": "Vuelca memoria de área y limpia/retiene recursos según próxima escena.",
+    "dependencies": [
+      "dSv_info_c::putSave"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-007",
+      "WORLD-017"
+    ]
+  },
+  {
+    "symbol": "dStage_changeScene",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2976,
+      "line_end": 3013
+    },
+    "signature": "int dStage_changeScene(int, f32, u32, s8, s16, int)",
+    "purpose": "Convierte salida SCLS en próximo stage con capa/wipe/tiempo.",
+    "dependencies": [
+      "dComIfGp_setNextStage"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-008"
+    ]
+  },
+  {
+    "symbol": "dComIfGp_setNextStage",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_com_inf_game.cpp",
+      "line_start": 1436,
+      "line_end": 1494
+    },
+    "signature": "void dComIfGp_setNextStage(char const*, s16, s8, s8, f32, u32, int, s8, s16, int, int)",
+    "purpose": "Registra próxima escena, última estancia y contexto de restart.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-008"
+    ]
+  },
+  {
+    "symbol": "dComIfG_play_c::getLayerNo_common_common",
+    "kind": "method",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_com_inf_game.cpp",
+      "line_start": 160,
+      "line_end": 216
+    },
+    "signature": "int dComIfG_play_c::getLayerNo_common_common(const char*, int, int)",
+    "purpose": "Resuelve capa por override, Twilight y condiciones narrativas; rango citado ejemplifica primeras ramas.",
+    "dependencies": [
+      "dSv_event_c::isEventBit"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Rango indexado es inicio de función; no cubre todas sus ramas.",
+      "Resolución ABI Windows pendiente."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-030"
+    ]
+  },
+  {
+    "symbol": "dScnRoom_Delete",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_s_room.cpp",
+      "line_start": 325,
+      "line_end": 362
+    },
+    "signature": "static int dScnRoom_Delete(room_of_scene_class*)",
+    "purpose": "Limpia roomDt, recursos/heap según transición y base de eventos de sala.",
+    "dependencies": [
+      "dEvent_manager_c::roomFinish"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-003"
+    ]
+  },
+  {
+    "symbol": "fpcM_Management",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_pc/f_pc_manager.cpp",
+      "line_start": 52,
+      "line_end": 117
+    },
+    "signature": "void fpcM_Management(fpcM_ManagementFunc, fpcM_ManagementFunc)",
+    "purpose": "Circuito de scheduling de procesos con eliminación, creación, ejecución y dibujo sujetos a guards.",
+    "dependencies": [
+      "fpcDt_Handler",
+      "fpcCt_Handler",
+      "fpcEx_Handler",
+      "fpcDw_Handler"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-009"
+    ]
+  },
+  {
+    "symbol": "dSv_info_c::memory_to_card",
+    "kind": "method",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1772,
+      "line_end": 1865
+    },
+    "signature": "int dSv_info_c::memory_to_card(char*, int)",
+    "purpose": "Serializa estado vanilla con normalización temporal de linterna y tiempo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Estado transitorio de flags/items durante serialización.",
+      "Coherencia de save y ABI/layout."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-010"
+    ]
+  },
+  {
+    "symbol": "dSv_info_c::card_to_memory",
+    "kind": "method",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1868,
+      "line_end": 1915
+    },
+    "signature": "int dSv_info_c::card_to_memory(char*, int)",
+    "purpose": "Carga estado vanilla y normaliza vida, inventario y datos derivados.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-010"
+    ]
+  },
+  {
+    "symbol": "dSv_info_c::getSave",
+    "kind": "method",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1545,
+      "line_end": 1548
+    },
+    "signature": "void dSv_info_c::getSave(int)",
+    "purpose": "Copia banco persistente de área a memoria activa.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-017"
+    ]
+  },
+  {
+    "symbol": "dSv_info_c::putSave",
+    "kind": "method",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1550,
+      "line_end": 1553
+    },
+    "signature": "void dSv_info_c::putSave(int)",
+    "purpose": "Copia memoria activa al banco persistente de área.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-017"
+    ]
+  },
+  {
+    "symbol": "dSv_info_c::onSwitch",
+    "kind": "method",
+    "system_id": "flags_events_progression",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1573,
+      "line_end": 1595
+    },
+    "signature": "void dSv_info_c::onSwitch(int, int)",
+    "purpose": "Despacha switch a área, dungeon, zona u one-zone según rango.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Sala/zona inválida en escritura.",
+      "Progreso persistente no revertido al detach."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-016"
+    ]
+  },
+  {
+    "symbol": "dSv_info_c::isSwitch",
+    "kind": "method",
+    "system_id": "flags_events_progression",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1621,
+      "line_end": 1659
+    },
+    "signature": "BOOL dSv_info_c::isSwitch(int, int) const",
+    "purpose": "Consulta switch según dominio y zona vigente.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-016"
+    ]
+  },
+  {
+    "symbol": "dSv_event_c::onEventBit",
+    "kind": "method",
+    "system_id": "flags_events_progression",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1231,
+      "line_end": 1233
+    },
+    "signature": "void dSv_event_c::onEventBit(u16)",
+    "purpose": "Activa máscara codificada en banco de eventos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-015"
+    ]
+  },
+  {
+    "symbol": "dSv_event_c::setEventReg",
+    "kind": "method",
+    "system_id": "flags_events_progression",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1243,
+      "line_end": 1246
+    },
+    "signature": "void dSv_event_c::setEventReg(u16, u8)",
+    "purpose": "Escribe registro de evento usando clave/máscara codificada.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-015"
+    ]
+  },
+  {
+    "symbol": "dSv_player_item_c::setItem",
+    "kind": "method",
+    "system_id": "inventory_equipment",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 342,
+      "line_end": 353
+    },
+    "signature": "void dSv_player_item_c::setItem(int, u8)",
+    "purpose": "Actualiza slot, lineup y objeto seleccionado correspondiente.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-019"
+    ]
+  },
+  {
+    "symbol": "dSv_player_item_c::getItem",
+    "kind": "method",
+    "system_id": "inventory_equipment",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 355,
+      "line_end": 429
+    },
+    "signature": "u8 dSv_player_item_c::getItem(int, bool) const",
+    "purpose": "Lee slot o deriva item combinado desde select/mix.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-019"
+    ]
+  },
+  {
+    "symbol": "execItemGet",
+    "kind": "function",
+    "system_id": "inventory_equipment",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_item.cpp",
+      "line_start": 280,
+      "line_end": 283
+    },
+    "signature": "void execItemGet(u8, u32, fopAc_ac_c*)",
+    "purpose": "Aplica adquisición vanilla y notifica origen/check a consumidores mod PC.",
+    "dependencies": [
+      "getItemFunc",
+      "dusk::mods::item_granted"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-020"
+    ]
+  },
+  {
+    "symbol": "getItemFunc",
+    "kind": "function",
+    "system_id": "inventory_equipment",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_item.cpp",
+      "line_start": 272,
+      "line_end": 278
+    },
+    "signature": "void getItemFunc(u8)",
+    "purpose": "Marca first-bit y despacha handler de item.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-020"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::item_gives_tick",
+    "kind": "function",
+    "system_id": "inventory_equipment",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/item_gives.cpp",
+      "line_start": 367,
+      "line_end": 396
+    },
+    "signature": "void dusk::mods::svc::item_gives_tick()",
+    "purpose": "Despacha cola y reintentos de grant al finalizar frame del servicio.",
+    "dependencies": [
+      "ItemService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Consumir mediante ItemService::give_item y observe_gives; función interna no es entrada SDK directa.",
+      "MOD_OK de enqueue no confirma entrega."
+    ],
+    "risks": [
+      "Entrega diferida; cambio de slot limpia cola.",
+      "Grant ya in-flight no cancelable al detach."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-021"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::save_slot_written",
+    "kind": "function",
+    "system_id": "save_load",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/save.cpp",
+      "line_start": 439,
+      "line_end": 448
+    },
+    "signature": "void dusk::mods::svc::save_slot_written(uint32_t)",
+    "purpose": "Notifica observers y luego intenta flush de sidecars dirty.",
+    "dependencies": [
+      "SaveService"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "El mod usa SaveService::observe_saves; no invoca notificación interna."
+    ],
+    "risks": [
+      "CARD y sidecars no tienen transacción conjunta observada."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-012",
+      "WORLD-013"
+    ]
+  },
+  {
+    "symbol": "dEvent_manager_c::order",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_event_manager.cpp",
+      "line_start": 970,
+      "line_end": 986
+    },
+    "signature": "int dEvent_manager_c::order(s16)",
+    "purpose": "Activa tipo/ID de evento existente y llama startProc.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-026"
+    ]
+  },
+  {
+    "symbol": "dEvent_manager_c::startProc",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_event_manager.cpp",
+      "line_start": 529,
+      "line_end": 589
+    },
+    "signature": "void dEvent_manager_c::startProc(dEvDtEvent_c*)",
+    "purpose": "Asocia actores a staff e inicia estado START con flags reinicializados.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-026"
+    ]
+  },
+  {
+    "symbol": "dEvent_manager_c::endProc",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_event_manager.cpp",
+      "line_start": 595,
+      "line_end": 637
+    },
+    "signature": "void dEvent_manager_c::endProc(s16, BOOL)",
+    "purpose": "Cierra evento END y limpia estado de participantes e IDs/punteros.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-026"
+    ]
+  },
+  {
+    "symbol": "dEvent_manager_c::cutEnd",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_event_manager.cpp",
+      "line_start": 1281,
+      "line_end": 1296
+    },
+    "signature": "void dEvent_manager_c::cutEnd(int)",
+    "purpose": "Marca flag del corte actual con evento y staff válidos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-026"
+    ]
+  },
+  {
+    "symbol": "dEvt_control_c::Step",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_event.cpp",
+      "line_start": 948,
+      "line_end": 1036
+    },
+    "signature": "int dEvt_control_c::Step()",
+    "purpose": "Coordina skipper, secuenciador y cierre del evento.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-026"
+    ]
+  },
+  {
+    "symbol": "dDemo_c::start",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_demo.cpp",
+      "line_start": 1049,
+      "line_end": 1092
+    },
+    "signature": "int dDemo_c::start(u8 const*, cXyz*, f32)",
+    "purpose": "Parsea datos JStudio y prepara reproducción/branch/transformación.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-027"
+    ]
+  },
+  {
+    "symbol": "dDemo_c::update",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_demo.cpp",
+      "line_start": 1123,
+      "line_end": 1172
+    },
+    "signature": "int dDemo_c::update()",
+    "purpose": "Avanza control JStudio, contadores, branches y staffroll.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-027"
+    ]
+  },
+  {
+    "symbol": "dMsgFlow_c::init",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_msg_flow.cpp",
+      "line_start": 61,
+      "line_end": 116
+    },
+    "signature": "void dMsgFlow_c::init(fopAc_ac_c*, int, int, fopAc_ac_c**)",
+    "purpose": "Enlaza grupo BMG y tablas FLW1/FLI1 con speaker.",
+    "dependencies": [
+      "FlowService"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-023"
+    ]
+  },
+  {
+    "symbol": "dMsgFlow_c::nodeProc",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_msg_flow.cpp",
+      "line_start": 940,
+      "line_end": 982
+    },
+    "signature": "int dMsgFlow_c::nodeProc(fopAc_ac_c*, fopAc_ac_c**)",
+    "purpose": "Resuelve y ejecuta nodos message/branch/event hasta suspensión o cierre.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-023"
+    ]
+  },
+  {
+    "symbol": "dMsgFlow_c::eventNodeProc",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_msg_flow.cpp",
+      "line_start": 842,
+      "line_end": 870
+    },
+    "signature": "int dMsgFlow_c::eventNodeProc(fopAc_ac_c*, fopAc_ac_c**)",
+    "purpose": "Despacha builtin o callback de evento custom y resuelve arista.",
+    "dependencies": [
+      "FlowService"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-018",
+      "WORLD-023"
+    ]
+  },
+  {
+    "symbol": "dBgWKCol::initKCollision",
+    "kind": "method",
+    "system_id": "movement_physics_collision",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_bg_w_kcol.cpp",
+      "line_start": 22,
+      "line_end": 56
+    },
+    "signature": "void* dBgWKCol::initKCollision(void*)",
+    "purpose": "Establece offsets KCL y convierte campos endian para PC.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Buffer transformado en memoria; volver a convertir o usar layout de disco puede invalidarlo.",
+      "No se verificó intervención vía hook ni edición KCL/PLC runtime."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-031"
+    ]
+  },
+  {
+    "symbol": "dDemo_c::end",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_demo.cpp",
+      "line_start": 1099,
+      "line_end": 1109
+    },
+    "signature": "void dDemo_c::end()",
+    "purpose": "Destruye objetos demo y reanuda streams PC.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-027"
+    ]
+  },
+  {
+    "symbol": "dEvent_manager_c::roomFinish",
+    "kind": "method",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_event_manager.cpp",
+      "line_start": 444,
+      "line_end": 453
+    },
+    "signature": "void dEvent_manager_c::roomFinish(int)",
+    "purpose": "Limpia bases de evento correspondientes a sala retirada.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
+      "Revalidar estado de escena y no retener punteros tras cleanup."
+    ],
+    "risks": [
+      "Transición de escena y vigencia de punteros.",
+      "Hook conflicts y compatibilidad de ABI si se usa hooking."
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "WORLD-026"
+    ]
+  },
+  {
+    "symbol": "stage_tgsc_data_class",
+    "kind": "struct",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "include/d/d_stage.h",
+      "line_start": 221,
+      "line_end": 228
+    },
+    "signature": "struct stage_tgsc_data_class { char name[8]; fopAcM_prmBase_class base; fopAcM_prmScale_class scale; };",
+    "purpose": "Registro TGSC/SCOB/TGDR/Door con sizeof declarado y afirmado 0x24; no confundir con tamaño aceptado 0x23 de StageService.",
+    "dependencies": [
+      "fopAcM_prmBase_class",
+      "fopAcM_prmScale_class"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "StageService acepta 0x23 bytes, no sizeof de estructura 0x24; verificar serialización.",
+      "No probado en Windows."
+    ],
+    "risks": [
+      "Desajuste de tamaño/API y padding.",
+      "CRC debe coincidir con representación y tamaño usados por consumidor."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-033"
+    ]
   }
 ]
