@@ -5807,5 +5807,138 @@
       "CALLBACK-007",
       "CALLBACK-008"
     ]
+  },
+  {
+    "symbol": "mDoExt_getMesgFont",
+    "kind": "function",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 3780,
+      "line_end": 3787,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L3780-L3787"
+    },
+    "signature": "JUTFont* mDoExt_getMesgFont()",
+    "purpose": "Adquiere referencia compartida; no es getter sin efectos.",
+    "dependencies": [
+      "JUTFont",
+      "JKRHeap",
+      "JKRArchive"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Respetar referencia compartida y duración del recurso BFN.",
+      "Servicio público para font J2D no identificado; enlace/target Windows no verificados."
+    ],
+    "risks": [
+      "Panes prestan font; liberar backing prematuramente vence punteros.",
+      "Formato gráfico PC tiene restricciones y no fue ejecutado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-036",
+      "PRES-037"
+    ]
+  },
+  {
+    "symbol": "mDoExt_removeMesgFont",
+    "kind": "function",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 3789,
+      "line_end": 3813,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L3789-L3813"
+    },
+    "signature": "void mDoExt_removeMesgFont()",
+    "purpose": "Libera referencia y contempla destrucción al llegar a cero.",
+    "dependencies": [
+      "JUTFont",
+      "JKRHeap",
+      "JKRArchive"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Respetar referencia compartida y duración del recurso BFN.",
+      "Servicio público para font J2D no identificado; enlace/target Windows no verificados."
+    ],
+    "risks": [
+      "Panes prestan font; liberar backing prematuramente vence punteros.",
+      "Formato gráfico PC tiene restricciones y no fue ejecutado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-037"
+    ]
+  },
+  {
+    "symbol": "J2DTextBox::setFont",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J2DGraph/J2DTextBox.cpp",
+      "line_start": 249,
+      "line_end": 257,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBox.cpp#L249-L257"
+    },
+    "signature": "void J2DTextBox::setFont(JUTFont*)",
+    "purpose": "Sustituye font previa owned y conserva la nueva como prestada.",
+    "dependencies": [
+      "JUTFont",
+      "JKRHeap",
+      "JKRArchive"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Respetar referencia compartida y duración del recurso BFN.",
+      "Servicio público para font J2D no identificado; enlace/target Windows no verificados."
+    ],
+    "risks": [
+      "Panes prestan font; liberar backing prematuramente vence punteros.",
+      "Formato gráfico PC tiene restricciones y no fue ejecutado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-038"
+    ]
+  },
+  {
+    "symbol": "JUTResFont::protected_initiate",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JUtility/JUTResFont.cpp",
+      "line_start": 94,
+      "line_end": 127,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JUtility/JUTResFont.cpp#L94-L127"
+    },
+    "signature": "bool JUTResFont::protected_initiate(const ResFONT*, JKRHeap*)",
+    "purpose": "Conserva backing BFN y prepara tablas/objeto textura PC.",
+    "dependencies": [
+      "JUTFont",
+      "JKRHeap",
+      "JKRArchive"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Respetar referencia compartida y duración del recurso BFN.",
+      "Servicio público para font J2D no identificado; enlace/target Windows no verificados."
+    ],
+    "risks": [
+      "Panes prestan font; liberar backing prematuramente vence punteros.",
+      "Formato gráfico PC tiene restricciones y no fue ejecutado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-039"
+    ]
   }
 ]

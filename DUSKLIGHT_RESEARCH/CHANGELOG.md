@@ -33,3 +33,7 @@ Esta continuación tuvo checkpoints cortos R01, R02/R02a, R03, R04 y R05, sin cr
 ## CP-R06 — Item resolvers, snapshots y consumidor cofre
 
 Contrastados contrato 2.3, registro/retirada, copia PendingResolve sin handle, orden por mod/vector, active-check y efectos de detach. Consumidor TARGET_PC daTbox_c::create1st enlaza la resolución a parámetros del cofre. Cuatro evidencias y tres símbolos nuevos. La cancelación tardía es inferencia condicionada; el contrato exige ausencia de efectos secundarios y no se promete reentrancia. Sin runtime, builds ni mod.
+
+## CP-R07 — fuente BFN, ownership J2D y consumidor file-info
+
+Contrastados provider logo/font archive, initFontCommon y rama PC, refcount mDoExt, JUTResFont con backing prestado, binding J2DTextBox y release del consumidor. Cuatro evidencias y cuatro símbolos netos. HUD mantiene READ global con una cadena CROSSCHECKED; no validación de glifos, overlay ni rendering runtime.

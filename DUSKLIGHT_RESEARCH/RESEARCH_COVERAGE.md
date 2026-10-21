@@ -1,12 +1,12 @@
-# Cobertura real — CP-R06
+# Cobertura real — CP-R07
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **19 fichas de sistemas, 188 evidencias y 205 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 5 READ y 5 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **19 fichas de sistemas, 192 evidencias y 209 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 5 READ y 5 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 205 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 209 registros.
 
 ## Estado por área
 
@@ -56,3 +56,5 @@ Todas las fichas recuperadas de subtareas están integradas en los checkpoints r
 Continuación observada desde 2026-10-21T13:48:44Z hasta 2026-10-21T14:15:46Z antes de publicar: 1622 segundos de sesión. No equivale a CPU ni a suma de trabajo paralelo; tiempo efectivo de investigación N/D. La pausa entre sesiones se excluye. La sesión anterior duró aproximadamente 13 minutos según el encargo, sin añadirla como horas medidas.
 
 CP-R06 añade cuatro evidencias y tres símbolos sobre Item resolvers, con consumidor TARGET_PC del cofre. No amplía el número de servicios auditados ni acredita todas las rutas Item. El snapshot no revalida handle; no se atribuye permiso de reentrancia al contrato. Q-01/Q-02 siguen parcialmente abiertos.
+
+CP-R07 contrasta adquisición, uso y liberación de fuente BFN/JUTResFont en file-info. Cuatro evidencias y cuatro símbolos nuevos; HUD permanece READ global y la cadena citada es CROSSCHECKED. Ninguna sustitución gráfica fue ejecutada.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R06",
+  "checkpoint": "CP-R07",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -6723,6 +6723,194 @@
       "limitations": [
         "Consumidor representativo de creación de cofre; no demuestra todos los consumidores ni una entrega exitosa.",
         "El nombre y ItemCheckInfo son prestados durante la llamada; no guardar su puntero."
+      ]
+    },
+    {
+      "id": "PRES-036",
+      "claim": "El logo selecciona Fontus/Fonteu/Fontjp para mount de fontres/rubyres, publica FontArchive y adquiere fuentes globales. initFont0 usa JUTCacheFont en PC región japonesa y JUTResFont en la otra rama, con recurso rodan_b_24_22.bfn y heap Zelda.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_logo.cpp",
+          "line_start": 1668,
+          "line_end": 1681,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_logo.cpp#L1668-L1681"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_logo.cpp",
+          "line_start": 960,
+          "line_end": 1009,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_logo.cpp#L960-L1009"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 3709,
+          "line_end": 3753,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L3709-L3753"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 3761,
+          "line_end": 3777,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L3761-L3777"
+        }
+      ],
+      "limitations": [
+        "No se abrió contenido BFN/ARC del disco ni se probó montaje runtime.",
+        "La rama japonesa no se extrapola a la referencia USA."
+      ]
+    },
+    {
+      "id": "PRES-037",
+      "claim": "mDoExt_getMesgFont inicializa y aumenta contador global; remove lo decrementa y contiene rama de destrucción/recurso a cero. dFile_info_c adquiere una referencia para su pantalla y la libera después de destruir pantalla y gestores.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 3780,
+          "line_end": 3813,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L3780-L3813"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_sel_info.cpp",
+          "line_start": 22,
+          "line_end": 47,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_sel_info.cpp#L22-L47"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_sel_info.cpp",
+          "line_start": 75,
+          "line_end": 80,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_sel_info.cpp#L75-L80"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_select.cpp",
+          "line_start": 3625,
+          "line_end": 3630,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_select.cpp#L3625-L3630"
+        }
+      ],
+      "limitations": [
+        "No se auditó balance de todos los consumidores; el bootstrap también conserva una adquisición.",
+        "remove tiene assert >0 tras decrementar antes de la rama cero; comportamiento con asserts y último dueño no ensayado."
+      ]
+    },
+    {
+      "id": "PRES-038",
+      "claim": "J2DTextBox::setFont elimina font previa solo si era owned, almacena la nueva y deja mTextFontOwned=false; destructor no destruye una fuente prestada. La pantalla de file-info enlaza el mismo font compartido a panes sin retener referencias adicionales en setFont.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DTextBox.cpp",
+          "line_start": 241,
+          "line_end": 257,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBox.cpp#L241-L257"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_sel_info.cpp",
+          "line_start": 38,
+          "line_end": 47,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_sel_info.cpp#L38-L47"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_sel_info.cpp",
+          "line_start": 75,
+          "line_end": 80,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_sel_info.cpp#L75-L80"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_sel_info.cpp",
+          "line_start": 30,
+          "line_end": 36,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_sel_info.cpp#L30-L36"
+        }
+      ],
+      "limitations": [
+        "Contrato de uso inferido de implementación y consumidor; no existe aquí una API FontService del SDK.",
+        "No acredita ownership de todas las variantes TextBoxEx ni todos los layouts."
+      ]
+    },
+    {
+      "id": "PRES-039",
+      "claim": "JUTResFont guarda puntero a ResFONT y construye tablas de punteros a bloques, sin copia profunda de backing BFN; destructor libera tablas y objeto textura PC. protected_initiate llama initJoinedTexture en PC, que exige un bloque GLY y dimensiones múltiplos de ocho.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JUtility/JUTResFont.cpp",
+          "line_start": 17,
+          "line_end": 56,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JUtility/JUTResFont.cpp#L17-L56"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JUtility/JUTResFont.cpp",
+          "line_start": 59,
+          "line_end": 90,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JUtility/JUTResFont.cpp#L59-L90"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JUtility/JUTResFont.cpp",
+          "line_start": 94,
+          "line_end": 127,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JUtility/JUTResFont.cpp#L94-L127"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JUtility/JUTResFont.cpp",
+          "line_start": 169,
+          "line_end": 201,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JUtility/JUTResFont.cpp#L169-L201"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JUtility/JUTResFont.h",
+          "line_start": 61,
+          "line_end": 79,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JUtility/JUTResFont.h#L61-L79"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 3789,
+          "line_end": 3810,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L3789-L3810"
+        }
+      ],
+      "limitations": [
+        "No se certifica compatibilidad de cualquier BFN, glifo, charset, backend o overlay.",
+        "Respaldo del recurso debe conservarse mientras font use sus bloques; no se ensayó reload visual."
       ]
     }
   ],

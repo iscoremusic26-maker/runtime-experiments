@@ -1,15 +1,13 @@
-# Continuidad — CP-R06
+# Continuidad — CP-R07
 
-Continuar rama `research/dusklight-203-dusk-atlas` de `iscoremusic26-maker/Mods-Duskligh`, exclusivamente DUSKLIGHT_RESEARCH. Fuente fija `40457c6adb381928e4b5fef6ed459ed291edd5e2`; Windows x64 / DX12 / GZ2E01 USA. Padre remoto comprobado: CP-R05 `4dc156a5f4c1dcf70a536cf0298cf55774a8b0f0`; obtener el SHA de este checkpoint desde HEAD/historial.
+Rama exacta research/dusklight-203-dusk-atlas; solo DUSKLIGHT_RESEARCH. Fuente fija40457c6adb381928e4b5fef6ed459ed291edd5e2; Windows x64/DX12/GZ2E01. Padre remoto comprobado: CP-R06 c6087f189b4e9c9a81275c3227861f9f51026c93; consultar HEAD para el commit de este handoff.
 
-CP-R06 añade CALLBACK-005..008 y tres símbolos: ruta ItemService resolver, clear/detach y consumidor cofre. PendingResolve copia fn/userData sin handle y revalida active, no el registro vivo. El contrato exige resolvers sin efectos secundarios: la copia defensiva no otorga permiso contractual para mutar registros desde callback. Userdata/info y nombre prestado deben respetar lifetime. Sin ejecución de reentrancia ni juego.
+Acumulado:192 evidencias,209 símbolos,19 fichas. Esta sesión añade ocho evidencias y siete símbolos sin documentos nuevos. CP-R06 estudió Item resolvers/snapshot y consumidor cofre. CP-R07 alternó a HUD: logo/font archive→JUTResFont→dFile_info_c/J2DTextBox→release. getMesgFont incrementa referencia, setFont presta el puntero, JUTResFont presta bytes BFN; PC exige formato de glyph/texture concreto. No ejecutar ni inferir un overlay gráfico probado.
 
-Acumulado: 188 evidencias, 205 símbolos, 19 fichas; las áreas READ/INVENTARIED se conservan. El inventario no se rehízo. Q-01/Q-02 quedan parcialmente resueltas para Item resolvers, no para todo Item ni Message.
+HUD permanece READ global; el subflujo citado es CROSSCHECKED. Próxima acción exacta: alternar a Q-13, soporte del port; seguir un mecanismo acotado de achievements (carga/estado/mode gate/tick/persistencia) leyendo solo código, sin abrir JSON de usuario ni su cuenta. Comprobar si se trata de UI interna o servicio SDK y publicar CP-R08 antes de otro estudio. No repetir inventario ni matriz SDK.
 
-Primera acción siguiente: alternar a Q-10, HUD/fonts. Leer systems/hud_ui_text.md y seguir una cadena representativa de adquisición → uso → liberación de fuente JUTResFont desde un consumidor, sin intentar todos los menús ni assets. Localizar contrato/tipo, recurso/heap, call site y destructor. Publicar CP-R07 antes de abrir otra familia. No repetir Save/Host/Camera/Item completos; Message puede retomarse después de ampliar presentación.
+Comprobar HEAD y leer handoff/cobertura antes de escribir. Source y atlas locales están en work/source/dusklight-2.0.3 y work/atlas/DUSKLIGHT_RESEARCH, rutas efímeras. Ejecutar validador revisado; si falla no publicar. Usar conector GitHub, tree/padre actuales y expected_sha sin force; leer ref y archivo cambiado para certificar publicación. No PR nuevo,merge,tag,release,upstream,SDK,producción,PR80/81 ni CI65/66. No prompts,assets originales o secretos en commits.
 
-Comprobar HEAD remoto antes de escribir; recuperar solo archivos necesarios del atlas. La fuente certificada existe en work/source/dusklight-2.0.3 y el atlas de trabajo en work/atlas/DUSKLIGHT_RESEARCH, rutas efímeras. Revisar y ejecutar tools/validate_atlas.py; si falla no publicar. Solo commits bajo DUSKLIGHT_RESEARCH, sin PR nuevo, merge, tag, release ni force. Usar conector GitHub, padre/tree actuales y expected_sha; comprobar ref y archivo remoto. No tocar producción, SDK, upstream, PR80/81 ni CI65/66. No subir prompts o recursos originales.
-
-Persistir bloques útiles aproximadamente cada 3–5 minutos activos; antes de nuevos análisis costosos. Máximo 2–3 lecturas paralelas tras checkpoint seguro. Cuatro submódulos siguen ausentes; disponibilidad binaria Windows y runtime no verificados. No hay ejecución de fondo.
+Checkpoints útiles cada3–5 minutos activos cuando sea viable; máximo2–3 lecturas paralelas tras checkpoint seguro. Sin build de .dusk, juego, validación binaria Windows ni trabajo de fondo. Cuatro submódulos y byte mismatch Android mantienen sus límites documentados.
 
 NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED.

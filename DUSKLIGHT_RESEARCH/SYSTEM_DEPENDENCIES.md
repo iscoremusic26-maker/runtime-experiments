@@ -27,3 +27,5 @@ El [índice de directorios](DIRECTORY_INDEX.tsv) conserva todos los módulos del
 Los encabezados de recursos regionales localizan IDs; no son miles de implementaciones de subsistemas. Los cuatro gitlinks están fijados en [SOURCE_PIN](SOURCE_PIN.md), sin internals auditados. JSystem se sigue selectivamente en memoria/J3D/J2D/audio; bibliotecas de compatibilidad de consola, debugger stubs y dependencias transitivas no se confunden con gameplay investigado.
 
 Para ampliar una arista: abrir la evidencia citada, confirmar proveedor y consumidor en el mismo SHA, seguir estado/error/cleanup, actualizar ledger y cobertura, y publicar un checkpoint antes de ampliar el siguiente flujo.
+
+FontArchive → JUTResFont (backing prestado/tablas propias) → J2DTextBox (font prestado) → owner file-info (referencia global): PRES-036..039. Hay dos niveles de ownership; destruir un pane no equivale a liberar la referencia mDoExt ni los bytes BFN. La ruta completa seleccionada está en HUD, sin promover todas las pantallas a CROSSCHECKED.

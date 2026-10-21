@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R06",
+  "checkpoint": "CP-R07",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -18,18 +18,18 @@
   "sdk_module_candidates": 26,
   "sdk_public_function_slots_located": 209,
   "sdk_all_slots_semantically_audited": false,
-  "evidence_records": 188,
+  "evidence_records": 192,
   "evidence_levels": {
-    "STATIC_CROSSCHECKED": 127,
+    "STATIC_CROSSCHECKED": 131,
     "SOURCE_OBSERVED": 49,
     "DOC_CONTRACT": 5,
     "STATIC_INFERRED": 5,
     "CI_OBSERVED": 2
   },
-  "symbol_records": 205,
+  "symbol_records": 209,
   "symbol_integration_classification": {
     "OFFICIAL_SERVICE": 63,
-    "POTENTIAL_REQUIRES_VERIFICATION": 137,
+    "POTENTIAL_REQUIRES_VERIFICATION": 141,
     "TYPED_HOOK": 5
   },
   "classification_counts_are_not_runtime_tests": true,
@@ -51,8 +51,8 @@
     "atlas_files": 46
   },
   "net_added_this_session": {
-    "evidence": 4,
-    "symbols": 3,
+    "evidence": 8,
+    "symbols": 7,
     "new_documents": 0
   }
 }
