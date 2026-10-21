@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R18",
+  "checkpoint": "CP-R19",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -9705,6 +9705,202 @@
           "line_start": 563,
           "line_end": 584,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/natives.cpp#L563-L584"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-056",
+      "claim": "J2DScreen carga recurso desde archive prestado y despacha TBX2 a TextBoxEx solo con máscara0x1F0000. El consumidor file-info usa0x1100000; eso permite Ex pero no demuestra los tags del asset. Firma/INF1/material/hierarquía pueden fallar; caller no comprueba setPriority.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
+          "line_start": 47,
+          "line_end": 117,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DScreen.cpp#L47-L117"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
+          "line_start": 119,
+          "line_end": 171,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DScreen.cpp#L119-L171"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
+          "line_start": 173,
+          "line_end": 225,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DScreen.cpp#L173-L225"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_sel_info.cpp",
+          "line_start": 38,
+          "line_end": 80,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_sel_info.cpp#L38-L80"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-057",
+      "claim": "TextBoxEx construido desde stream presta material por índice, fuente desde TevBlock, posee copia acotada de texto y marca fuente/material no propios. drawSelf consulta material/font y exige material visible y string; no localiza por sí mismo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
+          "line_start": 12,
+          "line_end": 93,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp#L12-L93"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
+          "line_start": 95,
+          "line_end": 135,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp#L95-L135"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/J2DGraph/J2DTextBoxEx.h",
+          "line_start": 12,
+          "line_end": 60,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/J2DGraph/J2DTextBoxEx.h#L12-L60"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-058",
+      "claim": "setFont Ex escribe TevBlock y mFont. TevBlock1 ejemplifica diferencia: ResFONT crea objeto owned; JUTFont presta puntero y elimina font previo solo siowned. setString heredado reemplaza buffer, devuelve longitud de entrada aun cuando allocation falla; no ACK de render ni reserva exitosa.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
+          "line_start": 248,
+          "line_end": 261,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp#L248-L261"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DMatBlock.cpp",
+          "line_start": 290,
+          "line_end": 320,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DMatBlock.cpp#L290-L320"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DTextBox.cpp",
+          "line_start": 320,
+          "line_end": 375,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBox.cpp#L320-L375"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_sel_info.cpp",
+          "line_start": 75,
+          "line_end": 80,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_sel_info.cpp#L75-L80"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-059",
+      "claim": "Screen posee array materiales y limpia en destructor o fallo createMaterial; panes hijos se destruyen por basePane. Ex de stream no destruye material prestado y baseTextBox libera texto sin font owned. Material destruye bloques; TevBlock1 solo elimina fuente owned. No es rollback general de carga parcial ni prueba de todos los bloques.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
+          "line_start": 25,
+          "line_end": 45,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DScreen.cpp#L25-L45"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
+          "line_start": 338,
+          "line_end": 400,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DScreen.cpp#L338-L400"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DPane.cpp",
+          "line_start": 210,
+          "line_end": 215,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DPane.cpp#L210-L215"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
+          "line_start": 83,
+          "line_end": 93,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp#L83-L93"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DTextBox.cpp",
+          "line_start": 241,
+          "line_end": 247,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBox.cpp#L241-L247"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DMaterial.cpp",
+          "line_start": 20,
+          "line_end": 24,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DMaterial.cpp#L20-L24"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J2DGraph/J2DMatBlock.cpp",
+          "line_start": 104,
+          "line_end": 114,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DMatBlock.cpp#L104-L114"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_file_sel_info.cpp",
+          "line_start": 30,
+          "line_end": 36,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_sel_info.cpp#L30-L36"
         }
       ],
       "limitations": [

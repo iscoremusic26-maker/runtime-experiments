@@ -81,3 +81,7 @@ Padre remoto verificado 904e7f1d59e09752fa418e5a7b6dc79cc299a540. +4 evidencias 
 ## CP-R18 — ActorService: solicitudes, borrado forzado y teardown
 
 Padre remoto verificado 1ca9ccbd38dc6e266e4ba39d9a15680caa6f9f43. +6 evidencias (5 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 símbolos internos; 0 fichas nuevas; Q-03 parcial. PLAYER-040..045 contrastan request-only, publicación temprana del actor, forceDelete, cancelación/profile lookup y consumidor stage. No todas las creaciones pendientes escapan; no se acredita drenaje ni unload seguro. HOOK-029/PLAYER-023 ampliados, sin invalidar sus límites. Sin mod,build ni runtime; solo atlas.
+
+## CP-R19 — TextBoxEx: loader, material prestado y texto propio
+
+Padre remoto verificado 3d0de345494491cf417601bdb794f8f4cfc4618c. +4 evidencias STATIC_CROSSCHECKED,+3 símbolos;0 fichas nuevas; HUD sigue READ parcial. PRES-056..059: ruta TextBoxEx condicionada por tag/flags, copia de texto y ownership de material/TevBlock; loader falla con bool no comprobado por file-info. No se afirma que el asset concreto use TBX2 ni que setString devuelva ACK de allocation/dibujo. Sin mod,build ni runtime; solo atlas.

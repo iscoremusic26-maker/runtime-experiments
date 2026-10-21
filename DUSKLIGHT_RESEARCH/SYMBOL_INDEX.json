@@ -7284,5 +7284,86 @@
     "evidence_ids": [
       "PLAYER-043"
     ]
+  },
+  {
+    "symbol": "J2DScreen::createPane",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
+      "line_start": 173,
+      "line_end": 225,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DScreen.cpp#L173-L225"
+    },
+    "signature": "J2DPane* J2DScreen::createPane(J2DScrnBlockHeader const&, JSURandomInputStream*, J2DPane*, u32, JKRArchive*)",
+    "purpose": "Dispatcher de panes, Ex condicionado por flags",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "TBX2 y máscara0x1F0000"
+    ],
+    "risks": [
+      "Tags reales de assets sin comprobar"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-056"
+    ]
+  },
+  {
+    "symbol": "J2DTextBoxEx::setFont",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
+      "line_start": 248,
+      "line_end": 253,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp#L248-L253"
+    },
+    "signature": "void J2DTextBoxEx::setFont(JUTFont* p_font)",
+    "purpose": "Muta fuente del material prestado",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Font/material/TevBlock no nulos"
+    ],
+    "risks": [
+      "Alias de material; ownership depende de bloque"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-058"
+    ]
+  },
+  {
+    "symbol": "J2DTextBoxEx::drawSelf",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
+      "line_start": 95,
+      "line_end": 135,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp#L95-L135"
+    },
+    "signature": "void J2DTextBoxEx::drawSelf(f32, f32, Mtx*)",
+    "purpose": "Consume material y string en dibujo J2D",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Material visible y texto no nulo para printReturn"
+    ],
+    "risks": [
+      "Sin render o ABI Windows observado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-057"
+    ]
   }
 ]

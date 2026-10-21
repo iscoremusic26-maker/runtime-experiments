@@ -302,13 +302,19 @@
   {
     "system_id": "hud_ui_text",
     "coverage": "READ",
-    "scope": "READ global; cadena font BFN→JUTResFont→file-info/J2DTextBox→release CROSSCHECKED selectiva en CP-R07.",
+    "scope": "READ parcial con cadenas seleccionadas: BFN y TextBoxEx loader/material/buffer/cleanup CP-R19; assets TBX2 concretos y localización completa no verificados.",
     "reports": [
       "systems/hud_ui_text.md"
     ],
     "files_examined": [
+      "libs/JSystem/include/JSystem/J2DGraph/J2DTextBoxEx.h",
       "libs/JSystem/include/JSystem/JUtility/JUTResFont.h",
+      "libs/JSystem/src/J2DGraph/J2DMatBlock.cpp",
+      "libs/JSystem/src/J2DGraph/J2DMaterial.cpp",
+      "libs/JSystem/src/J2DGraph/J2DPane.cpp",
+      "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
       "libs/JSystem/src/J2DGraph/J2DTextBox.cpp",
+      "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
       "libs/JSystem/src/JUtility/JUTResFont.cpp",
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/ui.h",
@@ -326,8 +332,14 @@
       "Backend/errores de montaje y última liberación con asserts sin ejecución Windows."
     ],
     "paths": [
+      "libs/JSystem/include/JSystem/J2DGraph/J2DTextBoxEx.h",
       "libs/JSystem/include/JSystem/JUtility/JUTResFont.h",
+      "libs/JSystem/src/J2DGraph/J2DMatBlock.cpp",
+      "libs/JSystem/src/J2DGraph/J2DMaterial.cpp",
+      "libs/JSystem/src/J2DGraph/J2DPane.cpp",
+      "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
       "libs/JSystem/src/J2DGraph/J2DTextBox.cpp",
+      "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
       "libs/JSystem/src/JUtility/JUTResFont.cpp",
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/ui.h",
@@ -355,7 +367,11 @@
       "PRES-038",
       "PRES-039",
       "SDK-023",
-      "SDK-025"
+      "SDK-025",
+      "PRES-056",
+      "PRES-057",
+      "PRES-058",
+      "PRES-059"
     ]
   },
   {
