@@ -1632,11 +1632,16 @@
       "Contexto del propietario válido; respetar struct_size y lifetime."
     ],
     "risks": [
-      "Retirar target gráfico antes de ventana. Detach elimina ventanas del mod; no confundir WindowService nativo con ventana documental UiService."
+      "Retirar target gráfico antes de ventana. Detach elimina ventanas del mod; no confundir WindowService nativo con ventana documental UiService.",
+      "Close es petición; consume aun sin callback. WindowEvent prestado durante llamada."
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "SDK-025"
+      "SDK-025",
+      "CALLBACK-019",
+      "CALLBACK-020",
+      "CALLBACK-021",
+      "CALLBACK-022"
     ]
   },
   {
@@ -8132,6 +8137,92 @@
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
       "PRES-070"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::window_dispatch_event",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/window.cpp",
+      "line_start": 229,
+      "line_end": 303,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/window.cpp#L229-L303"
+    },
+    "signature": "bool window_dispatch_event(const SDL_Event& event)",
+    "purpose": "Dirige evento por SDL ID y consume ventanas registradas",
+    "dependencies": [
+      "SDL_GetWindowFromEvent",
+      "SlotMap",
+      "fail_mod"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Game thread; evento de Aurora SDL"
+    ],
+    "risks": [
+      "Event prestado; no barrera de callback/DLL"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-020",
+      "CALLBACK-021"
+    ]
+  },
+  {
+    "symbol": "WindowService::destroy_window",
+    "kind": "service",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/window.h",
+      "line_start": 94,
+      "line_end": 94,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/window.h#L94-L94"
+    },
+    "signature": "ModResult (*destroy_window)(ModContext*, WindowHandle)",
+    "purpose": "Retira ventana propia si no tiene claim gráfico",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Handle propio y graphicsRefs0"
+    ],
+    "risks": [
+      "CONFLICT conserva ventana; no drena callback"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-022"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::remove_mod_windows",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/window.cpp",
+      "line_start": 208,
+      "line_end": 214,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/window.cpp#L208-L214"
+    },
+    "signature": "void remove_mod_windows(LoadedMod& mod)",
+    "purpose": "Teardown de ventanas después del módulo Gfx",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Orden inverso de módulos"
+    ],
+    "risks": [
+      "No asume vida de userdata ni objetos GPU propios"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-022"
     ]
   }
 ]

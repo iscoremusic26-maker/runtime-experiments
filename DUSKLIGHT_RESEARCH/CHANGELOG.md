@@ -117,3 +117,7 @@ Padre remoto verificado 4f45eafa7c96f828ce9f71cefde42346fca07716. +4 evidencias 
 ## CP-R27 — Localización: mount BMG, grupo, consumo y cleanup
 
 Padre remoto verificado a750edfa56d6a4d6c80b0621d0180b03c2e0c08d. +6 evidencias (5 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 localizadores;0 fichas nuevas; Q-10 parcial. PRES-068..073 contrastan idioma/carpeta, archivo99→grupo9/zel_99, comandoDone distinto de mountOK, parse/bind y Explain, cleanup y reinicio requerido UI. Sin asset BMG ni refresh/Windows probado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R28 — WindowService: evento dirigido, consumo y retirada
+
+Padre remoto verificado 4fca4d1963d8808456766152787b7b92ae1eed0b. +4 evidencias CALLBACK-019..022 y +3 símbolos; ningún documento nuevo. CALLBACK-019..022 contrastan contrato,caller main/launchUI,consumo por SDL ID,event prestado,error y teardown Gfx→Window. Sin entrega Aurora ni unload Windows probados. Sin mod,build ni runtime; solo atlas.

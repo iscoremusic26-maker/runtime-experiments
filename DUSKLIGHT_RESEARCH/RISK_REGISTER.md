@@ -57,3 +57,5 @@ CP-R25 · R-31: reconsultar getObjectRes no relee overlay si dRes_info sigue car
 CP-R26 · R-32: initialized es estado del wrapper de presencia, no ACK ni conexión lista; cambio CVar sin callback UI no equivale a iniciar/cerrar backend. Shutdown no demuestra drenaje de handlers en Borealis ausente. PORT-010..013; sin conexión ni datos personales observados.
 
 CP-R27 · R-33: mount sync indica Done aun con archiveNULL; cambiar ID ignora parse/bind y no prueba backing válido. Mismo ID/idioma nuevo no recarga bytes; s_resources no posee archive. PRES-069/070/072/073; sin fallo runtime ni fallback inglés observado.
+
+CP-R28 · R-34: consumo no acredita callback; close no destruye, destroy con claim retorna CONFLICT. Copiar fn/userdata no drena llamada ni mantiene biblioteca; WindowEvent local no puede retenerse. CALLBACK-019..022; sin fallo runtime.

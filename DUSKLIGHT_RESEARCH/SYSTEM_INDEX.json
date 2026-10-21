@@ -1291,7 +1291,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva por servicio: Save/Host/Camera/Item/Message y Config CP-R20; no garantía universal de cancelación.",
+    "scope": "CROSSCHECKED selectiva: Save/Host/Camera/Item/Message/Config y Window CP-R28; no garantía universal de cancelación.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -1304,21 +1304,28 @@
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/save.h",
       "sdk/include/mods/svc/ui.h",
+      "sdk/include/mods/svc/window.h",
       "src/d/actor/d_a_tbox.cpp",
       "src/d/d_msg_object.cpp",
       "src/dusk/config.cpp",
       "src/dusk/config.hpp",
       "src/dusk/config_var.hpp",
       "src/dusk/mods/item_checks.cpp",
+      "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/svc/camera.cpp",
       "src/dusk/mods/svc/config.cpp",
       "src/dusk/mods/svc/flow.cpp",
+      "src/dusk/mods/svc/gfx.cpp",
       "src/dusk/mods/svc/host.cpp",
+      "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/item.cpp",
+      "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/save.cpp",
       "src/dusk/mods/svc/ui.cpp",
+      "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
-      "src/dusk/ui/mod_window.cpp"
+      "src/dusk/ui/mod_window.cpp",
+      "src/m_Do/m_Do_main.cpp"
     ],
     "pending": [
       "Otros dispatchers y contrato explícito de reentrancia/fin de callbacks; unloading/binario Windows no probado."
@@ -1333,22 +1340,28 @@
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/save.h",
       "sdk/include/mods/svc/ui.h",
+      "sdk/include/mods/svc/window.h",
       "src/d/actor/d_a_tbox.cpp",
       "src/d/d_msg_object.cpp",
       "src/dusk/config.cpp",
       "src/dusk/config.hpp",
       "src/dusk/config_var.hpp",
       "src/dusk/mods/item_checks.cpp",
+      "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/svc/camera.cpp",
       "src/dusk/mods/svc/config.cpp",
       "src/dusk/mods/svc/flow.cpp",
+      "src/dusk/mods/svc/gfx.cpp",
       "src/dusk/mods/svc/host.cpp",
+      "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/item.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/save.cpp",
       "src/dusk/mods/svc/ui.cpp",
+      "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
-      "src/dusk/ui/mod_window.cpp"
+      "src/dusk/ui/mod_window.cpp",
+      "src/m_Do/m_Do_main.cpp"
     ],
     "dependencies": [
       "sdk_services",
@@ -1376,7 +1389,11 @@
       "CALLBACK-015",
       "CALLBACK-016",
       "CALLBACK-017",
-      "CALLBACK-018"
+      "CALLBACK-018",
+      "CALLBACK-019",
+      "CALLBACK-020",
+      "CALLBACK-021",
+      "CALLBACK-022"
     ]
   },
   {
