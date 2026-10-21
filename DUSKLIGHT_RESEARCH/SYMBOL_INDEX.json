@@ -964,7 +964,12 @@
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "SDK-004"
+      "SDK-004",
+      "CALLBACK-014",
+      "CALLBACK-015",
+      "CALLBACK-016",
+      "CALLBACK-017",
+      "CALLBACK-018"
     ]
   },
   {
@@ -7364,6 +7369,117 @@
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
       "PRES-057"
+    ]
+  },
+  {
+    "symbol": "ConfigService::subscribe",
+    "kind": "service",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/config.h",
+      "line_start": 98,
+      "line_end": 99,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/config.h#L98-L99"
+    },
+    "signature": "ModResult (*subscribe)(ModContext*, ConfigVarHandle, ConfigChangedFn, void*, ConfigSubscriptionHandle*)",
+    "purpose": "Registro oficial de observador del dueño",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Var propia y callback válido"
+    ],
+    "risks": [
+      "Snapshot del dispatch conserva fn/userdata"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-014",
+      "CALLBACK-015"
+    ]
+  },
+  {
+    "symbol": "ConfigService::unsubscribe",
+    "kind": "service",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/config.h",
+      "line_start": 100,
+      "line_end": 100,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/config.h#L100-L100"
+    },
+    "signature": "ModResult (*unsubscribe)(ModContext*, ConfigSubscriptionHandle)",
+    "purpose": "Retira subscription propia sin barrera de snapshot",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Handle propio de subscription"
+    ],
+    "risks": [
+      "No prueba fin de callback"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-016",
+      "CALLBACK-018"
+    ]
+  },
+  {
+    "symbol": "dusk::config::ConfigVarBase::notify_changed",
+    "kind": "method",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/config.cpp",
+      "line_start": 618,
+      "line_end": 635,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/config.cpp#L618-L635"
+    },
+    "signature": "void ConfigVarBase::notify_changed(const void* previousValue)",
+    "purpose": "Recorre copia ordenada, suprime mismo nombre activo",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Hilo mutador; variable permanece válida"
+    ],
+    "risks": [
+      "Sin revalidación de token ni owner"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-015",
+      "CALLBACK-018"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::wire_config_var_binding",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/ui.cpp",
+      "line_start": 390,
+      "line_end": 423,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/ui.cpp#L390-L423"
+    },
+    "signature": "bool wire_config_var_binding(LoadedMod&, const UiControlDesc&, ui::ModControlSpec&)",
+    "purpose": "Rama toggle reconsulta variable por handle",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tipo bool para toggle"
+    ],
+    "risks": [
+      "No barrera de destrucción durante setter"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-017"
     ]
   }
 ]

@@ -53,3 +53,5 @@ CP-R17: registro BST→(sync lifecycle,NO sync BST en frameEnd observado)→mapa
 CP-R18: stage record → lookup profile → create request por nombre → actor queue → delete queue → slot/profile. ActorHandle generacional no viaja en la petición; unregister barre las dos últimas colas de instancia, no toda petición pendiente (PLAYER-040..045). Loader deactivation no aporta veto al resultado.
 
 CP-R19: screen/archivo prestado → MAT1 material propio → TBX2 Ex condicionado → texto propio y font prestado → dibujo → clean y pane destructor. Flags del consumidor no prueban contenido del asset (PRES-056..059).
+
+CP-R20: UiService binding toggle → ConfigVar::setValue → copia core subscriptions → bridge snapshots SDK; unsubscribe/unregister retiran registro vivo, no la copia en curso. Valor efectivo → dirty → save es una ruta distinta (CALLBACK-014..018).

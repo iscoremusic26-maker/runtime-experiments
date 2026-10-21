@@ -4,8 +4,8 @@ Todas se refieren al SHA fijado. Se evita repetir lo ya respondido; cada pregunt
 
 | ID / estado | Qué falta y por qué importa | Próximo paso mínimo |
 | --- | --- | --- |
-| Q-01 · PARCIAL | Item y Message contrastados en CALLBACK-005..013; otros dispatchers pendientes | Elegir otro dispatcher con hueco concreto; no repetir Save/Host/Camera/Item/Message ni inferir barrera universal. |
-| Q-02 · PARCIAL | Item exige side-effect-free; Message copia sin revalidar handle/active y conserva texto separado de callback; sin garantía general de reentrancia | Contrastar encabezado y bucle concreto de un servicio; documentar límites de colección y vigencia. |
+| Q-01 · PARCIAL | Item,Message y Config contrastados en CALLBACK-005..018; otros dispatchers pendientes | Elegir otro dispatcher con hueco concreto; no repetir Save/Host/Camera/Item/Message ni inferir barrera universal. |
+| Q-02 · PARCIAL | Item exige side-effect-free; Message copia sin revalidar handle/active y conserva texto separado de callback; Config copia callbacks sin revalidar token, suprime notify del mismo nombre pero aplica escritura (CALLBACK-014..018); sin garantía general de reentrancia | Contrastar encabezado y bucle concreto de un servicio; documentar límites de colección y vigencia. |
 | Q-03 · PARCIAL | CP-R18 PLAYER-040..045 distingue request-only, actor publicado, forceDelete y fallo reentrante; unregister no drena create queue | Falta probar reutilización de nombre, reentrada y vida de callbacks/biblioteca Windows; revisar ownership de append en fallo temprano solo si otra cadena lo exige. No repetir barrido básico. |
 | Q-04 · NOT_VERIFIED | Símbolos exportados/resolubles y layouts en imagen Windows x64 concreta | Consultar evidencia histórica exacta o manifest/import library ya disponible sin recompilar; si no existe, mantener límite binario. |
 | Q-05 · BLOCKED local | Aurora/Borealis internos, incluidos DX12, DVD/CARD y garantías externas de unregister | Consultar solo archivo necesario al SHA del gitlink si hay acceso; no instalar ni auditar todo el tercero antes de avanzar en fuente principal. |

@@ -1,12 +1,12 @@
-# Cobertura real — CP-R19
+# Cobertura real — CP-R20
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **21 fichas de sistemas, 247 evidencias y 253 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **21 fichas de sistemas, 252 evidencias y 257 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 253 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 257 registros.
 
 ## Estado por área
 
@@ -84,3 +84,5 @@ CP-R17: +4 evidencias (3 contrastadas,1 inferencia condicionada),+3 símbolos,+0
 CP-R18: +6 evidencias (5 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 símbolos internos; 0 fichas nuevas; Q-03 parcial. Los niveles canónicos permanecen18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED; no acreditan cobertura integral.
 
 CP-R19: +4 evidencias STATIC_CROSSCHECKED,+3 símbolos;0 fichas nuevas; HUD sigue READ parcial. Los niveles canónicos permanecen18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED; no acreditan cobertura integral.
+
+CP-R20: +5 evidencias (4 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 símbolos (2 slots oficiales,2 localizadores);0 fichas nuevas. Los niveles canónicos permanecen18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED; no acreditan cobertura integral.

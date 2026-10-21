@@ -85,3 +85,7 @@ Padre remoto verificado 1ca9ccbd38dc6e266e4ba39d9a15680caa6f9f43. +6 evidencias 
 ## CP-R19 — TextBoxEx: loader, material prestado y texto propio
 
 Padre remoto verificado 3d0de345494491cf417601bdb794f8f4cfc4618c. +4 evidencias STATIC_CROSSCHECKED,+3 símbolos;0 fichas nuevas; HUD sigue READ parcial. PRES-056..059: ruta TextBoxEx condicionada por tag/flags, copia de texto y ownership de material/TevBlock; loader falla con bool no comprobado por file-info. No se afirma que el asset concreto use TBX2 ni que setString devuelva ACK de allocation/dibujo. Sin mod,build ni runtime; solo atlas.
+
+## CP-R20 — ConfigService: notificación, snapshots y consumidor UI
+
+Padre remoto verificado d565c3ad7b93badeaa116702c994d479be99656a. +5 evidencias (4 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 símbolos (2 slots oficiales,2 localizadores);0 fichas nuevas. CALLBACK-014..018 contrastan notificación Config síncrona, orden de snapshot, retiro sin revalidación, mutación recursiva y toggle UI con relookup. SDK-004 ampliado; MOD_OK no certifica flush ni snapshot agotado. Sin configuración personal consultada. Sin mod,build ni runtime; solo atlas.
