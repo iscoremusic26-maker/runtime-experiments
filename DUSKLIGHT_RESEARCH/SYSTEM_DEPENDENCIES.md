@@ -57,3 +57,5 @@ CP-R19: screen/archivo prestado → MAT1 material propio → TBX2 Ex condicionad
 CP-R20: UiService binding toggle → ConfigVar::setValue → copia core subscriptions → bridge snapshots SDK; unsubscribe/unregister retiran registro vivo, no la copia en curso. Valor efectivo → dirty → save es una ruta distinta (CALLBACK-014..018).
 
 CP-R21: escritor de estado B_OB → actor de agua → matriz prestada de modelo/fondo → Move → consulta registrada SplGrpChk → Acch → Link.mWaterY; colisión y visibilidad se retiran por rutas diferentes. Recarga consulta flag stage, no altura persistida (PRES-060..064).
+
+CP-R22: TGSC puntero tipado/stride → tramo base+escala → CRC de bytes → patch/append; adición SDK vector owned → temporal → append → request. Registro binario endian, stride y longitud pública son magnitudes distintas (WORLD-038..040).

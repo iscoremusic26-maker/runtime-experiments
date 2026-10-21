@@ -93,3 +93,7 @@ Padre remoto verificado d565c3ad7b93badeaa116702c994d479be99656a. +5 evidencias 
 ## CP-R21 — Agua: fondo móvil, consulta y recarga
 
 Padre remoto verificado 1e50777525d111ec86f650f427ba961efcbdf983. +5 evidencias STATIC_CROSSCHECKED,+4 símbolos;0 fichas nuevas; ambiente sigue READ parcial. PRES-060..064 contrastan Obj_Lv3WaterB, escritor externo, transformación de fondo, consulta Acch/Link y cleanup/reload. Malla concreta/orden entre perfiles condicionan resultado; modelo oculto no prueba registro retirado. Sin agua/clima universal ni efecto runtime demostrado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R22 — TGSC: stride, CRC, endian y adiciones
+
+Padre remoto verificado d5545fee53df860ac9ed2dc07890648bb2ec5f35. +3 evidencias STATIC_CROSSCHECKED,+2 localizadores;0 fichas nuevas; Q-07 parcial y redacción histórica de símbolo rectificada. WORLD-038..040 contrastan TGSC stride frente a tramo CRC/edición, BE y transporte de adición a append. Entrada stage_tgsc_data_class rectificada para no afirmar sizeof Windows0x24; WORLD-033 conserva validez. Sin nuevo layout medido ni serializer/mod generado. Sin mod,build ni runtime; solo atlas.

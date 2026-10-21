@@ -3206,15 +3206,15 @@
       "line_end": 228
     },
     "signature": "struct stage_tgsc_data_class { char name[8]; fopAcM_prmBase_class base; fopAcM_prmScale_class scale; };",
-    "purpose": "Registro TGSC/SCOB/TGDR/Door con sizeof declarado y afirmado 0x24; no confundir con tamaño aceptado 0x23 de StageService.",
+    "purpose": "Registro TGSC/SCOB/TGDR/Door anotado0x24 con assert histórico no activo en PC; sizeof Windows no medido. Distinguir stride, tramo CRC y0x23 público.",
     "dependencies": [
       "fopAcM_prmBase_class",
       "fopAcM_prmScale_class"
     ],
     "integration": "OFFICIAL_SERVICE",
     "conditions": [
-      "StageService acepta 0x23 bytes, no sizeof de estructura 0x24; verificar serialización.",
-      "No probado en Windows."
+      "StageService acepta0x23 bytes; no asumir sizeof(stage_tgsc_data_class) aceptado ni0x24 Windows medido.",
+      "CP-R22 rectifica redacción de tamaño, sin modificar WORLD-033."
     ],
     "risks": [
       "Desajuste de tamaño/API y padding.",
@@ -3222,7 +3222,10 @@
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "WORLD-033"
+      "WORLD-033",
+      "WORLD-038",
+      "WORLD-039",
+      "WORLD-040"
     ]
   },
   {
@@ -7588,6 +7591,61 @@
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
       "PRES-062"
+    ]
+  },
+  {
+    "symbol": "dStage_tgscInfoInit",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2141,
+      "line_end": 2167,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L2141-L2167"
+    },
+    "signature": "static int dStage_tgscInfoInit(dStage_dt_c*, void*, int, void*)",
+    "purpose": "Consumidor TGSC con stride y tramo de edición diferentes",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "TARGET_PC usa suma base+escala; suspensión y append válidos"
+    ],
+    "risks": [
+      "Sin sizeof Windows medido"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-038",
+      "WORLD-039"
+    ]
+  },
+  {
+    "symbol": "dusk_stage_svc_new_actor_create",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_stage.cpp",
+      "line_start": 2611,
+      "line_end": 2635,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L2611-L2635"
+    },
+    "signature": "static void dusk_stage_svc_new_actor_create(dStage_dt_c*)",
+    "purpose": "Transfiere registro SDK a temporal y append de creación",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Room reload y filtros SDK"
+    ],
+    "risks": [
+      "No extiende vida del record temporal ni prueba ejecución"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-040"
     ]
   }
 ]
