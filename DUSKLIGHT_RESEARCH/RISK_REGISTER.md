@@ -61,3 +61,5 @@ CP-R27 · R-33: mount sync indica Done aun con archiveNULL; cambiar ID ignora pa
 CP-R28 · R-34: consumo no acredita callback; close no destruye, destroy con claim retorna CONFLICT. Copiar fn/userdata no drena llamada ni mantiene biblioteca; WindowEvent local no puede retenerse. CALLBACK-019..022; sin fallo runtime.
 
 CP-R29 · R-35: registro prioritario void puede saturarse aun con Create COMPLEATE; cut depende de índice y no comprueba identidad. IsDelete rechazado ya marca99 y solo desvanece fuera de home room; overlap permite retirar con potencia alta. PRES-074..077; riesgos condicionados,sin fallo visual/runtime observado.
+
+CP-R30 · R-36: HP letal,ACT_B2_DEAD,mDead,flags,reward encolado y destructor son hitos distintos. Borrado anticipado no ejecuta restauración de cámara/progreso del modo28; callback de joint presta this y cleanup total de externos no certificado. PLAYER-052..056; inferencia condicionada,sin fallo runtime.

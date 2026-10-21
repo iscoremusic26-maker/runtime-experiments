@@ -8339,5 +8339,98 @@
     "evidence_ids": [
       "PRES-077"
     ]
+  },
+  {
+    "symbol": "daB_DS_c::mBattle2_damage_check",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_b_ds.cpp",
+      "line_start": 4880,
+      "line_end": 4979,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_b_ds.cpp#L4880-L4979"
+    },
+    "signature": "bool daB_DS_c::mBattle2_damage_check()",
+    "purpose": "Daño vulnerable y transición DEAD separada de spinner knockdown",
+    "dependencies": [
+      "cc_at_check",
+      "daB_DS_c::setActionMode"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "DAMAGE modo4; weak hit/HP/cooldown"
+    ],
+    "risks": [
+      "Health0 externo no sintetiza demo; collider prestado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-053"
+    ]
+  },
+  {
+    "symbol": "daB_DS_c::startDemoCheck",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_b_ds.cpp",
+      "line_start": 1122,
+      "line_end": 1141,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_b_ds.cpp#L1122-L1141"
+    },
+    "signature": "bool daB_DS_c::startDemoCheck()",
+    "purpose": "Solicita potential o acepta comando y toma cámara",
+    "dependencies": [
+      "fopAcM_orderPotentialEvent",
+      "dEvt_info_c::checkCommandDemoAccrpt"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor/player/cámara vivos; no wolf"
+    ],
+    "risks": [
+      "Solicitud sin ACK; sin timeout local"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-054"
+    ]
+  },
+  {
+    "symbol": "daB_DS_c::executeBattle2Dead",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_b_ds.cpp",
+      "line_start": 3629,
+      "line_end": 3657,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_b_ds.cpp#L3629-L3657"
+    },
+    "signature": "void daB_DS_c::executeBattle2Dead()",
+    "purpose": "Máquina de derrota con gates y efectos separados",
+    "dependencies": [
+      "daB_DS_c::startDemoCheck",
+      "dComIfGs_onStageBossEnemy",
+      "dusk::mods::item_check_enqueue_deferred",
+      "fopAcM_delete"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "TYPE_BATTLE_2 y ACT_B2_DEAD"
+    ],
+    "risks": [
+      "Progreso/reward/delete no transaccionales; método completo hasta4129"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-055",
+      "PLAYER-056"
+    ]
   }
 ]

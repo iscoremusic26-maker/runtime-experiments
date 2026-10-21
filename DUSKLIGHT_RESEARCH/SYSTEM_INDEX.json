@@ -951,15 +951,23 @@
   {
     "system_id": "combat_damage",
     "coverage": "CROSSCHECKED",
-    "scope": "Rutas seleccionadas; profundidad original STATIC_CROSSCHECKED_SELECTIVE; no auditoría integral del sistema.",
+    "scope": "CROSSCHECKED selectiva: colisión/helpers,jugador,Tektite y B_DS fase2 daño→demo→progreso/cleanup CP-R30; otras políticas pendientes.",
     "reports": [
       "systems/combat_damage.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_b_ds.h",
+      "include/f_op/f_op_actor.h",
+      "include/f_op/f_op_actor_mng.h",
       "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_b_ds.cpp",
       "src/d/actor/d_a_e_tt.cpp",
       "src/d/d_cc_s.cpp",
-      "src/d/d_cc_uty.cpp"
+      "src/d/d_cc_uty.cpp",
+      "src/d/d_com_inf_game.cpp",
+      "src/d/d_event.cpp",
+      "src/dusk/mods/item_gives.cpp",
+      "src/f_op/f_op_actor_mng.cpp"
     ],
     "pending": [
       "Todos los consumidores y excepciones de daño",
@@ -967,22 +975,39 @@
       "Coexistencia runtime"
     ],
     "paths": [
+      "include/d/actor/d_a_b_ds.h",
+      "include/f_op/f_op_actor.h",
+      "include/f_op/f_op_actor_mng.h",
       "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_b_ds.cpp",
       "src/d/actor/d_a_e_tt.cpp",
       "src/d/d_cc_s.cpp",
-      "src/d/d_cc_uty.cpp"
+      "src/d/d_cc_uty.cpp",
+      "src/d/d_com_inf_game.cpp",
+      "src/d/d_event.cpp",
+      "src/dusk/mods/item_gives.cpp",
+      "src/f_op/f_op_actor_mng.cpp"
     ],
     "dependencies": [
       "movement_physics_collision",
       "actors_ai_npcs",
-      "audio_particles_effects"
+      "audio_particles_effects",
+      "cutscenes_dialogue",
+      "flags_events_progression",
+      "inventory_equipment",
+      "environment_weather_time"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
       "PLAYER-014",
       "PLAYER-015",
       "PLAYER-016",
-      "PLAYER-017"
+      "PLAYER-017",
+      "PLAYER-052",
+      "PLAYER-053",
+      "PLAYER-054",
+      "PLAYER-055",
+      "PLAYER-056"
     ]
   },
   {

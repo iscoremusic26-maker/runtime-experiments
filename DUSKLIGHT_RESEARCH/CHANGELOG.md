@@ -125,3 +125,7 @@ Padre remoto verificado 4fca4d1963d8808456766152787b7b92ae1eed0b. +4 evidencias 
 ## CP-R29 — KYTAG07: influencia prestada, selección y retirada diferida
 
 Padre remoto verificado 75606d6e033d0d498320003fb47dd370189a4442. +4 evidencias PRES-074..077 y +4 símbolos; ningún documento nuevo. PRES-074..077 contrastan KYTAG07→puntero pointlight→selección/settingTevStruct y retirada99/room/overlap→cut. La pista dungeonlight se descarta; fallo de capacidad/índice,orden/visibilidad Windows pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R30 — B_DS fase2: daño, permiso de demo, progreso y cleanup
+
+Padre remoto verificado b54c598a2ec269ceacf15c390e4d075cb400fad6. +5 evidencias PLAYER-052..056 y +3 símbolos; ningún documento nuevo. PLAYER-052..056 contrastan B_DS fase2: SPINNER knockdown≠HP,weak hit→DEAD,potential request≠INDEMO,máquina de salida→flags/cola PC→delete. Geometría,concesión posterior,cleanup externo completo y Windows no probados. Sin mod,build ni runtime; solo atlas.
