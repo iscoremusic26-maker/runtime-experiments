@@ -67,3 +67,5 @@ CP-R24: logo stage-request→scene waits→overlap task; error task→managerNUL
 CP-R25: tabla overlay/generación→JKRMemArchive fetch→decodificación→mRes→getObjectRes; cambiar tabla no hace el recorrido inverso ni redecodifica cache. Prioridad de fuentes y actualización del consumidor son fronteras separadas (PRES-065..067).
 
 CP-R26: CVar/callback UI explícito→discord.initialize→initialized→main01 callbacks/update gate15s→payload de último stage/estado→clear/shutdown. CVar registrada sin handler automático no activa backend por toda escritura; backend Borealis/ACK externo pendientes (PORT-010..013).
+
+CP-R27: idioma→msg_folder→PLAY mount archive1→HUD zel_XX.bmg→stage pointer→changeGroup parse/bind→getString/Explain. Archivo99→índice lógico9; commandDone,parseOK y texto listo son fases distintas (PRES-068..073).

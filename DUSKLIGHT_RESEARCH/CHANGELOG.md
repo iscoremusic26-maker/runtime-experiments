@@ -113,3 +113,7 @@ Padre remoto verificado b568395f73122d467fae22d6b3b923713174c428. +3 evidencias 
 ## CP-R26 — Presencia del port: gates, payload y shutdown
 
 Padre remoto verificado 4f45eafa7c96f828ce9f71cefde42346fca07716. +4 evidencias (3 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+3 localizadores,+1 ficha nueva; soporte sigue READ. PORT-010..013 y nueva ficha port_presence: configuración/UI, init, mainloop/15s, payload y shutdown. bool/local log no es ACK; Borealis faltante impide certificar ownership/reconexión. Sin cuenta/red/configuración personal consultada. Sin mod,build ni runtime; solo atlas.
+
+## CP-R27 — Localización: mount BMG, grupo, consumo y cleanup
+
+Padre remoto verificado a750edfa56d6a4d6c80b0621d0180b03c2e0c08d. +6 evidencias (5 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 localizadores;0 fichas nuevas; Q-10 parcial. PRES-068..073 contrastan idioma/carpeta, archivo99→grupo9/zel_99, comandoDone distinto de mountOK, parse/bind y Explain, cleanup y reinicio requerido UI. Sin asset BMG ni refresh/Windows probado. Sin mod,build ni runtime; solo atlas.

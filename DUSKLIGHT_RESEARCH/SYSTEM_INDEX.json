@@ -302,12 +302,15 @@
   {
     "system_id": "hud_ui_text",
     "coverage": "READ",
-    "scope": "READ parcial con cadenas seleccionadas: BFN y TextBoxEx loader/material/buffer/cleanup CP-R19; assets TBX2 concretos y localización completa no verificados.",
+    "scope": "READ global: BFN/TextBoxEx previos; CP-R27 idioma→mount BMG/grupo→Explain→cleanup selectivo; assets/refresh global pendientes.",
     "reports": [
       "systems/hud_ui_text.md"
     ],
     "files_examined": [
+      "include/d/d_stage.h",
+      "include/m_Do/m_Do_dvd_thread.h",
       "libs/JSystem/include/JSystem/J2DGraph/J2DTextBoxEx.h",
+      "libs/JSystem/include/JSystem/JMessage/resource.h",
       "libs/JSystem/include/JSystem/JUtility/JUTResFont.h",
       "libs/JSystem/src/J2DGraph/J2DMatBlock.cpp",
       "libs/JSystem/src/J2DGraph/J2DMaterial.cpp",
@@ -315,6 +318,7 @@
       "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
       "libs/JSystem/src/J2DGraph/J2DTextBox.cpp",
       "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
+      "libs/JSystem/src/JMessage/resource.cpp",
       "libs/JSystem/src/JUtility/JUTResFont.cpp",
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/ui.h",
@@ -322,9 +326,15 @@
       "src/d/d_file_sel_info.cpp",
       "src/d/d_file_select.cpp",
       "src/d/d_meter2.cpp",
+      "src/d/d_meter2_draw.cpp",
+      "src/d/d_msg_object.cpp",
+      "src/d/d_msg_scrn_explain.cpp",
       "src/d/d_s_logo.cpp",
+      "src/d/d_s_play.cpp",
       "src/dusk/language.cpp",
       "src/dusk/mods/svc/flow.cpp",
+      "src/dusk/ui/settings.cpp",
+      "src/m_Do/m_Do_dvd_thread.cpp",
       "src/m_Do/m_Do_ext.cpp"
     ],
     "pending": [
@@ -332,7 +342,10 @@
       "Backend/errores de montaje y última liberación con asserts sin ejecución Windows."
     ],
     "paths": [
+      "include/d/d_stage.h",
+      "include/m_Do/m_Do_dvd_thread.h",
       "libs/JSystem/include/JSystem/J2DGraph/J2DTextBoxEx.h",
+      "libs/JSystem/include/JSystem/JMessage/resource.h",
       "libs/JSystem/include/JSystem/JUtility/JUTResFont.h",
       "libs/JSystem/src/J2DGraph/J2DMatBlock.cpp",
       "libs/JSystem/src/J2DGraph/J2DMaterial.cpp",
@@ -340,6 +353,7 @@
       "libs/JSystem/src/J2DGraph/J2DScreen.cpp",
       "libs/JSystem/src/J2DGraph/J2DTextBox.cpp",
       "libs/JSystem/src/J2DGraph/J2DTextBoxEx.cpp",
+      "libs/JSystem/src/JMessage/resource.cpp",
       "libs/JSystem/src/JUtility/JUTResFont.cpp",
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/ui.h",
@@ -347,15 +361,23 @@
       "src/d/d_file_sel_info.cpp",
       "src/d/d_file_select.cpp",
       "src/d/d_meter2.cpp",
+      "src/d/d_meter2_draw.cpp",
+      "src/d/d_msg_object.cpp",
+      "src/d/d_msg_scrn_explain.cpp",
       "src/d/d_s_logo.cpp",
+      "src/d/d_s_play.cpp",
       "src/dusk/language.cpp",
       "src/dusk/mods/svc/flow.cpp",
+      "src/dusk/ui/settings.cpp",
+      "src/m_Do/m_Do_dvd_thread.cpp",
       "src/m_Do/m_Do_ext.cpp"
     ],
     "dependencies": [
       "resources_archives_overlays",
       "sdk_services",
-      "inventory_equipment"
+      "inventory_equipment",
+      "cutscenes_dialogue",
+      "stages_rooms_layers"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -371,7 +393,13 @@
       "PRES-056",
       "PRES-057",
       "PRES-058",
-      "PRES-059"
+      "PRES-059",
+      "PRES-068",
+      "PRES-069",
+      "PRES-070",
+      "PRES-071",
+      "PRES-072",
+      "PRES-073"
     ]
   },
   {

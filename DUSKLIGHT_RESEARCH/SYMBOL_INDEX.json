@@ -8017,5 +8017,121 @@
     "evidence_ids": [
       "PORT-012"
     ]
+  },
+  {
+    "symbol": "dMsgObject_c::readMessageGroupLocal",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_msg_object.cpp",
+      "line_start": 1958,
+      "line_end": 2003,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_msg_object.cpp#L1958-L2003"
+    },
+    "signature": "void dMsgObject_c::readMessageGroupLocal(mDoDvdThd_mountXArchive_c**)",
+    "purpose": "Selecciona ruta de stage y grupo lógico posterior",
+    "dependencies": [
+      "dusk::language::msg_folder",
+      "mDoDvdThd_mountXArchive_c::create"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "STAG/contexto válidos; TARGET_PC carpeta dinámica"
+    ],
+    "risks": [
+      "Comando no garantiza mount;99→9 posterior"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-068",
+      "PRES-069"
+    ]
+  },
+  {
+    "symbol": "dMsgObject_c::changeGroupLocal",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_msg_object.cpp",
+      "line_start": 2023,
+      "line_end": 2049,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_msg_object.cpp#L2023-L2049"
+    },
+    "signature": "void dMsgObject_c::changeGroupLocal(s16)",
+    "purpose": "Selecciona backing y parse/bind al cambiar ID",
+    "dependencies": [
+      "dusk::flow::bind_resource",
+      "JMessage::TParse"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Heap/contexto de mensaje válidos"
+    ],
+    "risks": [
+      "Ignora retornos; mismo ID no relee"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-070",
+      "PRES-073"
+    ]
+  },
+  {
+    "symbol": "dMsgObject_c::getStringLocal",
+    "kind": "method",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_msg_object.cpp",
+      "line_start": 2051,
+      "line_end": 2117,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_msg_object.cpp#L2051-L2117"
+    },
+    "signature": "bool dMsgObject_c::getStringLocal(u32, J2DTextBox*, J2DTextBox*, JUTFont*, COutFont_c*, TEXT_SPAN, TEXT_SPAN, TEXT_SPAN, s16*)",
+    "purpose": "Ciclo de texto consumido por Explain",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Status/stop flags condicionan salida"
+    ],
+    "risks": [
+      "true no certifica visualización"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-071"
+    ]
+  },
+  {
+    "symbol": "dusk::flow::bind_resource",
+    "kind": "function",
+    "system_id": "hud_ui_text",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/flow.cpp",
+      "line_start": 706,
+      "line_end": 739,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L706-L739"
+    },
+    "signature": "bool dusk::flow::bind_resource(const void*, uint16_t)",
+    "purpose": "Registra metadata prestada validando BMG",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Bytes vivos; grupo válido"
+    ],
+    "risks": [
+      "Sin ownership de archive; inválido no aceptado por find"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-070"
+    ]
   }
 ]

@@ -55,3 +55,5 @@ CP-R24 · R-30: dos estados overlap (puntero manager y exclusión scene) no se l
 CP-R25 · R-31: reconsultar getObjectRes no relee overlay si dRes_info sigue cargado; retirar ganador no restaura objeto decodificado. Fetch JKR puede caer a backingARC al fallar lectura, sin demostrar fallback al mod anterior. PRES-065..067; sin coexistencia runtime certificada.
 
 CP-R26 · R-32: initialized es estado del wrapper de presencia, no ACK ni conexión lista; cambio CVar sin callback UI no equivale a iniciar/cerrar backend. Shutdown no demuestra drenaje de handlers en Borealis ausente. PORT-010..013; sin conexión ni datos personales observados.
+
+CP-R27 · R-33: mount sync indica Done aun con archiveNULL; cambiar ID ignora parse/bind y no prueba backing válido. Mismo ID/idioma nuevo no recarga bytes; s_resources no posee archive. PRES-069/070/072/073; sin fallo runtime ni fallback inglés observado.

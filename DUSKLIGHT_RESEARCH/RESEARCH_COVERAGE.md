@@ -1,12 +1,12 @@
-# Cobertura real — CP-R26
+# Cobertura real — CP-R27
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **22 fichas de sistemas, 277 evidencias y 276 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **22 fichas de sistemas, 283 evidencias y 280 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 276 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 280 registros.
 
 ## Estado por área
 
@@ -98,3 +98,5 @@ CP-R24: +4 evidencias (3 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+3 localizadores
 CP-R25: +3 evidencias (2 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+3 localizadores;0 fichas nuevas; Q-14 parcial. Los niveles canónicos permanecen18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED; no acreditan cobertura integral.
 
 CP-R26: +4 evidencias (3 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+3 localizadores,+1 ficha nueva; soporte sigue READ. Los niveles canónicos permanecen18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED; no acreditan cobertura integral.
+
+CP-R27: +6 evidencias (5 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+4 localizadores;0 fichas nuevas; Q-10 parcial. Niveles canónicos18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED sin promoción global.
