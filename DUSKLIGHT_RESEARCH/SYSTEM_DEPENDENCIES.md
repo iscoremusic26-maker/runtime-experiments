@@ -75,3 +75,5 @@ CP-R28: m_Do_main/Aurora SDL→Window lookup→callback game-thread; teardown in
 CP-R29: KYTAG07 posee LIGHT_INFLUENCE→kankyo presta puntero→selector por posición→settingTevStruct tipo0/J3D; IsDelete/room/overlap→cola framework→Delete/cut antes de liberar actor. PRES-074..077; no registro owned ni servicio de luz dedicado.
 
 CP-R30: B_DS2/colliders→daño/cc_at_check→DEAD→potential event/INDEMO→cámara/timers→switches/progreso/reward PC→delete/resource/audio. PLAYER-052..056; IO save y concesión diferida fuera de esa llamada. Véase combat_damage.
+
+CP-R31: PLAY Draw/Execute→resetToOpening→card command/SaveSync→nextStage/audio/restart→ChangeReq/ReRequest→perfil OPENING compartido→resource/audio gates→startStage/TITLE/reset cleanup. ARCH-012..016; sidecar/IO no confirmados por esta cadena.

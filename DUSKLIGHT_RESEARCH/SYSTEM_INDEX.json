@@ -555,7 +555,7 @@
   {
     "system_id": "runtime_and_lifecycle",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: scheduler/callbacks previos, escena nominal y error task overlap/destino CP-R24; rollback global/reset/captura pendientes.",
+    "scope": "CROSSCHECKED selectiva: escena nominal,fallos overlap/destino y reset PLAY→OPENING CP-R31; recovery global/captura pendientes.",
     "reports": [
       "systems/runtime_and_lifecycle.md"
     ],
@@ -564,14 +564,20 @@
       "Recuperación tras fallo de creación/overlap; otras rutas logo/direct-load y todos los gates pendientes."
     ],
     "paths": [
+      "include/d/d_com_inf_game.h",
       "include/f_op/f_op_scene_mng.h",
+      "include/m_Do/m_Do_MemCard.h",
+      "include/m_Do/m_Do_Reset.h",
+      "include/m_Do/m_Do_audio.h",
       "sdk/include/mods/runtime.h",
       "sdk/include/mods/svc/game.h",
       "sdk/include/mods/svc/game_mode.h",
       "sdk/include/mods/svc/host.h",
+      "src/d/d_com_inf_game.cpp",
       "src/d/d_s_logo.cpp",
       "src/d/d_s_name.cpp",
       "src/d/d_s_play.cpp",
+      "src/d/d_stage.cpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/depgraph.cpp",
       "src/dusk/mods/loader/loader.cpp",
@@ -592,7 +598,10 @@
       "src/f_pc/f_pc_manager.cpp",
       "src/f_pc/f_pc_node.cpp",
       "src/f_pc/f_pc_node_req.cpp",
-      "src/f_pc/f_pc_stdcreate_req.cpp"
+      "src/f_pc/f_pc_stdcreate_req.cpp",
+      "src/m_Do/m_Do_MemCard.cpp",
+      "src/m_Do/m_Do_Reset.cpp",
+      "src/m_Do/m_Do_audio.cpp"
     ],
     "dependencies": [
       "sdk_services",
@@ -601,7 +610,9 @@
       "hud_ui_text",
       "memory_ownership",
       "stages_rooms_layers",
-      "port_support"
+      "port_support",
+      "save_load",
+      "audio_particles_effects"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -631,10 +642,22 @@
       "ARCH-008",
       "ARCH-009",
       "ARCH-010",
-      "ARCH-011"
+      "ARCH-011",
+      "ARCH-012",
+      "ARCH-013",
+      "ARCH-014",
+      "ARCH-015",
+      "ARCH-016"
     ],
     "files_examined": [
+      "include/d/d_com_inf_game.h",
+      "include/m_Do/m_Do_MemCard.h",
+      "include/m_Do/m_Do_Reset.h",
+      "include/m_Do/m_Do_audio.h",
+      "src/d/d_com_inf_game.cpp",
       "src/d/d_s_logo.cpp",
+      "src/d/d_s_play.cpp",
+      "src/d/d_stage.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/f_op/f_op_overlap_mng.cpp",
       "src/f_op/f_op_overlap_req.cpp",
@@ -642,7 +665,10 @@
       "src/f_op/f_op_scene_req.cpp",
       "src/f_pc/f_pc_deletor.cpp",
       "src/f_pc/f_pc_manager.cpp",
-      "src/f_pc/f_pc_node_req.cpp"
+      "src/f_pc/f_pc_node_req.cpp",
+      "src/m_Do/m_Do_MemCard.cpp",
+      "src/m_Do/m_Do_Reset.cpp",
+      "src/m_Do/m_Do_audio.cpp"
     ]
   },
   {

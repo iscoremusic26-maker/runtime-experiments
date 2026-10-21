@@ -63,3 +63,5 @@ CP-R28 · R-34: consumo no acredita callback; close no destruye, destroy con cla
 CP-R29 · R-35: registro prioritario void puede saturarse aun con Create COMPLEATE; cut depende de índice y no comprueba identidad. IsDelete rechazado ya marca99 y solo desvanece fuera de home room; overlap permite retirar con potencia alta. PRES-074..077; riesgos condicionados,sin fallo visual/runtime observado.
 
 CP-R30 · R-36: HP letal,ACT_B2_DEAD,mDead,flags,reward encolado y destructor son hitos distintos. Borrado anticipado no ejecuta restauración de cámara/progreso del modo28; callback de joint presta this y cleanup total de externos no certificado. PLAYER-052..056; inferencia condicionada,sin fallo runtime.
+
+CP-R31 · R-37: reset helper1 no confirma cola; next-stage se reactiva antes de request y audio/restart no se revierten. ReRequest puede redirigir request previo SOLO si sigue vivo,tipo2,mismo ID y creating_id−2; no revive objeto liberado. SaveSync0 no es ACK. ARCH-012..016; inferencias condicionadas,sin fallo runtime.

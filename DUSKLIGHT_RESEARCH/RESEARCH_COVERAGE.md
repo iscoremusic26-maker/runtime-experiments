@@ -1,12 +1,12 @@
-# Cobertura real — CP-R30
+# Cobertura real — CP-R31
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **22 fichas de sistemas, 296 evidencias y 290 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **22 fichas de sistemas, 301 evidencias y 294 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 290 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 294 registros.
 
 ## Estado por área
 
@@ -106,3 +106,5 @@ CP-R28: +4 evidencias CALLBACK-019..022 y +3 símbolos; ningún documento nuevo.
 CP-R29: +4 evidencias PRES-074..077 y +4 símbolos; ningún documento nuevo. Niveles canónicos18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED sin promoción global.
 
 CP-R30: +5 evidencias PLAYER-052..056 y +3 símbolos; ningún documento nuevo. Niveles canónicos18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED sin promoción global.
+
+CP-R31: +5 evidencias ARCH-012..016 (4 contrastadas,1 inferencia condicionada),+4 localizadores,+0 documentos. Los niveles18 CROSSCHECKED selectivos,6 READ,4 INVENTARIED no cambian; no cobertura global.

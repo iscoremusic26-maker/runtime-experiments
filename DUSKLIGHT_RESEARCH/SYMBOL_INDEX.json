@@ -6223,7 +6223,8 @@
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "ARCH-003"
+      "ARCH-003",
+      "ARCH-015"
     ]
   },
   {
@@ -8431,6 +8432,125 @@
     "evidence_ids": [
       "PLAYER-055",
       "PLAYER-056"
+    ]
+  },
+  {
+    "symbol": "dComIfG_resetToOpening",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_com_inf_game.cpp",
+      "line_start": 1238,
+      "line_end": 1263,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L1238-L1263"
+    },
+    "signature": "BOOL dComIfG_resetToOpening(scene_class* i_scene)",
+    "purpose": "Gatea y prepara retorno; bool no confirma transición",
+    "dependencies": [
+      "mDoMemCd_Ctrl_c::SaveSync",
+      "dComIfG_changeOpeningScene",
+      "mDoAud_resetProcess"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Scene viva; reset/fader/card gates"
+    ],
+    "risks": [
+      "Efectos previos sin comprobar ChangeReq/ReRequest"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-012",
+      "ARCH-013",
+      "ARCH-014"
+    ]
+  },
+  {
+    "symbol": "dComIfG_changeOpeningScene",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_com_inf_game.cpp",
+      "line_start": 1219,
+      "line_end": 1234,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L1219-L1234"
+    },
+    "signature": "int dComIfG_changeOpeningScene(scene_class* i_scene, s16 i_procName)",
+    "purpose": "Prepara next/audio/restart y solicita/retarget escena",
+    "dependencies": [
+      "fopScnM_ChangeReq",
+      "fopScnM_ReRequest",
+      "dStage_nextStage_c::set"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Scene viva y procName válido"
+    ],
+    "risks": [
+      "Retorno1 incluso al fallar cola; next vuelve habilitado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-014",
+      "ARCH-015"
+    ]
+  },
+  {
+    "symbol": "mDoMemCd_Ctrl_c::SaveSync",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_MemCard.cpp",
+      "line_start": 365,
+      "line_end": 386,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_MemCard.cpp#L365-L386"
+    },
+    "signature": "s32 mDoMemCd_Ctrl_c::SaveSync()",
+    "purpose": "Consulta estado store sin esperar ni iniciar IO",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Flag finalización; trylock puede fallar"
+    ],
+    "risks": [
+      "0 ambiguo; sin ACK disco/sidecar"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-013"
+    ]
+  },
+  {
+    "symbol": "dScnPly_c::resetGame",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_s_play.cpp",
+      "line_start": 1050,
+      "line_end": 1085,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_play.cpp#L1050-L1085"
+    },
+    "signature": "bool dScnPly_c::resetGame()",
+    "purpose": "Entrada OPENING espera recursos/audio y marca cleanup reset",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Perfil OPENING o rama PLAY específica"
+    ],
+    "risks": [
+      "No implica ejecución ni limpieza global alcanzada"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-016"
     ]
   }
 ]
