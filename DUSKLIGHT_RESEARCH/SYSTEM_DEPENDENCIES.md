@@ -63,3 +63,5 @@ CP-R22: TGSC puntero tipado/stride → tramo base+escala → CRC de bytes → pa
 CP-R23: Tag MYNA2 gates→request ID/switch→NPC tipo1/fases→daNpcF acción→orderEvent→staff/cut→estado demo→reset; salida normal→switchOFF/delete→destructor. Variantes2/3 tienen otro origen y no son continuación automática del tag (PLAYER-046..051).
 
 CP-R24: logo stage-request→scene waits→overlap task; error task→managerNULL no se propaga como error al wait booleano. Cancel de destino y Done scene tienen cleanup distinto de exclusión; no reconstruyen previo (ARCH-008..011).
+
+CP-R25: tabla overlay/generación→JKRMemArchive fetch→decodificación→mRes→getObjectRes; cambiar tabla no hace el recorrido inverso ni redecodifica cache. Prioridad de fuentes y actualización del consumidor son fronteras separadas (PRES-065..067).

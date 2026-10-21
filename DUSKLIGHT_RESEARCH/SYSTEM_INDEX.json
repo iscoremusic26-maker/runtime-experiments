@@ -471,18 +471,20 @@
   {
     "system_id": "resources_archives_overlays",
     "coverage": "CROSSCHECKED",
-    "scope": "Rutas seleccionadas; profundidad original IMPLEMENTATION_TRACED; no auditoría integral del sistema.",
+    "scope": "CROSSCHECKED selectiva: contratos overlay/resource previos y consumidor JKRMemArchive→dRes cache CP-R25; selector Aurora/coexistencia Windows pendientes.",
     "reports": [
       "systems/resources_archives_overlays.md"
     ],
     "files_examined": [
-      "sdk/include/mods/svc/resource.h",
-      "sdk/include/mods/svc/overlay.h",
-      "src/dusk/mods/svc/resource.cpp",
-      "src/dusk/mods/svc/overlay.cpp",
-      "src/d/d_resorce.cpp",
+      "include/d/d_resorce.h",
       "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
-      "libs/JSystem/src/JKernel/JKRArchivePub.cpp"
+      "libs/JSystem/src/JKernel/JKRArchivePub.cpp",
+      "libs/JSystem/src/JKernel/JKRMemArchive.cpp",
+      "sdk/include/mods/svc/overlay.h",
+      "sdk/include/mods/svc/resource.h",
+      "src/d/d_resorce.cpp",
+      "src/dusk/mods/svc/overlay.cpp",
+      "src/dusk/mods/svc/resource.cpp"
     ],
     "pending": [
       "DVD scheduler completo",
@@ -490,8 +492,10 @@
       "reload real con consumidores vivos"
     ],
     "paths": [
+      "include/d/d_resorce.h",
       "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
       "libs/JSystem/src/JKernel/JKRArchivePub.cpp",
+      "libs/JSystem/src/JKernel/JKRMemArchive.cpp",
       "sdk/include/mods/svc/overlay.h",
       "sdk/include/mods/svc/resource.h",
       "sdk/include/mods/svc/texture.h",
@@ -501,7 +505,9 @@
     ],
     "dependencies": [
       "memory_ownership",
-      "runtime_and_lifecycle"
+      "runtime_and_lifecycle",
+      "models_animations_materials",
+      "external_dependencies"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -512,7 +518,10 @@
       "PRES-005",
       "SDK-018",
       "SDK-019",
-      "SDK-022"
+      "SDK-022",
+      "PRES-065",
+      "PRES-066",
+      "PRES-067"
     ]
   },
   {

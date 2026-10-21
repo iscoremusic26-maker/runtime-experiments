@@ -7848,5 +7848,91 @@
       "ARCH-010",
       "ARCH-011"
     ]
+  },
+  {
+    "symbol": "JKRMemArchive::fetchResource",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JKernel/JKRMemArchive.cpp",
+      "line_start": 136,
+      "line_end": 154,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRMemArchive.cpp#L136-L154"
+    },
+    "signature": "void* JKRMemArchive::fetchResource(SDIFileEntry*, u32*)",
+    "purpose": "Consulta overlay antes de cacheARC y cae a backing siNULL",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "TARGET_PC; archive montado/entrada válida"
+    ],
+    "risks": [
+      "FallbackARC no equivale a fallback de otro mod"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-065"
+    ]
+  },
+  {
+    "symbol": "dRes_info_c::loadResource",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_resorce.cpp",
+      "line_start": 327,
+      "line_end": 357,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_resorce.cpp#L327-L357"
+    },
+    "signature": "int dRes_info_c::loadResource()",
+    "purpose": "Entrada del recorrido que construye cache mRes",
+    "dependencies": [
+      "JKRArchive::getIdxResource",
+      "JKRMemArchive::fetchResource",
+      "dRes_info_c::getRes"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "mRes inicialmenteNULL; archive válido"
+    ],
+    "risks": [
+      "No se reconstruye por solo notifyOverlayFilesChanged"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-066"
+    ]
+  },
+  {
+    "symbol": "dRes_info_c::getRes",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "include/d/d_resorce.h",
+      "line_start": 31,
+      "line_end": 34,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_resorce.h#L31-L34"
+    },
+    "signature": "void* dRes_info_c::getRes(s32 i_index)",
+    "purpose": "Acceso directo al recurso cacheado",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Índice válido y dRes_info cargado"
+    ],
+    "risks": [
+      "No reconsulta generación ni garantiza copia profunda"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-066",
+      "PRES-067"
+    ]
   }
 ]

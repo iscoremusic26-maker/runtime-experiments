@@ -51,3 +51,5 @@ CP-R21 · R-28: modelo visible, fondo registrado y resultado de consulta de agua
 CP-R23 · R-29: switch del tag MYNA2 se activa al aceptar petición, sin comprobar fallo posterior. Clear de NPC usa room actual y destructor no revierte switch; puede inhibirse reentrada o duplicarse solicitud al apagarlo externamente bajo gates. PLAYER-046/050/051; inferencia condicionada, sin fallo runtime.
 
 CP-R24 · R-30: dos estados overlap (puntero manager y exclusión scene) no se limpian por las mismas rutas. Error temprano puede dejar wait y cancelación tardía puede conservar exclusión. ARCH-009..011; inferencia condicionada, sin bloqueo runtime probado ni garantía de permanencia.
+
+CP-R25 · R-31: reconsultar getObjectRes no relee overlay si dRes_info sigue cargado; retirar ganador no restaura objeto decodificado. Fetch JKR puede caer a backingARC al fallar lectura, sin demostrar fallback al mod anterior. PRES-065..067; sin coexistencia runtime certificada.

@@ -105,3 +105,7 @@ Padre remoto verificado 105ea48f71ea29909c0700a7376b88f2d6da548f. +6 evidencias 
 ## CP-R24 — Escenas: error de overlap, cancelación y exclusión
 
 Padre remoto verificado 24bc5eda073dffddfd7079c11a62874694770316. +4 evidencias (3 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+3 localizadores;0 fichas nuevas; Q-09 parcial. ARCH-008..011 distinguen rechazo inicial, task overlap ausente y fallo destino; managerNULL no equivale a señal de error al wait ni limpieza de exclusión scene. Logo StageRequested consume flags sin comprobar ChangeReq. Sin deadlock ni rollback runtime demostrado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R25 — Overlay ganador: lectura JKR frente a cache dRes
+
+Padre remoto verificado b568395f73122d467fae22d6b3b923713174c428. +3 evidencias (2 STATIC_CROSSCHECKED,1 STATIC_INFERRED),+3 localizadores;0 fichas nuevas; Q-14 parcial. PRES-065..067 añaden consumidor JKRMemArchive y cache dRes: getObjectRes no relee tras cambio de generación, mientras fetch JKR puede resolver nuevo recurso o backingARC. Precedencia SDK-018 no se duplica; backend selector y coexistencia siguen sin certificar. Sin mod,build ni runtime; solo atlas.
