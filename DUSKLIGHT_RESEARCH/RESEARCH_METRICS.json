@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R09",
+  "checkpoint": "CP-R10",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -18,18 +18,18 @@
   "sdk_module_candidates": 26,
   "sdk_public_function_slots_located": 209,
   "sdk_all_slots_semantically_audited": false,
-  "evidence_records": 201,
+  "evidence_records": 207,
   "evidence_levels": {
-    "STATIC_CROSSCHECKED": 140,
+    "STATIC_CROSSCHECKED": 146,
     "SOURCE_OBSERVED": 49,
     "DOC_CONTRACT": 5,
     "STATIC_INFERRED": 5,
     "CI_OBSERVED": 2
   },
-  "symbol_records": 215,
+  "symbol_records": 221,
   "symbol_integration_classification": {
     "OFFICIAL_SERVICE": 63,
-    "POTENTIAL_REQUIRES_VERIFICATION": 147,
+    "POTENTIAL_REQUIRES_VERIFICATION": 153,
     "TYPED_HOOK": 5
   },
   "classification_counts_are_not_runtime_tests": true,
@@ -39,29 +39,26 @@
   "unresolved_question_groups": 14,
   "missing_submodules": 4,
   "session_timing": {
-    "current_session_started_utc": "2026-10-21T14:36:28Z",
-    "measured_before_publish_utc": "2026-10-21T14:58:02Z",
-    "observed_session_elapsed_seconds": 1294,
+    "current_session_started_utc": null,
+    "measured_before_publish_utc": "2026-10-21T15:28:10.334612+00:00",
+    "observed_session_elapsed_seconds": null,
     "effective_research_cpu_seconds": null,
     "paused_interval_excluded": true,
-    "note": "Tiempo observado de esta sesión, no CPU ni suma de agentes. Sin builds ni ejecución de fondo."
+    "note": "Duración de esta continuación N/D; no sumar sesión CP-R06..09 ni pausas."
   },
   "current_session_baseline": {
-    "commit": "4dc156a5f4c1dcf70a536cf0298cf55774a8b0f0",
-    "evidence": 184,
-    "symbols": 202,
-    "atlas_files": 46
+    "commit": "03f2a405fbab7f8d2caed286bffd37728eaf07d4",
+    "evidence": 201,
+    "symbols": 215,
+    "atlas_files": 47
   },
   "net_added_this_session": {
-    "evidence": 17,
-    "symbols": 13,
-    "new_documents": 1
+    "evidence": 6,
+    "symbols": 6,
+    "new_documents": 0
   },
   "checkpoints_this_session": [
-    "CP-R06",
-    "CP-R07",
-    "CP-R08",
-    "CP-R09"
+    "CP-R10"
   ],
   "atlas_files": 47
 }

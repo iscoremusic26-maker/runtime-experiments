@@ -48,3 +48,5 @@ DZS/DZR se decodifican como chunks; stage y room usan tablas diferentes. Room lo
 ## Límites
 
 La ruta completa main/menú/title, todos los gates de pausa/captura/errores, orden relativo de cada profile y el backend externo siguen pendientes de trazado integral. Los informes describen rutas concretas y contraejemplos a supuestos generales; no acreditan el juego completo ni otros discos/versiones. Los IDs remiten al [ledger](EVIDENCE_LEDGER.json), que conserva firma, rutas y rangos de cada afirmación.
+
+CP-R10: [file-select→PLAY](systems/runtime_and_lifecycle.md) contrasta solicitud/cleanup/creación/pausa por overlap (ARCH-002..007). La cola borra antes de crear; aceptación no implica destino ejecutándose ni rollback al menú. Extiende ARCH-001 sin acreditar otras rutas bootstrap.

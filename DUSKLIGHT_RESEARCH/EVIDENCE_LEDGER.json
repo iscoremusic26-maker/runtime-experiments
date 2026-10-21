@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R09",
+  "checkpoint": "CP-R10",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -7266,6 +7266,402 @@
       "limitations": [
         "Rutas seleccionadas de fuente; sin simulación de calendario, cambio de escena ni audio runtime.",
         "No generalizar orden entre todos los perfiles ni efectos de todos los tags/climas."
+      ]
+    },
+    {
+      "id": "ARCH-002",
+      "claim": "File-select PC elige ruta de brightness según settings; doPreLoadSetup selecciona ChangeGameScene. El caller sin reset/peek solicita PLAY con overlap 0/peek5,ignora el retorno y continúa mutando estado/autosave.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_name.cpp",
+          "line_start": 311,
+          "line_end": 351,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_name.cpp#L311-L351"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_name.cpp",
+          "line_start": 372,
+          "line_end": 429,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_name.cpp#L372-L429"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_name.cpp",
+          "line_start": 226,
+          "line_end": 245,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_name.cpp#L226-L245"
+        }
+      ],
+      "limitations": [
+        "Cadena estática file-select→PLAY; no ejecución ni fallos inducidos. No cubre todas las escenas,pausas o políticas de recuperación."
+      ]
+    },
+    {
+      "id": "ARCH-003",
+      "claim": "ChangeReq retorna booleano de aceptación,no ID de destino; request tipo2 entra en cola y puede rechazarse por target/alloc/overlap. Fallo de fade retira petición. No certifica escena cargada.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_mng.cpp",
+          "line_start": 17,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_mng.cpp#L17-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/f_op/f_op_scene_mng.h",
+          "line_start": 10,
+          "line_end": 16,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_scene_mng.h#L10-L16"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_req.cpp",
+          "line_start": 98,
+          "line_end": 151,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_req.cpp#L98-L151"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node_req.cpp",
+          "line_start": 183,
+          "line_end": 198,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L183-L198"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node_req.cpp",
+          "line_start": 239,
+          "line_end": 260,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L239-L260"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node_req.cpp",
+          "line_start": 313,
+          "line_end": 337,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L313-L337"
+        }
+      ],
+      "limitations": [
+        "Cadena estática file-select→PLAY; no ejecución ni fallos inducidos. No cubre todas las escenas,pausas o políticas de recuperación."
+      ]
+    },
+    {
+      "id": "ARCH-004",
+      "claim": "Cambio de nodo ordena Delete→IsDeleted global→Create→IsCreated. Borrado de nodo cancela layer/encola hijos; file-select destruye UI,fileSel,heap y limpia vista; proceso se libera tras delete exitoso.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node_req.cpp",
+          "line_start": 32,
+          "line_end": 94,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L32-L94"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node_req.cpp",
+          "line_start": 239,
+          "line_end": 245,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L239-L245"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_deletor.cpp",
+          "line_start": 63,
+          "line_end": 104,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_deletor.cpp#L63-L104"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node.cpp",
+          "line_start": 84,
+          "line_end": 104,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node.cpp#L84-L104"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_name.cpp",
+          "line_start": 81,
+          "line_end": 101,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_name.cpp#L81-L101"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_name.cpp",
+          "line_start": 269,
+          "line_end": 291,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_name.cpp#L269-L291"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_name.cpp",
+          "line_start": 439,
+          "line_end": 457,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_name.cpp#L439-L457"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene.cpp",
+          "line_start": 30,
+          "line_end": 65,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene.cpp#L30-L65"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_base.cpp",
+          "line_start": 102,
+          "line_end": 110,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_base.cpp#L102-L110"
+        }
+      ],
+      "limitations": [
+        "Cadena estática file-select→PLAY; no ejecución ni fallos inducidos. No cubre todas las escenas,pausas o políticas de recuperación."
+      ]
+    },
+    {
+      "id": "ARCH-005",
+      "claim": "Creación estándar carga perfil,crea/subcrea,espera hijos y postmethod antes de entrar en cola ejecutable; PLAY usa fpcNd/fopScn y fases propias de recursos. Existir en cola no prueba ejecutar: exige init_state2 y no pausa.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+          "line_start": 34,
+          "line_end": 126,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_stdcreate_req.cpp#L34-L126"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_stdcreate_req.cpp",
+          "line_start": 140,
+          "line_end": 178,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_stdcreate_req.cpp#L140-L178"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_create_req.cpp",
+          "line_start": 84,
+          "line_end": 118,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_create_req.cpp#L84-L118"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node.cpp",
+          "line_start": 107,
+          "line_end": 124,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node.cpp#L107-L124"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene.cpp",
+          "line_start": 44,
+          "line_end": 65,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene.cpp#L44-L65"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_play.cpp",
+          "line_start": 1370,
+          "line_end": 1425,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_play.cpp#L1370-L1425"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_play.cpp",
+          "line_start": 1635,
+          "line_end": 1681,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_play.cpp#L1635-L1681"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_executor.cpp",
+          "line_start": 24,
+          "line_end": 36,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_executor.cpp#L24-L36"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_executor.cpp",
+          "line_start": 75,
+          "line_end": 82,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_executor.cpp#L75-L82"
+        }
+      ],
+      "limitations": [
+        "Cadena estática file-select→PLAY; no ejecución ni fallos inducidos. No cubre todas las escenas,pausas o políticas de recuperación."
+      ]
+    },
+    {
+      "id": "ARCH-006",
+      "claim": "Ruta fade espera overlap,crea destino,postmethod lo pausa y publica ID; después ClearOverlap/IsDone/Done retira pausa respetando padre. fapGm_After gestiona escenas antes de overlap en callback posterior del scheduler.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_req.cpp",
+          "line_start": 17,
+          "line_end": 52,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_req.cpp#L17-L52"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_req.cpp",
+          "line_start": 69,
+          "line_end": 95,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_req.cpp#L69-L95"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_req.cpp",
+          "line_start": 118,
+          "line_end": 126,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_req.cpp#L118-L126"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_pause.cpp",
+          "line_start": 10,
+          "line_end": 41,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_pause.cpp#L10-L41"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_overlap_mng.cpp",
+          "line_start": 44,
+          "line_end": 117,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_overlap_mng.cpp#L44-L117"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_overlap_req.cpp",
+          "line_start": 41,
+          "line_end": 108,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_overlap_req.cpp#L41-L108"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 730,
+          "line_end": 744,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L730-L744"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 824,
+          "line_end": 832,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L824-L832"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_manager.cpp",
+          "line_start": 99,
+          "line_end": 115,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_manager.cpp#L99-L115"
+        }
+      ],
+      "limitations": [
+        "Cadena estática file-select→PLAY; no ejecución ni fallos inducidos. No cubre todas las escenas,pausas o políticas de recuperación."
+      ]
+    },
+    {
+      "id": "ARCH-007",
+      "claim": "Errores de nodo llevan a cancelación condicionada por overlap; ReRequest solo cambia nombre/data del request tipo2 mientras creating_id es -2. No restaura escena anterior. Cancelación de creación estándar intenta borrar proceso parcial.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node_req.cpp",
+          "line_start": 104,
+          "line_end": 139,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L104-L139"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node_req.cpp",
+          "line_start": 159,
+          "line_end": 180,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L159-L180"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node_req.cpp",
+          "line_start": 340,
+          "line_end": 362,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L340-L362"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_req.cpp",
+          "line_start": 77,
+          "line_end": 82,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_req.cpp#L77-L82"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_create_req.cpp",
+          "line_start": 61,
+          "line_end": 74,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_create_req.cpp#L61-L74"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_mng.cpp",
+          "line_start": 40,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_mng.cpp#L40-L46"
+        }
+      ],
+      "limitations": [
+        "Cadena estática file-select→PLAY; no ejecución ni fallos inducidos. No cubre todas las escenas,pausas o políticas de recuperación."
       ]
     }
   ],

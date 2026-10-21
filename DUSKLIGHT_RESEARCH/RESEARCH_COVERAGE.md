@@ -1,12 +1,12 @@
-# Cobertura real — CP-R09
+# Cobertura real — CP-R10
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **20 fichas de sistemas, 201 evidencias y 215 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **20 fichas de sistemas, 207 evidencias y 221 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 215 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 221 registros.
 
 ## Estado por área
 
@@ -53,7 +53,7 @@ Todas las fichas recuperadas de subtareas están integradas en los checkpoints r
 
 ## Tiempo observado
 
-Sesión actual: 2026-10-21T14:36:28Z a 2026-10-21T14:58:02Z antes de publicar; 1294 segundos de sesión observados, sin convertirlos en CPU ni sumar pausas o agentes. Tiempo efectivo de investigación N/D. Se publicaron CP-R06..09 con cuatro familias de mecanismos; neto +17 evidencias (184→201), +13 símbolos (202→215), +1 documento real (46→47 archivos). La sesión CP-R05 anterior tuvo1622 segundos observados propios y no se vuelve a sumar aquí.
+Sesión histórica CP-R06..09: 2026-10-21T14:36:28Z a 2026-10-21T14:58:02Z antes de publicar; 1294 segundos de sesión observados, sin convertirlos en CPU ni sumar pausas o agentes. Tiempo efectivo de investigación N/D. Se publicaron CP-R06..09 con cuatro familias de mecanismos; neto +17 evidencias (184→201), +13 símbolos (202→215), +1 documento real (46→47 archivos). La sesión CP-R05 anterior tuvo1622 segundos observados propios y no se vuelve a sumar aquí.
 
 CP-R06 añade cuatro evidencias y tres símbolos sobre Item resolvers, con consumidor TARGET_PC del cofre. No amplía el número de servicios auditados ni acredita todas las rutas Item. El snapshot no revalida handle; no se atribuye permiso de reentrancia al contrato. Q-01/Q-02 siguen parcialmente abiertos.
 
@@ -62,3 +62,7 @@ CP-R07 contrasta adquisición, uso y liberación de fuente BFN/JUTResFont en fil
 CP-R08 añade una ficha real de soporte (logros), cinco evidencias y cuatro símbolos. Port_support pasa a READ global por la cadena seleccionada; otros auxiliares no se declaran estudiados. Se leyó código de IO sin abrir achievements.json ni datos del usuario.
 
 CP-R09 añade cuatro evidencias y dos símbolos del reloj ambiental/KYTAG11/rollover. Entorno conserva READ global con rutas seleccionadas contrastadas; los setters de tiempo/fecha no acreditan escritura a disco ni efecto de audio observado.
+
+CP-R10: una cadena adicional file-select→PLAY contrastada (ARCH-002..007); +6 evidencias,+6 símbolos,+0 documentos desde CP-R09. Runtime conserva CROSSCHECKED selectivo; Q-09 parcial. No se cuenta como seis rutas independientes ni bootstrap completo.
+
+Esta continuación CP-R10 se registra por separado; duración observada N/D. No se acumula el intervalo entre sesiones.

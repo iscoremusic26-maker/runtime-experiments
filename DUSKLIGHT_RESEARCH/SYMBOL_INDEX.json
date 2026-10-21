@@ -6138,5 +6138,199 @@
       "PRES-041",
       "PRES-042"
     ]
+  },
+  {
+    "symbol": "dScnName_c::changeGameScene",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_s_name.cpp",
+      "line_start": 396,
+      "line_end": 429,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_name.cpp#L396-L429"
+    },
+    "signature": "void dScnName_c::changeGameScene()",
+    "purpose": "Caller real; preparación continúa sin comprobar aceptación.",
+    "dependencies": [
+      "scene_class",
+      "fpcNdRq_Request"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Hilo/fase del scheduler del juego; contexto de escena vigente.",
+      "Resolución,export y ABI Windows no certificados."
+    ],
+    "risks": [
+      "Aceptar petición no confirma éxito; escena anterior puede destruirse antes de fallar destino.",
+      "No conservar punteros de UI/heap tras destructor; no hay rollback automático observado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-002",
+      "ARCH-003"
+    ]
+  },
+  {
+    "symbol": "fopScnM_ChangeReq",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_scene_mng.cpp",
+      "line_start": 19,
+      "line_end": 28,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_mng.cpp#L19-L28"
+    },
+    "signature": "int fopScnM_ChangeReq(scene_class*, s16, s16, u16)",
+    "purpose": "Aceptar una petición de cambio; booleano no es destino cargado.",
+    "dependencies": [
+      "scene_class",
+      "fpcNdRq_Request"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Hilo/fase del scheduler del juego; contexto de escena vigente.",
+      "Resolución,export y ABI Windows no certificados."
+    ],
+    "risks": [
+      "Aceptar petición no confirma éxito; escena anterior puede destruirse antes de fallar destino.",
+      "No conservar punteros de UI/heap tras destructor; no hay rollback automático observado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-003"
+    ]
+  },
+  {
+    "symbol": "fopScnRq_Request",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_scene_req.cpp",
+      "line_start": 98,
+      "line_end": 151,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_req.cpp#L98-L151"
+    },
+    "signature": "fpc_ProcID fopScnRq_Request(int, scene_class*, s16, void*, s16, u16)",
+    "purpose": "Encolar nodo y seleccionar fases con/sin fade.",
+    "dependencies": [
+      "scene_class",
+      "fpcNdRq_Request"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Hilo/fase del scheduler del juego; contexto de escena vigente.",
+      "Resolución,export y ABI Windows no certificados."
+    ],
+    "risks": [
+      "Aceptar petición no confirma éxito; escena anterior puede destruirse antes de fallar destino.",
+      "No conservar punteros de UI/heap tras destructor; no hay rollback automático observado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-003",
+      "ARCH-006"
+    ]
+  },
+  {
+    "symbol": "fpcNdRq_ChangeNode",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_pc/f_pc_node_req.cpp",
+      "line_start": 239,
+      "line_end": 260,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node_req.cpp#L239-L260"
+    },
+    "signature": "node_create_request* fpcNdRq_ChangeNode(u32, process_node_class*, s16, void*)",
+    "purpose": "Cambio delete-before-create; estado propiedad de cola.",
+    "dependencies": [
+      "scene_class",
+      "fpcNdRq_Request"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Hilo/fase del scheduler del juego; contexto de escena vigente.",
+      "Resolución,export y ABI Windows no certificados."
+    ],
+    "risks": [
+      "Aceptar petición no confirma éxito; escena anterior puede destruirse antes de fallar destino.",
+      "No conservar punteros de UI/heap tras destructor; no hay rollback automático observado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-004"
+    ]
+  },
+  {
+    "symbol": "dScnName_c::~dScnName_c",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_s_name.cpp",
+      "line_start": 269,
+      "line_end": 291,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_name.cpp#L269-L291"
+    },
+    "signature": "dScnName_c::~dScnName_c()",
+    "purpose": "Final de ownership file-select,heap y vista.",
+    "dependencies": [
+      "scene_class",
+      "fpcNdRq_Request"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Hilo/fase del scheduler del juego; contexto de escena vigente.",
+      "Resolución,export y ABI Windows no certificados."
+    ],
+    "risks": [
+      "Aceptar petición no confirma éxito; escena anterior puede destruirse antes de fallar destino.",
+      "No conservar punteros de UI/heap tras destructor; no hay rollback automático observado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-004"
+    ]
+  },
+  {
+    "symbol": "dScnPly_Create",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_s_play.cpp",
+      "line_start": 1639,
+      "line_end": 1662,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_play.cpp#L1639-L1662"
+    },
+    "signature": "static int dScnPly_Create(scene_class*)",
+    "purpose": "Entrada de creación por fases del destino PLAY.",
+    "dependencies": [
+      "scene_class",
+      "fpcNdRq_Request"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Hilo/fase del scheduler del juego; contexto de escena vigente.",
+      "Resolución,export y ABI Windows no certificados."
+    ],
+    "risks": [
+      "Aceptar petición no confirma éxito; escena anterior puede destruirse antes de fallar destino.",
+      "No conservar punteros de UI/heap tras destructor; no hay rollback automático observado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-005"
+    ]
   }
 ]

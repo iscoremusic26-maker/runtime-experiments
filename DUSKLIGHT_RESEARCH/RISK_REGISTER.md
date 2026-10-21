@@ -25,3 +25,5 @@ Un rollback de registros no deshace mutaciones arbitrarias de inventario, flags,
 R-16 — Persistencia interna del port no debe confundirse con SaveService: AchievementSystem fija loaded antes de IO, captura errores y tick limpia dirty después de save. No interpretar snapshot UI o toast como confirmación durable. PORT-004/005; sin fallo reproducido ni acceso a archivos del usuario.
 
 R-17 — Cambiar un único valor de tiempo no controla todos los escritores: avance normal y KYTAG11 tienen condiciones distintas, y el flag de control se limpia. El rollover modifica fecha y un bit temporal; setters escriben estado en memoria, no confirman guardado CARD. PRES-040..043; sin efecto runtime probado.
+
+R-18 — Aceptación de cambio no significa destino ejecutándose: file-select ignora retorno y continúa mutando estado; delete-before-create destruye UI/heap antes de conocer éxito de PLAY. Cancelación/ReRequest no prueban rollback. ARCH-002..007; riesgos de punteros de R-07 ahora contrastados para esta escena, sin afirmar invalidación universal ni fallo runtime.

@@ -434,18 +434,22 @@
   {
     "system_id": "runtime_and_lifecycle",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Loader y transición file-select→PLAY contrastados selectivamente; sin bootstrap/gates completos ni runtime.",
     "reports": [
       "systems/runtime_and_lifecycle.md"
     ],
     "pending": [
-      "Disponibilidad binaria Windows y runtime no comprobados."
+      "Disponibilidad binaria Windows y runtime no comprobados.",
+      "Recuperación tras fallo de creación/overlap; otras rutas logo/direct-load y todos los gates pendientes."
     ],
     "paths": [
+      "include/f_op/f_op_scene_mng.h",
       "sdk/include/mods/runtime.h",
       "sdk/include/mods/svc/game.h",
       "sdk/include/mods/svc/game_mode.h",
       "sdk/include/mods/svc/host.h",
+      "src/d/d_s_name.cpp",
+      "src/d/d_s_play.cpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/depgraph.cpp",
       "src/dusk/mods/loader/loader.cpp",
@@ -453,11 +457,27 @@
       "src/dusk/mods/svc/actor.cpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/f_ap/f_ap_game.cpp",
-      "src/f_pc/f_pc_manager.cpp"
+      "src/f_op/f_op_overlap_mng.cpp",
+      "src/f_op/f_op_overlap_req.cpp",
+      "src/f_op/f_op_scene.cpp",
+      "src/f_op/f_op_scene_mng.cpp",
+      "src/f_op/f_op_scene_pause.cpp",
+      "src/f_op/f_op_scene_req.cpp",
+      "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_create_req.cpp",
+      "src/f_pc/f_pc_deletor.cpp",
+      "src/f_pc/f_pc_executor.cpp",
+      "src/f_pc/f_pc_manager.cpp",
+      "src/f_pc/f_pc_node.cpp",
+      "src/f_pc/f_pc_node_req.cpp",
+      "src/f_pc/f_pc_stdcreate_req.cpp"
     ],
     "dependencies": [
       "sdk_services",
-      "hooking_abi"
+      "hooking_abi",
+      "resources_archives_overlays",
+      "hud_ui_text",
+      "memory_ownership"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -478,7 +498,12 @@
       "SDK-008",
       "SDK-011",
       "WORLD-009",
-      "ARCH-001"
+      "ARCH-002",
+      "ARCH-003",
+      "ARCH-004",
+      "ARCH-005",
+      "ARCH-006",
+      "ARCH-007"
     ]
   },
   {

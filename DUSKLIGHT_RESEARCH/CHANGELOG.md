@@ -45,3 +45,7 @@ Cadena señal de menú→check→progress/unlock→UI/JSON contrastada, con gate
 ## CP-R09 — reloj ambiental,tag y rollover
 
 Contrastadas condiciones del avance normal,ruta KYTAG11,parametrización y flag de control por actualización,helper DayProc y clasificación día/noche. Se precisa salida Time→audio→Date y estado en memoria frente a CARD. Cuatro evidencias y dos símbolos; entorno permanece READ global. Sin manipular tiempo ni save del usuario.
+
+## CP-R10 — file-select → PLAY, fases y ownership
+
+Desde CP-R09 remoto 03f2a405fbab7f8d2caed286bffd37728eaf07d4. Se contrastan caller/gates PC, aceptación, cola delete-before-create, destructor UI/heap, entrada PLAY, overlap/pausa y cancelación/ReRequest. Seis evidencias y seis símbolos nuevos; cero documentos nuevos. Se deduplica la referencia repetida ARCH-001 en runtime del SYSTEM_INDEX, sin borrar evidencia. Q-09 permanece parcial; sin mod,build o ejecución.
