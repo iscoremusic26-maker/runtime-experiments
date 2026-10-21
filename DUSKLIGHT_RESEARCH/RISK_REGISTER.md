@@ -33,3 +33,5 @@ R-19 — Animación parcialmente aplicada y estado compartido: AutoMata instala 
 R-20 — Message retira registro pero candidatos copiados no revalidan handle/active; bytes seleccionados sobreviven por binding,NO por ello userdata/DLL. Callback debe entregar texto legible durante copia posterior al retorno. CALLBACK-009..013; ninguna liberación segura universal ni coexistencia/runtime certificada.
 
 R-21 — Conexión LiveSplit/toast no confirma comandos ni timer remoto: send ignora retorno,startPending se consume antes de comandos y no se rearma al reconectar; retry cuenta llamadas UI,no segundos. PORT-006..009. Backend Borealis ausente,no transporte ni fallo observado.
+
+R-22 — Presión detectada,flag filtrada,recorrido terminado,switch RAM y save duradero son hitos distintos. Swpush Delete devuelve1 incluso si Release informa error; no acredita drenaje de callback ni reversión de switch. PLAYER-035..039; sin fallo runtime inducido.

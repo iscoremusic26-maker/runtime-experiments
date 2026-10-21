@@ -41,3 +41,5 @@ CP-R11: models_animations_materials → archive/refcount → actor solid heap �
 CP-R12: MessageService → estado compartido flow.cpp → JMessage/TControl y dMsgObject selección → ActiveBinding → reset/destructor. CALLBACK-009..013 separa registro/callback/userData de bytes copiados; FlowModule realiza detach conjunto.
 
 CP-R13: file-select SaveLoaded→GameMode Speedrun→onGameFrame/overlap y,por separado,UI Overlay→LiveSplit Context→send/poll. PORT-006..009; Borealis ausente bloquea entrega/cierre/copias de transporte.
+
+CP-R14: Acch GroundCheck→dBgS/dBgW ride→swpush flags/timers/modo→switch RAM y vértices→lector al recargar→Release/heap. PLAYER-035..039; no wiring de stage concreto ni persistencia CARD inferida.

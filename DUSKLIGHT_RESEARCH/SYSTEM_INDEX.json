@@ -834,11 +834,14 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "Rutas seleccionadas; profundidad original SOURCE_EXAMINED_PARTIAL; no auditoría integral del sistema.",
+    "scope": "READ global; se añade swpush contacto→debounce→switch→geometría/recarga/cleanup,además de muestras previas.",
     "reports": [
       "systems/other_systems.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_obj_swpush.h",
+      "include/d/d_com_inf_game.h",
+      "include/f_op/f_op_actor_mng.h",
       "src/d/actor/d_a_canoe.cpp",
       "src/d/actor/d_a_cow.cpp",
       "src/d/actor/d_a_horse.cpp",
@@ -847,7 +850,15 @@
       "src/d/actor/d_a_mg_rod.cpp",
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
-      "src/d/actor/d_a_obj_swspinner.cpp"
+      "src/d/actor/d_a_obj_swpush.cpp",
+      "src/d/actor/d_a_obj_swspinner.cpp",
+      "src/d/d_bg_s.cpp",
+      "src/d/d_bg_s_acch.cpp",
+      "src/d/d_bg_w.cpp",
+      "src/d/d_save.cpp",
+      "src/f_op/f_op_actor.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/f_pc/f_pc_create_req.cpp"
     ],
     "pending": [
       "Pesca y minijuegos completos",
@@ -855,6 +866,9 @@
       "Recompensas/persistencia"
     ],
     "paths": [
+      "include/d/actor/d_a_obj_swpush.h",
+      "include/d/d_com_inf_game.h",
+      "include/f_op/f_op_actor_mng.h",
       "src/d/actor/d_a_canoe.cpp",
       "src/d/actor/d_a_cow.cpp",
       "src/d/actor/d_a_horse.cpp",
@@ -863,12 +877,23 @@
       "src/d/actor/d_a_mg_rod.cpp",
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
-      "src/d/actor/d_a_obj_swspinner.cpp"
+      "src/d/actor/d_a_obj_swpush.cpp",
+      "src/d/actor/d_a_obj_swspinner.cpp",
+      "src/d/d_bg_s.cpp",
+      "src/d/d_bg_s_acch.cpp",
+      "src/d/d_bg_w.cpp",
+      "src/d/d_save.cpp",
+      "src/f_op/f_op_actor.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
+      "src/f_pc/f_pc_create_req.cpp"
     ],
     "dependencies": [
       "actors_ai_npcs",
       "player_and_controls",
-      "flags_events_progression"
+      "flags_events_progression",
+      "movement_physics_collision",
+      "memory_ownership",
+      "resources_archives_overlays"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -877,7 +902,12 @@
       "PLAYER-030",
       "PLAYER-031",
       "PLAYER-032",
-      "PLAYER-033"
+      "PLAYER-033",
+      "PLAYER-035",
+      "PLAYER-036",
+      "PLAYER-037",
+      "PLAYER-038",
+      "PLAYER-039"
     ]
   },
   {

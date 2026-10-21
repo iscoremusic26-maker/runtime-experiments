@@ -6700,5 +6700,171 @@
     "evidence_ids": [
       "PORT-009"
     ]
+  },
+  {
+    "symbol": "daObjSwpush::Act_c::Mthd_Create",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_swpush.cpp",
+      "line_start": 203,
+      "line_end": 308,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L203-L308"
+    },
+    "signature": "cPhs_Step daObjSwpush::Act_c::Mthd_Create()",
+    "purpose": "Creación por fases y registro de background.",
+    "dependencies": [
+      "dBgW",
+      "dSv_info_c",
+      "fopAc_ac_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto de actor/heap y background registrados válidos; callback sincrónico del consumidor.",
+      "Sin export,ABI ni hook Windows certificado."
+    ],
+    "risks": [
+      "Contacto acumulado no equivale a switch escrito ni save persistido.",
+      "Callback/owner prestados y cleanup con errores; no extender lifetime por conservar puntero."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-035",
+      "PLAYER-038"
+    ]
+  },
+  {
+    "symbol": "daObjSwpush::Act_c::rideCB",
+    "kind": "function",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_swpush.cpp",
+      "line_start": 335,
+      "line_end": 410,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L335-L410"
+    },
+    "signature": "static void daObjSwpush::Act_c::rideCB(dBgW*, fopAc_ac_c*, fopAc_ac_c*)",
+    "purpose": "Filtrar contacto y acumular estado para execute.",
+    "dependencies": [
+      "dBgW",
+      "dSv_info_c",
+      "fopAc_ac_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto de actor/heap y background registrados válidos; callback sincrónico del consumidor.",
+      "Sin export,ABI ni hook Windows certificado."
+    ],
+    "risks": [
+      "Contacto acumulado no equivale a switch escrito ni save persistido.",
+      "Callback/owner prestados y cleanup con errores; no extender lifetime por conservar puntero."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-036"
+    ]
+  },
+  {
+    "symbol": "daObjSwpush::Act_c::set_push_flag",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_swpush.cpp",
+      "line_start": 458,
+      "line_end": 494,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L458-L494"
+    },
+    "signature": "void daObjSwpush::Act_c::set_push_flag()",
+    "purpose": "Debounce de contacto/ausencia/peso.",
+    "dependencies": [
+      "dBgW",
+      "dSv_info_c",
+      "fopAc_ac_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto de actor/heap y background registrados válidos; callback sincrónico del consumidor.",
+      "Sin export,ABI ni hook Windows certificado."
+    ],
+    "risks": [
+      "Contacto acumulado no equivale a switch escrito ni save persistido.",
+      "Callback/owner prestados y cleanup con errores; no extender lifetime por conservar puntero."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-037"
+    ]
+  },
+  {
+    "symbol": "daObjSwpush::Act_c::Mthd_Execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_swpush.cpp",
+      "line_start": 767,
+      "line_end": 822,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L767-L822"
+    },
+    "signature": "int daObjSwpush::Act_c::Mthd_Execute()",
+    "purpose": "Orden de modo,flags,geometría y consumo de contactos.",
+    "dependencies": [
+      "dBgW",
+      "dSv_info_c",
+      "fopAc_ac_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto de actor/heap y background registrados válidos; callback sincrónico del consumidor.",
+      "Sin export,ABI ni hook Windows certificado."
+    ],
+    "risks": [
+      "Contacto acumulado no equivale a switch escrito ni save persistido.",
+      "Callback/owner prestados y cleanup con errores; no extender lifetime por conservar puntero."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-037"
+    ]
+  },
+  {
+    "symbol": "daObjSwpush::Act_c::Mthd_Delete",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_swpush.cpp",
+      "line_start": 311,
+      "line_end": 318,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L311-L318"
+    },
+    "signature": "int daObjSwpush::Act_c::Mthd_Delete()",
+    "purpose": "Retirar background/recurso antes de heap teardown del wrapper.",
+    "dependencies": [
+      "dBgW",
+      "dSv_info_c",
+      "fopAc_ac_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto de actor/heap y background registrados válidos; callback sincrónico del consumidor.",
+      "Sin export,ABI ni hook Windows certificado."
+    ],
+    "risks": [
+      "Contacto acumulado no equivale a switch escrito ni save persistido.",
+      "Callback/owner prestados y cleanup con errores; no extender lifetime por conservar puntero."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-039"
+    ]
   }
 ]

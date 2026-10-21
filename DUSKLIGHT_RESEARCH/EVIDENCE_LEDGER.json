@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R13",
+  "checkpoint": "CP-R14",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -8361,6 +8361,317 @@
         "Solo callers/estado del port; no conexión LiveSplit ni configuración personal abierta.",
         "Borealis ausente: garantías de copia,entrega,cierre,errores y threading externos no auditadas.",
         "Sin certificación de temporización real,protocolo remoto o disponibilidad Windows."
+      ]
+    },
+    {
+      "id": "PLAYER-035",
+      "claim": "Swpush original usa profile current-layer/list2,parámetros de tipo/model/event/switch/couple y angleZ para switch2; espera archive y heap antes de Regist dBgWSv/rideCB. Regist devuelve true en error; fallos de heap/registro llevan ERROR.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 38,
+          "line_end": 54,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L38-L54"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 67,
+          "line_end": 118,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L67-L118"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 203,
+          "line_end": 308,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L203-L308"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 868,
+          "line_end": 883,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L868-L883"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_obj_swpush.h",
+          "line_start": 93,
+          "line_end": 116,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_obj_swpush.h#L93-L116"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s.cpp",
+          "line_start": 152,
+          "line_end": 164,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L152-L164"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s.cpp",
+          "line_start": 177,
+          "line_end": 201,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L177-L201"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 122,
+          "line_end": 199,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L122-L199"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-036",
+      "claim": "Acch GroundCheck despacha RideCallBack; dBgS pasa propietario registrado y actor que pisa a dBgW callback sincrónico. Swpush filtra status FREEZE,triángulos y couple,acumula modo/heavy y no conserva puntero del visitante.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s_acch.cpp",
+          "line_start": 142,
+          "line_end": 179,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_acch.cpp#L142-L179"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s.cpp",
+          "line_start": 136,
+          "line_end": 148,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L136-L148"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s.cpp",
+          "line_start": 1518,
+          "line_end": 1528,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L1518-L1528"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_w.cpp",
+          "line_start": 2451,
+          "line_end": 2455,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_w.cpp#L2451-L2455"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 335,
+          "line_end": 410,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L335-L410"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 746,
+          "line_end": 764,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L746-L764"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-037",
+      "claim": "Swpush debounce/contacto alimenta cuatro modos; escribe switch al completar recorrido y solo si changingState. Toggle,ON_IS_UP,STAY_PRESSED/OBEY_SAVE/switch2 difieren. Execute procesa demo→flags→modo→altura y limpia contacto antes de modificar vértices/Move.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 458,
+          "line_end": 494,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L458-L494"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 496,
+          "line_end": 594,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L496-L594"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 596,
+          "line_end": 665,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L596-L665"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 717,
+          "line_end": 744,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L717-L744"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 767,
+          "line_end": 822,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L767-L822"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 412,
+          "line_end": 456,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L412-L456"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-038",
+      "claim": "Wrappers switch swpush usan home room y banco según ID MEMORY/DAN/ZONE/ONEZONE; setter modifica RAM,no CARD. Create relee switches para altura inicial,que depende de tipo/toggle; deshacer registro no restaura progreso ni estado visual.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_obj_swpush.h",
+          "line_start": 93,
+          "line_end": 104,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_obj_swpush.h#L93-L104"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/f_op/f_op_actor_mng.h",
+          "line_start": 448,
+          "line_end": 462,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor_mng.h#L448-L462"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_com_inf_game.h",
+          "line_start": 3295,
+          "line_end": 3309,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_com_inf_game.h#L3295-L3309"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_save.cpp",
+          "line_start": 1573,
+          "line_end": 1595,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_save.cpp#L1573-L1595"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_save.cpp",
+          "line_start": 1621,
+          "line_end": 1685,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_save.cpp#L1621-L1685"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 270,
+          "line_end": 301,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L270-L301"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-039",
+      "claim": "Swpush Delete intenta Release de fondo antes de resDelete y devuelve1 incluso si Release informa error. Release limpia tabla/owner en éxito y acepta null como error sin dereferenciar. Wrapper actor destruye heap solo tras delete exitoso; no garantiza toda recuperación de create parcial.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_swpush.cpp",
+          "line_start": 311,
+          "line_end": 318,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_swpush.cpp#L311-L318"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s.cpp",
+          "line_start": 204,
+          "line_end": 245,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L204-L245"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s.cpp",
+          "line_start": 143,
+          "line_end": 148,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L143-L148"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor.cpp",
+          "line_start": 413,
+          "line_end": 439,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp#L413-L439"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 372,
+          "line_end": 385,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L372-L385"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_create_req.cpp",
+          "line_start": 61,
+          "line_end": 74,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_create_req.cpp#L61-L74"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
       ]
     }
   ],

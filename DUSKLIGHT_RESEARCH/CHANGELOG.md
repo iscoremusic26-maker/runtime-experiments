@@ -61,3 +61,7 @@ Padre CP-R11 b90b9ebef217c8fd21510e152819e0570271d92d. Cinco evidencias nuevas (
 ## CP-R13 — soporte interno speedrun/LiveSplit
 
 Padre CP-R12 893106a330b128d4743f51de54e03d7cb84f8f4c. Ficha real nueva,cuatro evidencias y tres símbolos; evento SaveLoaded→modo/contador y UI→conexión/envío/cierre separados. Sin LiveSplitService público,ACK ni backend Borealis auditados. Ninguna conexión ni dato personal abierto. Neto desde CP-R09:+19 evidencias,+17 símbolos,+1 documento; cuatro cadenas representativas de familias distintas.
+
+## CP-R14 — swpush contacto,debounce,switch y cleanup
+
+Padre remoto verificado 36c71128be0cda32b4ee5ef30dd0ace49ff92404. +5 evidencias,+5 símbolos,+0 informes/+0 archivos frente a CP-R13; una cadena nueva de puzzle/colisión. CP-R14 completo en systems/other_systems.md: PLAYER-035..039 y cinco símbolos daObjSwpush::Act_c. Dispatcher Acch/dBgS/dBgW→rideCB→contadores/modos→switch al finalizar recorrido→colisión/recarga→Release/heap. Sin prueba de wiring entre colocaciones ni durabilidad CARD. RELEASE/error/create parcial conservan límites; other_systems sigue READ global. Sin mod,build ni runtime; solo atlas.
