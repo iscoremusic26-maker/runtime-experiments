@@ -23,3 +23,5 @@ Riesgos derivados del commit fijado. No son fallos observados durante ejecución
 Un rollback de registros no deshace mutaciones arbitrarias de inventario, flags, posiciones, archivos o servicios externos. Restaurar únicamente estado propio y aún compatible con el contexto; reingreso/reinicio puede ser necesario cuando un consumidor conserva objetos. No se propone modificar host, SDK, EXE, ROM ni saves como mecanismo de implementación .dusk.
 
 R-16 — Persistencia interna del port no debe confundirse con SaveService: AchievementSystem fija loaded antes de IO, captura errores y tick limpia dirty después de save. No interpretar snapshot UI o toast como confirmación durable. PORT-004/005; sin fallo reproducido ni acceso a archivos del usuario.
+
+R-17 — Cambiar un único valor de tiempo no controla todos los escritores: avance normal y KYTAG11 tienen condiciones distintas, y el flag de control se limpia. El rollover modifica fecha y un bit temporal; setters escriben estado en memoria, no confirman guardado CARD. PRES-040..043; sin efecto runtime probado.

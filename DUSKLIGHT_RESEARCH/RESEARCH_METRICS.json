@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R08",
+  "checkpoint": "CP-R09",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -18,18 +18,18 @@
   "sdk_module_candidates": 26,
   "sdk_public_function_slots_located": 209,
   "sdk_all_slots_semantically_audited": false,
-  "evidence_records": 197,
+  "evidence_records": 201,
   "evidence_levels": {
-    "STATIC_CROSSCHECKED": 136,
+    "STATIC_CROSSCHECKED": 140,
     "SOURCE_OBSERVED": 49,
     "DOC_CONTRACT": 5,
     "STATIC_INFERRED": 5,
     "CI_OBSERVED": 2
   },
-  "symbol_records": 213,
+  "symbol_records": 215,
   "symbol_integration_classification": {
     "OFFICIAL_SERVICE": 63,
-    "POTENTIAL_REQUIRES_VERIFICATION": 145,
+    "POTENTIAL_REQUIRES_VERIFICATION": 147,
     "TYPED_HOOK": 5
   },
   "classification_counts_are_not_runtime_tests": true,
@@ -40,9 +40,11 @@
   "missing_submodules": 4,
   "session_timing": {
     "current_session_started_utc": "2026-10-21T14:36:28Z",
+    "measured_before_publish_utc": "2026-10-21T14:58:02Z",
+    "observed_session_elapsed_seconds": 1294,
     "effective_research_cpu_seconds": null,
     "paused_interval_excluded": true,
-    "note": "Sesión en curso; sin sumar pausas ni tiempo de agentes."
+    "note": "Tiempo observado de esta sesión, no CPU ni suma de agentes. Sin builds ni ejecución de fondo."
   },
   "current_session_baseline": {
     "commit": "4dc156a5f4c1dcf70a536cf0298cf55774a8b0f0",
@@ -51,8 +53,15 @@
     "atlas_files": 46
   },
   "net_added_this_session": {
-    "evidence": 13,
-    "symbols": 11,
+    "evidence": 17,
+    "symbols": 13,
     "new_documents": 1
-  }
+  },
+  "checkpoints_this_session": [
+    "CP-R06",
+    "CP-R07",
+    "CP-R08",
+    "CP-R09"
+  ],
+  "atlas_files": 47
 }

@@ -847,22 +847,31 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "Rutas seleccionadas; profundidad original FLOW_SAMPLED; no auditoría integral del sistema.",
+    "scope": "READ global; avance normal/KYTAG11,rollover y estado/audio seleccionados CROSSCHECKED.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
     "files_examined": [
+      "include/d/d_kankyo_static.h",
+      "include/d/d_save.h",
+      "include/m_Do/m_Do_audio.h",
+      "src/d/actor/d_a_kytag11.cpp",
+      "src/d/d_com_inf_game.cpp",
       "src/d/d_kankyo.cpp",
       "src/d/d_kankyo_wether.cpp",
       "src/d/d_kyeff.cpp",
       "src/d/d_kyeff2.cpp"
     ],
     "pending": [
-      "lifecycle proceso kankyo completo",
-      "agua/clima todas regiones",
-      "weather tags y calendarios"
+      "Orden relativo de varios tags/perfiles,agua/clima/tablas de iluminación completos.",
+      "Otros escritores del tiempo y comportamiento visual/audible runtime."
     ],
     "paths": [
+      "include/d/d_kankyo_static.h",
+      "include/d/d_save.h",
+      "include/m_Do/m_Do_audio.h",
+      "src/d/actor/d_a_kytag11.cpp",
+      "src/d/d_com_inf_game.cpp",
       "src/d/d_kankyo.cpp",
       "src/d/d_kankyo_wether.cpp",
       "src/d/d_kyeff.cpp",
@@ -878,7 +887,11 @@
       "PRES-029",
       "PRES-030",
       "PRES-031",
-      "PRES-033"
+      "PRES-033",
+      "PRES-040",
+      "PRES-041",
+      "PRES-042",
+      "PRES-043"
     ]
   },
   {

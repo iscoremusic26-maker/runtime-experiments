@@ -41,3 +41,7 @@ Contrastados provider logo/font archive, initFontCommon y rama PC, refcount mDoE
 ## CP-R08 — logros internos del port y persistencia
 
 Cadena señal de menú→check→progress/unlock→UI/JSON contrastada, con gates vanilla/speedrun y loaded/dirty. Un retorno de save no confirma IO ni conserva retry bajo fallo capturado. Cinco evidencias y cuatro símbolos; nueva ficha real, port_support READ parcial. Sin leer datos personales ni registrar un supuesto AchievementService inexistente.
+
+## CP-R09 — reloj ambiental,tag y rollover
+
+Contrastadas condiciones del avance normal,ruta KYTAG11,parametrización y flag de control por actualización,helper DayProc y clasificación día/noche. Se precisa salida Time→audio→Date y estado en memoria frente a CARD. Cuatro evidencias y dos símbolos; entorno permanece READ global. Sin manipular tiempo ni save del usuario.

@@ -5389,7 +5389,10 @@
     "risks": [],
     "evidence_level": "SOURCE_OBSERVED",
     "evidence_ids": [
-      "PRES-029"
+      "PRES-029",
+      "PRES-040",
+      "PRES-042",
+      "PRES-043"
     ]
   },
   {
@@ -6069,6 +6072,71 @@
     "evidence_ids": [
       "PORT-001",
       "PORT-003"
+    ]
+  },
+  {
+    "symbol": "dKy_daynight_check",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 1745,
+      "line_end": 1752,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L1745-L1752"
+    },
+    "signature": "BOOL dKy_daynight_check()",
+    "purpose": "Clasifica noche desde hora del estado en memoria; false entre6y19.",
+    "dependencies": [
+      "dScnKy_env_light_c",
+      "dSv_player_status_b_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto y orden de actualización ambiental válidos.",
+      "No existe servicio dedicado Weather/Time en la matriz examinada; target Windows no comprobado."
+    ],
+    "risks": [
+      "Reloj comparte estado con progreso/audio; tags y avance normal tienen gates distintos.",
+      "Static/header symbol no implica export ni hook instalable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-042"
+    ]
+  },
+  {
+    "symbol": "daKytag11_Execute",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag11.cpp",
+      "line_start": 16,
+      "line_end": 83,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag11.cpp#L16-L83"
+    },
+    "signature": "static int daKytag11_Execute(kytag11_class*)",
+    "purpose": "Actor de control temporal condicionado por eventos/switches,con tasa propia.",
+    "dependencies": [
+      "dScnKy_env_light_c",
+      "dSv_player_status_b_c"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto y orden de actualización ambiental válidos.",
+      "No existe servicio dedicado Weather/Time en la matriz examinada; target Windows no comprobado."
+    ],
+    "risks": [
+      "Reloj comparte estado con progreso/audio; tags y avance normal tienen gates distintos.",
+      "Static/header symbol no implica export ni hook instalable."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-041",
+      "PRES-042"
     ]
   }
 ]

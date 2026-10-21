@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R08",
+  "checkpoint": "CP-R09",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -7102,6 +7102,170 @@
       "limitations": [
         "Fuente/call sites contrastados; no ejecución de juego/UI ni error de IO reproducido.",
         "No se abrieron datos personales ni se auditó cada criterio de logro."
+      ]
+    },
+    {
+      "id": "PRES-040",
+      "claim": "El avance ambiental ordinario se condiciona por time-control tag,darkworld,eventos,mensaje y room timepass; PC limita la aceleración rate=1 al cruzar fronteras y hay ajustes por stage. No es simple incremento de reloj real.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 1529,
+          "line_end": 1601,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L1529-L1601"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 8215,
+          "line_end": 8219,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L8215-L8219"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 4798,
+          "line_end": 4804,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L4798-L4804"
+        }
+      ],
+      "limitations": [
+        "Rutas seleccionadas de fuente; sin simulación de calendario, cambio de escena ni audio runtime.",
+        "No generalizar orden entre todos los perfiles ni efectos de todos los tags/climas."
+      ]
+    },
+    {
+      "id": "PRES-041",
+      "claim": "KYTAG11 se enlaza como actor, comprueba event bits/switches, establece hora inicial opcional y actualiza fecha/hora con tasa de sus parámetros; pone using_time_control_tag y el controlador lo limpia al final de setDaytime.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_kytag11.cpp",
+          "line_start": 16,
+          "line_end": 83,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag11.cpp#L16-L83"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_kytag11.cpp",
+          "line_start": 93,
+          "line_end": 131,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag11.cpp#L93-L131"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 1662,
+          "line_end": 1664,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L1662-L1664"
+        }
+      ],
+      "limitations": [
+        "Rutas seleccionadas de fuente; sin simulación de calendario, cambio de escena ni audio runtime.",
+        "No generalizar orden entre todos los perfiles ni efectos de todos los tags/climas."
+      ]
+    },
+    {
+      "id": "PRES-042",
+      "claim": "El rollover normal pone hora a cero,aumenta fecha y llama dKankyo_DayProc; ese helper estático limpia tempBitLabels[91]. daynight usa hora derivada de time/15 y retorna false para [6,19).",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 1574,
+          "line_end": 1578,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L1574-L1578"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 1734,
+          "line_end": 1752,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L1734-L1752"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_kankyo_static.h",
+          "line_start": 6,
+          "line_end": 16,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_kankyo_static.h#L6-L16"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_kytag11.cpp",
+          "line_start": 73,
+          "line_end": 80,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag11.cpp#L73-L80"
+        }
+      ],
+      "limitations": [
+        "Rutas seleccionadas de fuente; sin simulación de calendario, cambio de escena ni audio runtime.",
+        "No generalizar orden entre todos los perfiles ni efectos de todos los tags/climas."
+      ]
+    },
+    {
+      "id": "PRES-043",
+      "claim": "setDaytime escribe Time,invoca wrappers audio de hora/minuto/weekday y después escribe Date; weekday lee Date del estado guardado en memoria. Los setters apuntan a PlayerStatusB,no escriben CARD por sí mismos.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 1648,
+          "line_end": 1664,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L1648-L1664"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_kankyo.cpp",
+          "line_start": 9609,
+          "line_end": 9613,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L9609-L9613"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_com_inf_game.cpp",
+          "line_start": 3160,
+          "line_end": 3174,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L3160-L3174"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_save.h",
+          "line_start": 201,
+          "line_end": 204,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_save.h#L201-L204"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/m_Do/m_Do_audio.h",
+          "line_start": 114,
+          "line_end": 127,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/m_Do/m_Do_audio.h#L114-L127"
+        }
+      ],
+      "limitations": [
+        "Rutas seleccionadas de fuente; sin simulación de calendario, cambio de escena ni audio runtime.",
+        "No generalizar orden entre todos los perfiles ni efectos de todos los tags/climas."
       ]
     }
   ],
