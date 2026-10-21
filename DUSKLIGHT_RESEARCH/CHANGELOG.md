@@ -133,3 +133,7 @@ Padre remoto verificado b54c598a2ec269ceacf15c390e4d075cb400fad6. +5 evidencias 
 ## CP-R31 — Reset PLAY→OPENING: gates,preparación y aceptación de cola
 
 Padre remoto verificado 74d7eecf7528867aa1fe43d47652a44f33e2b9bc. +5 evidencias ARCH-012..016 (4 contrastadas,1 inferencia condicionada),+4 localizadores,+0 documentos. ARCH-012..016 contrastan reset y entrada OPENING compartida con PLAY. Next-stage se reactiva,SaveSync consulta sin IO,request/retarget ignorados; se delimita elegibilidad de ID previo. Sin runtime/ABI Windows ni rollback global comprobados. Sin mod/build/runtime; solo documentación.
+
+## CP-R32 — Modelos simples: clave compartida,lista temporal y baja
+
+Padre remoto verificado 85e959b8b558fa7be6bf558699101d0003f7fa15. +4 evidencias PRES-078..081,+3 localizadores,+0 documentos. PRES-078..081 contrastan Sakuita→simple-model(ModelData+room)→lista raw→draw→remove/scene cleanup. Dos capacidades8/500,fallos sin abort actor y bajas sin ACK. dMdl_mng es distinto;sin LOD/skin ni render Windows probado. Sin mod/build/runtime; solo documentación.

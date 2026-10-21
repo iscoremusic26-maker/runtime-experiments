@@ -448,17 +448,25 @@
   {
     "system_id": "models_animations_materials",
     "coverage": "READ",
-    "scope": "READ global; cadena AutoMata archive→morf/BCK/BTK→execute/draw→teardown contrastada,además de muestreo J3D previo.",
+    "scope": "READ global; AutoMata y CP-R32 Sakuita/simple-model registro/listas/cleanup contrastados selectivamente,LOD/skin general pendientes.",
     "reports": [
       "systems/models_animations_materials.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_obj_sakuita.h",
+      "include/d/d_simple_model.h",
+      "include/global.h",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
+      "src/d/actor/d_a_obj_sakuita.cpp",
+      "src/d/d_com_inf_game.cpp",
       "src/d/d_resorce.cpp",
+      "src/d/d_s_play.cpp",
+      "src/d/d_simple_model.cpp",
       "src/dusk/mods/svc/texture.cpp",
+      "src/f_pc/f_pc_manager.cpp",
       "src/m_Do/m_Do_ext.cpp"
     ],
     "pending": [
@@ -466,23 +474,33 @@
       "Todos los fallos de alloc/disposers,sharing simultáneo y orden GPU no auditados."
     ],
     "paths": [
+      "include/d/actor/d_a_obj_sakuita.h",
+      "include/d/d_simple_model.h",
+      "include/global.h",
       "include/m_Do/m_Do_ext.h",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
       "sdk/include/mods/svc/interp.h",
       "src/d/actor/d_a_obj_automata.cpp",
+      "src/d/actor/d_a_obj_sakuita.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_resorce.cpp",
+      "src/d/d_s_play.cpp",
+      "src/d/d_simple_model.cpp",
       "src/dusk/mods/svc/texture.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_pc/f_pc_manager.cpp",
       "src/m_Do/m_Do_ext.cpp"
     ],
     "dependencies": [
       "resources_archives_overlays",
       "memory_ownership",
-      "cameras_rendering"
+      "cameras_rendering",
+      "runtime_and_lifecycle",
+      "stages_rooms_layers",
+      "actors_ai_npcs"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -493,7 +511,11 @@
       "PRES-044",
       "PRES-045",
       "PRES-046",
-      "PRES-047"
+      "PRES-047",
+      "PRES-078",
+      "PRES-079",
+      "PRES-080",
+      "PRES-081"
     ]
   },
   {

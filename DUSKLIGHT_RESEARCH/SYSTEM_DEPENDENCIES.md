@@ -77,3 +77,5 @@ CP-R29: KYTAG07 posee LIGHT_INFLUENCE→kankyo presta puntero→selector por pos
 CP-R30: B_DS2/colliders→daño/cc_at_check→DEAD→potential event/INDEMO→cámara/timers→switches/progreso/reward PC→delete/resource/audio. PLAYER-052..056; IO save y concesión diferida fuera de esa llamada. Véase combat_damage.
 
 CP-R31: PLAY Draw/Execute→resetToOpening→card command/SaveSync→nextStage/audio/restart→ChangeReq/ReRequest→perfil OPENING compartido→resource/audio gates→startStage/TITLE/reset cleanup. ARCH-012..016; sidecar/IO no confirmados por esta cadena.
+
+CP-R32: archive→ModelData prestado→modelo Sakuita(heap actor) y dummy(heap gestor)→lista temporal500→room gate/J3D→reset lista; bajas balanceadas y teardown scene separados del archive. PRES-078..081. dMdl_mng_c es otro gestor,no alias del simple-model.

@@ -8552,5 +8552,92 @@
     "evidence_ids": [
       "ARCH-016"
     ]
+  },
+  {
+    "symbol": "dSmplMdl_draw_c::addModel",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_simple_model.cpp",
+      "line_start": 82,
+      "line_end": 110,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_simple_model.cpp#L82-L110"
+    },
+    "signature": "BOOL dSmplMdl_draw_c::addModel(J3DModelData*, int roomNo, u8 drawBG)",
+    "purpose": "Registra clave compartida con capacidad8 y count",
+    "dependencies": [
+      "diff_model_c::create",
+      "diff_model_c::isSame"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ModelData vivo y room válido"
+    ],
+    "risks": [
+      "Sin ownership mod; misma clave conserva primer drawBG"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-079"
+    ]
+  },
+  {
+    "symbol": "dSmplMdl_draw_c::entry",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_simple_model.cpp",
+      "line_start": 66,
+      "line_end": 80,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_simple_model.cpp#L66-L80"
+    },
+    "signature": "void dSmplMdl_draw_c::entry(J3DModel* i_model, int roomNo)",
+    "purpose": "Presta instancia a lista temporal hasta500",
+    "dependencies": [
+      "diff_model_c::insert",
+      "dSmplMdl_draw_c::draw"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Modelo vivo hasta consumidor; registro compatible"
+    ],
+    "risks": [
+      "Sin ACK; count aumenta aun sin matching"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-080"
+    ]
+  },
+  {
+    "symbol": "diff_model_c::remove",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_simple_model.cpp",
+      "line_start": 170,
+      "line_end": 185,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_simple_model.cpp#L170-L185"
+    },
+    "signature": "void diff_model_c::remove(int param_0)",
+    "purpose": "Balancea alta; libera dummy heap en último/force",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Balance correcto y clave encontrada"
+    ],
+    "risks": [
+      "No purga toda instancia enviada ni libera archive"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-081"
+    ]
   }
 ]

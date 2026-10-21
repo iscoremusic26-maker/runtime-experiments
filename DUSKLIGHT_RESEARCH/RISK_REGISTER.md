@@ -65,3 +65,5 @@ CP-R29 · R-35: registro prioritario void puede saturarse aun con Create COMPLEA
 CP-R30 · R-36: HP letal,ACT_B2_DEAD,mDead,flags,reward encolado y destructor son hitos distintos. Borrado anticipado no ejecuta restauración de cámara/progreso del modo28; callback de joint presta this y cleanup total de externos no certificado. PLAYER-052..056; inferencia condicionada,sin fallo runtime.
 
 CP-R31 · R-37: reset helper1 no confirma cola; next-stage se reactiva antes de request y audio/restart no se revierten. ReRequest puede redirigir request previo SOLO si sigue vivo,tipo2,mismo ID y creating_id−2; no revive objeto liberado. SaveSync0 no es ACK. ARCH-012..016; inferencias condicionadas,sin fallo runtime.
+
+CP-R32 · R-38: add fallido no aborta Sakuita; envío sin matching consume capacidad y remove wrapper no confirma baja. Punteros modelo prestados hasta draw,count de altas no es count de instancias,room/primer drawBG forman restricciones distintas. PRES-078..081; riesgo de lifetime condicionado,sin fallo runtime.
