@@ -1106,25 +1106,49 @@
   },
   {
     "system_id": "port_support",
-    "coverage": "INVENTARIED",
-    "scope": "Rutas nominales de soporte; no se acredita revisión integral de implementaciones.",
+    "coverage": "READ",
+    "scope": "Logros internos contrastados: señal→check→UI/persistencia; resto del soporte conserva inventario nominal.",
     "reports": [
-      "SYSTEM_DEPENDENCIES.md",
-      "INVENTORY.md"
+      "systems/port_achievements.md",
+      "SYSTEM_DEPENDENCIES.md"
     ],
     "paths": [
+      "src/d/d_menu_letter.cpp",
       "src/dusk/achievements.cpp",
+      "src/dusk/achievements.h",
       "src/dusk/config.cpp",
       "src/dusk/discord_presence.cpp",
+      "src/dusk/io.cpp",
+      "src/dusk/iso_validate.cpp",
       "src/dusk/livesplit.cpp",
-      "src/dusk/iso_validate.cpp"
+      "src/dusk/mods/svc/registry.cpp",
+      "src/dusk/ui/achievements.cpp",
+      "src/f_ap/f_ap_game.cpp"
     ],
-    "dependencies": [],
+    "dependencies": [
+      "runtime_and_lifecycle",
+      "hud_ui_text",
+      "flags_events_progression"
+    ],
     "pending": [
-      "Lectura por mecanismo según prioridad; sin contarlo como sistema estudiado."
+      "Resto de checks de logros, errores de JSON/IO y modo/reset completos.",
+      "Speedrun/LiveSplit,presence,diagnostics y otros auxiliares aún nominales."
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
-    "evidence_ids": []
+    "evidence_ids": [
+      "PORT-001",
+      "PORT-002",
+      "PORT-003",
+      "PORT-004",
+      "PORT-005"
+    ],
+    "files_examined": [
+      "src/dusk/achievements.cpp",
+      "src/dusk/achievements.h",
+      "src/dusk/ui/achievements.cpp",
+      "src/dusk/io.cpp",
+      "src/d/d_menu_letter.cpp"
+    ]
   },
   {
     "system_id": "external_dependencies",

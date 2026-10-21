@@ -1,13 +1,15 @@
-# Continuidad — CP-R07
+# Continuidad — CP-R08
 
-Rama exacta research/dusklight-203-dusk-atlas; solo DUSKLIGHT_RESEARCH. Fuente fija40457c6adb381928e4b5fef6ed459ed291edd5e2; Windows x64/DX12/GZ2E01. Padre remoto comprobado: CP-R06 c6087f189b4e9c9a81275c3227861f9f51026c93; consultar HEAD para el commit de este handoff.
+Continuar research/dusklight-203-dusk-atlas; solo DUSKLIGHT_RESEARCH. Fuente40457c6adb381928e4b5fef6ed459ed291edd5e2; Windows x64/DX12/GZ2E01. Padre remoto comprobado: CP-R07 999fa3453b7ceac9d8df0bee6ff197e504c37fb3; consultar HEAD para el SHA que contiene este handoff.
 
-Acumulado:192 evidencias,209 símbolos,19 fichas. Esta sesión añade ocho evidencias y siete símbolos sin documentos nuevos. CP-R06 estudió Item resolvers/snapshot y consumidor cofre. CP-R07 alternó a HUD: logo/font archive→JUTResFont→dFile_info_c/J2DTextBox→release. getMesgFont incrementa referencia, setFont presta el puntero, JUTResFont presta bytes BFN; PC exige formato de glyph/texture concreto. No ejecutar ni inferir un overlay gráfico probado.
+Esta sesión: Item resolvers (CALLBACK-005..008), fuente BFN/J2D y consumidor (PRES-036..039), logros internos del port (PORT-001..005). Neto+13 evidencias,+11 símbolos,+1 documento; total197/213/20 fichas. port_support pasa a READ por logros; quedan otros auxiliares nominales. HUD sigue READ con la cadena font contrastada.
 
-HUD permanece READ global; el subflujo citado es CROSSCHECKED. Próxima acción exacta: alternar a Q-13, soporte del port; seguir un mecanismo acotado de achievements (carga/estado/mode gate/tick/persistencia) leyendo solo código, sin abrir JSON de usuario ni su cuenta. Comprobar si se trata de UI interna o servicio SDK y publicar CP-R08 antes de otro estudio. No repetir inventario ni matriz SDK.
+AchievementSystem usa archivo propio, no SaveService por slot. Gates de modo/launch cambian la vida de señales; load fija loaded antes de leer y save captura errores mientras tick borra dirty. No hubo datos personales abiertos ni prueba de fallo/runtime. No existe AchievementService publicado en la lista SDK del pin.
 
-Comprobar HEAD y leer handoff/cobertura antes de escribir. Source y atlas locales están en work/source/dusklight-2.0.3 y work/atlas/DUSKLIGHT_RESEARCH, rutas efímeras. Ejecutar validador revisado; si falla no publicar. Usar conector GitHub, tree/padre actuales y expected_sha sin force; leer ref y archivo cambiado para certificar publicación. No PR nuevo,merge,tag,release,upstream,SDK,producción,PR80/81 ni CI65/66. No prompts,assets originales o secretos en commits.
+Primera acción siguiente: alternar a Q-11, entorno/tiempo. Leer systems/environment_weather_time.md y seguir una cadena de avance del reloj del juego, normalización día/noche y efectos sobre save/audio, con consumidor real. Distinguir tiempo simulado, reloj del port y persistencia; publicar CP-R09 sin rehacer inventario ni fuente. Si no hay margen, seguir esa misma acción en otra sesión.
 
-Checkpoints útiles cada3–5 minutos activos cuando sea viable; máximo2–3 lecturas paralelas tras checkpoint seguro. Sin build de .dusk, juego, validación binaria Windows ni trabajo de fondo. Cuatro submódulos y byte mismatch Android mantienen sus límites documentados.
+Usar fuente certificada local work/source/dusklight-2.0.3 y atlas work/atlas/DUSKLIGHT_RESEARCH si existen; son efímeros. Leer HEAD actual y handoff antes de escribir. Revisar/ejecutar tools/validate_atlas.py; error impide publicar. Usar conector GitHub, padre/tree actuales y expected_sha sin force; comprobar HEAD y archivo remoto tras commit. Solo investigación documental, sin PR nuevo,merge,tag,release,cambios en producción/SDK/upstream/PR80/81/CI65/66. No subir prompts ni recursos protegidos.
+
+Checkpoints útiles cada3–5 minutos activos cuando sea viable; limitar lecturas paralelas a2–3 tras checkpoint seguro. Cuatro submódulos y falta de runtime Windows conservan sus límites. No hay ejecución de fondo.
 
 NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED.

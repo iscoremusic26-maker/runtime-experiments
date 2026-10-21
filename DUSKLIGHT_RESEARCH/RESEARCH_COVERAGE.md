@@ -1,12 +1,12 @@
-# Cobertura real — CP-R07
+# Cobertura real — CP-R08
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **19 fichas de sistemas, 192 evidencias y 209 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 5 READ y 5 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **20 fichas de sistemas, 197 evidencias y 213 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 209 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 213 registros.
 
 ## Estado por área
 
@@ -38,7 +38,7 @@ Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implem
 | `build_tooling` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
 | `documentation` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
 | `game_support` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
-| `port_support` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
+| `port_support` | READ | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
 | `external_dependencies` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
 
 CROSSCHECKED: declaraciones/contrato, implementación y usos seleccionados contrastados con límites explícitos. READ: implementación consultada con flujo/dependencias todavía parciales. INVENTARIED: rutas localizadas; no prueba comprensión. Cada evidencia conserva su propio nivel y puede ser más limitado que una parte ya contrastada del mismo sistema.
@@ -58,3 +58,5 @@ Continuación observada desde 2026-10-21T13:48:44Z hasta 2026-10-21T14:15:46Z an
 CP-R06 añade cuatro evidencias y tres símbolos sobre Item resolvers, con consumidor TARGET_PC del cofre. No amplía el número de servicios auditados ni acredita todas las rutas Item. El snapshot no revalida handle; no se atribuye permiso de reentrancia al contrato. Q-01/Q-02 siguen parcialmente abiertos.
 
 CP-R07 contrasta adquisición, uso y liberación de fuente BFN/JUTResFont en file-info. Cuatro evidencias y cuatro símbolos nuevos; HUD permanece READ global y la cadena citada es CROSSCHECKED. Ninguna sustitución gráfica fue ejecutada.
+
+CP-R08 añade una ficha real de soporte (logros), cinco evidencias y cuatro símbolos. Port_support pasa a READ global por la cadena seleccionada; otros auxiliares no se declaran estudiados. Se leyó código de IO sin abrir achievements.json ni datos del usuario.

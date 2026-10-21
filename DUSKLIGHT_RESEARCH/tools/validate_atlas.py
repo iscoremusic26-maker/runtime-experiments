@@ -58,7 +58,7 @@ def main():
         if p.suffix=='.json':parse_json(p)
         if p.suffix!='.md':continue
         text=p.read_text()
-        for evidence_id in re.findall(r'\b(?:SDK|HOOK|WORLD|PLAYER|PRES|ROOT|HIST|CALLBACK|ARCH)-\d{3}\b',text):
+        for evidence_id in re.findall(r'\b(?:SDK|HOOK|WORLD|PLAYER|PRES|ROOT|HIST|CALLBACK|ARCH|PORT)-\d{3}\b',text):
             assert evidence_id in ids,('Unknown evidence ID in Markdown',name,evidence_id)
         for target in re.findall(r'\]\(([^)]+)\)',text):
             if '://' in target or target.startswith('#'):continue

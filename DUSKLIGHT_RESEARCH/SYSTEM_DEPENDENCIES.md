@@ -29,3 +29,5 @@ Los encabezados de recursos regionales localizan IDs; no son miles de implementa
 Para ampliar una arista: abrir la evidencia citada, confirmar proveedor y consumidor en el mismo SHA, seguir estado/error/cleanup, actualizar ledger y cobertura, y publicar un checkpoint antes de ampliar el siguiente flujo.
 
 FontArchive → JUTResFont (backing prestado/tablas propias) → J2DTextBox (font prestado) → owner file-info (referencia global): PRES-036..039. Hay dos niveles de ownership; destruir un pane no equivale a liberar la referencia mDoExt ni los bytes BFN. La ruta completa seleccionada está en HUD, sin promover todas las pantallas a CROSSCHECKED.
+
+GameMode/scheduler + señales de menús/actores → AchievementSystem → snapshots/toasts UI y archivo propio: PORT-001..005. El circuito no es SaveService por slot ni un AchievementService público. port_support pasa a READ por esta cadena; otras familias siguen nominales. Ver [logros internos](systems/port_achievements.md).

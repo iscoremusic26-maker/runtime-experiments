@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R07",
+  "checkpoint": "CP-R08",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -6911,6 +6911,197 @@
       "limitations": [
         "No se certifica compatibilidad de cualquier BFN, glifo, charset, backend o overlay.",
         "Respaldo del recurso debe conservarse mientras font use sus bloques; no se ensayó reload visual."
+      ]
+    },
+    {
+      "id": "PORT-001",
+      "claim": "AchievementSystem mantiene entradas/checks/extra y señales internas; getAchievements devuelve copia usada como snapshot por la UI.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.h",
+          "line_start": 32,
+          "line_end": 67,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.h#L32-L67"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1179,
+          "line_end": 1193,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1179-L1193"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/achievements.cpp",
+          "line_start": 103,
+          "line_end": 108,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/achievements.cpp#L103-L108"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/achievements.cpp",
+          "line_start": 182,
+          "line_end": 191,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/achievements.cpp#L182-L191"
+        }
+      ],
+      "limitations": [
+        "Fuente/call sites contrastados; no ejecución de juego/UI ni error de IO reproducido.",
+        "No se abrieron datos personales ni se auditó cada criterio de logro."
+      ]
+    },
+    {
+      "id": "PORT-002",
+      "claim": "Tick de logros corre tras scheduler/GameMode; acepta solo vanilla o speedrun, limpia señales en modo excluido y en camino normal, pero retorna sin limpiarlas si IsGameLaunched es false. No existe AchievementService registrado.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1305,
+          "line_end": 1325,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1305-L1325"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 824,
+          "line_end": 842,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L824-L842"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 263,
+          "line_end": 296,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L263-L296"
+        }
+      ],
+      "limitations": [
+        "Fuente/call sites contrastados; no ejecución de juego/UI ni error de IO reproducido.",
+        "No se abrieron datos personales ni se auditó cada criterio de logro."
+      ]
+    },
+    {
+      "id": "PORT-003",
+      "claim": "Menú de cartas emite open_letter; un check cruza señal y presencia de actor, y processEntry transforma progreso en unlock/toast/dirty. No es simple estado de UI.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_letter.cpp",
+          "line_start": 594,
+          "line_end": 604,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_letter.cpp#L594-L604"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 774,
+          "line_end": 788,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L774-L788"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1250,
+          "line_end": 1262,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1250-L1262"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1276,
+          "line_end": 1302,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1276-L1302"
+        }
+      ],
+      "limitations": [
+        "Fuente/call sites contrastados; no ejecución de juego/UI ni error de IO reproducido.",
+        "No se abrieron datos personales ni se auditó cada criterio de logro."
+      ]
+    },
+    {
+      "id": "PORT-004",
+      "claim": "Load de logros fija m_loaded antes de leer, aplica campos sobre entradas conocidas y captura excepciones; no implica lectura completa ni rollback de campos ya aplicados.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1195,
+          "line_end": 1223,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1195-L1223"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1312,
+          "line_end": 1316,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1312-L1316"
+        }
+      ],
+      "limitations": [
+        "Fuente/call sites contrastados; no ejecución de juego/UI ni error de IO reproducido.",
+        "No se abrieron datos personales ni se auditó cada criterio de logro."
+      ]
+    },
+    {
+      "id": "PORT-005",
+      "claim": "Save de logros serializa progress/unlocked/extra en achievements.json, captura excepción y retorna void; tick limpia dirty tras retorno sin resultado de IO. No hay confirmación de durabilidad ni reintento conservado por ese camino.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1225,
+          "line_end": 1243,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1225-L1243"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1321,
+          "line_end": 1325,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1321-L1325"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/io.cpp",
+          "line_start": 178,
+          "line_end": 182,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/io.cpp#L178-L182"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/achievements.cpp",
+          "line_start": 1245,
+          "line_end": 1274,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1245-L1274"
+        }
+      ],
+      "limitations": [
+        "Fuente/call sites contrastados; no ejecución de juego/UI ni error de IO reproducido.",
+        "No se abrieron datos personales ni se auditó cada criterio de logro."
       ]
     }
   ],

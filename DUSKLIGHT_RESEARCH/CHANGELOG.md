@@ -37,3 +37,7 @@ Contrastados contrato 2.3, registro/retirada, copia PendingResolve sin handle, o
 ## CP-R07 — fuente BFN, ownership J2D y consumidor file-info
 
 Contrastados provider logo/font archive, initFontCommon y rama PC, refcount mDoExt, JUTResFont con backing prestado, binding J2DTextBox y release del consumidor. Cuatro evidencias y cuatro símbolos netos. HUD mantiene READ global con una cadena CROSSCHECKED; no validación de glifos, overlay ni rendering runtime.
+
+## CP-R08 — logros internos del port y persistencia
+
+Cadena señal de menú→check→progress/unlock→UI/JSON contrastada, con gates vanilla/speedrun y loaded/dirty. Un retorno de save no confirma IO ni conserva retry bajo fallo capturado. Cinco evidencias y cuatro símbolos; nueva ficha real, port_support READ parcial. Sin leer datos personales ni registrar un supuesto AchievementService inexistente.

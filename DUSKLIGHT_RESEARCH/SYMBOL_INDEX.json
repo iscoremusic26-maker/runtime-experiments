@@ -5940,5 +5940,135 @@
     "evidence_ids": [
       "PRES-039"
     ]
+  },
+  {
+    "symbol": "dusk::AchievementSystem::tick",
+    "kind": "method",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/achievements.cpp",
+      "line_start": 1305,
+      "line_end": 1325,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1305-L1325"
+    },
+    "signature": "void AchievementSystem::tick()",
+    "purpose": "Gates por modo/launch, recorrido de checks y persistencia dirty.",
+    "dependencies": [
+      "Achievement",
+      "GameModeManager"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Subsistema interno, sin AchievementService en SDK.",
+      "Respetar fase game loop y lifetime de claves/estado; no mutar datos personales en esta investigación."
+    ],
+    "risks": [
+      "Save/load no ofrecen confirmación de IO al caller; mode gate altera señales.",
+      "Disponibilidad de enlace/target Windows y concurrencia no verificadas."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-002",
+      "PORT-005"
+    ]
+  },
+  {
+    "symbol": "dusk::AchievementSystem::load",
+    "kind": "method",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/achievements.cpp",
+      "line_start": 1195,
+      "line_end": 1223,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1195-L1223"
+    },
+    "signature": "void AchievementSystem::load()",
+    "purpose": "Carga estado por key y marca loaded antes de IO.",
+    "dependencies": [
+      "Achievement",
+      "GameModeManager"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Subsistema interno, sin AchievementService en SDK.",
+      "Respetar fase game loop y lifetime de claves/estado; no mutar datos personales en esta investigación."
+    ],
+    "risks": [
+      "Save/load no ofrecen confirmación de IO al caller; mode gate altera señales.",
+      "Disponibilidad de enlace/target Windows y concurrencia no verificadas."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-004"
+    ]
+  },
+  {
+    "symbol": "dusk::AchievementSystem::save",
+    "kind": "method",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/achievements.cpp",
+      "line_start": 1225,
+      "line_end": 1243,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1225-L1243"
+    },
+    "signature": "void AchievementSystem::save()",
+    "purpose": "Serializa estado interno; captura errores sin retorno al caller.",
+    "dependencies": [
+      "Achievement",
+      "GameModeManager"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Subsistema interno, sin AchievementService en SDK.",
+      "Respetar fase game loop y lifetime de claves/estado; no mutar datos personales en esta investigación."
+    ],
+    "risks": [
+      "Save/load no ofrecen confirmación de IO al caller; mode gate altera señales.",
+      "Disponibilidad de enlace/target Windows y concurrencia no verificadas."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-005"
+    ]
+  },
+  {
+    "symbol": "dusk::AchievementSystem::signal",
+    "kind": "method",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/achievements.cpp",
+      "line_start": 1250,
+      "line_end": 1252,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/achievements.cpp#L1250-L1252"
+    },
+    "signature": "void AchievementSystem::signal(const char*)",
+    "purpose": "Acumula señal por clave string_view para checks.",
+    "dependencies": [
+      "Achievement",
+      "GameModeManager"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Subsistema interno, sin AchievementService en SDK.",
+      "Respetar fase game loop y lifetime de claves/estado; no mutar datos personales en esta investigación."
+    ],
+    "risks": [
+      "Save/load no ofrecen confirmación de IO al caller; mode gate altera señales.",
+      "Disponibilidad de enlace/target Windows y concurrencia no verificadas."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-001",
+      "PORT-003"
+    ]
   }
 ]

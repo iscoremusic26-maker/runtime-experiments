@@ -21,3 +21,5 @@ Riesgos derivados del commit fijado. No son fallos observados durante ejecución
 | R-15 | Actualización “por frame” usa tiempo de presentación para política de actor | ARCH-001, ROOT-007, HOOK-018 | Separar tick de simulación, execute de actor y presentación; pausa/captura/errores alteran rutas. |
 
 Un rollback de registros no deshace mutaciones arbitrarias de inventario, flags, posiciones, archivos o servicios externos. Restaurar únicamente estado propio y aún compatible con el contexto; reingreso/reinicio puede ser necesario cuando un consumidor conserva objetos. No se propone modificar host, SDK, EXE, ROM ni saves como mecanismo de implementación .dusk.
+
+R-16 — Persistencia interna del port no debe confundirse con SaveService: AchievementSystem fija loaded antes de IO, captura errores y tick limpia dirty después de save. No interpretar snapshot UI o toast como confirmación durable. PORT-004/005; sin fallo reproducido ni acceso a archivos del usuario.
