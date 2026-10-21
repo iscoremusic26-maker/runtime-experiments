@@ -1,0 +1,194 @@
+{
+  "repository": "TwilitRealm/dusklight",
+  "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "tree": "e4b79b565b2842f711f7c9f2390f56ef11063157",
+  "tag": "v2.0.3",
+  "root_entries": [
+    {
+      "path": ".clang-format",
+      "sha": "1cf581604c05aa921895a2a2e31c4ba57f3cf60f",
+      "type": "file"
+    },
+    {
+      "path": ".clangd",
+      "sha": "2f4f2ac4b8f15aa00b0c43467a537cbbe5e3d689",
+      "type": "file"
+    },
+    {
+      "path": ".flake8",
+      "sha": "3dd31e6e91374afb055d5fccfdbe844f6b1f2b2d",
+      "type": "file"
+    },
+    {
+      "path": ".gitattributes",
+      "sha": "47d43017a2205cd08f3cf0bc043dd617fe9c858a",
+      "type": "file"
+    },
+    {
+      "path": ".github",
+      "sha": "cca2865b8a8ba6d3382c418f26b203ad3b1cd439",
+      "type": "dir"
+    },
+    {
+      "path": ".gitignore",
+      "sha": "43b2e4a1c3df7ade39e6edd4c1e893b26dab932c",
+      "type": "file"
+    },
+    {
+      "path": ".gitmodules",
+      "sha": "881f8f524b3914b6502babebbe030feccadee82b",
+      "type": "file"
+    },
+    {
+      "path": ".vscode",
+      "sha": "e3ba078d6cd980359900edb59888d67a7c7ff2d7",
+      "type": "dir"
+    },
+    {
+      "path": "CMakeLists.txt",
+      "sha": "79ad791ebafd6a4d7aae2ce4f158219abd710082",
+      "type": "file"
+    },
+    {
+      "path": "CMakePresets.json",
+      "sha": "0a6aa77a08db03a43474a900b662210e9ad66b21",
+      "type": "file"
+    },
+    {
+      "path": "LICENSE.md",
+      "sha": "1625c1793607996fcfc46420e8aa2f3d2b7efd1e",
+      "type": "file"
+    },
+    {
+      "path": "README.md",
+      "sha": "7445e43ea9fbdbf35d5a905c5ecf48998cdf7147",
+      "type": "file"
+    },
+    {
+      "path": "assets",
+      "sha": "5e19d6152269535643cc779012a52e0ef56a248f",
+      "type": "dir"
+    },
+    {
+      "path": "ci",
+      "sha": "c2607c865ec6f1a7e6ebadde6f545cb1d726818f",
+      "type": "dir"
+    },
+    {
+      "path": "cmake-variants.yaml",
+      "sha": "37edcede950a6fcb53d31b376d8da412e4927154",
+      "type": "file"
+    },
+    {
+      "path": "cmake",
+      "sha": "15c7214b7e011eaa9816fe31937aa98c446b59d4",
+      "type": "dir"
+    },
+    {
+      "path": "docs",
+      "sha": "451de299d56761a4e54cdb6f6ddb255b976710dd",
+      "type": "dir"
+    },
+    {
+      "path": "extern",
+      "sha": "d0f0ad4196edaf17d674d91e4a1c6b0ae24c6c8f",
+      "type": "dir"
+    },
+    {
+      "path": "files.cmake",
+      "sha": "18b44daa59222fd10a4ff698dbffd2f284e2c5f8",
+      "type": "file"
+    },
+    {
+      "path": "fix-cmake-paths.patch",
+      "sha": "202a42fbd6e47cd2a743be941ff8123cf4b54102",
+      "type": "file"
+    },
+    {
+      "path": "flake.lock",
+      "sha": "08dc0f458c0b60b518738ec2729bf8033eae15fd",
+      "type": "file"
+    },
+    {
+      "path": "flake.nix",
+      "sha": "01a20fad2d1b63a2c655e42fa478f3247756fe45",
+      "type": "file"
+    },
+    {
+      "path": "include",
+      "sha": "bd42bbee4fc0d6e810506278ccbb140b5fac88b3",
+      "type": "dir"
+    },
+    {
+      "path": "ios.toolchain.cmake",
+      "sha": "73d617ae457ac9135a296b32aae9e785ba60178c",
+      "type": "file"
+    },
+    {
+      "path": "libs",
+      "sha": "1e7013d95e793aa04fa8f75b84118364765256fb",
+      "type": "dir"
+    },
+    {
+      "path": "mods",
+      "sha": "80a8ad10751fd20789d08b9c34f612a7f9835a29",
+      "type": "dir"
+    },
+    {
+      "path": "platforms",
+      "sha": "3c861972ac9c55788bb07e3560dec39890a3fe27",
+      "type": "dir"
+    },
+    {
+      "path": "res",
+      "sha": "6f6dc62e9310c514e264cc7529d639bf9220346a",
+      "type": "dir"
+    },
+    {
+      "path": "sdk",
+      "sha": "e8d0eadd5144389cc2a864015215f847b14664ff",
+      "type": "dir"
+    },
+    {
+      "path": "src",
+      "sha": "214393d7957c74fbef9c38ea7d771e8e9bc0fb5f",
+      "type": "dir"
+    },
+    {
+      "path": "tools",
+      "sha": "85e32e58e30ca2b2c3d47ffed2ba2b1432e624ed",
+      "type": "dir"
+    }
+  ],
+  "submodules": [
+    {
+      "path": "extern/aurora",
+      "sha": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+      "available": false
+    },
+    {
+      "path": "extern/borealis",
+      "sha": "4ac5e7052a8c49a122f8d57f626b5c75c5ca6968",
+      "available": false
+    },
+    {
+      "path": "mods/cosmetics",
+      "sha": "fd93491089fa95441789244f2b2fd22a451ecbcc",
+      "available": false
+    },
+    {
+      "path": "mods/randomizer",
+      "sha": "1f24e81303536db4b77f49d057a8ec1f11162000",
+      "available": false
+    }
+  ],
+  "known_local_mismatches": [
+    {
+      "path": "platforms/android/gradlew.bat",
+      "local_blob_sha": "e509b2dd8fe5579a5954a2c28633ad914cd1c225",
+      "upstream_blob_sha": "c4bdd3ab8e3ccd2ac3a2bc0db0f856f16b79ef39",
+      "status": "NOT_EXAMINED_NOT_CITED",
+      "reason": "Different bytes; newline equivalence has not been established."
+    }
+  ]
+}
