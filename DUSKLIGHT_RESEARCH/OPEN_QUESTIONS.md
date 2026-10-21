@@ -4,8 +4,8 @@ Todas se refieren al SHA fijado. Se evita repetir lo ya respondido; cada pregunt
 
 | ID / estado | Qué falta y por qué importa | Próximo paso mínimo |
 | --- | --- | --- |
-| Q-01 · PARCIAL | Item resolvers contrastados en CALLBACK-005..008; Message y otros dispatchers siguen pendientes | Leer una implementación y un consumidor, comparar snapshot/lookup/ownership con CALLBACK-001..004; no generalizar desde nombres. |
-| Q-02 · PARCIAL | Item copia defensivamente pero su contrato exige resolver sin efectos secundarios; no hay garantía general de reentrancia | Contrastar encabezado y bucle concreto de un servicio; documentar límites de colección y vigencia. |
+| Q-01 · PARCIAL | Item y Message contrastados en CALLBACK-005..013; otros dispatchers pendientes | Elegir otro dispatcher con hueco concreto; no repetir Save/Host/Camera/Item/Message ni inferir barrera universal. |
+| Q-02 · PARCIAL | Item exige side-effect-free; Message copia sin revalidar handle/active y conserva texto separado de callback; sin garantía general de reentrancia | Contrastar encabezado y bucle concreto de un servicio; documentar límites de colección y vigencia. |
 | Q-03 · NOT_VERIFIED | Perfil propio cuyo unregister falla durante teardown | Seguir actor_remove_mod/loader y rutas de creación pendientes; determinar exactamente qué estado queda, sin afirmar crash ni solución SDK. |
 | Q-04 · NOT_VERIFIED | Símbolos exportados/resolubles y layouts en imagen Windows x64 concreta | Consultar evidencia histórica exacta o manifest/import library ya disponible sin recompilar; si no existe, mantener límite binario. |
 | Q-05 · BLOCKED local | Aurora/Borealis internos, incluidos DX12, DVD/CARD y garantías externas de unregister | Consultar solo archivo necesario al SHA del gitlink si hay acceso; no instalar ni auditar todo el tercero antes de avanzar en fuente principal. |

@@ -1,12 +1,12 @@
-# Cobertura real — CP-R11
+# Cobertura real — CP-R12
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **20 fichas de sistemas, 211 evidencias y 225 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **20 fichas de sistemas, 216 evidencias y 229 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 225 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 229 registros.
 
 ## Estado por área
 
@@ -47,7 +47,7 @@ CROSSCHECKED: declaraciones/contrato, implementación y usos seleccionados contr
 
 Se validan estructura JSON, unicidad, IDs cruzados, dependencias, enlaces relativos y rangos de código del pin. El reporte distingue ocurrencias de citas de rangos únicos. Las referencias históricas usan metadatos de archivos recuperados por SHA; CI observada se limita a estados/jobs. Esta verificación editorial no certifica semántica completa, exportaciones, compilación ni runtime.
 
-Cuatro submódulos no disponibles localmente; diferencia Android excluida de afirmaciones; offsets/STATIC_ASSERT históricos no miden ABI Windows. Pendientes concretos en OPEN_QUESTIONS, incluidos Message y garantías pendientes de callbacks, fallos de sidecar, teardown de perfiles, símbolos binarios y profundidad de modelos/HUD/clima/NPC/minijuegos.
+Cuatro submódulos no disponibles localmente; diferencia Android excluida de afirmaciones; offsets/STATIC_ASSERT históricos no miden ABI Windows. Pendientes concretos en OPEN_QUESTIONS, incluidas garantías pendientes de callbacks tras contrastar Message, fallos de sidecar, teardown de perfiles, símbolos binarios y profundidad de modelos/HUD/clima/NPC/minijuegos.
 
 Todas las fichas recuperadas de subtareas están integradas en los checkpoints remotos; no se computa un mensaje finished como artefacto. Sin pruebas nuevas de Windows/juego ni mods producidos.
 
@@ -68,3 +68,5 @@ CP-R10: una cadena adicional file-select→PLAY contrastada (ARCH-002..007); +6 
 Esta continuación CP-R10 se registra por separado; duración observada N/D. No se acumula el intervalo entre sesiones.
 
 CP-R11 añade una cadena distinta de recursos gráficos (AutoMata→morf/BCK/BTK→cleanup): +4 evidencias,+4 símbolos,+0 documentos frente a CP-R10. Models permanece READ global. Neto CP-R09→11:+10 evidencias,+10 símbolos,+0 documentos; dos cadenas representativas nuevas,no familias completas.
+
+CP-R12 añade cadena Message callback→copia de texto→binding→retirada/reset,con consumidor: +5 evidencias,+4 símbolos,+0 documentos. Neto CP-R09→12:+15/+14/+0; tres cadenas representativas. Sin promoción de cobertura global ni runtime.

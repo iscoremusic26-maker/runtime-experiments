@@ -6465,5 +6465,140 @@
       "PRES-044",
       "PRES-046"
     ]
+  },
+  {
+    "symbol": "MessageService::override_message_fn",
+    "kind": "service",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/message.h",
+      "line_start": 115,
+      "line_end": 116,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/message.h#L115-L116"
+    },
+    "signature": "ModResult (*override_message_fn)(ModContext*, uint16_t, uint16_t, uint8_t, MessageOverrideFn, void*, MessageOverrideHandle*)",
+    "purpose": "Registrar callback prestado con handle de dueño.",
+    "dependencies": [
+      "MessageService",
+      "JMessage::TControl",
+      "dusk::flow::ActiveBinding"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Caller/fase JMessage válida; callback sincrónico en hilo del caller,no worker implícito.",
+      "Texto devuelto debe seguir legible después del retorno durante validación/copia; no devolver storage local destruido."
+    ],
+    "risks": [
+      "Remove no drena snapshot ni libera binding activo; userdata y código tienen lifetime independiente de texto copiado.",
+      "Sin garantía explícita de reentrancia/hilos arbitrarios ni Windows runtime."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-009",
+      "CALLBACK-010"
+    ]
+  },
+  {
+    "symbol": "MessageService::remove_override",
+    "kind": "service",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/message.h",
+      "line_start": 117,
+      "line_end": 117,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/message.h#L117-L117"
+    },
+    "signature": "ModResult (*remove_override)(ModContext*, MessageOverrideHandle)",
+    "purpose": "Retirar entrada sin drenar snapshots ni bindings.",
+    "dependencies": [
+      "MessageService",
+      "JMessage::TControl",
+      "dusk::flow::ActiveBinding"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Caller/fase JMessage válida; callback sincrónico en hilo del caller,no worker implícito.",
+      "Texto devuelto debe seguir legible después del retorno durante validación/copia; no devolver storage local destruido."
+    ],
+    "risks": [
+      "Remove no drena snapshot ni libera binding activo; userdata y código tienen lifetime independiente de texto copiado.",
+      "Sin garantía explícita de reentrancia/hilos arbitrarios ni Windows runtime."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-011",
+      "CALLBACK-013"
+    ]
+  },
+  {
+    "symbol": "dusk::flow::resolve_message_for_control",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/flow.cpp",
+      "line_start": 1022,
+      "line_end": 1027,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L1022-L1027"
+    },
+    "signature": "bool resolve_message_for_control(JMessage::TControl*, const void*, uint16_t, const void*, const char*, const void*&, const char*&)",
+    "purpose": "Consumidor resuelve y retiene texto por control.",
+    "dependencies": [
+      "MessageService",
+      "JMessage::TControl",
+      "dusk::flow::ActiveBinding"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Caller/fase JMessage válida; callback sincrónico en hilo del caller,no worker implícito.",
+      "Texto devuelto debe seguir legible después del retorno durante validación/copia; no devolver storage local destruido."
+    ],
+    "risks": [
+      "Remove no drena snapshot ni libera binding activo; userdata y código tienen lifetime independiente de texto copiado.",
+      "Sin garantía explícita de reentrancia/hilos arbitrarios ni Windows runtime."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-010",
+      "CALLBACK-012"
+    ]
+  },
+  {
+    "symbol": "dusk::flow::release_message_control",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/flow.cpp",
+      "line_start": 1036,
+      "line_end": 1038,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L1036-L1038"
+    },
+    "signature": "void release_message_control(const JMessage::TControl*)",
+    "purpose": "Liberar referencias compartidas retenidas por control.",
+    "dependencies": [
+      "MessageService",
+      "JMessage::TControl",
+      "dusk::flow::ActiveBinding"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Caller/fase JMessage válida; callback sincrónico en hilo del caller,no worker implícito.",
+      "Texto devuelto debe seguir legible después del retorno durante validación/copia; no devolver storage local destruido."
+    ],
+    "risks": [
+      "Remove no drena snapshot ni libera binding activo; userdata y código tienen lifetime independiente de texto copiado.",
+      "Sin garantía explícita de reentrancia/hilos arbitrarios ni Windows runtime."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-011"
+    ]
   }
 ]

@@ -37,3 +37,5 @@ Event/switch/room/message → avance normal o KYTAG11 → PlayerStatusB en memor
 CP-R10: runtime_and_lifecycle → HUD/fileSel → recursos/heaps; framework f_op/f_pc coordina overlap,delete-before-create y PLAY por fases (ARCH-002..007). Sin dependencia de un SceneService público ni auditoría de todos los actores hijos.
 
 CP-R11: models_animations_materials → archive/refcount → actor solid heap → morf/BCK/BTK → execute/draw → actor wrapper teardown. PRES-044..047; luz/audio son consumidores auxiliares,no nuevos contratos SDK.
+
+CP-R12: MessageService → estado compartido flow.cpp → JMessage/TControl y dMsgObject selección → ActiveBinding → reset/destructor. CALLBACK-009..013 separa registro/callback/userData de bytes copiados; FlowModule realiza detach conjunto.

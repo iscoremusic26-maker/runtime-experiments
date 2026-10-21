@@ -53,3 +53,7 @@ Desde CP-R09 remoto 03f2a405fbab7f8d2caed286bffd37728eaf07d4. Se contrastan call
 ## CP-R11 — J3D/morf/BCK/BTK con consumidor y teardown
 
 Padre CP-R10 e44139795c4e0beb1e1bf608bd894d0656a06c4b. Cuatro evidencias y cuatro símbolos nuevos,+0 documentos. Cadena AutoMata resLoad/heap→setAnm→execute/draw→resDelete/heap teardown; setAnm puede fallar después de cambiar BCK. Models conserva READ global; sin assets modificados ni runtime.
+
+## CP-R12 — MessageService y lifetime de dispatch/texto
+
+Padre CP-R11 b90b9ebef217c8fd21510e152819e0570271d92d. Cinco evidencias nuevas (cuatro contrastadas,una inferencia condicionada),cuatro símbolos,+0 documentos. Se distingue snapshot sin revalidación,retirada por dueño y texto compartido retenido por control/processor; consumidores JMessage y selección dMsgObject. No repetir prioridades de WORLD-025/PRES-020 ni prometer reentrancia.
