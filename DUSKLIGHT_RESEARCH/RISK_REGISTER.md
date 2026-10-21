@@ -53,3 +53,5 @@ CP-R23 · R-29: switch del tag MYNA2 se activa al aceptar petición, sin comprob
 CP-R24 · R-30: dos estados overlap (puntero manager y exclusión scene) no se limpian por las mismas rutas. Error temprano puede dejar wait y cancelación tardía puede conservar exclusión. ARCH-009..011; inferencia condicionada, sin bloqueo runtime probado ni garantía de permanencia.
 
 CP-R25 · R-31: reconsultar getObjectRes no relee overlay si dRes_info sigue cargado; retirar ganador no restaura objeto decodificado. Fetch JKR puede caer a backingARC al fallar lectura, sin demostrar fallback al mod anterior. PRES-065..067; sin coexistencia runtime certificada.
+
+CP-R26 · R-32: initialized es estado del wrapper de presencia, no ACK ni conexión lista; cambio CVar sin callback UI no equivale a iniciar/cerrar backend. Shutdown no demuestra drenaje de handlers en Borealis ausente. PORT-010..013; sin conexión ni datos personales observados.

@@ -7934,5 +7934,88 @@
       "PRES-066",
       "PRES-067"
     ]
+  },
+  {
+    "symbol": "dusk::discord::initialize",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/discord_presence.cpp",
+      "line_start": 51,
+      "line_end": 66,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/discord_presence.cpp#L51-L66"
+    },
+    "signature": "void dusk::discord::initialize()",
+    "purpose": "Inicialización interna y timestamp, conserva bool backend",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "BOREALIS_HAS_DISCORD; caller startup/UI"
+    ],
+    "risks": [
+      "No disponibilidad ni ACK externos certificados"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-010",
+      "PORT-012"
+    ]
+  },
+  {
+    "symbol": "dusk::discord::update_presence",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/discord_presence.cpp",
+      "line_start": 74,
+      "line_end": 117,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/discord_presence.cpp#L74-L117"
+    },
+    "signature": "void dusk::discord::update_presence()",
+    "purpose": "Snapshot de estado bajo gate initialized/15s",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Loop main01; estado inicializado"
+    ],
+    "risks": [
+      "Ownership y entrega backend no probados"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-011",
+      "PORT-013"
+    ]
+  },
+  {
+    "symbol": "dusk::discord::shutdown",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/discord_presence.cpp",
+      "line_start": 119,
+      "line_end": 126,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/discord_presence.cpp#L119-L126"
+    },
+    "signature": "void dusk::discord::shutdown()",
+    "purpose": "Clear/cierre interno condicionado",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Initializedtrue para invocar backend"
+    ],
+    "risks": [
+      "No demuestra drenaje ni borrado remoto"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-012"
+    ]
   }
 ]

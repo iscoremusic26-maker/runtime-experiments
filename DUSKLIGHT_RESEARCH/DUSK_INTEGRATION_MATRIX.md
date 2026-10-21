@@ -17,3 +17,5 @@ Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2`. Clasifica mecanismos 
 | Hook de función con stack de toda la sesión y hot unload | NOT_SUPPORTED_BY_CURRENT_EVIDENCE | El contrato advierte que el boundary entre frames no da seguridad de retirada | HOOK-022; no prometer rollback por esperar un tick. |
 
 Los IDs remiten al [ledger](EVIDENCE_LEDGER.json), con enlaces al SHA/rango real. Esta matriz expresa elecciones de mecanismo, no funcionalidades concretas ni diseño de un mod. Sin compilación ni juego ejecutado.
+
+Presencia del port: POTENTIAL_REQUIRES_VERIFICATION como interfaz C++ interna, sin PresenceService público auditado. ConfigService solo gestiona variables propias; no otorga control/lifetime del backend host. PORT-010..013, [ficha de presencia](systems/port_presence.md). No se certifica hook, ACK ni rollback remoto.

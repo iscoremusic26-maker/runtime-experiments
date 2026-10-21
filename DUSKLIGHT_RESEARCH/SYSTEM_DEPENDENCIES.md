@@ -65,3 +65,5 @@ CP-R23: Tag MYNA2 gates→request ID/switch→NPC tipo1/fases→daNpcF acción�
 CP-R24: logo stage-request→scene waits→overlap task; error task→managerNULL no se propaga como error al wait booleano. Cancel de destino y Done scene tienen cleanup distinto de exclusión; no reconstruyen previo (ARCH-008..011).
 
 CP-R25: tabla overlay/generación→JKRMemArchive fetch→decodificación→mRes→getObjectRes; cambiar tabla no hace el recorrido inverso ni redecodifica cache. Prioridad de fuentes y actualización del consumidor son fronteras separadas (PRES-065..067).
+
+CP-R26: CVar/callback UI explícito→discord.initialize→initialized→main01 callbacks/update gate15s→payload de último stage/estado→clear/shutdown. CVar registrada sin handler automático no activa backend por toda escritura; backend Borealis/ACK externo pendientes (PORT-010..013).
