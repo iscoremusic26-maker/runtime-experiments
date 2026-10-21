@@ -1,15 +1,11 @@
 # Continuidad — CP-R02
 
-Fuente `40457c6adb381928e4b5fef6ed459ed291edd5e2`; objetivo Windows x64 / DX12 / GZ2E01. Continuación de la rama research/dusklight-203-dusk-atlas sobre CP-R00 `27d51db56ff1899eb13ca975d59ef3d1e1acf708`. El SHA del commit que contiene este handoff se obtiene del historial de esta rama; no se inventa autorreferencia.
+Fuente40457c6adb381928e4b5fef6ed459ed291edd5e2; árbol e4b79b565b2842f711f7c9f2390f56ef11063157; Windows x64/DX12/GZ2E01. Rama research/dusklight-203-dusk-atlas. CP-R01 remoto verificado:f163cfc605ff92757aef3c5f7b492a1e63ef7459; CP-R02:41c6295e6ab79661638e8bc14903cd0ad8b25fad. Este ajuste completa referencia de sistema de física y cobertura; consultar HEAD para el SHA que lo contiene.
 
-Persistido con este checkpoint: SDK_AND_SERVICES, HOOKING_AND_ABI, systems/runtime_and_lifecycle, evidencia/símbolos/sistemas y cobertura. Se recuperaron los borradores de subtareas de la sesión anterior y se validaron referencias y relaciones antes de publicar. Inicialización fallida no llama shutdown; replace mantiene un solo ganador; mod tick precede fpcM_Management; la retirada de actores propios puede fallar y no garantiza descarga segura. Todo es fuente/contrato/inferencia estática según ledger.
+Publicado: SDK, hooks/ABI, runtime y cinco fichas de stages/guardado/flags/inventario/narrativa;89 evidencias,109 símbolos. TGSC distingue0x23 aceptado frente a0x24 anotado, sin medir sizeof Windows; SaveService callback precede flush y no establece transacción CARD+sidecars.
 
-Primera acción de la siguiente sesión: comprobar HEAD remoto, leer este handoff y RESEARCH_COVERAGE, y recuperar/integrar los informes por sistemas disponibles en work/atlas/DUSKLIGHT_RESEARCH y fragments de work/fragments. Si no existen esos borradores en el entorno, usar únicamente lo publicado y revisar mínimamente el código fijado. No rehacer R00.
+Primera acción siguiente: comprobar HEAD y leer cobertura; integrar cinco borradores recuperados de jugador/física/combate/actores/otros, luego seis de presentación, memoria e histórico. Están en work/atlas/DUSKLIGHT_RESEARCH y work/fragments; si no están disponibles,no inventar su contenido. Aplicar review_presentation: ARC también invalida por remove explícito, Gfx sincroniza según IDs retirados, texturas dependen de expectativa externa y falta cita pntwind_set. No repetir inventario ni hashes.
 
-Próximo bloque concreto: publicar SaveService y StageService/ActorService con fuentes y consumidores; luego jugador y presentación. Corregir las precisiones señaladas en review_world/review_presentation antes de integrar. No contar borradores como publicación. Persistir cada 3–5 minutos de trabajo activo; máximo 2–3 estudios paralelos después de tener este checkpoint seguro.
-
-No crear PR nuevo; commits solo bajo DUSKLIGHT_RESEARCH. Releer HEAD antes de cada escritura, actualizar ref sin force con SHA esperado, comprobar commit y archivos remotos. No tocar PR fuente80/81, CI65/66 ni otras ramas. No compilar mods ni ejecutar el juego. No hay ejecución de fondo.
+Persistir cada3–5 minutos activos. Solo DUSKLIGHT_RESEARCH; sin PR nuevo,merge,tag,release ni force. Releer HEAD,crear commit sobre padre comprobado,actualizar ref con expected_sha y verificar archivo remoto/diff. No tocar producción,SDK,upstream,PR80/81 o CI65/66. Sin builds/mods/juego ni trabajo de fondo.
 
 NO MOD IMPLEMENTED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED.
-
-CP-R02 parte del CP-R01 remoto verificado `f163cfc605ff92757aef3c5f7b492a1e63ef7459`. Añade cinco fichas world/save/events con 33 evidencias, corrección TGSC y bancos de switches. Primera acción siguiente: comprobar HEAD y publicar jugador/física/actores recuperados, luego presentación; aplicar review_presentation antes de publicar recursos. Releer cobertura acumulada; no repetir R00 ni crear PR.

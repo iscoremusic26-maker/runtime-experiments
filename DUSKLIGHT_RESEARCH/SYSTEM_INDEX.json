@@ -218,5 +218,16 @@
       "Zone/one-zone y dungeon init/cleanup completos",
       "Dependencias de storyline completas y rollback persistente"
     ]
+  },
+  {
+    "system_id": "movement_physics_collision",
+    "coverage": "READ",
+    "scope": "Solo rutas citadas en el informe de stages; no cobertura general del sistema.",
+    "reports": [
+      "systems/stages_rooms_layers.md"
+    ],
+    "pending": [
+      "Completar ficha y trazado transversal del subsistema."
+    ]
   }
 ]

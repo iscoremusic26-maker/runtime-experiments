@@ -1,13 +1,9 @@
-# Cobertura — CP-R02
+# Cobertura real — CP-R02
 
-R00 conserva 19367 rutas inventariadas; no se recalcularon hashes ni se rehízo el inventario en esta continuación. Se recuperaron borradores técnicos y se contrastaron init fallida, teardown y replace contra el código fijado.
+R00 conserva19367 archivos y488 directorios inventariados; las cifras no miden comprensión. No se repitió el inventario en esta continuación.
 
-**CROSSCHECKED selectivo:** contrato/implementación de HookService y loader, orden de tick y ownership. Matriz de 25 contratos SDK con límites de implementación seleccionados; 26 candidatos de módulo, no 26 servicios necesariamente disponibles en un build. 209 ranuras públicas localizadas, sin afirmar auditoría individual de todas.
+CROSSCHECKED selectivo: hooks/loader/orden de tick; contratos de25 servicios SDK con fronteras de implementación seleccionadas; stages/salas/capas, save/load, flags/eventos/progreso, inventario/equipamiento y secuencias/diálogos. No auditoría íntegra de cada estado o método. Los26 módulos son candidatos sujetos a disponibilidad;209 ranuras públicas localizadas no equivalen a209 rutas auditadas.
 
-56 evidencias y 68 entradas de símbolos con referencias y firmas. Los niveles son los de cada registro. Ningún símbolo nuevo tiene resolución binaria ni ejecución Windows observada.
+Acumulado:89 evidencias y109 símbolos; 431 rangos de ledger/índice validados en 93 archivos fuente citados. Esto no significa lectura completa de esos archivos. La referencia de KCL al sistema de física se declaró explícitamente en SYSTEM_INDEX tras detectarse ausente durante consolidación.
 
-Borradores recuperados aún no incorporados en este checkpoint: mundos/guardado, jugador/física/actores, presentación/recursos, histórico y memoria. No cuentan todavía como cobertura publicada. El índice SYSTEM_INDEX describe solo las fronteras ya documentadas, no comprensión completa de esas áreas.
-
-Pendientes: pruebas de disponibilidad binaria, callbacks reentrantes, teardown de actores propios que rechazan borrado, submódulos ausentes, bootstrap completo y semántica de áreas restantes.
-
-CP-R02 incorpora cinco fichas con rutas contrastadas: stages/salas/capas, save/load, flags/eventos/progreso, inventario/equipamiento y secuencias/diálogos. Se precisan TGSC frente a padding/asserts PC, bancos de flags activos/persistentes y orden CARD/callback/sidecar. Totales acumulados: 89 evidencias; 109 símbolos. Los borradores publicados en este checkpoint dejan de estar pendientes; jugador/presentación/histórico/memoria siguen locales, sin contarlos como publicación.
+Pendientes de publicación: borradores de jugador/física/actores, presentación/recursos, memoria e histórico. Huecos: submódulos ausentes, disponibilidad binaria Windows, callbacks reentrantes y teardown de actores propios que rechazan borrado. Sin compilación nueva ni ejecución del juego.

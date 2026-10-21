@@ -13,3 +13,5 @@ Continuación desde HEAD remoto CP-R00 verificado. Recuperados informes de hooks
 ## CP-R02 — escenas, guardado, bancos de estado y narrativa
 
 Integrados borradores recuperados tras revisión de SaveService/StageService y consumidores. Cinco fichas, 33 evidencias nuevas y símbolos; correcciones sobre TGSC (assert histórico inactivo PC) y rangos acumulados de switches. No se equipara callback de guardado con durabilidad de sidecars ni retirada de edición con borrado de actor vivo.
+
+CP-R02a: validación de relaciones detectó sistema de física no declarado para un símbolo KCL; índice corregido y referencias,IDs y rangos comprobados. Se consolidó el handoff acumulado.
