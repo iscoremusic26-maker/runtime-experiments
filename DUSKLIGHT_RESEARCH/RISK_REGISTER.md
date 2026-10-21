@@ -8,7 +8,7 @@ Riesgos derivados del commit fijado. No son fallos observados durante ejecución
 | R-02 | Init parcial cambia estado y devuelve error esperando shutdown | HOOK-016 | Revertir pasos propios antes de devolver fallo; shutdown solo corre si initialized quedó true. |
 | R-03 | Replace takeover destruye el ganador previo; uninstall no lo restaura | HOOK-005/007 | Política de conflicto explícita; no prometer pila ni rollback al replace anterior. |
 | R-04 | Actor propio no termina destrucción y mantiene callbacks mientras se retira DLL | SDK-001, HOOK-029 | Demostrar fin de instancias/callbacks; cleanup que registra un fallo no es barrera. No certificada estrategia universal de hot unload. |
-| R-05 | Retirar observer libera userdata que un snapshot aún conserva | CALLBACK-001..004 | Separar retirada, fin de dispatch y liberación; no extrapolar cancelación Host/Camera a Save. |
+| R-05 | Retirar observer libera userdata que un snapshot aún conserva | CALLBACK-001..004 y CALLBACK-007 | Separar retirada, fin de dispatch y liberación; no extrapolar cancelación Host/Camera a Save. |
 | R-06 | Guardado vanilla confirmado pero sidecar falla o queda dirty | WORLD-011/012 | Datos propios versionados e idempotentes; tratar los errores de cada archivo, sin prometer transacción CARD+mods. |
 | R-07 | Cambio de room/layer/escena invalida puntero de actor/path/model/archive | WORLD-003, PLAYER-025, PRES-004/006 | Revalidar identidad y contexto; limpiar caches; ownership del heap/archive define vigencia. |
 | R-08 | Overlay retirado deja consumidor ya cargado con estado anterior | PRES-002..006 | Retirar registro propio y recargar consumidor cuando proceda; no borrar buffers ajenos ni prometer reversión instantánea. |

@@ -5705,5 +5705,107 @@
     "evidence_ids": [
       "CALLBACK-002"
     ]
+  },
+  {
+    "symbol": "ItemService::set_check_resolver",
+    "kind": "method",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/item.h",
+      "line_start": 79,
+      "line_end": 81,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L79-L81"
+    },
+    "signature": "ModResult (*set_check_resolver)(ModContext*, const char*, ItemCheckResolveFn, void*, ItemCheckHandle*)",
+    "purpose": "Registro/retirada/resolución de checks con cadena capturada y ownership por mod.",
+    "dependencies": [
+      "ItemCheckInfo",
+      "ItemCheckResolution",
+      "LoadedMod"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Resolvers sin efectos secundarios según contrato; callbacks game-thread.",
+      "Conservar callback/userData; info y nombre prestados solo durante llamada."
+    ],
+    "risks": [
+      "Snapshot no revalida handle; ausencia de garantía universal de cancelación inmediata.",
+      "Export, ABI y ejecución Windows de la función interna no comprobados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-005"
+    ]
+  },
+  {
+    "symbol": "ItemService::clear_check_resolver",
+    "kind": "method",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/item.h",
+      "line_start": 83,
+      "line_end": 83,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L83-L83"
+    },
+    "signature": "ModResult (*clear_check_resolver)(ModContext*, ItemCheckHandle)",
+    "purpose": "Registro/retirada/resolución de checks con cadena capturada y ownership por mod.",
+    "dependencies": [
+      "ItemCheckInfo",
+      "ItemCheckResolution",
+      "LoadedMod"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Resolvers sin efectos secundarios según contrato; callbacks game-thread.",
+      "Conservar callback/userData; info y nombre prestados solo durante llamada."
+    ],
+    "risks": [
+      "Snapshot no revalida handle; ausencia de garantía universal de cancelación inmediata.",
+      "Export, ABI y ejecución Windows de la función interna no comprobados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-006",
+      "CALLBACK-007"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::item_check_resolve",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/item_checks.cpp",
+      "line_start": 194,
+      "line_end": 276,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L194-L276"
+    },
+    "signature": "ItemCheckResolution item_check_resolve(const char*, uint8_t, fopAc_ac_c*)",
+    "purpose": "Registro/retirada/resolución de checks con cadena capturada y ownership por mod.",
+    "dependencies": [
+      "ItemCheckInfo",
+      "ItemCheckResolution",
+      "LoadedMod"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Resolvers sin efectos secundarios según contrato; callbacks game-thread.",
+      "Conservar callback/userData; info y nombre prestados solo durante llamada."
+    ],
+    "risks": [
+      "Snapshot no revalida handle; ausencia de garantía universal de cancelación inmediata.",
+      "Export, ABI y ejecución Windows de la función interna no comprobados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-005",
+      "CALLBACK-007",
+      "CALLBACK-008"
+    ]
   }
 ]

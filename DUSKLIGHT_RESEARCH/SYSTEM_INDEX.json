@@ -976,27 +976,35 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "Registro,retirada y dispatch de Save/Host/Camera; sin ejecución de reentrancia.",
+    "scope": "Registro,retirada y dispatch Save/Host/Camera y resolvers Item con consumidor cofre; sin ejecución runtime.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
     "files_examined": [
-      "sdk/include/mods/svc/save.h",
-      "sdk/include/mods/svc/host.h",
       "sdk/include/mods/svc/camera.h",
-      "src/dusk/mods/svc/save.cpp",
+      "sdk/include/mods/svc/host.h",
+      "sdk/include/mods/svc/item.h",
+      "sdk/include/mods/svc/save.h",
+      "src/d/actor/d_a_tbox.cpp",
+      "src/dusk/mods/item_checks.cpp",
+      "src/dusk/mods/svc/camera.cpp",
       "src/dusk/mods/svc/host.cpp",
-      "src/dusk/mods/svc/camera.cpp"
+      "src/dusk/mods/svc/item.cpp",
+      "src/dusk/mods/svc/save.cpp"
     ],
     "pending": [
-      "Item/Message y garantías explícitas de fin de callbacks; sin generalización de concurrencia."
+      "MessageService y otros dispatchers; garantías explícitas de reentrancia/liberación no observadas."
     ],
     "paths": [
       "sdk/include/mods/svc/camera.h",
       "sdk/include/mods/svc/host.h",
+      "sdk/include/mods/svc/item.h",
       "sdk/include/mods/svc/save.h",
+      "src/d/actor/d_a_tbox.cpp",
+      "src/dusk/mods/item_checks.cpp",
       "src/dusk/mods/svc/camera.cpp",
       "src/dusk/mods/svc/host.cpp",
+      "src/dusk/mods/svc/item.cpp",
       "src/dusk/mods/svc/save.cpp"
     ],
     "dependencies": [
@@ -1008,7 +1016,11 @@
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
       "CALLBACK-001",
-      "CALLBACK-002"
+      "CALLBACK-002",
+      "CALLBACK-005",
+      "CALLBACK-006",
+      "CALLBACK-007",
+      "CALLBACK-008"
     ]
   },
   {

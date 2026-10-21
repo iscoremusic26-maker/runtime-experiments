@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R05",
+  "checkpoint": "CP-R06",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -6543,6 +6543,186 @@
       "limitations": [
         "El orden describe un camino con gates explícitos, no todos los frames ni todas las condiciones de pausa/captura.",
         "No se ejecutó scheduler, juego ni GPU."
+      ]
+    },
+    {
+      "id": "CALLBACK-005",
+      "claim": "ItemService registra resolvers por mod con handle, nombre copiado, función y userData prestados; resolución copia PendingResolve sin handle, por mods activos y orden de sus vectores, aplica overrides antes de resolvers de cada mod y revalida active pero no registro vivo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/item.h",
+          "line_start": 17,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L17-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/item.h",
+          "line_start": 74,
+          "line_end": 87,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L74-L87"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/item.cpp",
+          "line_start": 33,
+          "line_end": 81,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/item.cpp#L33-L81"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 32,
+          "line_end": 50,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L32-L50"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 194,
+          "line_end": 276,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L194-L276"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 403,
+          "line_end": 429,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L403-L429"
+        }
+      ],
+      "limitations": [
+        "El contrato exige resolvers sin efectos secundarios; la copia no establece permiso para mutar registros desde callback.",
+        "No se ejecutaron previews ni se comprobó reentrancia o concurrencia runtime."
+      ]
+    },
+    {
+      "id": "CALLBACK-006",
+      "claim": "clear_check_resolver valida owner y handle, borra el resolver vivo e invoca invalidación del check; detach invalida checks y borra el registro del mod. No edita el vector PendingResolve de una invocación ya iniciada.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/item.cpp",
+          "line_start": 54,
+          "line_end": 60,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/item.cpp#L54-L60"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/item.cpp",
+          "line_start": 145,
+          "line_end": 156,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/item.cpp#L145-L156"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 184,
+          "line_end": 190,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L184-L190"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 415,
+          "line_end": 447,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L415-L447"
+        }
+      ],
+      "limitations": [
+        "La llamada item_check_cancel/clear_committed es bookkeeping de checks; aquí no se afirma cancelar cualquier entrega o revertir inventario.",
+        "No se afirma que detach pueda ocurrir concurrentemente en medio del bucle."
+      ]
+    },
+    {
+      "id": "CALLBACK-007",
+      "claim": "Si durante un resolve ya iniciado se retira un resolver posterior B y su mod sigue activo, PendingResolve conserva fn/userData de B y no permite descartarlo por handle. Es consecuencia condicionada de fuente, no permiso contractual de reentrancia ni crash observado.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/item.h",
+          "line_start": 20,
+          "line_end": 25,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L20-L25"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 224,
+          "line_end": 268,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L224-L268"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 415,
+          "line_end": 429,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L415-L429"
+        }
+      ],
+      "limitations": [
+        "El contrato pide ausencia de efectos secundarios; no recomendar mutación de registros desde resolver.",
+        "UserData y contexto deben seguir vigentes durante cualquier callback alcanzable; no se ejecutó el caso."
+      ]
+    },
+    {
+      "id": "CALLBACK-008",
+      "claim": "En TARGET_PC daTbox_c::create1st obtiene el item original de parámetros, llama item_check_chest antes de fijar mParamsInit y escribe el resultado en parámetros; el helper pasa nombre temporal y actor al resolver sin conceder inventario en ese flujo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_tbox.cpp",
+          "line_start": 1792,
+          "line_end": 1804,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_tbox.cpp#L1792-L1804"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 278,
+          "line_end": 288,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L278-L288"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/item_checks.cpp",
+          "line_start": 194,
+          "line_end": 276,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_checks.cpp#L194-L276"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/item.h",
+          "line_start": 28,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/item.h#L28-L46"
+        }
+      ],
+      "limitations": [
+        "Consumidor representativo de creación de cofre; no demuestra todos los consumidores ni una entrega exitosa.",
+        "El nombre y ItemCheckInfo son prestados durante la llamada; no guardar su puntero."
       ]
     }
   ],

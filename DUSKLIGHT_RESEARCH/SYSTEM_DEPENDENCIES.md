@@ -18,7 +18,7 @@ Mapa de rutas seleccionadas del commit `40457c6adb381928e4b5fef6ed459ed291edd5e2
 | Heap JKR/actor → modelos/animaciones | Heap actual por hilo, solid heap y allocations | Callback de heap puede repetirse; liberar con el allocator propietario | ROOT-001..006; [memoria](systems/memory_ownership.md) |
 | Cámara/interpolación → Gfx/UI | Estado temporal de cámara, matrices y handles GPU prestados | Game thread y render worker tienen contratos distintos | PRES-007..018; [cámara/render](systems/cameras_rendering.md) |
 | Reloj/clima/room → ambiente/audio/partículas | Daytime, tablas de color, weather y punteros de influencia | Controlador puede sobrescribir cambio puntual; influencia requiere storage vivo | PRES-027..034; [entorno](systems/environment_weather_time.md) |
-| Save/Host/Camera → callback del mod | Callback, userData, ownership y snapshot del dispatch | Cancelación difiere según revalidación; no liberar userdata por analogía entre servicios | CALLBACK-001..004; [callbacks](systems/callback_ownership_and_cancellation.md) |
+| Save/Host/Camera/Item resolver → callback del mod | Callback, userData, ownership y snapshot del dispatch | Cancelación difiere según revalidación; no liberar userdata por analogía entre servicios | CALLBACK-001..008; [callbacks](systems/callback_ownership_and_cancellation.md) |
 
 ## Cobertura nominal restante
 

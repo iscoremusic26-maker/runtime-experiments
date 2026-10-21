@@ -29,3 +29,7 @@ Nueva lectura transversal: Save copia registros completos, Host revalida handles
 Añadidos ARCHITECTURE, SYSTEM_DEPENDENCIES, RISK_REGISTER, OPEN_QUESTIONS y métricas. ARCH-001 contrasta el orden del scheduler con sus gates. SYSTEM_INDEX incluye rutas, dependencias y estados; soporte inventariado se mantiene separado de áreas leídas. Siete erratas nominales corrigen branding/MemCard sin duplicar FILE_INVENTORY. Se precisa la diferencia entre ocurrencias y rangos únicos de referencias, y la fila AudioRes no afirma sync BST por frame frente a PRES-024. Índice maestro y handoff reescritos alrededor del estado publicado.
 
 Esta continuación tuvo checkpoints cortos R01, R02/R02a, R03, R04 y R05, sin crear PR ni modificar producción. El intervalo inactivo entre sesiones no cuenta como investigación. Ver RESEARCH_METRICS para tiempo de sesión observado y límites de medición.
+
+## CP-R06 — Item resolvers, snapshots y consumidor cofre
+
+Contrastados contrato 2.3, registro/retirada, copia PendingResolve sin handle, orden por mod/vector, active-check y efectos de detach. Consumidor TARGET_PC daTbox_c::create1st enlaza la resolución a parámetros del cofre. Cuatro evidencias y tres símbolos nuevos. La cancelación tardía es inferencia condicionada; el contrato exige ausencia de efectos secundarios y no se promete reentrancia. Sin runtime, builds ni mod.
