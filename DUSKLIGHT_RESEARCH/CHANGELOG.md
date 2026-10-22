@@ -225,3 +225,7 @@ Padre remoto verificado 67d2e834790a8ec885a811159ac8c8ab96d80d9f. CALLBACK-035/0
 ## CP-R54 — KYTAG02,viento global,suavizado y consumidor Kita
 
 Padre remoto verificado b63fc59d03aca7a8821277073d1cbd68e005286b. PRES-112..114 (+3 STATIC_CROSSCHECKED),dos localizadores;0 fichas. Switchhome→ciclo/override→wind_set→poses/sonidoKita→Delete parcial,sin transferencia de ownershipactor ni efecto audiovisual observado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R55 — Partícula trace,userWork y retiro por renovación
+
+Padre remoto verificado d26a3cf70c34f8be9d75ce108ae52e430cbeed53. PRES-115..118:3 STATIC_CROSSCHECKED y1 STATIC_INFERRED,dos localizadores;0 fichas. E_ARROWvector→emisor→JPAtrace→levelcleanup;vida del callbackglobal≠vida del Vecactor. Ordenfree/calc pendiente,sin UAFobservado. Sin mod,build ni runtime; solo atlas.

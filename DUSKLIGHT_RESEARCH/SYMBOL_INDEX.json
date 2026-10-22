@@ -10349,5 +10349,61 @@
     "evidence_ids": [
       "PRES-113"
     ]
+  },
+  {
+    "symbol": "dPa_particleTracePcallBack_c::execute",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_particle.cpp",
+      "line_start": 2344,
+      "line_end": 2354,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_particle.cpp#L2344-L2354"
+    },
+    "signature": "void dPa_particleTracePcallBack_c::execute(JPABaseEmitter*, JPABaseParticle*)",
+    "purpose": "Aplica vector userWork prestado al offset de partícula existente.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "age>0;userWork apunta a Vec vivo;callback aún instalado."
+    ],
+    "risks": [
+      "No consulta identidad/vida del actor ni NULLuserWork."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-115",
+      "PRES-116",
+      "PRES-118"
+    ]
+  },
+  {
+    "symbol": "dPa_control_c::level_c::execute(emitter_c*)",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_particle.cpp",
+      "line_start": 971,
+      "line_end": 984,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_particle.cpp#L971-L984"
+    },
+    "signature": "void dPa_control_c::level_c::execute(dPa_control_c::level_c::emitter_c*)",
+    "purpose": "Retira emisor no renovado o suspende cálculo según evento.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Mantenimiento level después de calc3Dgroups."
+    ],
+    "risks": [
+      "Retiro diferido no certifica código/userdata drenados antes de freeactor."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-117"
+    ]
   }
 ]
