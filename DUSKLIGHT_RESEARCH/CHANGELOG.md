@@ -249,3 +249,7 @@ Padre remoto verificado d66d64221337f7abc8b202a677f7c1a4360260fc. PORT-023..025 
 ## CP-R60 — ObjCarry,boomerang,offset corregido y transferencia Link
 
 Padre remoto verificado 83ac62f838bd2dbc2fb549996370e9f5e3e6d07b. PLAYER-081..084 (+4 STATIC_CROSSCHECKED),treslocalizadores;0 fichas. AtBoom→TgCarry→offset/relookup→Acch→Linkgrab/wait;fintransporte≠delete/entregainventario ycheckhelpermutante. Sin mod,build ni runtime; solo atlas.
+
+## CP-R61 — Disposers,destructorvirtual y reset de solid heap
+
+Padre remoto verificado 3f7e19320ebfb3e77393213341ab47e01c276127. ROOT-014..016 (+3 STATIC_CROSSCHECKED),doslocalizadores;0 fichas. Registro por dirección→lista→destructorvirtual→solidfreeAll/freeTail/heapchild;disposeboolfalse fijo no significa ausencia deefectos. Sin mod,build ni runtime; solo atlas.

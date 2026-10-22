@@ -1640,15 +1640,19 @@
   {
     "system_id": "memory_ownership",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectivo: heap actor previo y CP-R43 framework msg→drawtag→heap/screen Timer explícitos,gate pausa; no auditoría total de alloc/disposers.",
+    "scope": "CROSSCHECKED selectiva: heap/TLSprevios y CP61 Disposer por dirección→destructorvirtual→resetarena;no todas allocations ni barreraunload.",
     "reports": [
       "systems/memory_ownership.md"
     ],
     "files_examined": [
       "include/d/d_s_play.h",
       "include/f_op/f_op_msg.h",
+      "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
+      "libs/JSystem/include/JSystem/JKernel/JKRDisposer.h",
       "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
+      "libs/JSystem/src/JKernel/JKRDisposer.cpp",
       "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "libs/JSystem/src/JKernel/JKRSolidHeap.cpp",
       "src/d/d_timer.cpp",
       "src/dusk/OSThread.cpp",
       "src/f_op/f_op_actor_mng.cpp",
@@ -1664,8 +1668,12 @@
     "paths": [
       "include/d/d_s_play.h",
       "include/f_op/f_op_msg.h",
+      "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
+      "libs/JSystem/include/JSystem/JKernel/JKRDisposer.h",
       "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
+      "libs/JSystem/src/JKernel/JKRDisposer.cpp",
       "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "libs/JSystem/src/JKernel/JKRSolidHeap.cpp",
       "src/d/d_timer.cpp",
       "src/dusk/OSThread.cpp",
       "src/f_op/f_op_actor_mng.cpp",
@@ -1676,7 +1684,9 @@
     ],
     "dependencies": [
       "runtime_and_lifecycle",
-      "hud_ui_text"
+      "hud_ui_text",
+      "actors_ai_npcs",
+      "resources_archives_overlays"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1686,7 +1696,10 @@
       "ROOT-006",
       "ROOT-011",
       "ROOT-012",
-      "ROOT-013"
+      "ROOT-013",
+      "ROOT-014",
+      "ROOT-015",
+      "ROOT-016"
     ]
   },
   {

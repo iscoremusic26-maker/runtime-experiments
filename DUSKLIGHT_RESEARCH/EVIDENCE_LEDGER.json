@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R60",
+  "checkpoint": "CP-R61",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -19430,6 +19430,183 @@
           "line_start": 2944,
           "line_end": 2954,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_carry.cpp#L2944-L2954"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ROOT-014",
+      "claim": "JKRDisposer constructor busca heap por direcciónthis y se registra solo si encontró;destructorvirtual se desregistra. No es selecciónporheapactual ni registro universal de cualquierobjetoC++;JKRHeapderivaDisposer,J3DModel no en esadeclaración.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRDisposer.cpp",
+          "line_start": 6,
+          "line_end": 17,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRDisposer.cpp#L6-L17"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JKernel/JKRDisposer.h",
+          "line_start": 12,
+          "line_end": 23,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JKernel/JKRDisposer.h#L12-L23"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
+          "line_start": 32,
+          "line_end": 34,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JKernel/JKRHeap.h#L32-L34"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
+          "line_start": 124,
+          "line_end": 125,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JKernel/JKRHeap.h#L124-L125"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
+          "line_start": 43,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h#L43-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
+          "line_start": 76,
+          "line_end": 79,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h#L76-L79"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 395,
+          "line_end": 399,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L395-L399"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ROOT-015",
+      "claim": "JKRHeap dispose(ptr,size) destruye disposers cuyo this está en [begin,end) y retornafalseincondicional;dispose()/callAllDisposer llaman destructoresvirtualesdeprimerregistrohasta vaciarlista. No equivale delete de cadabloque ni callbackdrenado;listaespera retiropordestructor.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 402,
+          "line_end": 438,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L402-L438"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 261,
+          "line_end": 274,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L261-L274"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRDisposer.cpp",
+          "line_start": 13,
+          "line_end": 17,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRDisposer.cpp#L13-L17"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JKernel/JKRDisposer.h",
+          "line_start": 12,
+          "line_end": 16,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JKernel/JKRDisposer.h#L12-L16"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ROOT-016",
+      "claim": "SolidHeap do_freeAll llama disposers antes de reiniciarhead/tail/freeSize;do_freeTail dispone intervalotailantesderecuperarcapacidad. do_destroy conparent llama destructorheap y libera bloqueparent;heapchild es consumidorrealJKRDisposer registrado enheapquecontieneheader,no suspropiosdatos. ActorDeleteHeap reutilizaROOT004,sin freesdeobjetossueltasgarantizados.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRSolidHeap.cpp",
+          "line_start": 12,
+          "line_end": 38,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRSolidHeap.cpp#L12-L38"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRSolidHeap.cpp",
+          "line_start": 41,
+          "line_end": 56,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRSolidHeap.cpp#L41-L56"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRSolidHeap.cpp",
+          "line_start": 161,
+          "line_end": 198,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRSolidHeap.cpp#L161-L198"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 65,
+          "line_end": 76,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L65-L76"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+          "line_start": 101,
+          "line_end": 112,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L101-L112"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 1086,
+          "line_end": 1092,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1086-L1092"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 372,
+          "line_end": 379,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L372-L379"
         }
       ],
       "limitations": [

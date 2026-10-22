@@ -135,3 +135,5 @@ CP-R58 PRES-119..122: TextureSDK→ownedbytes/handle→registroAurora→lifecycl
 CP-R59 PORT-023..025: UIretry→operaciónPending→lote/coalescingporID→lifecycle→estadoUI;failuretoast esflujo histórico aparte. Operaciónshared no retieneDLL. [Runtime](systems/runtime_and_lifecycle.md).
 
 CP-R60 PLAYER-081..084: BoomerangAt→CarryTg→offsetmiembro→relookupBoom→Acch/reoffset→Linkcarry/wait. Fintransporte noactordelete/Itemgrant;helpercheckmutante. [Otros](systems/other_systems.md).
+
+CP-R61 ROOT-014..016: direcciónthis→heapowner→listaDisposer→destructorvirtual→resetarena/heapchild. No destrucción universal de cada allocation ni cleanupdecallbacksexternos. [Memoria](systems/memory_ownership.md).

@@ -10768,5 +10768,59 @@
     "evidence_ids": [
       "PLAYER-083"
     ]
+  },
+  {
+    "symbol": "JKRHeap::dispose(void*, u32)",
+    "kind": "method",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "line_start": 424,
+      "line_end": 427,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRHeap.cpp#L424-L427"
+    },
+    "signature": "bool JKRHeap::dispose(void*, u32)",
+    "purpose": "Ejecuta destructores registrados del intervalo y retornafalse fijo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Rango de memoria/registro válidos;sin concurrenciaarbitraria garantizada."
+    ],
+    "risks": [
+      "false no significa que no ocurrieron destructores;no freesgenerales ni barreracallback."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ROOT-015"
+    ]
+  },
+  {
+    "symbol": "JKRSolidHeap::do_freeAll",
+    "kind": "method",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JKernel/JKRSolidHeap.cpp",
+      "line_start": 165,
+      "line_end": 179,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRSolidHeap.cpp#L165-L179"
+    },
+    "signature": "void JKRSolidHeap::do_freeAll()",
+    "purpose": "Dispone objetos registrados y reinicia arenasolid.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Heapvivo/lock;disposers coherentesconlistado."
+    ],
+    "risks": [
+      "No destructor universal de todaslasasignaciones ni rollbackexterno."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ROOT-016"
+    ]
   }
 ]
