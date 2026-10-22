@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R64",
+  "checkpoint": "CP-R65",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -20081,6 +20081,191 @@
           "line_start": 807,
           "line_end": 811,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_name.h#L807-L811"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-026",
+      "claim": "LogService write extiende SDK-015:context→ID→emit copia mensaje e ID al buffer host bajo mutex,ring2048 con secuencia. Tras unlock mapea level y reporta a Borealis;buffer captura todos niveles,no confirma archivo durable ni éxito backend. No callbacks/userdata de mod retenidos en Line.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/log.h",
+          "line_start": 18,
+          "line_end": 41,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/log.h#L18-L41"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/log.cpp",
+          "line_start": 9,
+          "line_end": 12,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/log.cpp#L9-L12"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/log.cpp",
+          "line_start": 34,
+          "line_end": 51,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/log.cpp#L34-L51"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/context.cpp",
+          "line_start": 8,
+          "line_end": 19,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/context.cpp#L8-L19"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/log_buffer.hpp",
+          "line_start": 13,
+          "line_end": 44,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/log_buffer.hpp#L13-L44"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/log_buffer.cpp",
+          "line_start": 11,
+          "line_end": 29,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/log_buffer.cpp#L11-L29"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/log_buffer.cpp",
+          "line_start": 33,
+          "line_end": 78,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/log_buffer.cpp#L33-L78"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-027",
+      "claim": "LogsWindow consumidor de copias:copy_since añade Lines por secuencia bajo lock y devuelve rango retenido;UI consulta nuevas entradas,retira viejas por firstSeq y filtra nivel/ID. Copia/move owns strings,elementos son temporales de ventana. Refresh gate0.125s es límite nominal,no emisiónrate ni métrica runtime.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/log_buffer.cpp",
+          "line_start": 80,
+          "line_end": 95,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/log_buffer.cpp#L80-L95"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/mods_window.cpp",
+          "line_start": 411,
+          "line_end": 416,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/mods_window.cpp#L411-L416"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/logs_window.cpp",
+          "line_start": 148,
+          "line_end": 224,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/logs_window.cpp#L148-L224"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/logs_window.cpp",
+          "line_start": 226,
+          "line_end": 244,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/logs_window.cpp#L226-L244"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/logs_window.cpp",
+          "line_start": 331,
+          "line_end": 354,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/logs_window.cpp#L331-L354"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/logs_window.cpp",
+          "line_start": 365,
+          "line_end": 375,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/logs_window.cpp#L365-L375"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/logs_window.hpp",
+          "line_start": 20,
+          "line_end": 51,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/logs_window.hpp#L20-L51"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-028",
+      "claim": "Clear de logs pone head/count0 pero conserva nextSeq,modIds y strings en slots;UI Clear llama rebuild y consumidores detectan truncación por rango. No borrado físico de memoria ni archivos ni detach de mod. Logger se configura con nivel/ruta y llama borealis::log::init;durabilidad/filtros backend no verificados.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/log_buffer.cpp",
+          "line_start": 97,
+          "line_end": 101,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/log_buffer.cpp#L97-L101"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/log_buffer.cpp",
+          "line_start": 80,
+          "line_end": 95,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/log_buffer.cpp#L80-L95"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/logs_window.cpp",
+          "line_start": 119,
+          "line_end": 123,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/logs_window.cpp#L119-L123"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/logs_window.cpp",
+          "line_start": 207,
+          "line_end": 224,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/logs_window.cpp#L207-L224"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/logging.cpp",
+          "line_start": 40,
+          "line_end": 50,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/logging.cpp#L40-L50"
         }
       ],
       "limitations": [

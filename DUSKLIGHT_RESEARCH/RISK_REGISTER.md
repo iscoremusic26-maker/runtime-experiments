@@ -131,3 +131,5 @@ CP-R62 / PLAYER-079: shapeAngleNULL impide actualización angular incluso con an
 CP-R63 / PRES-126 STATIC_INFERRED: flag libre tras Delete no restablece m_master_id;si se conserva unidad y hay ID distinto,create no elige otro controlador. Orden/reentrada/recarga NOT_VERIFIED,sin fallo visual/UAF observado. dKy_custom_colset/fog son estado compartido sin owner;Delete no rollback.
 
 CP-R64 / PLAYER-088 STATIC_INFERRED: filtro !name==ALINK y fVar1 no asignado fuera de tipoFF en Check_RideOn;contactos/params efectivos no probados,sin crash/runtime. Delete1 local ignora retornoMoveBGDelete;no ACKdeRelease.
+
+CP-R65 / PORT-026..028: secuencia/retención del buffer y nivel visible son diferentes de report/archivo durable. clear lógico conserva tablaIDs y strings de slots;no prometer borrado físico o por mod. Mutex de ring no certifica contexto/DLL/backend bajo unload.

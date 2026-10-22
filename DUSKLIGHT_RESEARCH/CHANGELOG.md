@@ -265,3 +265,7 @@ Padre remoto verificado f5e707e1cc52483b9ac9add841d49ef2fd9ba398. PRES-123..125 
 ## CP-R64 — Ice_s: apoyo continuo y matriz de plataforma
 
 Padre remoto verificado a8cc59cdeab98b6b74618589e483df61fc34876f. PLAYER-085..087 STATIC_CROSSCHECKED:V_Ice_s/ridecallback→latch/inclinación/hundimiento→modelo/BG y retirada. PLAYER-088 STATIC_INFERRED:precedencia ! y fVar1 condicionado. CERRADO SELECTIVO para cadena de apoyo;no rotura/assets/runtime demostrados. Sin mod,build ni runtime; solo atlas.
+
+## CP-R65 — LogService: copias, retención y consumidor diagnóstico
+
+Padre remoto verificado 815a418fbce69d1425716165df0fe4ee80f9c401. PORT-026..028 STATIC_CROSSCHECKED extienden SDK-015:write copia→ring2048/seq→LogsWindow y clear lógico;backendfile/durabilidad NOT_VERIFIED. Un slot oficial exacto y dos localizadores internos nuevos;CERRADO SELECTIVO frontend,ninguna API de lectura pública añadida. Sin mod,build ni runtime; solo atlas.

@@ -141,3 +141,5 @@ CP-R61 ROOT-014..016: direcciónthis→heapowner→listaDisposer→destructorvir
 CP-R63 PRES-123..126: perfil/procesos→TagWaterFall→camera0/AllJudge→gather y fog compartidos→KANKYO/setLight. Boolean maestro e ID tienen duraciones diferentes;Delete local no prueba reset de unidad o restauración ambiental. [Ambiente](systems/environment_weather_time.md).
 
 CP-R64 PLAYER-085..088: Acch→BG propietario/rider→Ice_s campos→Mtx modelo/BG→draw;resDelete específico precede Release del wrapper. No switch/guardado ni rotura en esta muestra. [Otros sistemas](systems/other_systems.md).
+
+CP-R65 PORT-026..028: LogService→contextID→bufferhost mutex/copias→LogsWindow/elementos y clear lógico;por separado report Borealis. Datos host propios,no callbacks retenidos. [Diagnóstico](systems/port_commands.md).

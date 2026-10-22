@@ -952,7 +952,8 @@
       "CALLBACK-028",
       "CALLBACK-029",
       "CALLBACK-030",
-      "CALLBACK-031"
+      "CALLBACK-031",
+      "PORT-026"
     ],
     "files_examined": [
       "sdk/include/mods/svc/interp.h",
@@ -2031,7 +2032,7 @@
   {
     "system_id": "port_support",
     "coverage": "READ",
-    "scope": "READ parcial: soporteprevio y CP59 peticionesLifecyclecoalescidas/operaciónUI/toast;no red/instalación/runtime.",
+    "scope": "READ parcial: soporte previo y CP-R65 LogService→ring host→LogsWindow/clear lógico;backenddurabilidad pendiente.",
     "reports": [
       "systems/port_achievements.md",
       "systems/port_speedrun_livesplit.md",
@@ -2041,6 +2042,7 @@
       "systems/port_disc_validation.md"
     ],
     "paths": [
+      "sdk/include/mods/svc/log.h",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event.cpp",
       "src/d/d_file_select.cpp",
@@ -2061,9 +2063,13 @@
       "src/dusk/iso_validate.cpp",
       "src/dusk/iso_validate.hpp",
       "src/dusk/livesplit.cpp",
+      "src/dusk/logging.cpp",
       "src/dusk/mod_loader.hpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/loader.cpp",
+      "src/dusk/mods/log_buffer.cpp",
+      "src/dusk/mods/log_buffer.hpp",
+      "src/dusk/mods/svc/log.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/settings.cpp",
       "src/dusk/speedrun.cpp",
@@ -2073,7 +2079,10 @@
       "src/dusk/ui/command_console.hpp",
       "src/dusk/ui/document.cpp",
       "src/dusk/ui/event.cpp",
+      "src/dusk/ui/logs_window.cpp",
+      "src/dusk/ui/logs_window.hpp",
       "src/dusk/ui/mod_browser.cpp",
+      "src/dusk/ui/mods_window.cpp",
       "src/dusk/ui/overlay.cpp",
       "src/dusk/ui/prelaunch.cpp",
       "src/dusk/ui/settings.cpp",
@@ -2087,7 +2096,8 @@
       "hud_ui_text",
       "flags_events_progression",
       "external_dependencies",
-      "sdk_services"
+      "sdk_services",
+      "memory_ownership"
     ],
     "pending": [
       "Resto de checks de logros y diagnósticos.",
@@ -2118,9 +2128,13 @@
       "PORT-021",
       "PORT-023",
       "PORT-024",
-      "PORT-025"
+      "PORT-025",
+      "PORT-026",
+      "PORT-027",
+      "PORT-028"
     ],
     "files_examined": [
+      "sdk/include/mods/svc/log.h",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event.cpp",
       "src/d/d_menu_letter.cpp",
@@ -2136,9 +2150,13 @@
       "src/dusk/iso_validate.cpp",
       "src/dusk/iso_validate.hpp",
       "src/dusk/livesplit.cpp",
+      "src/dusk/logging.cpp",
       "src/dusk/mod_loader.hpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/loader.cpp",
+      "src/dusk/mods/log_buffer.cpp",
+      "src/dusk/mods/log_buffer.hpp",
+      "src/dusk/mods/svc/log.cpp",
       "src/dusk/settings.cpp",
       "src/dusk/speedrun.cpp",
       "src/dusk/speedrun.h",
@@ -2147,7 +2165,10 @@
       "src/dusk/ui/command_console.hpp",
       "src/dusk/ui/document.cpp",
       "src/dusk/ui/event.cpp",
+      "src/dusk/ui/logs_window.cpp",
+      "src/dusk/ui/logs_window.hpp",
       "src/dusk/ui/mod_browser.cpp",
+      "src/dusk/ui/mods_window.cpp",
       "src/dusk/ui/overlay.cpp",
       "src/dusk/ui/prelaunch.cpp",
       "src/dusk/ui/settings.cpp",

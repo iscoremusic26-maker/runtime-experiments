@@ -10987,5 +10987,88 @@
     "evidence_ids": [
       "PLAYER-088"
     ]
+  },
+  {
+    "symbol": "LogService::write",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/log.h",
+      "line_start": 26,
+      "line_end": 35,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/log.h#L26-L35"
+    },
+    "signature": "void (*write)(ModContext*, LogLevel, const char*)",
+    "purpose": "Emite mensaje con copia antes de retorno",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto/punteros válidos;ID/version1.0"
+    ],
+    "risks": [
+      "Retorno void sin ACK;no drena hilos ni backend"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-015",
+      "PORT-026"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::log::copy_since",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/log_buffer.cpp",
+      "line_start": 80,
+      "line_end": 90,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/log_buffer.cpp#L80-L90"
+    },
+    "signature": "Range dusk::mods::log::copy_since(uint64_t, std::vector<Line>&)",
+    "purpose": "Copia líneas retenidas y devuelve cursor/rango",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Mutex host;out se añade,no se limpia"
+    ],
+    "risks": [
+      "Snapshot no prolonga logs de disco ni DLL"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-027",
+      "PORT-028"
+    ]
+  },
+  {
+    "symbol": "dusk::ui::LogsWindow::refresh_lines",
+    "kind": "method",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/ui/logs_window.cpp",
+      "line_start": 168,
+      "line_end": 205,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/logs_window.cpp#L168-L205"
+    },
+    "signature": "void dusk::ui::LogsWindow::refresh_lines()",
+    "purpose": "Actualiza snapshot/UI y elimina secuencias caducadas",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "mLinesElem válido;cursor y filtros de ventana"
+    ],
+    "risks": [
+      "UI difiere de ring;sin render Windows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-027"
+    ]
   }
 ]
