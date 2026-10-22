@@ -127,3 +127,5 @@ CP-R60 PLAYER-082..084: posMove0 puede mutarpos/rotaciónograb;checkBoomerangCar
 CP-R61 ROOT-014..016: disponerfalse noacredita ausencia de efectos;vaciararena no invoca destructores de toda allocation. Registrarsedeheapdependedirecciónthis;virtualdestructor≠Disposer. Cleanupdepunterosprestados/otros hilos/DLLpendiente,sinleak/crashobservado.
 
 CP-R62 / PLAYER-079: shapeAngleNULL impide actualización angular incluso con angle válido. No confundir posición corregida con orientación corregida; sin fallo de contacto observado.
+
+CP-R63 / PRES-126 STATIC_INFERRED: flag libre tras Delete no restablece m_master_id;si se conserva unidad y hay ID distinto,create no elige otro controlador. Orden/reentrada/recarga NOT_VERIFIED,sin fallo visual/UAF observado. dKy_custom_colset/fog son estado compartido sin owner;Delete no rollback.

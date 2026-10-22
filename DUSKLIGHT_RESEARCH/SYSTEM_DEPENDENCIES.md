@@ -137,3 +137,5 @@ CP-R59 PORT-023..025: UIretry→operaciónPending→lote/coalescingporID→lifec
 CP-R60 PLAYER-081..084: BoomerangAt→CarryTg→offsetmiembro→relookupBoom→Acch/reoffset→Linkcarry/wait. Fintransporte noactordelete/Itemgrant;helpercheckmutante. [Otros](systems/other_systems.md).
 
 CP-R61 ROOT-014..016: direcciónthis→heapowner→listaDisposer→destructorvirtual→resetarena/heapchild. No destrucción universal de cada allocation ni cleanupdecallbacksexternos. [Memoria](systems/memory_ownership.md).
+
+CP-R63 PRES-123..126: perfil/procesos→TagWaterFall→camera0/AllJudge→gather y fog compartidos→KANKYO/setLight. Boolean maestro e ID tienen duraciones diferentes;Delete local no prueba reset de unidad o restauración ambiental. [Ambiente](systems/environment_weather_time.md).

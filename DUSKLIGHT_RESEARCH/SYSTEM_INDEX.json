@@ -1491,7 +1491,7 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "READ parcial: cadenas previas y KYTAG02 switch→viento global→Kita/cleanupCP54;PRES089 y resto del ambiente abiertos.",
+    "scope": "READ parcial: cadenas previas y CP-R63 TagWaterFall cámara→gather/fog;reelección/recarga y orden global PARCIAL;PRES-089 abierto.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
@@ -1501,12 +1501,16 @@
       "include/d/actor/d_a_kytag08.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
       "include/d/actor/d_a_player.h",
+      "include/d/actor/d_a_tag_waterfall.h",
       "include/d/d_bg_s.h",
       "include/d/d_com_inf_game.h",
       "include/d/d_kankyo.h",
       "include/d/d_kankyo_static.h",
       "include/d/d_save.h",
+      "include/f_op/f_op_actor_mng.h",
+      "include/f_pc/f_pc_manager.h",
       "include/m_Do/m_Do_audio.h",
+      "libs/dolphin/include/dolphin/types.h",
       "src/SSystem/SComponent/c_lib.cpp",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
@@ -1519,6 +1523,7 @@
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_kita.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
+      "src/d/actor/d_a_tag_waterfall.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
       "src/d/d_bg_s_spl_grp_chk.cpp",
@@ -1537,7 +1542,11 @@
       "src/f_op/f_op_kankyo_mng.cpp",
       "src/f_op/f_op_overlap_mng.cpp",
       "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_create_req.cpp",
+      "src/f_pc/f_pc_creator.cpp",
       "src/f_pc/f_pc_deletor.cpp",
+      "src/f_pc/f_pc_executor.cpp",
+      "src/f_pc/f_pc_layer_iter.cpp",
       "src/f_pc/f_pc_manager.cpp"
     ],
     "pending": [
@@ -1550,12 +1559,16 @@
       "include/d/actor/d_a_kytag08.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
       "include/d/actor/d_a_player.h",
+      "include/d/actor/d_a_tag_waterfall.h",
       "include/d/d_bg_s.h",
       "include/d/d_com_inf_game.h",
       "include/d/d_kankyo.h",
       "include/d/d_kankyo_static.h",
       "include/d/d_save.h",
+      "include/f_op/f_op_actor_mng.h",
+      "include/f_pc/f_pc_manager.h",
       "include/m_Do/m_Do_audio.h",
+      "libs/dolphin/include/dolphin/types.h",
       "src/SSystem/SComponent/c_lib.cpp",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
@@ -1568,6 +1581,7 @@
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_kita.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
+      "src/d/actor/d_a_tag_waterfall.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
       "src/d/d_bg_s_spl_grp_chk.cpp",
@@ -1586,7 +1600,11 @@
       "src/f_op/f_op_kankyo_mng.cpp",
       "src/f_op/f_op_overlap_mng.cpp",
       "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_create_req.cpp",
+      "src/f_pc/f_pc_creator.cpp",
       "src/f_pc/f_pc_deletor.cpp",
+      "src/f_pc/f_pc_executor.cpp",
+      "src/f_pc/f_pc_layer_iter.cpp",
       "src/f_pc/f_pc_manager.cpp"
     ],
     "dependencies": [
@@ -1634,7 +1652,11 @@
       "PRES-107",
       "PRES-112",
       "PRES-113",
-      "PRES-114"
+      "PRES-114",
+      "PRES-123",
+      "PRES-124",
+      "PRES-125",
+      "PRES-126"
     ]
   },
   {

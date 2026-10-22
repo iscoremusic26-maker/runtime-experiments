@@ -257,3 +257,7 @@ Padre remoto verificado 3f7e19320ebfb3e77393213341ab47e01c276127. ROOT-014..016 
 ## CP-R62 — Precisión de gate RotY y trazabilidad de destroy
 
 Padre remoto verificado 591d7faf724085a360afa4c41dda25748dbdecff. Rectificación explícita PLAYER-079: RotY requiere shapeAngle noNULL para sumar yaw también a angle. ROOT-016 añade puente JKRDestroySolidHeap. +0 evidencias,+0 símbolos,+0 fichas; no se cuenta como otra cadena completa del motor. CP-R48..61 contienen14 bloques técnicos,CP-R62 es revisión editorial con fuente adicional. Sin mod,build ni runtime; solo atlas.
+
+## CP-R63 — TagWaterFall: región de cámara y maestro persistente — PARCIAL
+
+Padre remoto verificado f5e707e1cc52483b9ac9add841d49ef2fd9ba398. PRES-123..125 contrastan create/perfil→camera/AllJudge→blend/custom_colset→KANKYO y fog condicionado;PRES-126 inferencia de reelección al conservar estáticos. Tres localizadores internos nuevos,no hooks acreditados. PARTIAL en recarga/orden/ID;sin cambio de niveles canónicos. Sin mod,build ni runtime; solo atlas.

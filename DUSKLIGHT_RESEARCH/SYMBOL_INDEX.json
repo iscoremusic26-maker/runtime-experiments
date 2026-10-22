@@ -10822,5 +10822,88 @@
     "evidence_ids": [
       "ROOT-016"
     ]
+  },
+  {
+    "symbol": "daTagWaterFall_c::create",
+    "kind": "method",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_tag_waterfall.cpp",
+      "line_start": 281,
+      "line_end": 324,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_tag_waterfall.cpp#L281-L324"
+    },
+    "signature": "cPhs_Step daTagWaterFall_c::create()",
+    "purpose": "Configura región y dos mecanismos distintos de maestro",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Perfil vanilla;u32 PC;estado estático conservado según ruta"
+    ],
+    "risks": [
+      "Flag maestro no acredita ID elegido;sin ABI/exportWindows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-123",
+      "PRES-126"
+    ]
+  },
+  {
+    "symbol": "daTagWaterFall_c::execute",
+    "kind": "method",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_tag_waterfall.cpp",
+      "line_start": 193,
+      "line_end": 253,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_tag_waterfall.cpp#L193-L253"
+    },
+    "signature": "int daTagWaterFall_c::execute()",
+    "purpose": "Consulta cámara y publica gather ambiental tras countdown",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ID coincide;ejecución habilitada;camera0 válida"
+    ],
+    "risks": [
+      "Snapshot ambiental;otros escritores;no efecto DX12 observado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-124",
+      "PRES-125"
+    ]
+  },
+  {
+    "symbol": "daTagWaterFall_c::_delete",
+    "kind": "method",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_tag_waterfall.cpp",
+      "line_start": 264,
+      "line_end": 274,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_tag_waterfall.cpp#L264-L274"
+    },
+    "signature": "int daTagWaterFall_c::_delete()",
+    "purpose": "Libera flag/HIO sin reset de ID o rollback ambiental",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "mIsMasterWaterfallTag;DEBUG para HIO"
+    ],
+    "risks": [
+      "No prueba reelección ni unloading del almacenamiento estático"
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PRES-126"
+    ]
   }
 ]
