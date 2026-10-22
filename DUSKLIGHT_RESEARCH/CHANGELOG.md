@@ -289,3 +289,7 @@ Padre remoto verificado 8f4468e7d76ee31ddac140e87508b455974e81ba. PRES-131..133 
 ## CP-R70 — DigPlace: señal de animación, switch previo y petición de ítem
 
 Padre remoto verificado f31388d5175f91e9dad6d65b523e3621ce8c0e35. PLAYER-089..091 STATIC_CROSSCHECKED y092 STATIC_INFERRED:LinkWolfDig→flagDigpl→switchhome→spawnrequest→delete,sin entrega o durabilidad acreditadas. Dos localizadores nuevos. CERRADO SELECTIVO tipo0 sinpath. Además precisión explícita de PRES-127/131 y ARCH-024:checks init0 no demuestran retorno0 ordinario de BRK/BLK. Sin mod,build ni runtime; solo atlas.
+
+## CP-R71 — KYTAG03: rail de olor y pool ambiental — PARCIAL
+
+Padre remoto verificado 1d8738d3d5a00505efd7776642b3129040705ef7. PRES-135..138 contrastan parámetros/rail→pool2000→update/draw/audio y emisor separado;PRES-139 condiciona cardinalidad/segmentos. PARCIAL en room/path lifetime y adquisición completa de olor;noUAF/crash/audio/renderobservados. Tres localizadores internos nuevos. Sin mod,build ni runtime; solo atlas.

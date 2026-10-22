@@ -82,3 +82,5 @@ CP-R68 Q-09/Q-12: ARCH-021..024 contrastan KYTAG04tipo4 switch→ordenencolada�
 CP-R69 Q-10: PRES-131..134 contrastan Demo00→BLS/BLK→pesos→arrays→calc y retirada. BVA3D no tuvo consumidor actor en búsqueda acotada;no se concluye imposibilidad. Assets,sharing,referenciasJStudio y ruta missingBLK(PRES-134) pendientes. Alternar gameplay.
 
 CP-R70 Q-12: PLAYER-089..092 contrastan Digpl tipo0/LinkWolfDig→señal→switchRAM→requestitem/delete;entrega y durabilidad pendientes. Precisión de PRES-127/131 y ARCH-024:guard init==0 no es fallo0 observado ni ruta normal demostrada. Alternar Q-11 en siguiente bloque.
+
+CP-R71 PARCIAL Q-11/Q-08: PRES-135..139 contrastan KYTAG03 rail→pool/estados/draw/audio y separan emisor/handshakeLink. Falta secuencia room/path unload,assets cardinalidad/ciclos y adquisición completa de olor. No reset de pool enDelete no pruebaUAF;hay ownerweather y escritorKYTAG10. Alternar servicios.

@@ -11438,5 +11438,87 @@
       "PLAYER-091",
       "PLAYER-092"
     ]
+  },
+  {
+    "symbol": "odour_move",
+    "kind": "function",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag03.cpp",
+      "line_start": 140,
+      "line_end": 284,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag03.cpp#L140-L284"
+    },
+    "signature": "static void odour_move(kytag03_class*)",
+    "purpose": "Generar valores de efecto para poolglobal de olor",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Olor seleccionado,path válido con>=2puntos y segmentos adecuados"
+    ],
+    "risks": [
+      "Packetglobal compartido;no ownership delactor ni ABIWindows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-136",
+      "PRES-139"
+    ]
+  },
+  {
+    "symbol": "wether_move_odour",
+    "kind": "function",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo_wether.cpp",
+      "line_start": 763,
+      "line_end": 795,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L763-L795"
+    },
+    "signature": "static void wether_move_odour()",
+    "purpose": "Crear/actualizar/retirar packetsegúnflagglobal",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Weathercontext y fase apropiados"
+    ],
+    "risks": [
+      "Flag no refcount;otros escritores y orden room pendientes"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-137"
+    ]
+  },
+  {
+    "symbol": "dKyr_odour_move",
+    "kind": "function",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo_rain.cpp",
+      "line_start": 5598,
+      "line_end": 5684,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_rain.cpp#L5598-L5684"
+    },
+    "signature": "void dKyr_odour_move()",
+    "purpose": "Consumir y reciclar estados del pool de olor",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Packet existente y vista válida"
+    ],
+    "risks": [
+      "No runtimevisual ni garantías de backend"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-137"
+    ]
   }
 ]

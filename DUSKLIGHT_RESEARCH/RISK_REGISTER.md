@@ -143,3 +143,5 @@ CP-R68 / ARCH-023 STATIC_INFERRED: tipo4latchea tras enqueueevent;timer80ignora 
 CP-R69 / PRES-134 STATIC_INFERRED: missingBLK en createHeap puede dejar wrapper con mpAnmNULL y alcanzar entryFrame si heap/draw continúan antes de reinit. Assets/orden no probados,sin crash observado. setDeformData asigna puntero antes de copia fallible;no rollback total garantizado.
 
 CP-R70 / PLAYER-092 STATIC_INFERRED: señal de excavación puede consumir punto/switch aunque requestitem falle;sin compensación local,no pérdida durable observada. Se precisa que checks init==0 no certifican fallos reales de inicializadores BRK/BLK válidos.
+
+CP-R71 / PRES-139 STATIC_INFERRED: rail exige>=2puntos y geometría adecuada;sin validaciónlocal,no crash observado. Flag/pool compartidos carecen de ownerporrail y camino de sala es prestado;orden de descarga NOT_VERIFIED. No2000visibles ni audio/backend demostrado.
