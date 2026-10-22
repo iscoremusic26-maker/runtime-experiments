@@ -77,3 +77,5 @@ CP-R35 PORT-014..017: respuesta de consola no mide efecto/runtime; ocultar conse
 CP-R36 PRES-085 STATIC_INFERRED: con flag1,inserción2D rechazada y sin consumidor alternativo,el gate separado puede mantenerse; alcanzabilidad no demostrada. capture_delete depende de pause y no acredita retirar captura pendiente sin pintar. flag3 precede copia GPU,sin ACK ni prueba Windows.
 
 CP-R37 PLAYER-061..064: tag conserva ID aun sin actor y no acredita respawn postfallo; hide no descarga recursos. Evento024 retorna1 tras marcar índice,sin prueba de cobro/switch/entrega. SaveSwitch es RAM; delete display solicitado no finalizado,tabla estática de tags presta pointers y cleanup global no auditado.
+
+CP-R38 PRES-089 STATIC_INFERRED: KYTAG08 publica fog_avoid_tag y Delete no lo limpia. Si consumidor MA11 sobrevive al actor,checkNULL no acredita lifetime; no UAF/crash ni alcanzabilidad observados. Puntero único se sobrescribe sin arbitraje local; sin garantía de coexistencia/rollback Windows.

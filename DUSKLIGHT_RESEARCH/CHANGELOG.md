@@ -157,3 +157,7 @@ Padre remoto verificado 502d0592b3cb543e478fdbf0f42576ea58e2a2d5. PRES-082..084 
 ## CP-R37 — Stock tienda,tag,display y evento024
 
 Padre remoto verificado 4d85697544f5259267fec34a740671be91a4f048. PLAYER-061..064: tag→solicitud display/visibilidad→evento024→índice sold-out→switch RAM→ocultación/retirada y ARC cleanup. Tres símbolos potenciales; other_systems ampliado. No se certifica cobro,entrega,persistencia ni recuperación global de hijo fallido. Neto de esta sesión frente a CP-R34:+12 evidencias,+9 símbolos,+1 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R38 — KYTAG08,referencia ambiental y consumidor MA11
+
+Padre remoto verificado fa820dbe77c0e04aa02c007828d4a28c1a5a8b38. PRES-086..088 contrastan KYTAG08 carga→puntero ambiental único→radio/timer→MA11 matrix y flag jugador→cleanup de efectos; PRES-089 riesgo condicionado de referencia retenida. Tres símbolos potenciales; ficha ambiental ampliada,sin documento nuevo. Assets/backend y orden real de teardown NOT_VERIFIED. Neto de esta sesión frente a CP-R34:+16 evidencias,+12 símbolos,+1 fichas. Solo atlas,sin build ni runtime.

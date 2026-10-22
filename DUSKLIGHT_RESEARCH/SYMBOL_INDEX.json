@@ -9071,5 +9071,88 @@
     "evidence_ids": [
       "PLAYER-063"
     ]
+  },
+  {
+    "symbol": "daKytag08_Create",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag08.cpp",
+      "line_start": 234,
+      "line_end": 268,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag08.cpp#L234-L268"
+    },
+    "signature": "static int daKytag08_Create(fopAc_ac_c* i_this)",
+    "purpose": "Carga y publicación de actor ambiental prestado en puntero global único.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "resLoad COMPLEATE y heap construido."
+    ],
+    "risks": [
+      "Sobrescribe fog_avoid_tag sin arbitraje/owner handle en este caller; no ABI/export certificado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-086"
+    ]
+  },
+  {
+    "symbol": "daKytag08_Execute",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag08.cpp",
+      "line_start": 70,
+      "line_end": 117,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag08.cpp#L70-L117"
+    },
+    "signature": "static int daKytag08_Execute(kytag08_class* i_this)",
+    "purpose": "Actualiza radio/timer y gatillos de niebla con consumidores de material/jugador.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Jugador y entorno vivos; callbacks/emisores gestionados por motor."
+    ],
+    "risks": [
+      "Timer no es segundos; orden relativo a draw/presentación no certificado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-087",
+      "PRES-088"
+    ]
+  },
+  {
+    "symbol": "daKytag08_Delete",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag08.cpp",
+      "line_start": 196,
+      "line_end": 215,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag08.cpp#L196-L215"
+    },
+    "signature": "static int daKytag08_Delete(kytag08_class* i_this)",
+    "purpose": "Retira emisores y ARC sin limpieza explícita de referencia ambiental.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Emisores pueden serNULL; resDelete se llama igualmente."
+    ],
+    "risks": [
+      "No demuestra drenaje GPU ni retirada de fog_avoid_tag; riesgo de lifetime condicionado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-086",
+      "PRES-089"
+    ]
   }
 ]

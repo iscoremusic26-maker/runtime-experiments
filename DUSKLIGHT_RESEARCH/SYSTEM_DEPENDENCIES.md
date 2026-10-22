@@ -89,3 +89,5 @@ CP-R35 PORT-014..017: port_support→hud_ui_text (evento/documento/mensajes)→r
 CP-R36 PRES-082..085: hud_ui_text (dMw captura)→cameras_rendering (drawlist/Painter)→runtime_and_lifecycle (gate ticks/pause). Interpolación tiene sync local,no fence; external_dependencies Aurora pendiente. Retorno void de registro2D no confirma aceptación.
 
 CP-R37 PLAYER-061..064: other_systems(tag/shop)→actors_ai_npcs(solicitud/actor display)→cutscenes_dialogue(event024)→flags_events_progression(save-switch RAM)→inventory_equipment(ItemService previo). Oculto,índice sold-out,requestID y venta/persistencia son estados distintos; tabla tags presta punteros,sin ownership de hijo por parent.
+
+CP-R38 PRES-086..089: environment_weather_time(KYTAG08)→models_animations_materials(MA11/TexMtx) y player_and_controls(FogFade); audio_particles_effects recibe radio/emisores/trigger. Kankyo presta puntero a actor; Delete de efectos no equivale a limpiar referencia del consumidor.

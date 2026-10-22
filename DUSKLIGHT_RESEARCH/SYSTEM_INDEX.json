@@ -1230,13 +1230,15 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "READ global; reloj/KYTAG11,paletas/KYTAG06,agua y KYTAG07 punto/selección/retiro CP-R29 contrastados selectivamente.",
+    "scope": "READ global: cadenas ambientales previas y CP-R38 KYTAG08 puntero único→radio/timer→material MA11/jugador→cleanup parcial; sin cobertura universal clima ni runtime.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
     "files_examined": [
       "include/d/actor/d_a_kytag07.h",
+      "include/d/actor/d_a_kytag08.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
+      "include/d/actor/d_a_player.h",
       "include/d/d_bg_s.h",
       "include/d/d_com_inf_game.h",
       "include/d/d_kankyo.h",
@@ -1246,8 +1248,10 @@
       "src/SSystem/SComponent/c_lib.cpp",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
+      "src/d/actor/d_a_bg.cpp",
       "src/d/actor/d_a_kytag06.cpp",
       "src/d/actor/d_a_kytag07.cpp",
+      "src/d/actor/d_a_kytag08.cpp",
       "src/d/actor/d_a_kytag11.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
@@ -1275,7 +1279,9 @@
     ],
     "paths": [
       "include/d/actor/d_a_kytag07.h",
+      "include/d/actor/d_a_kytag08.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
+      "include/d/actor/d_a_player.h",
       "include/d/d_bg_s.h",
       "include/d/d_com_inf_game.h",
       "include/d/d_kankyo.h",
@@ -1285,8 +1291,10 @@
       "src/SSystem/SComponent/c_lib.cpp",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
+      "src/d/actor/d_a_bg.cpp",
       "src/d/actor/d_a_kytag06.cpp",
       "src/d/actor/d_a_kytag07.cpp",
+      "src/d/actor/d_a_kytag08.cpp",
       "src/d/actor/d_a_kytag11.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
@@ -1316,7 +1324,9 @@
       "movement_physics_collision",
       "actors_ai_npcs",
       "models_animations_materials",
-      "runtime_and_lifecycle"
+      "runtime_and_lifecycle",
+      "player_and_controls",
+      "external_dependencies"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1340,7 +1350,11 @@
       "PRES-074",
       "PRES-075",
       "PRES-076",
-      "PRES-077"
+      "PRES-077",
+      "PRES-086",
+      "PRES-087",
+      "PRES-088",
+      "PRES-089"
     ]
   },
   {
