@@ -2223,7 +2223,7 @@
   {
     "system_id": "port_support",
     "coverage": "READ",
-    "scope": "READ parcial: soporte previo y CP-R65 LogService→ring host→LogsWindow/clear lógico;backenddurabilidad pendiente.",
+    "scope": "READ parcial: soporte previo y CP-R79 callback stub configurado→buffer→ImGui/clear por frame;dispatch de logger Borealis bloqueado,backend/durabilidad pendientes.",
     "reports": [
       "systems/port_achievements.md",
       "systems/port_speedrun_livesplit.md",
@@ -2250,11 +2250,13 @@
       "src/dusk/game_clock.h",
       "src/dusk/game_mode.hpp",
       "src/dusk/imgui/ImGuiConsole.cpp",
+      "src/dusk/imgui/ImGuiStubLog.cpp",
       "src/dusk/io.cpp",
       "src/dusk/iso_validate.cpp",
       "src/dusk/iso_validate.hpp",
       "src/dusk/livesplit.cpp",
       "src/dusk/logging.cpp",
+      "src/dusk/logging.h",
       "src/dusk/mod_loader.hpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/loader.cpp",
@@ -2265,6 +2267,7 @@
       "src/dusk/settings.cpp",
       "src/dusk/speedrun.cpp",
       "src/dusk/speedrun.h",
+      "src/dusk/stubs.cpp",
       "src/dusk/ui/achievements.cpp",
       "src/dusk/ui/command_console.cpp",
       "src/dusk/ui/command_console.hpp",
@@ -2280,6 +2283,7 @@
       "src/dusk/ui/ui.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/f_op/f_op_overlap_mng.cpp",
+      "src/m_Do/m_Do_graphic.cpp",
       "src/m_Do/m_Do_main.cpp"
     ],
     "dependencies": [
@@ -2322,7 +2326,10 @@
       "PORT-025",
       "PORT-026",
       "PORT-027",
-      "PORT-028"
+      "PORT-028",
+      "PORT-029",
+      "PORT-030",
+      "PORT-031"
     ],
     "files_examined": [
       "sdk/include/mods/svc/log.h",
@@ -2337,11 +2344,14 @@
       "src/dusk/discord_presence.hpp",
       "src/dusk/game_clock.cpp",
       "src/dusk/game_clock.h",
+      "src/dusk/imgui/ImGuiConsole.cpp",
+      "src/dusk/imgui/ImGuiStubLog.cpp",
       "src/dusk/io.cpp",
       "src/dusk/iso_validate.cpp",
       "src/dusk/iso_validate.hpp",
       "src/dusk/livesplit.cpp",
       "src/dusk/logging.cpp",
+      "src/dusk/logging.h",
       "src/dusk/mod_loader.hpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/loader.cpp",
@@ -2351,6 +2361,7 @@
       "src/dusk/settings.cpp",
       "src/dusk/speedrun.cpp",
       "src/dusk/speedrun.h",
+      "src/dusk/stubs.cpp",
       "src/dusk/ui/achievements.cpp",
       "src/dusk/ui/command_console.cpp",
       "src/dusk/ui/command_console.hpp",
@@ -2364,6 +2375,7 @@
       "src/dusk/ui/prelaunch.cpp",
       "src/dusk/ui/settings.cpp",
       "src/dusk/ui/ui.cpp",
+      "src/m_Do/m_Do_graphic.cpp",
       "src/m_Do/m_Do_main.cpp"
     ]
   },

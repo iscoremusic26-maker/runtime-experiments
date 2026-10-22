@@ -169,3 +169,5 @@ CP-R76 CALLBACK-043..046: TCPrequest→handleclosedgate→pollCONNECTED→sendqu
 CP-R77 PRES-143..146: montaje DVD→archive prestado a JAU→descriptor copiado con punteros prestados→región de audio→JAISeq→reciclaje por isUsingSeqData. Cache archive y buffer caller poseen vida distinta. [Recursos](systems/resources_archives_overlays.md).
 
 CP-R78 PLAYER-099..102: Hena/dialogue→timer6→controlador/tabla/bola→cam73/76→eventReg/rewardpending→reset cámara/reentrada. Estado repartido entre actores, globals, timer y eventRAM. [Otros sistemas](systems/other_systems.md).
+
+CP-R79 PORT-029..031: logging options.divert —backend no disponible→ callback matcher→StubLogBuffer/offsets→ImGui→PostDraw clear salvo pausa. Es otra política que LogService ring2048. [Diagnóstico](systems/port_commands.md).

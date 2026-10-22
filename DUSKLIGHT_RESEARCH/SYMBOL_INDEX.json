@@ -11969,5 +11969,60 @@
       "PLAYER-101",
       "PLAYER-102"
     ]
+  },
+  {
+    "symbol": "dusk::SendToStubLog",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/imgui/ImGuiStubLog.cpp",
+      "line_start": 16,
+      "line_end": 34,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/imgui/ImGuiStubLog.cpp#L16-L34"
+    },
+    "signature": "void dusk::SendToStubLog(borealis::LogLevel, std::string_view, std::string_view)",
+    "purpose": "Consumir mensaje de diagnóstico en buffer temporal",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Callback invocado por backend o caller válido"
+    ],
+    "risks": [
+      "Pausa/capacidad pueden omitir; backend y threading no acreditados"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-029",
+      "PORT-030"
+    ]
+  },
+  {
+    "symbol": "dusk::ImGuiMenuTools::afterDraw",
+    "kind": "method",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/imgui/ImGuiStubLog.cpp",
+      "line_start": 80,
+      "line_end": 84,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/imgui/ImGuiStubLog.cpp#L80-L84"
+    },
+    "signature": "void dusk::ImGuiMenuTools::afterDraw()",
+    "purpose": "Vaciar buffer stub al terminar dibujo salvo pausa",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Recorrido PostDraw ejecutado"
+    ],
+    "risks": [
+      "Clear lógico; no durabilidad ni borrado físico"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-031"
+    ]
   }
 ]

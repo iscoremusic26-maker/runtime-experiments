@@ -323,3 +323,7 @@ Padre remoto verificado 5a6855cd4d299236ac289602ef7ac1a0ec793601. PRES-143..145 
 ## CP-R78 — Rollgoal: actores distribuidos, resultado y progreso
 
 Padre remoto verificado b90e7d633b014e2ecccfd79e1a6cc6cb4842ae98. PLAYER-099..102 STATIC_CROSSCHECKED: Fshop/controlador→bola→Hena→flags/progreso/reentrada; timer y rewardpending diferenciados de efectos completados y disco. Dos localizadores internos. Pesca/alquiler y teardown abrupto pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R79 — Diagnóstico stub: callback, buffer y limpieza por frame
+
+Padre remoto verificado b5a660e7d9cda67ffcb351b3999314276c5f1a67. PORT-029 SOURCE_OBSERVED,030/031 STATIC_CROSSCHECKED: desvío configurado→buffer→UI/clear;backenddispatch condicionado. Dos localizadores internos; no repetir LogService CP65. PARCIAL sin backend ni UI real. Sin mod,build ni runtime; solo atlas.

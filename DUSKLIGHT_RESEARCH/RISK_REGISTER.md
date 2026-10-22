@@ -159,3 +159,5 @@ CP-R76 / CALLBACK-045 STATIC_INFERRED:mods::net::poll devuelve endpointview sobr
 CP-R77 / PRES-146 STATIC_INFERRED: fallo de sendCmdMsg deja bloque en loading1 en recorrido inspeccionado; no callback ni rollback local. No bloqueo observado. Sync de mountXArchive solo done, no archive válido. Destruir comando no desmonta archive ni drena lecturas.
 
 CP-R78: resultado Rollgoal usa actor.health como payload; progreso/rewardpending se escribe antes de terminar flow. IDs de hijos no comprobados y búsquedas por variante no prueban vida/parent; no seguridad de unload abrupto ni rollback automático. No fallos runtime observados.
+
+CP-R79: callback stub retorna true aunque SendToStubLog omita por pausa/umbral; significado en logger Borealis no certificado. Umbral1MiB se comprueba antes de append, sin límite estricto postappend. No pérdida de archivo, race o runtime observados.

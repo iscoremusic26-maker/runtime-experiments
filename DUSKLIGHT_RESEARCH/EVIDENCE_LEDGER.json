@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R78",
+  "checkpoint": "CP-R79",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -23141,6 +23141,127 @@
           "line_start": 1666,
           "line_end": 1673,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_mg_fshop.cpp#L1666-L1673"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-029",
+      "claim": "Diagnóstico stub es ruta distinta del ringLogService CP65: STUB_LOG emite mensaje solo sinNDEBUG,InitializeLogging configura callbackdivert antes de apply_to/init. Callback compara fragmentos por texto,con gateEnabled,envía albuffer y retornatrue aun si este no conserva mensaje;invocación/semántica de retorno en Borealis ausente no certificadas.",
+      "level": "SOURCE_OBSERVED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/logging.h",
+          "line_start": 9,
+          "line_end": 28,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/logging.h#L9-L28"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/logging.cpp",
+          "line_start": 7,
+          "line_end": 49,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/logging.cpp#L7-L49"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/stubs.cpp",
+          "line_start": 228,
+          "line_end": 240,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/stubs.cpp#L228-L240"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-030",
+      "claim": "SendToStubLog no retiene string_views en campos delmod: appendf formatea bufferhost e índice de línea bajo mutex. Pausa retorna antes de append;size>1MiB rechaza,pero check previo no constituye límite estricto postappend. ShowStubLog bajo mismo mutex consume rangos con TextUnformatted;no callback SDK ni registroowned.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/logging.h",
+          "line_start": 9,
+          "line_end": 15,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/logging.h#L9-L15"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/imgui/ImGuiStubLog.cpp",
+          "line_start": 10,
+          "line_end": 70,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/imgui/ImGuiStubLog.cpp#L10-L70"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/imgui/ImGuiConsole.cpp",
+          "line_start": 375,
+          "line_end": 395,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/imgui/ImGuiConsole.cpp#L375-L395"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-031",
+      "claim": "PostDraw→afterDraw toma mutex yclear buffer/offsets salvoPaused. PreDraw solo muestra stubwindow con IsGameLaunched y no speedrun,pero PostDraw común limpia aun ventanaoculta si no pausa. PainterPC llama Pre/Post,prelaunch también;clear lógico sin reset Enabled/Paused ni prueba borrado físico/logfile.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/imgui/ImGuiStubLog.cpp",
+          "line_start": 72,
+          "line_end": 84,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/imgui/ImGuiStubLog.cpp#L72-L84"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/imgui/ImGuiConsole.cpp",
+          "line_start": 375,
+          "line_end": 395,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/imgui/ImGuiConsole.cpp#L375-L395"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_graphic.cpp",
+          "line_start": 2186,
+          "line_end": 2188,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_graphic.cpp#L2186-L2188"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_graphic.cpp",
+          "line_start": 2835,
+          "line_end": 2837,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_graphic.cpp#L2835-L2837"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_main.cpp",
+          "line_start": 174,
+          "line_end": 184,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_main.cpp#L174-L184"
         }
       ],
       "limitations": [
