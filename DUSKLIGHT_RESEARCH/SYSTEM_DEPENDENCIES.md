@@ -117,3 +117,5 @@ CP-R49 WORLD-041/042: ground/RTBL→room flags8/20→iterador layer→delete req
 CP-R50 PRES-108..111: ARC BTP→wrapper/frameCtrl→descriptor material prestado→TevBlock texNo. Remove desactiva slot,sin restauración previa;callback de heap usa bool,no fases. [Modelos](systems/models_animations_materials.md).
 
 CP-R51 CALLBACK-032..034: Ui descriptor→shared ModControlSpec→Button Confirm→guard pane/active→mod callback→SlotDetach/modDetached. Hostclosure no mantiene userdata/DLL;guard no drena llamada iniciada. [Callbacks](systems/callback_ownership_and_cancellation.md).
+
+CP-R52 PLAYER-073..076: E_RD request→E_ARROW→colisiónescudo→Link lista16/contador→flagreset→delete específico. IDs y offset prestados no son ownership;item solicitado/contador no garantizan recompensa durable. [Combate](systems/combat_damage.md).

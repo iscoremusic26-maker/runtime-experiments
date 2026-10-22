@@ -213,3 +213,7 @@ Padre remoto verificado ff402f2451a2ca2291c6199db5c7906a5f631242. PRES-108..111:
 ## CP-R51 — UiService BUTTON,guard pane y rebuild/detach
 
 Padre remoto verificado 7edf053ae53ae45272d06285aa49ecd82a1711a2. CALLBACK-032..034 (+3 STATIC_CROSSCHECKED),un slot OFFICIAL_SERVICE ya existente y un helper potencial;0 fichas nuevas. Se descartó pistaInputService inexistente;se contrastó BUTTON→Confirm→guard de registro→callback→detach,sin UI ni runtime. Sin mod,build ni runtime; solo atlas.
+
+## CP-R52 — Flecha enemiga,escudo madera,lista16 y reset
+
+Padre remoto verificado c1cf24d56a4695b22695f2f9c483dddd1c8bf623. PLAYER-073..076 (+4 STATIC_CROSSCHECKED),tres localizadores;0 fichas. E_RD→E_ARROW→escudo→listaLink16→contador/itemsolicitado→reset→delete específico,distinto de joint de flecha jugador. Entrega/persistencia,resto de variantes y runtime no demostrados. Sin mod,build ni runtime; solo atlas.

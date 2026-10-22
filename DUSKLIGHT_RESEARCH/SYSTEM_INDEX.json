@@ -1153,7 +1153,7 @@
   {
     "system_id": "combat_damage",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R48 flecha tipo0→joint→adhesión→retirada; no todos los proyectiles.",
+    "scope": "CROSSCHECKED selectiva: rutas previas,flecha jugador jointCP48 y enemiga normal→woodshield/lista16→resetCP52;no daño/proyectiles universales.",
     "reports": [
       "systems/combat_damage.md"
     ],
@@ -1161,12 +1161,18 @@
       "include/SSystem/SComponent/c_cc_d.h",
       "include/d/actor/d_a_arrow.h",
       "include/d/actor/d_a_b_ds.h",
+      "include/d/actor/d_a_e_arrow.h",
+      "include/d/actor/d_a_player.h",
       "include/f_op/f_op_actor.h",
       "include/f_op/f_op_actor_mng.h",
+      "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_bow.inc",
       "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_alink_guard.inc",
       "src/d/actor/d_a_arrow.cpp",
       "src/d/actor/d_a_b_ds.cpp",
+      "src/d/actor/d_a_e_arrow.cpp",
+      "src/d/actor/d_a_e_rd.cpp",
       "src/d/actor/d_a_e_tt.cpp",
       "src/d/d_cc_d.cpp",
       "src/d/d_cc_s.cpp",
@@ -1186,12 +1192,18 @@
       "include/SSystem/SComponent/c_cc_d.h",
       "include/d/actor/d_a_arrow.h",
       "include/d/actor/d_a_b_ds.h",
+      "include/d/actor/d_a_e_arrow.h",
+      "include/d/actor/d_a_player.h",
       "include/f_op/f_op_actor.h",
       "include/f_op/f_op_actor_mng.h",
+      "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_bow.inc",
       "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_alink_guard.inc",
       "src/d/actor/d_a_arrow.cpp",
       "src/d/actor/d_a_b_ds.cpp",
+      "src/d/actor/d_a_e_arrow.cpp",
+      "src/d/actor/d_a_e_rd.cpp",
       "src/d/actor/d_a_e_tt.cpp",
       "src/d/d_cc_d.cpp",
       "src/d/d_cc_s.cpp",
@@ -1210,7 +1222,8 @@
       "flags_events_progression",
       "inventory_equipment",
       "environment_weather_time",
-      "models_animations_materials"
+      "models_animations_materials",
+      "player_and_controls"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1226,7 +1239,11 @@
       "PLAYER-069",
       "PLAYER-070",
       "PLAYER-071",
-      "PLAYER-072"
+      "PLAYER-072",
+      "PLAYER-073",
+      "PLAYER-074",
+      "PLAYER-075",
+      "PLAYER-076"
     ]
   },
   {

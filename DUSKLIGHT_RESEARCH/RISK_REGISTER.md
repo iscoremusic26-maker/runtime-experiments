@@ -105,3 +105,5 @@ CP-R49 WORLD-041/042: clearRoomSwitch/Item se ejecutan después de pedir deletes
 CP-R50 PRES-110/111: removeBTP no verifica identidad ni restaura texNo;riesgo condicionado si hay escritor compartido. useHeapInit Wflag devuelve5 en fallosBTP,caller convierte a bool;no fallo runtime observado ni patch. Recursos de animación prestados deben seguir vivos durante calc.
 
 CP-R51 CALLBACK-032..034: closure host copia fn/userdata pero no posee DLL ni datos usuario. Guard pane/active previo no valida Control individual ni callback ya iniciado;detach invalida futuros accesos,no acredita drenaje. Sin fallo UI/runtime observado.
+
+CP-R52 PLAYER-073..076: listallena expulsaID mediante delete sin confirmar;contador,itemdemo,reset y destructor son hitos distintos. E_ARROW Delete no limpia listaLink ni todos los emisores explícitamente;solicitar delete no corta todo Execute. Sin fallo ni reentrancia/runtime observados.

@@ -10129,5 +10129,88 @@
       "CALLBACK-033",
       "CALLBACK-034"
     ]
+  },
+  {
+    "symbol": "e_arrow_shield",
+    "kind": "function",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_e_arrow.cpp",
+      "line_start": 442,
+      "line_end": 455,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_e_arrow.cpp#L442-L455"
+    },
+    "signature": "static void e_arrow_shield(e_arrow_class*)",
+    "purpose": "Consume offsets en matriz escudo y solicita delete por reset.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ACTION_ARROW_SHIELD de proyectil enemigo;Link y matriz válidos."
+    ],
+    "risks": [
+      "No usa joint de daArrow ni prueba fin de delete."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-074",
+      "PLAYER-076"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::setArrowShieldActor",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink_guard.inc",
+      "line_start": 77,
+      "line_end": 110,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_guard.inc#L77-L110"
+    },
+    "signature": "void daAlink_c::setArrowShieldActor(fopAc_ac_c*, int)",
+    "purpose": "Registra ID en16 ranuras,expulsa primero al saturar.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Flecha/Link vigentes;datosRAM."
+    ],
+    "risks": [
+      "ID no ownership;solicitud item y delete descartan resultado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-075"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::stickArrowIncrement",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink_guard.inc",
+      "line_start": 37,
+      "line_end": 75,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_guard.inc#L37-L75"
+    },
+    "signature": "void daAlink_c::stickArrowIncrement(int)",
+    "purpose": "Consume entradas de flechas recuperables y activa reset.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "No STATUS_WINDOW_DRAW;contador expirado o forzado."
+    ],
+    "risks": [
+      "Publicación RAM/item no prueba entrega ni persistencia."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-075",
+      "PLAYER-076"
+    ]
   }
 ]

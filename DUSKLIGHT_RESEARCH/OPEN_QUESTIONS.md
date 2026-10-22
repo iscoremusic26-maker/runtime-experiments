@@ -44,3 +44,5 @@ CP-R49 PARCIAL Q-11/PRES-089: WORLD-041/042 localizan retiro8 y20,BG excluido en
 CP-R50 Q-10: PRES-108..111 contrastan BTP/texNo,Wflag y retiro por slot;discordancia error5→bool es inferencia condicionada. Faltan assets/sharing/ownership completo,LOD y runtime;no repetir wrapper/descriptor. Alternar servicio u otro dominio.
 
 CP-R51 Q-01/Q-02: CALLBACK-032..034 contrastan BUTTON UiService2.3,guard de pane y generación/rebuild/detach;InputService no se deduce de ruta inexistente. Reentrancia,otros tipos UI y bibliotecaWindows siguen pendientes;alternar gameplay.
+
+CP-R52 Q-12: PLAYER-073..076 contrastan flecha enemiga normal→escudo madera→lista16→recuperaciónRAM/reset/delete. No reusar parámetros de daArrow ni afirmar daño/recompensa duradera;FIRE/BOMB,SPIN y resetglobal completos pendientes. Alternar Q-13.
