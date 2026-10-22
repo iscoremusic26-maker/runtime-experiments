@@ -185,3 +185,7 @@ Padre remoto verificado 098550baa2123de36fb4e93b3bb83f9a070c8591. ROOT-011..013:
 ## CP-R44 — BAS,eventos de sonido,handles y stop/release
 
 Padre remoto verificado 0fbe36a58c222c7d7e495a98a250598080b9df68. PRES-098..101: BAS/frame→filtros/evento→pool/handle→SoundStarter→lifetime/stop/release. Tres símbolos potenciales; ficha audio ampliada. Índice consumido no sonido entregado,release no stop/mixer drain; sin audio ejecutado ni backend/ABI probados. Neto de esta sesión frente a CP-R34:+39 evidencias,+29 símbolos,+2 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R45 — Skinning explícito,buffers y packet consumidor
+
+Padre remoto verificado 7cc9666e608e6a3f46c7ecbaeeb530018b9b6203. PRES-102..105: candado→skin deformer/alloc parcial→pose/vértices→packet arrays→heap/ARCcleanup. Tres símbolos potenciales; ficha modelos ampliada. Instalación no atómica y ruta fast compartida condicionada; sin asset/formato/LOD universal ni render Windows. Neto de esta sesión frente a CP-R34:+43 evidencias,+32 símbolos,+2 fichas. Solo atlas,sin build ni runtime.

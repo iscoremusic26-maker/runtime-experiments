@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R44",
+  "checkpoint": "CP-R45",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -16324,6 +16324,210 @@
           "line_start": 1,
           "line_end": 13,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/audio.h#L1-L13"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-102",
+      "claim": "daBdoor carga modelos puerta/candado y BCK,construye J3DSkinDeform y lo instala flags1; create por fases/heap y draw con room/mLocked lleva a modelUpdateDL. Cadena de skinning explícito distinta de pose morf.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_door_boss.cpp",
+          "line_start": 43,
+          "line_end": 68,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_door_boss.cpp#L43-L68"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_door_boss.cpp",
+          "line_start": 107,
+          "line_end": 119,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_door_boss.cpp#L107-L119"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_door_boss.cpp",
+          "line_start": 355,
+          "line_end": 385,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_door_boss.cpp#L355-L385"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 361,
+          "line_end": 378,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L361-L378"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-103",
+      "claim": "setSkinDeform guarda puntero,ignora int de initMtxIndexArray y asigna flags/buffers por etapas; errorAlloc4 no es rollback de todo estado. init construye índices/matrices y VertexBuffer tiene dos arrays transformados por tipo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+          "line_start": 390,
+          "line_end": 433,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L390-L433"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
+          "line_start": 199,
+          "line_end": 233,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp#L199-L233"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphBase/J3DVertex.cpp",
+          "line_start": 193,
+          "line_end": 220,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphBase/J3DVertex.cpp#L193-L220"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/J3DGraphBase/J3DEnum.h",
+          "line_start": 4,
+          "line_end": 8,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/J3DGraphBase/J3DEnum.h#L4-L8"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-104",
+      "claim": "J3DModel calc ejecuta joints/envelopes antes de deform; skin selecciona fast/normal y F32/S16. Ruta F32 transforma posiciones/normales a buffers swapped y cambia current; packetsetArray consume current con posible adaptación de interpolaciónPC.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+          "line_start": 474,
+          "line_end": 497,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L474-L497"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
+          "line_start": 629,
+          "line_end": 679,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp#L629-L679"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
+          "line_start": 552,
+          "line_end": 572,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp#L552-L572"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
+          "line_start": 598,
+          "line_end": 610,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp#L598-L610"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphBase/J3DPacket.cpp",
+          "line_start": 342,
+          "line_end": 350,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphBase/J3DPacket.cpp#L342-L350"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphBase/J3DVertex.cpp",
+          "line_start": 74,
+          "line_end": 84,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphBase/J3DVertex.cpp#L74-L84"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+          "line_start": 548,
+          "line_end": 580,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L548-L580"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-105",
+      "claim": "Fast-skin condicional modifica arrays en ModelData; buffer/skin/modelo tienen vida separada de ARC. Delete daBdoor suelta fondo/ARC,sin delete explícito del deformer; destructores skin/modelo vacíos y vertexresetPC no prueban frees/GPUdrain universales.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
+          "line_start": 441,
+          "line_end": 474,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp#L441-L474"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
+          "line_start": 709,
+          "line_end": 709,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp#L709-L709"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
+          "line_start": 75,
+          "line_end": 92,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h#L75-L92"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphBase/J3DVertex.cpp",
+          "line_start": 74,
+          "line_end": 84,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphBase/J3DVertex.cpp#L74-L84"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_door_boss.cpp",
+          "line_start": 389,
+          "line_end": 395,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_door_boss.cpp#L389-L395"
         }
       ],
       "limitations": [

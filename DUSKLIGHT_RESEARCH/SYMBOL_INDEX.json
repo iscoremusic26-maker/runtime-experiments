@@ -9631,5 +9631,89 @@
     "evidence_ids": [
       "PRES-101"
     ]
+  },
+  {
+    "symbol": "J3DModel::setSkinDeform",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "line_start": 390,
+      "line_end": 433,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L390-L433"
+    },
+    "signature": "s32 J3DModel::setSkinDeform(J3DSkinDeform* p_skinDeform, u32 flags)",
+    "purpose": "Instala deformer y buffers/flags por etapas; adquisición no atómica.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ModelData/vértices/joints compatibles y heap válido."
+    ],
+    "risks": [
+      "No propaga initMtxIndexArray; fallo parcial no rollback completo."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-102",
+      "PRES-103"
+    ]
+  },
+  {
+    "symbol": "J3DSkinDeform::deformVtxPos_F32",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
+      "line_start": 552,
+      "line_end": 572,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp#L552-L572"
+    },
+    "signature": "void J3DSkinDeform::deformVtxPos_F32(J3DVertexBuffer* pVtxBuffer, J3DMtxBuffer* pMtxBuffer) const",
+    "purpose": "Transforms por matrices de draw/joint hacia buffer corriente de posiciones.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Ruta normal F32 elegida; índices y tamaños válidos."
+    ],
+    "risks": [
+      "No validar cualquier BMD ni render/GPU Windows por nombre CPU."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-104"
+    ]
+  },
+  {
+    "symbol": "daBdoor_c::CreateHeap",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_door_boss.cpp",
+      "line_start": 43,
+      "line_end": 76,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_door_boss.cpp#L43-L76"
+    },
+    "signature": "int daBdoor_c::CreateHeap()",
+    "purpose": "Consumidor real: candado BMD/BCK y skin deformer en heap de actor.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ARC disponible; errores devuelven0 al wrapper heap."
+    ],
+    "risks": [
+      "Un alloc exitoso no completa todos los recursos; cleanup parcial/refs compartidas no certificados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-102",
+      "PRES-103",
+      "PRES-105"
+    ]
   }
 ]

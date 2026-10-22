@@ -91,3 +91,5 @@ CP-R42 PORT-018..021: cancelRequested no confirma Canceled; destructor/join espe
 CP-R43 ROOT-012/013: subDelete0 aún puede retirar drawtag en msg; no observado con Timer,que retorna1. fopMsgM_Deletevoid no confirma encolado. No asumir limpieza actor heap/audio/owned_samples ni drenaje GPU en msg; cleanup concreto debe rastrearse.
 
 CP-R44 PRES-099..101: eventoBAS avanza índice antes de filtros/pool/fallo,sin retry local; userData presta evento. Cambio de animación puede dejar sonido estado2; dispose distingue release de stop y ambos de mixer drain. Sin sonido/audibilidad/fallo runtime observados.
+
+CP-R45 PRES-103/105: setSkinDeform descarta initMtxIndexArrayret y cambia flags/buffers por etapas,sin rollback completo; no fallo runtime declarado. Fastpath puede mutar arrays ModelData; destructor vacío no acredita frees ni leak. Asset/índices/ABI/export y GPUdrain pendientes.
