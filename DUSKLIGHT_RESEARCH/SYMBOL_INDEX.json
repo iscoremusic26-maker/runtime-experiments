@@ -11298,5 +11298,88 @@
       "ARCH-022",
       "ARCH-024"
     ]
+  },
+  {
+    "symbol": "mDoExt_blkAnm::init",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 272,
+      "line_end": 284,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L272-L284"
+    },
+    "signature": "int mDoExt_blkAnm::init(J3DDeformData*, J3DAnmCluster*, int, int, f32, s16, s16)",
+    "purpose": "Retener animación de pesos y enlazarla a deformers",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Recurso y DeformData válidos;FrameCtrl en contexto apropiado"
+    ],
+    "risks": [
+      "Punteros compartidos;sin ABI/export Windows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-131",
+      "PRES-132"
+    ]
+  },
+  {
+    "symbol": "J3DModel::setDeformData",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "line_start": 371,
+      "line_end": 388,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L371-L388"
+    },
+    "signature": "s32 J3DModel::setDeformData(J3DDeformData*, u32)",
+    "purpose": "Enlazar DeformData y preparar arrays locales",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Modelo y buffers inicializados"
+    ],
+    "risks": [
+      "Asignación precede posible fallo de copia;no rollback completo"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-132"
+    ]
+  },
+  {
+    "symbol": "J3DDeformData::setAnm",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp",
+      "line_start": 74,
+      "line_end": 79,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp#L74-L79"
+    },
+    "signature": "void J3DDeformData::setAnm(J3DAnmCluster*)",
+    "purpose": "Publicar animación a todos los deformers",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Deformers creados y animación viva"
+    ],
+    "risks": [
+      "No ownership por modelo/actor ni arbitraje de sharing"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-132",
+      "PRES-133"
+    ]
   }
 ]

@@ -513,12 +513,13 @@
   {
     "system_id": "models_animations_materials",
     "coverage": "READ",
-    "scope": "READ parcial: cadenas previas y CP-R66 BRK/TevRegKey→slots CReg/KReg→materialcalc/retirada;assets/sharing/LOD/Windows pendientes.",
+    "scope": "READ parcial: muestras previas,BRK y CP-R69 BLS/BLK→pesos cluster→vértices/retirada Demo00;BVA sin consumidor actor3D localizado,assets/sharing pendientes.",
     "reports": [
       "systems/models_animations_materials.md"
     ],
     "files_examined": [
       "include/SSystem/SComponent/c_phase.h",
+      "include/d/actor/d_a_demo00.h",
       "include/d/actor/d_a_npc_coach.h",
       "include/d/actor/d_a_obj_sakuita.h",
       "include/d/d_simple_model.h",
@@ -528,6 +529,7 @@
       "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
       "libs/JSystem/include/JSystem/J3DGraphBase/J3DEnum.h",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAnm.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
@@ -536,6 +538,8 @@
       "libs/JSystem/src/J3DGraphBase/J3DPacket.cpp",
       "libs/JSystem/src/J3DGraphBase/J3DVertex.cpp",
       "libs/JSystem/src/J3DGraphLoader/J3DAnmLoader.cpp",
+      "libs/JSystem/src/J3DGraphLoader/J3DClusterLoader.cpp",
+      "src/d/actor/d_a_demo00.cpp",
       "src/d/actor/d_a_door_boss.cpp",
       "src/d/actor/d_a_npc_coach.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
@@ -558,6 +562,7 @@
     ],
     "paths": [
       "include/SSystem/SComponent/c_phase.h",
+      "include/d/actor/d_a_demo00.h",
       "include/d/actor/d_a_npc_coach.h",
       "include/d/actor/d_a_obj_sakuita.h",
       "include/d/d_simple_model.h",
@@ -567,6 +572,7 @@
       "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
       "libs/JSystem/include/JSystem/J3DGraphBase/J3DEnum.h",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAnm.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
@@ -575,7 +581,9 @@
       "libs/JSystem/src/J3DGraphBase/J3DPacket.cpp",
       "libs/JSystem/src/J3DGraphBase/J3DVertex.cpp",
       "libs/JSystem/src/J3DGraphLoader/J3DAnmLoader.cpp",
+      "libs/JSystem/src/J3DGraphLoader/J3DClusterLoader.cpp",
       "sdk/include/mods/svc/interp.h",
+      "src/d/actor/d_a_demo00.cpp",
       "src/d/actor/d_a_door_boss.cpp",
       "src/d/actor/d_a_npc_coach.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
@@ -600,7 +608,8 @@
       "runtime_and_lifecycle",
       "stages_rooms_layers",
       "actors_ai_npcs",
-      "audio_particles_effects"
+      "audio_particles_effects",
+      "cutscenes_dialogue"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -631,7 +640,11 @@
       "PRES-127",
       "PRES-128",
       "PRES-129",
-      "PRES-130"
+      "PRES-130",
+      "PRES-131",
+      "PRES-132",
+      "PRES-133",
+      "PRES-134"
     ]
   },
   {

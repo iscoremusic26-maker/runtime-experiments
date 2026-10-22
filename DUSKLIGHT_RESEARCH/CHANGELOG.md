@@ -281,3 +281,7 @@ Padre remoto verificado e4b1da9d4533ceb1bcc0553172f028ec7b2dca78. CALLBACK-037/0
 ## CP-R68 — KYTAG04: orden de evento, contador y salida SCLS
 
 Padre remoto verificado f0e0e9a2f6b0fd67cd10f901e9cf9d31c7f9794a. ARCH-021/022/024 STATIC_CROSSCHECKED y023 STATIC_INFERRED:tipo4 encola evento,luego timer/Linkgate/SCLS→PLAY;drawtimerindependiente,cleanupemisores. CERRADO SELECTIVO flujo;assets/rollback/alcanzabilidadparciales. Dos localizadores nuevos y dStage_changeScene ampliado sin duplicado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R69 — BLS/BLK: deformación por clusters y consumidor Demo00
+
+Padre remoto verificado 8f4468e7d76ee31ddac140e87508b455974e81ba. PRES-131..133 STATIC_CROSSCHECKED: recursos BLS/BLK→pesos de cluster→arrays/calc y retirada Demo00. PRES-134 STATIC_INFERRED delimita missingBLK sin fallo observado. CERRADO SELECTIVO;BVA sin consumidor3D localizado,no imposibilidad demostrada. Tres localizadores internos nuevos. Sin mod,build ni runtime; solo atlas.

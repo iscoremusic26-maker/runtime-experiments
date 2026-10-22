@@ -139,3 +139,5 @@ CP-R66 / PRES-128/130: BRKentryvoid no propaga locked2/parcial1;remove desactiva
 CP-R67 / CALLBACK-039 STATIC_INFERRED:activefalse tras entrada produceERROR,tras sentinel normal puede retornarOK. No liberaruserdata por esperar sentinel infalible ni equiparar vectorparcial a éxito;sin unload/crash observado.
 
 CP-R68 / ARCH-023 STATIC_INFERRED: tipo4latchea tras enqueueevent;timer80ignora retornoSCLS y limpia contador sin reabrir5d1. SCLSNULL puede dejar ruta sin retrylocal,alcanzabilidadNOT_VERIFIED. SetterLinktienegateadicional ydrawtimeresdistinto;no teleport/escenacargadademostrados.
+
+CP-R69 / PRES-134 STATIC_INFERRED: missingBLK en createHeap puede dejar wrapper con mpAnmNULL y alcanzar entryFrame si heap/draw continúan antes de reinit. Assets/orden no probados,sin crash observado. setDeformData asigna puntero antes de copia fallible;no rollback total garantizado.

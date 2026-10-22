@@ -149,3 +149,5 @@ CP-R66 PRES-127..130: bloqueBRK→TevRegKey prestado→IDs de material→slots C
 CP-R67 CALLBACK-037..039: FileService→Borealis ListResultlocal→FileEntry prestado→callback/sentinel;wrapperSDKcopia→vectorpropio. Sin registroretenido ni frameBeginlist;estadoactive y retorno terminal distintos. [Ownership](systems/callback_ownership_and_cancellation.md).
 
 CP-R68 ARCH-021..024: switchroom→KYTAG04→orderqueueevent→timerexecute→selectorPLAYER/Linkgate→SCLS→nextstage→callerPLAY;drawtimer/partículas son faseaparte. Deleteemisores no rollbackglobal. [Runtime](systems/runtime_and_lifecycle.md).
+
+CP-R69 PRES-131..134: parámetros de demo→BLS/DeformData y BLK/pesos→deformer→arrays locales del modelo→calc antes de joints/skin. Heap del actor no posee por sí solo todo bloque de archive ni referencias externas de demo. [Modelos](systems/models_animations_materials.md).

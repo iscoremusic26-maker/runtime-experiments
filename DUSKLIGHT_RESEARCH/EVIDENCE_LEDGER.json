@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R68",
+  "checkpoint": "CP-R69",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -20875,6 +20875,290 @@
           "line_start": 560,
           "line_end": 575,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_play.cpp#L560-L575"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-131",
+      "claim": "Demo00 consume IDs de DeformData/BLK desde demo y crea wrapper en solidheap. BLSloader reconoceJ3D1/bls1 y CLS1,copia tablas pero conserva posiciones/normales del bloque;PC usa array separado de deformers. BLK carga claves/pesosBE. Son deformacióncluster y animación de pesos,distintas de skin por matrices.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 405,
+          "line_end": 430,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L405-L430"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 455,
+          "line_end": 477,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L455-L477"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 1152,
+          "line_end": 1162,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L1152-L1162"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 1171,
+          "line_end": 1174,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L1171-L1174"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_resorce.cpp",
+          "line_start": 495,
+          "line_end": 499,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_resorce.cpp#L495-L499"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphLoader/J3DClusterLoader.cpp",
+          "line_start": 14,
+          "line_end": 48,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphLoader/J3DClusterLoader.cpp#L14-L48"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphLoader/J3DClusterLoader.cpp",
+          "line_start": 72,
+          "line_end": 111,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphLoader/J3DClusterLoader.cpp#L72-L111"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphLoader/J3DAnmLoader.cpp",
+          "line_start": 32,
+          "line_end": 36,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphLoader/J3DAnmLoader.cpp#L32-L36"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphLoader/J3DAnmLoader.cpp",
+          "line_start": 612,
+          "line_end": 622,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphLoader/J3DAnmLoader.cpp#L612-L622"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-132",
+      "claim": "mDoExt_blkAnm init retiene BLK y setAnm lo publica a cada deformer. setDeformData guarda puntero antes de copiar buffers;fallo retorna sin revertir ese puntero. Demo00 actualiza frames según gates y Draw entryFrame→modelcalc;cluster evalúa/normaliza pesos y mezcla posicionesF32 antes de joints/envelopes/skin en J3DModelcalc.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/m_Do/m_Do_ext.h",
+          "line_start": 219,
+          "line_end": 235,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/m_Do/m_Do_ext.h#L219-L235"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 272,
+          "line_end": 284,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L272-L284"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+          "line_start": 371,
+          "line_end": 388,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L371-L388"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+          "line_start": 473,
+          "line_end": 496,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp#L473-L496"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp",
+          "line_start": 54,
+          "line_end": 79,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp#L54-L79"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp",
+          "line_start": 89,
+          "line_end": 105,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp#L89-L105"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp",
+          "line_start": 107,
+          "line_end": 145,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp#L107-L145"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp",
+          "line_start": 246,
+          "line_end": 287,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DCluster.cpp#L246-L287"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+          "line_start": 867,
+          "line_end": 878,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp#L867-L878"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 651,
+          "line_end": 656,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L651-L656"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 690,
+          "line_end": 710,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L690-L710"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 1548,
+          "line_end": 1550,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L1548-L1550"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 1571,
+          "line_end": 1583,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L1571-L1583"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-133",
+      "claim": "Demo00 cambio de shape resetea referencias del modelo y pasa a actLeaving;esta ruta DeleteHeap y Standby. Ausencia de demoactor solicita delete;destructor específico para morf si heap,wrapper llama destructor. No se demuestra que liberar heap del actor retire DeformData compartido de archive ni todo consumidor externodeldemo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 61,
+          "line_end": 79,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L61-L79"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 487,
+          "line_end": 492,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L487-L492"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 720,
+          "line_end": 737,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L720-L737"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 1837,
+          "line_end": 1844,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L1837-L1844"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_demo00.h",
+          "line_start": 85,
+          "line_end": 86,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_demo00.h#L85-L86"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-134",
+      "claim": "Si Demo00 recibe IDBLK válido pero getObjectIDRes devuelveNULL,createHeap solo informa y continúa con wrapper mpAnmNULL;si resto de heap/setDeformData termina y draw llega antes de reinit válido,entryFrame puede desreferenciar ese mpAnm. Es secuencia condicionada de fuente;assets/alcanzabilidad no probados y no crashobservado.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 405,
+          "line_end": 430,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L405-L430"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_demo00.cpp",
+          "line_start": 1548,
+          "line_end": 1550,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_demo00.cpp#L1548-L1550"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/m_Do/m_Do_ext.h",
+          "line_start": 219,
+          "line_end": 235,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/m_Do/m_Do_ext.h#L219-L235"
         }
       ],
       "limitations": [
