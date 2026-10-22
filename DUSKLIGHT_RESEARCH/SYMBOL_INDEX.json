@@ -11635,5 +11635,88 @@
       "PLAYER-094",
       "PLAYER-095"
     ]
+  },
+  {
+    "symbol": "GfxService::register_draw_type",
+    "kind": "service",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/gfx.h",
+      "line_start": 300,
+      "line_end": 304,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/gfx.h#L300-L304"
+    },
+    "signature": "ModResult (*register_draw_type)(ModContext*, const GfxDrawTypeDesc*, GfxDrawTypeHandle*)",
+    "purpose": "Registrar drawcallback conhandlepropio",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Game thread;struct_size ycallbackválidos"
+    ],
+    "risks": [
+      "Payloadprestado/backendpendiente;no éxitoGPU"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-009",
+      "PRES-140",
+      "PRES-141"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::draw_trampoline",
+    "kind": "function",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/gfx.cpp",
+      "line_start": 219,
+      "line_end": 272,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L219-L272"
+    },
+    "signature": "void draw_trampoline(const aurora::gfx::DrawContext&, const wgpu::RenderPassEncoder&, const void*, size_t, void*)",
+    "purpose": "Adaptar context y diferir fallosC++ delworker",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Slot deltipo válido;library/context/userdata vivos"
+    ],
+    "risks": [
+      "Copiafn fuera dellock;no catch universal de fallos"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-141"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::gfx_frame_begin",
+    "kind": "function",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/gfx.cpp",
+      "line_start": 1035,
+      "line_end": 1054,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/gfx.cpp#L1035-L1054"
+    },
+    "signature": "void gfx_frame_begin()",
+    "purpose": "Consumir fallosworker y desactivar porID",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Game thread;modIDactivo encontrado"
+    ],
+    "risks": [
+      "Clave IDsin generación;orden reload ydrain no probados"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-142"
+    ]
   }
 ]

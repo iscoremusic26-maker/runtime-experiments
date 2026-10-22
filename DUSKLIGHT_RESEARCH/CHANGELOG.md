@@ -301,3 +301,7 @@ Padre remoto verificado 5c4afb638bc347e6286b6163455cc04d8f5ea208. CALLBACK-040..
 ## CP-R73 — Lv4DigSand: handshake de excavación y llegada geométrica
 
 Padre remoto verificado af0abdfb5feb8540cb8664c02cfb5d96e36c6a0b. PLAYER-093/094 STATIC_CROSSCHECKED y095 STATIC_INFERRED:dos señalesLink→suelo/timer→pose→switch/delete. CERRADO SELECTIVO;fallbackrelease/placement pendientes. Dos localizadores internos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R74 — Gfx: fallos del render worker y consumo diferido
+
+Padre remoto verificado 159bd4cf0fabf70dcf9cb4d4cbe4d7616e36261c. PRES-140..142 STATIC_CROSSCHECKED:registrodraw→trampoline→colafallos→frameBegin/retirada/fail_mod. CERRADO SELECTIVO frontend,sin GPU/backenddrain/reloadWindows observado. Unslotoficial ydoslocalizadores nuevos. Sin mod,build ni runtime; solo atlas.

@@ -149,3 +149,5 @@ CP-R71 / PRES-139 STATIC_INFERRED: rail exige>=2puntos y geometría adecuada;sin
 CP-R72 / CALLBACK-040..042:soltar reserva host no asegura backendbusyfalse;sharedpending no posee owner/DLL ni drena callbacken ejecución. Payload es prestado y detach no vacía función pendiente delhelperSDK en los cuerpos citados. Sin fallo/unload observado.
 
 CP-R73 / PLAYER-095 STATIC_INFERRED:GroundCross inválido deja mGroundYsin nueva asignación;DEBUG solo solicita delete yrelease sigue. Dos señales y llegada son hitos separados;sin fallo físico/crash observado.
+
+CP-R74 / PRES-141/142: copiafn/context fuera de mutex no posee lifetime;fallo diferido no revierte efectosprevios ni asegura drenaje. IDs de fallos no incluyen generación;sin caso de reloadincorrecto observado o acreditado.

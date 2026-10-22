@@ -88,3 +88,5 @@ CP-R71 PARCIAL Q-11/Q-08: PRES-135..139 contrastan KYTAG03 rail→pool/estados/d
 CP-R72 Q-01/Q-02/Q-14: CALLBACK-040..042 precisan picker global,sharedpending,revalidación y detach distinto de list. Backendbusy/hilo/dialogcancel/drain y helperfunción pendiente tras supresión siguen pendientes;sin selector real ni datos personales. Alternar gameplay.
 
 CP-R73 Q-12: PLAYER-093..095 contrastan Lv4DigSand start/endLink→GroundCross→timer/llegada→switch/Delete. Faltan interrupciones/placement y fallbackrelease sin suelo(P095inferido);no repetir DigPlace ni generalizar MoveBG. Alternar gráficos/servicios.
+
+CP-R74 Q-10/Q-13: PRES-140..142 contrastan Gfxdraw→excepciónC++→colafallos→frameBegin/detach/fail_mod. Faltan backenddrain,ordenreload porID y efectosGPU;no repetir retirementbásico PRES-012. Alternar ambiente/gameplay.
