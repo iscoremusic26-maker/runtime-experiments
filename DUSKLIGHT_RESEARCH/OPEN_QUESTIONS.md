@@ -100,3 +100,5 @@ CP-R77 Q-05/Q-08/Q-10: PRES-143..146 contrastan mountDVD→lectura en bloque→J
 CP-R78 Q-12: PLAYER-099..102 cierran muestra Rollgoal Fshop/controlador→bola→Hena→progreso/reentrada. Pesca/alquiler, teardown abrupto, fallos de hijos y assets siguen pendientes; no duplicar stock CP37 ni timer CP66.
 
 CP-R79 Q-13: PORT-029..031 añaden diagnóstico stub→buffer temporal→ImGui/PostDraw. Backend que invoca divert y su interpretación de true siguen BLOCKED; otros logger/LogService ya cubiertos no repetir. Sin logs/UI reales.
+
+CP-R80 Q-11: PRES-147..150 contrastan KYTAG13→subrango→packet nieve→draw/cleanup. PRES-150 rango especial sin clamp final es inferencia condicionada,assets no consultados. Orden multitag/interp/ground/salida de room siguen parciales. KYTAG05 no era ruta ambiental.

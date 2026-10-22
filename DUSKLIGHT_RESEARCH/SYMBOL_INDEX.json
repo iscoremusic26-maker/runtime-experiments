@@ -12024,5 +12024,61 @@
     "evidence_ids": [
       "PORT-031"
     ]
+  },
+  {
+    "symbol": "daKytag13_Create",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag13.cpp",
+      "line_start": 317,
+      "line_end": 380,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag13.cpp#L317-L380"
+    },
+    "signature": "static int daKytag13_Create(fopAc_ac_c*)",
+    "purpose": "Configurar subrango y estado global de nieve",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Home room coincide con stayroom"
+    ],
+    "risks": [
+      "Rangos especiales sin clamp final; reinicio global compartido"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-147",
+      "PRES-150"
+    ]
+  },
+  {
+    "symbol": "daKytag13_Execute_standard",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag13.cpp",
+      "line_start": 32,
+      "line_end": 68,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag13.cpp#L32-L68"
+    },
+    "signature": "static int daKytag13_Execute_standard(kytag13_class*)",
+    "purpose": "Actualizar nieve prestada en packet de weather",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Packet/cámara/player y parámetros válidos"
+    ],
+    "risks": [
+      "SwitchOFF no termina escrituras; no ownership del pool"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-148",
+      "PRES-149"
+    ]
   }
 ]

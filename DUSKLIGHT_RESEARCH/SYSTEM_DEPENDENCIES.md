@@ -171,3 +171,5 @@ CP-R77 PRES-143..146: montaje DVD→archive prestado a JAU→descriptor copiado 
 CP-R78 PLAYER-099..102: Hena/dialogue→timer6→controlador/tabla/bola→cam73/76→eventReg/rewardpending→reset cámara/reentrada. Estado repartido entre actores, globals, timer y eventRAM. [Otros sistemas](systems/other_systems.md).
 
 CP-R79 PORT-029..031: logging options.divert —backend no disponible→ callback matcher→StubLogBuffer/offsets→ImGui→PostDraw clear salvo pausa. Es otra política que LogService ring2048. [Diagnóstico](systems/port_commands.md).
+
+CP-R80 PRES-147..150: parámetros/room→KYTAG13 escribe nieve prestada→weather posee packet→lista translúcida→GX;countnormal y counttag separados. Cleanup global KYEFF distinto de Delete tag. [Ambiente](systems/environment_weather_time.md).

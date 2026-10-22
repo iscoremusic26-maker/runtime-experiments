@@ -161,3 +161,5 @@ CP-R77 / PRES-146 STATIC_INFERRED: fallo de sendCmdMsg deja bloque en loading1 e
 CP-R78: resultado Rollgoal usa actor.health como payload; progreso/rewardpending se escribe antes de terminar flow. IDs de hijos no comprobados y búsquedas por variante no prueban vida/parent; no seguridad de unload abrupto ni rollback automático. No fallos runtime observados.
 
 CP-R79: callback stub retorna true aunque SendToStubLog omita por pausa/umbral; significado en logger Borealis no certificado. Umbral1MiB se comprueba antes de append, sin límite estricto postappend. No pérdida de archivo, race o runtime observados.
+
+CP-R80 / PRES-150 STATIC_INFERRED: nibble de partición puede generar fin>500 en rooms9/7/13 pese a clamp inicialmMax; si se ejecuta,índices exceden array. Sin parámetros reales/crash probado. Delete tag no revierte poolglobal,Create puede resetear efectos compartidos;switchOFF no sale de update.

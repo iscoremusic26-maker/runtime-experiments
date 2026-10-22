@@ -1666,7 +1666,7 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "READ parcial: cadenas previas y CP-R63 TagWaterFall cámara→gather/fog;reelección/recarga y orden global PARCIAL;PRES-089 abierto.",
+    "scope": "READ parcial: cadenas previas y CP-R80 KYTAG13 subrangos→packet nieve→draw/cleanup global;validación de parámetros/orden/Windows pendientes.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
@@ -1674,6 +1674,7 @@
       "include/d/actor/d_a_kytag02.h",
       "include/d/actor/d_a_kytag07.h",
       "include/d/actor/d_a_kytag08.h",
+      "include/d/actor/d_a_kytag13.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
       "include/d/actor/d_a_player.h",
       "include/d/actor/d_a_tag_waterfall.h",
@@ -1681,6 +1682,7 @@
       "include/d/d_com_inf_game.h",
       "include/d/d_kankyo.h",
       "include/d/d_kankyo_static.h",
+      "include/d/d_kankyo_wether.h",
       "include/d/d_save.h",
       "include/f_op/f_op_actor_mng.h",
       "include/f_pc/f_pc_manager.h",
@@ -1696,6 +1698,7 @@
       "src/d/actor/d_a_kytag07.cpp",
       "src/d/actor/d_a_kytag08.cpp",
       "src/d/actor/d_a_kytag11.cpp",
+      "src/d/actor/d_a_kytag13.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_kita.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
@@ -1734,6 +1737,7 @@
       "include/d/actor/d_a_kytag02.h",
       "include/d/actor/d_a_kytag07.h",
       "include/d/actor/d_a_kytag08.h",
+      "include/d/actor/d_a_kytag13.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
       "include/d/actor/d_a_player.h",
       "include/d/actor/d_a_tag_waterfall.h",
@@ -1741,6 +1745,7 @@
       "include/d/d_com_inf_game.h",
       "include/d/d_kankyo.h",
       "include/d/d_kankyo_static.h",
+      "include/d/d_kankyo_wether.h",
       "include/d/d_save.h",
       "include/f_op/f_op_actor_mng.h",
       "include/f_pc/f_pc_manager.h",
@@ -1756,6 +1761,7 @@
       "src/d/actor/d_a_kytag07.cpp",
       "src/d/actor/d_a_kytag08.cpp",
       "src/d/actor/d_a_kytag11.cpp",
+      "src/d/actor/d_a_kytag13.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_kita.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
@@ -1798,7 +1804,8 @@
       "player_and_controls",
       "external_dependencies",
       "memory_ownership",
-      "flags_events_progression"
+      "flags_events_progression",
+      "resources_archives_overlays"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1837,7 +1844,11 @@
       "PRES-125",
       "PRES-126",
       "PRES-135",
-      "PRES-137"
+      "PRES-137",
+      "PRES-147",
+      "PRES-148",
+      "PRES-149",
+      "PRES-150"
     ]
   },
   {
