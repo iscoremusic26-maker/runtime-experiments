@@ -167,3 +167,5 @@ CP-R80 / PRES-150 STATIC_INFERRED: nibble de partición puede generar fin>500 en
 CP-R81 / ARCH-028 STATIC_INFERRED: startPeepChange latchea antes deSCLS,ignora retorno ytrue no garantizaNextStage;sin rollback local. Búsqueda de tag alretorno usa thresholdpersistente y no prueba parent/room. Sin softlock/runtime observado.
 
 CP-R82: menuhandle retirado antes de callback no implica que fn/userdata hayan desaparecido del documento. Ancla/active son gatesprevios,ninguna barrera durante callback. CloseOK no destrucción completada;transiciónend y forcehide son rutas distintas. Sin crash/unloadruntime observado.
+
+CP-R83: invJntPacket conserva modelo,joint y recursos hasta draw;reset bucket no libera storage ni pruebaGPUdrained. Restaurar dosdrawbuffers no restaura todoGXstate. Sin UAF/leak/renderWindows observados.

@@ -339,3 +339,7 @@ Padre remoto verificado 6e1e53fa5a39c2801d1243627e7e2ff093b47058. ARCH-025..027 
 ## CP-R82 — UiService: menú contextual, acción y cierre diferido
 
 Padre remoto verificado a044c434e83af22e5992eae5f4b2cc07bae4e406. CALLBACK-047..049 STATIC_CROSSCHECKED: copias→menuhandle retirado antes de acción→gatesancla/active→documento destruido después. Dos slots oficiales y unlocalizador interno. Reentrancia/DLL/backendRml pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R83 — InvisibleModel: packets por joint y pase de profundidad
+
+Padre remoto verificado 792d3440fe1622e1d4e96cc1a5c3aa92b8fa7723. PRES-151..153 STATIC_CROSSCHECKED: Midna→invisibleModel→Zsort→drawprofundidad;posiciónstack no retenida,modelo sí. Dos localizadores internos. Cleanupcola distinto de liberarheap oGPUdrained;sinLOD/skin nuevo. Sin mod,build ni runtime; solo atlas.
