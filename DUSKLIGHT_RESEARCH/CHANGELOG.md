@@ -141,3 +141,7 @@ Padre remoto verificado 85e959b8b558fa7be6bf558699101d0003f7fa15. +4 evidencias 
 ## CP-R33 — HttpService: finalización,datos prestados y cancelación
 
 Padre remoto verificado 0459f0a4b16097a950c1e4d3e84cc5a62622e41a. +5 evidencias CALLBACK-023..027 (4 contrastadas,1 inferencia),+3 símbolos (1 slot oficial,2 localizadores),+0 documentos. CALLBACK-023..027 contrastan Http request→task→ready handles→callback snapshot→erase/cancel/take_all y publicación local de descargas. Backend Borealis,destructor/join/atomic_replace/headers internos BLOCKED; sin request de red,ABI/runtime Windows ni integración Claude. Sin mod/build/runtime; solo atlas.
+
+## CP-R34 — FireWood: contacto,latch,switch diferido y vida de efectos
+
+Padre remoto verificado f7f247b8e6ca9db4110424fbb470a5a2bed4a8a9. +4 evidencias PLAYER-057..060,+3 localizadores,+0 documentos. PLAYER-057..060 contrastan FireWood→contacto→lit/timer→switch y efectos→cleanup. Se descarta hipótesis de apagado por switch: relectura no cambia lit. Partículas se retiran por actividad/eventos,no Delete directo; sin efectos runtime ni propagación universal. Sin mod/build/runtime; solo atlas.

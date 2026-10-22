@@ -81,3 +81,5 @@ CP-R31: PLAY Draw/Execute→resetToOpening→card command/SaveSync→nextStage/a
 CP-R32: archive→ModelData prestado→modelo Sakuita(heap actor) y dummy(heap gestor)→lista temporal500→room gate/J3D→reset lista; bajas balanceadas y teardown scene separados del archive. PRES-078..081. dMdl_mng_c es otro gestor,no alias del simple-model.
 
 CP-R33: HttpService→task owned/handle→registry frameBegin→ready handles/relookup→snapshot prestado/callback→erase; deactivating take_all distinto de cancel. Descarga incluye publicación local,con Task/atomic_replace Borealis sin garantía interna disponible. CALLBACK-023..027.
+
+CP-R34: Link collider tipo/material→FireWood Tg hit→lit/timer→switch home room y luz/partículas; emitterID renueva actividad→particle calc3D→retiro bajo event gate. PLAYER-057..060. Switch RAM,actor,luz,emitter y audio tienen vidas diferentes; sin apagado por switchOFF en actor vivo.

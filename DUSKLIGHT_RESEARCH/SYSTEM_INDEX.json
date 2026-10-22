@@ -1061,18 +1061,21 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "READ global: Epona/canoa/Midna/pesca/puzzles previos; CP-R23 Tag MYNA2→tipo1→FIRST_TALK→retirada contrastado con assets pendientes; variantes de resultado comparadas.",
+    "scope": "READ global: cadenas previas selectivas y CP-R34 FireWood contacto/latch/timer/switch/efectos/cleanup; no propagación/extinción universal.",
     "reports": [
       "systems/other_systems.md"
     ],
     "files_examined": [
       "include/d/actor/d_a_npc_myna2.h",
+      "include/d/actor/d_a_obj_fireWood.h",
       "include/d/actor/d_a_obj_swpush.h",
       "include/d/actor/d_a_player.h",
       "include/d/actor/d_a_tag_myna2.h",
       "include/d/d_com_inf_game.h",
+      "include/d/d_particle.h",
       "include/d/d_save.h",
       "include/f_op/f_op_actor_mng.h",
+      "src/d/actor/d_a_alink_kandelaar.inc",
       "src/d/actor/d_a_canoe.cpp",
       "src/d/actor/d_a_cow.cpp",
       "src/d/actor/d_a_horse.cpp",
@@ -1082,6 +1085,7 @@
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_npc4.cpp",
       "src/d/actor/d_a_npc_myna2.cpp",
+      "src/d/actor/d_a_obj_fireWood.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
@@ -1089,7 +1093,11 @@
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
       "src/d/d_bg_w.cpp",
+      "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
+      "src/d/d_kankyo.cpp",
+      "src/d/d_particle.cpp",
+      "src/d/d_s_play.cpp",
       "src/d/d_save.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
@@ -1102,12 +1110,15 @@
     ],
     "paths": [
       "include/d/actor/d_a_npc_myna2.h",
+      "include/d/actor/d_a_obj_fireWood.h",
       "include/d/actor/d_a_obj_swpush.h",
       "include/d/actor/d_a_player.h",
       "include/d/actor/d_a_tag_myna2.h",
       "include/d/d_com_inf_game.h",
+      "include/d/d_particle.h",
       "include/d/d_save.h",
       "include/f_op/f_op_actor_mng.h",
+      "src/d/actor/d_a_alink_kandelaar.inc",
       "src/d/actor/d_a_canoe.cpp",
       "src/d/actor/d_a_cow.cpp",
       "src/d/actor/d_a_horse.cpp",
@@ -1117,6 +1128,7 @@
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_npc4.cpp",
       "src/d/actor/d_a_npc_myna2.cpp",
+      "src/d/actor/d_a_obj_fireWood.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
@@ -1124,7 +1136,11 @@
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
       "src/d/d_bg_w.cpp",
+      "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
+      "src/d/d_kankyo.cpp",
+      "src/d/d_particle.cpp",
+      "src/d/d_s_play.cpp",
       "src/d/d_save.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
@@ -1137,7 +1153,9 @@
       "movement_physics_collision",
       "memory_ownership",
       "resources_archives_overlays",
-      "cutscenes_dialogue"
+      "cutscenes_dialogue",
+      "audio_particles_effects",
+      "environment_weather_time"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1157,7 +1175,11 @@
       "PLAYER-048",
       "PLAYER-049",
       "PLAYER-050",
-      "PLAYER-051"
+      "PLAYER-051",
+      "PLAYER-057",
+      "PLAYER-058",
+      "PLAYER-059",
+      "PLAYER-060"
     ]
   },
   {

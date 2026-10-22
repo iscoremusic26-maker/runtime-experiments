@@ -8733,5 +8733,94 @@
     "evidence_ids": [
       "CALLBACK-026"
     ]
+  },
+  {
+    "symbol": "daFireWood_c::Execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_fireWood.cpp",
+      "line_start": 103,
+      "line_end": 159,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_fireWood.cpp#L103-L159"
+    },
+    "signature": "int daFireWood_c::Execute()",
+    "purpose": "Consume contacto,renueva efectos y escribe switch tras timer",
+    "dependencies": [
+      "dComIfGp_particle_set",
+      "fopAcM_onSwitch",
+      "dKy_plight_set"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor/collider vivos; gates tipo/material/lit"
+    ],
+    "risks": [
+      "Orden latch/switch/efectos diferente; sin apagado por relectura"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-058",
+      "PLAYER-059"
+    ]
+  },
+  {
+    "symbol": "daFireWood_c::Delete",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_fireWood.cpp",
+      "line_start": 165,
+      "line_end": 168,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_fireWood.cpp#L165-L168"
+    },
+    "signature": "int daFireWood_c::Delete()",
+    "purpose": "Retira luz embebida sin reset switch ni delete IDs",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Índice de influencia válido según registro"
+    ],
+    "risks": [
+      "Partículas/audio tienen fin separado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-060"
+    ]
+  },
+  {
+    "symbol": "dPa_control_c::level_c::execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_particle.cpp",
+      "line_start": 971,
+      "line_end": 984,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_particle.cpp#L971-L984"
+    },
+    "signature": "void dPa_control_c::level_c::execute(dPa_control_c::level_c::emitter_c*)",
+    "purpose": "Retira emitter no renovado bajo gate de evento",
+    "dependencies": [
+      "dPa_control_c::level_c::cutTable",
+      "dComIfGp_event_runCheck"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Entrada válida; pasada calc3D real"
+    ],
+    "risks": [
+      "Invalidez/immortal no equivale a GPU/memoria finalizada"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-060"
+    ]
   }
 ]

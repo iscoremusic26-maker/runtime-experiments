@@ -1,11 +1,11 @@
 {
-  "checkpoint": "CP-R33",
-  "evidence": 310,
-  "symbol_records": 300,
+  "checkpoint": "CP-R34",
+  "evidence": 314,
+  "symbol_records": 303,
   "systems": 28,
-  "validated_code_range_occurrences": 2952,
-  "unique_code_ranges": 1417,
-  "cited_upstream_files": 258,
+  "validated_code_range_occurrences": 3011,
+  "unique_code_ranges": 1446,
+  "cited_upstream_files": 262,
   "checked_atlas_files": 45,
   "runtime_tested": false,
   "scope": "Editorial/reference validation only; duplicate citations count as occurrences. Does not certify semantic correctness, exports, build or game runtime."

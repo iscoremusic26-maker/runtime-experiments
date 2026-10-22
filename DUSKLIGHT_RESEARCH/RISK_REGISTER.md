@@ -69,3 +69,5 @@ CP-R31 · R-37: reset helper1 no confirma cola; next-stage se reactiva antes de 
 CP-R32 · R-38: add fallido no aborta Sakuita; envío sin matching consume capacidad y remove wrapper no confirma baja. Punteros modelo prestados hasta draw,count de altas no es count de instancias,room/primer drawBG forman restricciones distintas. PRES-078..081; riesgo de lifetime condicionado,sin fallo runtime.
 
 CP-R33 · R-39: cancelOK conserva slot y no garantiza CANCELED; completing mantiene handle pero ya tomó resultado. Snapshot/userdata/código tienen vidas distintas; take_all no prueba worker drenado ni staging eliminado. CALLBACK-023..027; hipótesis reentrantes condicionadas,sin fallo runtime ni tráfico de prueba.
+
+CP-R34 · R-40: switch y latch FireWood divergen; Delete previo a timer0 no escribe progreso pendiente,255 no deja switch. Emisión visible y registro de luz pueden fallar sin cambiar lit; partículas dejan de renovarse pero retiro depende de evento/calc. PLAYER-057..060; inferencias condicionadas,sin fallo runtime.
