@@ -10905,5 +10905,87 @@
     "evidence_ids": [
       "PRES-126"
     ]
+  },
+  {
+    "symbol": "daObjIce_s_c::create",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_ice_s.cpp",
+      "line_start": 182,
+      "line_end": 227,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L182-L227"
+    },
+    "signature": "int daObjIce_s_c::create()",
+    "purpose": "Carga por fases y prepara variante/parámetros de plataforma",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ARC/heap/registro válidos para completar"
+    ],
+    "risks": [
+      "Sideeffects de inicialización fuera del gate COMPLEATE;no ABIWindows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-085"
+    ]
+  },
+  {
+    "symbol": "daObjIce_s_c::Execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_ice_s.cpp",
+      "line_start": 246,
+      "line_end": 274,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L246-L274"
+    },
+    "signature": "int daObjIce_s_c::Execute(Mtx**)",
+    "purpose": "Consume respuesta de apoyo y publica pose/BG",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Instancia creada y game/playercontext válido"
+    ],
+    "risks": [
+      "Latch por ejecución,no reloj;matriz prestada"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-086",
+      "PLAYER-087"
+    ]
+  },
+  {
+    "symbol": "daObjIce_s_c::Check_RideOn",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_ice_s.cpp",
+      "line_start": 84,
+      "line_end": 104,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L84-L104"
+    },
+    "signature": "bool daObjIce_s_c::Check_RideOn(cXyz)",
+    "purpose": "Prepara inclinación y latch ante apoyo pesado",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Callback bola/heavy o tipoFF"
+    ],
+    "risks": [
+      "fVar1 solo se asigna en rama tipoFF;sin fallo observado"
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "PLAYER-088"
+    ]
   }
 ]

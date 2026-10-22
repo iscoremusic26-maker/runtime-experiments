@@ -139,3 +139,5 @@ CP-R60 PLAYER-081..084: BoomerangAt→CarryTg→offsetmiembro→relookupBoom→A
 CP-R61 ROOT-014..016: direcciónthis→heapowner→listaDisposer→destructorvirtual→resetarena/heapchild. No destrucción universal de cada allocation ni cleanupdecallbacksexternos. [Memoria](systems/memory_ownership.md).
 
 CP-R63 PRES-123..126: perfil/procesos→TagWaterFall→camera0/AllJudge→gather y fog compartidos→KANKYO/setLight. Boolean maestro e ID tienen duraciones diferentes;Delete local no prueba reset de unidad o restauración ambiental. [Ambiente](systems/environment_weather_time.md).
+
+CP-R64 PLAYER-085..088: Acch→BG propietario/rider→Ice_s campos→Mtx modelo/BG→draw;resDelete específico precede Release del wrapper. No switch/guardado ni rotura en esta muestra. [Otros sistemas](systems/other_systems.md).

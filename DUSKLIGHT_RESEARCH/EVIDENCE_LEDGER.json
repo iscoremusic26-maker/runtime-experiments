@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R63",
+  "checkpoint": "CP-R64",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -19877,6 +19877,210 @@
           "line_start": 54,
           "line_end": 57,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_base.cpp#L54-L57"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-085",
+      "claim": "Obj_Ice_s carga V_Ice_s por fases,crea BMD y dBgW MoveBG;Create instala rideCallBack. Delete específico libera ARC/HIO y wrapper MoveBGDelete después intenta Release de BG usado. Fallos de heap/registro se propagan como faseERROR,no rollback general probado.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 182,
+          "line_end": 243,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L182-L243"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 285,
+          "line_end": 318,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L285-L318"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_obj_ice_s.h",
+          "line_start": 16,
+          "line_end": 29,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_obj_ice_s.h#L16-L29"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s_movebg_actor.cpp",
+          "line_start": 60,
+          "line_end": 85,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_movebg_actor.cpp#L60-L85"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s_movebg_actor.cpp",
+          "line_start": 105,
+          "line_end": 135,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_movebg_actor.cpp#L105-L135"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_obj_ice_s.h",
+          "line_start": 30,
+          "line_end": 57,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_obj_ice_s.h#L30-L57"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-086",
+      "claim": "Callback real de Ice_s llega desde Acch ground→dBgS RideCallBack→dBgW callback con propietarioBG y rider. Lee posición Link y centro bola prestados;ajusta sink/tilt/latch por contacto y gates bola/heavy/tipoFF,con orden de sobrescritura. No escribe switch/recompensa ni solicita rotura en esta cadena.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 49,
+          "line_end": 81,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L49-L81"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 118,
+          "line_end": 155,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L118-L155"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 240,
+          "line_end": 243,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L240-L243"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s_acch.cpp",
+          "line_start": 160,
+          "line_end": 179,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_acch.cpp#L160-L179"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s.cpp",
+          "line_start": 1518,
+          "line_end": 1528,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L1518-L1528"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_w.cpp",
+          "line_start": 2451,
+          "line_end": 2455,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_w.cpp#L2451-L2455"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-087",
+      "claim": "Ice_s Execute suaviza sink/oscilación,actualiza current.pos.y y shape_angleXZ,relaja blancos si latch0 y limpia latch antes de publicar mBgMtx. setBaseMtx copia pose a modelo/BG;MoveBGExecute llama BG Move. Draw consume modelo;gates actor pausa/evento/NODRAW limitan ejecución. No precisión física/render Windows medida.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 106,
+          "line_end": 116,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L106-L116"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 246,
+          "line_end": 282,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L246-L282"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_bg_s_movebg_actor.cpp",
+          "line_start": 138,
+          "line_end": 155,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_movebg_actor.cpp#L138-L155"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor.cpp",
+          "line_start": 323,
+          "line_end": 342,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp#L323-L342"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-088",
+      "claim": "En Ice_s !GetName(rider)==ALINK aplica ! antes de igualdad;no implementa !=ALINK. Además Check_RideOn asigna fVar1 solo si tipoFF y lo usa fuera del gate;si bola/heavy alcanza función con otro tipo,hay lectura sin inicialización en fuente. Alcanzabilidad/efecto runtime no demostrados;no crash observado.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 84,
+          "line_end": 103,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L84-L103"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_ice_s.cpp",
+          "line_start": 125,
+          "line_end": 154,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_ice_s.cpp#L125-L154"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/f_pc/f_pc_name.h",
+          "line_start": 259,
+          "line_end": 270,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_name.h#L259-L270"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/f_pc/f_pc_name.h",
+          "line_start": 807,
+          "line_end": 811,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_name.h#L807-L811"
         }
       ],
       "limitations": [

@@ -68,3 +68,5 @@ CP-R61 Q-05/memoria: ROOT-014..016 contrastan Disposer ySolidfreeAll/freeTail/de
 CP-R62 precisa PLAYER-079: yaw de angle depende también de shapeAngle noNULL. ROOT-016 gana cita del puente destroy. Sin IDs nuevos; siguen abiertos PRES-089,111,118,122 y ARCH-020 en sus condiciones. Próxima cadena nueva: tag_waterfall, no otra revisión del mismo MoveBG.
 
 CP-R63 PARCIAL Q-11: PRES-123..126 separan flag maestro/ID,región de cámara y gather/fog de TagWaterFall. Falta demostrar una retirada→reentrada concreta con conservación o reinicio de estáticos e identidad. Consultar ruta de carga del perfil/unidad antes de afirmar reelección o bloqueo;no repetir geometría ni PRES-089. Alternar otra familia.
+
+CP-R64 Q-12: PLAYER-085..087 contrastan Ice_s apoyo→latch/pose→MoveBG/modelo→cleanup;no rotura. PLAYER-088 recoge precedencia ! y lectura fVar1 condicionada;alcanzabilidad/assets/runtime pendientes. No otra variante MoveBG inmediata:alternar soporte/servicio.

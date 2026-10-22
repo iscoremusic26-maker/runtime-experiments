@@ -261,3 +261,7 @@ Padre remoto verificado 591d7faf724085a360afa4c41dda25748dbdecff. Rectificación
 ## CP-R63 — TagWaterFall: región de cámara y maestro persistente — PARCIAL
 
 Padre remoto verificado f5e707e1cc52483b9ac9add841d49ef2fd9ba398. PRES-123..125 contrastan create/perfil→camera/AllJudge→blend/custom_colset→KANKYO y fog condicionado;PRES-126 inferencia de reelección al conservar estáticos. Tres localizadores internos nuevos,no hooks acreditados. PARTIAL en recarga/orden/ID;sin cambio de niveles canónicos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R64 — Ice_s: apoyo continuo y matriz de plataforma
+
+Padre remoto verificado a8cc59cdeab98b6b74618589e483df61fc34876f. PLAYER-085..087 STATIC_CROSSCHECKED:V_Ice_s/ridecallback→latch/inclinación/hundimiento→modelo/BG y retirada. PLAYER-088 STATIC_INFERRED:precedencia ! y fVar1 condicionado. CERRADO SELECTIVO para cadena de apoyo;no rotura/assets/runtime demostrados. Sin mod,build ni runtime; solo atlas.

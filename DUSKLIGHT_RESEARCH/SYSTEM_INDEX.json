@@ -1297,7 +1297,7 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "READ parcial: puzzles/NPCprevios yCP60 ObjCarryTSUBO→Boomoffset→Linkgrab/wait;no todas variantes.",
+    "scope": "READ parcial: cadenas previas y CP-R64 Ice_s contacto→inclinación/hundimiento→Mtx/cleanup;no rotura ni puzzles universales.",
     "reports": [
       "systems/other_systems.md"
     ],
@@ -1305,6 +1305,7 @@
       "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_carry.h",
       "include/d/actor/d_a_obj_fireWood.h",
+      "include/d/actor/d_a_obj_ice_s.h",
       "include/d/actor/d_a_obj_lv4Gate.h",
       "include/d/actor/d_a_obj_swpush.h",
       "include/d/actor/d_a_player.h",
@@ -1317,6 +1318,7 @@
       "include/d/d_save.h",
       "include/d/d_shop_system.h",
       "include/f_op/f_op_actor_mng.h",
+      "include/f_pc/f_pc_name.h",
       "src/d/actor/d_a_alink_boom.inc",
       "src/d/actor/d_a_alink_grab.inc",
       "src/d/actor/d_a_alink_kandelaar.inc",
@@ -1334,6 +1336,7 @@
       "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_carry.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
+      "src/d/actor/d_a_obj_ice_s.cpp",
       "src/d/actor/d_a_obj_lv4Gate.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
@@ -1373,6 +1376,7 @@
       "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_carry.h",
       "include/d/actor/d_a_obj_fireWood.h",
+      "include/d/actor/d_a_obj_ice_s.h",
       "include/d/actor/d_a_obj_lv4Gate.h",
       "include/d/actor/d_a_obj_swpush.h",
       "include/d/actor/d_a_player.h",
@@ -1385,6 +1389,7 @@
       "include/d/d_save.h",
       "include/d/d_shop_system.h",
       "include/f_op/f_op_actor_mng.h",
+      "include/f_pc/f_pc_name.h",
       "src/d/actor/d_a_alink_boom.inc",
       "src/d/actor/d_a_alink_grab.inc",
       "src/d/actor/d_a_alink_kandelaar.inc",
@@ -1402,6 +1407,7 @@
       "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_carry.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
+      "src/d/actor/d_a_obj_ice_s.cpp",
       "src/d/actor/d_a_obj_lv4Gate.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
@@ -1445,7 +1451,8 @@
       "inventory_equipment",
       "hud_ui_text",
       "runtime_and_lifecycle",
-      "save_load"
+      "save_load",
+      "models_animations_materials"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1485,7 +1492,11 @@
       "PLAYER-081",
       "PLAYER-082",
       "PLAYER-083",
-      "PLAYER-084"
+      "PLAYER-084",
+      "PLAYER-085",
+      "PLAYER-086",
+      "PLAYER-087",
+      "PLAYER-088"
     ]
   },
   {
