@@ -10685,5 +10685,88 @@
       "PORT-023",
       "PORT-024"
     ]
+  },
+  {
+    "symbol": "daObjCarry_c::mode_proc_boomCarry",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_carry.cpp",
+      "line_start": 2944,
+      "line_end": 2954,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_carry.cpp#L2944-L2954"
+    },
+    "signature": "int daObjCarry_c::mode_proc_boomCarry()",
+    "purpose": "Consume posMove y cambia a carry/wait al terminar transporte.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ObjetoCarryvivo,modeBOOM_CARRY."
+    ],
+    "risks": [
+      "Finhelper no delete/recompensa;colisiónposterior puede alterarestado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-082",
+      "PLAYER-083"
+    ]
+  },
+  {
+    "symbol": "daPy_boomerangMove_c::posMove",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_player.cpp",
+      "line_start": 77,
+      "line_end": 123,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_player.cpp#L77-L123"
+    },
+    "signature": "int daPy_boomerangMove_c::posMove(cXyz*, s16*, fopAc_ac_c*, s16)",
+    "purpose": "ActualizaórbitaconBoomactual o sale/transfiere aLink.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Jugador/Keepvigentes;posrotalmacenamientoactor."
+    ],
+    "risks": [
+      "Ret0puedetener efectosposición/grab;no APIpura ni requestborrado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-082",
+      "PLAYER-083"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::checkBoomerangCarry",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink_boom.inc",
+      "line_start": 96,
+      "line_end": 114,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_boom.inc#L96-L114"
+    },
+    "signature": "BOOL daAlink_c::checkBoomerangCarry(fopAc_ac_c*)",
+    "purpose": "Bajogatesrecibeobjeto,setgrabyanimación;no consulta pura.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Flagsmodo,evento/forma/animecompatibles."
+    ],
+    "risks": [
+      "Sideeffects noequivalen aiteminventario/durabilidad."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-083"
+    ]
   }
 ]

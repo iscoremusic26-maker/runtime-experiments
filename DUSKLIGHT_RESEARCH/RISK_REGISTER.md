@@ -121,3 +121,5 @@ CP-R57 PLAYER-078..080: Execute0 no impidecopiamatriz/Move;Delete0 no impideRele
 CP-R58 PRES-122 STATIC_INFERRED: handleSDKestable puede sobrevivir reregistrorechazadoID0 sin rollbacklocal. UnregisterliberadatossegúncontratoAuroracomentado,no garantiza visual/GPUdrain auditados;keypointer no posee GXoriginal. Sinfalloobservado.
 
 CP-R59 PORT-023..025: Superseded no es activaciónfallida;Succeededoperación/toastno certifican estadovigenteni DLLdrain. Flushconsumeavisos aun sinmostrarlos conModsWindowvisible;nofalloobservado.
+
+CP-R60 PLAYER-082..084: posMove0 puede mutarpos/rotaciónograb;checkBoomerangCarry altera equipo/flag/anime,no es querypura. Waitrestauracamposconcretos,nocleanupdeactor ni recompensaduradera. Keepsprestados/noownership;sinfalloobservado.

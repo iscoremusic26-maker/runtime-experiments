@@ -60,3 +60,5 @@ CP-R57 Q-12: PLAYER-077..080 contrastan LV4Gate latched y wrapperMoveBG/correcci
 CP-R58 Q-14/Q-10: PRES-119..122 contrastan Texturefrontend handle/priority/reregistro/keepalive. Falta selectorAurora yfinlecturasreal;no instalar/descargarsubmódulo. BackendID0trasreregistro esriesgocondicionado,nofalloobservado. Alternar port/memoria.
 
 CP-R59 Q-13/Q-14: PORT-023..025 contrastan coalescingLifecycleporID/operaciones ytoastconsumido,distinto de teardownHOOK019. Faltan otrascolas,intercalaciónconcallbacks yruntime;no repetir loadergeneral. Alternar interacción de actores/colisiónsicontextopermite.
+
+CP-R60 Q-12: PLAYER-081..084 contrastan ObjCarryadmitido→boomerang→offset/colisión→Linkgrab/wait yDeleteseparado. Faltanroturainicial/otrosobjetos/eventKeepglobal/lifetimeKeepbajoborrado;no repetirItemService. Alternar memoria/recursos o conservardetalle exactoparacontinuar.

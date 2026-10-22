@@ -245,3 +245,7 @@ Padre remoto verificado 88705aceed5c22ae1b9c2c781bd86d3b985eb997. PRES-119..122:
 ## CP-R59 — Reactivación,loteLifecycle,operaciónUI y toast
 
 Padre remoto verificado d66d64221337f7abc8b202a677f7c1a4360260fc. PORT-023..025 (+3 STATIC_CROSSCHECKED),doslocalizadores;0 fichas. Nueva pregunta arbitrajesolicitudesporID→estadooperación→UIfrente aaviso históricofallo;no se repite teardownbase ni red/instalación. Sin mod,build ni runtime; solo atlas.
+
+## CP-R60 — ObjCarry,boomerang,offset corregido y transferencia Link
+
+Padre remoto verificado 83ac62f838bd2dbc2fb549996370e9f5e3e6d07b. PLAYER-081..084 (+4 STATIC_CROSSCHECKED),treslocalizadores;0 fichas. AtBoom→TgCarry→offset/relookup→Acch→Linkgrab/wait;fintransporte≠delete/entregainventario ycheckhelpermutante. Sin mod,build ni runtime; solo atlas.
