@@ -496,20 +496,23 @@
   {
     "system_id": "models_animations_materials",
     "coverage": "READ",
-    "scope": "READ global: cadenas previas y CP-R45 skin explícito candado→índices/buffers→deform CPU seleccionado→packet arrays→cleanup; no BMD/skin/LOD universal ni DX12 medido.",
+    "scope": "READ parcial: cadenas previas y CP-R50 BTP→descriptor/material→texNo→retirada;assets,sharing y LOD no universales.",
     "reports": [
       "systems/models_animations_materials.md"
     ],
     "files_examined": [
+      "include/SSystem/SComponent/c_phase.h",
       "include/d/actor/d_a_npc_coach.h",
       "include/d/actor/d_a_obj_sakuita.h",
       "include/d/d_simple_model.h",
       "include/global.h",
       "include/m_Do/m_Do_ext.h",
+      "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DMaterialAnm.h",
       "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
       "libs/JSystem/include/JSystem/J3DGraphBase/J3DEnum.h",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAnm.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
@@ -519,11 +522,13 @@
       "src/d/actor/d_a_npc_coach.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_sakuita.cpp",
+      "src/d/actor/d_a_obj_wflag.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_resorce.cpp",
       "src/d/d_s_play.cpp",
       "src/d/d_simple_model.cpp",
       "src/dusk/mods/svc/texture.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
       "src/f_pc/f_pc_manager.cpp",
       "src/m_Do/m_Do_ext.cpp"
     ],
@@ -532,15 +537,18 @@
       "Todos los fallos de alloc/disposers,sharing simultáneo y orden GPU no auditados."
     ],
     "paths": [
+      "include/SSystem/SComponent/c_phase.h",
       "include/d/actor/d_a_npc_coach.h",
       "include/d/actor/d_a_obj_sakuita.h",
       "include/d/d_simple_model.h",
       "include/global.h",
       "include/m_Do/m_Do_ext.h",
+      "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DMaterialAnm.h",
       "libs/JSystem/include/JSystem/J3DGraphAnimator/J3DModel.h",
       "libs/JSystem/include/JSystem/J3DGraphBase/J3DEnum.h",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAnm.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DSkinDeform.cpp",
@@ -551,6 +559,7 @@
       "src/d/actor/d_a_npc_coach.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_sakuita.cpp",
+      "src/d/actor/d_a_obj_wflag.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_resorce.cpp",
       "src/d/d_s_play.cpp",
@@ -591,7 +600,11 @@
       "PRES-102",
       "PRES-103",
       "PRES-104",
-      "PRES-105"
+      "PRES-105",
+      "PRES-108",
+      "PRES-109",
+      "PRES-110",
+      "PRES-111"
     ]
   },
   {

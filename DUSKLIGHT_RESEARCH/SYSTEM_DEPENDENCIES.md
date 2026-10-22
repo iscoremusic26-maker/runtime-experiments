@@ -113,3 +113,5 @@ CP-R47 PRES-106/107: environment_weather_time(controladorKANKYO)→runtime_and_l
 CP-R48: cápsula At→callback flecha→ID/offset joint→matriz objetivo reconsultada→flag/cola delete. PLAYER-069..072; actor,modelo y colisionador tienen vidas distintas. [Combate](systems/combat_damage.md).
 
 CP-R49 WORLD-041/042: ground/RTBL→room flags8/20→iterador layer→delete requests→BG cleanup cuando se ejecuta. Flags y retorno del iterador no prueban drenaje;PRES-089 sigue parcial. [Salas](systems/stages_rooms_layers.md).
+
+CP-R50 PRES-108..111: ARC BTP→wrapper/frameCtrl→descriptor material prestado→TevBlock texNo. Remove desactiva slot,sin restauración previa;callback de heap usa bool,no fases. [Modelos](systems/models_animations_materials.md).

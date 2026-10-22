@@ -40,3 +40,5 @@ CP-R47 PARCIAL Q-11/PRES-089: PRES-106/107 separan KANKYO proceso de g_env_light
 CP-R48 Q-12: PLAYER-069..072 contrastan flecha tipo0→At/joint→adhesión→flag/borrado; no certifican HP,objetivo asset ni proyectiles enemigos/agua/materiales/resto de variantes. Alternar Q-11 antes de otro proyectil.
 
 CP-R49 PARCIAL Q-11/PRES-089: WORLD-041/042 localizan retiro8 y20,BG excluido en parcial y gates de NODRAW. Siguiente consulta ambiental mínima: consumidor que fija20 para una sala concreta y su condición NODRAW de KYTAG08;requiere colocación/assets si se afirma alcanzabilidad. No repetir loadRoom ni KANKYOinit. Alternar otro dominio.
+
+CP-R50 Q-10: PRES-108..111 contrastan BTP/texNo,Wflag y retiro por slot;discordancia error5→bool es inferencia condicionada. Faltan assets/sharing/ownership completo,LOD y runtime;no repetir wrapper/descriptor. Alternar servicio u otro dominio.

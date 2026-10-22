@@ -205,3 +205,7 @@ Padre remoto verificado 705264cd6bc3d142c4fde327e2fe5b9e2f9be861. PLAYER-069..07
 ## CP-R49 — PARCIAL retiro room8/20,solicitud y conservación BG
 
 Padre remoto verificado 60a6e417b81fe181573c626788b1826c15099585. WORLD-041/042 (+2 STATIC_CROSSCHECKED),dos localizadores;0 fichas. Nueva fuente real de solicitudes de retiro de room y filtros;PRES-089 recibe limitación trazable,sigue STATIC_INFERRED sin UAF ni cierre de orden. Sin mod,build ni runtime; solo atlas.
+
+## CP-R50 — BTP,binding por slot,texNo y fallo de protocolo condicionado
+
+Padre remoto verificado ff402f2451a2ca2291c6199db5c7906a5f631242. PRES-108..111:3 STATIC_CROSSCHECKED y1 STATIC_INFERRED,tres localizadores;0 fichas. Wflag→BTP→material descriptor→texNo→remove/ARC;error5 convertido a bool documentado con condiciones,sin fallo runtime. Sin mod,build ni runtime; solo atlas.

@@ -9992,5 +9992,86 @@
     "evidence_ids": [
       "WORLD-042"
     ]
+  },
+  {
+    "symbol": "mDoExt_btpAnm::init",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 169,
+      "line_end": 181,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L169-L181"
+    },
+    "signature": "int mDoExt_btpAnm::init(J3DMaterialTable*, J3DAnmTexPattern*, int, int, f32, s16, s16)",
+    "purpose": "Retiene BTP,resuelve materiales e inicia frame controller.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tabla/recurso válidos,heap compatible si requiere frameCtrl."
+    ],
+    "risks": [
+      "No copia recurso ni garantiza entry/render posterior."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-108"
+    ]
+  },
+  {
+    "symbol": "J3DMaterialTable::entryTexNoAnimator",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
+      "line_start": 194,
+      "line_end": 218,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp#L194-L218"
+    },
+    "signature": "int J3DMaterialTable::entryTexNoAnimator(J3DAnmTexPattern*)",
+    "purpose": "Copia descriptor por material/slot de textura con fallos parciales.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "IDs de material válidos y tabla no locked."
+    ],
+    "risks": [
+      "Wrapper descarta retorno;descriptor presta animación."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-109"
+    ]
+  },
+  {
+    "symbol": "J3DAnmTexPattern::getTexNo",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "line_start": 1214,
+      "line_end": 1225,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp#L1214-L1225"
+    },
+    "signature": "void J3DAnmTexPattern::getTexNo(u16, u16*) const",
+    "purpose": "Consulta índice de textura por frame con clamping a extremos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tablas/índices válidos y maxFrame compatible."
+    ],
+    "risks": [
+      "No carga bytes de textura ni acredita draw GPU."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-109"
+    ]
   }
 ]
