@@ -1375,7 +1375,7 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "READ parcial: rutas previas y CP-R70 Digpl tipo0/LinkWolfDig→flag→switch/spawnrequest→delete;sin entrega/persistencia universal.",
+    "scope": "READ parcial: muestras previas y CP-R73 Lv4DigSand start/endLink→GroundCross→descenso→switch/delete;sin física universal.",
     "reports": [
       "systems/other_systems.md"
     ],
@@ -1386,6 +1386,7 @@
       "include/d/actor/d_a_obj_fireWood.h",
       "include/d/actor/d_a_obj_ice_s.h",
       "include/d/actor/d_a_obj_lv4Gate.h",
+      "include/d/actor/d_a_obj_lv4digsand.h",
       "include/d/actor/d_a_obj_swpush.h",
       "include/d/actor/d_a_player.h",
       "include/d/actor/d_a_shop_item.h",
@@ -1420,6 +1421,7 @@
       "src/d/actor/d_a_obj_fireWood.cpp",
       "src/d/actor/d_a_obj_ice_s.cpp",
       "src/d/actor/d_a_obj_lv4Gate.cpp",
+      "src/d/actor/d_a_obj_lv4digsand.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
@@ -1435,6 +1437,7 @@
       "src/d/d_bg_w.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
+      "src/d/d_item.cpp",
       "src/d/d_kankyo.cpp",
       "src/d/d_lib.cpp",
       "src/d/d_msg_class.cpp",
@@ -1461,6 +1464,7 @@
       "include/d/actor/d_a_obj_fireWood.h",
       "include/d/actor/d_a_obj_ice_s.h",
       "include/d/actor/d_a_obj_lv4Gate.h",
+      "include/d/actor/d_a_obj_lv4digsand.h",
       "include/d/actor/d_a_obj_swpush.h",
       "include/d/actor/d_a_player.h",
       "include/d/actor/d_a_shop_item.h",
@@ -1495,6 +1499,7 @@
       "src/d/actor/d_a_obj_fireWood.cpp",
       "src/d/actor/d_a_obj_ice_s.cpp",
       "src/d/actor/d_a_obj_lv4Gate.cpp",
+      "src/d/actor/d_a_obj_lv4digsand.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
@@ -1510,6 +1515,7 @@
       "src/d/d_bg_w.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
+      "src/d/d_item.cpp",
       "src/d/d_kankyo.cpp",
       "src/d/d_lib.cpp",
       "src/d/d_msg_class.cpp",
@@ -1586,7 +1592,10 @@
       "PLAYER-089",
       "PLAYER-090",
       "PLAYER-091",
-      "PLAYER-092"
+      "PLAYER-092",
+      "PLAYER-093",
+      "PLAYER-094",
+      "PLAYER-095"
     ]
   },
   {

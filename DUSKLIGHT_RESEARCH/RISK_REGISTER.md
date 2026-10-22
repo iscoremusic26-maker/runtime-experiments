@@ -147,3 +147,5 @@ CP-R70 / PLAYER-092 STATIC_INFERRED: señal de excavación puede consumir punto/
 CP-R71 / PRES-139 STATIC_INFERRED: rail exige>=2puntos y geometría adecuada;sin validaciónlocal,no crash observado. Flag/pool compartidos carecen de ownerporrail y camino de sala es prestado;orden de descarga NOT_VERIFIED. No2000visibles ni audio/backend demostrado.
 
 CP-R72 / CALLBACK-040..042:soltar reserva host no asegura backendbusyfalse;sharedpending no posee owner/DLL ni drena callbacken ejecución. Payload es prestado y detach no vacía función pendiente delhelperSDK en los cuerpos citados. Sin fallo/unload observado.
+
+CP-R73 / PLAYER-095 STATIC_INFERRED:GroundCross inválido deja mGroundYsin nueva asignación;DEBUG solo solicita delete yrelease sigue. Dos señales y llegada son hitos separados;sin fallo físico/crash observado.

@@ -11578,5 +11578,62 @@
       "CALLBACK-041",
       "CALLBACK-042"
     ]
+  },
+  {
+    "symbol": "daObjL4DigSand_c::mode_init_dig",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_lv4digsand.cpp",
+      "line_start": 101,
+      "line_end": 119,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_lv4digsand.cpp#L101-L119"
+    },
+    "signature": "void daObjL4DigSand_c::mode_init_dig()",
+    "purpose": "Consultar suelo y armar descenso temporizado",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Señal startDig;datos de colisión apropiados"
+    ],
+    "risks": [
+      "Fallback distintoDEBUG;sinABI/exportWindows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-093",
+      "PLAYER-094",
+      "PLAYER-095"
+    ]
+  },
+  {
+    "symbol": "daObjL4DigSand_c::mode_dig",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_lv4digsand.cpp",
+      "line_start": 121,
+      "line_end": 132,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_lv4digsand.cpp#L121-L132"
+    },
+    "signature": "void daObjL4DigSand_c::mode_dig()",
+    "purpose": "Coordinar llegada geométrica y señal fin de Link",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Timer agotado;endDig requerido para terminar"
+    ],
+    "risks": [
+      "Llegada sola no termina;no efecto físico runtime certificado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-094",
+      "PLAYER-095"
+    ]
   }
 ]

@@ -297,3 +297,7 @@ Padre remoto verificado 1d8738d3d5a00505efd7776642b3129040705ef7. PRES-135..138 
 ## CP-R72 — FileService picker: reserva global y completion owned por separado
 
 Padre remoto verificado 5c4afb638bc347e6286b6163455cc04d8f5ea208. CALLBACK-040..042 STATIC_CROSSCHECKED:reserva global→completion/revalidación→copiasSDK y detach;CERRADO SELECTIVO frontend,sin backend/hilo nativo/drain certificado. Un slotoficial y unlocalizador nuevos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R73 — Lv4DigSand: handshake de excavación y llegada geométrica
+
+Padre remoto verificado af0abdfb5feb8540cb8664c02cfb5d96e36c6a0b. PLAYER-093/094 STATIC_CROSSCHECKED y095 STATIC_INFERRED:dos señalesLink→suelo/timer→pose→switch/delete. CERRADO SELECTIVO;fallbackrelease/placement pendientes. Dos localizadores internos. Sin mod,build ni runtime; solo atlas.

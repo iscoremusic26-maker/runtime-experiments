@@ -86,3 +86,5 @@ CP-R70 Q-12: PLAYER-089..092 contrastan Digpl tipo0/LinkWolfDig→señal→switc
 CP-R71 PARCIAL Q-11/Q-08: PRES-135..139 contrastan KYTAG03 rail→pool/estados/draw/audio y separan emisor/handshakeLink. Falta secuencia room/path unload,assets cardinalidad/ciclos y adquisición completa de olor. No reset de pool enDelete no pruebaUAF;hay ownerweather y escritorKYTAG10. Alternar servicios.
 
 CP-R72 Q-01/Q-02/Q-14: CALLBACK-040..042 precisan picker global,sharedpending,revalidación y detach distinto de list. Backendbusy/hilo/dialogcancel/drain y helperfunción pendiente tras supresión siguen pendientes;sin selector real ni datos personales. Alternar gameplay.
+
+CP-R73 Q-12: PLAYER-093..095 contrastan Lv4DigSand start/endLink→GroundCross→timer/llegada→switch/Delete. Faltan interrupciones/placement y fallbackrelease sin suelo(P095inferido);no repetir DigPlace ni generalizar MoveBG. Alternar gráficos/servicios.
