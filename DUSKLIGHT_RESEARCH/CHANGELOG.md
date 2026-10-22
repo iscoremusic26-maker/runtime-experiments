@@ -153,3 +153,7 @@ Padre remoto verificado 077d6a77036dd41c3f8a2d3870c6f61ff995f4bb. PORT-014..017:
 ## CP-R36 — Captura menú,gate de ticks,presentación y cleanup
 
 Padre remoto verificado 502d0592b3cb543e478fdbf0f42576ea58e2a2d5. PRES-082..084 contrastan collect→captura1→gate separado→draw2D→flag3/pause→salida condicionada; PRES-085 inferencia sobre inserción rechazada sin consumidor. Tres símbolos potenciales; ficha cameras_rendering ampliada,sin documento nuevo. Aurora/GPU/alcanzabilidad del bloqueo NOT_VERIFIED. Neto de esta sesión frente a CP-R34:+8 evidencias,+6 símbolos,+1 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R37 — Stock tienda,tag,display y evento024
+
+Padre remoto verificado 4d85697544f5259267fec34a740671be91a4f048. PLAYER-061..064: tag→solicitud display/visibilidad→evento024→índice sold-out→switch RAM→ocultación/retirada y ARC cleanup. Tres símbolos potenciales; other_systems ampliado. No se certifica cobro,entrega,persistencia ni recuperación global de hijo fallido. Neto de esta sesión frente a CP-R34:+12 evidencias,+9 símbolos,+1 fichas. Solo atlas,sin build ni runtime.

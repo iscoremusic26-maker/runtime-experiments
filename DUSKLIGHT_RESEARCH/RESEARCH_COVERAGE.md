@@ -1,12 +1,12 @@
-# Cobertura real — CP-R36
+# Cobertura real — CP-R37
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **23 fichas de sistemas, 322 evidencias y 309 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **23 fichas de sistemas, 326 evidencias y 312 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 309 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 312 registros.
 
 ## Estado por área
 
@@ -118,3 +118,5 @@ CP-R34: +4 evidencias PLAYER-057..060,+3 localizadores,+0 documentos. Niveles18 
 CP-R35: Consola host fija,rate y ownership UI. Cadena seleccionada; 18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED permanecen sin promoción global.
 
 CP-R36: Captura menú,gate de ticks,presentación y cleanup. Cadena seleccionada; 18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED permanecen sin promoción global.
+
+CP-R37: Stock tienda,tag,display y evento024. Cadena seleccionada; 18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED permanecen sin promoción global.

@@ -8988,5 +8988,88 @@
       "PRES-084",
       "PRES-085"
     ]
+  },
+  {
+    "symbol": "daTag_ShopItem_c::Execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_tag_shop_item.cpp",
+      "line_start": 79,
+      "line_end": 122,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_tag_shop_item.cpp#L79-L122"
+    },
+    "signature": "int daTag_ShopItem_c::Execute()",
+    "purpose": "Solicitud de actor display y control de visibilidad por switches.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "mProcessID error permite crear; ID válido solo lleva a búsqueda."
+    ],
+    "risks": [
+      "Sin reset local del ID al perder actor; timer150 no es prueba de segundos."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-061",
+      "PLAYER-062"
+    ]
+  },
+  {
+    "symbol": "dShopSystem_c::setSoldOut",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_shop_system.cpp",
+      "line_start": 1385,
+      "line_end": 1423,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_shop_system.cpp#L1385-L1423"
+    },
+    "signature": "void dShopSystem_c::setSoldOut()",
+    "purpose": "Consume índice pendiente,mutación save-switch o retiro de display según rama.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "mSoldOutFlag!=255; puntero/índice válidos en rama tag; field_0xf60 decide rama."
+    ],
+    "risks": [
+      "Sin prueba de cobro,entrega,durabilidad ni rollback; tablas guardan punteros prestados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-063",
+      "PLAYER-064"
+    ]
+  },
+  {
+    "symbol": "dMsgFlow_c::event024",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_msg_flow.cpp",
+      "line_start": 2439,
+      "line_end": 2448,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_msg_flow.cpp#L2439-L2448"
+    },
+    "signature": "int dMsgFlow_c::event024(mesg_flow_node_event* i_flowNode_p, fopAc_ac_c* i_speaker_p)",
+    "purpose": "Builtin Sold Out marca selección pendiente de tienda.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Speaker debe ser dShopSystem_c válido; usa cast sin validación local."
+    ],
+    "risks": [
+      "Return1 no equivale a venta confirmada ni switch escrito."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-063"
+    ]
   }
 ]

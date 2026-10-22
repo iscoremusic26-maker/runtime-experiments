@@ -75,3 +75,5 @@ CP-R34 · R-40: switch y latch FireWood divergen; Delete previo a timer0 no escr
 CP-R35 PORT-014..017: respuesta de consola no mide efecto/runtime; ocultar conserva estado y no revierte reloj global. Listeners UI retirados no prueban callback en curso drenado. Comandos host no son LogService ni API de registro; no certificado Windows/hook.
 
 CP-R36 PRES-085 STATIC_INFERRED: con flag1,inserción2D rechazada y sin consumidor alternativo,el gate separado puede mantenerse; alcanzabilidad no demostrada. capture_delete depende de pause y no acredita retirar captura pendiente sin pintar. flag3 precede copia GPU,sin ACK ni prueba Windows.
+
+CP-R37 PLAYER-061..064: tag conserva ID aun sin actor y no acredita respawn postfallo; hide no descarga recursos. Evento024 retorna1 tras marcar índice,sin prueba de cobro/switch/entrega. SaveSwitch es RAM; delete display solicitado no finalizado,tabla estática de tags presta pointers y cleanup global no auditado.
