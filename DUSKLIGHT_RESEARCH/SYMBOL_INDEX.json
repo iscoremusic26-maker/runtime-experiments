@@ -10073,5 +10073,61 @@
     "evidence_ids": [
       "PRES-109"
     ]
+  },
+  {
+    "symbol": "UiService::pane_add_control",
+    "kind": "service",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/ui.h",
+      "line_start": 369,
+      "line_end": 370,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/ui.h#L369-L370"
+    },
+    "signature": "ModResult (*pane_add_control)(ModContext*, UiElementHandle, const UiControlDesc*, UiElementHandle*)",
+    "purpose": "Construye control documental con binding/callback y owner de pane.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Game thread;descriptor compatible;pane actual de build."
+    ],
+    "risks": [
+      "Control no es HUDJ2D;MOD_OK no acredita pulsación ni lifetime de userdata."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-032",
+      "CALLBACK-033"
+    ]
+  },
+  {
+    "symbol": "slot_live",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/ui.cpp",
+      "line_start": 212,
+      "line_end": 218,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/ui.cpp#L212-L218"
+    },
+    "signature": "bool slot_live(uint64_t handle) [ui.cpp, namespace anónimo]",
+    "purpose": "Revalida handle de registro antes de callbacks UI capturados.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Guard de pane/registro aún existente en SlotMap."
+    ],
+    "risks": [
+      "No mantiene vivo código de DLL ni drena llamada ya iniciada."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-033",
+      "CALLBACK-034"
+    ]
   }
 ]

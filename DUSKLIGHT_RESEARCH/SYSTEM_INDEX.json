@@ -1666,7 +1666,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: servicios previos y CP-R46 polling WebSocket/vida de payload/cierre,sin callback de mod ni garantía universal de cancelación.",
+    "scope": "CROSSCHECKED selectiva: callbacks previos y CP-R51 Ui BUTTON,guard pane→Confirm→detach;no barrera universal.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -1711,6 +1711,7 @@
       "src/dusk/mods/svc/websocket.cpp",
       "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
+      "src/dusk/ui/button.cpp",
       "src/dusk/ui/mod_window.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/m_Do/m_Do_main.cpp"
@@ -1760,6 +1761,7 @@
       "src/dusk/mods/svc/websocket.cpp",
       "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
+      "src/dusk/ui/button.cpp",
       "src/dusk/ui/mod_window.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/m_Do/m_Do_main.cpp"
@@ -1809,7 +1811,10 @@
       "CALLBACK-028",
       "CALLBACK-029",
       "CALLBACK-030",
-      "CALLBACK-031"
+      "CALLBACK-031",
+      "CALLBACK-032",
+      "CALLBACK-033",
+      "CALLBACK-034"
     ]
   },
   {

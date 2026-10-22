@@ -209,3 +209,7 @@ Padre remoto verificado 60a6e417b81fe181573c626788b1826c15099585. WORLD-041/042 
 ## CP-R50 — BTP,binding por slot,texNo y fallo de protocolo condicionado
 
 Padre remoto verificado ff402f2451a2ca2291c6199db5c7906a5f631242. PRES-108..111:3 STATIC_CROSSCHECKED y1 STATIC_INFERRED,tres localizadores;0 fichas. Wflag→BTP→material descriptor→texNo→remove/ARC;error5 convertido a bool documentado con condiciones,sin fallo runtime. Sin mod,build ni runtime; solo atlas.
+
+## CP-R51 — UiService BUTTON,guard pane y rebuild/detach
+
+Padre remoto verificado 7edf053ae53ae45272d06285aa49ecd82a1711a2. CALLBACK-032..034 (+3 STATIC_CROSSCHECKED),un slot OFFICIAL_SERVICE ya existente y un helper potencial;0 fichas nuevas. Se descartó pistaInputService inexistente;se contrastó BUTTON→Confirm→guard de registro→callback→detach,sin UI ni runtime. Sin mod,build ni runtime; solo atlas.

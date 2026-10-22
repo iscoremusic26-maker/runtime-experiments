@@ -103,3 +103,5 @@ CP-R48 PLAYER-069..072: tipo alto,byte de estado,ID de objetivo e índice joint 
 CP-R49 WORLD-041/042: clearRoomSwitch/Item se ejecutan después de pedir deletes,sin comprobar cada retorno;BG puede conservarse por rama20. No se declara seguridad de referencias globales ni UAF por ello. PRES-089 permanece condicionado;sin orden de destrucción probado por perfil/lista.
 
 CP-R50 PRES-110/111: removeBTP no verifica identidad ni restaura texNo;riesgo condicionado si hay escritor compartido. useHeapInit Wflag devuelve5 en fallosBTP,caller convierte a bool;no fallo runtime observado ni patch. Recursos de animación prestados deben seguir vivos durante calc.
+
+CP-R51 CALLBACK-032..034: closure host copia fn/userdata pero no posee DLL ni datos usuario. Guard pane/active previo no valida Control individual ni callback ya iniciado;detach invalida futuros accesos,no acredita drenaje. Sin fallo UI/runtime observado.
