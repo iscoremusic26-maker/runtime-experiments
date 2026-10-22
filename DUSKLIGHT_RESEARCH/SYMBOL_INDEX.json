@@ -9715,5 +9715,90 @@
       "PRES-103",
       "PRES-105"
     ]
+  },
+  {
+    "symbol": "WebSocketService.poll_event",
+    "kind": "function",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/websocket.h",
+      "line_start": 97,
+      "line_end": 98,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/websocket.h#L97-L98"
+    },
+    "signature": "ModResult (*poll_event)(ModContext* ctx, WebSocketEvent* out_event)",
+    "purpose": "Polling por mod con vistas temporales y NONE diferente de error.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Struct suficiente y contexto válido; caller copia payload si necesita retener."
+    ],
+    "risks": [
+      "Siguiente poll de cualquier conexión del mod acota lifetime; no callback ni frameBegin."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-024",
+      "CALLBACK-028",
+      "CALLBACK-029"
+    ]
+  },
+  {
+    "symbol": "WebSocketService.close",
+    "kind": "function",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/websocket.h",
+      "line_start": 102,
+      "line_end": 103,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/websocket.h#L102-L103"
+    },
+    "signature": "ModResult (*close)(ModContext* ctx, WebSocketHandle ws, uint16_t code, const char* reason)",
+    "purpose": "Solicita cierre; hostretira entrada al consumirCLOSED o lifecycle.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Handle owned y código/razón válidos según backend."
+    ],
+    "risks": [
+      "MOD_OK no finhandshake ni workerdrain; wrapperC++ pierdehandle antes de retirada host."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-024",
+      "CALLBACK-030",
+      "CALLBACK-031"
+    ]
+  },
+  {
+    "symbol": "mods::ws::Connection::close",
+    "kind": "method",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/websocket.hpp",
+      "line_start": 68,
+      "line_end": 80,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/websocket.hpp#L68-L80"
+    },
+    "signature": "ModResult mods::ws::Connection::close(uint16_t code = 1000, std::string_view reason = {})",
+    "purpose": "Consumidor SDKC++ que nulifica referencia local al cerrar aceptado; detach solo local.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "svc_websocket y handle local válidos."
+    ],
+    "risks": [
+      "No adoptarlo como destructor sincronizado de conexión host ni callback drain."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-030"
+    ]
   }
 ]

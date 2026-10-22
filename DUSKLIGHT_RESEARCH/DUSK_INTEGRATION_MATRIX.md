@@ -21,3 +21,5 @@ Los IDs remiten al [ledger](EVIDENCE_LEDGER.json), con enlaces al SHA/rango real
 Presencia del port: POTENTIAL_REQUIRES_VERIFICATION como interfaz C++ interna, sin PresenceService público auditado. ConfigService solo gestiona variables propias; no otorga control/lifetime del backend host. PORT-010..013, [ficha de presencia](systems/port_presence.md). No se certifica hook, ACK ni rollback remoto.
 
 Matrices interpoladas: OFFICIAL_SERVICE InterpService (SDK-013 aclarado,PRES-094..097). recordMOD_OK no confirma muestra fuera de ventana; valores copiados,key global compartida. Forget/detach borra muestras,no restaura anterior ni confirma GPU; [ownership](systems/callback_ownership_and_cancellation.md).
+
+WebSocketService polling: SDK-024/CALLBACK-028..031,slots oficiales poll_event/close. Snapshot de handles no prolonga payload permod; closeaceptado no CLOSED ni cupo liberado. WrapperC++detach solo local; backend/drain sin certificar. [Ownership](systems/callback_ownership_and_cancellation.md).

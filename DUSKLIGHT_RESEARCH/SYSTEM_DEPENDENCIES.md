@@ -105,3 +105,5 @@ CP-R43 ROOT-011..013: runtime_and_lifecycle(msg wrapper)→memory_ownership(heap
 CP-R44 PRES-098..101: models_animations_materials(McaMorf BAS)→audio_particles_effects(Z2Creature/evento/pool)→memory_ownership(posición/evento prestados). AudioResService suministra recursos por otro contrato; retirar handle no confirma voz detenida ni mixer drenado.
 
 CP-R45 PRES-102..105: models_animations_materials(deformer/índices)→memory_ownership(buffers vs ModelData compartido)→cameras_rendering(packet arrays)→resources_archives_overlays(ARC). Instalación parcial y punteros swapped impiden equiparar overlay/retorno con actualización completa de modelo vivo.
+
+CP-R46 CALLBACK-028..031: sdk_services(WebSocket)→callback_ownership_and_cancellation(vistas de polling permod,sin callback)→runtime_and_lifecycle(take_all/pollstate); external_dependencies(BorealisConnection) pendiente. FrameBeginHTTP no aplica a WebSocket.

@@ -93,3 +93,5 @@ CP-R43 ROOT-012/013: subDelete0 aún puede retirar drawtag en msg; no observado 
 CP-R44 PRES-099..101: eventoBAS avanza índice antes de filtros/pool/fallo,sin retry local; userData presta evento. Cambio de animación puede dejar sonido estado2; dispose distingue release de stop y ambos de mixer drain. Sin sonido/audibilidad/fallo runtime observados.
 
 CP-R45 PRES-103/105: setSkinDeform descarta initMtxIndexArrayret y cambia flags/buffers por etapas,sin rollback completo; no fallo runtime declarado. Fastpath puede mutar arrays ModelData; destructor vacío no acredita frees ni leak. Asset/índices/ABI/export y GPUdrain pendientes.
+
+CP-R46 CALLBACK-029..031: copiar Event no copia payload; siguientepoll del mismo mod acota vistas incluso de otra conexión. CloseC++handle0 no retira entrada host; CLOSED/deactivation sí. take_all no prueba workerdrain/handshake sin backend; ningún tráfico/fallo runtime observado.

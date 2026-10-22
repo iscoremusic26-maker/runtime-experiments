@@ -840,7 +840,7 @@
   {
     "system_id": "sdk_services",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos SDK seleccionados; CP-R40 InterpService→ventana/copias→consumidor sombra→forget/detach y claves globales,no auditoría completa ni callback de mod nuevo.",
+    "scope": "Contratos seleccionados; CP-R46 WebSocketService connect→poll/OPEN→views→close/CLOSED/lifecycle,distinto de callbackHTTP; backend/slots completos sin auditar.",
     "reports": [
       "SDK_AND_SERVICES.md"
     ],
@@ -857,18 +857,23 @@
       "sdk/include/mods/svc/log.h",
       "sdk/include/mods/svc/net.h",
       "sdk/include/mods/svc/websocket.h",
+      "sdk/include/mods/svc/websocket.hpp",
       "src/d/d_drawlist.cpp",
       "src/dusk/interp/frame_interpolation.cpp",
       "src/dusk/interp/lerp.h",
       "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/interp.cpp",
       "src/dusk/mods/svc/registry.cpp",
+      "src/dusk/mods/svc/websocket.cpp",
       "src/f_ap/f_ap_game.cpp"
     ],
     "dependencies": [
       "models_animations_materials",
       "cameras_rendering",
-      "runtime_and_lifecycle"
+      "runtime_and_lifecycle",
+      "callback_ownership_and_cancellation",
+      "external_dependencies"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -882,17 +887,25 @@
       "PRES-094",
       "PRES-095",
       "PRES-096",
-      "PRES-097"
+      "PRES-097",
+      "CALLBACK-028",
+      "CALLBACK-029",
+      "CALLBACK-030",
+      "CALLBACK-031"
     ],
     "files_examined": [
       "sdk/include/mods/svc/interp.h",
       "sdk/include/mods/svc/interp.hpp",
+      "sdk/include/mods/svc/websocket.h",
+      "sdk/include/mods/svc/websocket.hpp",
       "src/d/d_drawlist.cpp",
       "src/dusk/interp/frame_interpolation.cpp",
       "src/dusk/interp/lerp.h",
       "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/interp.cpp",
       "src/dusk/mods/svc/registry.cpp",
+      "src/dusk/mods/svc/websocket.cpp",
       "src/f_ap/f_ap_game.cpp"
     ]
   },
@@ -1605,7 +1618,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva por servicio: previos y CP-R40 ownership de claves/matrices sin callback InterpService; no barrera universal de retiro.",
+    "scope": "CROSSCHECKED selectiva: servicios previos y CP-R46 polling WebSocket/vida de payload/cierre,sin callback de mod ni garantía universal de cancelación.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -1621,6 +1634,8 @@
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/save.h",
       "sdk/include/mods/svc/ui.h",
+      "sdk/include/mods/svc/websocket.h",
+      "sdk/include/mods/svc/websocket.hpp",
       "sdk/include/mods/svc/window.h",
       "src/d/actor/d_a_tbox.cpp",
       "src/d/d_drawlist.cpp",
@@ -1645,6 +1660,7 @@
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/save.cpp",
       "src/dusk/mods/svc/ui.cpp",
+      "src/dusk/mods/svc/websocket.cpp",
       "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
       "src/dusk/ui/mod_window.cpp",
@@ -1667,6 +1683,8 @@
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/save.h",
       "sdk/include/mods/svc/ui.h",
+      "sdk/include/mods/svc/websocket.h",
+      "sdk/include/mods/svc/websocket.hpp",
       "sdk/include/mods/svc/window.h",
       "src/d/actor/d_a_tbox.cpp",
       "src/d/d_drawlist.cpp",
@@ -1691,6 +1709,7 @@
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/save.cpp",
       "src/dusk/mods/svc/ui.cpp",
+      "src/dusk/mods/svc/websocket.cpp",
       "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
       "src/dusk/ui/mod_window.cpp",
@@ -1705,7 +1724,8 @@
       "cutscenes_dialogue",
       "hud_ui_text",
       "port_support",
-      "resources_archives_overlays"
+      "resources_archives_overlays",
+      "external_dependencies"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1737,7 +1757,11 @@
       "PRES-094",
       "PRES-095",
       "PRES-096",
-      "PRES-097"
+      "PRES-097",
+      "CALLBACK-028",
+      "CALLBACK-029",
+      "CALLBACK-030",
+      "CALLBACK-031"
     ]
   },
   {
