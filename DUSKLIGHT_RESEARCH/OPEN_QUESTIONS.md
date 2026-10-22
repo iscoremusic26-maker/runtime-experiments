@@ -28,3 +28,5 @@ CP-R40 Q-14/ownership: PRES-094..097 aclaran InterpService,ventana,copia3x4,look
 CP-R41 Q-12: PLAYER-065..068 contrastan StartAndGoal/Timer,caller cut,ready/running,wrappers que no propagan rechazo,meta→MsgTime y cleanup diferido. No carrera integral,récord,recompensa ni persistencia; resto de temporizadores sigue pendiente.
 
 CP-R43 Q-05/lifecycle: ROOT-011..013 contrastan wrapper msg y heap/screen Timer explícitos,comparado con fopAc_Delete previo. No resuelve disposers globales,alloc fallidos ni actor unregister; msg no hereda cleanup ActorService. Siguiente familia distinta.
+
+CP-R44 Q-08: PRES-098..101 contrastan BAS→frame/evento→handle→SoundStarter→stop/release/pool. No reproducción audible ni cambio BST nuevo; persisten mixer/backend,assets,seek y duración de userdata tras otras rutas.

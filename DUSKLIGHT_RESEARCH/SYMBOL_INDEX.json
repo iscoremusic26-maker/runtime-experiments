@@ -9548,5 +9548,88 @@
     "evidence_ids": [
       "ROOT-013"
     ]
+  },
+  {
+    "symbol": "Z2SoundObjAnime::updateAnime",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+      "line_start": 407,
+      "line_end": 455,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L407-L455"
+    },
+    "signature": "void Z2SoundObjAnime::updateAnime(f32 param_0, f32 param_1)",
+    "purpose": "Consume eventos de BAS por frame/sentido,renueva lifetime y actualiza posiciones.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Objeto inicializado,posición y animation storage válidos si se consumen."
+    ],
+    "risks": [
+      "Frame avanzado no ACK de audio; loop/speed controlados por caller."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-098",
+      "PRES-100"
+    ]
+  },
+  {
+    "symbol": "Z2SoundObjAnime::startSoundInner",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+      "line_start": 499,
+      "line_end": 542,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L499-L542"
+    },
+    "signature": "void Z2SoundObjAnime::startSoundInner(const JGeometry::TVec3<f32>& pos, f32 param_1, Z2SoundStarter* soundStarter, u32 mapinfo, s8 reverb)",
+    "purpose": "Evento→filtros/culling/pool→SoundStarter→handle userdata BAS.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Índice BAS válido y buffers vivos."
+    ],
+    "risks": [
+      "Índice consumido antes de fallos; sin retry local ni bool propagado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-099",
+      "PRES-100"
+    ]
+  },
+  {
+    "symbol": "Z2SoundObjBase::dispose",
+    "kind": "method",
+    "system_id": "audio_particles_effects",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+      "line_start": 67,
+      "line_end": 82,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L67-L82"
+    },
+    "signature": "void Z2SoundObjBase::dispose()",
+    "purpose": "Stop o release de sonidos attached según flag,pone alivefalse.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Handles/soundinfo válidos mientras se recorre."
+    ],
+    "risks": [
+      "Release solo desvincula handle; no drain backend ni mute observado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-101"
+    ]
   }
 ]

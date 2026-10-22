@@ -101,3 +101,5 @@ CP-R41 PLAYER-065..068: other_systems(StartAndGoal)→cutscenes_dialogue(cut cal
 CP-R42 PORT-018..021: port_support(iso wrapper/worker)→hud_ui_text(prelaunch modal/progreso)→runtime_and_lifecycle(join/publication); external_dependencies Borealis aporta verify/inspect/Progress sin backend disponible. Config save nominal y metadata no equivalen a hash nuevo ni juego ejecutando.
 
 CP-R43 ROOT-011..013: runtime_and_lifecycle(msg wrapper)→memory_ownership(heap propio específico)→hud_ui_text(Timer screen/drawtag). Drawtag corta publicación visual,no destruye storage ni adopta ownership de actor. Gate scenePause distinto de pauseFlag/talk.
+
+CP-R44 PRES-098..101: models_animations_materials(McaMorf BAS)→audio_particles_effects(Z2Creature/evento/pool)→memory_ownership(posición/evento prestados). AudioResService suministra recursos por otro contrato; retirar handle no confirma voz detenida ni mixer drenado.

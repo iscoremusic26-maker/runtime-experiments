@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R43",
+  "checkpoint": "CP-R44",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -16088,6 +16088,242 @@
           "line_start": 1755,
           "line_end": 1757,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_timer.cpp#L1755-L1757"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-098",
+      "claim": "McaMorf2 selecciona BAS y llama init/updateAnime; Coach inicializa sonido con posiciones prestadas. Z2SoundObjAnime retiene animation pointer,establece sentido/frame/índices y consume eventos forward/reverse,con datos BE y ruta PC sin mControl.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/m_Do/m_Do_ext.h",
+          "line_start": 53,
+          "line_end": 60,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/m_Do/m_Do_ext.h#L53-L60"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 2152,
+          "line_end": 2162,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L2152-L2162"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 2187,
+          "line_end": 2199,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L2187-L2199"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_npc_coach.cpp",
+          "line_start": 2041,
+          "line_end": 2045,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc_coach.cpp#L2041-L2045"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2Creature.cpp",
+          "line_start": 115,
+          "line_end": 123,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2Creature.cpp#L115-L123"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2Creature.cpp",
+          "line_start": 141,
+          "line_end": 154,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2Creature.cpp#L141-L154"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+          "line_start": 357,
+          "line_end": 380,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L357-L380"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+          "line_start": 407,
+          "line_end": 455,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L407-L455"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JAudio2/JAUSoundAnimator.h",
+          "line_start": 95,
+          "line_end": 126,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JAudio2/JAUSoundAnimator.h#L95-L126"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-099",
+      "claim": "Evento BAS avanza índice antes de filtros/culling/handle; no retry local al faltar handle. Pool acota/adquiere handles; SoundStarter devuelve bool que startSoundInner no usa como ACK y solo configura estado si handle attached.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+          "line_start": 499,
+          "line_end": 542,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L499-L542"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+          "line_start": 549,
+          "line_end": 575,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L549-L575"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundHandles.cpp",
+          "line_start": 43,
+          "line_end": 77,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundHandles.cpp#L43-L77"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundStarter.cpp",
+          "line_start": 46,
+          "line_end": 69,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundStarter.cpp#L46-L69"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-100",
+      "claim": "Cambio de animación ageSounds trata lifetime/flags y puede dejar sonido estado2; updateSoundLifeTime distingue pausa/stop por velocidad0,noteoff y lifetime. Handle guarda puntero a evento BAS como userData,no copia completa.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+          "line_start": 382,
+          "line_end": 405,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L382-L405"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+          "line_start": 457,
+          "line_end": 497,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L457-L497"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+          "line_start": 504,
+          "line_end": 537,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L504-L537"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JAudio2/JAUSoundAnimator.h",
+          "line_start": 13,
+          "line_end": 22,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JAudio2/JAUSoundAnimator.h#L13-L22"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-101",
+      "claim": "Z2Creature.deleteObject borra anime/simple: stopAnime nulificaBAS,dispose stop o release segúnflags y pooldelete liberahandles. JAISoundHandle.releaseSound solo desvincula,poolretirado no certifica cese audible o recurso backend liberado.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2Creature.cpp",
+          "line_start": 104,
+          "line_end": 113,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2Creature.cpp#L104-L113"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/Z2AudioLib/Z2SoundObject.h",
+          "line_start": 60,
+          "line_end": 62,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/Z2AudioLib/Z2SoundObject.h#L60-L62"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundObject.cpp",
+          "line_start": 50,
+          "line_end": 82,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundObject.cpp#L50-L82"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2SoundHandles.cpp",
+          "line_start": 16,
+          "line_end": 27,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2SoundHandles.cpp#L16-L27"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAISound.cpp",
+          "line_start": 9,
+          "line_end": 20,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAISound.cpp#L9-L20"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JAudio2/JAISound.h",
+          "line_start": 26,
+          "line_end": 45,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JAudio2/JAISound.h#L26-L45"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/audio.h",
+          "line_start": 1,
+          "line_end": 13,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/audio.h#L1-L13"
         }
       ],
       "limitations": [

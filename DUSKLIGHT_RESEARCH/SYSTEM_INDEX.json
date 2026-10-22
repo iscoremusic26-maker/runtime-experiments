@@ -103,26 +103,36 @@
   {
     "system_id": "audio_particles_effects",
     "coverage": "CROSSCHECKED",
-    "scope": "Rutas audio/partículas seleccionadas y edición BST→sync lifecycle→consumidor SE/ownership contrastados; sin audio runtime.",
+    "scope": "CROSSCHECKED selectivo: audio/partículas/BST previos y CP-R44 BAS→frame/event→handle→SoundStarter→cleanup; no backend audible ni formatos completos.",
     "reports": [
       "systems/audio_particles_effects.md"
     ],
     "files_examined": [
+      "include/Z2AudioLib/Z2SoundObject.h",
+      "include/m_Do/m_Do_ext.h",
       "libs/JSystem/include/JSystem/JAudio2/JAISound.h",
+      "libs/JSystem/include/JSystem/JAudio2/JAUSoundAnimator.h",
       "libs/JSystem/src/JAudio2/JAISe.cpp",
       "libs/JSystem/src/JAudio2/JAISeMgr.cpp",
       "libs/JSystem/src/JAudio2/JAISound.cpp",
       "libs/JSystem/src/JAudio2/JAUSoundTable.cpp",
       "sdk/include/mods/svc/audio_res.h",
       "src/Z2AudioLib/Z2AudioMgr.cpp",
+      "src/Z2AudioLib/Z2Creature.cpp",
       "src/Z2AudioLib/Z2SeMgr.cpp",
+      "src/Z2AudioLib/Z2SoundHandles.cpp",
       "src/Z2AudioLib/Z2SoundMgr.cpp",
+      "src/Z2AudioLib/Z2SoundObject.cpp",
+      "src/Z2AudioLib/Z2SoundStarter.cpp",
+      "src/d/actor/d_a_npc_coach.cpp",
       "src/d/d_particle.cpp",
+      "src/dusk/audio.h",
       "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/audio_res/audio_res.cpp",
       "src/dusk/mods/svc/audio_res/bst.cpp",
       "src/dusk/mods/svc/audio_res/wsys.cpp",
-      "src/dusk/mods/svc/registry.cpp"
+      "src/dusk/mods/svc/registry.cpp",
+      "src/m_Do/m_Do_ext.cpp"
     ],
     "pending": [
       "BST frame_end discrepancy",
@@ -131,28 +141,40 @@
       "runtime audio/particles"
     ],
     "paths": [
+      "include/Z2AudioLib/Z2SoundObject.h",
+      "include/m_Do/m_Do_ext.h",
       "libs/JSystem/include/JSystem/JAudio2/JAISound.h",
+      "libs/JSystem/include/JSystem/JAudio2/JAUSoundAnimator.h",
       "libs/JSystem/src/JAudio2/JAISe.cpp",
       "libs/JSystem/src/JAudio2/JAISeMgr.cpp",
       "libs/JSystem/src/JAudio2/JAISound.cpp",
       "libs/JSystem/src/JAudio2/JAUSoundTable.cpp",
       "sdk/include/mods/svc/audio_res.h",
       "src/Z2AudioLib/Z2AudioMgr.cpp",
+      "src/Z2AudioLib/Z2Creature.cpp",
       "src/Z2AudioLib/Z2SeMgr.cpp",
+      "src/Z2AudioLib/Z2SoundHandles.cpp",
       "src/Z2AudioLib/Z2SoundMgr.cpp",
+      "src/Z2AudioLib/Z2SoundObject.cpp",
+      "src/Z2AudioLib/Z2SoundStarter.cpp",
+      "src/d/actor/d_a_npc_coach.cpp",
       "src/d/d_particle.cpp",
+      "src/dusk/audio.h",
       "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/audio_res/audio_res.cpp",
       "src/dusk/mods/svc/audio_res/bst.cpp",
       "src/dusk/mods/svc/audio_res/wsys.cpp",
-      "src/dusk/mods/svc/registry.cpp"
+      "src/dusk/mods/svc/registry.cpp",
+      "src/m_Do/m_Do_ext.cpp"
     ],
     "dependencies": [
       "resources_archives_overlays",
       "memory_ownership",
       "stages_rooms_layers",
       "runtime_and_lifecycle",
-      "sdk_services"
+      "sdk_services",
+      "models_animations_materials",
+      "external_dependencies"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -166,7 +188,11 @@
       "PRES-052",
       "PRES-053",
       "PRES-054",
-      "PRES-055"
+      "PRES-055",
+      "PRES-098",
+      "PRES-099",
+      "PRES-100",
+      "PRES-101"
     ]
   },
   {

@@ -181,3 +181,7 @@ Padre remoto verificado af63c280ce7ed33066c1aa47944d07a533847145. PORT-018..021:
 ## CP-R43 — Lifecycle msg,drawtag y heap específico
 
 Padre remoto verificado 098550baa2123de36fb4e93b3bb83f9a070c8591. ROOT-011..013: msg Create→drawtag,gate scenePause,IsDelete/Delete→cleanup específico de Timer/heap/screen. Dos símbolos potenciales; memoria/runtime ampliados,sin documento nuevo. No copiar garantías de actor ni confundir corte visual con destrucción. Fallos parciales/GPU/disposers pendientes. Neto de esta sesión frente a CP-R34:+35 evidencias,+26 símbolos,+2 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R44 — BAS,eventos de sonido,handles y stop/release
+
+Padre remoto verificado 0fbe36a58c222c7d7e495a98a250598080b9df68. PRES-098..101: BAS/frame→filtros/evento→pool/handle→SoundStarter→lifetime/stop/release. Tres símbolos potenciales; ficha audio ampliada. Índice consumido no sonido entregado,release no stop/mixer drain; sin audio ejecutado ni backend/ABI probados. Neto de esta sesión frente a CP-R34:+39 evidencias,+29 símbolos,+2 fichas. Solo atlas,sin build ni runtime.
