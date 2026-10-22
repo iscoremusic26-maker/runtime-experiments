@@ -24,3 +24,5 @@ R00,pin,siete erratas intactos; excluir INVENTORY_SUMMARY/tools/inventory.py loc
 IDs sesión:PRES-135..142,CALLBACK-040..042,PLAYER-093..098. Mantener riesgosprevios y nuevosPRES139/PLAYER095. CP71PARCIAL;resto cadenas selectivas,no motorcompleto ni hooksresueltos.
 
 Validación CP-R75:exit0;459 evidencias,409 símbolos,4793 ocurrencias,2263 rangos únicos,395 archivos upstream,47 MD/JSON; runtime_tested=false. Neto desde CP-R70:+17 evidencias,+12 símbolos,+208 ocurrencias,+93 rangos,+10 archivos citados,+0 fichas;51 archivos atlas. Diff exclusivo DUSKLIGHT_RESEARCH; pin/inventario/erratas/validador intactos.
+
+Validación CP-R75:exit0;459 evidencias,409 símbolos,4793 ocurrencias,2263 rangos únicos,395 archivos upstream,47 MD/JSON; runtime_tested=false. Neto desde CP-R70:+17 evidencias,+12 símbolos,+208 ocurrencias,+93 rangos,+10 archivos citados,+0 fichas;51 archivos atlas. Diff exclusivo DUSKLIGHT_RESEARCH; pin/inventario/erratas/validador intactos.
