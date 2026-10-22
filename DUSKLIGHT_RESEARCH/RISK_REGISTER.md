@@ -87,3 +87,5 @@ CP-R40 PRES-097 STATIC_INFERRED: keys globales compartidas entre conjuntos de mo
 CP-R41 PLAYER-066/067: TimerStart/End wrappers descartan retorno interno; true no acredita running/resultado actualizado. Meta copia RAM aun si End falla; DeleteRequest difiere a closeAnime. Modo compartido no da ownership por actor; sin bloqueo,récord ni runtime observados.
 
 CP-R42 PORT-018..021: cancelRequested no confirma Canceled; destructor/join espera retorno backend sin plazo certificado. Estado cachedUnknown tras inspectSuccess puede permitir UI; verifyUnknown nuevo toma error distinto. Misma ubicación no certifica bytes actuales; no fallo observado ni disco personal abierto.
+
+CP-R43 ROOT-012/013: subDelete0 aún puede retirar drawtag en msg; no observado con Timer,que retorna1. fopMsgM_Deletevoid no confirma encolado. No asumir limpieza actor heap/audio/owned_samples ni drenaje GPU en msg; cleanup concreto debe rastrearse.

@@ -26,3 +26,5 @@ CP-R39 Q-10: PRES-090..093 contrastan McaMorf2/Coach A-B frente a morph temporal
 CP-R40 Q-14/ownership: PRES-094..097 aclaran InterpService,ventana,copia3x4,lookup/fallback y conflicto de keys globales; SDK-013 precisado. No contiene callbacks de mod: Q-01/Q-02 no se cierran por esta API. Falta coexistencia real,otros arbitrajes y runtime.
 
 CP-R41 Q-12: PLAYER-065..068 contrastan StartAndGoal/Timer,caller cut,ready/running,wrappers que no propagan rechazo,meta→MsgTime y cleanup diferido. No carrera integral,récord,recompensa ni persistencia; resto de temporizadores sigue pendiente.
+
+CP-R43 Q-05/lifecycle: ROOT-011..013 contrastan wrapper msg y heap/screen Timer explícitos,comparado con fopAc_Delete previo. No resuelve disposers globales,alloc fallidos ni actor unregister; msg no hereda cleanup ActorService. Siguiente familia distinta.

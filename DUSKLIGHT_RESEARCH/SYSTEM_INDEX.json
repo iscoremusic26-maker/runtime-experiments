@@ -611,7 +611,7 @@
   {
     "system_id": "runtime_and_lifecycle",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: escena nominal,fallos overlap/destino y reset PLAY→OPENING CP-R31; recovery global/captura pendientes.",
+    "scope": "CROSSCHECKED selectivo: scheduler/escenas previos y CP-R43 diferencia lifecycle msg/actor,drawtag y cleanup específico; sin garantía global de teardown.",
     "reports": [
       "systems/runtime_and_lifecycle.md"
     ],
@@ -621,6 +621,8 @@
     ],
     "paths": [
       "include/d/d_com_inf_game.h",
+      "include/d/d_s_play.h",
+      "include/f_op/f_op_msg.h",
       "include/f_op/f_op_scene_mng.h",
       "include/m_Do/m_Do_MemCard.h",
       "include/m_Do/m_Do_Reset.h",
@@ -634,6 +636,7 @@
       "src/d/d_s_name.cpp",
       "src/d/d_s_play.cpp",
       "src/d/d_stage.cpp",
+      "src/d/d_timer.cpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/depgraph.cpp",
       "src/dusk/mods/loader/loader.cpp",
@@ -641,6 +644,9 @@
       "src/dusk/mods/svc/actor.cpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/f_ap/f_ap_game.cpp",
+      "src/f_op/f_op_draw_tag.cpp",
+      "src/f_op/f_op_msg.cpp",
+      "src/f_op/f_op_msg_mng.cpp",
       "src/f_op/f_op_overlap_mng.cpp",
       "src/f_op/f_op_overlap_req.cpp",
       "src/f_op/f_op_scene.cpp",
@@ -703,10 +709,15 @@
       "ARCH-013",
       "ARCH-014",
       "ARCH-015",
-      "ARCH-016"
+      "ARCH-016",
+      "ROOT-011",
+      "ROOT-012",
+      "ROOT-013"
     ],
     "files_examined": [
       "include/d/d_com_inf_game.h",
+      "include/d/d_s_play.h",
+      "include/f_op/f_op_msg.h",
       "include/m_Do/m_Do_MemCard.h",
       "include/m_Do/m_Do_Reset.h",
       "include/m_Do/m_Do_audio.h",
@@ -714,7 +725,11 @@
       "src/d/d_s_logo.cpp",
       "src/d/d_s_play.cpp",
       "src/d/d_stage.cpp",
+      "src/d/d_timer.cpp",
       "src/f_ap/f_ap_game.cpp",
+      "src/f_op/f_op_draw_tag.cpp",
+      "src/f_op/f_op_msg.cpp",
+      "src/f_op/f_op_msg_mng.cpp",
       "src/f_op/f_op_overlap_mng.cpp",
       "src/f_op/f_op_overlap_req.cpp",
       "src/f_op/f_op_scene_mng.cpp",
@@ -1421,15 +1436,21 @@
   {
     "system_id": "memory_ownership",
     "coverage": "CROSSCHECKED",
-    "scope": "Rutas seleccionadas; profundidad original IMPLEMENTATION_TRACED_SELECTIVE; no auditoría integral del sistema.",
+    "scope": "CROSSCHECKED selectivo: heap actor previo y CP-R43 framework msg→drawtag→heap/screen Timer explícitos,gate pausa; no auditoría total de alloc/disposers.",
     "reports": [
       "systems/memory_ownership.md"
     ],
     "files_examined": [
+      "include/d/d_s_play.h",
+      "include/f_op/f_op_msg.h",
       "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
       "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "src/d/d_timer.cpp",
       "src/dusk/OSThread.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_op/f_op_draw_tag.cpp",
+      "src/f_op/f_op_msg.cpp",
+      "src/f_op/f_op_msg_mng.cpp",
       "src/m_Do/m_Do_ext.cpp"
     ],
     "pending": [
@@ -1437,21 +1458,31 @@
       "Exports/allocator CRT de DLL Windows y lifetime con consumidores reales."
     ],
     "paths": [
+      "include/d/d_s_play.h",
+      "include/f_op/f_op_msg.h",
       "libs/JSystem/include/JSystem/JKernel/JKRHeap.h",
       "libs/JSystem/src/JKernel/JKRHeap.cpp",
+      "src/d/d_timer.cpp",
       "src/dusk/OSThread.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_op/f_op_draw_tag.cpp",
+      "src/f_op/f_op_msg.cpp",
+      "src/f_op/f_op_msg_mng.cpp",
       "src/m_Do/m_Do_ext.cpp"
     ],
     "dependencies": [
-      "runtime_and_lifecycle"
+      "runtime_and_lifecycle",
+      "hud_ui_text"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
       "ROOT-001",
       "ROOT-004",
       "ROOT-005",
-      "ROOT-006"
+      "ROOT-006",
+      "ROOT-011",
+      "ROOT-012",
+      "ROOT-013"
     ]
   },
   {

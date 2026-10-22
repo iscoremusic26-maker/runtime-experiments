@@ -9493,5 +9493,60 @@
     "evidence_ids": [
       "PORT-021"
     ]
+  },
+  {
+    "symbol": "fopMsg_Delete",
+    "kind": "function",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_msg.cpp",
+      "line_start": 59,
+      "line_end": 66,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_msg.cpp#L59-L66"
+    },
+    "signature": "static int fopMsg_Delete(void* i_this)",
+    "purpose": "Wrapper msg: retorna subDelete y retira drawtag; sin heap actor genérico.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "msg_class y sub_method válidos."
+    ],
+    "risks": [
+      "Retiro de drawtag no prueba proceso destruido,heap liberado ni callback drenado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ROOT-011",
+      "ROOT-012"
+    ]
+  },
+  {
+    "symbol": "fopMsg_Execute",
+    "kind": "function",
+    "system_id": "memory_ownership",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_op/f_op_msg.cpp",
+      "line_start": 25,
+      "line_end": 48,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_msg.cpp#L25-L48"
+    },
+    "signature": "static int fopMsg_Execute(void* i_this)",
+    "purpose": "Gate de pausa de escena previo al Execute específico de msg.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Solo ejecuta submétodo si !dScnPly_c::isPause()."
+    ],
+    "risks": [
+      "No igualar con pausa de menú/talk ni periodicidad de reloj."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ROOT-013"
+    ]
   }
 ]

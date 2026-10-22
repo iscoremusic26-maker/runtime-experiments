@@ -177,3 +177,7 @@ Padre remoto verificado 7cdce813a49f86e140382486f1bc773f5fdbf9d9. PLAYER-065..06
 ## CP-R42 — Diagnóstico disco,worker,cancelación y estado UI
 
 Padre remoto verificado af63c280ce7ed33066c1aa47944d07a533847145. PORT-018..021: selector→inspect/verify wrapper→worker release/acquire→resultado/modal/cancel→config/metadata y flags UI. Tres símbolos potenciales,nueva ficha port_disc_validation.md. Borealis/cancel latency/formato/hash real BLOCKED/NOT_VERIFIED; sin imágenes ni datos personales abiertos. Neto de esta sesión frente a CP-R34:+32 evidencias,+24 símbolos,+2 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R43 — Lifecycle msg,drawtag y heap específico
+
+Padre remoto verificado 098550baa2123de36fb4e93b3bb83f9a070c8591. ROOT-011..013: msg Create→drawtag,gate scenePause,IsDelete/Delete→cleanup específico de Timer/heap/screen. Dos símbolos potenciales; memoria/runtime ampliados,sin documento nuevo. No copiar garantías de actor ni confundir corte visual con destrucción. Fallos parciales/GPU/disposers pendientes. Neto de esta sesión frente a CP-R34:+35 evidencias,+26 símbolos,+2 fichas. Solo atlas,sin build ni runtime.
