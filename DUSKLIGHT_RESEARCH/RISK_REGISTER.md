@@ -109,3 +109,5 @@ CP-R51 CALLBACK-032..034: closure host copia fn/userdata pero no posee DLL ni da
 CP-R52 PLAYER-073..076: listallena expulsaID mediante delete sin confirmar;contador,itemdemo,reset y destructor son hitos distintos. E_ARROW Delete no limpia listaLink ni todos los emisores explícitamente;solicitar delete no corta todo Execute. Sin fallo ni reentrancia/runtime observados.
 
 CP-R53 CALLBACK-035/036,PORT-022: state prestado válido hasta seleccióncompleta,no hasta unload arbitrario;MOD_OK no imponePROCEED. Unregister solicitareset y cambia modo antes de finalizar escena;fallbackfilename/config no revierte side effects ni drena código. Sin fallo/runtime observados.
+
+CP-R54 PRES-112..114: switchoff conserva timer/ciclo/custompower y sonido se solicita segúnvariante;Delete no restaura escritor previo. Vientoefectivo es suavizado,no setter inmediato;riesgo condicionado de escriturasglobales múltiples,sin fallo observado.

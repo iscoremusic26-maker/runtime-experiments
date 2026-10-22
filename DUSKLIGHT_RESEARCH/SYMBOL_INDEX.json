@@ -10294,5 +10294,60 @@
     "evidence_ids": [
       "PORT-022"
     ]
+  },
+  {
+    "symbol": "daKytag02_Execute",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag02.cpp",
+      "line_start": 17,
+      "line_end": 82,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag02.cpp#L17-L82"
+    },
+    "signature": "static int daKytag02_Execute(kytag02_class*)",
+    "purpose": "Escribe viento global condicionado por switch/timer y variante.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "home.roomNo/switch;ejecución de actor permitida."
+    ],
+    "risks": [
+      "No owner/refcount de camposglobales ni restauración anterior."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-112",
+      "PRES-114"
+    ]
+  },
+  {
+    "symbol": "dKyw_wind_set",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo_wether.cpp",
+      "line_start": 1153,
+      "line_end": 1289,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo_wether.cpp#L1153-L1289"
+    },
+    "signature": "void dKyw_wind_set()",
+    "purpose": "Resuelve fuente de viento y actualiza influencia global por paso/suavizado.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado stage/room válido;KANKYOExecute o init llamador."
+    ],
+    "risks": [
+      "No promesa de mismo frame visual ni render/audio;otros escritores interfieren."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-113"
+    ]
   }
 ]

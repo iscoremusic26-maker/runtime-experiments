@@ -221,3 +221,7 @@ Padre remoto verificado c1cf24d56a4695b22695f2f9c483dddd1c8bf623. PLAYER-073..07
 ## CP-R53 — GameMode,selección PENDING,consumidor y fallback
 
 Padre remoto verificado 67d2e834790a8ec885a811159ac8c8ab96d80d9f. CALLBACK-035/036,PORT-022 (+3 STATIC_CROSSCHECKED),tres localizadores;0 fichas. CallbackOK→estado prestadoPENDING/PROCEED/RETURN→file-select inputnombre;modoactivo retirado solicita reset y fallbackvanilla,sin guardado ni rollback universal. Sin mod,build ni runtime; solo atlas.
+
+## CP-R54 — KYTAG02,viento global,suavizado y consumidor Kita
+
+Padre remoto verificado b63fc59d03aca7a8821277073d1cbd68e005286b. PRES-112..114 (+3 STATIC_CROSSCHECKED),dos localizadores;0 fichas. Switchhome→ciclo/override→wind_set→poses/sonidoKita→Delete parcial,sin transferencia de ownershipactor ni efecto audiovisual observado. Sin mod,build ni runtime; solo atlas.

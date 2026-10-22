@@ -48,3 +48,5 @@ CP-R51 Q-01/Q-02: CALLBACK-032..034 contrastan BUTTON UiService2.3,guard de pane
 CP-R52 Q-12: PLAYER-073..076 contrastan flecha enemiga normal→escudo madera→lista16→recuperaciónRAM/reset/delete. No reusar parámetros de daArrow ni afirmar daño/recompensa duradera;FIRE/BOMB,SPIN y resetglobal completos pendientes. Alternar Q-13.
 
 CP-R53 Q-01/Q-02/Q-13: CALLBACK-035/036,PORT-022 contrastan GameMode selecciónPENDING→consumer/nameinput y fallback/retirada. Quedan reentrada/cambio de modo durante selección,otros callbacks y resetfinal;no repetir scheduler o guardado. Alternar ambiente independiente.
+
+CP-R54 Q-11: PRES-112..114 contrastan KYTAG02/vientoefectivo/Kita y cleanup parcial;no slotpuntual ni drenajeaudio. Faltan vec_overrideownership,otrosescritores/capas/ordenreal;PRES-089 continúa abierto. Alternar audio/recursos.

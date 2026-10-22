@@ -1432,11 +1432,12 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "READ global: cadenas previas y CP-R47 parcial lifetime de KANKYO/global,gates/cleanup seleccionados; orden KYTAG08/MA11 y todas las rutas reload siguen pendientes.",
+    "scope": "READ parcial: cadenas previas y KYTAG02 switch→viento global→Kita/cleanupCP54;PRES089 y resto del ambiente abiertos.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_kytag02.h",
       "include/d/actor/d_a_kytag07.h",
       "include/d/actor/d_a_kytag08.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
@@ -1451,11 +1452,13 @@
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
       "src/d/actor/d_a_bg.cpp",
+      "src/d/actor/d_a_kytag02.cpp",
       "src/d/actor/d_a_kytag06.cpp",
       "src/d/actor/d_a_kytag07.cpp",
       "src/d/actor/d_a_kytag08.cpp",
       "src/d/actor/d_a_kytag11.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
+      "src/d/actor/d_a_obj_kita.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
@@ -1483,6 +1486,7 @@
       "Otros escritores del tiempo y comportamiento visual/audible runtime."
     ],
     "paths": [
+      "include/d/actor/d_a_kytag02.h",
       "include/d/actor/d_a_kytag07.h",
       "include/d/actor/d_a_kytag08.h",
       "include/d/actor/d_a_obj_lv3WaterB.h",
@@ -1497,11 +1501,13 @@
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
       "src/d/actor/d_a_bg.cpp",
+      "src/d/actor/d_a_kytag02.cpp",
       "src/d/actor/d_a_kytag06.cpp",
       "src/d/actor/d_a_kytag07.cpp",
       "src/d/actor/d_a_kytag08.cpp",
       "src/d/actor/d_a_kytag11.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
+      "src/d/actor/d_a_obj_kita.cpp",
       "src/d/actor/d_a_obj_lv3WaterB.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
@@ -1535,7 +1541,8 @@
       "runtime_and_lifecycle",
       "player_and_controls",
       "external_dependencies",
-      "memory_ownership"
+      "memory_ownership",
+      "flags_events_progression"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1565,7 +1572,10 @@
       "PRES-088",
       "PRES-089",
       "PRES-106",
-      "PRES-107"
+      "PRES-107",
+      "PRES-112",
+      "PRES-113",
+      "PRES-114"
     ]
   },
   {
