@@ -94,3 +94,5 @@ CP-R74 Q-10/Q-13: PRES-140..142 contrastan Gfxdraw→excepciónC++→colafallos�
 CP-R75 Q-11/Q-12: PLAYER-096..098 contrastan OnsenBG→timerLink→deltaLife→MeterRAM/cleanup. Assetsagua,otrosproductores y orden durante unload pendientes;no curaciónvisible o saveobservado. Alternar servicio/port.
 
 CP-R76 Q-01/Q-02/Q-13: CALLBACK-043..046 precisan TCPpoll/backpressure/close y wrapper;CALLBACK-045 endpointviewrawlocal esinferenciacondicionada. BackendACK/drain/userdatasampling sinfuente;no redreal. Alternar otra familia.
+
+CP-R77 Q-05/Q-08/Q-10: PRES-143..146 contrastan mountDVD→lectura en bloque→JAISeq/reciclaje. PRES-146 enqueue fallido sin rollback local es inferencia condicionada. Pendiente teardown global archive/lecturas y backend DVD; no repetir cache MemArchive CP25.

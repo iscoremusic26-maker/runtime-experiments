@@ -11856,5 +11856,61 @@
       "CALLBACK-044",
       "CALLBACK-045"
     ]
+  },
+  {
+    "symbol": "JAUDynamicSeqDataBlocks::loadDynamicSeq",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
+      "line_start": 124,
+      "line_end": 158,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp#L124-L158"
+    },
+    "signature": "bool JAUDynamicSeqDataBlocks::loadDynamicSeq(JAISoundID, bool, JAISeqDataUser*)",
+    "purpose": "Reservar bloque y solicitar lectura de secuencia",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Archive/soundInfo y bloque disponibles"
+    ],
+    "risks": [
+      "Descriptor copia punteros; retorno de enqueue descartado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-144",
+      "PRES-146"
+    ]
+  },
+  {
+    "symbol": "JKRDvdArchive::fetchResource(buffer)",
+    "kind": "method",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/JKernel/JKRDvdArchive.cpp",
+      "line_start": 188,
+      "line_end": 225,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRDvdArchive.cpp#L188-L225"
+    },
+    "signature": "void* JKRDvdArchive::fetchResource(void*, u32, SDIFileEntry*, u32*)",
+    "purpose": "Leer/copiar recurso DVD en buffer del consumidor",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Archive montado; buffer/capacidad válidos"
+    ],
+    "risks": [
+      "No prueba lectura íntegra ni datos listos para reproducir"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-144",
+      "PRES-145"
+    ]
   }
 ]

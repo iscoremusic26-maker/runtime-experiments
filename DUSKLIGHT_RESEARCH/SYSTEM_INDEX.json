@@ -691,24 +691,35 @@
   {
     "system_id": "resources_archives_overlays",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: rutasprevias yCP58 Texturefrontend prioridad/keepalive/reregistro;selectorAurora bloqueado,no renderingcertificado.",
+    "scope": "CROSSCHECKED selectiva: rutas anteriores y CP-R77 archive DVD→bloques de secuencia→JAISeq/reciclaje; fallo enqueue inferido y teardown global pendiente.",
     "reports": [
       "systems/resources_archives_overlays.md"
     ],
     "files_examined": [
       "include/d/d_resorce.h",
+      "include/m_Do/m_Do_dvd_thread.h",
+      "libs/JSystem/src/JAudio2/JAISeq.cpp",
+      "libs/JSystem/src/JAudio2/JASResArcLoader.cpp",
+      "libs/JSystem/src/JAudio2/JASTaskThread.cpp",
+      "libs/JSystem/src/JAudio2/JAUSectionHeap.cpp",
+      "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
       "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
       "libs/JSystem/src/JKernel/JKRArchivePub.cpp",
+      "libs/JSystem/src/JKernel/JKRDvdArchive.cpp",
+      "libs/JSystem/src/JKernel/JKRFileLoader.cpp",
       "libs/JSystem/src/JKernel/JKRMemArchive.cpp",
       "sdk/include/mods/svc/overlay.h",
       "sdk/include/mods/svc/resource.h",
       "sdk/include/mods/svc/texture.h",
+      "src/Z2AudioLib/Z2AudioMgr.cpp",
       "src/d/d_resorce.cpp",
       "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/overlay.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/resource.cpp",
-      "src/dusk/mods/svc/texture.cpp"
+      "src/dusk/mods/svc/texture.cpp",
+      "src/m_Do/m_Do_audio.cpp",
+      "src/m_Do/m_Do_dvd_thread.cpp"
     ],
     "pending": [
       "DVD scheduler completo",
@@ -717,25 +728,37 @@
     ],
     "paths": [
       "include/d/d_resorce.h",
+      "include/m_Do/m_Do_dvd_thread.h",
+      "libs/JSystem/src/JAudio2/JAISeq.cpp",
+      "libs/JSystem/src/JAudio2/JASResArcLoader.cpp",
+      "libs/JSystem/src/JAudio2/JASTaskThread.cpp",
+      "libs/JSystem/src/JAudio2/JAUSectionHeap.cpp",
+      "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
       "libs/JSystem/src/JKernel/JKRArchivePri.cpp",
       "libs/JSystem/src/JKernel/JKRArchivePub.cpp",
+      "libs/JSystem/src/JKernel/JKRDvdArchive.cpp",
+      "libs/JSystem/src/JKernel/JKRFileLoader.cpp",
       "libs/JSystem/src/JKernel/JKRMemArchive.cpp",
       "sdk/include/mods/svc/overlay.h",
       "sdk/include/mods/svc/resource.h",
       "sdk/include/mods/svc/texture.h",
+      "src/Z2AudioLib/Z2AudioMgr.cpp",
       "src/d/d_resorce.cpp",
       "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/overlay.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/resource.cpp",
-      "src/dusk/mods/svc/texture.cpp"
+      "src/dusk/mods/svc/texture.cpp",
+      "src/m_Do/m_Do_audio.cpp",
+      "src/m_Do/m_Do_dvd_thread.cpp"
     ],
     "dependencies": [
       "memory_ownership",
       "runtime_and_lifecycle",
       "models_animations_materials",
       "external_dependencies",
-      "sdk_services"
+      "sdk_services",
+      "audio_particles_effects"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -753,7 +776,11 @@
       "PRES-119",
       "PRES-120",
       "PRES-121",
-      "PRES-122"
+      "PRES-122",
+      "PRES-143",
+      "PRES-144",
+      "PRES-145",
+      "PRES-146"
     ]
   },
   {

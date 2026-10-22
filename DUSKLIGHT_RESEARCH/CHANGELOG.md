@@ -315,3 +315,7 @@ Padre remoto verificado 45d187d9380e4e93acfdeb613c05a3970b2ea6bd. PLAYER-096..09
 Padre remoto verificado f2338828f23a9ee443d84ebb41b6c8834a2975bd. CALLBACK-043/044/046 STATIC_CROSSCHECKED y045 STATIC_INFERRED:TCPfrontend→poll/send/close→retirada;helperendpoint sobre rawlocal delimitado sin crash/red. CERRADO SELECTIVO frontend;backend/drain pendientes. Dos slots oficiales y unhelper nuevo. Sin mod,build ni runtime; solo atlas.
 
 Corrección operativa: el commit f2338828f23a9ee443d84ebb41b6c8834a2975bd solo duplicó una línea de validación CP-R75 en CONTINUATION tras fallar una edición local por rango575 inexistente. No incorporó evidencias de CP-R76 y no cuenta como checkpoint técnico. Esta publicación integra CP-R76,elimina la repetición al actualizar handoff y añade guard previo de identidad checkpoint en la herramienta local de publicación. Sin reescritura de historia ni cambios fuera delatlas.
+
+## CP-R77 — Archive DVD: secuencias, buffers y fallo de enqueue
+
+Padre remoto verificado 5a6855cd4d299236ac289602ef7ac1a0ec793601. PRES-143..145 STATIC_CROSSCHECKED,146 STATIC_INFERRED: audio startup→MOUNT_DVD→lectura async en bloque→JAISeq/reciclaje; sync no garantiza archive y enqueue fallido sin rollback local delimitado. Dos localizadores internos; teardown global/backend pendientes. Sin mod,build ni runtime; solo atlas.

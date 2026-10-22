@@ -155,3 +155,5 @@ CP-R74 / PRES-141/142: copiafn/context fuera de mutex no posee lifetime;fallo di
 CP-R75 / PLAYER-097/098: setItemLifeCount acumula delta y sobrescribe type;no owner ni rollback porOnsen. HUDmoveLife aplicaRAM además devisualizar,sin persistencia confirmada.
 
 CP-R76 / CALLBACK-045 STATIC_INFERRED:mods::net::poll devuelve endpointview sobre arraylocalraw;con endpointnovacío vidaexpiraalretorno. No crash/redobservados. CloseOKno ACK ni cupofrontend liberado;helperSocket puede olvidarhandle auntraserror.
+
+CP-R77 / PRES-146 STATIC_INFERRED: fallo de sendCmdMsg deja bloque en loading1 en recorrido inspeccionado; no callback ni rollback local. No bloqueo observado. Sync de mountXArchive solo done, no archive válido. Destruir comando no desmonta archive ni drena lecturas.

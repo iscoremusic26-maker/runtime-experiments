@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R76",
+  "checkpoint": "CP-R77",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -22565,6 +22565,314 @@
           "line_start": 87,
           "line_end": 93,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/net.h#L87-L93"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-143",
+      "claim": "Audio Create solicita Z2SoundSeqs.arc MOUNT_DVD, espera sync=mIsDone y entrega archive a Z2AudioMgr/JAUSectionHeap. MountXexecute marca done incluso con archive NULL; destruir comando no desmonta archive. Nuevo frente a JKRMemArchive CP25: montaje DVD real y consumidor de secuencias.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_audio.cpp",
+          "line_start": 65,
+          "line_end": 98,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_audio.cpp#L65-L98"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_audio.cpp",
+          "line_start": 118,
+          "line_end": 135,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_audio.cpp#L118-L135"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_audio.cpp",
+          "line_start": 162,
+          "line_end": 173,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_audio.cpp#L162-L173"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/m_Do/m_Do_dvd_thread.h",
+          "line_start": 19,
+          "line_end": 29,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/m_Do/m_Do_dvd_thread.h#L19-L29"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_dvd_thread.cpp",
+          "line_start": 361,
+          "line_end": 422,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_dvd_thread.cpp#L361-L422"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRArchivePub.cpp",
+          "line_start": 52,
+          "line_end": 83,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRArchivePub.cpp#L52-L83"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/Z2AudioLib/Z2AudioMgr.cpp",
+          "line_start": 110,
+          "line_end": 119,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/Z2AudioLib/Z2AudioMgr.cpp#L110-L119"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSectionHeap.cpp",
+          "line_start": 423,
+          "line_end": 428,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSectionHeap.cpp#L423-L428"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_audio.cpp",
+          "line_start": 176,
+          "line_end": 183,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_audio.cpp#L176-L183"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-144",
+      "claim": "Secuencia dinámica usa bloques propios del section heap: ID→resourceID/tamaño→bloque libre→lectura async en región. JASTaskThread copia descriptor con punteros prestados; callback readResource devuelve tamaño y marca estado0/2; getSeqData expone base solo cargado y JAISeq distingue0fallo/1retry/2listo. DVD fetch con buffer no instala ese buffer como JKAR_DATA.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSectionHeap.cpp",
+          "line_start": 483,
+          "line_end": 524,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSectionHeap.cpp#L483-L524"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
+          "line_start": 77,
+          "line_end": 98,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp#L77-L98"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
+          "line_start": 114,
+          "line_end": 158,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp#L114-L158"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JASResArcLoader.cpp",
+          "line_start": 13,
+          "line_end": 21,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JASResArcLoader.cpp#L13-L21"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JASResArcLoader.cpp",
+          "line_start": 47,
+          "line_end": 76,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JASResArcLoader.cpp#L47-L76"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JASTaskThread.cpp",
+          "line_start": 27,
+          "line_end": 42,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JASTaskThread.cpp#L27-L42"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JASTaskThread.cpp",
+          "line_start": 58,
+          "line_end": 71,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JASTaskThread.cpp#L58-L71"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JASTaskThread.cpp",
+          "line_start": 90,
+          "line_end": 119,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JASTaskThread.cpp#L90-L119"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRArchivePub.cpp",
+          "line_start": 235,
+          "line_end": 245,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRArchivePub.cpp#L235-L245"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRDvdArchive.cpp",
+          "line_start": 188,
+          "line_end": 225,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRDvdArchive.cpp#L188-L225"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAISeq.cpp",
+          "line_start": 101,
+          "line_end": 137,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAISeq.cpp#L101-L137"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-145",
+      "claim": "Reciclaje loaded→free requiere usuario NULL o región no usada por JAISeqDataUser; loading no entra en ese recorrido. Copy-buffer, cache de archive y comando son propietarios distintos. JKRFileLoader unmount decrece count; destructor DVD libera cache/metadata/file. No se demuestra teardown global del audio ni drenaje de lecturas pendientes.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
+          "line_start": 161,
+          "line_end": 179,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp#L161-L179"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
+          "line_start": 211,
+          "line_end": 226,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp#L211-L226"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRDvdArchive.cpp",
+          "line_start": 27,
+          "line_end": 55,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRDvdArchive.cpp#L27-L55"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRDvdArchive.cpp",
+          "line_start": 148,
+          "line_end": 185,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRDvdArchive.cpp#L148-L185"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRArchivePub.cpp",
+          "line_start": 247,
+          "line_end": 276,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRArchivePub.cpp#L247-L276"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JKernel/JKRFileLoader.cpp",
+          "line_start": 26,
+          "line_end": 32,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JKernel/JKRFileLoader.cpp#L26-L32"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_audio.cpp",
+          "line_start": 162,
+          "line_end": 173,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_audio.cpp#L162-L173"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-146",
+      "claim": "Si loadResourceAsync/sendCmdMsg falla antes de encolar, loadDynamicSeq ignora retorno tras poner bloque en loading estado1 y retorna true. En recorrido inspeccionado no callback ni rollback local cambian ese1; nuevas consultas del ID devuelven retry mientras no intervenga otro mecanismo. Inferencia condicionada, no cuelgue/runtime observado.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
+          "line_start": 77,
+          "line_end": 98,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp#L77-L98"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
+          "line_start": 149,
+          "line_end": 158,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp#L149-L158"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp",
+          "line_start": 211,
+          "line_end": 226,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JAUSeqDataBlockMgr.cpp#L211-L226"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JASResArcLoader.cpp",
+          "line_start": 65,
+          "line_end": 76,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JASResArcLoader.cpp#L65-L76"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JASTaskThread.cpp",
+          "line_start": 27,
+          "line_end": 42,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JASTaskThread.cpp#L27-L42"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JAudio2/JASTaskThread.cpp",
+          "line_start": 58,
+          "line_end": 71,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JAudio2/JASTaskThread.cpp#L58-L71"
         }
       ],
       "limitations": [
