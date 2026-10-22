@@ -11773,5 +11773,88 @@
       "PLAYER-097",
       "PLAYER-098"
     ]
+  },
+  {
+    "symbol": "NetService::poll_event",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/net.h",
+      "line_start": 131,
+      "line_end": 136,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/net.h#L131-L136"
+    },
+    "signature": "ModResult (*poll_event)(ModContext*, NetEvent*)",
+    "purpose": "Consumir evento y snapshotprestado deTCP/UDP",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Servicio importado;struct_size/context válidos"
+    ],
+    "risks": [
+      "CLOSEDinvalida handle;payloadhasta siguiente poll/deactivate"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-017",
+      "CALLBACK-044"
+    ]
+  },
+  {
+    "symbol": "NetService::close",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/net.h",
+      "line_start": 140,
+      "line_end": 142,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/net.h#L140-L142"
+    },
+    "signature": "ModResult (*close)(ModContext*, NetHandle)",
+    "purpose": "Solicitar cierre sin retirar handle inmediatamente",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Handleowned vivo"
+    ],
+    "risks": [
+      "No ACKdepeer ni drenaje backend"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-046"
+    ]
+  },
+  {
+    "symbol": "mods::net::poll",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/net.hpp",
+      "line_start": 166,
+      "line_end": 187,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/net.hpp#L166-L187"
+    },
+    "signature": "bool mods::net::poll(Event&)",
+    "purpose": "Convertir eventoC a viewsSDK",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ContratoC y almacenamientoout válido"
+    ],
+    "risks": [
+      "Endpoint viewde rawlocal;sin runtime observado"
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "CALLBACK-044",
+      "CALLBACK-045"
+    ]
   }
 ]

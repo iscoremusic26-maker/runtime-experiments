@@ -153,3 +153,5 @@ CP-R73 / PLAYER-095 STATIC_INFERRED:GroundCross inválido deja mGroundYsin nueva
 CP-R74 / PRES-141/142: copiafn/context fuera de mutex no posee lifetime;fallo diferido no revierte efectosprevios ni asegura drenaje. IDs de fallos no incluyen generación;sin caso de reloadincorrecto observado o acreditado.
 
 CP-R75 / PLAYER-097/098: setItemLifeCount acumula delta y sobrescribe type;no owner ni rollback porOnsen. HUDmoveLife aplicaRAM además devisualizar,sin persistencia confirmada.
+
+CP-R76 / CALLBACK-045 STATIC_INFERRED:mods::net::poll devuelve endpointview sobre arraylocalraw;con endpointnovacío vidaexpiraalretorno. No crash/redobservados. CloseOKno ACK ni cupofrontend liberado;helperSocket puede olvidarhandle auntraserror.

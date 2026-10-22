@@ -92,3 +92,5 @@ CP-R73 Q-12: PLAYER-093..095 contrastan Lv4DigSand start/endLink→GroundCross�
 CP-R74 Q-10/Q-13: PRES-140..142 contrastan Gfxdraw→excepciónC++→colafallos→frameBegin/detach/fail_mod. Faltan backenddrain,ordenreload porID y efectosGPU;no repetir retirementbásico PRES-012. Alternar ambiente/gameplay.
 
 CP-R75 Q-11/Q-12: PLAYER-096..098 contrastan OnsenBG→timerLink→deltaLife→MeterRAM/cleanup. Assetsagua,otrosproductores y orden durante unload pendientes;no curaciónvisible o saveobservado. Alternar servicio/port.
+
+CP-R76 Q-01/Q-02/Q-13: CALLBACK-043..046 precisan TCPpoll/backpressure/close y wrapper;CALLBACK-045 endpointviewrawlocal esinferenciacondicionada. BackendACK/drain/userdatasampling sinfuente;no redreal. Alternar otra familia.

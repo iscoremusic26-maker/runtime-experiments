@@ -1952,7 +1952,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R72 picker FileService reserva/completion/detach;sin barrera universal delbackend.",
+    "scope": "CROSSCHECKED selectiva: rutasprevias y CP-R76 NetTCPpoll/send/close y helperviews;endpointhelper inferido,sin backendcertificado.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -1968,6 +1968,8 @@
       "sdk/include/mods/svc/interp.hpp",
       "sdk/include/mods/svc/item.h",
       "sdk/include/mods/svc/message.h",
+      "sdk/include/mods/svc/net.h",
+      "sdk/include/mods/svc/net.hpp",
       "sdk/include/mods/svc/save.h",
       "sdk/include/mods/svc/ui.h",
       "sdk/include/mods/svc/websocket.h",
@@ -1994,6 +1996,7 @@
       "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/interp.cpp",
       "src/dusk/mods/svc/item.cpp",
+      "src/dusk/mods/svc/net.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/save.cpp",
       "src/dusk/mods/svc/ui.cpp",
@@ -2021,6 +2024,8 @@
       "sdk/include/mods/svc/interp.hpp",
       "sdk/include/mods/svc/item.h",
       "sdk/include/mods/svc/message.h",
+      "sdk/include/mods/svc/net.h",
+      "sdk/include/mods/svc/net.hpp",
       "sdk/include/mods/svc/save.h",
       "sdk/include/mods/svc/ui.h",
       "sdk/include/mods/svc/websocket.h",
@@ -2047,6 +2052,7 @@
       "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/interp.cpp",
       "src/dusk/mods/svc/item.cpp",
+      "src/dusk/mods/svc/net.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/save.cpp",
       "src/dusk/mods/svc/ui.cpp",
@@ -2112,7 +2118,11 @@
       "CALLBACK-039",
       "CALLBACK-040",
       "CALLBACK-041",
-      "CALLBACK-042"
+      "CALLBACK-042",
+      "CALLBACK-043",
+      "CALLBACK-044",
+      "CALLBACK-045",
+      "CALLBACK-046"
     ]
   },
   {

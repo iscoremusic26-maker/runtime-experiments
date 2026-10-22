@@ -309,3 +309,9 @@ Padre remoto verificado 159bd4cf0fabf70dcf9cb4d4cbe4d7616e36261c. PRES-140..142 
 ## CP-R75 — Onsen: petición de vida y consumidor efectivo en Meter
 
 Padre remoto verificado 45d187d9380e4e93acfdeb613c05a3970b2ea6bd. PLAYER-096..098 STATIC_CROSSCHECKED:OnsenBG→Linkgates/timer→acumuladorLife→MeteraplicaRAM/limpia. CERRADO SELECTIVO;assetsagua y orden/otrosproductores pendientes,sin runtime/persistencia. Doslocalizadores nuevos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R76 — NetService TCP: polling, cierre y lifetime de endpoint
+
+Padre remoto verificado f2338828f23a9ee443d84ebb41b6c8834a2975bd. CALLBACK-043/044/046 STATIC_CROSSCHECKED y045 STATIC_INFERRED:TCPfrontend→poll/send/close→retirada;helperendpoint sobre rawlocal delimitado sin crash/red. CERRADO SELECTIVO frontend;backend/drain pendientes. Dos slots oficiales y unhelper nuevo. Sin mod,build ni runtime; solo atlas.
+
+Corrección operativa: el commit f2338828f23a9ee443d84ebb41b6c8834a2975bd solo duplicó una línea de validación CP-R75 en CONTINUATION tras fallar una edición local por rango575 inexistente. No incorporó evidencias de CP-R76 y no cuenta como checkpoint técnico. Esta publicación integra CP-R76,elimina la repetición al actualizar handoff y añade guard previo de identidad checkpoint en la herramienta local de publicación. Sin reescritura de historia ni cambios fuera delatlas.
