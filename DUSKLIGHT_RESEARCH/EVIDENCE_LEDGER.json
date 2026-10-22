@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R55",
+  "checkpoint": "CP-R56",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -18477,6 +18477,178 @@
           "line_start": 937,
           "line_end": 960,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_particle.cpp#L937-L960"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ARCH-017",
+      "claim": "CLI load-save solo publica slot1..3;sin pathDVD o forcePrelaunch limpia solicitud,con peticiónaceptable skips UI. Logo TARGET_PC sinreset/noopeningcut consume SaveRequested1..3 con Load/LoadSync hasta no0;no es rutaStageRequested0yaARCH008.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_main.cpp",
+          "line_start": 568,
+          "line_end": 569,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_main.cpp#L568-L569"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_main.cpp",
+          "line_start": 621,
+          "line_end": 626,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_main.cpp#L621-L626"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_main.cpp",
+          "line_start": 822,
+          "line_end": 834,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_main.cpp#L822-L834"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/globals.cpp",
+          "line_start": 11,
+          "line_end": 11,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/globals.cpp#L11-L11"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_logo.cpp",
+          "line_start": 785,
+          "line_end": 809,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_logo.cpp#L785-L809"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ARCH-018",
+      "claim": "LoadSync retorna0 si field1fc8==0 o mutexocupado,1 siREAD copiando buffer y pasandoREADY,2 en otroestadocard;loadvoid puede no encolar al fallarTryLock. Logo status1 copia save/avisa observersmodomientras status2 inicializaRAM sin esas notificaciones. No ACKdurable ni validaciónbinaria Windows.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_MemCard.cpp",
+          "line_start": 224,
+          "line_end": 231,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_MemCard.cpp#L224-L231"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_MemCard.cpp",
+          "line_start": 234,
+          "line_end": 264,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_MemCard.cpp#L234-L264"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_MemCard.cpp",
+          "line_start": 267,
+          "line_end": 289,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_MemCard.cpp#L267-L289"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_logo.cpp",
+          "line_start": 791,
+          "line_end": 816,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_logo.cpp#L791-L816"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_com_inf_game.cpp",
+          "line_start": 4170,
+          "line_end": 4172,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L4170-L4172"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ARCH-019",
+      "claim": "Tras statusno0 logo fija NoFile/DataNum y gameStart de retorno,sin exigir status1;pidePLAY sin comprobar ChangeReq,limpia estadoambiental/dungeon/restart,emiteLoadedSave y poneff. ff evita repetir request sin confirmarPLAY;gameStart prepara nextstage desde returnplace,no prueba escena cargada.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_logo.cpp",
+          "line_start": 800,
+          "line_end": 852,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_logo.cpp#L800-L852"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_com_inf_game.cpp",
+          "line_start": 2327,
+          "line_end": 2336,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L2327-L2336"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_scene_mng.cpp",
+          "line_start": 17,
+          "line_end": 27,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_scene_mng.cpp#L17-L27"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ARCH-020",
+      "claim": "SI LoadSync nunca sale0,do-whilelocal no tiene timeout/yield/errorpropagado;si retorna2,logLoadedSave aún aparece tras inicializarRAM;si ChangeReqrechaza,SaveRequestedff sigueconsumido y no reintenta en ese brazo. Alcanzabilidad/progreso del backend no certificados;no hang ni cargaexitosaobservados.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_logo.cpp",
+          "line_start": 791,
+          "line_end": 829,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_logo.cpp#L791-L829"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_MemCard.cpp",
+          "line_start": 224,
+          "line_end": 231,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_MemCard.cpp#L224-L231"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_MemCard.cpp",
+          "line_start": 267,
+          "line_end": 289,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_MemCard.cpp#L267-L289"
         }
       ],
       "limitations": [

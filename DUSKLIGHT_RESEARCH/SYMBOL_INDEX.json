@@ -7806,7 +7806,11 @@
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "ARCH-008"
+      "ARCH-008",
+      "ARCH-017",
+      "ARCH-018",
+      "ARCH-019",
+      "ARCH-020"
     ]
   },
   {
@@ -10404,6 +10408,62 @@
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
       "PRES-117"
+    ]
+  },
+  {
+    "symbol": "mDoMemCd_Ctrl_c::LoadSync",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_MemCard.cpp",
+      "line_start": 267,
+      "line_end": 289,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_MemCard.cpp#L267-L289"
+    },
+    "signature": "s32 mDoMemCd_Ctrl_c::LoadSync(void*, u32, u32)",
+    "purpose": "Consume resultado de restauración copiando mData solo en READ.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Buffer/tamaño/posiciónválidos;flagcompletitud y mutex."
+    ],
+    "risks": [
+      "0puedeindicarocupado;sin timeout/backenddurability garantizados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-018",
+      "ARCH-020"
+    ]
+  },
+  {
+    "symbol": "dusk::SaveRequested",
+    "kind": "global",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/globals.cpp",
+      "line_start": 11,
+      "line_end": 11,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/globals.cpp#L11-L11"
+    },
+    "signature": "uint8_t dusk::SaveRequested",
+    "purpose": "Slotdirecto0/1..3/ff usado por arranque/logo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "FrontendCLI/arranque;gatesreset/opening."
+    ],
+    "risks": [
+      "ffsignificaconsumido,no slotcargado ni PLAYaceptado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-017",
+      "ARCH-019"
     ]
   }
 ]

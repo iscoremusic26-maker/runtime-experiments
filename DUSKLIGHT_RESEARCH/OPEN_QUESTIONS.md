@@ -52,3 +52,5 @@ CP-R53 Q-01/Q-02/Q-13: CALLBACK-035/036,PORT-022 contrastan GameMode selecciónP
 CP-R54 Q-11: PRES-112..114 contrastan KYTAG02/vientoefectivo/Kita y cleanup parcial;no slotpuntual ni drenajeaudio. Faltan vec_overrideownership,otrosescritores/capas/ordenreal;PRES-089 continúa abierto. Alternar audio/recursos.
 
 CP-R55 Q-08/lifetime: PRES-115..118 contrastan traceuserWork y retirolevel,errorcapacidad128. Primera consulta de cierre del riesgo:caller calc3D frente a deletequeue/actorheapfree y guardsJPA;no inferir UAF de ausencia de NULLcheck. Alternar escenas.
+
+CP-R56 Q-09: ARCH-017..020 contrastan direct-save1..3/status/fallbackRAM y consumoff aun sin revisarChangeReq;espera0sin timeout es riesgo condicionado,no hangobservado. BackendCARD/progresoyrecuperaciónglobalpendientes;no repetirlogo. Alternar gameplay distinto deproyectiles.

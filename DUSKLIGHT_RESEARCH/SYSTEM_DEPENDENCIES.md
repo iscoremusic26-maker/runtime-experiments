@@ -125,3 +125,5 @@ CP-R53 CALLBACK-035/036,PORT-022: GameMode callback→state prestadofile-select�
 CP-R54 PRES-112..114: home room switch→KYTAG02 camposglobales→KANKYO wind_set/suavizado→Kita poses/audio. Sin registroowner ni rollbackprevio;no transferencia de puntero actor. [Ambiente](systems/environment_weather_time.md).
 
 CP-R55 PRES-115..118: vectoractor→emisor userWork→JPA trace→levelrenewal/cleanup. Callbackglobal no posee Vecactor;orden global de free/calc pendiente. [Efectos](systems/audio_particles_effects.md).
+
+CP-R56 ARCH-017..020: CLI→SaveRequested→LoadSync→RAMsave/init→gameStart→PLAYrequest/ff. Log y ff no son ACKescena ni sidecar. [Runtime](systems/runtime_and_lifecycle.md).

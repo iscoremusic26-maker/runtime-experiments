@@ -229,3 +229,7 @@ Padre remoto verificado b63fc59d03aca7a8821277073d1cbd68e005286b. PRES-112..114 
 ## CP-R55 — Partícula trace,userWork y retiro por renovación
 
 Padre remoto verificado d26a3cf70c34f8be9d75ce108ae52e430cbeed53. PRES-115..118:3 STATIC_CROSSCHECKED y1 STATIC_INFERRED,dos localizadores;0 fichas. E_ARROWvector→emisor→JPAtrace→levelcleanup;vida del callbackglobal≠vida del Vecactor. Ordenfree/calc pendiente,sin UAFobservado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R56 — Direct-save logo,statusCARD,fallbackRAM y consumo ff
+
+Padre remoto verificado 0868e14d4acb7ae15097cec0d95ee05f10da6c13. ARCH-017..020:3 STATIC_CROSSCHECKED y1 STATIC_INFERRED,doslocalizadoresmás ampliación del existente nextSceneChange;0 fichas. SolicitudCLI→LoadSync→RAMsave/init→requestPLAY/ff,log≠éxito,noIOreal. Sin mod,build ni runtime; solo atlas.

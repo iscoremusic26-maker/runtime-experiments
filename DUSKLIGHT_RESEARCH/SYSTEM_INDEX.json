@@ -679,7 +679,7 @@
   {
     "system_id": "runtime_and_lifecycle",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R53 GameMode selecciónPENDING/consumer/fallback;sin rollback global.",
+    "scope": "CROSSCHECKED selectiva: rutasprevias y CP-R56 logo save1..3/status/fallback/ff;sin recuperaciónglobal ni runtime.",
     "reports": [
       "systems/runtime_and_lifecycle.md"
     ],
@@ -709,6 +709,7 @@
       "src/d/d_timer.cpp",
       "src/dusk/game_mode.cpp",
       "src/dusk/game_mode.hpp",
+      "src/dusk/globals.cpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/depgraph.cpp",
       "src/dusk/mods/loader/loader.cpp",
@@ -736,7 +737,8 @@
       "src/f_pc/f_pc_stdcreate_req.cpp",
       "src/m_Do/m_Do_MemCard.cpp",
       "src/m_Do/m_Do_Reset.cpp",
-      "src/m_Do/m_Do_audio.cpp"
+      "src/m_Do/m_Do_audio.cpp",
+      "src/m_Do/m_Do_main.cpp"
     ],
     "dependencies": [
       "sdk_services",
@@ -789,7 +791,11 @@
       "ROOT-013",
       "CALLBACK-035",
       "CALLBACK-036",
-      "PORT-022"
+      "PORT-022",
+      "ARCH-017",
+      "ARCH-018",
+      "ARCH-019",
+      "ARCH-020"
     ],
     "files_examined": [
       "include/d/d_com_inf_game.h",
@@ -808,6 +814,7 @@
       "src/d/d_timer.cpp",
       "src/dusk/game_mode.cpp",
       "src/dusk/game_mode.hpp",
+      "src/dusk/globals.cpp",
       "src/dusk/mods/svc/game_mode.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/f_op/f_op_draw_tag.cpp",
@@ -822,7 +829,8 @@
       "src/f_pc/f_pc_node_req.cpp",
       "src/m_Do/m_Do_MemCard.cpp",
       "src/m_Do/m_Do_Reset.cpp",
-      "src/m_Do/m_Do_audio.cpp"
+      "src/m_Do/m_Do_audio.cpp",
+      "src/m_Do/m_Do_main.cpp"
     ]
   },
   {
