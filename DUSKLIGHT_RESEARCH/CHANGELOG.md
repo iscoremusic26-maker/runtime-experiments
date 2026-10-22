@@ -285,3 +285,7 @@ Padre remoto verificado f0e0e9a2f6b0fd67cd10f901e9cf9d31c7f9794a. ARCH-021/022/0
 ## CP-R69 — BLS/BLK: deformación por clusters y consumidor Demo00
 
 Padre remoto verificado 8f4468e7d76ee31ddac140e87508b455974e81ba. PRES-131..133 STATIC_CROSSCHECKED: recursos BLS/BLK→pesos de cluster→arrays/calc y retirada Demo00. PRES-134 STATIC_INFERRED delimita missingBLK sin fallo observado. CERRADO SELECTIVO;BVA sin consumidor3D localizado,no imposibilidad demostrada. Tres localizadores internos nuevos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R70 — DigPlace: señal de animación, switch previo y petición de ítem
+
+Padre remoto verificado f31388d5175f91e9dad6d65b523e3621ce8c0e35. PLAYER-089..091 STATIC_CROSSCHECKED y092 STATIC_INFERRED:LinkWolfDig→flagDigpl→switchhome→spawnrequest→delete,sin entrega o durabilidad acreditadas. Dos localizadores nuevos. CERRADO SELECTIVO tipo0 sinpath. Además precisión explícita de PRES-127/131 y ARCH-024:checks init0 no demuestran retorno0 ordinario de BRK/BLK. Sin mod,build ni runtime; solo atlas.

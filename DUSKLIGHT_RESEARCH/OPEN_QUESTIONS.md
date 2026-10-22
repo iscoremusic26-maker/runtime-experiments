@@ -80,3 +80,5 @@ CP-R67 Q-01/Q-02: CALLBACK-037..039 amplían SDK-005 con list síncrono→entry 
 CP-R68 Q-09/Q-12: ARCH-021..024 contrastan KYTAG04tipo4 switch→ordenencolada→timer/Linkgate→SCLS→PLAY y cleanup. No es weatherQ-11 pese a nombre. Assets WITHWARP_OPEN/SCLS,colocación y orden de eventualrollbackglobal pendientes;ARCH-023 es inferencia sin softlock observado. Alternar otrafamilia.
 
 CP-R69 Q-10: PRES-131..134 contrastan Demo00→BLS/BLK→pesos→arrays→calc y retirada. BVA3D no tuvo consumidor actor en búsqueda acotada;no se concluye imposibilidad. Assets,sharing,referenciasJStudio y ruta missingBLK(PRES-134) pendientes. Alternar gameplay.
+
+CP-R70 Q-12: PLAYER-089..092 contrastan Digpl tipo0/LinkWolfDig→señal→switchRAM→requestitem/delete;entrega y durabilidad pendientes. Precisión de PRES-127/131 y ARCH-024:guard init==0 no es fallo0 observado ni ruta normal demostrada. Alternar Q-11 en siguiente bloque.

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R69",
+  "checkpoint": "CP-R70",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -20333,11 +20333,20 @@
           "line_start": 186,
           "line_end": 207,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_brakeeff.cpp#L186-L207"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 118,
+          "line_end": 145,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L118-L145"
         }
       ],
       "limitations": [
         "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
-        "Sin build,juego,ABI/export ni hook Windows comprobados."
+        "Sin build,juego,ABI/export ni hook Windows comprobados.",
+        "CP-R70 precisa inicialización: los callers comprueban retorno0,pero initPlay retorna1 y los wrappers BRK/BLK citados retornan1 en la ruta ordinaria con argumentos válidos. Esa comprobación no prueba una ruta normal de fallo0;allocation,registroBG y copia de buffers tienen fallos separados. Assertions/UB no se equiparan a retorno0."
       ]
     },
     {
@@ -20879,7 +20888,8 @@
       ],
       "limitations": [
         "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
-        "Sin build,juego,ABI/export ni hook Windows comprobados."
+        "Sin build,juego,ABI/export ni hook Windows comprobados.",
+        "CP-R70 precisa inicialización: los callers comprueban retorno0,pero initPlay retorna1 y los wrappers BRK/BLK citados retornan1 en la ruta ordinaria con argumentos válidos. Esa comprobación no prueba una ruta normal de fallo0;allocation,registroBG y copia de buffers tienen fallos separados. Assertions/UB no se equiparan a retorno0."
       ]
     },
     {
@@ -20958,11 +20968,20 @@
           "line_start": 612,
           "line_end": 622,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphLoader/J3DAnmLoader.cpp#L612-L622"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_ext.cpp",
+          "line_start": 118,
+          "line_end": 145,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L118-L145"
         }
       ],
       "limitations": [
         "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
-        "Sin build,juego,ABI/export ni hook Windows comprobados."
+        "Sin build,juego,ABI/export ni hook Windows comprobados.",
+        "CP-R70 precisa inicialización: los callers comprueban retorno0,pero initPlay retorna1 y los wrappers BRK/BLK citados retornan1 en la ruta ordinaria con argumentos válidos. Esa comprobación no prueba una ruta normal de fallo0;allocation,registroBG y copia de buffers tienen fallos separados. Assertions/UB no se equiparan a retorno0."
       ]
     },
     {
@@ -21159,6 +21178,234 @@
           "line_start": 219,
           "line_end": 235,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/m_Do/m_Do_ext.h#L219-L235"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-089",
+      "claim": "DigPlace tipo0 sin path prepara parámetros/item y atención,retornaERROR si switchhome yaON;no cargaARC/modelo/BG. Wolf y flag0 habilitan atención/partículas según distancia/altura. Perfil currentlayer/list3/ENV;no prueba input seleccionado ni actorvisible.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_digplace.cpp",
+          "line_start": 13,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_digplace.cpp#L13-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_digplace.cpp",
+          "line_start": 137,
+          "line_end": 159,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_digplace.cpp#L137-L159"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_digplace.cpp",
+          "line_start": 172,
+          "line_end": 193,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_digplace.cpp#L172-L193"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_obj_digplace.h",
+          "line_start": 16,
+          "line_end": 37,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_obj_digplace.h#L16-L37"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/f_op/f_op_actor_mng.h",
+          "line_start": 448,
+          "line_end": 461,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_op/f_op_actor_mng.h#L448-L461"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-090",
+      "claim": "Caller real LinkWolfDig conserva ID/puntero del Digpl,copia tipo/selector y usa umbral51 para tipo0. checkPass y actor noNULL llama onDigFlg y limpia Keep;Keep.setActor reconsulta ID antes en Link. Señal de animación y solicitud de spawn posterior son fases distintas,no callbackSDK.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_wolf.inc",
+          "line_start": 9048,
+          "line_end": 9059,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_wolf.inc#L9048-L9059"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_wolf.inc",
+          "line_start": 9079,
+          "line_end": 9094,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_wolf.inc#L9079-L9094"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_wolf.inc",
+          "line_start": 9127,
+          "line_end": 9151,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_wolf.inc#L9127-L9151"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_wolf.inc",
+          "line_start": 9178,
+          "line_end": 9186,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_wolf.inc#L9178-L9186"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_wolf.inc",
+          "line_start": 9231,
+          "line_end": 9235,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_wolf.inc#L9231-L9235"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_obj_digplace.h",
+          "line_start": 32,
+          "line_end": 37,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_obj_digplace.h#L32-L37"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_player.cpp",
+          "line_start": 197,
+          "line_end": 220,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_player.cpp#L197-L220"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_player.h",
+          "line_start": 147,
+          "line_end": 157,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_player.h#L147-L157"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 17975,
+          "line_end": 17982,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L17975-L17982"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-091",
+      "claim": "Digpl consume mDigFlg1:enciende switchhome,elige item y tipo0 pide createItem con posiciónY-30,roomactual,ánguloLink y modo9;ignora retorno y solicita delete si sinpath/nottipo1. createItem NONE retornaERROR o despacha proceso. Switch pasa a memory/dungeon/zone según índice en RAM;Delete específico solo destructor vacío.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_digplace.cpp",
+          "line_start": 52,
+          "line_end": 93,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_digplace.cpp#L52-L93"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 1670,
+          "line_end": 1697,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L1670-L1697"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 1717,
+          "line_end": 1732,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L1717-L1732"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_com_inf_game.h",
+          "line_start": 3295,
+          "line_end": 3297,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_com_inf_game.h#L3295-L3297"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_save.cpp",
+          "line_start": 1573,
+          "line_end": 1595,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_save.cpp#L1573-L1595"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_save.h",
+          "line_start": 1000,
+          "line_end": 1003,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_save.h#L1000-L1003"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PLAYER-092",
+      "claim": "Si Digpl tipo0 sinpath solicita itemNONE o falla request de creación,ya escribió switch y de todosmodos pide delete;no compensación/ACK ni retrylocal. Reload con switchtodavíaON rechaza create. No implica entrega efectiva,perdidadurable o fallo runtime;depende índice/recarga/estado externo.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_digplace.cpp",
+          "line_start": 29,
+          "line_end": 31,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_digplace.cpp#L29-L31"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_obj_digplace.cpp",
+          "line_start": 62,
+          "line_end": 92,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_digplace.cpp#L62-L92"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor_mng.cpp",
+          "line_start": 1670,
+          "line_end": 1678,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L1670-L1678"
         }
       ],
       "limitations": [

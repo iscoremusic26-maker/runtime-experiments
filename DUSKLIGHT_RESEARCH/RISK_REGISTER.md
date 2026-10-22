@@ -141,3 +141,5 @@ CP-R67 / CALLBACK-039 STATIC_INFERRED:activefalse tras entrada produceERROR,tras
 CP-R68 / ARCH-023 STATIC_INFERRED: tipo4latchea tras enqueueevent;timer80ignora retornoSCLS y limpia contador sin reabrir5d1. SCLSNULL puede dejar ruta sin retrylocal,alcanzabilidadNOT_VERIFIED. SetterLinktienegateadicional ydrawtimeresdistinto;no teleport/escenacargadademostrados.
 
 CP-R69 / PRES-134 STATIC_INFERRED: missingBLK en createHeap puede dejar wrapper con mpAnmNULL y alcanzar entryFrame si heap/draw continúan antes de reinit. Assets/orden no probados,sin crash observado. setDeformData asigna puntero antes de copia fallible;no rollback total garantizado.
+
+CP-R70 / PLAYER-092 STATIC_INFERRED: señal de excavación puede consumir punto/switch aunque requestitem falle;sin compensación local,no pérdida durable observada. Se precisa que checks init==0 no certifican fallos reales de inicializadores BRK/BLK válidos.

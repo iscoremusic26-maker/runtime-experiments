@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R69",
+  "checkpoint": "CP-R70",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -18,18 +18,18 @@
   "sdk_module_candidates": 26,
   "sdk_public_function_slots_located": 209,
   "sdk_all_slots_semantically_audited": false,
-  "evidence_records": 438,
+  "evidence_records": 442,
   "evidence_levels": {
-    "STATIC_CROSSCHECKED": 354,
+    "STATIC_CROSSCHECKED": 357,
     "SOURCE_OBSERVED": 49,
     "DOC_CONTRACT": 5,
-    "STATIC_INFERRED": 28,
+    "STATIC_INFERRED": 29,
     "CI_OBSERVED": 2
   },
-  "symbol_records": 395,
+  "symbol_records": 397,
   "symbol_integration_classification": {
     "OFFICIAL_SERVICE": 77,
-    "POTENTIAL_REQUIRES_VERIFICATION": 313,
+    "POTENTIAL_REQUIRES_VERIFICATION": 315,
     "TYPED_HOOK": 5
   },
   "classification_counts_are_not_runtime_tests": true,
@@ -40,7 +40,7 @@
   "missing_submodules": 4,
   "session_timing": {
     "current_session_started_utc": null,
-    "measured_before_publish_utc": "2026-10-22T18:45:20.494040+00:00",
+    "measured_before_publish_utc": "2026-10-22T18:49:45.774829+00:00",
     "observed_session_elapsed_seconds": null,
     "effective_research_cpu_seconds": null,
     "paused_interval_excluded": true,
@@ -57,8 +57,8 @@
     "cited_upstream_files": 360
   },
   "net_added_this_session": {
-    "evidence": 26,
-    "symbols": 20,
+    "evidence": 30,
+    "symbols": 22,
     "new_documents": 0
   },
   "checkpoints_this_session": [
@@ -68,7 +68,8 @@
     "CP-R66",
     "CP-R67",
     "CP-R68",
-    "CP-R69"
+    "CP-R69",
+    "CP-R70"
   ],
   "atlas_files": 51
 }

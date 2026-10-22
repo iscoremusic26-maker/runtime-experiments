@@ -151,3 +151,5 @@ CP-R67 CALLBACK-037..039: FileService→Borealis ListResultlocal→FileEntry pre
 CP-R68 ARCH-021..024: switchroom→KYTAG04→orderqueueevent→timerexecute→selectorPLAYER/Linkgate→SCLS→nextstage→callerPLAY;drawtimer/partículas son faseaparte. Deleteemisores no rollbackglobal. [Runtime](systems/runtime_and_lifecycle.md).
 
 CP-R69 PRES-131..134: parámetros de demo→BLS/DeformData y BLK/pesos→deformer→arrays locales del modelo→calc antes de joints/skin. Heap del actor no posee por sí solo todo bloque de archive ni referencias externas de demo. [Modelos](systems/models_animations_materials.md).
+
+CP-R70 PLAYER-089..092: Link/animación→Keep/señalDigpl→switchhomeRAM→peticiónitem→delete. Ownership de actor/item y persistencia del switch son fronteras distintas. [Otros sistemas](systems/other_systems.md).

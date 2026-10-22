@@ -1344,13 +1344,14 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "READ parcial: cadenas previas y CP-R64 Ice_s contacto→inclinación/hundimiento→Mtx/cleanup;no rotura ni puzzles universales.",
+    "scope": "READ parcial: rutas previas y CP-R70 Digpl tipo0/LinkWolfDig→flag→switch/spawnrequest→delete;sin entrega/persistencia universal.",
     "reports": [
       "systems/other_systems.md"
     ],
     "files_examined": [
       "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_carry.h",
+      "include/d/actor/d_a_obj_digplace.h",
       "include/d/actor/d_a_obj_fireWood.h",
       "include/d/actor/d_a_obj_ice_s.h",
       "include/d/actor/d_a_obj_lv4Gate.h",
@@ -1366,9 +1367,11 @@
       "include/d/d_shop_system.h",
       "include/f_op/f_op_actor_mng.h",
       "include/f_pc/f_pc_name.h",
+      "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_boom.inc",
       "src/d/actor/d_a_alink_grab.inc",
       "src/d/actor/d_a_alink_kandelaar.inc",
+      "src/d/actor/d_a_alink_wolf.inc",
       "src/d/actor/d_a_boomerang.cpp",
       "src/d/actor/d_a_canoe.cpp",
       "src/d/actor/d_a_cow.cpp",
@@ -1382,6 +1385,7 @@
       "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_carry.cpp",
+      "src/d/actor/d_a_obj_digplace.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
       "src/d/actor/d_a_obj_ice_s.cpp",
       "src/d/actor/d_a_obj_lv4Gate.cpp",
@@ -1422,6 +1426,7 @@
     "paths": [
       "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_carry.h",
+      "include/d/actor/d_a_obj_digplace.h",
       "include/d/actor/d_a_obj_fireWood.h",
       "include/d/actor/d_a_obj_ice_s.h",
       "include/d/actor/d_a_obj_lv4Gate.h",
@@ -1437,9 +1442,11 @@
       "include/d/d_shop_system.h",
       "include/f_op/f_op_actor_mng.h",
       "include/f_pc/f_pc_name.h",
+      "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_boom.inc",
       "src/d/actor/d_a_alink_grab.inc",
       "src/d/actor/d_a_alink_kandelaar.inc",
+      "src/d/actor/d_a_alink_wolf.inc",
       "src/d/actor/d_a_boomerang.cpp",
       "src/d/actor/d_a_canoe.cpp",
       "src/d/actor/d_a_cow.cpp",
@@ -1453,6 +1460,7 @@
       "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_carry.cpp",
+      "src/d/actor/d_a_obj_digplace.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
       "src/d/actor/d_a_obj_ice_s.cpp",
       "src/d/actor/d_a_obj_lv4Gate.cpp",
@@ -1543,7 +1551,11 @@
       "PLAYER-085",
       "PLAYER-086",
       "PLAYER-087",
-      "PLAYER-088"
+      "PLAYER-088",
+      "PLAYER-089",
+      "PLAYER-090",
+      "PLAYER-091",
+      "PLAYER-092"
     ]
   },
   {

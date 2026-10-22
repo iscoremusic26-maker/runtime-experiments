@@ -11381,5 +11381,62 @@
       "PRES-132",
       "PRES-133"
     ]
+  },
+  {
+    "symbol": "daObjDigpl_c::create",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_digplace.cpp",
+      "line_start": 13,
+      "line_end": 46,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_digplace.cpp#L13-L46"
+    },
+    "signature": "int daObjDigpl_c::create()",
+    "purpose": "Preparar punto de excavación y gate de switch",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Parámetros y room válidos;tipo0 seleccionado en muestra"
+    ],
+    "risks": [
+      "Switch RAM no equivale a persistencia;sin ABIWindows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-089",
+      "PLAYER-092"
+    ]
+  },
+  {
+    "symbol": "daObjDigpl_c::execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_digplace.cpp",
+      "line_start": 59,
+      "line_end": 162,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_digplace.cpp#L59-L162"
+    },
+    "signature": "int daObjDigpl_c::execute()",
+    "purpose": "Consumir señal de Link,pedir item y retirada",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Playercontext válido;flag1 para consumo"
+    ],
+    "risks": [
+      "Escribe switch antes de resultado;ID de spawn ignorado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-090",
+      "PLAYER-091",
+      "PLAYER-092"
+    ]
   }
 ]
