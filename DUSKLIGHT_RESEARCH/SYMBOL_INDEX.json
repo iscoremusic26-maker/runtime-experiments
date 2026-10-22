@@ -9410,5 +9410,88 @@
     "evidence_ids": [
       "PLAYER-068"
     ]
+  },
+  {
+    "symbol": "dusk::iso::validate",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/iso_validate.cpp",
+      "line_start": 119,
+      "line_end": 124,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/iso_validate.cpp#L119-L124"
+    },
+    "signature": "ValidationError validate(const char* path, VerificationStatus& status, DiscInfo& info)",
+    "purpose": "Wrapper de verificación completa frente a inspect metadata,frontera Borealis.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Path válido en caller o string_view vacío; Progress del task vivo."
+    ],
+    "risks": [
+      "Sin backend/hash/IO/cancellatency probados; no llamar en esta investigación."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-018",
+      "PORT-019"
+    ]
+  },
+  {
+    "symbol": "dusk::ui::(anonymous namespace)::DiscVerificationTask",
+    "kind": "struct",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/ui/prelaunch.cpp",
+      "line_start": 98,
+      "line_end": 135,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/prelaunch.cpp#L98-L135"
+    },
+    "signature": "struct DiscVerificationTask",
+    "purpose": "Ownership de std::thread y publication release/acquire del resultado.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Objeto vive hasta join; UI espera done antes de leer resultado no atómico."
+    ],
+    "risks": [
+      "Cancel cooperativo depende Borealis; join puede esperar backend,sin plazo garantizado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-019",
+      "PORT-020"
+    ]
+  },
+  {
+    "symbol": "dusk::ui::refresh_configured_disc_state",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/ui/prelaunch.cpp",
+      "line_start": 627,
+      "line_end": 670,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/prelaunch.cpp#L627-L670"
+    },
+    "signature": "void refresh_configured_disc_state() noexcept",
+    "purpose": "Combina inspect metadata y verificación recordada para configuredCanLaunch.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Path configurado no vacío e inspectSuccess para permitir."
+    ],
+    "risks": [
+      "No verifyfull nuevo ni certificación de bytes actuales por bool."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-021"
+    ]
   }
 ]

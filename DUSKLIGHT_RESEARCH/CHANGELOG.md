@@ -173,3 +173,7 @@ Padre remoto verificado 5f20c5cb3a2ef46009de148686730c281160644a. PRES-094..096:
 ## CP-R41 — StartAndGoal,timer global y resultadoRAM
 
 Padre remoto verificado 7cdce813a49f86e140382486f1bc773f5fdbf9d9. PLAYER-065..068: cut→StartAndGoal→creación/inicio Timer→ready/running→meta→MsgTime formatter→DeleteRequest/cleanup. Tres símbolos potenciales; other_systems ampliado. Wrappers no propagan rechazo interno; resultadoRAM no es récord/premio/save; backend y assets no certificados. Neto de esta sesión frente a CP-R34:+28 evidencias,+21 símbolos,+1 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R42 — Diagnóstico disco,worker,cancelación y estado UI
+
+Padre remoto verificado af63c280ce7ed33066c1aa47944d07a533847145. PORT-018..021: selector→inspect/verify wrapper→worker release/acquire→resultado/modal/cancel→config/metadata y flags UI. Tres símbolos potenciales,nueva ficha port_disc_validation.md. Borealis/cancel latency/formato/hash real BLOCKED/NOT_VERIFIED; sin imágenes ni datos personales abiertos. Neto de esta sesión frente a CP-R34:+32 evidencias,+24 símbolos,+2 fichas. Solo atlas,sin build ni runtime.

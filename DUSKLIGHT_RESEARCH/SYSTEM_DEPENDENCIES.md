@@ -97,3 +97,5 @@ CP-R39 PRES-090..093: models_animations_materials→actors_ai_npcs(contexto user
 CP-R40 PRES-094..097: sdk_services(InterpService)→runtime_and_lifecycle(ventana)→cameras_rendering(sombra fallback). Registro por mod y muestras globales tienen identidades/vidas distintas; owner-key no es namespace aislado. SDK-013 aclara buffer copiado,no userdata retenida.
 
 CP-R41 PLAYER-065..068: other_systems(StartAndGoal)→cutscenes_dialogue(cut caller,MsgTime formatter)→hud_ui_text(Timer screen/msg)→runtime_and_lifecycle(borrado tras closeAnime). Global modo/puntero/tiempo no son propiedad de actor por requestID ni save durable.
+
+CP-R42 PORT-018..021: port_support(iso wrapper/worker)→hud_ui_text(prelaunch modal/progreso)→runtime_and_lifecycle(join/publication); external_dependencies Borealis aporta verify/inspect/Progress sin backend disponible. Config save nominal y metadata no equivalen a hash nuevo ni juego ejecutando.

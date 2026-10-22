@@ -85,3 +85,5 @@ CP-R39 PRES-090..093: mAnmRate interno sin clamp; tracks comparten frame y callb
 CP-R40 PRES-097 STATIC_INFERRED: keys globales compartidas entre conjuntos de mods; forget/detach de uno puede borrar muestra del otro. MOD_OK registro fuera de recording no prueba muestra; lookup copia/no garantiza out en fallo. Sin prioridad/refcount/rollback previo ni runtime certificado.
 
 CP-R41 PLAYER-066/067: TimerStart/End wrappers descartan retorno interno; true no acredita running/resultado actualizado. Meta copia RAM aun si End falla; DeleteRequest difiere a closeAnime. Modo compartido no da ownership por actor; sin bloqueo,récord ni runtime observados.
+
+CP-R42 PORT-018..021: cancelRequested no confirma Canceled; destructor/join espera retorno backend sin plazo certificado. Estado cachedUnknown tras inspectSuccess puede permitir UI; verifyUnknown nuevo toma error distinto. Misma ubicación no certifica bytes actuales; no fallo observado ni disco personal abierto.

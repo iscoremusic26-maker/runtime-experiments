@@ -1732,13 +1732,14 @@
   {
     "system_id": "port_support",
     "coverage": "READ",
-    "scope": "READ global: logros,speedrun,presencia previos y consola host fija→parser→rate→respuesta→lifecycle CP-R35; resto diagnóstico/backend pendiente.",
+    "scope": "READ global: logros/speedrun/presencia/consola previos y CP-R42 diagnóstico disco metadata→worker→resultado/modal/cancel→config nominal; backend/otras rutas pendientes.",
     "reports": [
       "systems/port_achievements.md",
       "systems/port_speedrun_livesplit.md",
       "SYSTEM_DEPENDENCIES.md",
       "systems/port_presence.md",
-      "systems/port_commands.md"
+      "systems/port_commands.md",
+      "systems/port_disc_validation.md"
     ],
     "paths": [
       "src/d/d_com_inf_game.cpp",
@@ -1759,6 +1760,7 @@
       "src/dusk/imgui/ImGuiConsole.cpp",
       "src/dusk/io.cpp",
       "src/dusk/iso_validate.cpp",
+      "src/dusk/iso_validate.hpp",
       "src/dusk/livesplit.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/settings.cpp",
@@ -1770,6 +1772,7 @@
       "src/dusk/ui/document.cpp",
       "src/dusk/ui/event.cpp",
       "src/dusk/ui/overlay.cpp",
+      "src/dusk/ui/prelaunch.cpp",
       "src/dusk/ui/settings.cpp",
       "src/dusk/ui/ui.cpp",
       "src/f_ap/f_ap_game.cpp",
@@ -1804,7 +1807,11 @@
       "PORT-014",
       "PORT-015",
       "PORT-016",
-      "PORT-017"
+      "PORT-017",
+      "PORT-018",
+      "PORT-019",
+      "PORT-020",
+      "PORT-021"
     ],
     "files_examined": [
       "src/d/d_com_inf_game.cpp",
@@ -1819,6 +1826,8 @@
       "src/dusk/game_clock.cpp",
       "src/dusk/game_clock.h",
       "src/dusk/io.cpp",
+      "src/dusk/iso_validate.cpp",
+      "src/dusk/iso_validate.hpp",
       "src/dusk/livesplit.cpp",
       "src/dusk/settings.cpp",
       "src/dusk/speedrun.cpp",
@@ -1829,6 +1838,7 @@
       "src/dusk/ui/document.cpp",
       "src/dusk/ui/event.cpp",
       "src/dusk/ui/overlay.cpp",
+      "src/dusk/ui/prelaunch.cpp",
       "src/dusk/ui/settings.cpp",
       "src/dusk/ui/ui.cpp",
       "src/m_Do/m_Do_main.cpp"
