@@ -161,3 +161,7 @@ Padre remoto verificado 4d85697544f5259267fec34a740671be91a4f048. PLAYER-061..06
 ## CP-R38 — KYTAG08,referencia ambiental y consumidor MA11
 
 Padre remoto verificado fa820dbe77c0e04aa02c007828d4a28c1a5a8b38. PRES-086..088 contrastan KYTAG08 carga→puntero ambiental único→radio/timer→MA11 matrix y flag jugador→cleanup de efectos; PRES-089 riesgo condicionado de referencia retenida. Tres símbolos potenciales; ficha ambiental ampliada,sin documento nuevo. Assets/backend y orden real de teardown NOT_VERIFIED. Neto de esta sesión frente a CP-R34:+16 evidencias,+12 símbolos,+1 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R39 — McaMorf2,mezcla A/B,morph temporal y callbacks joint
+
+Padre remoto verificado fefe1bbbb9c0a694875a11859c181d53caed6a03. PRES-090..093: Coach caballo→McaMorf2 A/B y morph temporal→joint callback→modelo/draw→cleanup/fallo de heap. Tres símbolos potenciales; ficha modelos ampliada,sin documento nuevo. Peso de mezcla,frame,sound BAS y pose son estados distintos; sin skin/LOD,assets o runtime acreditados. Neto de esta sesión frente a CP-R34:+20 evidencias,+15 símbolos,+1 fichas. Solo atlas,sin build ni runtime.

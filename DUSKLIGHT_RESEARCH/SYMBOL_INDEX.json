@@ -9154,5 +9154,90 @@
       "PRES-086",
       "PRES-089"
     ]
+  },
+  {
+    "symbol": "mDoExt_McaMorf2::setAnmRate",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 2165,
+      "line_end": 2185,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L2165-L2185"
+    },
+    "signature": "void mDoExt_McaMorf2::setAnmRate(f32 param_0)",
+    "purpose": "Peso de mezcla A/B y selección BAS por umbral,diferente de velocidad y morph temporal.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tracks/joints compatibles; sonido prestado si noNULL."
+    ],
+    "risks": [
+      "No clamp ni validación de assets; BAS no crossfade audio demostrado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-091",
+      "PRES-092"
+    ]
+  },
+  {
+    "symbol": "mDoExt_McaMorf2::calc",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 1997,
+      "line_end": 2036,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L1997-L2036"
+    },
+    "signature": "void mDoExt_McaMorf2::calc()",
+    "purpose": "Calculador por joint con mezcla lineal/quaternion y morph temporal.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "J3DMtxCalc joint/context y modelo válidos."
+    ],
+    "risks": [
+      "Escribe estado global J3D y buffers; no thread safety ni skin/LOD universal certificado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-090",
+      "PRES-091"
+    ]
+  },
+  {
+    "symbol": "jointHorseCallBack",
+    "kind": "function",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc_coach.cpp",
+      "line_start": 150,
+      "line_end": 161,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc_coach.cpp#L150-L161"
+    },
+    "signature": "static int jointHorseCallBack(J3DJoint* i_joint, int param_2)",
+    "purpose": "Callback de joint fase0 a actor Coach mediante modelo actual/userArea.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Modelo actual y actor vivo; llamada fase0."
+    ],
+    "risks": [
+      "Registrado en ModelData compartido,no token SDK; no retiro/restauración por mod probado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-090",
+      "PRES-092",
+      "PRES-093"
+    ]
   }
 ]

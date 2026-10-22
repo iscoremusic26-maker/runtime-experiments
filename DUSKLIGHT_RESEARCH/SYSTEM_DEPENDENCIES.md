@@ -91,3 +91,5 @@ CP-R36 PRES-082..085: hud_ui_text (dMw captura)→cameras_rendering (drawlist/Pa
 CP-R37 PLAYER-061..064: other_systems(tag/shop)→actors_ai_npcs(solicitud/actor display)→cutscenes_dialogue(event024)→flags_events_progression(save-switch RAM)→inventory_equipment(ItemService previo). Oculto,índice sold-out,requestID y venta/persistencia son estados distintos; tabla tags presta punteros,sin ownership de hijo por parent.
 
 CP-R38 PRES-086..089: environment_weather_time(KYTAG08)→models_animations_materials(MA11/TexMtx) y player_and_controls(FogFade); audio_particles_effects recibe radio/emisores/trigger. Kankyo presta puntero a actor; Delete de efectos no equivale a limpiar referencia del consumidor.
+
+CP-R39 PRES-090..093: models_animations_materials→actors_ai_npcs(contexto userArea),audio_particles_effects(BAS/sound prestado),memory_ownership(heap/ModelData/arrays) y runtime_and_lifecycle(fase exec/draw/cleanup). Callback joint y morph temporal no son callbacks SDK ni pesos de audio continuos.

@@ -470,17 +470,21 @@
   {
     "system_id": "models_animations_materials",
     "coverage": "READ",
-    "scope": "READ global; AutoMata y CP-R32 Sakuita/simple-model registro/listas/cleanup contrastados selectivamente,LOD/skin general pendientes.",
+    "scope": "READ global: recursos/J3D,AutoMata/simple-model previos y CP-R39 McaMorf2 A/B,morph temporal,callback joint y cleanup Coach; no formatos/skin/LOD completos.",
     "reports": [
       "systems/models_animations_materials.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_npc_coach.h",
       "include/d/actor/d_a_obj_sakuita.h",
       "include/d/d_simple_model.h",
       "include/global.h",
+      "include/m_Do/m_Do_ext.h",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
+      "src/d/actor/d_a_npc_coach.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_sakuita.cpp",
       "src/d/d_com_inf_game.cpp",
@@ -496,14 +500,17 @@
       "Todos los fallos de alloc/disposers,sharing simultáneo y orden GPU no auditados."
     ],
     "paths": [
+      "include/d/actor/d_a_npc_coach.h",
       "include/d/actor/d_a_obj_sakuita.h",
       "include/d/d_simple_model.h",
       "include/global.h",
       "include/m_Do/m_Do_ext.h",
       "libs/JSystem/src/J3DGraphAnimator/J3DAnimation.cpp",
+      "libs/JSystem/src/J3DGraphAnimator/J3DJoint.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
       "libs/JSystem/src/J3DGraphAnimator/J3DModel.cpp",
       "sdk/include/mods/svc/interp.h",
+      "src/d/actor/d_a_npc_coach.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
       "src/d/actor/d_a_obj_sakuita.cpp",
       "src/d/d_com_inf_game.cpp",
@@ -522,7 +529,8 @@
       "cameras_rendering",
       "runtime_and_lifecycle",
       "stages_rooms_layers",
-      "actors_ai_npcs"
+      "actors_ai_npcs",
+      "audio_particles_effects"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -537,7 +545,11 @@
       "PRES-078",
       "PRES-079",
       "PRES-080",
-      "PRES-081"
+      "PRES-081",
+      "PRES-090",
+      "PRES-091",
+      "PRES-092",
+      "PRES-093"
     ]
   },
   {

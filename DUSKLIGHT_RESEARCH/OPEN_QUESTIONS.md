@@ -20,3 +20,5 @@ Todas se refieren al SHA fijado. Se evita repetir lo ya respondido; cada pregunt
 | Q-14 · PARCIAL | Prioridad overlay del contrato/orden emitido y consumidor JKRMemArchive→cache dRes contrastados (PRES-065..067); retirar ganador no actualiza mRes vivo | Faltan selector Aurora exacto y coexistencia Windows; elegir política de otro mecanismo solo con hueco nuevo, sin repetir orden SDK-018. |
 
 Bloqueos que no impiden continuar: submódulos ausentes y falta de runtime Windows. Git/gh no fueron la vía operativa; el conector GitHub permite continuar documentación con HEAD comprobado y lease. No hay tarea programada ni promesa de trabajo desatendido.
+
+CP-R39 Q-10: PRES-090..093 contrastan McaMorf2/Coach A-B frente a morph temporal,callback joint/sonido/cleanup. No implica skin/LOD ni compatibilidad universal; faltan árbol asset,sharing y disposers ante fallo. Mantener pregunta parcial.

@@ -79,3 +79,5 @@ CP-R36 PRES-085 STATIC_INFERRED: con flag1,inserción2D rechazada y sin consumid
 CP-R37 PLAYER-061..064: tag conserva ID aun sin actor y no acredita respawn postfallo; hide no descarga recursos. Evento024 retorna1 tras marcar índice,sin prueba de cobro/switch/entrega. SaveSwitch es RAM; delete display solicitado no finalizado,tabla estática de tags presta pointers y cleanup global no auditado.
 
 CP-R38 PRES-089 STATIC_INFERRED: KYTAG08 publica fog_avoid_tag y Delete no lo limpia. Si consumidor MA11 sobrevive al actor,checkNULL no acredita lifetime; no UAF/crash ni alcanzabilidad observados. Puntero único se sobrescribe sin arbitraje local; sin garantía de coexistencia/rollback Windows.
+
+CP-R39 PRES-090..093: mAnmRate interno sin clamp; tracks comparten frame y callback cambia animación durante árbol,con assets compatibles como precondición. ModelData posee callback común,userArea actor por instancia. ERROR_EXIT nulifica,no acredita frees; heap/ARC/sound separados,sin leak ni Windows coexistencia observados.
