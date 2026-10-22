@@ -9800,5 +9800,60 @@
     "evidence_ids": [
       "CALLBACK-030"
     ]
+  },
+  {
+    "symbol": "dKy_Create",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 8270,
+      "line_end": 8290,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L8270-L8290"
+    },
+    "signature": "static int dKy_Create(void* i_this)",
+    "purpose": "Crea controlador de entorno que inicializa/cambia estado global,distinto de construir g_env_light.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Stage/proceso/perfil y servicios ambientales disponibles."
+    ],
+    "risks": [
+      "List1 no orden de teardown; returnCOMPLEATE no prueba todos los subrecursos ni niebla visible."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-106"
+    ]
+  },
+  {
+    "symbol": "dKy_Delete",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_kankyo.cpp",
+      "line_start": 8254,
+      "line_end": 8268,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_kankyo.cpp#L8254-L8268"
+    },
+    "signature": "static int dKy_Delete(sub_kankyo__class* i_this)",
+    "purpose": "Cleanup seleccionado de luces/audio/underwater heap sin destruir objeto global.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Invocado como subDelete del proceso ambiental."
+    ],
+    "risks": [
+      "Sin limpieza explícita fog_avoid_tag; alcanzabilidad de referencia retenida sigue condicionada."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-107",
+      "PRES-089"
+    ]
   }
 ]

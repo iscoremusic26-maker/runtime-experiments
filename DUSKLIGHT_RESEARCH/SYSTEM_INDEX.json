@@ -1361,7 +1361,7 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "READ global: cadenas ambientales previas y CP-R38 KYTAG08 puntero único→radio/timer→material MA11/jugador→cleanup parcial; sin cobertura universal clima ni runtime.",
+    "scope": "READ global: cadenas previas y CP-R47 parcial lifetime de KANKYO/global,gates/cleanup seleccionados; orden KYTAG08/MA11 y todas las rutas reload siguen pendientes.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
@@ -1397,8 +1397,11 @@
       "src/d/d_kyeff.cpp",
       "src/d/d_kyeff2.cpp",
       "src/d/d_particle.cpp",
+      "src/d/d_stage.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_op/f_op_kankyo.cpp",
+      "src/f_op/f_op_kankyo_mng.cpp",
       "src/f_op/f_op_overlap_mng.cpp",
       "src/f_pc/f_pc_base.cpp",
       "src/f_pc/f_pc_deletor.cpp",
@@ -1440,8 +1443,11 @@
       "src/d/d_kyeff.cpp",
       "src/d/d_kyeff2.cpp",
       "src/d/d_particle.cpp",
+      "src/d/d_stage.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_op/f_op_kankyo.cpp",
+      "src/f_op/f_op_kankyo_mng.cpp",
       "src/f_op/f_op_overlap_mng.cpp",
       "src/f_pc/f_pc_base.cpp",
       "src/f_pc/f_pc_deletor.cpp",
@@ -1457,7 +1463,8 @@
       "models_animations_materials",
       "runtime_and_lifecycle",
       "player_and_controls",
-      "external_dependencies"
+      "external_dependencies",
+      "memory_ownership"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1485,7 +1492,9 @@
       "PRES-086",
       "PRES-087",
       "PRES-088",
-      "PRES-089"
+      "PRES-089",
+      "PRES-106",
+      "PRES-107"
     ]
   },
   {

@@ -193,3 +193,7 @@ Padre remoto verificado 7cc9666e608e6a3f46c7ecbaeeb530018b9b6203. PRES-102..105:
 ## CP-R46 — WebSocket polling,views y cierre diferido
 
 Padre remoto verificado 328ca089c7efb02c07d5ffb91b624d2137393c39. CALLBACK-028..031: WebSocket connect→poll/OPEN→payload prestado→close/CLOSED→take_all. Pista frameBegin corregida: no callback de mod. Dos slots oficiales y helperSDK potencial nuevos; ficha ownership ampliada. Backend/drain/ACK/runtime NOT_VERIFIED,sin red; SDK-024 conserva evidencia previa. Neto de esta sesión frente a CP-R34:+47 evidencias,+35 símbolos,+2 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R47 — PARCIAL lifetime KANKYO,global y gates de cleanup
+
+Padre remoto verificado fa64df683686e0c15cb84fec7042b7d1d887b2b7. PRES-106/107: stage→proceso KANKYO→global compartido→gates execute/draw→cleanup seleccionado. Dos símbolos potenciales; limitación PRES-089 ampliada con trazabilidad. Checkpoint PARCIAL respecto a orden room unload; no UAF ni cleanup global garantizados,fuente disponible sin runtime. Neto de esta sesión frente a CP-R34:+49 evidencias,+37 símbolos,+2 fichas. Solo atlas,sin build ni runtime.

@@ -34,3 +34,5 @@ CP-R44 Q-08: PRES-098..101 contrastan BAS→frame/evento→handle→SoundStarter
 CP-R45 Q-10: PRES-102..105 contrastan skin explícito del candado,buffers/flags parciales,deform y packet consumidor. Falta asset real/fastpath completo,fallos de alloc/disposers,sharing y DX12; no promoción global de skin/LOD.
 
 CP-R46 Q-02/ownership: CALLBACK-028..031 extienden SDK-024 con polling WebSocket,views permod,OPEN publicado antes de send,close/CLOSED y retiro. No frameBegin/callbackdeusuario: pista anterior corregida,backend/drain/ACK pendientes,sin tráfico real.
+
+CP-R47 PARCIAL Q-11/PRES-089: PRES-106/107 separan KANKYO proceso de g_env_light global y gates/cleanup; sigue sin resolver secuencia room unload KYTAG08→MA11. Consultar room remove/consumidor real antes de elevar hipótesis; no UAF observado.
