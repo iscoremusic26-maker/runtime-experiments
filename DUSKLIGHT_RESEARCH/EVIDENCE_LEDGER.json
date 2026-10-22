@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R48",
+  "checkpoint": "CP-R49",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -15028,7 +15028,8 @@
       "limitations": [
         "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
         "Sin build,juego,ABI/export ni hook Windows comprobados.",
-        "CP-R47/PRES-106..107 contrasta que KANKYO proceso no es g_env_light global y Delete no limpia fog_avoid_tag explícitamente. No demuestra secuencia de room teardown ni acceso a memoria inválida; inferencia original sigue condicionada."
+        "CP-R47/PRES-106..107 contrasta que KANKYO proceso no es g_env_light global y Delete no limpia fog_avoid_tag explícitamente. No demuestra secuencia de room teardown ni acceso a memoria inválida; inferencia original sigue condicionada.",
+        "CP-R49/WORLD-041..042 localiza retiro room8/20 y conservación BG parcial;sin probar qué tag concreto es eliminado ni draw MA11 posterior. Orden y alcanzabilidad siguen abiertos."
       ]
     },
     {
@@ -17127,6 +17128,140 @@
           "line_start": 1223,
           "line_end": 1246,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_arrow.cpp#L1223-L1246"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "WORLD-041",
+      "claim": "dStage_RoomCheck→loadRoom marca0x0C en salas activas fuera del conjunto leído y devuelveFALSE antes de nuevas altas. objectSetCheck flag8 espera creaciones de capa,pide delete de todos los procesos,limpia room switches/items RAM y Execute puede pedir DeleteReq de escena sin comprobar resultado individual.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_stage.cpp",
+          "line_start": 2937,
+          "line_end": 2968,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L2937-L2968"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_stage.cpp",
+          "line_start": 307,
+          "line_end": 330,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L307-L330"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_room.cpp",
+          "line_start": 146,
+          "line_end": 165,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_room.cpp#L146-L165"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_room.cpp",
+          "line_start": 198,
+          "line_end": 205,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_room.cpp#L198-L205"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_room.cpp",
+          "line_start": 244,
+          "line_end": 288,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_room.cpp#L244-L288"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_manager.cpp",
+          "line_start": 44,
+          "line_end": 46,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_manager.cpp#L44-L46"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/f_pc/f_pc_manager.h",
+          "line_start": 82,
+          "line_end": 84,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/f_pc/f_pc_manager.h#L82-L84"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_layer_iter.cpp",
+          "line_start": 46,
+          "line_end": 51,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_layer_iter.cpp#L46-L51"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "WORLD-042",
+      "claim": "Retiro parcial flag20 excluye BG explícitamente y para otros actores exige condición NODRAW;callback devuelve0 aun tras pedir delete. NODRAW se fija por draw wrapper,no demuestra room lifetime. BG Delete ejecuta destructor con Release de fondos y limpieza room;ninguna de esas rutas seleccionadas acredita ordenKYTAG08/MA11 ni limpia fog_avoid_tag.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_room.cpp",
+          "line_start": 125,
+          "line_end": 144,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_room.cpp#L125-L144"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_s_room.cpp",
+          "line_start": 259,
+          "line_end": 262,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_room.cpp#L259-L262"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_op/f_op_actor.cpp",
+          "line_start": 248,
+          "line_end": 275,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor.cpp#L248-L275"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_bg.cpp",
+          "line_start": 254,
+          "line_end": 276,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_bg.cpp#L254-L276"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_bg.cpp",
+          "line_start": 500,
+          "line_end": 511,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_bg.cpp#L500-L511"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_pc/f_pc_node.cpp",
+          "line_start": 96,
+          "line_end": 104,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_node.cpp#L96-L104"
         }
       ],
       "limitations": [

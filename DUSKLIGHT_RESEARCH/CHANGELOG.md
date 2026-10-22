@@ -201,3 +201,7 @@ Padre remoto verificado fa64df683686e0c15cb84fec7042b7d1d887b2b7. PRES-106/107: 
 ## CP-R48 — Flecha tipo0,At/joint,adhesión y borrado diferido
 
 Padre remoto verificado 705264cd6bc3d142c4fde327e2fe5b9e2f9be861. PLAYER-069..072 (+4 STATIC_CROSSCHECKED),tres localizadores internos;0 fichas nuevas. Cadena seleccionada Link→flecha→colisión→adhesión joint→flag→solicitud/delete específico;HP y todas las variantes excluidos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R49 — PARCIAL retiro room8/20,solicitud y conservación BG
+
+Padre remoto verificado 60a6e417b81fe181573c626788b1826c15099585. WORLD-041/042 (+2 STATIC_CROSSCHECKED),dos localizadores;0 fichas. Nueva fuente real de solicitudes de retiro de room y filtros;PRES-089 recibe limitación trazable,sigue STATIC_INFERRED sin UAF ni cierre de orden. Sin mod,build ni runtime; solo atlas.

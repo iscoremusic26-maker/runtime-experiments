@@ -9937,5 +9937,60 @@
     "evidence_ids": [
       "PLAYER-071"
     ]
+  },
+  {
+    "symbol": "objectSetCheck",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_s_room.cpp",
+      "line_start": 198,
+      "line_end": 265,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_room.cpp#L198-L265"
+    },
+    "signature": "static bool objectSetCheck(room_of_scene_class*)",
+    "purpose": "Selecciona carga,retiro completo o retiro parcial por flags de sala.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Execute de room;estado1d4 y flags8/20."
+    ],
+    "risks": [
+      "No confirma completitud de borrados por retornar1."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-041",
+      "WORLD-042"
+    ]
+  },
+  {
+    "symbol": "objectDeleteJugge",
+    "kind": "function",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_s_room.cpp",
+      "line_start": 125,
+      "line_end": 144,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_s_room.cpp#L125-L144"
+    },
+    "signature": "static int objectDeleteJugge(void*, void*)",
+    "purpose": "Conserva BG y filtra actores por NODRAW antes de solicitar delete.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Iterador de layer de room en rama20."
+    ],
+    "risks": [
+      "NODRAW no certifica seguridad de referencias globales."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-042"
+    ]
   }
 ]

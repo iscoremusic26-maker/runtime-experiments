@@ -111,3 +111,5 @@ CP-R46 CALLBACK-028..031: sdk_services(WebSocket)→callback_ownership_and_cance
 CP-R47 PRES-106/107: environment_weather_time(controladorKANKYO)→runtime_and_lifecycle(gates/proceso) y memory_ownership(global distinto de proceso). Retirar drawtag controlador no prueba retiro del consumidorMA11 en fondo separado; PRES-089 sigue condicionado.
 
 CP-R48: cápsula At→callback flecha→ID/offset joint→matriz objetivo reconsultada→flag/cola delete. PLAYER-069..072; actor,modelo y colisionador tienen vidas distintas. [Combate](systems/combat_damage.md).
+
+CP-R49 WORLD-041/042: ground/RTBL→room flags8/20→iterador layer→delete requests→BG cleanup cuando se ejecuta. Flags y retorno del iterador no prueban drenaje;PRES-089 sigue parcial. [Salas](systems/stages_rooms_layers.md).

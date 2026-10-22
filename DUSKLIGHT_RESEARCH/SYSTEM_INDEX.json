@@ -912,7 +912,7 @@
   {
     "system_id": "stages_rooms_layers",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva; TGSC stride/tramo CRC/BE/adiciones CP-R22, ABI Windows pendiente. No auditoría integral de stage.",
+    "scope": "CROSSCHECKED selectiva: carga,TGSC y CP-R49 retiro room8/20→solicitudes/filtros;orden ambiental sigue parcial.",
     "reports": [
       "systems/stages_rooms_layers.md"
     ],
@@ -925,6 +925,7 @@
       "include/helpers/endian.h",
       "include/helpers/endian_ssystem.h",
       "sdk/include/mods/svc/stage.h",
+      "src/d/actor/d_a_bg.cpp",
       "src/d/d_bg_w_kcol.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_resorce.cpp",
@@ -934,7 +935,9 @@
       "src/dusk/mods/svc/stage.cpp",
       "src/dusk/utilities.cpp",
       "src/f_op/f_op_actor.cpp",
-      "src/f_pc/f_pc_manager.cpp"
+      "src/f_pc/f_pc_layer_iter.cpp",
+      "src/f_pc/f_pc_manager.cpp",
+      "src/f_pc/f_pc_node.cpp"
     ],
     "pending": [
       "room-reentry completo/objectSetCheck/MULT",
@@ -952,6 +955,7 @@
       "include/helpers/endian.h",
       "include/helpers/endian_ssystem.h",
       "sdk/include/mods/svc/stage.h",
+      "src/d/actor/d_a_bg.cpp",
       "src/d/d_bg_w_kcol.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_resorce.cpp",
@@ -961,14 +965,17 @@
       "src/dusk/mods/svc/stage.cpp",
       "src/dusk/utilities.cpp",
       "src/f_op/f_op_actor.cpp",
-      "src/f_pc/f_pc_manager.cpp"
+      "src/f_pc/f_pc_layer_iter.cpp",
+      "src/f_pc/f_pc_manager.cpp",
+      "src/f_pc/f_pc_node.cpp"
     ],
     "dependencies": [
       "resources_archives_overlays",
       "flags_events_progression",
       "runtime_and_lifecycle",
       "sdk_services",
-      "actors_ai_npcs"
+      "actors_ai_npcs",
+      "environment_weather_time"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -985,7 +992,9 @@
       "WORLD-033",
       "WORLD-038",
       "WORLD-039",
-      "WORLD-040"
+      "WORLD-040",
+      "WORLD-041",
+      "WORLD-042"
     ]
   },
   {

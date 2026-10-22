@@ -38,3 +38,5 @@ CP-R46 Q-02/ownership: CALLBACK-028..031 extienden SDK-024 con polling WebSocket
 CP-R47 PARCIAL Q-11/PRES-089: PRES-106/107 separan KANKYO proceso de g_env_light global y gates/cleanup; sigue sin resolver secuencia room unload KYTAG08→MA11. Consultar room remove/consumidor real antes de elevar hipótesis; no UAF observado.
 
 CP-R48 Q-12: PLAYER-069..072 contrastan flecha tipo0→At/joint→adhesión→flag/borrado; no certifican HP,objetivo asset ni proyectiles enemigos/agua/materiales/resto de variantes. Alternar Q-11 antes de otro proyectil.
+
+CP-R49 PARCIAL Q-11/PRES-089: WORLD-041/042 localizan retiro8 y20,BG excluido en parcial y gates de NODRAW. Siguiente consulta ambiental mínima: consumidor que fija20 para una sala concreta y su condición NODRAW de KYTAG08;requiere colocación/assets si se afirma alcanzabilidad. No repetir loadRoom ni KANKYOinit. Alternar otro dominio.

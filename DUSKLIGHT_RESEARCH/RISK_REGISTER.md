@@ -99,3 +99,5 @@ CP-R46 CALLBACK-029..031: copiar Event no copia payload; siguientepoll del mismo
 CP-R47 precisa PRES-089: KANKYODelete no destruye g_env_light ni limpia fog_avoid_tag explícitamente. Orden room/actor/fondo sigueNOT_VERIFIED; no se concluye UAF ni seguridad global de teardown. Listpriority no certifica orden de borrado.
 
 CP-R48 PLAYER-069..072: tipo alto,byte de estado,ID de objetivo e índice joint no son intercambiables; hit At no acredita daño HP. Flag93f precede solicitud/destructor y no drena partículas. Matrices/modelo objetivo prestados; sin fallo ni hook Windows observado.
+
+CP-R49 WORLD-041/042: clearRoomSwitch/Item se ejecutan después de pedir deletes,sin comprobar cada retorno;BG puede conservarse por rama20. No se declara seguridad de referencias globales ni UAF por ello. PRES-089 permanece condicionado;sin orden de destrucción probado por perfil/lista.
