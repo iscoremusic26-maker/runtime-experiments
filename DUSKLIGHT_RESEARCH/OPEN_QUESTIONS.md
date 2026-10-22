@@ -74,3 +74,5 @@ CP-R64 Q-12: PLAYER-085..087 contrastan Ice_s apoyo→latch/pose→MoveBG/modelo
 CP-R65 Q-13: PORT-026..028 extienden SDK-015 con ring2048→copy_since→LogsWindow/clear lógico. No callback de mod ni dispatcher nuevo;Q-01/Q-02 no se cierran. Sink Borealis,flush/errores y límites efectivos pendientes;no leer logs personales ni abrir backend ausente. Alternar modelos/recursos.
 
 CP-R66 Q-10: PRES-127..130 contrastan BRK→TevRegKey/materialIDs→slotsCReg/KReg→calc/retirada con Obj_Bef como consumidorfuente. Assets/colocación,sharing y cleanup parcial siguen pendientes;init1 no confirma entry,wrappervoid oculta ret2/1. Alternar dominio;no repetir BTP/BRK para sumar variantes.
+
+CP-R67 Q-01/Q-02: CALLBACK-037..039 amplían SDK-005 con list síncrono→entry prestado→checkactive→sentinel y consumidor C++copiado. No cancelhandle;sentinel puede omitirse por error y terminal no revalidaactive. Faltan backend/orden/lifetimeWindows;no repetir picker/stream como si ya se hubieran auditado. Alternar ambiente uotra familia.

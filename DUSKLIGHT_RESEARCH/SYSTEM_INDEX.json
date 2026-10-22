@@ -963,7 +963,9 @@
       "CALLBACK-029",
       "CALLBACK-030",
       "CALLBACK-031",
-      "PORT-026"
+      "PORT-026",
+      "CALLBACK-037",
+      "CALLBACK-038"
     ],
     "files_examined": [
       "sdk/include/mods/svc/interp.h",
@@ -1826,7 +1828,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: callbacks previos y CP-R51 Ui BUTTON,guard pane→Confirm→detach;no barrera universal.",
+    "scope": "CROSSCHECKED selectiva: dispatchers previos y CP-R67 FileService list síncrono/sentinel/copias;sin barrera universal.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -1834,6 +1836,8 @@
       "libs/JSystem/src/JMessage/control.cpp",
       "sdk/include/mods/svc/camera.h",
       "sdk/include/mods/svc/config.h",
+      "sdk/include/mods/svc/file.h",
+      "sdk/include/mods/svc/file.hpp",
       "sdk/include/mods/svc/host.h",
       "sdk/include/mods/svc/http.h",
       "sdk/include/mods/svc/interp.h",
@@ -1858,6 +1862,7 @@
       "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/camera.cpp",
       "src/dusk/mods/svc/config.cpp",
+      "src/dusk/mods/svc/file.cpp",
       "src/dusk/mods/svc/flow.cpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/dusk/mods/svc/host.cpp",
@@ -1884,6 +1889,8 @@
       "libs/JSystem/src/JMessage/processor.cpp",
       "sdk/include/mods/svc/camera.h",
       "sdk/include/mods/svc/config.h",
+      "sdk/include/mods/svc/file.h",
+      "sdk/include/mods/svc/file.hpp",
       "sdk/include/mods/svc/host.h",
       "sdk/include/mods/svc/http.h",
       "sdk/include/mods/svc/interp.h",
@@ -1908,6 +1915,7 @@
       "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/camera.cpp",
       "src/dusk/mods/svc/config.cpp",
+      "src/dusk/mods/svc/file.cpp",
       "src/dusk/mods/svc/flow.cpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/dusk/mods/svc/host.cpp",
@@ -1974,7 +1982,10 @@
       "CALLBACK-031",
       "CALLBACK-032",
       "CALLBACK-033",
-      "CALLBACK-034"
+      "CALLBACK-034",
+      "CALLBACK-037",
+      "CALLBACK-038",
+      "CALLBACK-039"
     ]
   },
   {

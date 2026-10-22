@@ -11153,5 +11153,90 @@
     "evidence_ids": [
       "PRES-130"
     ]
+  },
+  {
+    "symbol": "FileService::list",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/file.h",
+      "line_start": 108,
+      "line_end": 111,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L108-L111"
+    },
+    "signature": "ModResult (*list)(ModContext*, const char*, FileListFn, void*)",
+    "purpose": "Enumeración síncrona por callbacks prestados",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Game thread;location opaca/context/callback válidos"
+    ],
+    "risks": [
+      "Sentinel no garantizado ante error;sin cancel/unregisterhandle"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-005",
+      "CALLBACK-037",
+      "CALLBACK-038",
+      "CALLBACK-039"
+    ]
+  },
+  {
+    "symbol": "mods::file::list",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/file.hpp",
+      "line_start": 205,
+      "line_end": 223,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.hpp#L205-L223"
+    },
+    "signature": "ModResult mods::file::list(const std::string&, std::vector<Entry>&)",
+    "purpose": "Consumidor SDK que copia entradas a vector propio",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Servicio importado y vector vivo durante llamada"
+    ],
+    "risks": [
+      "ResultadoERROR no vacía copiasparciales;helper SDK no exporthost"
+    ],
+    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_ids": [
+      "CALLBACK-038"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::file_list",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/file.cpp",
+      "line_start": 485,
+      "line_end": 522,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L485-L522"
+    },
+    "signature": "ModResult file_list(ModContext*, const char*, FileListFn, void*)",
+    "purpose": "Dispatch síncrono con validación después de entry",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Contexto vivo;backendlist retornaresultado"
+    ],
+    "risks": [
+      "No revalidación terminal ni garantía unload"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-037",
+      "CALLBACK-039"
+    ]
   }
 ]

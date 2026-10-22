@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R66",
+  "checkpoint": "CP-R67",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -20550,6 +20550,127 @@
           "line_start": 102,
           "line_end": 119,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DMaterialAnm.cpp#L102-L119"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "CALLBACK-037",
+      "claim": "FileService list es síncrono en game thread por contrato;host valida args,obtiene ListResult local y llama callback por entrada con FileEntry/strings prestados,luego NULLsi termina. Status backend/error o excepción anterior aborta sin sentinel. No handle persistente ni frameBegin para list.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/file.h",
+          "line_start": 50,
+          "line_end": 71,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L50-L71"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/file.h",
+          "line_start": 108,
+          "line_end": 111,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L108-L111"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 55,
+          "line_end": 68,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L55-L68"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 485,
+          "line_end": 522,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L485-L522"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 669,
+          "line_end": 686,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L669-L686"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "CALLBACK-038",
+      "claim": "Consumidor C++ mods::file::list limpia vector,devuelveUNAVAILABLE si falta servicio y copia name/location/bool por callback;ignora sentinel. Host comprueba mod.active después de cada entry,retornaERROR si falso y catch de excepción llama fail_mod. Copias ya añadidas no se revierten por resultadoERROR;backendBorealis no observado.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/file.hpp",
+          "line_start": 199,
+          "line_end": 223,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.hpp#L199-L223"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 500,
+          "line_end": 521,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L500-L521"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/context.cpp",
+          "line_start": 21,
+          "line_end": 36,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/context.cpp#L21-L36"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 572,
+          "line_end": 575,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L572-L575"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "CALLBACK-039",
+      "claim": "Si callback terminal de FileService list desactiva lógicamente mod y retorna sin lanzar,host no revalida active tras sentinel y llegaMOD_OK;en entry ordinario activefalse produceERROR. No prueba unload simultáneo ni reentrancia segura;userdata/context/código deben vivir hasta retorno real de llamada.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/file.h",
+          "line_start": 56,
+          "line_end": 71,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L56-L71"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/file.cpp",
+          "line_start": 487,
+          "line_end": 521,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L487-L521"
         }
       ],
       "limitations": [

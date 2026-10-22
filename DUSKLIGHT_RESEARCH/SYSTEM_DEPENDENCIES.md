@@ -145,3 +145,5 @@ CP-R64 PLAYER-085..088: Acch→BG propietario/rider→Ice_s campos→Mtx modelo/
 CP-R65 PORT-026..028: LogService→contextID→bufferhost mutex/copias→LogsWindow/elementos y clear lógico;por separado report Borealis. Datos host propios,no callbacks retenidos. [Diagnóstico](systems/port_commands.md).
 
 CP-R66 PRES-127..130: bloqueBRK→TevRegKey prestado→IDs de material→slots CReg/KReg→MaterialAnmcalc→TevBlock;wrapper/FrameCtrl propio no posee bloque completo. DeleteARC/BG y retirotracks son fronteras distintas. [Modelos](systems/models_animations_materials.md).
+
+CP-R67 CALLBACK-037..039: FileService→Borealis ListResultlocal→FileEntry prestado→callback/sentinel;wrapperSDKcopia→vectorpropio. Sin registroretenido ni frameBeginlist;estadoactive y retorno terminal distintos. [Ownership](systems/callback_ownership_and_cancellation.md).

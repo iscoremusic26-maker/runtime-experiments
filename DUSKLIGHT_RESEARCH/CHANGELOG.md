@@ -273,3 +273,7 @@ Padre remoto verificado 815a418fbce69d1425716165df0fe4ee80f9c401. PORT-026..028 
 ## CP-R66 — BRK: registros de color TEV y lifetime del recurso
 
 Padre remoto verificado 5bd69e12b052cdaa51e165ea1b48f2bdf45e5c00. PRES-127..130 STATIC_CROSSCHECKED trazan BRK/TevRegKey→enlace nombres/slots→lectura CReg/KReg y cleanup explícito/ausente;Obj_Bef consumidor fuente sin colocación/runtime acreditados. Tres localizadores internos. CERRADO SELECTIVO;sharing,assets y cleanup parcial siguen abiertos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R67 — FileService list: llamadas síncronas y lifetime del sentinel
+
+Padre remoto verificado e4b1da9d4533ceb1bcc0553172f028ec7b2dca78. CALLBACK-037/038 STATIC_CROSSCHECKED y039 STATIC_INFERRED:ListResult→entradasprestadas→callback/checkactive→sentinel→copiasSDK y erroresparciales. Un slotoficial,dos localizadores/consumidores fuente. CERRADO SELECTIVO;backend/listorden/unloadWindows pendientes. Sin mod,build ni runtime; solo atlas.
