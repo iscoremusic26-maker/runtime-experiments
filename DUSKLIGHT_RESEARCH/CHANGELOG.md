@@ -137,3 +137,7 @@ Padre remoto verificado 74d7eecf7528867aa1fe43d47652a44f33e2b9bc. +5 evidencias 
 ## CP-R32 — Modelos simples: clave compartida,lista temporal y baja
 
 Padre remoto verificado 85e959b8b558fa7be6bf558699101d0003f7fa15. +4 evidencias PRES-078..081,+3 localizadores,+0 documentos. PRES-078..081 contrastan Sakuita→simple-model(ModelData+room)→lista raw→draw→remove/scene cleanup. Dos capacidades8/500,fallos sin abort actor y bajas sin ACK. dMdl_mng es distinto;sin LOD/skin ni render Windows probado. Sin mod/build/runtime; solo documentación.
+
+## CP-R33 — HttpService: finalización,datos prestados y cancelación
+
+Padre remoto verificado 0459f0a4b16097a950c1e4d3e84cc5a62622e41a. +5 evidencias CALLBACK-023..027 (4 contrastadas,1 inferencia),+3 símbolos (1 slot oficial,2 localizadores),+0 documentos. CALLBACK-023..027 contrastan Http request→task→ready handles→callback snapshot→erase/cancel/take_all y publicación local de descargas. Backend Borealis,destructor/join/atomic_replace/headers internos BLOCKED; sin request de red,ABI/runtime Windows ni integración Claude. Sin mod/build/runtime; solo atlas.

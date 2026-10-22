@@ -1223,7 +1223,12 @@
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "SDK-012"
+      "SDK-012",
+      "CALLBACK-023",
+      "CALLBACK-024",
+      "CALLBACK-025",
+      "CALLBACK-026",
+      "CALLBACK-027"
     ]
   },
   {
@@ -8638,6 +8643,95 @@
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
       "PRES-081"
+    ]
+  },
+  {
+    "symbol": "HttpService::cancel",
+    "kind": "service",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/http.h",
+      "line_start": 94,
+      "line_end": 95,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/http.h#L94-L95"
+    },
+    "signature": "ModResult (*cancel)(ModContext*, HttpRequestHandle)",
+    "purpose": "Solicita cancelación sin retirar handle ni prometer resultado",
+    "dependencies": [
+      "borealis::Task::cancel"
+    ],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto/handle del owner válidos"
+    ],
+    "risks": [
+      "MOD_OK no drena task/callback ni revierte archivo"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-025",
+      "CALLBACK-027"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::http_frame_begin",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/http.cpp",
+      "line_start": 215,
+      "line_end": 282,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/http.cpp#L215-L282"
+    },
+    "signature": "void http_frame_begin()",
+    "purpose": "Revalida handles listos y entrega snapshot prestado",
+    "dependencies": [
+      "SlotMap",
+      "guarded_callback",
+      "borealis::Task::try_take"
+    ],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Módulo disponible; tick game thread según contrato"
+    ],
+    "risks": [
+      "Sin ownership de userdata/DLL; task backend ausente"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-024",
+      "CALLBACK-027"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::publish_download",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/http.cpp",
+      "line_start": 169,
+      "line_end": 213,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/http.cpp#L169-L213"
+    },
+    "signature": "borealis::http::Result publish_download(borealis::http::Result, const std::filesystem::path&, const std::filesystem::path&) noexcept",
+    "purpose": "Publicación local y conversión de fallos a Io",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Task transporte sin error; paths validados"
+    ],
+    "risks": [
+      "Atomic_replace interno ausente; sin garantía de durabilidad/cleanup global"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-026"
     ]
   }
 ]

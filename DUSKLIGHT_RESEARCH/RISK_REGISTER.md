@@ -67,3 +67,5 @@ CP-R30 · R-36: HP letal,ACT_B2_DEAD,mDead,flags,reward encolado y destructor so
 CP-R31 · R-37: reset helper1 no confirma cola; next-stage se reactiva antes de request y audio/restart no se revierten. ReRequest puede redirigir request previo SOLO si sigue vivo,tipo2,mismo ID y creating_id−2; no revive objeto liberado. SaveSync0 no es ACK. ARCH-012..016; inferencias condicionadas,sin fallo runtime.
 
 CP-R32 · R-38: add fallido no aborta Sakuita; envío sin matching consume capacidad y remove wrapper no confirma baja. Punteros modelo prestados hasta draw,count de altas no es count de instancias,room/primer drawBG forman restricciones distintas. PRES-078..081; riesgo de lifetime condicionado,sin fallo runtime.
+
+CP-R33 · R-39: cancelOK conserva slot y no garantiza CANCELED; completing mantiene handle pero ya tomó resultado. Snapshot/userdata/código tienen vidas distintas; take_all no prueba worker drenado ni staging eliminado. CALLBACK-023..027; hipótesis reentrantes condicionadas,sin fallo runtime ni tráfico de prueba.

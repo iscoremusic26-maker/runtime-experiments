@@ -1390,7 +1390,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: Save/Host/Camera/Item/Message/Config y Window CP-R28; no garantía universal de cancelación.",
+    "scope": "CROSSCHECKED selectiva por servicio: previos y HttpService completion/cancel/detach CP-R33; no barrera universal de cancelación.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -1399,6 +1399,7 @@
       "sdk/include/mods/svc/camera.h",
       "sdk/include/mods/svc/config.h",
       "sdk/include/mods/svc/host.h",
+      "sdk/include/mods/svc/http.h",
       "sdk/include/mods/svc/item.h",
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/save.h",
@@ -1411,11 +1412,13 @@
       "src/dusk/config_var.hpp",
       "src/dusk/mods/item_checks.cpp",
       "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/camera.cpp",
       "src/dusk/mods/svc/config.cpp",
       "src/dusk/mods/svc/flow.cpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/dusk/mods/svc/host.cpp",
+      "src/dusk/mods/svc/http.cpp",
       "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/item.cpp",
       "src/dusk/mods/svc/registry.cpp",
@@ -1435,6 +1438,7 @@
       "sdk/include/mods/svc/camera.h",
       "sdk/include/mods/svc/config.h",
       "sdk/include/mods/svc/host.h",
+      "sdk/include/mods/svc/http.h",
       "sdk/include/mods/svc/item.h",
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/save.h",
@@ -1447,11 +1451,13 @@
       "src/dusk/config_var.hpp",
       "src/dusk/mods/item_checks.cpp",
       "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/camera.cpp",
       "src/dusk/mods/svc/config.cpp",
       "src/dusk/mods/svc/flow.cpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/dusk/mods/svc/host.cpp",
+      "src/dusk/mods/svc/http.cpp",
       "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/item.cpp",
       "src/dusk/mods/svc/registry.cpp",
@@ -1469,7 +1475,8 @@
       "cameras_rendering",
       "cutscenes_dialogue",
       "hud_ui_text",
-      "port_support"
+      "port_support",
+      "resources_archives_overlays"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1492,7 +1499,12 @@
       "CALLBACK-019",
       "CALLBACK-020",
       "CALLBACK-021",
-      "CALLBACK-022"
+      "CALLBACK-022",
+      "CALLBACK-023",
+      "CALLBACK-024",
+      "CALLBACK-025",
+      "CALLBACK-026",
+      "CALLBACK-027"
     ]
   },
   {

@@ -1,23 +1,21 @@
-# Continuidad — CP-R32
+# Continuidad — CP-R33
 
-Rama research/dusklight-203-dusk-atlas,repo iscoremusic26-maker/Mods-Duskligh. Solo DUSKLIGHT_RESEARCH. Upstream 40457c6adb381928e4b5fef6ed459ed291edd5e2,árbol e4b79b565b2842f711f7c9f2390f56ef11063157; Windows x64/DX12/GZ2E01 USA. Padre de este checkpoint:85e959b8b558fa7be6bf558699101d0003f7fa15; consultar ref remoto para su SHA propio.
+Rama research/dusklight-203-dusk-atlas,repo iscoremusic26-maker/Mods-Duskligh. Solo DUSKLIGHT_RESEARCH. Upstream 40457c6adb381928e4b5fef6ed459ed291edd5e2,árbol e4b79b565b2842f711f7c9f2390f56ef11063157; Windows x64/DX12/GZ2E01 USA. Padre verificado:0459f0a4b16097a950c1e4d3e84cc5a62622e41a; consultar ref remoto para SHA propio.
 
-PRES-078..081 contrastan Sakuita→simple-model(ModelData+room)→lista raw→draw→remove/scene cleanup. Dos capacidades8/500,fallos sin abort actor y bajas sin ACK. dMdl_mng es distinto;sin LOD/skin ni render Windows probado.
+CALLBACK-023..027 contrastan Http request→task→ready handles→callback snapshot→erase/cancel/take_all y publicación local de descargas. Backend Borealis,destructor/join/atomic_replace/headers internos BLOCKED; sin request de red,ABI/runtime Windows ni integración Claude.
 
-Baseline CP-R30 74d7eecf7528867aa1fe43d47652a44f33e2b9bc:296 evidencias,290 símbolos,22 fichas,49 archivos;2754 ocurrencias,1334 rangos únicos,250 archivos upstream. Actual:305 evidencias,297 símbolos,22 fichas,49 archivos. Neto sesión:+9 evidencias,+7 símbolos,+0 documentos. VALIDATION_REPORT contiene recálculo de citas. Checkpoints de esta ejecución:CP-R31, CP-R32; no sumar tiempos previos. Duración/CPU N/D.
+Baseline de esta reanudación CP-R32 0459f0a4b16097a950c1e4d3e84cc5a62622e41a:305 evidencias,297 símbolos,22 fichas,49 archivos;2881 ocurrencias,1392 rangos únicos,258 archivos upstream. Actual:310 evidencias,300 símbolos,22 fichas,49 archivos. Neto:+5 evidencias,+3 símbolos,+0 documentos. VALIDATION_REPORT recalcula citas; no contar modificados como nuevos. Checkpoints actuales:CP-R33; duración/CPU N/D,sin sumar pausas.
 
 ## Primera acción nueva
 
-CP-R33: alternar Q-01/Q-02 HttpService. Leer contrato/ficha/índices; seguir request completion→frameBegin callback→cancel/detach y lifetime del body/snapshot. Solo lectura estática,sin enviar requests ni probar red. Si ya cubierto,elegir dispatcher nuevo.
+CP-R34: alternar Q-12 a mecanismo ambiental de un actor gameplay distinto. Leer other_systems/actors e índices; localizar daObjFireWood y su cadena de encendido→colisión/fuego/luz→apagado/cleanup. Confirmar nombre/ruta antes de usar; no repetir KYTAG07 ni un servicio HTTP.
 
-Leer HEAD/AGENTS/SOURCE_PIN/preguntas y ficha/índices antes de fuente. No repetir R00..30 ni cadenas publicadas en esta ejecución. Mantener cobertura28:18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED; no elevar familias por muestras. Cuatro gitlinks ausentes y discrepancia Android siguen delimitados; ABI/export/hook/runtime Windows no certificados.
+Consultar HEAD/AGENTS/SOURCE_PIN/preguntas/ficha/índices antes de fuente. CP-R31 reset/opening y CP-R32 Sakuita ya publicados,no repetir. Cobertura28:18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED. Cuatro gitlinks ausentes y excepción Android siguen delimitados; ABI/export/hook/runtime Windows no certificados.
 
-## Validación y publicación
+## Operación y límites
 
-Rutas efímeras,comprobar existencia y consistencia:work/source/dusklight-2.0.3;work/atlas/DUSKLIGHT_RESEARCH. Comando usado:python work/atlas/DUSKLIGHT_RESEARCH/tools/validate_atlas.py work/source/dusklight-2.0.3. Lee fuente y escribe solo VALIDATION_REPORT en atlas. Comprueba JSON,IDs,relaciones,enlaces y rangos,no semántica exhaustiva/ABI/build/runtime. Baseline remoto y blobs principales verificados; no rehacer inventario/hash global.
+Rutas efímeras verificadas:work/source/dusklight-2.0.3;work/atlas/DUSKLIGHT_RESEARCH. Comando usado:python work/atlas/DUSKLIGHT_RESEARCH/tools/validate_atlas.py work/source/dusklight-2.0.3. Lee fuente,escribe solo VALIDATION_REPORT en atlas. Comprueba JSON,IDs,relaciones,enlaces y rangos,no semántica exhaustiva/ABI/build/runtime. Antes de publicar:validar,diff por rutas,HEAD/tree/padre frescos,expected_sha y force=false; verificar ref/commit/métricas/handoff remotos. Consultar compare(parent,HEAD) para lista exacta de archivos de cada CP; todos bajo DUSKLIGHT_RESEARCH.
 
-Antes de publicar:ref/tree/padre fresco,diff solo DUSKLIGHT_RESEARCH,lease expected_sha y force=false,verificar ref/commit/métricas/handoff. No subir INVENTORY_SUMMARY/tools/inventory.py locales divergentes del R00. Inventario,pin y siete erratas intactos.
+Excluir INVENTORY_SUMMARY/tools/inventory.py locales divergentes; inventario R00,pin y siete erratas intactos. Solo documentación; sin CI/PR/issues/tag/release/merge ni producción. No tráfico de prueba ni datos personales. NO MOD IMPLEMENTED / NO BUILD PERFORMED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED / NO CLAUDE INTEGRATION. Sin ejecución en segundo plano.
 
-NO MOD IMPLEMENTED / NO BUILD PERFORMED / NO GAME RUNTIME CLAIMED / NO PRODUCTION MODIFIED. Sin PR/issues/CI/tag/release/merge,fuente/SDK/assets/saves/configuración ni cuentas/conexiones de prueba. No hay ejecución en segundo plano.
-
-CP-R31 persistido/verificado:85e959b8b558fa7be6bf558699101d0003f7fa15,ARCH-012..016. CP-R32 usa ese padre; consultar ref para SHA propio. No repetir reset/opening ni esta cadena de modelos.
+CP-R33:validador exit0;310 evidencias,300 símbolos,2952 ocurrencias,1417 rangos únicos,258 archivos upstream;45 MD/JSON. Delta R32:+5/+3,+71 ocurrencias,+25 rangos,+0 archivos citados,+0 documentos. Rutas editadas bajo DUSKLIGHT_RESEARCH/:systems/callback_ownership_and_cancellation.md,EVIDENCE_LEDGER.json,SYMBOL_INDEX.json,SYSTEM_INDEX.json,SYSTEM_DEPENDENCIES.md,OPEN_QUESTIONS.md,RISK_REGISTER.md,RESEARCH_COVERAGE.md,RESEARCH_METRICS.json,VALIDATION_REPORT.json,README.md,CHANGELOG.md,CONTINUATION.md. Publicación se confirma leyendo ref/compare/métricas/handoff,ningún SHA autorreferente.
