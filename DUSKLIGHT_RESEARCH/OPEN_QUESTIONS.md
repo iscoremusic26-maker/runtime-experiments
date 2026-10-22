@@ -54,3 +54,5 @@ CP-R54 Q-11: PRES-112..114 contrastan KYTAG02/vientoefectivo/Kita y cleanup parc
 CP-R55 Q-08/lifetime: PRES-115..118 contrastan traceuserWork y retirolevel,errorcapacidad128. Primera consulta de cierre del riesgo:caller calc3D frente a deletequeue/actorheapfree y guardsJPA;no inferir UAF de ausencia de NULLcheck. Alternar escenas.
 
 CP-R56 Q-09: ARCH-017..020 contrastan direct-save1..3/status/fallbackRAM y consumoff aun sin revisarChangeReq;espera0sin timeout es riesgo condicionado,no hangobservado. BackendCARD/progresoyrecuperaciónglobalpendientes;no repetirlogo. Alternar gameplay distinto deproyectiles.
+
+CP-R57 Q-12: PLAYER-077..080 contrastan LV4Gate latched y wrapperMoveBG/corrección/cleanup. No todoscontactos/actores ni retorno0comorollback;assets/fallosparciales/reentranciayruntimependientes. Alternar recursos.

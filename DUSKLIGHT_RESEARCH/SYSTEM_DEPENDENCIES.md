@@ -127,3 +127,5 @@ CP-R54 PRES-112..114: home room switch→KYTAG02 camposglobales→KANKYO wind_se
 CP-R55 PRES-115..118: vectoractor→emisor userWork→JPA trace→levelrenewal/cleanup. Callbackglobal no posee Vecactor;orden global de free/calc pendiente. [Efectos](systems/audio_particles_effects.md).
 
 CP-R56 ARCH-017..020: CLI→SaveRequested→LoadSync→RAMsave/init→gameStart→PLAYrequest/ff. Log y ff no son ACKescena ni sidecar. [Runtime](systems/runtime_and_lifecycle.md).
+
+CP-R57 PLAYER-077..080: switch→GateEND→modelomatriz→MoveBG mBgMtx→CrrFunc→poscorregida;DeleteARC→ReleaseBG→heap. Punterosprestados/retornossonfronterasdistintas. [Puzzle](systems/other_systems.md).

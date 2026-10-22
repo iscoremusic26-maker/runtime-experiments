@@ -233,3 +233,7 @@ Padre remoto verificado d26a3cf70c34f8be9d75ce108ae52e430cbeed53. PRES-115..118:
 ## CP-R56 — Direct-save logo,statusCARD,fallbackRAM y consumo ff
 
 Padre remoto verificado 0868e14d4acb7ae15097cec0d95ee05f10da6c13. ARCH-017..020:3 STATIC_CROSSCHECKED y1 STATIC_INFERRED,doslocalizadoresmás ampliación del existente nextSceneChange;0 fichas. SolicitudCLI→LoadSync→RAMsave/init→requestPLAY/ff,log≠éxito,noIOreal. Sin mod,build ni runtime; solo atlas.
+
+## CP-R57 — Gate latched,Mtx** y wrapperMoveBG
+
+Padre remoto verificado 5985d5510dc665e1a6a70bb150a7a6ce70d0ec7a. PLAYER-077..080 (+4 STATIC_CROSSCHECKED),treslocalizadores;0 fichas. LV4Gate switch→END→matrizmodelo→BG/correccióngateada→retirada;ret0 no es abortowrapper yswitchnoinviertepose. Sin mod,build ni runtime; solo atlas.

@@ -37,3 +37,5 @@ Los punteros de `Acch` pertenecen al actor; la destrucción de su heap invalida 
 Relacionados: [jugador](player_and_controls.md), [combate](combat_damage.md), [stages/salas](stages_rooms_layers.md), [runtime](runtime_and_lifecycle.md).
 
 Cobertura: READ/CROSSCHECKED selectiva según SYSTEM_INDEX y los niveles de cada evidencia; ninguna ruta constituye prueba runtime Windows/DX12.
+
+CP-R57 PLAYER-077..080: [LV4Gate/MoveBG](other_systems.md),matrizdevuelta→mBgMtx→BGMove→correccióngateada;retvirtual no abortaactualización. Sin contactoreal ni ABI/runtime.

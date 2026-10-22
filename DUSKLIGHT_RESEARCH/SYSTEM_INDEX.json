@@ -1285,13 +1285,14 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "READ global: cadenas previas y CP-R41 StartAndGoal→timer global→ready/running→meta/tiempo de mensaje→borrado diferido; sin minijuego íntegro,récord ni recompensa.",
+    "scope": "READ parcial: cadenasprevias yCP57 gate latched→Mtx**→MoveBG/corrección/retirada;no todos puzzles.",
     "reports": [
       "systems/other_systems.md"
     ],
     "files_examined": [
       "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_fireWood.h",
+      "include/d/actor/d_a_obj_lv4Gate.h",
       "include/d/actor/d_a_obj_swpush.h",
       "include/d/actor/d_a_player.h",
       "include/d/actor/d_a_shop_item.h",
@@ -1316,6 +1317,7 @@
       "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
+      "src/d/actor/d_a_obj_lv4Gate.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
@@ -1326,6 +1328,7 @@
       "src/d/d_a_itembase_static.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
+      "src/d/d_bg_s_movebg_actor.cpp",
       "src/d/d_bg_w.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
@@ -1351,6 +1354,7 @@
     "paths": [
       "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_fireWood.h",
+      "include/d/actor/d_a_obj_lv4Gate.h",
       "include/d/actor/d_a_obj_swpush.h",
       "include/d/actor/d_a_player.h",
       "include/d/actor/d_a_shop_item.h",
@@ -1375,6 +1379,7 @@
       "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
+      "src/d/actor/d_a_obj_lv4Gate.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
@@ -1385,6 +1390,7 @@
       "src/d/d_a_itembase_static.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_acch.cpp",
+      "src/d/d_bg_s_movebg_actor.cpp",
       "src/d/d_bg_w.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
@@ -1447,7 +1453,11 @@
       "PLAYER-065",
       "PLAYER-066",
       "PLAYER-067",
-      "PLAYER-068"
+      "PLAYER-068",
+      "PLAYER-077",
+      "PLAYER-078",
+      "PLAYER-079",
+      "PLAYER-080"
     ]
   },
   {

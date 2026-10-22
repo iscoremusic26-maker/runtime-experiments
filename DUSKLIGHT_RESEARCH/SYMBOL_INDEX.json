@@ -10465,5 +10465,87 @@
       "ARCH-017",
       "ARCH-019"
     ]
+  },
+  {
+    "symbol": "daLv4Gate_c::modeMove",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_lv4Gate.cpp",
+      "line_start": 111,
+      "line_end": 124,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_lv4Gate.cpp#L111-L124"
+    },
+    "signature": "void daLv4Gate_c::modeMove()",
+    "purpose": "Aproxima desplazamiento a meta y entra estadofinal con audio/vibración.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "WAIT ya observó switchactivo."
+    ],
+    "risks": [
+      "No retorno a WAIT/cierre al apagar switch."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-077"
+    ]
+  },
+  {
+    "symbol": "dBgS_MoveBgActor::MoveBGExecute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_bg_s_movebg_actor.cpp",
+      "line_start": 138,
+      "line_end": 156,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_movebg_actor.cpp#L138-L156"
+    },
+    "signature": "int dBgS_MoveBgActor::MoveBGExecute()",
+    "purpose": "Consume Mtx** virtual,publica mBgMtx y mueve fondo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Modelo/matrizactor/BGvigentes."
+    ],
+    "risks": [
+      "RetornoExecute0 no evita copiar/mover."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-078",
+      "PLAYER-079"
+    ]
+  },
+  {
+    "symbol": "dBgS_MoveBgActor::MoveBGDelete",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_bg_s_movebg_actor.cpp",
+      "line_start": 126,
+      "line_end": 136,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s_movebg_actor.cpp#L126-L136"
+    },
+    "signature": "int dBgS_MoveBgActor::MoveBGDelete()",
+    "purpose": "InvocaDeleteespecífico y retira BGsiused.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Createparcial puede dejar mpBgWNULL."
+    ],
+    "risks": [
+      "Releaseerror no cambiaret;Delete0 aún puede liberarBG."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-080"
+    ]
   }
 ]

@@ -115,3 +115,5 @@ CP-R54 PRES-112..114: switchoff conserva timer/ciclo/custompower y sonido se sol
 CP-R55 PRES-118 STATIC_INFERRED: callbacktraceglobal puede usar Vecactor prestado;DeleteE_ARROW limpia field9ec,no demuestra retiro de binding mFireEMKeys0. Riesgo solo si freeactor precede calcage>0 con bindingvivo;orden/alias/alcanzabilidad pendientes,no UAFobservado.
 
 CP-R56 ARCH-020 STATIC_INFERRED: status2 y requestrechazada aún pueden producirLoadedSave/ff;siLoadSyncsiempre0,looplocalnoavanza. No se afirma fallo backend/hang ni save cargadoobservado;sinrollback/retrylocal probado.
+
+CP-R57 PLAYER-078..080: Execute0 no impidecopiamatriz/Move;Delete0 no impideRelease;Releaseerror no modificaret. Matriz/BG/ARCvidasdistintas,switchno revierteEND. Sin choque,fallo o hookWindowsobservados.
