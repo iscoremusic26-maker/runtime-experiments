@@ -161,3 +161,5 @@ CP-R72 CALLBACK-040..042: Filepicker→reserva global/sharedpending→backendcal
 CP-R73 PLAYER-093..095: Linkstart/end→actorarena→GroundCross/timer→posemodelo/BG→switchRAM/delete. Sin CrrFuncTypicalRotY en esta muestra;retirada ARC/BG distintas. [Otros](systems/other_systems.md).
 
 CP-R74 PRES-140..142: slotGfx→callbackrenderworker→WorkerFailure(ID/string)→frameBeginloader→retiradaGfx→fail_mod. Mutexcola y backend synchronize cubren fronteras distintas. [Render](systems/cameras_rendering.md).
+
+CP-R75 PLAYER-096..098: BGMóvil/agua→identidadOnsen→Linkgates/timer→deltaLifecompartido→Meter/SaveRAM. Retiraractor oBG no revierte delta yaemitido. [Jugador](systems/player_and_controls.md).

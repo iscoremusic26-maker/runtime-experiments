@@ -11718,5 +11718,60 @@
     "evidence_ids": [
       "PRES-142"
     ]
+  },
+  {
+    "symbol": "daAlink_c::getMoveBGActorName",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 3459,
+      "line_end": 3467,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L3459-L3467"
+    },
+    "signature": "s16 daAlink_c::getMoveBGActorName(cBgS_PolyInfo&, BOOL)",
+    "purpose": "Resolver identidad de owner deBG para consumidores",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "PolyInfo/registro/contexto válidos;forcecontrolaChkPolySafe"
+    ],
+    "risks": [
+      "No prueba geometry deasset ni pointerlifetimeWindows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-096"
+    ]
+  },
+  {
+    "symbol": "dMeter2_c::moveLife",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_meter2.cpp",
+      "line_start": 599,
+      "line_end": 643,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_meter2.cpp#L599-L643"
+    },
+    "signature": "void dMeter2_c::moveLife()",
+    "purpose": "Aplicar acumuladores devida y limpiar petición",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Meterexecute alcanza método;estadoRAMválido"
+    ],
+    "risks": [
+      "No persistencia;delta/typecompartidos,sinownerporproductor"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-097",
+      "PLAYER-098"
+    ]
   }
 ]

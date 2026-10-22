@@ -90,3 +90,5 @@ CP-R72 Q-01/Q-02/Q-14: CALLBACK-040..042 precisan picker global,sharedpending,re
 CP-R73 Q-12: PLAYER-093..095 contrastan Lv4DigSand start/endLink→GroundCross→timer/llegada→switch/Delete. Faltan interrupciones/placement y fallbackrelease sin suelo(P095inferido);no repetir DigPlace ni generalizar MoveBG. Alternar gráficos/servicios.
 
 CP-R74 Q-10/Q-13: PRES-140..142 contrastan Gfxdraw→excepciónC++→colafallos→frameBegin/detach/fail_mod. Faltan backenddrain,ordenreload porID y efectosGPU;no repetir retirementbásico PRES-012. Alternar ambiente/gameplay.
+
+CP-R75 Q-11/Q-12: PLAYER-096..098 contrastan OnsenBG→timerLink→deltaLife→MeterRAM/cleanup. Assetsagua,otrosproductores y orden durante unload pendientes;no curaciónvisible o saveobservado. Alternar servicio/port.

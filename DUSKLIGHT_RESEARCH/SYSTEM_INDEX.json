@@ -1230,12 +1230,15 @@
   {
     "system_id": "player_and_controls",
     "coverage": "CROSSCHECKED",
-    "scope": "Rutas seleccionadas; profundidad original STATIC_CROSSCHECKED_SELECTIVE; no auditoría integral del sistema.",
+    "scope": "CROSSCHECKED selectiva: muestras previas y CP-R75 BGOnsen→timerLink→deltaLife→MeterRAM/cleanup;sin curaciónruntime universal.",
     "reports": [
       "systems/player_and_controls.md"
     ],
     "files_examined": [
       "docs/modding.md",
+      "include/d/actor/d_a_obj_onsen.h",
+      "include/d/d_com_inf_game.h",
+      "include/d/d_save.h",
       "include/f_op/f_op_actor.h",
       "include/global.h",
       "libs/JSystem/src/JUtility/JUTGamePad.cpp",
@@ -1244,6 +1247,11 @@
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_damage.inc",
       "src/d/actor/d_a_alink_wolf.inc",
+      "src/d/actor/d_a_obj_onsen.cpp",
+      "src/d/d_bg_s.cpp",
+      "src/d/d_bg_s_movebg_actor.cpp",
+      "src/d/d_com_inf_game.cpp",
+      "src/d/d_meter2.cpp",
       "src/dusk/action_bindings.cpp",
       "src/dusk/action_bindings.h",
       "src/m_Do/m_Do_controller_pad.cpp"
@@ -1255,6 +1263,9 @@
     ],
     "paths": [
       "docs/modding.md",
+      "include/d/actor/d_a_obj_onsen.h",
+      "include/d/d_com_inf_game.h",
+      "include/d/d_save.h",
       "include/f_op/f_op_actor.h",
       "include/global.h",
       "libs/JSystem/src/JUtility/JUTGamePad.cpp",
@@ -1263,6 +1274,11 @@
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_damage.inc",
       "src/d/actor/d_a_alink_wolf.inc",
+      "src/d/actor/d_a_obj_onsen.cpp",
+      "src/d/d_bg_s.cpp",
+      "src/d/d_bg_s_movebg_actor.cpp",
+      "src/d/d_com_inf_game.cpp",
+      "src/d/d_meter2.cpp",
       "src/dusk/action_bindings.cpp",
       "src/dusk/action_bindings.h",
       "src/m_Do/m_Do_controller_pad.cpp"
@@ -1271,7 +1287,10 @@
       "actors_ai_npcs",
       "movement_physics_collision",
       "cameras_rendering",
-      "flags_events_progression"
+      "flags_events_progression",
+      "environment_weather_time",
+      "hud_ui_text",
+      "save_load"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1283,7 +1302,10 @@
       "PLAYER-006",
       "PLAYER-007",
       "PLAYER-008",
-      "PLAYER-034"
+      "PLAYER-034",
+      "PLAYER-096",
+      "PLAYER-097",
+      "PLAYER-098"
     ]
   },
   {

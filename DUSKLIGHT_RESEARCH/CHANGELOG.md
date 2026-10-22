@@ -305,3 +305,7 @@ Padre remoto verificado af0abdfb5feb8540cb8664c02cfb5d96e36c6a0b. PLAYER-093/094
 ## CP-R74 — Gfx: fallos del render worker y consumo diferido
 
 Padre remoto verificado 159bd4cf0fabf70dcf9cb4d4cbe4d7616e36261c. PRES-140..142 STATIC_CROSSCHECKED:registrodraw→trampoline→colafallos→frameBegin/retirada/fail_mod. CERRADO SELECTIVO frontend,sin GPU/backenddrain/reloadWindows observado. Unslotoficial ydoslocalizadores nuevos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R75 — Onsen: petición de vida y consumidor efectivo en Meter
+
+Padre remoto verificado 45d187d9380e4e93acfdeb613c05a3970b2ea6bd. PLAYER-096..098 STATIC_CROSSCHECKED:OnsenBG→Linkgates/timer→acumuladorLife→MeteraplicaRAM/limpia. CERRADO SELECTIVO;assetsagua y orden/otrosproductores pendientes,sin runtime/persistencia. Doslocalizadores nuevos. Sin mod,build ni runtime; solo atlas.
