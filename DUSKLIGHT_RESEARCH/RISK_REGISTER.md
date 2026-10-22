@@ -71,3 +71,5 @@ CP-R32 · R-38: add fallido no aborta Sakuita; envío sin matching consume capac
 CP-R33 · R-39: cancelOK conserva slot y no garantiza CANCELED; completing mantiene handle pero ya tomó resultado. Snapshot/userdata/código tienen vidas distintas; take_all no prueba worker drenado ni staging eliminado. CALLBACK-023..027; hipótesis reentrantes condicionadas,sin fallo runtime ni tráfico de prueba.
 
 CP-R34 · R-40: switch y latch FireWood divergen; Delete previo a timer0 no escribe progreso pendiente,255 no deja switch. Emisión visible y registro de luz pueden fallar sin cambiar lit; partículas dejan de renovarse pero retiro depende de evento/calc. PLAYER-057..060; inferencias condicionadas,sin fallo runtime.
+
+CP-R35 PORT-014..017: respuesta de consola no mide efecto/runtime; ocultar conserva estado y no revierte reloj global. Listeners UI retirados no prueban callback en curso drenado. Comandos host no son LogService ni API de registro; no certificado Windows/hook.

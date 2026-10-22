@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R34",
+  "checkpoint": "CP-R35",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -13,23 +13,23 @@
     "READ": 6,
     "INVENTARIED": 4
   },
-  "system_reports": 22,
+  "system_reports": 23,
   "sdk_public_c_service_contracts": 25,
   "sdk_module_candidates": 26,
   "sdk_public_function_slots_located": 209,
   "sdk_all_slots_semantically_audited": false,
-  "evidence_records": 314,
+  "evidence_records": 318,
   "evidence_levels": {
-    "STATIC_CROSSCHECKED": 242,
+    "STATIC_CROSSCHECKED": 246,
     "SOURCE_OBSERVED": 49,
     "DOC_CONTRACT": 5,
     "STATIC_INFERRED": 16,
     "CI_OBSERVED": 2
   },
-  "symbol_records": 303,
+  "symbol_records": 306,
   "symbol_integration_classification": {
     "OFFICIAL_SERVICE": 68,
-    "POTENTIAL_REQUIRES_VERIFICATION": 230,
+    "POTENTIAL_REQUIRES_VERIFICATION": 233,
     "TYPED_HOOK": 5
   },
   "classification_counts_are_not_runtime_tests": true,
@@ -40,26 +40,29 @@
   "missing_submodules": 4,
   "session_timing": {
     "current_session_started_utc": null,
-    "measured_before_publish_utc": "2026-10-22T00:57:55.491518+00:00",
+    "measured_before_publish_utc": "2026-10-22T01:13:04.810993+00:00",
     "observed_session_elapsed_seconds": null,
     "effective_research_cpu_seconds": null,
     "paused_interval_excluded": true,
-    "note": "Reanudación CP-R33; duración/CPU N/D,sin sumar pausas o sesiones previas."
+    "note": "Duración/CPU N/D; no sumar pausas ni sesiones anteriores."
   },
   "current_session_baseline": {
-    "commit": "0459f0a4b16097a950c1e4d3e84cc5a62622e41a",
-    "evidence": 305,
-    "symbols": 297,
-    "atlas_files": 49
+    "commit": "077d6a77036dd41c3f8a2d3870c6f61ff995f4bb",
+    "evidence": 314,
+    "symbols": 303,
+    "atlas_files": 49,
+    "system_reports": 22,
+    "range_occurrences": 3011,
+    "unique_ranges": 1446,
+    "cited_upstream_files": 262
   },
   "net_added_this_session": {
-    "evidence": 9,
-    "symbols": 6,
-    "new_documents": 0
+    "evidence": 4,
+    "symbols": 3,
+    "new_documents": 1
   },
   "checkpoints_this_session": [
-    "CP-R33",
-    "CP-R34"
+    "CP-R35"
   ],
-  "atlas_files": 49
+  "atlas_files": 50
 }

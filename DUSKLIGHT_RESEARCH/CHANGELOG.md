@@ -145,3 +145,7 @@ Padre remoto verificado 0459f0a4b16097a950c1e4d3e84cc5a62622e41a. +5 evidencias 
 ## CP-R34 — FireWood: contacto,latch,switch diferido y vida de efectos
 
 Padre remoto verificado f7f247b8e6ca9db4110424fbb470a5a2bed4a8a9. +4 evidencias PLAYER-057..060,+3 localizadores,+0 documentos. PLAYER-057..060 contrastan FireWood→contacto→lit/timer→switch y efectos→cleanup. Se descarta hipótesis de apagado por switch: relectura no cambia lit. Partículas se retiran por actividad/eventos,no Delete directo; sin efectos runtime ni propagación universal. Sin mod/build/runtime; solo atlas.
+
+## CP-R35 — Consola host fija,rate y ownership UI
+
+Padre remoto verificado 077d6a77036dd41c3f8a2d3870c6f61ff995f4bb. PORT-014..017: startup/atajo→gates→parser→rate→reloj→respuesta→lifetime de mensajes/listeners. Tres símbolos potenciales; nueva ficha systems/port_commands.md. Sin registro dinámico público acreditado; ocultar no revierte estado del reloj. Backend Aurora y ejecución efectiva NOT_VERIFIED. Neto de esta sesión frente a CP-R34:+4 evidencias,+3 símbolos,+1 fichas. Solo atlas,sin build ni runtime.

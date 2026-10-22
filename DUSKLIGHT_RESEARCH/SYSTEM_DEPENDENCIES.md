@@ -83,3 +83,5 @@ CP-R32: archive→ModelData prestado→modelo Sakuita(heap actor) y dummy(heap g
 CP-R33: HttpService→task owned/handle→registry frameBegin→ready handles/relookup→snapshot prestado/callback→erase; deactivating take_all distinto de cancel. Descarga incluye publicación local,con Task/atomic_replace Borealis sin garantía interna disponible. CALLBACK-023..027.
 
 CP-R34: Link collider tipo/material→FireWood Tg hit→lit/timer→switch home room y luz/partículas; emitterID renueva actividad→particle calc3D→retiro bajo event gate. PLAYER-057..060. Switch RAM,actor,luz,emitter y audio tienen vidas diferentes; sin apagado por switchOFF en actor vivo.
+
+CP-R35 PORT-014..017: port_support→hud_ui_text (evento/documento/mensajes)→runtime_and_lifecycle (ownership de consola y reloj). rate→Aurora time queda frontera external_dependencies,sin backend ni frecuencia comprobados. Comandos host fijos,distintos de SDK-015 LogService.

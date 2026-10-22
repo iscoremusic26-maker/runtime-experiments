@@ -8822,5 +8822,89 @@
     "evidence_ids": [
       "PLAYER-060"
     ]
+  },
+  {
+    "symbol": "dusk::runCommand",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/commands.cpp",
+      "line_start": 268,
+      "line_end": 286,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/commands.cpp#L268-L286"
+    },
+    "signature": "void runCommand(std::string_view cmdLine, CommandState& state, const CommandOutput& output)",
+    "purpose": "Dispatcher host fijo; consumidor rate y errores,estado propiedad del caller.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Caller console copia texto y pasa callback local."
+    ],
+    "risks": [
+      "No API pública de registro ni ejecución con permisos aislados demostrada."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-015",
+      "PORT-016"
+    ]
+  },
+  {
+    "symbol": "dusk::ui::CommandConsole::execute_from_input",
+    "kind": "method",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/ui/command_console.cpp",
+      "line_start": 174,
+      "line_end": 183,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/command_console.cpp#L174-L183"
+    },
+    "signature": "void CommandConsole::execute_from_input()",
+    "purpose": "Copia input,cierra input y consume respuestas como mensajes de UI.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "mInput no nulo; caller Keydown comprueba input activo."
+    ],
+    "risks": [
+      "Captura this; lifetime host y eventos,no equivalencia a SDK callback seguro."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-014",
+      "PORT-015",
+      "PORT-017"
+    ]
+  },
+  {
+    "symbol": "dusk::game_clock::set_sim_rate",
+    "kind": "function",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/game_clock.cpp",
+      "line_start": 63,
+      "line_end": 71,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/game_clock.cpp#L63-L71"
+    },
+    "signature": "void set_sim_rate(float hz)",
+    "purpose": "Clamp de tasa y reset de muestras/epoch del reloj host.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "rate exige entero positivo; maximumHz depende de Aurora."
+    ],
+    "risks": [
+      "Sin backend Aurora exacto no certifica Hz efectivo,ABI o rollback."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-016"
+    ]
   }
 ]
