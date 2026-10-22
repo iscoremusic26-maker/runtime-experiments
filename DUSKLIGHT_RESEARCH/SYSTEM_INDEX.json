@@ -666,7 +666,7 @@
   {
     "system_id": "runtime_and_lifecycle",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectivo: scheduler/escenas previos y CP-R43 diferencia lifecycle msg/actor,drawtag y cleanup específico; sin garantía global de teardown.",
+    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R53 GameMode selecciónPENDING/consumer/fallback;sin rollback global.",
     "reports": [
       "systems/runtime_and_lifecycle.md"
     ],
@@ -676,6 +676,7 @@
     ],
     "paths": [
       "include/d/d_com_inf_game.h",
+      "include/d/d_file_select.h",
       "include/d/d_s_play.h",
       "include/f_op/f_op_msg.h",
       "include/f_op/f_op_scene_mng.h",
@@ -687,16 +688,20 @@
       "sdk/include/mods/svc/game_mode.h",
       "sdk/include/mods/svc/host.h",
       "src/d/d_com_inf_game.cpp",
+      "src/d/d_file_select.cpp",
       "src/d/d_s_logo.cpp",
       "src/d/d_s_name.cpp",
       "src/d/d_s_play.cpp",
       "src/d/d_stage.cpp",
       "src/d/d_timer.cpp",
+      "src/dusk/game_mode.cpp",
+      "src/dusk/game_mode.hpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/depgraph.cpp",
       "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/loader/natives.cpp",
       "src/dusk/mods/svc/actor.cpp",
+      "src/dusk/mods/svc/game_mode.cpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/f_op/f_op_draw_tag.cpp",
@@ -729,7 +734,8 @@
       "stages_rooms_layers",
       "port_support",
       "save_load",
-      "audio_particles_effects"
+      "audio_particles_effects",
+      "callback_ownership_and_cancellation"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -767,20 +773,29 @@
       "ARCH-016",
       "ROOT-011",
       "ROOT-012",
-      "ROOT-013"
+      "ROOT-013",
+      "CALLBACK-035",
+      "CALLBACK-036",
+      "PORT-022"
     ],
     "files_examined": [
       "include/d/d_com_inf_game.h",
+      "include/d/d_file_select.h",
       "include/d/d_s_play.h",
       "include/f_op/f_op_msg.h",
       "include/m_Do/m_Do_MemCard.h",
       "include/m_Do/m_Do_Reset.h",
       "include/m_Do/m_Do_audio.h",
+      "sdk/include/mods/svc/game_mode.h",
       "src/d/d_com_inf_game.cpp",
+      "src/d/d_file_select.cpp",
       "src/d/d_s_logo.cpp",
       "src/d/d_s_play.cpp",
       "src/d/d_stage.cpp",
       "src/d/d_timer.cpp",
+      "src/dusk/game_mode.cpp",
+      "src/dusk/game_mode.hpp",
+      "src/dusk/mods/svc/game_mode.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/f_op/f_op_draw_tag.cpp",
       "src/f_op/f_op_msg.cpp",

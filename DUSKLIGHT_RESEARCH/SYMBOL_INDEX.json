@@ -10212,5 +10212,87 @@
       "PLAYER-075",
       "PLAYER-076"
     ]
+  },
+  {
+    "symbol": "GameMode::invokeOnNewSaveSelectFunction",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/game_mode.hpp",
+      "line_start": 70,
+      "line_end": 81,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/game_mode.hpp#L70-L81"
+    },
+    "signature": "bool dusk::gamemode::GameMode::invokeOnNewSaveSelectFunction(GameModeNewSaveState*) const",
+    "purpose": "Separa estado selección de éxito del callback.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado prestado de selección vigente."
+    ],
+    "risks": [
+      "PENDING puede sobrevivir retorno callback;no userdata/DLL ownership."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-035",
+      "CALLBACK-036"
+    ]
+  },
+  {
+    "symbol": "dFile_select_c::selectDataNameMove",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_file_select.cpp",
+      "line_start": 1364,
+      "line_end": 1405,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_file_select.cpp#L1364-L1405"
+    },
+    "signature": "void dFile_select_c::selectDataNameMove()",
+    "purpose": "Consume estadoNewSave y gates PC antes de inputnombre.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "TARGET_PC;rama file-select y animaciones listas."
+    ],
+    "risks": [
+      "Avanzar estado no escribe disco ni acredita próxima escena."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-036"
+    ]
+  },
+  {
+    "symbol": "GameModeManager::setCurrentGameMode",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/game_mode.cpp",
+      "line_start": 69,
+      "line_end": 98,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/game_mode.cpp#L69-L98"
+    },
+    "signature": "bool dusk::gamemode::GameModeManager::setCurrentGameMode(const GameModeId&)",
+    "purpose": "Selecciona modo/save_name y fallback vanilla por fallo activación.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "ID registrado;sameID retorna temprano."
+    ],
+    "risks": [
+      "No rollback de side effects arbitrarios ni drenaje de callbacks."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-022"
+    ]
   }
 ]

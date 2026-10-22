@@ -119,3 +119,5 @@ CP-R50 PRES-108..111: ARC BTP→wrapper/frameCtrl→descriptor material prestado
 CP-R51 CALLBACK-032..034: Ui descriptor→shared ModControlSpec→Button Confirm→guard pane/active→mod callback→SlotDetach/modDetached. Hostclosure no mantiene userdata/DLL;guard no drena llamada iniciada. [Callbacks](systems/callback_ownership_and_cancellation.md).
 
 CP-R52 PLAYER-073..076: E_RD request→E_ARROW→colisiónescudo→Link lista16/contador→flagreset→delete específico. IDs y offset prestados no son ownership;item solicitado/contador no garantizan recompensa durable. [Combate](systems/combat_damage.md).
+
+CP-R53 CALLBACK-035/036,PORT-022: GameMode callback→state prestadofile-select→gates/nameinput;modDeactivating→modo vanilla/reset solicitado. No saveACK ni rollback de callbacks. [Runtime](systems/runtime_and_lifecycle.md).
