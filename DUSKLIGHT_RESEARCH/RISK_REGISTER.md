@@ -145,3 +145,5 @@ CP-R69 / PRES-134 STATIC_INFERRED: missingBLK en createHeap puede dejar wrapper 
 CP-R70 / PLAYER-092 STATIC_INFERRED: señal de excavación puede consumir punto/switch aunque requestitem falle;sin compensación local,no pérdida durable observada. Se precisa que checks init==0 no certifican fallos reales de inicializadores BRK/BLK válidos.
 
 CP-R71 / PRES-139 STATIC_INFERRED: rail exige>=2puntos y geometría adecuada;sin validaciónlocal,no crash observado. Flag/pool compartidos carecen de ownerporrail y camino de sala es prestado;orden de descarga NOT_VERIFIED. No2000visibles ni audio/backend demostrado.
+
+CP-R72 / CALLBACK-040..042:soltar reserva host no asegura backendbusyfalse;sharedpending no posee owner/DLL ni drena callbacken ejecución. Payload es prestado y detach no vacía función pendiente delhelperSDK en los cuerpos citados. Sin fallo/unload observado.

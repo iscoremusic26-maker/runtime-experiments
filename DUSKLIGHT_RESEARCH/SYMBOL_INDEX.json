@@ -11520,5 +11520,63 @@
     "evidence_ids": [
       "PRES-137"
     ]
+  },
+  {
+    "symbol": "FileService::pick_file",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/file.h",
+      "line_start": 76,
+      "line_end": 80,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L76-L80"
+    },
+    "signature": "ModResult (*pick_file)(ModContext*, const FilePickOptions*, FilePickFn, void*)",
+    "purpose": "Solicitar selector global con completion prestada",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Servicio disponible;opciones/contexto válidos"
+    ],
+    "risks": [
+      "MOD_OK no selección;sin cancelhandle público"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-005",
+      "CALLBACK-040",
+      "CALLBACK-041",
+      "CALLBACK-042"
+    ]
+  },
+  {
+    "symbol": "dusk::mods::svc::invoke_pick",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/file.cpp",
+      "line_start": 87,
+      "line_end": 112,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/file.cpp#L87-L112"
+    },
+    "signature": "void invoke_pick(const std::shared_ptr<PendingPick>&, ModResult, const std::vector<std::string>&, const std::string&)",
+    "purpose": "Liberar reserva y notificar tras revalidación",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Objeto pending vivo;owneractivo antes delcallback"
+    ],
+    "risks": [
+      "sharedpending no posee mod/DLL;datos prestados"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-041",
+      "CALLBACK-042"
+    ]
   }
 ]

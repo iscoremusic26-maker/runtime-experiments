@@ -293,3 +293,7 @@ Padre remoto verificado f31388d5175f91e9dad6d65b523e3621ce8c0e35. PLAYER-089..09
 ## CP-R71 — KYTAG03: rail de olor y pool ambiental — PARCIAL
 
 Padre remoto verificado 1d8738d3d5a00505efd7776642b3129040705ef7. PRES-135..138 contrastan parámetros/rail→pool2000→update/draw/audio y emisor separado;PRES-139 condiciona cardinalidad/segmentos. PARCIAL en room/path lifetime y adquisición completa de olor;noUAF/crash/audio/renderobservados. Tres localizadores internos nuevos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R72 — FileService picker: reserva global y completion owned por separado
+
+Padre remoto verificado 5c4afb638bc347e6286b6163455cc04d8f5ea208. CALLBACK-040..042 STATIC_CROSSCHECKED:reserva global→completion/revalidación→copiasSDK y detach;CERRADO SELECTIVO frontend,sin backend/hilo nativo/drain certificado. Un slotoficial y unlocalizador nuevos. Sin mod,build ni runtime; solo atlas.

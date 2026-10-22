@@ -1,12 +1,12 @@
-# Cobertura real — CP-R71
+# Cobertura real — CP-R72
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **24 fichas de sistemas, 447 evidencias y 400 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **24 fichas de sistemas, 450 evidencias y 402 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 400 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 402 registros.
 
 ## Estado por área
 
@@ -188,3 +188,5 @@ CP-R69: BLS/BLK: deformación por clusters y consumidor Demo00. Cadena seleccion
 CP-R70: DigPlace: señal de animación, switch previo y petición de ítem. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
 
 CP-R71: KYTAG03: rail de olor y pool ambiental — PARCIAL. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
+
+CP-R72: FileService picker: reserva global y completion owned por separado. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.

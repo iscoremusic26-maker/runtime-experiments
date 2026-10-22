@@ -155,3 +155,5 @@ CP-R69 PRES-131..134: parámetros de demo→BLS/DeformData y BLK/pesos→deforme
 CP-R70 PLAYER-089..092: Link/animación→Keep/señalDigpl→switchhomeRAM→peticiónitem→delete. Ownership de actor/item y persistencia del switch son fronteras distintas. [Otros sistemas](systems/other_systems.md).
 
 CP-R71 PRES-135..139: parámetros/pathroom+olor→KYTAG03→copiasenpool ambiental→weather/update/draw;audioacumula valores de cámara/path,emisor84ED y handshakeLinkson ramaaparte. Limpieza global no pertenece exclusivamente altag. [Partículas](systems/audio_particles_effects.md).
+
+CP-R72 CALLBACK-040..042: Filepicker→reserva global/sharedpending→backendcallback uoverrideframeBegin→guardowner→callbackprestado→copiasSDK;modDetachednulifica compartido,no cancela backend demostrado. [Callbacks](systems/callback_ownership_and_cancellation.md).

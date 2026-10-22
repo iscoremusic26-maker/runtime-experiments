@@ -1911,7 +1911,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: dispatchers previos y CP-R67 FileService list síncrono/sentinel/copias;sin barrera universal.",
+    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R72 picker FileService reserva/completion/detach;sin barrera universal delbackend.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -2068,7 +2068,10 @@
       "CALLBACK-034",
       "CALLBACK-037",
       "CALLBACK-038",
-      "CALLBACK-039"
+      "CALLBACK-039",
+      "CALLBACK-040",
+      "CALLBACK-041",
+      "CALLBACK-042"
     ]
   },
   {
