@@ -783,7 +783,7 @@
   {
     "system_id": "sdk_services",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos y rutas seleccionadas del SDK o loader; no análisis completo del subsistema.",
+    "scope": "Contratos SDK seleccionados; CP-R40 InterpService→ventana/copias→consumidor sombra→forget/detach y claves globales,no auditoría completa ni callback de mod nuevo.",
     "reports": [
       "SDK_AND_SERVICES.md"
     ],
@@ -795,11 +795,24 @@
       "sdk/include/mods/svc/config.h",
       "sdk/include/mods/svc/file.h",
       "sdk/include/mods/svc/http.h",
+      "sdk/include/mods/svc/interp.h",
+      "sdk/include/mods/svc/interp.hpp",
       "sdk/include/mods/svc/log.h",
       "sdk/include/mods/svc/net.h",
-      "sdk/include/mods/svc/websocket.h"
+      "sdk/include/mods/svc/websocket.h",
+      "src/d/d_drawlist.cpp",
+      "src/dusk/interp/frame_interpolation.cpp",
+      "src/dusk/interp/lerp.h",
+      "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/svc/interp.cpp",
+      "src/dusk/mods/svc/registry.cpp",
+      "src/f_ap/f_ap_game.cpp"
     ],
-    "dependencies": [],
+    "dependencies": [
+      "models_animations_materials",
+      "cameras_rendering",
+      "runtime_and_lifecycle"
+    ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
       "HOOK-002",
@@ -808,7 +821,22 @@
       "SDK-012",
       "SDK-015",
       "SDK-017",
-      "SDK-024"
+      "SDK-024",
+      "PRES-094",
+      "PRES-095",
+      "PRES-096",
+      "PRES-097"
+    ],
+    "files_examined": [
+      "sdk/include/mods/svc/interp.h",
+      "sdk/include/mods/svc/interp.hpp",
+      "src/d/d_drawlist.cpp",
+      "src/dusk/interp/frame_interpolation.cpp",
+      "src/dusk/interp/lerp.h",
+      "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/svc/interp.cpp",
+      "src/dusk/mods/svc/registry.cpp",
+      "src/f_ap/f_ap_game.cpp"
     ]
   },
   {
@@ -1483,7 +1511,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva por servicio: previos y HttpService completion/cancel/detach CP-R33; no barrera universal de cancelación.",
+    "scope": "CROSSCHECKED selectiva por servicio: previos y CP-R40 ownership de claves/matrices sin callback InterpService; no barrera universal de retiro.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -1493,16 +1521,21 @@
       "sdk/include/mods/svc/config.h",
       "sdk/include/mods/svc/host.h",
       "sdk/include/mods/svc/http.h",
+      "sdk/include/mods/svc/interp.h",
+      "sdk/include/mods/svc/interp.hpp",
       "sdk/include/mods/svc/item.h",
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/save.h",
       "sdk/include/mods/svc/ui.h",
       "sdk/include/mods/svc/window.h",
       "src/d/actor/d_a_tbox.cpp",
+      "src/d/d_drawlist.cpp",
       "src/d/d_msg_object.cpp",
       "src/dusk/config.cpp",
       "src/dusk/config.hpp",
       "src/dusk/config_var.hpp",
+      "src/dusk/interp/frame_interpolation.cpp",
+      "src/dusk/interp/lerp.h",
       "src/dusk/mods/item_checks.cpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/loader.cpp",
@@ -1513,6 +1546,7 @@
       "src/dusk/mods/svc/host.cpp",
       "src/dusk/mods/svc/http.cpp",
       "src/dusk/mods/svc/internal.hpp",
+      "src/dusk/mods/svc/interp.cpp",
       "src/dusk/mods/svc/item.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/save.cpp",
@@ -1520,6 +1554,7 @@
       "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
       "src/dusk/ui/mod_window.cpp",
+      "src/f_ap/f_ap_game.cpp",
       "src/m_Do/m_Do_main.cpp"
     ],
     "pending": [
@@ -1532,16 +1567,21 @@
       "sdk/include/mods/svc/config.h",
       "sdk/include/mods/svc/host.h",
       "sdk/include/mods/svc/http.h",
+      "sdk/include/mods/svc/interp.h",
+      "sdk/include/mods/svc/interp.hpp",
       "sdk/include/mods/svc/item.h",
       "sdk/include/mods/svc/message.h",
       "sdk/include/mods/svc/save.h",
       "sdk/include/mods/svc/ui.h",
       "sdk/include/mods/svc/window.h",
       "src/d/actor/d_a_tbox.cpp",
+      "src/d/d_drawlist.cpp",
       "src/d/d_msg_object.cpp",
       "src/dusk/config.cpp",
       "src/dusk/config.hpp",
       "src/dusk/config_var.hpp",
+      "src/dusk/interp/frame_interpolation.cpp",
+      "src/dusk/interp/lerp.h",
       "src/dusk/mods/item_checks.cpp",
       "src/dusk/mods/loader/context.cpp",
       "src/dusk/mods/loader/loader.cpp",
@@ -1552,6 +1592,7 @@
       "src/dusk/mods/svc/host.cpp",
       "src/dusk/mods/svc/http.cpp",
       "src/dusk/mods/svc/internal.hpp",
+      "src/dusk/mods/svc/interp.cpp",
       "src/dusk/mods/svc/item.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/mods/svc/save.cpp",
@@ -1559,6 +1600,7 @@
       "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
       "src/dusk/ui/mod_window.cpp",
+      "src/f_ap/f_ap_game.cpp",
       "src/m_Do/m_Do_main.cpp"
     ],
     "dependencies": [
@@ -1597,7 +1639,11 @@
       "CALLBACK-024",
       "CALLBACK-025",
       "CALLBACK-026",
-      "CALLBACK-027"
+      "CALLBACK-027",
+      "PRES-094",
+      "PRES-095",
+      "PRES-096",
+      "PRES-097"
     ]
   },
   {

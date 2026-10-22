@@ -81,3 +81,5 @@ CP-R37 PLAYER-061..064: tag conserva ID aun sin actor y no acredita respawn post
 CP-R38 PRES-089 STATIC_INFERRED: KYTAG08 publica fog_avoid_tag y Delete no lo limpia. Si consumidor MA11 sobrevive al actor,checkNULL no acredita lifetime; no UAF/crash ni alcanzabilidad observados. Puntero único se sobrescribe sin arbitraje local; sin garantía de coexistencia/rollback Windows.
 
 CP-R39 PRES-090..093: mAnmRate interno sin clamp; tracks comparten frame y callback cambia animación durante árbol,con assets compatibles como precondición. ModelData posee callback común,userArea actor por instancia. ERROR_EXIT nulifica,no acredita frees; heap/ARC/sound separados,sin leak ni Windows coexistencia observados.
+
+CP-R40 PRES-097 STATIC_INFERRED: keys globales compartidas entre conjuntos de mods; forget/detach de uno puede borrar muestra del otro. MOD_OK registro fuera de recording no prueba muestra; lookup copia/no garantiza out en fallo. Sin prioridad/refcount/rollback previo ni runtime certificado.

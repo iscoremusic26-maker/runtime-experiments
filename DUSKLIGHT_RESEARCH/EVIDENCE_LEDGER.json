@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R39",
+  "checkpoint": "CP-R40",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -1681,7 +1681,7 @@
     },
     {
       "id": "SDK-013",
-      "claim": "Registra matriz final con key estable, consulta reemplazo e invalida matriz. Servicio guarda conjunto de keys por mod y las olvida en detach; forget inexistente devuelve MOD_OK. Límite: No es sistema de animación; key/punteros deben mantener identidad y vigencia del objeto entre ticks. Liberar actor requiere olvidar sus keys antes de reutilizar dirección.",
+      "claim": "Registra claves por mod y consulta/olvida matrices; detach olvida sus claves. Clarificación CP-R40/PRES-094..097: clave conserva identidad entre ticks; con clave independiente el buffer matriz se copia durante llamada aceptada por core,no se retiene. MOD_OK de record no prueba muestra fuera de ventana; forget desconocido retornaMOD_OK. No sistema de animación ni namespace global aislado por mod.",
       "level": "STATIC_CROSSCHECKED",
       "sources": [
         {
@@ -1710,7 +1710,8 @@
         }
       ],
       "limitations": [
-        "Análisis estático de los pasajes citados; sin prueba de juego/Windows."
+        "Análisis estático de los pasajes citados; sin prueba de juego/Windows.",
+        "CP-R40 precisa ownership del buffer/claves frente a redacción anterior key/punteros; matrices son copias por valor,claves globales sin refcount entre propietarios."
       ]
     },
     {
@@ -15258,6 +15259,226 @@
           "line_start": 80,
           "line_end": 97,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_npc_coach.h#L80-L97"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-094",
+      "claim": "InterpService record valida contexto/clave/matriz y registra clave por mod antes de intentar muestra; core solo copia3x4 mientras s_recording. MOD_OK no confirma muestra; frame de loader tick precede ventana begin_record/end_record.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/interp.h",
+          "line_start": 13,
+          "line_end": 60,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.h#L13-L60"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/interp.cpp",
+          "line_start": 13,
+          "line_end": 40,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/interp.cpp#L13-L40"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/loader/context.cpp",
+          "line_start": 8,
+          "line_end": 14,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/context.cpp#L8-L14"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 165,
+          "line_end": 182,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L165-L182"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 202,
+          "line_end": 213,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L202-L213"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 736,
+          "line_end": 744,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L736-L744"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/f_ap/f_ap_game.cpp",
+          "line_start": 807,
+          "line_end": 831,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_ap/f_ap_game.cpp#L807-L831"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-095",
+      "claim": "Core conserva matrices por valor en mapas globales prev/current,interpela solo claves comunes con gates y lookup copia a out; sombra simple real comparte core y usa fallback original con view concat. No se retiene el buffer de matriz del caller.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 27,
+          "line_end": 42,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L27-L42"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 69,
+          "line_end": 83,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L69-L83"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 202,
+          "line_end": 234,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L202-L234"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/lerp.h",
+          "line_start": 48,
+          "line_end": 55,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/lerp.h#L48-L55"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_drawlist.cpp",
+          "line_start": 1370,
+          "line_end": 1391,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_drawlist.cpp#L1370-L1391"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_drawlist.cpp",
+          "line_start": 1451,
+          "line_end": 1458,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_drawlist.cpp#L1451-L1458"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/interp.hpp",
+          "line_start": 16,
+          "line_end": 49,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.hpp#L16-L49"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-096",
+      "claim": "forget_mtx verifica clave en conjunto del mod y luego borra mapas globales; detach limpia todas sus claves mediante módulo. Lookup entre propietarios es contrato oficial; registrar misma clave no tiene namespace/refcount global por mod.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "sdk/include/mods/svc/interp.h",
+          "line_start": 62,
+          "line_end": 82,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.h#L62-L82"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/interp.cpp",
+          "line_start": 43,
+          "line_end": 89,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/interp.cpp#L43-L89"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 218,
+          "line_end": 224,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L218-L224"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/registry.cpp",
+          "line_start": 265,
+          "line_end": 274,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/registry.cpp#L265-L274"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 202,
+          "line_end": 234,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L202-L234"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-097",
+      "claim": "Si A y B registran misma clave,escritura última durante ventana reemplaza muestra; forget/detach de A borra muestras globales aunque B aún guarde clave en su conjunto. No se acredita coexistencia runtime ni rollback del valor previo.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/interp.cpp",
+          "line_start": 31,
+          "line_end": 36,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/interp.cpp#L31-L36"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/mods/svc/interp.cpp",
+          "line_start": 43,
+          "line_end": 72,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/interp.cpp#L43-L72"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 202,
+          "line_end": 219,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L202-L219"
         }
       ],
       "limitations": [

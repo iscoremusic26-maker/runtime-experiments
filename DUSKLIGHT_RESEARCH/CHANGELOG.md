@@ -165,3 +165,7 @@ Padre remoto verificado fa820dbe77c0e04aa02c007828d4a28c1a5a8b38. PRES-086..088 
 ## CP-R39 — McaMorf2,mezcla A/B,morph temporal y callbacks joint
 
 Padre remoto verificado fefe1bbbb9c0a694875a11859c181d53caed6a03. PRES-090..093: Coach caballo→McaMorf2 A/B y morph temporal→joint callback→modelo/draw→cleanup/fallo de heap. Tres símbolos potenciales; ficha modelos ampliada,sin documento nuevo. Peso de mezcla,frame,sound BAS y pose son estados distintos; sin skin/LOD,assets o runtime acreditados. Neto de esta sesión frente a CP-R34:+20 evidencias,+15 símbolos,+1 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R40 — InterpService,ventana,copias y conflicto de claves
+
+Padre remoto verificado 5f20c5cb3a2ef46009de148686730c281160644a. PRES-094..096: InterpService registro→ventana/copias→mapas→sombra/RAII→forget/detach; PRES-097 conflicto condicionado de claves globales. SDK-013 y símbolo servicio aclarados; dos slots oficiales y helper potencial nuevos. No callback nuevo ni prueba de coexistencia; matrices y keys tienen vidas distintas. Neto de esta sesión frente a CP-R34:+24 evidencias,+18 símbolos,+1 fichas. Solo atlas,sin build ni runtime.

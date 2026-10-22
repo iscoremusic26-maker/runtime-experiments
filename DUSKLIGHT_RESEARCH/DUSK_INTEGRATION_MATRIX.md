@@ -19,3 +19,5 @@ Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2`. Clasifica mecanismos 
 Los IDs remiten al [ledger](EVIDENCE_LEDGER.json), con enlaces al SHA/rango real. Esta matriz expresa elecciones de mecanismo, no funcionalidades concretas ni diseño de un mod. Sin compilación ni juego ejecutado.
 
 Presencia del port: POTENTIAL_REQUIRES_VERIFICATION como interfaz C++ interna, sin PresenceService público auditado. ConfigService solo gestiona variables propias; no otorga control/lifetime del backend host. PORT-010..013, [ficha de presencia](systems/port_presence.md). No se certifica hook, ACK ni rollback remoto.
+
+Matrices interpoladas: OFFICIAL_SERVICE InterpService (SDK-013 aclarado,PRES-094..097). recordMOD_OK no confirma muestra fuera de ventana; valores copiados,key global compartida. Forget/detach borra muestras,no restaura anterior ni confirma GPU; [ownership](systems/callback_ownership_and_cancellation.md).

@@ -1244,7 +1244,7 @@
       "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.h#L22-L82"
     },
     "signature": "typedef struct InterpService InterpService;",
-    "purpose": "Registra matriz final con key estable, consulta reemplazo e invalida matriz. Servicio guarda conjunto de keys por mod y las olvida en detach; forget inexistente devuelve MOD_OK.",
+    "purpose": "Matrices por clave estable; core copia valores en ventana y lookup copia a salida. CP-R40 precisa SDK-013,no retención de buffer ni aislamiento global de clave.",
     "dependencies": [
       "interp::record_final_mtx",
       "interp::forget_mtx",
@@ -1260,7 +1260,11 @@
     ],
     "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "SDK-013"
+      "SDK-013",
+      "PRES-094",
+      "PRES-095",
+      "PRES-096",
+      "PRES-097"
     ]
   },
   {
@@ -9238,6 +9242,91 @@
       "PRES-090",
       "PRES-092",
       "PRES-093"
+    ]
+  },
+  {
+    "symbol": "InterpService.record_mtx_keyed",
+    "kind": "function",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/interp.h",
+      "line_start": 39,
+      "line_end": 48,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.h#L39-L48"
+    },
+    "signature": "ModResult (*record_mtx_keyed)(ModContext* mod, InterpMtx matrix, void const* key)",
+    "purpose": "Registra clave por mod y ofrece muestra3x4 al core condicionado a ventana.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto y clave/matriz válidos; core solo copia en recording."
+    ],
+    "risks": [
+      "MOD_OK no sample confirmado ni isolation de key."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-013",
+      "PRES-094",
+      "PRES-095"
+    ]
+  },
+  {
+    "symbol": "InterpService.forget_mtx",
+    "kind": "function",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/interp.h",
+      "line_start": 62,
+      "line_end": 67,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/interp.h#L62-L67"
+    },
+    "signature": "ModResult (*forget_mtx)(ModContext* mod, void const* key)",
+    "purpose": "Baja idempotente por conjunto del mod,con efecto global si clave estaba registrada.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto/clave válidos; owner debe haber registrado para borrado core."
+    ],
+    "risks": [
+      "No restaura muestras previas de otro mod ni drena callbacks/renderer."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-013",
+      "PRES-096",
+      "PRES-097"
+    ]
+  },
+  {
+    "symbol": "(anonymous namespace)::interpolate_replacements",
+    "kind": "function",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/interp/frame_interpolation.cpp",
+      "line_start": 69,
+      "line_end": 83,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L69-L83"
+    },
+    "signature": "void interpolate_replacements()",
+    "purpose": "Construye copias interpoladas por claves comunes de dos grabaciones.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Interpolación habilitada,no recording,no sync y current no vacío."
+    ],
+    "risks": [
+      "Matriz lerp elemento a elemento,no pose quaternion ni skinning certificado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-095"
     ]
   }
 ]

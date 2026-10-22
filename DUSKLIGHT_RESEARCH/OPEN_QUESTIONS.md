@@ -22,3 +22,5 @@ Todas se refieren al SHA fijado. Se evita repetir lo ya respondido; cada pregunt
 Bloqueos que no impiden continuar: submódulos ausentes y falta de runtime Windows. Git/gh no fueron la vía operativa; el conector GitHub permite continuar documentación con HEAD comprobado y lease. No hay tarea programada ni promesa de trabajo desatendido.
 
 CP-R39 Q-10: PRES-090..093 contrastan McaMorf2/Coach A-B frente a morph temporal,callback joint/sonido/cleanup. No implica skin/LOD ni compatibilidad universal; faltan árbol asset,sharing y disposers ante fallo. Mantener pregunta parcial.
+
+CP-R40 Q-14/ownership: PRES-094..097 aclaran InterpService,ventana,copia3x4,lookup/fallback y conflicto de keys globales; SDK-013 precisado. No contiene callbacks de mod: Q-01/Q-02 no se cierran por esta API. Falta coexistencia real,otros arbitrajes y runtime.

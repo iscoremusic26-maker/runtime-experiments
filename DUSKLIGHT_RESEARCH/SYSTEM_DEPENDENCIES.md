@@ -93,3 +93,5 @@ CP-R37 PLAYER-061..064: other_systems(tag/shop)→actors_ai_npcs(solicitud/actor
 CP-R38 PRES-086..089: environment_weather_time(KYTAG08)→models_animations_materials(MA11/TexMtx) y player_and_controls(FogFade); audio_particles_effects recibe radio/emisores/trigger. Kankyo presta puntero a actor; Delete de efectos no equivale a limpiar referencia del consumidor.
 
 CP-R39 PRES-090..093: models_animations_materials→actors_ai_npcs(contexto userArea),audio_particles_effects(BAS/sound prestado),memory_ownership(heap/ModelData/arrays) y runtime_and_lifecycle(fase exec/draw/cleanup). Callback joint y morph temporal no son callbacks SDK ni pesos de audio continuos.
+
+CP-R40 PRES-094..097: sdk_services(InterpService)→runtime_and_lifecycle(ventana)→cameras_rendering(sombra fallback). Registro por mod y muestras globales tienen identidades/vidas distintas; owner-key no es namespace aislado. SDK-013 aclara buffer copiado,no userdata retenida.

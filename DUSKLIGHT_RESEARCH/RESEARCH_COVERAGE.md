@@ -1,12 +1,12 @@
-# Cobertura real — CP-R39
+# Cobertura real — CP-R40
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **23 fichas de sistemas, 334 evidencias y 318 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **23 fichas de sistemas, 338 evidencias y 321 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 318 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 321 registros.
 
 ## Estado por área
 
@@ -124,3 +124,5 @@ CP-R37: Stock tienda,tag,display y evento024. Cadena seleccionada; 18 CROSSCHECK
 CP-R38: KYTAG08,referencia ambiental y consumidor MA11. Cadena seleccionada; 18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED permanecen sin promoción global.
 
 CP-R39: McaMorf2,mezcla A/B,morph temporal y callbacks joint. Cadena seleccionada; 18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED permanecen sin promoción global.
+
+CP-R40: InterpService,ventana,copias y conflicto de claves. Cadena seleccionada; 18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED permanecen sin promoción global.
