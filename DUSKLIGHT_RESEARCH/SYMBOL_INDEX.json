@@ -12080,5 +12080,60 @@
       "PRES-148",
       "PRES-149"
     ]
+  },
+  {
+    "symbol": "daAlink_c::startPeepChange",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink.cpp",
+      "line_start": 13508,
+      "line_end": 13527,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L13508-L13527"
+    },
+    "signature": "bool daAlink_c::startPeepChange()",
+    "purpose": "Latchear solicitud de entrada/salida de mirilla",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "SceneListID/room/SCLS válidos para éxito posterior"
+    ],
+    "risks": [
+      "true no certifica helper exitoso ni rollback"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-026",
+      "ARCH-028"
+    ]
+  },
+  {
+    "symbol": "daAlink_c::procCoPeepSubjectivity",
+    "kind": "method",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_alink_link.inc",
+      "line_start": 377,
+      "line_end": 392,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_link.inc#L377-L392"
+    },
+    "signature": "int daAlink_c::procCoPeepSubjectivity()",
+    "purpose": "Consumir input de salida y reconsultar tag de mirilla",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Procesopeep activo y compulsorygate"
+    ],
+    "risks": [
+      "Tagnoencontrado no asigna ID;threshold persiste entre consultas"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-027"
+    ]
   }
 ]

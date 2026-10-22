@@ -102,3 +102,5 @@ CP-R78 Q-12: PLAYER-099..102 cierran muestra Rollgoal Fshop/controlador→bola�
 CP-R79 Q-13: PORT-029..031 añaden diagnóstico stub→buffer temporal→ImGui/PostDraw. Backend que invoca divert y su interpretación de true siguen BLOCKED; otros logger/LogService ya cubiertos no repetir. Sin logs/UI reales.
 
 CP-R80 Q-11: PRES-147..150 contrastan KYTAG13→subrango→packet nieve→draw/cleanup. PRES-150 rango especial sin clamp final es inferencia condicionada,assets no consultados. Orden multitag/interp/ground/salida de room siguen parciales. KYTAG05 no era ruta ambiental.
+
+CP-R81 Q-09: ARCH-025..028 añaden KYTAG05/PEEP_HOLE→Link→mode6/7→TurnRestart/cámara. RechazoSCLS tras latch es inferencia condicionada;assets/eventcuts y recuperación global pendientes. No repetir helper/cola nominal ya auditados.

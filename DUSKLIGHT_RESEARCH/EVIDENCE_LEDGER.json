@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R80",
+  "checkpoint": "CP-R81",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -23554,6 +23554,266 @@
           "line_start": 142,
           "line_end": 152,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_kankyo_wether.h#L142-L152"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ARCH-025",
+      "claim": "KYTAG05 extrae bytealto8 truncado y lowbyteSceneListID;flagalto0 habilita ETC. Link muestra status137 para atenciónETC/nombre y doTrigger ordenaPEEP_HOLE,copiaID y timer20+areg. Evento startCheck por nombre exige estadoSTART;solo entonces decrementa timer y solicita startPeepChange, sin equiparar orden aceptada a evento ejecutado.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_kytag05.h",
+          "line_start": 14,
+          "line_end": 21,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_kytag05.h#L14-L21"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_kytag05.cpp",
+          "line_start": 15,
+          "line_end": 40,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag05.cpp#L15-L40"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_kytag05.cpp",
+          "line_start": 43,
+          "line_end": 64,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag05.cpp#L43-L64"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 10495,
+          "line_end": 10515,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L10495-L10515"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 11584,
+          "line_end": 11592,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L11584-L11592"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 11446,
+          "line_end": 11457,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L11446-L11457"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 18506,
+          "line_end": 18512,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L18506-L18512"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_com_inf_game.h",
+          "line_start": 3725,
+          "line_end": 3731,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_com_inf_game.h#L3725-L3731"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_event_manager.cpp",
+          "line_start": 989,
+          "line_end": 1005,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_event_manager.cpp#L989-L1005"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ARCH-026",
+      "claim": "startPeepChange pone latchFLG0_4000 antes de dStage_changeScene;fueraPROC_PEEP_SUBJECTIVITY guarda TurnRestart y pide modo6,enproc pide7. Retornatrue tras llamar helper aunqueSCLSNULL retorne0. Reutiliza ARCH023/024 para nextstage→gatesPLAY→request, sin asegurar queueaceptada/escenaviva.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 13508,
+          "line_end": 13527,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L13508-L13527"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_stage.cpp",
+          "line_start": 2976,
+          "line_end": 3013,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L2976-L3013"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_com_inf_game.cpp",
+          "line_start": 1462,
+          "line_end": 1464,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L1462-L1464"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_com_inf_game.cpp",
+          "line_start": 1489,
+          "line_end": 1493,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L1489-L1493"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_com_inf_game.cpp",
+          "line_start": 4066,
+          "line_end": 4068,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L4066-L4068"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_save.cpp",
+          "line_start": 1494,
+          "line_end": 1499,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_save.cpp#L1494-L1499"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 13549,
+          "line_end": 13581,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L13549-L13581"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ARCH-027",
+      "claim": "Destino con lastMode6 inicializa PROC_PEEP_SUBJECTIVITY,ocultaLink,gravedad0/status2000. InputDo/B busca tagKYTAG05 máscercano bajo umbralguardado,puede copiarID y tras compulsorygate pide modo7. Reentrada modo7 restauraPos/Angle TurnRestart;camera destructor omite sobrescribir snapshot cuandopeepend yinitialize lo consume. No transacción integral ni roomassets probados.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 4746,
+          "line_end": 4748,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L4746-L4748"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_link.inc",
+          "line_start": 250,
+          "line_end": 264,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_link.inc#L250-L264"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_link.inc",
+          "line_start": 357,
+          "line_end": 392,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_link.inc#L357-L392"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_player.h",
+          "line_start": 1143,
+          "line_end": 1154,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_player.h#L1143-L1154"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 4937,
+          "line_end": 4945,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L4937-L4945"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_camera.cpp",
+          "line_start": 263,
+          "line_end": 271,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_camera.cpp#L263-L271"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_camera.cpp",
+          "line_start": 548,
+          "line_end": 561,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_camera.cpp#L548-L561"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_alink.h",
+          "line_start": 3552,
+          "line_end": 3557,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_alink.h#L3552-L3557"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "ARCH-028",
+      "claim": "Si SCLSNULL durante startPeepChange,helper no preparaNextStage pero latch yaON y puede haberTurnRestart mutado;retornatrue. Mientrasbit sigaON llamadas posteriores retornanfalse sin reintento en esehelper. No rollback local;no afirmación de softlock,alcanzabilidad conassets ni ausencia global de recuperación.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink.cpp",
+          "line_start": 13508,
+          "line_end": 13527,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L13508-L13527"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_stage.cpp",
+          "line_start": 2976,
+          "line_end": 2989,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_stage.cpp#L2976-L2989"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/actor/d_a_player.h",
+          "line_start": 1030,
+          "line_end": 1040,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/actor/d_a_player.h#L1030-L1040"
         }
       ],
       "limitations": [

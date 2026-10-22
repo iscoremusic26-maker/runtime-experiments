@@ -331,3 +331,7 @@ Padre remoto verificado b5a660e7d9cda67ffcb351b3999314276c5f1a67. PORT-029 SOURC
 ## CP-R80 — KYTAG13: nieve compartida, subrangos y limpieza
 
 Padre remoto verificado aa5a90503be9fc9817d3a2a482f963cd5efecf97. PRES-147..149 STATIC_CROSSCHECKED,150 STATIC_INFERRED: partición de nieve→packetglobal→draw/cleanup;clamp inicial no valida subrangos especiales. Dos localizadores internos. Alcance selectivo,assets/orden/interp pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R81 — Mirilla: evento, modos de escena y snapshot de retorno
+
+Padre remoto verificado 6e1e53fa5a39c2801d1243627e7e2ff093b47058. ARCH-025..027 STATIC_CROSSCHECKED,028 STATIC_INFERRED: KYTAG05→PEEP_HOLE→modos6/7→TurnRestart/cámara. Latch previo a SCLS y retorno sin ACK delimitados. Dos localizadores internos;assets/rollbackglobal pendientes. Sin mod,build ni runtime; solo atlas.

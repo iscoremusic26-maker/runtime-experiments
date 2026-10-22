@@ -786,7 +786,7 @@
   {
     "system_id": "runtime_and_lifecycle",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R68 KYTAG04 ordenevent→contadores separados→SCLS/PLAY y cleanup;sin rollback global.",
+    "scope": "CROSSCHECKED selectiva: cadenas previas y CP-R81 mirilla KYTAG05→Link/evento→modos6/7→TurnRestart/cámara;rechazoSCLS inferido,assets/rollback global pendientes.",
     "reports": [
       "systems/runtime_and_lifecycle.md"
     ],
@@ -795,6 +795,8 @@
       "Recuperación tras fallo de creación/overlap; otras rutas logo/direct-load y todos los gates pendientes."
     ],
     "paths": [
+      "include/d/actor/d_a_kytag05.h",
+      "include/d/actor/d_a_player.h",
       "include/d/d_com_inf_game.h",
       "include/d/d_event.h",
       "include/d/d_file_select.h",
@@ -809,14 +811,19 @@
       "sdk/include/mods/svc/game_mode.h",
       "sdk/include/mods/svc/host.h",
       "src/d/actor/d_a_alink.cpp",
+      "src/d/actor/d_a_alink_link.inc",
       "src/d/actor/d_a_kytag04.cpp",
+      "src/d/actor/d_a_kytag05.cpp",
       "src/d/actor/d_a_npc4.cpp",
+      "src/d/d_camera.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event.cpp",
+      "src/d/d_event_manager.cpp",
       "src/d/d_file_select.cpp",
       "src/d/d_s_logo.cpp",
       "src/d/d_s_name.cpp",
       "src/d/d_s_play.cpp",
+      "src/d/d_save.cpp",
       "src/d/d_stage.cpp",
       "src/d/d_timer.cpp",
       "src/dusk/game_mode.cpp",
@@ -864,7 +871,10 @@
       "save_load",
       "audio_particles_effects",
       "callback_ownership_and_cancellation",
-      "cutscenes_dialogue"
+      "cutscenes_dialogue",
+      "player_and_controls",
+      "cameras_rendering",
+      "flags_events_progression"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -913,9 +923,15 @@
       "ARCH-021",
       "ARCH-022",
       "ARCH-023",
-      "ARCH-024"
+      "ARCH-024",
+      "ARCH-025",
+      "ARCH-026",
+      "ARCH-027",
+      "ARCH-028"
     ],
     "files_examined": [
+      "include/d/actor/d_a_kytag05.h",
+      "include/d/actor/d_a_player.h",
       "include/d/d_com_inf_game.h",
       "include/d/d_event.h",
       "include/d/d_file_select.h",
@@ -926,13 +942,18 @@
       "include/m_Do/m_Do_audio.h",
       "sdk/include/mods/svc/game_mode.h",
       "src/d/actor/d_a_alink.cpp",
+      "src/d/actor/d_a_alink_link.inc",
       "src/d/actor/d_a_kytag04.cpp",
+      "src/d/actor/d_a_kytag05.cpp",
       "src/d/actor/d_a_npc4.cpp",
+      "src/d/d_camera.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event.cpp",
+      "src/d/d_event_manager.cpp",
       "src/d/d_file_select.cpp",
       "src/d/d_s_logo.cpp",
       "src/d/d_s_play.cpp",
+      "src/d/d_save.cpp",
       "src/d/d_stage.cpp",
       "src/d/d_timer.cpp",
       "src/dusk/game_mode.cpp",

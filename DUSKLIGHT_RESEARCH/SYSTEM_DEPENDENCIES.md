@@ -173,3 +173,5 @@ CP-R78 PLAYER-099..102: Hena/dialogue→timer6→controlador/tabla/bola→cam73/
 CP-R79 PORT-029..031: logging options.divert —backend no disponible→ callback matcher→StubLogBuffer/offsets→ImGui→PostDraw clear salvo pausa. Es otra política que LogService ring2048. [Diagnóstico](systems/port_commands.md).
 
 CP-R80 PRES-147..150: parámetros/room→KYTAG13 escribe nieve prestada→weather posee packet→lista translúcida→GX;countnormal y counttag separados. Cleanup global KYEFF distinto de Delete tag. [Ambiente](systems/environment_weather_time.md).
+
+CP-R81 ARCH-025..028: atenciónKYTAG05→orden/eventSTART→Linklatch→SCLS/NextStage→mode6peep→input→mode7→posición/cámara TurnRestart. Estado porvalor sobrevive a actor;no rollback transaccional. [Lifecycle](systems/runtime_and_lifecycle.md).
