@@ -72,3 +72,5 @@ CP-R63 PARCIAL Q-11: PRES-123..126 separan flag maestro/ID,región de cámara y 
 CP-R64 Q-12: PLAYER-085..087 contrastan Ice_s apoyo→latch/pose→MoveBG/modelo→cleanup;no rotura. PLAYER-088 recoge precedencia ! y lectura fVar1 condicionada;alcanzabilidad/assets/runtime pendientes. No otra variante MoveBG inmediata:alternar soporte/servicio.
 
 CP-R65 Q-13: PORT-026..028 extienden SDK-015 con ring2048→copy_since→LogsWindow/clear lógico. No callback de mod ni dispatcher nuevo;Q-01/Q-02 no se cierran. Sink Borealis,flush/errores y límites efectivos pendientes;no leer logs personales ni abrir backend ausente. Alternar modelos/recursos.
+
+CP-R66 Q-10: PRES-127..130 contrastan BRK→TevRegKey/materialIDs→slotsCReg/KReg→calc/retirada con Obj_Bef como consumidorfuente. Assets/colocación,sharing y cleanup parcial siguen pendientes;init1 no confirma entry,wrappervoid oculta ret2/1. Alternar dominio;no repetir BTP/BRK para sumar variantes.

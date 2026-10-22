@@ -133,3 +133,5 @@ CP-R63 / PRES-126 STATIC_INFERRED: flag libre tras Delete no restablece m_master
 CP-R64 / PLAYER-088 STATIC_INFERRED: filtro !name==ALINK y fVar1 no asignado fuera de tipoFF en Check_RideOn;contactos/params efectivos no probados,sin crash/runtime. Delete1 local ignora retornoMoveBGDelete;no ACKdeRelease.
 
 CP-R65 / PORT-026..028: secuencia/retención del buffer y nivel visible son diferentes de report/archivo durable. clear lógico conserva tablaIDs y strings de slots;no prometer borrado físico o por mod. Mutex de ring no certifica contexto/DLL/backend bajo unload.
+
+CP-R66 / PRES-128/130: BRKentryvoid no propaga locked2/parcial1;remove desactiva slot sin comparar ganador/restaurarcolor. Sharing/orden/colocación no probados,sin falloWindows. Obj_Bef no llama remove;eso solo no acredita dangling/UAF.

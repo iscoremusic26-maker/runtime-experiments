@@ -11070,5 +11070,88 @@
     "evidence_ids": [
       "PORT-027"
     ]
+  },
+  {
+    "symbol": "mDoExt_brkAnm::init",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 209,
+      "line_end": 222,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L209-L222"
+    },
+    "signature": "int mDoExt_brkAnm::init(J3DMaterialTable*, J3DAnmTevRegKey*, int, int, f32, s16, s16)",
+    "purpose": "Retiene recurso y resuelve materiales para BRK",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "MaterialTable/recurso válidos;heap si requiere"
+    ],
+    "risks": [
+      "Datos del bloque prestados;sin ABIWindows"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-127",
+      "PRES-128"
+    ]
+  },
+  {
+    "symbol": "J3DMaterialTable::entryTevRegAnimator",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
+      "line_start": 263,
+      "line_end": 304,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp#L263-L304"
+    },
+    "signature": "int J3DMaterialTable::entryTevRegAnimator(J3DAnmTevRegKey*)",
+    "purpose": "Instala tracks TEV por IDmaterial/slot",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tabla unlocked;IDs válidos;materialAnimator presente"
+    ],
+    "risks": [
+      "Ret2locked,ret1parcial;wrapper descarta retorno;no owner token"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-128",
+      "PRES-129"
+    ]
+  },
+  {
+    "symbol": "J3DMaterialTable::removeTevRegAnimator",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
+      "line_start": 100,
+      "line_end": 135,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp#L100-L135"
+    },
+    "signature": "int J3DMaterialTable::removeTevRegAnimator(J3DAnmTevRegKey*)",
+    "purpose": "Deshabilita flags de tracks por material/slot",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Recurso/IDs conservados"
+    ],
+    "risks": [
+      "No compara puntero del ganador ni restaura valor de color"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-130"
+    ]
   }
 ]

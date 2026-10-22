@@ -143,3 +143,5 @@ CP-R63 PRES-123..126: perfil/procesos→TagWaterFall→camera0/AllJudge→gather
 CP-R64 PLAYER-085..088: Acch→BG propietario/rider→Ice_s campos→Mtx modelo/BG→draw;resDelete específico precede Release del wrapper. No switch/guardado ni rotura en esta muestra. [Otros sistemas](systems/other_systems.md).
 
 CP-R65 PORT-026..028: LogService→contextID→bufferhost mutex/copias→LogsWindow/elementos y clear lógico;por separado report Borealis. Datos host propios,no callbacks retenidos. [Diagnóstico](systems/port_commands.md).
+
+CP-R66 PRES-127..130: bloqueBRK→TevRegKey prestado→IDs de material→slots CReg/KReg→MaterialAnmcalc→TevBlock;wrapper/FrameCtrl propio no posee bloque completo. DeleteARC/BG y retirotracks son fronteras distintas. [Modelos](systems/models_animations_materials.md).

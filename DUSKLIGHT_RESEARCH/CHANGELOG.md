@@ -269,3 +269,7 @@ Padre remoto verificado a8cc59cdeab98b6b74618589e483df61fc34876f. PLAYER-085..08
 ## CP-R65 — LogService: copias, retención y consumidor diagnóstico
 
 Padre remoto verificado 815a418fbce69d1425716165df0fe4ee80f9c401. PORT-026..028 STATIC_CROSSCHECKED extienden SDK-015:write copia→ring2048/seq→LogsWindow y clear lógico;backendfile/durabilidad NOT_VERIFIED. Un slot oficial exacto y dos localizadores internos nuevos;CERRADO SELECTIVO frontend,ninguna API de lectura pública añadida. Sin mod,build ni runtime; solo atlas.
+
+## CP-R66 — BRK: registros de color TEV y lifetime del recurso
+
+Padre remoto verificado 5bd69e12b052cdaa51e165ea1b48f2bdf45e5c00. PRES-127..130 STATIC_CROSSCHECKED trazan BRK/TevRegKey→enlace nombres/slots→lectura CReg/KReg y cleanup explícito/ausente;Obj_Bef consumidor fuente sin colocación/runtime acreditados. Tres localizadores internos. CERRADO SELECTIVO;sharing,assets y cleanup parcial siguen abiertos. Sin mod,build ni runtime; solo atlas.
