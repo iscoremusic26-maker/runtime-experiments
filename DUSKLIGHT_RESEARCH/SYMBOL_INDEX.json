@@ -10547,5 +10547,87 @@
     "evidence_ids": [
       "PLAYER-080"
     ]
+  },
+  {
+    "symbol": "TextureService::register_data",
+    "kind": "service",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/texture.h",
+      "line_start": 68,
+      "line_end": 69,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/texture.h#L68-L69"
+    },
+    "signature": "ModResult (*register_data)(ModContext*, const TextureKey*, const TextureData*, TextureReplacementHandle*)",
+    "purpose": "Registra copia owneddatosraw para keypointer/source.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto/descriptorválidos;game thread segúnhost."
+    ],
+    "risks": [
+      "Aceptaciónnoacredita render/formato/binarioWindows."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-119"
+    ]
+  },
+  {
+    "symbol": "TextureService::unregister",
+    "kind": "service",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/texture.h",
+      "line_start": 81,
+      "line_end": 81,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/texture.h#L81-L81"
+    },
+    "signature": "ModResult (*unregister)(ModContext*, TextureReplacementHandle)",
+    "purpose": "Retira entrada runtimepropia y libera keepalive después de backend.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Handlepertenecealowner."
+    ],
+    "risks": [
+      "Garantía de finlecturas escontrato/comentariohost,backendnoauditado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-121"
+    ]
+  },
+  {
+    "symbol": "textures_sync_replacements",
+    "kind": "function",
+    "system_id": "resources_archives_overlays",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/texture.cpp",
+      "line_start": 228,
+      "line_end": 264,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/texture.cpp#L228-L264"
+    },
+    "signature": "void textures_sync_replacements() [texture.cpp]",
+    "purpose": "Recalcula prioridad y reemplaza registros tras lifecycleApplied.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Lifecyclede loadedmods;mutacionesgame thread."
+    ],
+    "risks": [
+      "HandleSDKestable no prueba IDbackend válido trasreregistro ni atomicidad."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-120",
+      "PRES-122"
+    ]
   }
 ]

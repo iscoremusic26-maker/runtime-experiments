@@ -623,7 +623,7 @@
   {
     "system_id": "resources_archives_overlays",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: contratos overlay/resource previos y consumidor JKRMemArchive→dRes cache CP-R25; selector Aurora/coexistencia Windows pendientes.",
+    "scope": "CROSSCHECKED selectiva: rutasprevias yCP58 Texturefrontend prioridad/keepalive/reregistro;selectorAurora bloqueado,no renderingcertificado.",
     "reports": [
       "systems/resources_archives_overlays.md"
     ],
@@ -634,9 +634,13 @@
       "libs/JSystem/src/JKernel/JKRMemArchive.cpp",
       "sdk/include/mods/svc/overlay.h",
       "sdk/include/mods/svc/resource.h",
+      "sdk/include/mods/svc/texture.h",
       "src/d/d_resorce.cpp",
+      "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/overlay.cpp",
-      "src/dusk/mods/svc/resource.cpp"
+      "src/dusk/mods/svc/registry.cpp",
+      "src/dusk/mods/svc/resource.cpp",
+      "src/dusk/mods/svc/texture.cpp"
     ],
     "pending": [
       "DVD scheduler completo",
@@ -652,14 +656,18 @@
       "sdk/include/mods/svc/resource.h",
       "sdk/include/mods/svc/texture.h",
       "src/d/d_resorce.cpp",
+      "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/overlay.cpp",
-      "src/dusk/mods/svc/resource.cpp"
+      "src/dusk/mods/svc/registry.cpp",
+      "src/dusk/mods/svc/resource.cpp",
+      "src/dusk/mods/svc/texture.cpp"
     ],
     "dependencies": [
       "memory_ownership",
       "runtime_and_lifecycle",
       "models_animations_materials",
-      "external_dependencies"
+      "external_dependencies",
+      "sdk_services"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -673,7 +681,11 @@
       "SDK-022",
       "PRES-065",
       "PRES-066",
-      "PRES-067"
+      "PRES-067",
+      "PRES-119",
+      "PRES-120",
+      "PRES-121",
+      "PRES-122"
     ]
   },
   {

@@ -56,3 +56,5 @@ CP-R55 Q-08/lifetime: PRES-115..118 contrastan traceuserWork y retirolevel,error
 CP-R56 Q-09: ARCH-017..020 contrastan direct-save1..3/status/fallbackRAM y consumoff aun sin revisarChangeReq;espera0sin timeout es riesgo condicionado,no hangobservado. BackendCARD/progresoyrecuperaciónglobalpendientes;no repetirlogo. Alternar gameplay distinto deproyectiles.
 
 CP-R57 Q-12: PLAYER-077..080 contrastan LV4Gate latched y wrapperMoveBG/corrección/cleanup. No todoscontactos/actores ni retorno0comorollback;assets/fallosparciales/reentranciayruntimependientes. Alternar recursos.
+
+CP-R58 Q-14/Q-10: PRES-119..122 contrastan Texturefrontend handle/priority/reregistro/keepalive. Falta selectorAurora yfinlecturasreal;no instalar/descargarsubmódulo. BackendID0trasreregistro esriesgocondicionado,nofalloobservado. Alternar port/memoria.
