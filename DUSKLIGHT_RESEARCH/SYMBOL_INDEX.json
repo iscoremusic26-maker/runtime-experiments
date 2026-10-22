@@ -9855,5 +9855,87 @@
       "PRES-107",
       "PRES-089"
     ]
+  },
+  {
+    "symbol": "daArrow_c::atHitCallBack",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_arrow.cpp",
+      "line_start": 86,
+      "line_end": 117,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_arrow.cpp#L86-L117"
+    },
+    "signature": "void daArrow_c::atHitCallBack(dCcD_GObjInf*, fopAc_ac_c*, dCcD_GObjInf*)",
+    "purpose": "Selecciona candidato cercano y registra ID/escudo/offset joint.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Callback At de cápsula registrada; punteros prestados durante dispatch."
+    ],
+    "risks": [
+      "No es contrato SDK ni aplicación universal de daño."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-070"
+    ]
+  },
+  {
+    "symbol": "daArrow_c::procActorStop",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_arrow.cpp",
+      "line_start": 952,
+      "line_end": 965,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_arrow.cpp#L952-L965"
+    },
+    "signature": "int daArrow_c::procActorStop()",
+    "purpose": "Actualiza adhesión y marca retirada si falta actor/joint.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Entrada por clasificación4 de procMove."
+    ],
+    "risks": [
+      "ID reconsultado no certifica ownership de modelo/actor objetivo."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-071",
+      "PLAYER-072"
+    ]
+  },
+  {
+    "symbol": "dJntCol_c::getArrowOffsetPosAndAngle",
+    "kind": "method",
+    "system_id": "combat_damage",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_jnt_col.cpp",
+      "line_start": 482,
+      "line_end": 507,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_jnt_col.cpp#L482-L507"
+    },
+    "signature": "int dJntCol_c::getArrowOffsetPosAndAngle(cXyz const*, csXyz const*, cXyz*, cXyz*) const",
+    "purpose": "Clasifica joint y calcula punto/dirección relativos al modelo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "mData/modelo/matrices de destino vigentes."
+    ],
+    "risks": [
+      "Índice de animación no mide layout/ABI Windows; datos asset sin verificar."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-071"
+    ]
   }
 ]

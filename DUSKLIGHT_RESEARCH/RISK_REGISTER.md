@@ -97,3 +97,5 @@ CP-R45 PRES-103/105: setSkinDeform descarta initMtxIndexArrayret y cambia flags/
 CP-R46 CALLBACK-029..031: copiar Event no copia payload; siguientepoll del mismo mod acota vistas incluso de otra conexión. CloseC++handle0 no retira entrada host; CLOSED/deactivation sí. take_all no prueba workerdrain/handshake sin backend; ningún tráfico/fallo runtime observado.
 
 CP-R47 precisa PRES-089: KANKYODelete no destruye g_env_light ni limpia fog_avoid_tag explícitamente. Orden room/actor/fondo sigueNOT_VERIFIED; no se concluye UAF ni seguridad global de teardown. Listpriority no certifica orden de borrado.
+
+CP-R48 PLAYER-069..072: tipo alto,byte de estado,ID de objetivo e índice joint no son intercambiables; hit At no acredita daño HP. Flag93f precede solicitud/destructor y no drena partículas. Matrices/modelo objetivo prestados; sin fallo ni hook Windows observado.

@@ -36,3 +36,5 @@ CP-R45 Q-10: PRES-102..105 contrastan skin explícito del candado,buffers/flags 
 CP-R46 Q-02/ownership: CALLBACK-028..031 extienden SDK-024 con polling WebSocket,views permod,OPEN publicado antes de send,close/CLOSED y retiro. No frameBegin/callbackdeusuario: pista anterior corregida,backend/drain/ACK pendientes,sin tráfico real.
 
 CP-R47 PARCIAL Q-11/PRES-089: PRES-106/107 separan KANKYO proceso de g_env_light global y gates/cleanup; sigue sin resolver secuencia room unload KYTAG08→MA11. Consultar room remove/consumidor real antes de elevar hipótesis; no UAF observado.
+
+CP-R48 Q-12: PLAYER-069..072 contrastan flecha tipo0→At/joint→adhesión→flag/borrado; no certifican HP,objetivo asset ni proyectiles enemigos/agua/materiales/resto de variantes. Alternar Q-11 antes de otro proyectil.

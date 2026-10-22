@@ -197,3 +197,7 @@ Padre remoto verificado 328ca089c7efb02c07d5ffb91b624d2137393c39. CALLBACK-028..
 ## CP-R47 — PARCIAL lifetime KANKYO,global y gates de cleanup
 
 Padre remoto verificado fa64df683686e0c15cb84fec7042b7d1d887b2b7. PRES-106/107: stage→proceso KANKYO→global compartido→gates execute/draw→cleanup seleccionado. Dos símbolos potenciales; limitación PRES-089 ampliada con trazabilidad. Checkpoint PARCIAL respecto a orden room unload; no UAF ni cleanup global garantizados,fuente disponible sin runtime. Neto de esta sesión frente a CP-R34:+49 evidencias,+37 símbolos,+2 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R48 — Flecha tipo0,At/joint,adhesión y borrado diferido
+
+Padre remoto verificado 705264cd6bc3d142c4fde327e2fe5b9e2f9be861. PLAYER-069..072 (+4 STATIC_CROSSCHECKED),tres localizadores internos;0 fichas nuevas. Cadena seleccionada Link→flecha→colisión→adhesión joint→flag→solicitud/delete específico;HP y todas las variantes excluidos. Sin mod,build ni runtime; solo atlas.

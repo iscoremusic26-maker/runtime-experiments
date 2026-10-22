@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R47",
+  "checkpoint": "CP-R48",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -18,18 +18,18 @@
   "sdk_module_candidates": 26,
   "sdk_public_function_slots_located": 209,
   "sdk_all_slots_semantically_audited": false,
-  "evidence_records": 363,
+  "evidence_records": 367,
   "evidence_levels": {
-    "STATIC_CROSSCHECKED": 288,
+    "STATIC_CROSSCHECKED": 292,
     "SOURCE_OBSERVED": 49,
     "DOC_CONTRACT": 5,
     "STATIC_INFERRED": 19,
     "CI_OBSERVED": 2
   },
-  "symbol_records": 340,
+  "symbol_records": 343,
   "symbol_integration_classification": {
     "OFFICIAL_SERVICE": 72,
-    "POTENTIAL_REQUIRES_VERIFICATION": 263,
+    "POTENTIAL_REQUIRES_VERIFICATION": 266,
     "TYPED_HOOK": 5
   },
   "classification_counts_are_not_runtime_tests": true,
@@ -40,41 +40,29 @@
   "missing_submodules": 4,
   "session_timing": {
     "current_session_started_utc": null,
-    "measured_before_publish_utc": "2026-10-22T01:54:52.730356+00:00",
+    "measured_before_publish_utc": "2026-10-22T13:21:21.902398+00:00",
     "observed_session_elapsed_seconds": null,
     "effective_research_cpu_seconds": null,
     "paused_interval_excluded": true,
     "note": "Duración/CPU N/D; no sumar pausas ni sesiones anteriores."
   },
   "current_session_baseline": {
-    "commit": "077d6a77036dd41c3f8a2d3870c6f61ff995f4bb",
-    "evidence": 314,
-    "symbols": 303,
-    "atlas_files": 49,
-    "system_reports": 22,
-    "range_occurrences": 3011,
-    "unique_ranges": 1446,
-    "cited_upstream_files": 262
+    "commit": "705264cd6bc3d142c4fde327e2fe5b9e2f9be861",
+    "evidence": 363,
+    "symbols": 340,
+    "atlas_files": 51,
+    "system_reports": 24,
+    "range_occurrences": 3616,
+    "unique_ranges": 1734,
+    "cited_upstream_files": 320
   },
   "net_added_this_session": {
-    "evidence": 49,
-    "symbols": 37,
-    "new_documents": 2
+    "evidence": 4,
+    "symbols": 3,
+    "new_documents": 0
   },
   "checkpoints_this_session": [
-    "CP-R35",
-    "CP-R36",
-    "CP-R37",
-    "CP-R38",
-    "CP-R39",
-    "CP-R40",
-    "CP-R41",
-    "CP-R42",
-    "CP-R43",
-    "CP-R44",
-    "CP-R45",
-    "CP-R46",
-    "CP-R47"
+    "CP-R48"
   ],
   "atlas_files": 51
 }

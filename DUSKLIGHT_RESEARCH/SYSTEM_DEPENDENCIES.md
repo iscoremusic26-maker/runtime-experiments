@@ -109,3 +109,5 @@ CP-R45 PRES-102..105: models_animations_materials(deformer/índices)→memory_ow
 CP-R46 CALLBACK-028..031: sdk_services(WebSocket)→callback_ownership_and_cancellation(vistas de polling permod,sin callback)→runtime_and_lifecycle(take_all/pollstate); external_dependencies(BorealisConnection) pendiente. FrameBeginHTTP no aplica a WebSocket.
 
 CP-R47 PRES-106/107: environment_weather_time(controladorKANKYO)→runtime_and_lifecycle(gates/proceso) y memory_ownership(global distinto de proceso). Retirar drawtag controlador no prueba retiro del consumidorMA11 en fondo separado; PRES-089 sigue condicionado.
+
+CP-R48: cápsula At→callback flecha→ID/offset joint→matriz objetivo reconsultada→flag/cola delete. PLAYER-069..072; actor,modelo y colisionador tienen vidas distintas. [Combate](systems/combat_damage.md).

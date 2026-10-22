@@ -1131,21 +1131,27 @@
   {
     "system_id": "combat_damage",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: colisión/helpers,jugador,Tektite y B_DS fase2 daño→demo→progreso/cleanup CP-R30; otras políticas pendientes.",
+    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R48 flecha tipo0→joint→adhesión→retirada; no todos los proyectiles.",
     "reports": [
       "systems/combat_damage.md"
     ],
     "files_examined": [
+      "include/SSystem/SComponent/c_cc_d.h",
+      "include/d/actor/d_a_arrow.h",
       "include/d/actor/d_a_b_ds.h",
       "include/f_op/f_op_actor.h",
       "include/f_op/f_op_actor_mng.h",
+      "src/d/actor/d_a_alink_bow.inc",
       "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_arrow.cpp",
       "src/d/actor/d_a_b_ds.cpp",
       "src/d/actor/d_a_e_tt.cpp",
+      "src/d/d_cc_d.cpp",
       "src/d/d_cc_s.cpp",
       "src/d/d_cc_uty.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event.cpp",
+      "src/d/d_jnt_col.cpp",
       "src/dusk/mods/item_gives.cpp",
       "src/f_op/f_op_actor_mng.cpp"
     ],
@@ -1155,16 +1161,22 @@
       "Coexistencia runtime"
     ],
     "paths": [
+      "include/SSystem/SComponent/c_cc_d.h",
+      "include/d/actor/d_a_arrow.h",
       "include/d/actor/d_a_b_ds.h",
       "include/f_op/f_op_actor.h",
       "include/f_op/f_op_actor_mng.h",
+      "src/d/actor/d_a_alink_bow.inc",
       "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_arrow.cpp",
       "src/d/actor/d_a_b_ds.cpp",
       "src/d/actor/d_a_e_tt.cpp",
+      "src/d/d_cc_d.cpp",
       "src/d/d_cc_s.cpp",
       "src/d/d_cc_uty.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event.cpp",
+      "src/d/d_jnt_col.cpp",
       "src/dusk/mods/item_gives.cpp",
       "src/f_op/f_op_actor_mng.cpp"
     ],
@@ -1175,7 +1187,8 @@
       "cutscenes_dialogue",
       "flags_events_progression",
       "inventory_equipment",
-      "environment_weather_time"
+      "environment_weather_time",
+      "models_animations_materials"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1187,7 +1200,11 @@
       "PLAYER-053",
       "PLAYER-054",
       "PLAYER-055",
-      "PLAYER-056"
+      "PLAYER-056",
+      "PLAYER-069",
+      "PLAYER-070",
+      "PLAYER-071",
+      "PLAYER-072"
     ]
   },
   {
