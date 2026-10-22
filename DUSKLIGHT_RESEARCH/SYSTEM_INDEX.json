@@ -1967,7 +1967,7 @@
   {
     "system_id": "port_support",
     "coverage": "READ",
-    "scope": "READ global: logros/speedrun/presencia/consola previos y CP-R42 diagnóstico disco metadata→worker→resultado/modal/cancel→config nominal; backend/otras rutas pendientes.",
+    "scope": "READ parcial: soporteprevio y CP59 peticionesLifecyclecoalescidas/operaciónUI/toast;no red/instalación/runtime.",
     "reports": [
       "systems/port_achievements.md",
       "systems/port_speedrun_livesplit.md",
@@ -1997,6 +1997,9 @@
       "src/dusk/iso_validate.cpp",
       "src/dusk/iso_validate.hpp",
       "src/dusk/livesplit.cpp",
+      "src/dusk/mod_loader.hpp",
+      "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/loader/loader.cpp",
       "src/dusk/mods/svc/registry.cpp",
       "src/dusk/settings.cpp",
       "src/dusk/speedrun.cpp",
@@ -2006,6 +2009,7 @@
       "src/dusk/ui/command_console.hpp",
       "src/dusk/ui/document.cpp",
       "src/dusk/ui/event.cpp",
+      "src/dusk/ui/mod_browser.cpp",
       "src/dusk/ui/overlay.cpp",
       "src/dusk/ui/prelaunch.cpp",
       "src/dusk/ui/settings.cpp",
@@ -2018,7 +2022,8 @@
       "runtime_and_lifecycle",
       "hud_ui_text",
       "flags_events_progression",
-      "external_dependencies"
+      "external_dependencies",
+      "sdk_services"
     ],
     "pending": [
       "Resto de checks de logros y diagnósticos.",
@@ -2046,7 +2051,10 @@
       "PORT-018",
       "PORT-019",
       "PORT-020",
-      "PORT-021"
+      "PORT-021",
+      "PORT-023",
+      "PORT-024",
+      "PORT-025"
     ],
     "files_examined": [
       "src/d/d_com_inf_game.cpp",
@@ -2064,6 +2072,9 @@
       "src/dusk/iso_validate.cpp",
       "src/dusk/iso_validate.hpp",
       "src/dusk/livesplit.cpp",
+      "src/dusk/mod_loader.hpp",
+      "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/loader/loader.cpp",
       "src/dusk/settings.cpp",
       "src/dusk/speedrun.cpp",
       "src/dusk/speedrun.h",
@@ -2072,6 +2083,7 @@
       "src/dusk/ui/command_console.hpp",
       "src/dusk/ui/document.cpp",
       "src/dusk/ui/event.cpp",
+      "src/dusk/ui/mod_browser.cpp",
       "src/dusk/ui/overlay.cpp",
       "src/dusk/ui/prelaunch.cpp",
       "src/dusk/ui/settings.cpp",

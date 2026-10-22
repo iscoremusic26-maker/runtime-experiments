@@ -241,3 +241,7 @@ Padre remoto verificado 5985d5510dc665e1a6a70bb150a7a6ce70d0ec7a. PLAYER-077..08
 ## CP-R58 — Texturefrontend,prioridad,reregistro y keepalive
 
 Padre remoto verificado 88705aceed5c22ae1b9c2c781bd86d3b985eb997. PRES-119..122:3 STATIC_CROSSCHECKED y1 STATIC_INFERRED,dos slotsSDKexistentes+unlocalizador;0 fichas. Ownershipraw→backendregistro→lifecycleprioridad/reregistro→unregister;selector/finlecturasAurora BLOCKEDlocal,sinGPU/runtime. Sin mod,build ni runtime; solo atlas.
+
+## CP-R59 — Reactivación,loteLifecycle,operaciónUI y toast
+
+Padre remoto verificado d66d64221337f7abc8b202a677f7c1a4360260fc. PORT-023..025 (+3 STATIC_CROSSCHECKED),doslocalizadores;0 fichas. Nueva pregunta arbitrajesolicitudesporID→estadooperación→UIfrente aaviso históricofallo;no se repite teardownbase ni red/instalación. Sin mod,build ni runtime; solo atlas.

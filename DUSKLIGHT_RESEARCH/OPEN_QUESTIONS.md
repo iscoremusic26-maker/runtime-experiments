@@ -58,3 +58,5 @@ CP-R56 Q-09: ARCH-017..020 contrastan direct-save1..3/status/fallbackRAM y consu
 CP-R57 Q-12: PLAYER-077..080 contrastan LV4Gate latched y wrapperMoveBG/corrección/cleanup. No todoscontactos/actores ni retorno0comorollback;assets/fallosparciales/reentranciayruntimependientes. Alternar recursos.
 
 CP-R58 Q-14/Q-10: PRES-119..122 contrastan Texturefrontend handle/priority/reregistro/keepalive. Falta selectorAurora yfinlecturasreal;no instalar/descargarsubmódulo. BackendID0trasreregistro esriesgocondicionado,nofalloobservado. Alternar port/memoria.
+
+CP-R59 Q-13/Q-14: PORT-023..025 contrastan coalescingLifecycleporID/operaciones ytoastconsumido,distinto de teardownHOOK019. Faltan otrascolas,intercalaciónconcallbacks yruntime;no repetir loadergeneral. Alternar interacción de actores/colisiónsicontextopermite.

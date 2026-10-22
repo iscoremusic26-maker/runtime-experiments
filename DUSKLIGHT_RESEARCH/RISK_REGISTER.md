@@ -119,3 +119,5 @@ CP-R56 ARCH-020 STATIC_INFERRED: status2 y requestrechazada aún pueden producir
 CP-R57 PLAYER-078..080: Execute0 no impidecopiamatriz/Move;Delete0 no impideRelease;Releaseerror no modificaret. Matriz/BG/ARCvidasdistintas,switchno revierteEND. Sin choque,fallo o hookWindowsobservados.
 
 CP-R58 PRES-122 STATIC_INFERRED: handleSDKestable puede sobrevivir reregistrorechazadoID0 sin rollbacklocal. UnregisterliberadatossegúncontratoAuroracomentado,no garantiza visual/GPUdrain auditados;keypointer no posee GXoriginal. Sinfalloobservado.
+
+CP-R59 PORT-023..025: Superseded no es activaciónfallida;Succeededoperación/toastno certifican estadovigenteni DLLdrain. Flushconsumeavisos aun sinmostrarlos conModsWindowvisible;nofalloobservado.

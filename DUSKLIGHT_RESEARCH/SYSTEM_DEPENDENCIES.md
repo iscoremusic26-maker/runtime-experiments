@@ -131,3 +131,5 @@ CP-R56 ARCH-017..020: CLI→SaveRequested→LoadSync→RAMsave/init→gameStart�
 CP-R57 PLAYER-077..080: switch→GateEND→modelomatriz→MoveBG mBgMtx→CrrFunc→poscorregida;DeleteARC→ReleaseBG→heap. Punterosprestados/retornossonfronterasdistintas. [Puzzle](systems/other_systems.md).
 
 CP-R58 PRES-119..122: TextureSDK→ownedbytes/handle→registroAurora→lifecycleprioridad/reregistro→unregister/keepalive. Contratobarreraexterna no es backendleído;selectorfinalBLOCKEDlocal. [Recursos](systems/resources_archives_overlays.md).
+
+CP-R59 PORT-023..025: UIretry→operaciónPending→lote/coalescingporID→lifecycle→estadoUI;failuretoast esflujo histórico aparte. Operaciónshared no retieneDLL. [Runtime](systems/runtime_and_lifecycle.md).

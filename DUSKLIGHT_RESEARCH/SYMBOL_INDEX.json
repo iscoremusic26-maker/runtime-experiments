@@ -10629,5 +10629,61 @@
       "PRES-120",
       "PRES-122"
     ]
+  },
+  {
+    "symbol": "ModLoader::request_reactivate",
+    "kind": "method",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/loader/loader.cpp",
+      "line_start": 515,
+      "line_end": 523,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/loader/loader.cpp#L515-L523"
+    },
+    "signature": "ModOperationHandle dusk::mods::ModLoader::request_reactivate(std::string_view)",
+    "purpose": "Encola reactivación con estadoobservablecompartido.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Modid delcallerhost;procesamiento enapplypendingsiguiente."
+    ],
+    "risks": [
+      "HandlePending no activa inmediatamente ni es servicioSDK."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-023",
+      "PORT-024"
+    ]
+  },
+  {
+    "symbol": "ModOperation",
+    "kind": "struct",
+    "system_id": "port_support",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mod_loader.hpp",
+      "line_start": 88,
+      "line_end": 99,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mod_loader.hpp#L88-L99"
+    },
+    "signature": "struct dusk::mods::ModOperation",
+    "purpose": "Pending/Succeeded/Failed y mensaje de operacióninternahost.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "shared_ptrconstdelectura para UI;mutableporloader."
+    ],
+    "risks": [
+      "Estadooperación no certifica DLLdrain/runtime ni durabilidad."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-023",
+      "PORT-024"
+    ]
   }
 ]
