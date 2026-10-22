@@ -289,12 +289,13 @@
     "files_examined": [
       "sdk/include/mods/svc/flow.h",
       "sdk/include/mods/svc/message.h",
-      "src/dusk/mods/svc/flow.cpp",
-      "src/d/d_msg_flow.cpp",
+      "src/d/actor/d_a_kytag04.cpp",
+      "src/d/d_demo.cpp",
       "src/d/d_event.cpp",
       "src/d/d_event_manager.cpp",
-      "src/d/d_demo.cpp",
-      "src/d/d_s_play.cpp"
+      "src/d/d_msg_flow.cpp",
+      "src/d/d_s_play.cpp",
+      "src/dusk/mods/svc/flow.cpp"
     ],
     "pending": [
       "JMessage render/control completo",
@@ -305,6 +306,7 @@
     "paths": [
       "sdk/include/mods/svc/flow.h",
       "sdk/include/mods/svc/message.h",
+      "src/d/actor/d_a_kytag04.cpp",
       "src/d/d_demo.cpp",
       "src/d/d_event.cpp",
       "src/d/d_event_manager.cpp",
@@ -324,7 +326,9 @@
       "WORLD-018",
       "WORLD-023",
       "WORLD-026",
-      "WORLD-027"
+      "WORLD-027",
+      "ARCH-021",
+      "ARCH-022"
     ]
   },
   {
@@ -701,7 +705,7 @@
   {
     "system_id": "runtime_and_lifecycle",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: rutasprevias y CP-R56 logo save1..3/status/fallback/ff;sin recuperaciónglobal ni runtime.",
+    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R68 KYTAG04 ordenevent→contadores separados→SCLS/PLAY y cleanup;sin rollback global.",
     "reports": [
       "systems/runtime_and_lifecycle.md"
     ],
@@ -711,6 +715,7 @@
     ],
     "paths": [
       "include/d/d_com_inf_game.h",
+      "include/d/d_event.h",
       "include/d/d_file_select.h",
       "include/d/d_s_play.h",
       "include/f_op/f_op_msg.h",
@@ -722,7 +727,11 @@
       "sdk/include/mods/svc/game.h",
       "sdk/include/mods/svc/game_mode.h",
       "sdk/include/mods/svc/host.h",
+      "src/d/actor/d_a_alink.cpp",
+      "src/d/actor/d_a_kytag04.cpp",
+      "src/d/actor/d_a_npc4.cpp",
       "src/d/d_com_inf_game.cpp",
+      "src/d/d_event.cpp",
       "src/d/d_file_select.cpp",
       "src/d/d_s_logo.cpp",
       "src/d/d_s_name.cpp",
@@ -740,6 +749,7 @@
       "src/dusk/mods/svc/game_mode.cpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/f_ap/f_ap_game.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
       "src/f_op/f_op_draw_tag.cpp",
       "src/f_op/f_op_msg.cpp",
       "src/f_op/f_op_msg_mng.cpp",
@@ -772,7 +782,8 @@
       "port_support",
       "save_load",
       "audio_particles_effects",
-      "callback_ownership_and_cancellation"
+      "callback_ownership_and_cancellation",
+      "cutscenes_dialogue"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -817,10 +828,15 @@
       "ARCH-017",
       "ARCH-018",
       "ARCH-019",
-      "ARCH-020"
+      "ARCH-020",
+      "ARCH-021",
+      "ARCH-022",
+      "ARCH-023",
+      "ARCH-024"
     ],
     "files_examined": [
       "include/d/d_com_inf_game.h",
+      "include/d/d_event.h",
       "include/d/d_file_select.h",
       "include/d/d_s_play.h",
       "include/f_op/f_op_msg.h",
@@ -828,7 +844,11 @@
       "include/m_Do/m_Do_Reset.h",
       "include/m_Do/m_Do_audio.h",
       "sdk/include/mods/svc/game_mode.h",
+      "src/d/actor/d_a_alink.cpp",
+      "src/d/actor/d_a_kytag04.cpp",
+      "src/d/actor/d_a_npc4.cpp",
       "src/d/d_com_inf_game.cpp",
+      "src/d/d_event.cpp",
       "src/d/d_file_select.cpp",
       "src/d/d_s_logo.cpp",
       "src/d/d_s_play.cpp",
@@ -839,6 +859,7 @@
       "src/dusk/globals.cpp",
       "src/dusk/mods/svc/game_mode.cpp",
       "src/f_ap/f_ap_game.cpp",
+      "src/f_op/f_op_actor_mng.cpp",
       "src/f_op/f_op_draw_tag.cpp",
       "src/f_op/f_op_msg.cpp",
       "src/f_op/f_op_msg_mng.cpp",

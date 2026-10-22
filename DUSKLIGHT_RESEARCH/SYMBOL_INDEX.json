@@ -2300,15 +2300,18 @@
     "integration": "POTENTIAL_REQUIRES_VERIFICATION",
     "conditions": [
       "Símbolo localizado en fuente exacta; resolución/exportación y firma ABI Windows no comprobadas.",
-      "Revalidar estado de escena y no retener punteros tras cleanup."
+      "Revalidar estado de escena y no retener punteros tras cleanup.",
+      "CP-R68: salidaSCLS requiere tabla y índice válidos;retorno1 prepara nextstage,no escena ejecutando."
     ],
     "risks": [
       "Transición de escena y vigencia de punteros.",
       "Hook conflicts y compatibilidad de ABI si se usa hooking."
     ],
-    "evidence_level": "SOURCE_OBSERVED",
+    "evidence_level": "STATIC_CROSSCHECKED",
     "evidence_ids": [
-      "WORLD-008"
+      "WORLD-008",
+      "ARCH-023",
+      "ARCH-024"
     ]
   },
   {
@@ -11237,6 +11240,63 @@
     "evidence_ids": [
       "CALLBACK-037",
       "CALLBACK-039"
+    ]
+  },
+  {
+    "symbol": "daKytag04_Execute",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag04.cpp",
+      "line_start": 108,
+      "line_end": 195,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag04.cpp#L108-L195"
+    },
+    "signature": "static int daKytag04_Execute(kytag04_class*)",
+    "purpose": "Consume switch y encola evento;cuenta hacia salidaSCLS",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tipo4 y switchválido;player/stagecontext"
+    ],
+    "risks": [
+      "Solicitud no evento ejecutado;timer sin checkdeefectofinal"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-021",
+      "ARCH-022",
+      "ARCH-023"
+    ]
+  },
+  {
+    "symbol": "daKytag04_Draw",
+    "kind": "function",
+    "system_id": "runtime_and_lifecycle",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag04.cpp",
+      "line_start": 14,
+      "line_end": 106,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag04.cpp#L14-L106"
+    },
+    "signature": "static int daKytag04_Draw(kytag04_class*)",
+    "purpose": "Muta presentación/contador de portal durante draw",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tipos4/5;estado y switch habilitantes"
+    ],
+    "risks": [
+      "Draw avanza estado;no reloj sim ni renderWindows demostrado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "ARCH-022",
+      "ARCH-024"
     ]
   }
 ]

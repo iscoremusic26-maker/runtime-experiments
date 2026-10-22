@@ -147,3 +147,5 @@ CP-R65 PORT-026..028: LogService→contextID→bufferhost mutex/copias→LogsWin
 CP-R66 PRES-127..130: bloqueBRK→TevRegKey prestado→IDs de material→slots CReg/KReg→MaterialAnmcalc→TevBlock;wrapper/FrameCtrl propio no posee bloque completo. DeleteARC/BG y retirotracks son fronteras distintas. [Modelos](systems/models_animations_materials.md).
 
 CP-R67 CALLBACK-037..039: FileService→Borealis ListResultlocal→FileEntry prestado→callback/sentinel;wrapperSDKcopia→vectorpropio. Sin registroretenido ni frameBeginlist;estadoactive y retorno terminal distintos. [Ownership](systems/callback_ownership_and_cancellation.md).
+
+CP-R68 ARCH-021..024: switchroom→KYTAG04→orderqueueevent→timerexecute→selectorPLAYER/Linkgate→SCLS→nextstage→callerPLAY;drawtimer/partículas son faseaparte. Deleteemisores no rollbackglobal. [Runtime](systems/runtime_and_lifecycle.md).

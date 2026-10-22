@@ -277,3 +277,7 @@ Padre remoto verificado 5bd69e12b052cdaa51e165ea1b48f2bdf45e5c00. PRES-127..130 
 ## CP-R67 — FileService list: llamadas síncronas y lifetime del sentinel
 
 Padre remoto verificado e4b1da9d4533ceb1bcc0553172f028ec7b2dca78. CALLBACK-037/038 STATIC_CROSSCHECKED y039 STATIC_INFERRED:ListResult→entradasprestadas→callback/checkactive→sentinel→copiasSDK y erroresparciales. Un slotoficial,dos localizadores/consumidores fuente. CERRADO SELECTIVO;backend/listorden/unloadWindows pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R68 — KYTAG04: orden de evento, contador y salida SCLS
+
+Padre remoto verificado f0e0e9a2f6b0fd67cd10f901e9cf9d31c7f9794a. ARCH-021/022/024 STATIC_CROSSCHECKED y023 STATIC_INFERRED:tipo4 encola evento,luego timer/Linkgate/SCLS→PLAY;drawtimerindependiente,cleanupemisores. CERRADO SELECTIVO flujo;assets/rollback/alcanzabilidadparciales. Dos localizadores nuevos y dStage_changeScene ampliado sin duplicado. Sin mod,build ni runtime; solo atlas.

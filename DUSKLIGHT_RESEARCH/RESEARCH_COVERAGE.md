@@ -1,12 +1,12 @@
-# Cobertura real — CP-R67
+# Cobertura real — CP-R68
 
 ## Alcance y denominadores
 
 Se conservan **19367 archivos y 488 directorios** del inventario CP-R00. Esta continuación no recalculó hashes ni reconstruyó ese inventario. Las siete erratas nominales se aplican desde INVENTORY_ERRATA.json, sin duplicar el TSV. Los encabezados regionales no se cuentan como implementaciones leídas.
 
-Se publican **24 fichas de sistemas, 430 evidencias y 390 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
+Se publican **24 fichas de sistemas, 434 evidencias y 392 registros de símbolos**. El índice canónico tiene 28 entradas: 18 CROSSCHECKED selectivas, 6 READ y 4 exclusivamente INVENTARIED. Incluye SDK, soporte y evidencia histórica, por lo que no representa 28 sistemas gameplay independientes.
 
-Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 390 registros.
+Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implementación. Hay 26 candidatos de módulo (UiService 1.5 y 2.3), sujetos a disponibilidad; 209 ranuras públicas localizadas no equivalen a 209 métodos auditados. El índice de símbolos mezcla tablas/slots, tipos y funciones; no afirma haber seguido la cadena completa de llamadas de los 392 registros.
 
 ## Estado por área
 
@@ -180,3 +180,5 @@ CP-R65: LogService: copias, retención y consumidor diagnóstico. Cadena selecci
 CP-R66: BRK: registros de color TEV y lifetime del recurso. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
 
 CP-R67: FileService list: llamadas síncronas y lifetime del sentinel. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
+
+CP-R68: KYTAG04: orden de evento, contador y salida SCLS. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
