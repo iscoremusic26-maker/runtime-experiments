@@ -157,3 +157,5 @@ CP-R75 / PLAYER-097/098: setItemLifeCount acumula delta y sobrescribe type;no ow
 CP-R76 / CALLBACK-045 STATIC_INFERRED:mods::net::poll devuelve endpointview sobre arraylocalraw;con endpointnovacío vidaexpiraalretorno. No crash/redobservados. CloseOKno ACK ni cupofrontend liberado;helperSocket puede olvidarhandle auntraserror.
 
 CP-R77 / PRES-146 STATIC_INFERRED: fallo de sendCmdMsg deja bloque en loading1 en recorrido inspeccionado; no callback ni rollback local. No bloqueo observado. Sync de mountXArchive solo done, no archive válido. Destruir comando no desmonta archive ni drena lecturas.
+
+CP-R78: resultado Rollgoal usa actor.health como payload; progreso/rewardpending se escribe antes de terminar flow. IDs de hijos no comprobados y búsquedas por variante no prueban vida/parent; no seguridad de unload abrupto ni rollback automático. No fallos runtime observados.

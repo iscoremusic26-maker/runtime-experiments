@@ -96,3 +96,5 @@ CP-R75 Q-11/Q-12: PLAYER-096..098 contrastan OnsenBG→timerLink→deltaLife→M
 CP-R76 Q-01/Q-02/Q-13: CALLBACK-043..046 precisan TCPpoll/backpressure/close y wrapper;CALLBACK-045 endpointviewrawlocal esinferenciacondicionada. BackendACK/drain/userdatasampling sinfuente;no redreal. Alternar otra familia.
 
 CP-R77 Q-05/Q-08/Q-10: PRES-143..146 contrastan mountDVD→lectura en bloque→JAISeq/reciclaje. PRES-146 enqueue fallido sin rollback local es inferencia condicionada. Pendiente teardown global archive/lecturas y backend DVD; no repetir cache MemArchive CP25.
+
+CP-R78 Q-12: PLAYER-099..102 cierran muestra Rollgoal Fshop/controlador→bola→Hena→progreso/reentrada. Pesca/alquiler, teardown abrupto, fallos de hijos y assets siguen pendientes; no duplicar stock CP37 ni timer CP66.

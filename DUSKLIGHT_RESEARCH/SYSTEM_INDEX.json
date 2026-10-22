@@ -1434,7 +1434,7 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "READ parcial: muestras previas y CP-R73 Lv4DigSand start/endLink→GroundCross→descenso→switch/delete;sin física universal.",
+    "scope": "CROSSCHECKED selectiva: familias previas y CP-R78 Rollgoal Fshop→bola→Hena→progreso/reentrada;pesca/alquiler y teardown abrupto pendientes.",
     "reports": [
       "systems/other_systems.md"
     ],
@@ -1473,6 +1473,7 @@
       "src/d/actor/d_a_mg_rod.cpp",
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_npc4.cpp",
+      "src/d/actor/d_a_npc_henna.cpp",
       "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_carry.cpp",
@@ -1551,6 +1552,7 @@
       "src/d/actor/d_a_mg_rod.cpp",
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_npc4.cpp",
+      "src/d/actor/d_a_npc_henna.cpp",
       "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_carry.cpp",
@@ -1654,7 +1656,11 @@
       "PLAYER-092",
       "PLAYER-093",
       "PLAYER-094",
-      "PLAYER-095"
+      "PLAYER-095",
+      "PLAYER-099",
+      "PLAYER-100",
+      "PLAYER-101",
+      "PLAYER-102"
     ]
   },
   {

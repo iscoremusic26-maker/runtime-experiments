@@ -167,3 +167,5 @@ CP-R75 PLAYER-096..098: BGMóvil/agua→identidadOnsen→Linkgates/timer→delta
 CP-R76 CALLBACK-043..046: TCPrequest→handleclosedgate→pollCONNECTED→sendqueue→pollCLOSED/erase;ModState posee payloadhost,NetEventC posee endpointarray yhelperC++solo views. [Ownership](systems/callback_ownership_and_cancellation.md).
 
 CP-R77 PRES-143..146: montaje DVD→archive prestado a JAU→descriptor copiado con punteros prestados→región de audio→JAISeq→reciclaje por isUsingSeqData. Cache archive y buffer caller poseen vida distinta. [Recursos](systems/resources_archives_overlays.md).
+
+CP-R78 PLAYER-099..102: Hena/dialogue→timer6→controlador/tabla/bola→cam73/76→eventReg/rewardpending→reset cámara/reentrada. Estado repartido entre actores, globals, timer y eventRAM. [Otros sistemas](systems/other_systems.md).

@@ -11912,5 +11912,62 @@
       "PRES-144",
       "PRES-145"
     ]
+  },
+  {
+    "symbol": "daFshop_Execute",
+    "kind": "function",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_mg_fshop.cpp",
+      "line_start": 870,
+      "line_end": 883,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_mg_fshop.cpp#L870-L883"
+    },
+    "signature": "static int daFshop_Execute(fshop_class*)",
+    "purpose": "Ejecutar variante tablero/bola/controlador Rollgoal",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actores compañeros y datos de escena válidos"
+    ],
+    "risks": [
+      "Punteros compartidos; orden de perfiles no certificado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-099",
+      "PLAYER-100"
+    ]
+  },
+  {
+    "symbol": "demo_camera_shop (Henna)",
+    "kind": "function",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_npc_henna.cpp",
+      "line_start": 971,
+      "line_end": 999,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_npc_henna.cpp#L971-L999"
+    },
+    "signature": "static void demo_camera_shop(npc_henna_class*)",
+    "purpose": "Consumir resultado Rollgoal y coordinar flow/progreso/cámara",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Henaarg1; Fshop/bola/timer requeridos por ramas"
+    ],
+    "risks": [
+      "Sin rollback transaccional ni teardown abrupto probado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-099",
+      "PLAYER-101",
+      "PLAYER-102"
+    ]
   }
 ]

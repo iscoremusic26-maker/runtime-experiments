@@ -319,3 +319,7 @@ Corrección operativa: el commit f2338828f23a9ee443d84ebb41b6c8834a2975bd solo d
 ## CP-R77 — Archive DVD: secuencias, buffers y fallo de enqueue
 
 Padre remoto verificado 5a6855cd4d299236ac289602ef7ac1a0ec793601. PRES-143..145 STATIC_CROSSCHECKED,146 STATIC_INFERRED: audio startup→MOUNT_DVD→lectura async en bloque→JAISeq/reciclaje; sync no garantiza archive y enqueue fallido sin rollback local delimitado. Dos localizadores internos; teardown global/backend pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R78 — Rollgoal: actores distribuidos, resultado y progreso
+
+Padre remoto verificado b90e7d633b014e2ecccfd79e1a6cc6cb4842ae98. PLAYER-099..102 STATIC_CROSSCHECKED: Fshop/controlador→bola→Hena→flags/progreso/reentrada; timer y rewardpending diferenciados de efectos completados y disco. Dos localizadores internos. Pesca/alquiler y teardown abrupto pendientes. Sin mod,build ni runtime; solo atlas.
