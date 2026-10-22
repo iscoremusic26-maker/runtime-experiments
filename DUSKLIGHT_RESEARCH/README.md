@@ -1,6 +1,6 @@
 # Atlas técnico general de Dusklight 2.0.3 para mods .dusk
 
-Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`); objetivo Windows x64 / DirectX 12 / GZ2E01 USA. **CP-R61: Disposers,destructorvirtual y reset de solid heap; sin mod objetivo.** La cobertura es selectiva y se declara por sistema, sin afirmar comprensión completa del juego.
+Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`); objetivo Windows x64 / DirectX 12 / GZ2E01 USA. **CP-R62: Precisión de gate RotY y trazabilidad de destroy; sin mod objetivo.** La cobertura es selectiva y se declara por sistema, sin afirmar comprensión completa del juego.
 
 ## Acceso rápido
 

@@ -253,3 +253,7 @@ Padre remoto verificado 83ac62f838bd2dbc2fb549996370e9f5e3e6d07b. PLAYER-081..08
 ## CP-R61 — Disposers,destructorvirtual y reset de solid heap
 
 Padre remoto verificado 3f7e19320ebfb3e77393213341ab47e01c276127. ROOT-014..016 (+3 STATIC_CROSSCHECKED),doslocalizadores;0 fichas. Registro por dirección→lista→destructorvirtual→solidfreeAll/freeTail/heapchild;disposeboolfalse fijo no significa ausencia deefectos. Sin mod,build ni runtime; solo atlas.
+
+## CP-R62 — Precisión de gate RotY y trazabilidad de destroy
+
+Padre remoto verificado 591d7faf724085a360afa4c41dda25748dbdecff. Rectificación explícita PLAYER-079: RotY requiere shapeAngle noNULL para sumar yaw también a angle. ROOT-016 añade puente JKRDestroySolidHeap. +0 evidencias,+0 símbolos,+0 fichas; no se cuenta como otra cadena completa del motor. CP-R48..61 contienen14 bloques técnicos,CP-R62 es revisión editorial con fuente adicional. Sin mod,build ni runtime; solo atlas.

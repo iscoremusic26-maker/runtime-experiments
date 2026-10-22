@@ -64,3 +64,5 @@ CP-R59 Q-13/Q-14: PORT-023..025 contrastan coalescingLifecycleporID/operaciones 
 CP-R60 Q-12: PLAYER-081..084 contrastan ObjCarryadmitido→boomerang→offset/colisión→Linkgrab/wait yDeleteseparado. Faltanroturainicial/otrosobjetos/eventKeepglobal/lifetimeKeepbajoborrado;no repetirItemService. Alternar memoria/recursos o conservardetalle exactoparacontinuar.
 
 CP-R61 Q-05/memoria: ROOT-014..016 contrastan Disposer ySolidfreeAll/freeTail/destructorheapchild,con disposefalsefijo. No resuelve fallbackporclase,derivedcleanupconcreto ni concurrencia/unloadWindows. Alternar familia;no rehacerTLSoheaps.
+
+CP-R62 precisa PLAYER-079: yaw de angle depende también de shapeAngle noNULL. ROOT-016 gana cita del puente destroy. Sin IDs nuevos; siguen abiertos PRES-089,111,118,122 y ARCH-020 en sus condiciones. Próxima cadena nueva: tag_waterfall, no otra revisión del mismo MoveBG.

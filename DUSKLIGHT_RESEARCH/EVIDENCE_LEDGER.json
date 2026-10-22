@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R61",
+  "checkpoint": "CP-R62",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -18760,7 +18760,7 @@
     },
     {
       "id": "PLAYER-079",
-      "claim": "Corrección MoveBgMatrixCrrPos gatea param/bgindex/used/MoveFlag y despacha MatrixCrrPos→CrrFunc. TypicalRotY combina posvieja inversa→matrizactual y yaw. Matrizmodelo/colisióndeben permanecer vivas;no todos los contactossoncorregidos sin esosgates.",
+      "claim": "Corrección MoveBgMatrixCrrPos gatea param/bgindex/used/MoveFlag y despacha MatrixCrrPos→CrrFunc. TypicalRotY transforma posición old-local→matriz actual; RotY suma diferencia yaw a shapeAngle y angle SOLO si shapeAngle noNULL. Matrices prestadas;no corrección universal de contactos.",
       "level": "STATIC_CROSSCHECKED",
       "sources": [
         {
@@ -18775,9 +18775,9 @@
           "repo": "TwilitRealm/dusklight",
           "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
           "path": "src/d/d_bg_s.cpp",
-          "line_start": 1498,
+          "line_start": 1478,
           "line_end": 1502,
-          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L1498-L1502"
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_bg_s.cpp#L1478-L1502"
         },
         {
           "repo": "TwilitRealm/dusklight",
@@ -18798,7 +18798,8 @@
       ],
       "limitations": [
         "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
-        "Sin build,juego,ABI/export ni hook Windows comprobados."
+        "Sin build,juego,ABI/export ni hook Windows comprobados.",
+        "CP-R62 precisa gate angular de CP-R57: angle noNULL por sí solo no recibe yaw si shapeAngle esNULL. No cambia posición Typical ni implica observación runtime."
       ]
     },
     {
@@ -19607,11 +19608,20 @@
           "line_start": 372,
           "line_end": 379,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_op/f_op_actor_mng.cpp#L372-L379"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/include/JSystem/JKernel/JKRSolidHeap.h",
+          "line_start": 70,
+          "line_end": 72,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/include/JSystem/JKernel/JKRSolidHeap.h#L70-L72"
         }
       ],
       "limitations": [
         "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
-        "Sin build,juego,ABI/export ni hook Windows comprobados."
+        "Sin build,juego,ABI/export ni hook Windows comprobados.",
+        "CP-R62 añade puente explícito JKRDestroySolidHeap→heap->destroy al recorrido caller ya contrastado;sin evidencia ni símbolo duplicados."
       ]
     }
   ],

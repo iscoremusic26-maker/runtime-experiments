@@ -1,4 +1,4 @@
-# Cobertura real — CP-R61
+# Cobertura real — CP-R62
 
 ## Alcance y denominadores
 
@@ -168,3 +168,5 @@ CP-R59: Reactivación,loteLifecycle,operaciónUI y toast. Cadena seleccionada;28
 CP-R60: ObjCarry,boomerang,offset corregido y transferencia Link. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
 
 CP-R61: Disposers,destructorvirtual y reset de solid heap. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
+
+CP-R62: Precisión de gate RotY y trazabilidad de destroy. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
