@@ -8906,5 +8906,87 @@
     "evidence_ids": [
       "PORT-016"
     ]
+  },
+  {
+    "symbol": "dMw_isCapturePending",
+    "kind": "function",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_menu_window.cpp",
+      "line_start": 218,
+      "line_end": 224,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L218-L224"
+    },
+    "signature": "bool dMw_isCapturePending()",
+    "purpose": "Predicado PC de captura pendiente; gate de ticks,distinto de pausa y captura HIO.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Menú vivo y mpCapture flag1."
+    ],
+    "risks": [
+      "No garantiza inserción en drawlist ni copia GPU."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-082"
+    ]
+  },
+  {
+    "symbol": "dDlst_MENU_CAPTURE_c::draw",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_menu_window.cpp",
+      "line_start": 33,
+      "line_end": 69,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L33-L69"
+    },
+    "signature": "void dDlst_MENU_CAPTURE_c::draw() override",
+    "purpose": "Consume flag1→3,pausa y GXCopyTex; reintento de captura por resize PC.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Objeto válido registrado y consumidor virtual alcanzado."
+    ],
+    "risks": [
+      "flag3 precede GXCopyTex,no ACKGPU; listas guardan puntero prestado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-083"
+    ]
+  },
+  {
+    "symbol": "dMw_c::dMw_capture_delete",
+    "kind": "method",
+    "system_id": "cameras_rendering",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_menu_window.cpp",
+      "line_start": 1084,
+      "line_end": 1093,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L1084-L1093"
+    },
+    "signature": "void dMw_c::dMw_capture_delete()",
+    "purpose": "Borra captura y libera pause bajo gate de pause activo.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "dComIfGp_isPauseFlag() true."
+    ],
+    "risks": [
+      "Con pausefalse no borra objeto pendiente; no extrapolar cleanup global."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-084",
+      "PRES-085"
+    ]
   }
 ]

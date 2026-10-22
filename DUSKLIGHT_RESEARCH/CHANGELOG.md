@@ -149,3 +149,7 @@ Padre remoto verificado f7f247b8e6ca9db4110424fbb470a5a2bed4a8a9. +4 evidencias 
 ## CP-R35 — Consola host fija,rate y ownership UI
 
 Padre remoto verificado 077d6a77036dd41c3f8a2d3870c6f61ff995f4bb. PORT-014..017: startup/atajo→gates→parser→rate→reloj→respuesta→lifetime de mensajes/listeners. Tres símbolos potenciales; nueva ficha systems/port_commands.md. Sin registro dinámico público acreditado; ocultar no revierte estado del reloj. Backend Aurora y ejecución efectiva NOT_VERIFIED. Neto de esta sesión frente a CP-R34:+4 evidencias,+3 símbolos,+1 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R36 — Captura menú,gate de ticks,presentación y cleanup
+
+Padre remoto verificado 502d0592b3cb543e478fdbf0f42576ea58e2a2d5. PRES-082..084 contrastan collect→captura1→gate separado→draw2D→flag3/pause→salida condicionada; PRES-085 inferencia sobre inserción rechazada sin consumidor. Tres símbolos potenciales; ficha cameras_rendering ampliada,sin documento nuevo. Aurora/GPU/alcanzabilidad del bloqueo NOT_VERIFIED. Neto de esta sesión frente a CP-R34:+8 evidencias,+6 símbolos,+1 fichas. Solo atlas,sin build ni runtime.

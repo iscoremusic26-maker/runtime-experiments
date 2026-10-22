@@ -73,3 +73,5 @@ CP-R33 · R-39: cancelOK conserva slot y no garantiza CANCELED; completing manti
 CP-R34 · R-40: switch y latch FireWood divergen; Delete previo a timer0 no escribe progreso pendiente,255 no deja switch. Emisión visible y registro de luz pueden fallar sin cambiar lit; partículas dejan de renovarse pero retiro depende de evento/calc. PLAYER-057..060; inferencias condicionadas,sin fallo runtime.
 
 CP-R35 PORT-014..017: respuesta de consola no mide efecto/runtime; ocultar conserva estado y no revierte reloj global. Listeners UI retirados no prueban callback en curso drenado. Comandos host no son LogService ni API de registro; no certificado Windows/hook.
+
+CP-R36 PRES-085 STATIC_INFERRED: con flag1,inserción2D rechazada y sin consumidor alternativo,el gate separado puede mantenerse; alcanzabilidad no demostrada. capture_delete depende de pause y no acredita retirar captura pendiente sin pintar. flag3 precede copia GPU,sin ACK ni prueba Windows.

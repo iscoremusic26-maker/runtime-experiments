@@ -85,3 +85,5 @@ CP-R33: HttpService→task owned/handle→registry frameBegin→ready handles/re
 CP-R34: Link collider tipo/material→FireWood Tg hit→lit/timer→switch home room y luz/partículas; emitterID renueva actividad→particle calc3D→retiro bajo event gate. PLAYER-057..060. Switch RAM,actor,luz,emitter y audio tienen vidas diferentes; sin apagado por switchOFF en actor vivo.
 
 CP-R35 PORT-014..017: port_support→hud_ui_text (evento/documento/mensajes)→runtime_and_lifecycle (ownership de consola y reloj). rate→Aurora time queda frontera external_dependencies,sin backend ni frecuencia comprobados. Comandos host fijos,distintos de SDK-015 LogService.
+
+CP-R36 PRES-082..085: hud_ui_text (dMw captura)→cameras_rendering (drawlist/Painter)→runtime_and_lifecycle (gate ticks/pause). Interpolación tiene sync local,no fence; external_dependencies Aurora pendiente. Retorno void de registro2D no confirma aceptación.

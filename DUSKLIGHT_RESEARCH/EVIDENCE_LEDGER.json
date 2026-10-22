@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R35",
+  "checkpoint": "CP-R36",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -14298,6 +14298,290 @@
           "line_start": 7,
           "line_end": 41,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/event.cpp#L7-L41"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-082",
+      "claim": "collect_open_init solicita captura bajo !pause y mpCapture nulo; marca1/presentation-sync; pending consulta menú/captura/flag1 y main separado interrumpe ticks antes de input/execute pero sigue DrawIterater/Painter.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 356,
+          "line_end": 363,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L356-L363"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 1076,
+          "line_end": 1082,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L1076-L1082"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 116,
+          "line_end": 137,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L116-L137"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 218,
+          "line_end": 224,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L218-L224"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_menu_window.h",
+          "line_start": 36,
+          "line_end": 40,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_menu_window.h#L36-L40"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_main.cpp",
+          "line_start": 273,
+          "line_end": 313,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_main.cpp#L273-L313"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-083",
+      "claim": "dMw::_draw registra objeto prestado en2DOpa; wrapper→drawlist→virtual draw consume captura1→3 y activa pausa antes de GXCopyTex. TARGET_PC conserva texobj y rearma1 por resize; listas con capacidad/rechazo no transmitido.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 33,
+          "line_end": 69,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L33-L69"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 1650,
+          "line_end": 1657,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L1650-L1657"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_com_inf_game.cpp",
+          "line_start": 6324,
+          "line_end": 6334,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_com_inf_game.cpp#L6324-L6334"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_drawlist.h",
+          "line_start": 389,
+          "line_end": 392,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_drawlist.h#L389-L392"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_drawlist.h",
+          "line_start": 502,
+          "line_end": 504,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_drawlist.h#L502-L504"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_drawlist.cpp",
+          "line_start": 1855,
+          "line_end": 1859,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_drawlist.cpp#L1855-L1859"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_drawlist.cpp",
+          "line_start": 2002,
+          "line_end": 2009,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_drawlist.cpp#L2002-L2009"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_drawlist.cpp",
+          "line_start": 2030,
+          "line_end": 2040,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_drawlist.cpp#L2030-L2040"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "include/d/d_com_inf_game.h",
+          "line_start": 5742,
+          "line_end": 5748,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_com_inf_game.h#L5742-L5748"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_graphic.cpp",
+          "line_start": 2775,
+          "line_end": 2787,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_graphic.cpp#L2775-L2787"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-084",
+      "claim": "Salida collect sin subventana pasa NO_MENU→key_wait_init→capture_delete condicionado a pausa; borra objeto,nulifica y libera pausa. Sync de interpolación es bool gated,limpiado por begin_record/history,no fenceGPU.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 235,
+          "line_end": 243,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L235-L243"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 313,
+          "line_end": 321,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L313-L321"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 735,
+          "line_end": 753,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L735-L753"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 1084,
+          "line_end": 1093,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L1084-L1093"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 1633,
+          "line_end": 1636,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L1633-L1636"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 114,
+          "line_end": 124,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L114-L124"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 105,
+          "line_end": 120,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L105-L120"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 144,
+          "line_end": 178,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L144-L178"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/interp/frame_interpolation.cpp",
+          "line_start": 184,
+          "line_end": 200,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/interp/frame_interpolation.cpp#L184-L200"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PRES-085",
+      "claim": "Si captura pendiente no entró en lista2D por capacidad/fase y no hay otro consumidor que la dibuje,flag1 conserva gate de ticks separados. No demuestra bloqueo alcanzable; capture_delete con pausafalse tampoco garantiza borrar una captura no pintada.",
+      "level": "STATIC_INFERRED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 219,
+          "line_end": 223,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L219-L223"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 1084,
+          "line_end": 1093,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L1084-L1093"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_menu_window.cpp",
+          "line_start": 1650,
+          "line_end": 1657,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_menu_window.cpp#L1650-L1657"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_drawlist.cpp",
+          "line_start": 2002,
+          "line_end": 2009,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_drawlist.cpp#L2002-L2009"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/m_Do/m_Do_main.cpp",
+          "line_start": 286,
+          "line_end": 313,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_main.cpp#L286-L313"
         }
       ],
       "limitations": [
