@@ -83,3 +83,5 @@ CP-R38 PRES-089 STATIC_INFERRED: KYTAG08 publica fog_avoid_tag y Delete no lo li
 CP-R39 PRES-090..093: mAnmRate interno sin clamp; tracks comparten frame y callback cambia animación durante árbol,con assets compatibles como precondición. ModelData posee callback común,userArea actor por instancia. ERROR_EXIT nulifica,no acredita frees; heap/ARC/sound separados,sin leak ni Windows coexistencia observados.
 
 CP-R40 PRES-097 STATIC_INFERRED: keys globales compartidas entre conjuntos de mods; forget/detach de uno puede borrar muestra del otro. MOD_OK registro fuera de recording no prueba muestra; lookup copia/no garantiza out en fallo. Sin prioridad/refcount/rollback previo ni runtime certificado.
+
+CP-R41 PLAYER-066/067: TimerStart/End wrappers descartan retorno interno; true no acredita running/resultado actualizado. Meta copia RAM aun si End falla; DeleteRequest difiere a closeAnime. Modo compartido no da ownership por actor; sin bloqueo,récord ni runtime observados.

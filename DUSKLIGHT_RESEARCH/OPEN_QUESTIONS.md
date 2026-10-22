@@ -24,3 +24,5 @@ Bloqueos que no impiden continuar: submódulos ausentes y falta de runtime Windo
 CP-R39 Q-10: PRES-090..093 contrastan McaMorf2/Coach A-B frente a morph temporal,callback joint/sonido/cleanup. No implica skin/LOD ni compatibilidad universal; faltan árbol asset,sharing y disposers ante fallo. Mantener pregunta parcial.
 
 CP-R40 Q-14/ownership: PRES-094..097 aclaran InterpService,ventana,copia3x4,lookup/fallback y conflicto de keys globales; SDK-013 precisado. No contiene callbacks de mod: Q-01/Q-02 no se cierran por esta API. Falta coexistencia real,otros arbitrajes y runtime.
+
+CP-R41 Q-12: PLAYER-065..068 contrastan StartAndGoal/Timer,caller cut,ready/running,wrappers que no propagan rechazo,meta→MsgTime y cleanup diferido. No carrera integral,récord,recompensa ni persistencia; resto de temporizadores sigue pendiente.

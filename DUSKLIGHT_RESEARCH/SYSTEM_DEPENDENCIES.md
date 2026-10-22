@@ -95,3 +95,5 @@ CP-R38 PRES-086..089: environment_weather_time(KYTAG08)→models_animations_mate
 CP-R39 PRES-090..093: models_animations_materials→actors_ai_npcs(contexto userArea),audio_particles_effects(BAS/sound prestado),memory_ownership(heap/ModelData/arrays) y runtime_and_lifecycle(fase exec/draw/cleanup). Callback joint y morph temporal no son callbacks SDK ni pesos de audio continuos.
 
 CP-R40 PRES-094..097: sdk_services(InterpService)→runtime_and_lifecycle(ventana)→cameras_rendering(sombra fallback). Registro por mod y muestras globales tienen identidades/vidas distintas; owner-key no es namespace aislado. SDK-013 aclara buffer copiado,no userdata retenida.
+
+CP-R41 PLAYER-065..068: other_systems(StartAndGoal)→cutscenes_dialogue(cut caller,MsgTime formatter)→hud_ui_text(Timer screen/msg)→runtime_and_lifecycle(borrado tras closeAnime). Global modo/puntero/tiempo no son propiedad de actor por requestID ni save durable.

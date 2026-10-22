@@ -9328,5 +9328,87 @@
     "evidence_ids": [
       "PRES-095"
     ]
+  },
+  {
+    "symbol": "daStartAndGoal_c::readyStartTimer",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_startAndGoal.cpp",
+      "line_start": 94,
+      "line_end": 102,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_startAndGoal.cpp#L94-L102"
+    },
+    "signature": "int daStartAndGoal_c::readyStartTimer()",
+    "purpose": "Pide inicio por modo y pasa acción1; consumidor distingue isStart.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Timer global creado y modo compatible para wrappertrue."
+    ],
+    "risks": [
+      "No ownership por requestID en esta ruta; retorno1 no running."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-065",
+      "PLAYER-066"
+    ]
+  },
+  {
+    "symbol": "dTimer_c::end",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_timer.cpp",
+      "line_start": 463,
+      "line_end": 477,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_timer.cpp#L463-L477"
+    },
+    "signature": "int dTimer_c::end(int param_0)",
+    "purpose": "Congela resultado en modo6 y publica tiempo acumulado RAM,solo desde modo4.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "m_mode==4; clock/offset válidos."
+    ],
+    "risks": [
+      "Wrapper TimerEnd descarta rechazo; no persistencia ni premio."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-067"
+    ]
+  },
+  {
+    "symbol": "dTimer_c::_delete",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_timer.cpp",
+      "line_start": 326,
+      "line_end": 354,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_timer.cpp#L326-L354"
+    },
+    "signature": "int dTimer_c::_delete()",
+    "purpose": "Retira screen/heap/ARC y puntero global; conserva tiempoRAM según modo/estado.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Invocado por lifecycle de proceso mensaje."
+    ],
+    "risks": [
+      "DeleteRequest anterior espera animación; no dueño lógico por caller ni durabilidad de stock."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-068"
+    ]
   }
 ]

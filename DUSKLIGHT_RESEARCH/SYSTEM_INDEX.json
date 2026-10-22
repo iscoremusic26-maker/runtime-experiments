@@ -1123,7 +1123,7 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "READ global: cadenas previas y CP-R37 tag tienda→display→evento024→stock RAM/visibilidad→cleanup; no transacción económica integral.",
+    "scope": "READ global: cadenas previas y CP-R41 StartAndGoal→timer global→ready/running→meta/tiempo de mensaje→borrado diferido; sin minijuego íntegro,récord ni recompensa.",
     "reports": [
       "systems/other_systems.md"
     ],
@@ -1136,6 +1136,7 @@
       "include/d/actor/d_a_tag_myna2.h",
       "include/d/actor/d_a_tag_shop_item.h",
       "include/d/d_com_inf_game.h",
+      "include/d/d_meter2_info.h",
       "include/d/d_particle.h",
       "include/d/d_save.h",
       "include/d/d_shop_system.h",
@@ -1151,11 +1152,13 @@
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_npc4.cpp",
       "src/d/actor/d_a_npc_myna2.cpp",
+      "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
       "src/d/actor/d_a_shop_item.cpp",
+      "src/d/actor/d_a_startAndGoal.cpp",
       "src/d/actor/d_a_tag_myna2.cpp",
       "src/d/actor/d_a_tag_shop_item.cpp",
       "src/d/d_a_itembase_static.cpp",
@@ -1165,13 +1168,17 @@
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
       "src/d/d_kankyo.cpp",
+      "src/d/d_lib.cpp",
+      "src/d/d_msg_class.cpp",
       "src/d/d_msg_flow.cpp",
       "src/d/d_particle.cpp",
       "src/d/d_s_play.cpp",
       "src/d/d_save.cpp",
       "src/d/d_shop_system.cpp",
+      "src/d/d_timer.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_op/f_op_msg_mng.cpp",
       "src/f_pc/f_pc_create_req.cpp"
     ],
     "pending": [
@@ -1188,6 +1195,7 @@
       "include/d/actor/d_a_tag_myna2.h",
       "include/d/actor/d_a_tag_shop_item.h",
       "include/d/d_com_inf_game.h",
+      "include/d/d_meter2_info.h",
       "include/d/d_particle.h",
       "include/d/d_save.h",
       "include/d/d_shop_system.h",
@@ -1203,11 +1211,13 @@
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_npc4.cpp",
       "src/d/actor/d_a_npc_myna2.cpp",
+      "src/d/actor/d_a_npc_theB.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
       "src/d/actor/d_a_obj_lv6Lblock.cpp",
       "src/d/actor/d_a_obj_swpush.cpp",
       "src/d/actor/d_a_obj_swspinner.cpp",
       "src/d/actor/d_a_shop_item.cpp",
+      "src/d/actor/d_a_startAndGoal.cpp",
       "src/d/actor/d_a_tag_myna2.cpp",
       "src/d/actor/d_a_tag_shop_item.cpp",
       "src/d/d_a_itembase_static.cpp",
@@ -1217,13 +1227,17 @@
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
       "src/d/d_kankyo.cpp",
+      "src/d/d_lib.cpp",
+      "src/d/d_msg_class.cpp",
       "src/d/d_msg_flow.cpp",
       "src/d/d_particle.cpp",
       "src/d/d_s_play.cpp",
       "src/d/d_save.cpp",
       "src/d/d_shop_system.cpp",
+      "src/d/d_timer.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
+      "src/f_op/f_op_msg_mng.cpp",
       "src/f_pc/f_pc_create_req.cpp"
     ],
     "dependencies": [
@@ -1236,7 +1250,10 @@
       "cutscenes_dialogue",
       "audio_particles_effects",
       "environment_weather_time",
-      "inventory_equipment"
+      "inventory_equipment",
+      "hud_ui_text",
+      "runtime_and_lifecycle",
+      "save_load"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1264,7 +1281,11 @@
       "PLAYER-061",
       "PLAYER-062",
       "PLAYER-063",
-      "PLAYER-064"
+      "PLAYER-064",
+      "PLAYER-065",
+      "PLAYER-066",
+      "PLAYER-067",
+      "PLAYER-068"
     ]
   },
   {

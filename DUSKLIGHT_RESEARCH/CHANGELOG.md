@@ -169,3 +169,7 @@ Padre remoto verificado fefe1bbbb9c0a694875a11859c181d53caed6a03. PRES-090..093:
 ## CP-R40 — InterpService,ventana,copias y conflicto de claves
 
 Padre remoto verificado 5f20c5cb3a2ef46009de148686730c281160644a. PRES-094..096: InterpService registro→ventana/copias→mapas→sombra/RAII→forget/detach; PRES-097 conflicto condicionado de claves globales. SDK-013 y símbolo servicio aclarados; dos slots oficiales y helper potencial nuevos. No callback nuevo ni prueba de coexistencia; matrices y keys tienen vidas distintas. Neto de esta sesión frente a CP-R34:+24 evidencias,+18 símbolos,+1 fichas. Solo atlas,sin build ni runtime.
+
+## CP-R41 — StartAndGoal,timer global y resultadoRAM
+
+Padre remoto verificado 7cdce813a49f86e140382486f1bc773f5fdbf9d9. PLAYER-065..068: cut→StartAndGoal→creación/inicio Timer→ready/running→meta→MsgTime formatter→DeleteRequest/cleanup. Tres símbolos potenciales; other_systems ampliado. Wrappers no propagan rechazo interno; resultadoRAM no es récord/premio/save; backend y assets no certificados. Neto de esta sesión frente a CP-R34:+28 evidencias,+21 símbolos,+1 fichas. Solo atlas,sin build ni runtime.
