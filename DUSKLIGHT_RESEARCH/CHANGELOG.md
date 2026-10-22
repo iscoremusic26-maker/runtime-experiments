@@ -335,3 +335,7 @@ Padre remoto verificado aa5a90503be9fc9817d3a2a482f963cd5efecf97. PRES-147..149 
 ## CP-R81 — Mirilla: evento, modos de escena y snapshot de retorno
 
 Padre remoto verificado 6e1e53fa5a39c2801d1243627e7e2ff093b47058. ARCH-025..027 STATIC_CROSSCHECKED,028 STATIC_INFERRED: KYTAG05→PEEP_HOLE→modos6/7→TurnRestart/cámara. Latch previo a SCLS y retorno sin ACK delimitados. Dos localizadores internos;assets/rollbackglobal pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R82 — UiService: menú contextual, acción y cierre diferido
+
+Padre remoto verificado a044c434e83af22e5992eae5f4b2cc07bae4e406. CALLBACK-047..049 STATIC_CROSSCHECKED: copias→menuhandle retirado antes de acción→gatesancla/active→documento destruido después. Dos slots oficiales y unlocalizador interno. Reentrancia/DLL/backendRml pendientes. Sin mod,build ni runtime; solo atlas.

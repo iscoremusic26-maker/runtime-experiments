@@ -104,3 +104,5 @@ CP-R79 Q-13: PORT-029..031 añaden diagnóstico stub→buffer temporal→ImGui/P
 CP-R80 Q-11: PRES-147..150 contrastan KYTAG13→subrango→packet nieve→draw/cleanup. PRES-150 rango especial sin clamp final es inferencia condicionada,assets no consultados. Orden multitag/interp/ground/salida de room siguen parciales. KYTAG05 no era ruta ambiental.
 
 CP-R81 Q-09: ARCH-025..028 añaden KYTAG05/PEEP_HOLE→Link→mode6/7→TurnRestart/cámara. RechazoSCLS tras latch es inferencia condicionada;assets/eventcuts y recuperación global pendientes. No repetir helper/cola nominal ya auditados.
+
+CP-R82 Q-01/Q-02/Q-14: CALLBACK-047..049 precisan contextmenu dismiss→retirarhandle→revalidarancla/active→acción→destrucción diferida. Reentrancia durantefocus/callback,DLL y backendRml siguen NOT_VERIFIED. No repetir controles/button ni documentos generales.

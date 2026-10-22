@@ -12135,5 +12135,89 @@
     "evidence_ids": [
       "ARCH-027"
     ]
+  },
+  {
+    "symbol": "UiService::context_menu_push",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/ui.h",
+      "line_start": 452,
+      "line_end": 454,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/ui.h#L452-L454"
+    },
+    "signature": "ModResult (*context_menu_push)(ModContext*, UiElementHandle, const UiContextMenuDesc*, UiContextMenuHandle*)",
+    "purpose": "Crear menú contextual anclado y copia de sus entradas",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Ui2.3 y anclaowned visible/habilitada en topdoc"
+    ],
+    "risks": [
+      "Fn/userdata prestados;OK no acción ni render"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-023",
+      "CALLBACK-047"
+    ]
+  },
+  {
+    "symbol": "UiService::context_menu_close",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/ui.h",
+      "line_start": 455,
+      "line_end": 455,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/ui.h#L455-L455"
+    },
+    "signature": "ModResult (*context_menu_close)(ModContext*, UiContextMenuHandle)",
+    "purpose": "Solicitar cierre retirandohandle antes de destruir documento",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Handleowned válido"
+    ],
+    "risks": [
+      "No callbackdrain ni DLLunload certificado"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-048",
+      "CALLBACK-049"
+    ]
+  },
+  {
+    "symbol": "dusk::ui::Popover::notify_close",
+    "kind": "method",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/ui/popover.cpp",
+      "line_start": 154,
+      "line_end": 163,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/popover.cpp#L154-L163"
+    },
+    "signature": "void dusk::ui::Popover::notify_close(bool)",
+    "purpose": "Consumir onClose y restaurar foco de ancla",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Documento/ancla válidos segúnobservadores"
+    ],
+    "risks": [
+      "Reentranciafocus/usuario no universalmente segura"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-048",
+      "CALLBACK-049"
+    ]
   }
 ]

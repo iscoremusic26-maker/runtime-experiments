@@ -165,3 +165,5 @@ CP-R79: callback stub retorna true aunque SendToStubLog omita por pausa/umbral; 
 CP-R80 / PRES-150 STATIC_INFERRED: nibble de partición puede generar fin>500 en rooms9/7/13 pese a clamp inicialmMax; si se ejecuta,índices exceden array. Sin parámetros reales/crash probado. Delete tag no revierte poolglobal,Create puede resetear efectos compartidos;switchOFF no sale de update.
 
 CP-R81 / ARCH-028 STATIC_INFERRED: startPeepChange latchea antes deSCLS,ignora retorno ytrue no garantizaNextStage;sin rollback local. Búsqueda de tag alretorno usa thresholdpersistente y no prueba parent/room. Sin softlock/runtime observado.
+
+CP-R82: menuhandle retirado antes de callback no implica que fn/userdata hayan desaparecido del documento. Ancla/active son gatesprevios,ninguna barrera durante callback. CloseOK no destrucción completada;transiciónend y forcehide son rutas distintas. Sin crash/unloadruntime observado.

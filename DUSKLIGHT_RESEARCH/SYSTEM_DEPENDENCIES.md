@@ -175,3 +175,5 @@ CP-R79 PORT-029..031: logging options.divert —backend no disponible→ callbac
 CP-R80 PRES-147..150: parámetros/room→KYTAG13 escribe nieve prestada→weather posee packet→lista translúcida→GX;countnormal y counttag separados. Cleanup global KYEFF distinto de Delete tag. [Ambiente](systems/environment_weather_time.md).
 
 CP-R81 ARCH-025..028: atenciónKYTAG05→orden/eventSTART→Linklatch→SCLS/NextStage→mode6peep→input→mode7→posición/cámara TurnRestart. Estado porvalor sobrevive a actor;no rollback transaccional. [Lifecycle](systems/runtime_and_lifecycle.md).
+
+CP-R82 CALLBACK-047..049: descriptorcopiado→UiSlotmenu/documento→dismiss/oncloseerase→anchorlive+active→callback→transitionend/closed/UIerase. Moddetach toma slots y forcehide;ownership distintos. [Callbacks](systems/callback_ownership_and_cancellation.md).

@@ -2017,7 +2017,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: rutasprevias y CP-R76 NetTCPpoll/send/close y helperviews;endpointhelper inferido,sin backendcertificado.",
+    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R82 menúcontextual copia→dismiss/retirada→callbackancla/active→destrucción diferida;sin barrera universal de reentrancia/unload.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -2069,7 +2069,13 @@
       "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
       "src/dusk/ui/button.cpp",
+      "src/dusk/ui/context_menu.cpp",
+      "src/dusk/ui/context_menu.hpp",
+      "src/dusk/ui/document.cpp",
+      "src/dusk/ui/document.hpp",
       "src/dusk/ui/mod_window.cpp",
+      "src/dusk/ui/popover.cpp",
+      "src/dusk/ui/ui.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/m_Do/m_Do_main.cpp"
     ],
@@ -2125,7 +2131,13 @@
       "src/dusk/mods/svc/window.cpp",
       "src/dusk/ui/bool_button.cpp",
       "src/dusk/ui/button.cpp",
+      "src/dusk/ui/context_menu.cpp",
+      "src/dusk/ui/context_menu.hpp",
+      "src/dusk/ui/document.cpp",
+      "src/dusk/ui/document.hpp",
       "src/dusk/ui/mod_window.cpp",
+      "src/dusk/ui/popover.cpp",
+      "src/dusk/ui/ui.cpp",
       "src/f_ap/f_ap_game.cpp",
       "src/m_Do/m_Do_main.cpp"
     ],
@@ -2187,7 +2199,10 @@
       "CALLBACK-043",
       "CALLBACK-044",
       "CALLBACK-045",
-      "CALLBACK-046"
+      "CALLBACK-046",
+      "CALLBACK-047",
+      "CALLBACK-048",
+      "CALLBACK-049"
     ]
   },
   {
