@@ -114,3 +114,5 @@ CP-R84 Q-12: PLAYER-103..106 añaden SekizoaTYPE0/1→eventJUMP/GOAL→SekiDoor�
 CP-R85 Q-01/Q-02: CALLBACK-050..052 contrastan Flow register_query→PROBE/EXECUTE→arista y retiro. No asumir pureza, exactly-once, owner.active gate o drenaje; graph mutation/reentrada/DLL permanecen NOT_VERIFIED. Alternar Q-11; no repetir Message resolver.
 
 CP-R86 Q-11: PRES-154..156 contrastan KYTAG01 variante0 dos switches→fade→fog/gather→consumo→delete/no-op. Campo59c2 sin productor local, variantes2/otros tags,composición de stage y último escritor quedan pendientes. No afirmar niebla residual observada ni reauditar fog de TagWaterFall. Alternar modelos/formatos.
+
+CP-R87 Q-10: PRES-157..159 contrastan Title/BPK→MatColor0 y retiro, distinto de TEV/BRK. BVA tiene loader localizado sin consumidor cerrado;no crear evidencia de compatibilidad. Quedan assets,sharing,parser/fallos parciales y GPUdrain;no repetir BLS/BLK. Alternar gameplay.

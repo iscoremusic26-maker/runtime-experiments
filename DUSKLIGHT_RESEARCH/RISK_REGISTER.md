@@ -175,3 +175,5 @@ CP-R84 / PLAYER-106 STATIC_INFERRED: SekiDoorDestroyed noDelete;condición !dCom
 CP-R85 / CALLBACK-052: una query ausente, inválida o con excepción puede aportar resultado0 al consumidor, que intenta la primera arista. No es rollback ni aborto obligatorio. Copia de record/contexto no prolonga userdata, speaker ni DLL; dispatcher no incluye gate active. Reentrada/retirada durante llamada y grafo resultante pendientes, sin fallo runtime observado.
 
 CP-R86 / PRES-156: gate de room/intensidad0 y Delete de KYTAG01 no son rollback del fog global. Retención depende del último ratio (puede estar ya a0),otros escritores e inicialización;sin defecto visual observado. Cámara/jugador se dereferencian sin guardas en helper;vigencia es precondición,sin crash afirmado.
+
+CP-R87 / PRES-158/159: play/entry BPK no confirma binding (locked/materialAnm ausente);wrapper ignora retorno. Retirada desactiva slot0 sin identidad ni restore de MatColor. Riesgo condicionado a sharing, no conflicto runtime observado. Title Delete no demuestra drenaje ni manejo completo de mount parcial.

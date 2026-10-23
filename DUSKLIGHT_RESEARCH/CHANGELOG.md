@@ -355,3 +355,7 @@ Padre remoto verificado 83cfe6096ec30bde47cb4b6911680ad29135dbe2. CALLBACK-050..
 ## CP-R86 — KYTAG01: switches, intensidad de niebla y salida
 
 Padre remoto verificado ca99820563d5077d1a1cd7395c0ff237d08ba0c8. PRES-154..156 STATIC_CROSSCHECKED: variante0 de KYTAG01, anillo/cámara, switches y fade local, publicación de fog/gather, consumidor y salida sin rollback. +3 evidencias/+2 localizadores. Se reutiliza PRES-125 para setter; no render/audio observado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R87 — Title/BPK: color de material, binding y retirada
+
+Padre remoto verificado 4b57a14b43797a8295b0bffc8e5723ad63675515. PRES-157..159 STATIC_CROSSCHECKED: Title ARC/BPK13→MatColor0,frame/entry separados,backing prestado y cleanup. +3 evidencias/+2 localizadores. BVA no tiene consumidor cerrado;BLS/BLK se excluyeron por ya auditados. Sin assets/render/ABI observado. Sin mod,build ni runtime; solo atlas.

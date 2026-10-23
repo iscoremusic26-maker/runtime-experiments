@@ -564,7 +564,7 @@
   {
     "system_id": "models_animations_materials",
     "coverage": "READ",
-    "scope": "READ parcial: cadenas previas y CP-R83 Midna/invisibleModel→packets porjoint→Zsort→pase deprofundidad/limpiezadecola;LOD/skin/GPUsync no ampliados.",
+    "scope": "READ parcial: cadenas previas y CP-R87 Title/BPK→MatColor0,frame/binding separados y retirada;sin LOD/skin/BVA/Windows globales.",
     "reports": [
       "systems/models_animations_materials.md"
     ],
@@ -602,6 +602,7 @@
       "src/d/actor/d_a_obj_brakeeff.cpp",
       "src/d/actor/d_a_obj_sakuita.cpp",
       "src/d/actor/d_a_obj_wflag.cpp",
+      "src/d/actor/d_a_title.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_drawlist.cpp",
       "src/d/d_resorce.cpp",
@@ -609,6 +610,7 @@
       "src/d/d_simple_model.cpp",
       "src/dusk/interp/material.cpp",
       "src/dusk/mods/svc/texture.cpp",
+      "src/dusk/version.hpp",
       "src/f_op/f_op_actor_mng.cpp",
       "src/f_pc/f_pc_manager.cpp",
       "src/m_Do/m_Do_ext.cpp",
@@ -653,6 +655,7 @@
       "src/d/actor/d_a_obj_brakeeff.cpp",
       "src/d/actor/d_a_obj_sakuita.cpp",
       "src/d/actor/d_a_obj_wflag.cpp",
+      "src/d/actor/d_a_title.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_drawlist.cpp",
       "src/d/d_resorce.cpp",
@@ -660,6 +663,7 @@
       "src/d/d_simple_model.cpp",
       "src/dusk/interp/material.cpp",
       "src/dusk/mods/svc/texture.cpp",
+      "src/dusk/version.hpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
       "src/f_pc/f_pc_manager.cpp",
@@ -712,7 +716,10 @@
       "PRES-134",
       "PRES-151",
       "PRES-152",
-      "PRES-153"
+      "PRES-153",
+      "PRES-157",
+      "PRES-158",
+      "PRES-159"
     ]
   },
   {

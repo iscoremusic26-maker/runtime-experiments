@@ -12468,5 +12468,60 @@
     "evidence_ids": [
       "PRES-155"
     ]
+  },
+  {
+    "symbol": "mDoExt_bpkAnm::init",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/m_Do/m_Do_ext.cpp",
+      "line_start": 147,
+      "line_end": 161,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/m_Do/m_Do_ext.cpp#L147-L161"
+    },
+    "signature": "int mDoExt_bpkAnm::init(J3DMaterialTable*, J3DAnmColor*, int, int, f32, s16, s16)",
+    "purpose": "Asocia BPK prestado con material table y controller.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Recurso y tabla válidos; flags/heap del caller."
+    ],
+    "risks": [
+      "Mutación de IDs compartidos; sin ABI/export Windows certificado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-157"
+    ]
+  },
+  {
+    "symbol": "J3DMaterialTable::entryMatColorAnimator",
+    "kind": "method",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp",
+      "line_start": 169,
+      "line_end": 191,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/J3DGraphAnimator/J3DMaterialAttach.cpp#L169-L191"
+    },
+    "signature": "int J3DMaterialTable::entryMatColorAnimator(J3DAnmColor*)",
+    "purpose": "Binding de track prestado a slot0 de material color.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Tabla unlocked y materialAnm disponible."
+    ],
+    "risks": [
+      "Entry wrapper ignora códigos; retiro no restaura color ni identidad."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-158",
+      "PRES-159"
+    ]
   }
 ]
