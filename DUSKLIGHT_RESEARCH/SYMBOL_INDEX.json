@@ -12523,5 +12523,87 @@
       "PRES-158",
       "PRES-159"
     ]
+  },
+  {
+    "symbol": "daObjBombf_c::execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_bombf.cpp",
+      "line_start": 66,
+      "line_end": 93,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_bombf.cpp#L66-L93"
+    },
+    "signature": "int daObjBombf_c::execute()",
+    "purpose": "Tracker de ID: anclaje,ausencia,counter y reposición.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Modelo/actor creados; contador por ejecuciones."
+    ],
+    "risks": [
+      "ID no es ownership; delete de planta no elimina bomba."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-107",
+      "PLAYER-109"
+    ]
+  },
+  {
+    "symbol": "fpcFCtRq_Request",
+    "kind": "function",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/f_pc/f_pc_fstcreate_req.cpp",
+      "line_start": 26,
+      "line_end": 58,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/f_pc/f_pc_fstcreate_req.cpp#L26-L58"
+    },
+    "signature": "base_process_class* fpcFCtRq_Request(layer_class*, s16, fstCreateFunc, void*, void*)",
+    "purpose": "FastCreate inicial y request pendiente de publicación en cola.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Perfil usable/alloc y SubCreate NEXT."
+    ],
+    "risks": [
+      "Puntero noNULL no confirma ejecución; ABI/export Windows pendientes."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-108"
+    ]
+  },
+  {
+    "symbol": "daNbomb_c::procFlowerWait",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_nbomb.cpp",
+      "line_start": 1074,
+      "line_end": 1097,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_nbomb.cpp#L1074-L1097"
+    },
+    "signature": "BOOL daNbomb_c::procFlowerWait()",
+    "purpose": "Crecimiento→carry/daño y salida de estado de flor.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Bombf/recursos y jugador válidos;gates de daño/tiempo."
+    ],
+    "risks": [
+      "No universalizar a todas las bombas ni medir temporizadores en segundos."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-109"
+    ]
   }
 ]

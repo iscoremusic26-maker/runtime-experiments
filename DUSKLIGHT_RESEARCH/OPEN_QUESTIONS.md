@@ -116,3 +116,5 @@ CP-R85 Q-01/Q-02: CALLBACK-050..052 contrastan Flow register_query→PROBE/EXECU
 CP-R86 Q-11: PRES-154..156 contrastan KYTAG01 variante0 dos switches→fade→fog/gather→consumo→delete/no-op. Campo59c2 sin productor local, variantes2/otros tags,composición de stage y último escritor quedan pendientes. No afirmar niebla residual observada ni reauditar fog de TagWaterFall. Alternar modelos/formatos.
 
 CP-R87 Q-10: PRES-157..159 contrastan Title/BPK→MatColor0 y retiro, distinto de TEV/BRK. BVA tiene loader localizado sin consumidor cerrado;no crear evidencia de compatibilidad. Quedan assets,sharing,parser/fallos parciales y GPUdrain;no repetir BLS/BLK. Alternar gameplay.
+
+CP-R88 Q-12: PLAYER-107..109 contrastan Bombf/NBOMB fastCreate→crecimiento/carry→lookup ausente→reposicion150. Recolección no inicia por sí sola reposición;Delete padre no borra hijo. Unload/room,otros estados de bombas y callbacks de daño completos pendientes. Alternar servicio/soporte;no reauditar scheduler.

@@ -1489,7 +1489,7 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "CROSSCHECKED selectiva: familias previas y CP-R84 SekizoaTYPE0/1→cutJump/GOAL→SekiDoor→SW2/recarga;assets/parejas/cleanupglobal pendientes.",
+    "scope": "CROSSCHECKED selectiva: familias previas y CP-R84 SekizoaTYPE0/1→cutJump/GOAL→SekiDoor→SW2/recarga;assets/parejas/cleanupglobal pendientes. CP-R88 añade Bombf/NBOMB tracker→carry→ausencia/reposición, sin cobertura global.",
     "reports": [
       "systems/other_systems.md"
     ],
@@ -1508,12 +1508,14 @@
       "include/d/actor/d_a_shop_item.h",
       "include/d/actor/d_a_tag_myna2.h",
       "include/d/actor/d_a_tag_shop_item.h",
+      "include/d/d_bomb.h",
       "include/d/d_com_inf_game.h",
       "include/d/d_meter2_info.h",
       "include/d/d_particle.h",
       "include/d/d_save.h",
       "include/d/d_shop_system.h",
       "include/f_op/f_op_actor_mng.h",
+      "include/f_pc/f_pc_manager.h",
       "include/f_pc/f_pc_name.h",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_boom.inc",
@@ -1529,11 +1531,13 @@
       "src/d/actor/d_a_mg_fshop.cpp",
       "src/d/actor/d_a_mg_rod.cpp",
       "src/d/actor/d_a_midna.cpp",
+      "src/d/actor/d_a_nbomb.cpp",
       "src/d/actor/d_a_npc.cpp",
       "src/d/actor/d_a_npc4.cpp",
       "src/d/actor/d_a_npc_henna.cpp",
       "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_npc_theB.cpp",
+      "src/d/actor/d_a_obj_bombf.cpp",
       "src/d/actor/d_a_obj_carry.cpp",
       "src/d/actor/d_a_obj_digplace.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
@@ -1556,6 +1560,7 @@
       "src/d/d_bg_s_acch.cpp",
       "src/d/d_bg_s_movebg_actor.cpp",
       "src/d/d_bg_w.cpp",
+      "src/d/d_bomb.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
       "src/d/d_item.cpp",
@@ -1571,7 +1576,10 @@
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
       "src/f_op/f_op_msg_mng.cpp",
-      "src/f_pc/f_pc_create_req.cpp"
+      "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_create_req.cpp",
+      "src/f_pc/f_pc_fstcreate_req.cpp",
+      "src/f_pc/f_pc_manager.cpp"
     ],
     "pending": [
       "Pesca y minijuegos completos",
@@ -1593,12 +1601,14 @@
       "include/d/actor/d_a_shop_item.h",
       "include/d/actor/d_a_tag_myna2.h",
       "include/d/actor/d_a_tag_shop_item.h",
+      "include/d/d_bomb.h",
       "include/d/d_com_inf_game.h",
       "include/d/d_meter2_info.h",
       "include/d/d_particle.h",
       "include/d/d_save.h",
       "include/d/d_shop_system.h",
       "include/f_op/f_op_actor_mng.h",
+      "include/f_pc/f_pc_manager.h",
       "include/f_pc/f_pc_name.h",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_boom.inc",
@@ -1614,11 +1624,13 @@
       "src/d/actor/d_a_mg_fshop.cpp",
       "src/d/actor/d_a_mg_rod.cpp",
       "src/d/actor/d_a_midna.cpp",
+      "src/d/actor/d_a_nbomb.cpp",
       "src/d/actor/d_a_npc.cpp",
       "src/d/actor/d_a_npc4.cpp",
       "src/d/actor/d_a_npc_henna.cpp",
       "src/d/actor/d_a_npc_myna2.cpp",
       "src/d/actor/d_a_npc_theB.cpp",
+      "src/d/actor/d_a_obj_bombf.cpp",
       "src/d/actor/d_a_obj_carry.cpp",
       "src/d/actor/d_a_obj_digplace.cpp",
       "src/d/actor/d_a_obj_fireWood.cpp",
@@ -1641,6 +1653,7 @@
       "src/d/d_bg_s_acch.cpp",
       "src/d/d_bg_s_movebg_actor.cpp",
       "src/d/d_bg_w.cpp",
+      "src/d/d_bomb.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event_manager.cpp",
       "src/d/d_item.cpp",
@@ -1656,7 +1669,10 @@
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
       "src/f_op/f_op_msg_mng.cpp",
-      "src/f_pc/f_pc_create_req.cpp"
+      "src/f_pc/f_pc_base.cpp",
+      "src/f_pc/f_pc_create_req.cpp",
+      "src/f_pc/f_pc_fstcreate_req.cpp",
+      "src/f_pc/f_pc_manager.cpp"
     ],
     "dependencies": [
       "actors_ai_npcs",
@@ -1731,7 +1747,10 @@
       "PLAYER-103",
       "PLAYER-104",
       "PLAYER-105",
-      "PLAYER-106"
+      "PLAYER-106",
+      "PLAYER-107",
+      "PLAYER-108",
+      "PLAYER-109"
     ]
   },
   {

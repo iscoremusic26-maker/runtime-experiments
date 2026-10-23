@@ -177,3 +177,5 @@ CP-R85 / CALLBACK-052: una query ausente, inválida o con excepción puede aport
 CP-R86 / PRES-156: gate de room/intensidad0 y Delete de KYTAG01 no son rollback del fog global. Retención depende del último ratio (puede estar ya a0),otros escritores e inicialización;sin defecto visual observado. Cámara/jugador se dereferencian sin guardas en helper;vigencia es precondición,sin crash afirmado.
 
 CP-R87 / PRES-158/159: play/entry BPK no confirma binding (locked/materialAnm ausente);wrapper ignora retorno. Retirada desactiva slot0 sin identidad ni restore de MatColor. Riesgo condicionado a sharing, no conflicto runtime observado. Title Delete no demuestra drenaje ni manejo completo de mount parcial.
+
+CP-R88 / PLAYER-107..109: ID observado no es ownership de NBOMB. FastCreateNULL conserva retry con contador0;éxito de SubCreate aún depende de publicar request en ExecuteQ. Retirar planta no cancela bomba por este destructor. Sin duplicación,crash o temporalidad runtime observados.

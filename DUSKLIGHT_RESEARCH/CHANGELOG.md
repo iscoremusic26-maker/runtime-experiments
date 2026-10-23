@@ -359,3 +359,7 @@ Padre remoto verificado ca99820563d5077d1a1cd7395c0ff237d08ba0c8. PRES-154..156 
 ## CP-R87 — Title/BPK: color de material, binding y retirada
 
 Padre remoto verificado 4b57a14b43797a8295b0bffc8e5723ad63675515. PRES-157..159 STATIC_CROSSCHECKED: Title ARC/BPK13→MatColor0,frame/entry separados,backing prestado y cleanup. +3 evidencias/+2 localizadores. BVA no tiene consumidor cerrado;BLS/BLK se excluyeron por ya auditados. Sin assets/render/ABI observado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R88 — Bombf: creación rápida, ID y reposición
+
+Padre remoto verificado 52c637f012f513dc8ecc94e629a94ba90694fb73. PLAYER-107..109 STATIC_CROSSCHECKED: planta/Bombf→fastCreate NBOMB→crecimiento/carry→ausencia/counter150→reposición y cleanup independiente. +3 evidencias/+3 localizadores. FastCreate puntero no es request asíncrono ni primera Execute;NULL GetID seguro. Sin mod,build ni runtime; solo atlas.
