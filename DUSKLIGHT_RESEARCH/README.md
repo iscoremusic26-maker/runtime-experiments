@@ -1,6 +1,6 @@
 # Atlas técnico general de Dusklight 2.0.3 para mods .dusk
 
-Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`); objetivo Windows x64 / DirectX 12 / GZ2E01 USA. **CP-R97: Guía de consulta y mapa de propiedad y fronteras; sin mod objetivo.** La cobertura es selectiva y se declara por sistema, sin afirmar comprensión completa del juego.
+Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`); objetivo Windows x64 / DirectX 12 / GZ2E01 USA. **CP-R98: Dictamen V1_READY_STATIC_ONLY y consistencia final; sin mod objetivo.** La cobertura es selectiva y se declara por sistema, sin afirmar comprensión completa del juego.
 
 ## Acceso rápido
 
@@ -40,8 +40,10 @@ Soporte adicional: [comandos host,parser y lifecycle de consola](systems/port_co
 
 Soporte adicional: [diagnóstico de disco,worker y cancelación](systems/port_disc_validation.md),solo fuente; sin inspeccionar imágenes personales ni verificar bytes de un disco.
 
-Puerta de primera versión estática: [criterios,brechas priorizadas y dictamen](V1_READINESS.md). CP-R97: V1_NOT_READY hasta comprobar consistencia final;guía y auditoría enfocada publicadas;los seis READ no son por sí solos un defecto.
+Puerta de primera versión estática: [criterios,brechas priorizadas y dictamen](V1_READINESS.md). CP-R98: V1_READY_STATIC_ONLY como referencia documental selectiva;guía,auditoría y comprobación final publicadas. No es certificación de mods,ABI o runtime;los seis READ no son por sí solos un defecto.
 
 Auditoría de alto riesgo: [correcciones de clasificación, rutas tipadas y límites](AUDIT_FINDINGS.md), CP-R96. Sin nuevos IDs;89→87 registros OFFICIAL_SERVICE, no conteo de slots auditados.
 
 [Guía de consulta por capacidad, propiedad de recursos y fronteras del port](ATLAS_GUIDE.md):cómo pasar de necesidad abstracta a contrato/evidencia/lifecycle sin diseñar un mod.
+
+Reproducibilidad documental: [resumen canónico de inventario R00](INVENTORY_SUMMARY.json) y [validador protegido de referencias](tools/validate_atlas.py). Enlazarlos no altera sus blobs ni rehace el inventario.

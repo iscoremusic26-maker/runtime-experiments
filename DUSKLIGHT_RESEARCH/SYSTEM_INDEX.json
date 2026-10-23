@@ -2401,7 +2401,7 @@
   {
     "system_id": "documentation",
     "coverage": "INVENTARIED",
-    "scope": "Inventario de documentación upstream; atlas navegable por sistemas/evidencias. Auditoría enfocada C01 y guía C02 publicadas;C03 pendiente para dictamen V1. INVENTARIED no se promueve por documentación propia.",
+    "scope": "Documentación upstream inventariada;atlas general estático navegable y auditado selectivamente. C01/C02/C03 realizados,dictamen V1_READY_STATIC_ONLY en V1_READINESS. No implica lectura completa de documentación upstream ni promoción canónica.",
     "reports": [
       "SYSTEM_DEPENDENCIES.md",
       "INVENTORY.md",
@@ -2415,8 +2415,8 @@
     ],
     "dependencies": [],
     "pending": [
-      "C03: comprobar consistencia referencial/métricas/cobertura, diferencias remotas y blobs protegidos;dictamen V1 estática solo con criterios I–VIII satisfechos.",
-      "Documentación upstream inventariada no equivale a lectura semántica completa;mantener alcance del pin y límites runtime."
+      "Mantenimiento por preguntas concretas:contrastar contrato/implementación/consumidor,error y cleanup sin duplicar evidencia.",
+      "Documentación upstream inventariada no equivale a lectura completa;ABI/exports/runtime y backends externos conservan bloqueos explícitos."
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": []

@@ -136,3 +136,5 @@ CP-R95 prioriza cierre documental en V1_READINESS:V1-C01 auditoría semántica d
 CP-R96 / Q-04 y clasificación transversal: dos etiquetas oficiales corregidas con trazabilidad en [AUDIT_FINDINGS](AUDIT_FINDINGS.md);no se resolvió export/ABI Windows. V1-C01 realizado;C02 guía y C03 comprobación final aún críticos para el dictamen. Sin IDs nuevos ni cierre de grupos Q.
 
 CP-R97: [Guía](ATLAS_GUIDE.md) satisface V1-C02 con rutas existentes,sin IDs nuevos. Las mejoras técnicas diferibles de seis áreas READ permanecen abiertas;ningún grupo Q se cierra por publicar navegación. C03 es primera acción de cierre documental.
+
+CP-R98: C01/C02/C03 completados al alcance documental;dictamen [V1_READY_STATIC_ONLY](V1_READINESS.md). Q-01..14 conservan estados técnicos anteriores. No investigación masiva pendiente para V1;continuar solo por pregunta concreta. Candidato diferible Q-10/HUD:seguir moveLife→consumidor drawLife en d_meter2/d_meter2_draw,comparando PRES-019 y PLAYER-097/098 antes de abrir evidencia nueva. Sin estudio adicional ejecutado de esa cadena en este CP.

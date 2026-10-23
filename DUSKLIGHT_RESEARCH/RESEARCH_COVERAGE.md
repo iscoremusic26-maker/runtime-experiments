@@ -1,4 +1,4 @@
-# Cobertura real — CP-R97
+# Cobertura real — CP-R98
 
 ## Alcance y denominadores
 
@@ -32,11 +32,11 @@ Los 25 contratos C del SDK se contrastaron con fronteras seleccionadas de implem
 | `other_systems` | READ | [systems/other_systems.md](systems/other_systems.md) |
 | `environment_weather_time` | READ | [systems/environment_weather_time.md](systems/environment_weather_time.md) |
 | `memory_ownership` | CROSSCHECKED | [systems/memory_ownership.md](systems/memory_ownership.md) |
-| `platform_backend` | READ | [systems/memory_ownership.md](systems/memory_ownership.md) |
+| `platform_backend` | READ | [pin y gitlinks](SOURCE_PIN.md), [ABI](HOOKING_AND_ABI.md), [memoria](systems/memory_ownership.md), [dependencias](SYSTEM_DEPENDENCIES.md);internals externos bloqueados |
 | `prior_research` | CROSSCHECKED | [PRIOR_RESEARCH.md](PRIOR_RESEARCH.md) |
 | `callback_ownership_and_cancellation` | CROSSCHECKED | [systems/callback_ownership_and_cancellation.md](systems/callback_ownership_and_cancellation.md) |
 | `build_tooling` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
-| `documentation` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
+| `documentation` | INVENTARIED | [dependencias](SYSTEM_DEPENDENCIES.md), [inventario](INVENTORY.md), [guía](ATLAS_GUIDE.md), [auditoría](AUDIT_FINDINGS.md), [dictamen V1](V1_READINESS.md);no promoción de docs upstream |
 | `game_support` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
 | `port_support` | READ | [logros](systems/port_achievements.md), [speedrun/LiveSplit](systems/port_speedrun_livesplit.md), [presencia](systems/port_presence.md), [consola host](systems/port_commands.md), [diagnóstico disco](systems/port_disc_validation.md) |
 | `external_dependencies` | INVENTARIED | [SYSTEM_DEPENDENCIES.md](SYSTEM_DEPENDENCIES.md), [INVENTORY.md](INVENTORY.md) |
@@ -238,8 +238,10 @@ CP-R94: KYTAG09: reclasificación gráfica y selección por progreso. Cadena sel
 
 CP-R95: [auditoría de cierre V1](V1_READINESS.md) clasifica brechas de las seis áreas READ sin promoción. Platform_backend se localiza además en pin/ABI;other_systems conserva READ global. Comprobación complementaria28 scopes/pendientes/rutas y24 fichas accesibles,no semántica exhaustiva.
 
-CP-R95: Brechas priorizadas y puerta documental V1. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
+CP-R95: Brechas priorizadas y puerta documental V1. Auditoría editorial,sin nueva cadena;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
 
 CP-R96: Auditoría semántica y dos correcciones de clasificación. Revisión editorial enfocada, sin cadena nueva;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
 
 CP-R97: Guía de consulta y mapa de propiedad y fronteras. Síntesis editorial de cadenas existentes;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
+
+CP-R98: Dictamen V1_READY_STATIC_ONLY y consistencia final. Cierre documental,sin nueva cadena;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.

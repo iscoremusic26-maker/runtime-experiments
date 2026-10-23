@@ -36,3 +36,17 @@ Se filtraron los89 registros OFFICIAL_SERVICE previos:87 apuntaban a sdk/ y los 
 132 objetos source carecían de url opcional al comenzar esta revisión. Se añadieron cuatro permalinks de los registros tratados, quedando128;repo/commit/path/rangos y evidence_ids ya permitían trazarlos por el ledger. No se migraron índices por estética. Esa deuda opcional no impide navegación ni prueba ABI.
 
 Sin nuevos IDs, símbolos, fichas o niveles de cobertura. Nuevo documento complementario;las citas de esta auditoría incrementan ocurrencias/rangos según cálculo del validador, no conocimiento ejecutado. No se afirman fallos observados. Cuatro gitlinks, Android excepcional, DLL/ABI/exports Windows y0 runtime permanecen límites. V1-C02/03 siguen pendientes;este documento por sí solo no declara V1_READY_STATIC_ONLY.
+
+## Comprobación final CP-R98 — V1-C03
+
+Se contrastaron índices y navegación actuales:28 system_id únicos,scope/pending/paths/reports presentes y reports existentes;24 fichas systems indexadas y enlazadas desde README. Una comprobación de alcanzabilidad mediante enlaces relativos Markdown y rutas documentales JSON identificó dos accesos ausentes desde README:INVENTORY_SUMMARY.json y tools/validate_atlas.py. Se añadieron enlaces,sin editar esos blobs. Quedan54 archivos alcanzables desde README,incluidos los tres documentos complementarios nuevos.
+
+Se comprobaron2916 URLs presentes en los objetos source del ledger y símbolos:repo/commit/path/line_start/line_end corresponden al permalink canónico;0 discrepancias. Los128 source sin url opcional siguen trazables por campos/ledger,como explica la guía. Esta comprobación no es la validación semántica de2916 funciones ni recuento de rangos únicos. El validador protegido comprueba además rangos/IDs/enlaces del conjunto MD/JSON;el reporte mantiene su alcance editorial.
+
+Como comprobación puntual de procedencia,se comparó hash Git blob de11 archivos usados en C01 con la respuesta GitHub del upstream exacto:item.h,stage.h,hook.hpp,ui.h,game.h,save.h del SDK;svc/registry.cpp,svc/stage.cpp,item_gives.cpp;include/d/d_stage.h y docs/modding.md. Todos coinciden. Los dos blobs KYTAG09 ya se contrastaron en CP-R94. No se recalcularon19367 hashes ni se descargaron gitlinks. Esto verifica esos bytes,no el comportamiento del backend o la distribución Windows.
+
+Se conservaron sin cambio de nivel los28 scopes y las seis áreas READ. Los cinco ejemplos de la guía se contrastaron con sus claims/límites existentes:SDK-001/HOOK-029;texto PRES-036..039/056..059/068..073 y UiService;CALLBACK-001..003/023..026;WORLD-011/012/034..037;recursos PRES-001..006/018/065..067. Se precisó enlace de logging:stub corresponde a port_commands,distinto del ring en runtime. No son cadenas nuevas ni nuevos IDs.
+
+Comparación remota CP-R93→CP-R97:4 commits,19 rutas,todas DUSKLIGHT_RESEARCH/. Los nueve blobs protegidos (AGENTS,pin,dos TSV,resumen,erratas,dos scripts base y source_tree_pin) coinciden con CP-R93. CP-R98 conserva la misma restricción y exige verificación remota propia de parent/ref/tree/diff/readback;consultar el commit real de la rama para su SHA,sin inventar autorreferencia.
+
+No hay brecha documental crítica restante tras C01/C02/C03. [Readiness](V1_READINESS.md) declara V1_READY_STATIC_ONLY con alcance selectivo. Las preguntas Q-01..14,los bloqueos externos y riesgos condicionados permanecen;el dictamen no los convierte en resueltos ni en fallos runtime. No release/tag/merge/PR,mod,build,juego o integración con Claude.
