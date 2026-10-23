@@ -395,3 +395,7 @@ Padre remoto verificado e4d713d7c2d85d74a9fcf02dfc026ac6fe5677da. Auditoría edi
 ## CP-R96 — Auditoría semántica y dos correcciones de clasificación
 
 Padre remoto verificado 8e4a5492a0b31e3104a75b71c8632c0302fc9d0f. Auditoría V1-C01: item_gives_tick y stage_tgsc_data_class pasan de OFFICIAL_SERVICE a POTENTIAL_REQUIRES_VERIFICATION;WORLD-021/033 anotan la corrección sin cambiar claim/nivel. Se mantienen cinco TYPED_HOOK por procedencia explícita;UI2.3,GameService época y Save/Luau delimitados. AUDIT_FINDINGS.md registra método/alcance;0 nuevos IDs y0 símbolos netos. Oficial87/potential360/typed5. V1_NOT_READY:restan C02/C03. Sin mod,build ni runtime; solo atlas.
+
+## CP-R97 — Guía de consulta y mapa de propiedad y fronteras
+
+Padre remoto verificado 4231a4851e1aaae0930b43d7849c336e8adc4215. V1-C02: ATLAS_GUIDE.md conecta cinco capacidades abstractas con contratos,evidencias,fase/ownership/error/cleanup y verificaciones Windows pendientes. Distingue ResourceService/overlay/ARC/modelo,UIhost/J2D y API SDK/host interno/backend.0 nuevos IDs/símbolos/fichas;sin cerrar preguntas técnicas ni promover cobertura. C01/C02 realizados;C03 pendiente,V1_NOT_READY. Sin mod,build ni runtime; solo atlas.

@@ -134,3 +134,5 @@ CP-R94 Q-10: KYTAG09 film gráfico→selección por DarkClearLV→Draw BTK/BG→
 CP-R95 prioriza cierre documental en V1_READINESS:V1-C01 auditoría semántica de alto riesgo,V1-C02 guía de consulta/propiedad y V1-C03 consistencia/publicación final. No se cierran Q-01..14 ni se exige resolver todos los READ. La investigación técnica nueva se justifica por impacto, no por actor o contador.
 
 CP-R96 / Q-04 y clasificación transversal: dos etiquetas oficiales corregidas con trazabilidad en [AUDIT_FINDINGS](AUDIT_FINDINGS.md);no se resolvió export/ABI Windows. V1-C01 realizado;C02 guía y C03 comprobación final aún críticos para el dictamen. Sin IDs nuevos ni cierre de grupos Q.
+
+CP-R97: [Guía](ATLAS_GUIDE.md) satisface V1-C02 con rutas existentes,sin IDs nuevos. Las mejoras técnicas diferibles de seis áreas READ permanecen abiertas;ningún grupo Q se cierra por publicar navegación. C03 es primera acción de cierre documental.

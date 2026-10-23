@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R96",
+  "checkpoint": "CP-R97",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -40,7 +40,7 @@
   "missing_submodules": 4,
   "session_timing": {
     "current_session_started_utc": null,
-    "measured_before_publish_utc": "2026-10-23T15:53:38.528758+00:00",
+    "measured_before_publish_utc": "2026-10-23T15:56:39.689771+00:00",
     "observed_session_elapsed_seconds": null,
     "effective_research_cpu_seconds": null,
     "paused_interval_excluded": true,
@@ -59,13 +59,14 @@
   "net_added_this_session": {
     "evidence": 2,
     "symbols": 1,
-    "new_documents": 2
+    "new_documents": 3
   },
   "checkpoints_this_session": [
     "CP-R94",
     "CP-R95",
-    "CP-R96"
+    "CP-R96",
+    "CP-R97"
   ],
-  "atlas_files": 53,
+  "atlas_files": 54,
   "v1_readiness": "V1_NOT_READY"
 }

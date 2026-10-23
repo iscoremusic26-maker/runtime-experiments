@@ -201,3 +201,5 @@ CP-R92: ControllerConfig selector→pendingAction CVar prestado→neutral/poll�
 CP-R93: fish rodID/search→rod hookset/fishaction52→fish60/rod6→lure_catch flow/registro→health1release/health2delete→destructores independientes. PLAYER-110..112 conectan gameplay/controles/flow/progreso/recursos,sin garantía de persistencia.
 
 CP-R94: progreso DarkClearLV leído→KYTAG09 selector de modelo/BTK→listaBG/J3D→resDelete. Es dependencia flags/presentación/recursos, no escritor de weather (PRES-160/161).
+
+CP-R97: [Guía de consulta](ATLAS_GUIDE.md) agrupa contratos por capacidad y propiedad de buffers/ARC/modelos/animadores/panes. Es navegación de aristas existentes,no dependencia nueva ni garantía de orden global/backend.

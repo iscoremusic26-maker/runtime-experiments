@@ -2401,11 +2401,13 @@
   {
     "system_id": "documentation",
     "coverage": "INVENTARIED",
-    "scope": "Organización documental inventariada;CP-R95 incorpora puerta V1 y brechas priorizadas,sin promover cobertura técnica.",
+    "scope": "Inventario de documentación upstream; atlas navegable por sistemas/evidencias. Auditoría enfocada C01 y guía C02 publicadas;C03 pendiente para dictamen V1. INVENTARIED no se promueve por documentación propia.",
     "reports": [
       "SYSTEM_DEPENDENCIES.md",
       "INVENTORY.md",
-      "V1_READINESS.md"
+      "V1_READINESS.md",
+      "AUDIT_FINDINGS.md",
+      "ATLAS_GUIDE.md"
     ],
     "paths": [
       "docs/",
@@ -2413,7 +2415,8 @@
     ],
     "dependencies": [],
     "pending": [
-      "V1-C01 revisión semántica de alto riesgo,V1-C02 guía y V1-C03 consistencia/publicación final."
+      "C03: comprobar consistencia referencial/métricas/cobertura, diferencias remotas y blobs protegidos;dictamen V1 estática solo con criterios I–VIII satisfechos.",
+      "Documentación upstream inventariada no equivale a lectura semántica completa;mantener alcance del pin y límites runtime."
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": []

@@ -1,6 +1,6 @@
 # Puerta documental V1 — investigación estática
 
-Estado en CP-R96: **V1_NOT_READY**. Base de la auditoría: CP-R93 `240a8b7f498618d4c919db0199159ff2eb3af359`, ampliada por CP-R94 `e4d713d7c2d85d74a9fcf02dfc026ac6fe5677da`. La revisión semántica enfocada está publicada en [AUDIT_FINDINGS](AUDIT_FINDINGS.md);faltan guía y comprobación final;no se pide investigar exhaustivamente el motor para satisfacer esta puerta.
+Estado en CP-R97: **V1_NOT_READY**. Base de la auditoría: CP-R93 `240a8b7f498618d4c919db0199159ff2eb3af359`, ampliada por CP-R94 `e4d713d7c2d85d74a9fcf02dfc026ac6fe5677da`. La revisión semántica enfocada está publicada en [AUDIT_FINDINGS](AUDIT_FINDINGS.md);guía publicada en [ATLAS_GUIDE](ATLAS_GUIDE.md);falta comprobación final;no se pide investigar exhaustivamente el motor para satisfacer esta puerta.
 
 V1 significa referencia general de mecanismos representativos del pin `40457c6adb381928e4b5fef6ed459ed291edd5e2`, objetivo Windows x64/DX12/GZ2E01 USA. No significa 28 sistemas completos,451 hooks operativos,209 slots auditados o compatibilidad runtime. No release/tag/merge/PR ni integración con otro asistente.
 
@@ -9,15 +9,15 @@ V1 significa referencia general de mecanismos representativos del pin `40457c6ad
 | Criterio | Estado CP-R95 | Sustento / cierre mínimo |
 | --- | --- | --- |
 | I. Pin, plataforma y excepciones | Documentado | [SOURCE_PIN](SOURCE_PIN.md):árbol fijo, certificación histórica, cuatro gitlinks y Android excluido. Blobs protegidos conservados;no rehacer R00. |
-| II. Arquitectura y rutas generales localizables | Base comprobada;guía pendiente | [README](README.md),[sistemas](SYSTEM_INDEX.json),[SDK](SDK_AND_SERVICES.md),[matriz](DUSK_INTEGRATION_MATRIX.md). Explicar cómo elegir servicio/recurso/helper sin asumir API de gameplay. |
+| II. Arquitectura y rutas generales localizables | C02:guía publicada CP-R97 | [README](README.md),[sistemas](SYSTEM_INDEX.json),[SDK](SDK_AND_SERVICES.md),[matriz](DUSK_INTEGRATION_MATRIX.md). [Guía](ATLAS_GUIDE.md) distingue servicio/recurso/helper,UIhost/J2D y port/backend sin asumir API de gameplay. |
 | III. 28 entradas /24 fichas, scope y pendientes | Comprobación estructural realizada | Todos los registros tienen scope, pending, reports y paths no vacíos;24 fichas están indexadas y enlazadas desde README. READ permanece READ. La revisión no significa leer todo archivo listado. |
 | IV. Brechas críticas delimitadas | Matriz inicial abajo | Los bloqueos externos no impiden un atlas estático si se preservan como límites. No exigir toda pesca/LOD/JUTCacheFont para declarar utilidad documental. |
 | V. Auditoría semántica de riesgos | C01 realizado en CP-R96 | [Auditoría](AUDIT_FINDINGS.md):dos etiquetas oficiales corregidas, cinco rutas tipadas conservadas con procedencia;versiones/tamaño/ownership delimitados. No audita todos los slots ni el binario Windows. |
 | VI. Consistencia y publicación | Por checkpoint;final pendiente V1-C03 | Validador existente+diff/lease+readback. Verificar al final métricas, navegación y nueve blobs protegidos;ningún PASS runtime. |
 | VII. Limitaciones explícitas | Documentadas aquí y en pin | Cuatro gitlinks, Android,209 slots localizados,357 POTENTIAL al inicio,0 runtime/ABI/export medido. Los conteos actuales pueden cambiar sin transformar localizadores en hooks. |
-| VIII. Guía y handoff mantenibles | PENDIENTE, crítico V1-C02 | Guía corta por capacidad y mantenimiento;primera acción exacta en [CONTINUATION](CONTINUATION.md). No volver a recorrer actores arbitrarios. |
+| VIII. Guía y handoff mantenibles | C02 realizado CP-R97;readback por checkpoint | [Guía](ATLAS_GUIDE.md):cinco capacidades,propiedad de modelo/ARC/panes y mapa del port;primera acción exacta en [CONTINUATION](CONTINUATION.md). No recorrer actores arbitrarios. |
 
-V1-C01/02/03 son tareas documentales de cierre, no tres checkpoints prometidos ni bloqueos técnicos nuevos. La falta de una auditoría terminada justifica V1_NOT_READY hoy;los pendientes diferibles no deben prolongarla artificialmente.
+V1-C01/02/03 son tareas documentales de cierre, no tres checkpoints prometidos ni bloqueos técnicos nuevos. La comprobación final C03 pendiente justifica V1_NOT_READY hoy;los pendientes diferibles no deben prolongarla artificialmente.
 
 ## Seis áreas READ: utilidad existente y brechas por impacto
 
