@@ -1,5 +1,5 @@
 {
-  "checkpoint": "CP-R83",
+  "checkpoint": "CP-R84",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "baseline_inventory": {
     "checkpoint": "CP-R00",
@@ -18,18 +18,18 @@
   "sdk_module_candidates": 26,
   "sdk_public_function_slots_located": 209,
   "sdk_all_slots_semantically_audited": false,
-  "evidence_records": 488,
+  "evidence_records": 492,
   "evidence_levels": {
-    "STATIC_CROSSCHECKED": 396,
+    "STATIC_CROSSCHECKED": 399,
     "SOURCE_OBSERVED": 50,
     "DOC_CONTRACT": 5,
-    "STATIC_INFERRED": 35,
+    "STATIC_INFERRED": 36,
     "CI_OBSERVED": 2
   },
-  "symbol_records": 427,
+  "symbol_records": 429,
   "symbol_integration_classification": {
     "OFFICIAL_SERVICE": 83,
-    "POTENTIAL_REQUIRES_VERIFICATION": 339,
+    "POTENTIAL_REQUIRES_VERIFICATION": 341,
     "TYPED_HOOK": 5
   },
   "classification_counts_are_not_runtime_tests": true,
@@ -40,41 +40,29 @@
   "missing_submodules": 4,
   "session_timing": {
     "current_session_started_utc": null,
-    "measured_before_publish_utc": "2026-10-22T20:08:58.976777+00:00",
+    "measured_before_publish_utc": "2026-10-23T14:02:01.707279+00:00",
     "observed_session_elapsed_seconds": null,
     "effective_research_cpu_seconds": null,
     "paused_interval_excluded": true,
     "note": "Duración/CPU N/D; no sumar pausas ni sesiones anteriores."
   },
   "current_session_baseline": {
-    "commit": "1d8738d3d5a00505efd7776642b3129040705ef7",
-    "evidence": 442,
-    "symbols": 397,
+    "commit": "1d5525d4e7e3d58ba875f9db1b7b48878eebac7d",
+    "evidence": 488,
+    "symbols": 427,
     "atlas_files": 51,
     "system_reports": 24,
-    "range_occurrences": 4585,
-    "unique_ranges": 2170,
-    "cited_upstream_files": 385
+    "range_occurrences": 5211,
+    "unique_ranges": 2462,
+    "cited_upstream_files": 419
   },
   "net_added_this_session": {
-    "evidence": 46,
-    "symbols": 30,
+    "evidence": 4,
+    "symbols": 2,
     "new_documents": 0
   },
   "checkpoints_this_session": [
-    "CP-R71",
-    "CP-R72",
-    "CP-R73",
-    "CP-R74",
-    "CP-R75",
-    "CP-R76",
-    "CP-R77",
-    "CP-R78",
-    "CP-R79",
-    "CP-R80",
-    "CP-R81",
-    "CP-R82",
-    "CP-R83"
+    "CP-R84"
   ],
   "atlas_files": 51
 }

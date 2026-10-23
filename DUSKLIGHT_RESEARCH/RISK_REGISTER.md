@@ -169,3 +169,5 @@ CP-R81 / ARCH-028 STATIC_INFERRED: startPeepChange latchea antes deSCLS,ignora r
 CP-R82: menuhandle retirado antes de callback no implica que fn/userdata hayan desaparecido del documento. Ancla/active son gatesprevios,ninguna barrera durante callback. CloseOK no destrucción completada;transiciónend y forcehide son rutas distintas. Sin crash/unloadruntime observado.
 
 CP-R83: invJntPacket conserva modelo,joint y recursos hasta draw;reset bucket no libera storage ni pruebaGPUdrained. Restaurar dosdrawbuffers no restaura todoGXstate. Sin UAF/leak/renderWindows observados.
+
+CP-R84 / PLAYER-106 STATIC_INFERRED: SekiDoorDestroyed noDelete;condición !dComIfGp_event_runCheck sin() no invocaquery ynoalcanzadelete enesebrazo. Sin actorpersistente/crashobservados;otraslimpiezasposibles. ActorMngrs IDs no posesión ygetActorPNULL no cubierto en varioscuts.

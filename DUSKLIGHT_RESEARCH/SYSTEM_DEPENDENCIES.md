@@ -179,3 +179,5 @@ CP-R81 ARCH-025..028: atenciónKYTAG05→orden/eventSTART→Linklatch→SCLS/Nex
 CP-R82 CALLBACK-047..049: descriptorcopiado→UiSlotmenu/documento→dismiss/oncloseerase→anchorlive+active→callback→transitionend/closed/UIerase. Moddetach toma slots y forcehide;ownership distintos. [Callbacks](systems/callback_ownership_and_cancellation.md).
 
 CP-R83 PRES-151..153: MidnaARC/heap→modelo prestado+packets porjoint→posiciónsortconsumida→Zxlu lista con punteros→paseZ→resetbucket/heapactor. [Modelos](systems/models_animations_materials.md).
+
+CP-R84 PLAYER-103..106: LinkPlayerFly/Tmp31→NpcTeventOrder→staffcutJump→tagsArea+pareja→GOAL→door.open/Execute/Destroyed→SW2/cutEnd→Createposterior. [Otros sistemas](systems/other_systems.md).

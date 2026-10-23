@@ -343,3 +343,7 @@ Padre remoto verificado a044c434e83af22e5992eae5f4b2cc07bae4e406. CALLBACK-047..
 ## CP-R83 — InvisibleModel: packets por joint y pase de profundidad
 
 Padre remoto verificado 792d3440fe1622e1d4e96cc1a5c3aa92b8fa7723. PRES-151..153 STATIC_CROSSCHECKED: Midna→invisibleModel→Zsort→drawprofundidad;posiciónstack no retenida,modelo sí. Dos localizadores internos. Cleanupcola distinto de liberarheap oGPUdrained;sinLOD/skin nuevo. Sin mod,build ni runtime; solo atlas.
+
+## CP-R84 — Sekizoa: evento, puerta y flag de finalización
+
+Padre remoto verificado 1d5525d4e7e3d58ba875f9db1b7b48878eebac7d. PLAYER-103..105 STATIC_CROSSCHECKED y PLAYER-106 STATIC_INFERRED: guardián→GOAL/prm3→SekiDoor→SW2; skip/prm9 separado. Identidad 0x132 contrastada en rama GCN, búsqueda limitada y NULL como precondición. Destroyed no acredita Delete. Assets/cuts, composición y durabilidad pendientes. Sin mod,build ni runtime; solo atlas.

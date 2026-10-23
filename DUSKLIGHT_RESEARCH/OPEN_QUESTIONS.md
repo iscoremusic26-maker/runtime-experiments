@@ -108,3 +108,5 @@ CP-R81 Q-09: ARCH-025..028 añaden KYTAG05/PEEP_HOLE→Link→mode6/7→TurnRest
 CP-R82 Q-01/Q-02/Q-14: CALLBACK-047..049 precisan contextmenu dismiss→retirarhandle→revalidarancla/active→acción→destrucción diferida. Reentrancia durantefocus/callback,DLL y backendRml siguen NOT_VERIFIED. No repetir controles/button ni documentos generales.
 
 CP-R83 Q-10: PRES-151..153 contrastan Midna/invisibleModel→arraypacket→Zsort→paseprofundidad yreset. Modelo prestado distinto de posiciónstack consumida;GPUdrain/ordenheap/otrasramas siguen pendientes. No repetir skin/BTP/BRK.
+
+CP-R84 Q-12: PLAYER-103..106 añaden SekizoaTYPE0/1→eventJUMP/GOAL→SekiDoor→SW2/recarga. Assets/cutprms yparejas siguenpendientes. PLAYER-106 condiciónfunciónsinllamada esinferenciaconfuente,no falloobservado. No atribuirCopyRod ni repetirRollgoal.

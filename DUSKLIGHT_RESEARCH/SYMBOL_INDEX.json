@@ -12275,5 +12275,61 @@
       "PRES-152",
       "PRES-153"
     ]
+  },
+  {
+    "symbol": "daObj_Sekizoa_c::cutGoal",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_sekizoa.cpp",
+      "line_start": 2030,
+      "line_end": 2041,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_sekizoa.cpp#L2030-L2041"
+    },
+    "signature": "int daObj_Sekizoa_c::cutGoal(int)",
+    "purpose": "Consumir final de apertura antes de switch/cutEnd",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "TYPE0,staff/prm válidos y doorcompañera viva"
+    ],
+    "risks": [
+      "Switch RAM no disco;assets/derefs de actores no validados aquí"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-104",
+      "PLAYER-105"
+    ]
+  },
+  {
+    "symbol": "daObj_SekiDoor_c::Execute",
+    "kind": "method",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_obj_sekidoor.cpp",
+      "line_start": 109,
+      "line_end": 172,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_obj_sekidoor.cpp#L109-L172"
+    },
+    "signature": "int daObj_SekiDoor_c::Execute(Mtx**)",
+    "purpose": "Avanzar matriz de puerta y flagDestroyed",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "MoveBG/recursos/listaeventos válidos"
+    ],
+    "risks": [
+      "Destroyed noDelete;condiciónfunción sin llamada"
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-105",
+      "PLAYER-106"
+    ]
   }
 ]
