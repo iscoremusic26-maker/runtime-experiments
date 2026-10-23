@@ -199,3 +199,5 @@ CP-R91: Flow graph/patch commit→selector por clave y posiciónmod/sequence→r
 CP-R92: ControllerConfig selector→pendingAction CVar prestado→neutral/poll→setValue→actionPressData/trigger→camera/Link;finish/cancel/hide/save son rutas diferentes (PORT-032..034). Reutiliza PLAYER-002/004,no nuevo servicio de remapeo.
 
 CP-R93: fish rodID/search→rod hookset/fishaction52→fish60/rod6→lure_catch flow/registro→health1release/health2delete→destructores independientes. PLAYER-110..112 conectan gameplay/controles/flow/progreso/recursos,sin garantía de persistencia.
+
+CP-R94: progreso DarkClearLV leído→KYTAG09 selector de modelo/BTK→listaBG/J3D→resDelete. Es dependencia flags/presentación/recursos, no escritor de weather (PRES-160/161).

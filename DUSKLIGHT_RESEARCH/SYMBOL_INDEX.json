@@ -12938,5 +12938,33 @@
       "PLAYER-111",
       "PLAYER-112"
     ]
+  },
+  {
+    "symbol": "daKytag09_Draw",
+    "kind": "function",
+    "system_id": "models_animations_materials",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag09.cpp",
+      "line_start": 12,
+      "line_end": 52,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag09.cpp#L12-L52"
+    },
+    "signature": "static int daKytag09_Draw(kytag09_class*)",
+    "purpose": "Selección de film J3D por progreso y binding/avance BTK en Draw.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor/modelos/ARC válidos;DarkClearLV y tipo compatibles."
+    ],
+    "risks": [
+      "Presentación,Q-10;sin runtime/export/ABI ni WeatherService demostrado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-160",
+      "PRES-161"
+    ]
   }
 ]

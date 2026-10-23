@@ -128,3 +128,5 @@ CP-R91 Q-14: WORLD-047..049 contrastan arbitraje Flow patch por posiciónmod/com
 CP-R92 Q-13/controles: PORT-032..034 amplían PLAYER-004 con UIcaptura→CVar→polling/trigger→cámara y cancel/save. Escape desasigna;cancel solo referencias;savevoid sin ACK. Quedan reconexión,captura/visibilidad,reentrada y backend PADSerializeMappings;sin configuración/dispositivos personales. Alternar gameplay pesca.
 
 CP-R93 Q-12: PLAYER-110..112 amplían PLAYER-031 con pesca LURE ordinaria hookset→CATCH→flow/registro→health keep-release→cleanup. No cubre UKI,premios,alquiler,fishKind4/5,assets ni durabilidad. Compañeros vivos son precondición en catch;sin crash/runtime. Alternar ambiente/controlador nuevo.
+
+CP-R94 Q-10: KYTAG09 film gráfico→selección por DarkClearLV→Draw BTK/BG→resDelete, PRES-160/161 CERRADO_SELECTIVO. La pista Q-11 de CP-R93 se reclasifica;no había evidencia ambiental que borrar. Próximo bloque:auditoría de brechas V1 de seis áreas READ,priorizada por impacto;no otro actor arbitrario.

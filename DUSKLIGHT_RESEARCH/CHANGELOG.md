@@ -383,3 +383,7 @@ Padre remoto verificado a93351201372d1d97d9072287492aac1c83b10ad. PORT-032..034 
 ## CP-R93 — Pesca LURE: diálogo, keep-release y lifecycle
 
 Padre remoto verificado fb4a17774518789cd5169603eb92d236db4df1f6. PLAYER-110..112 STATIC_CROSSCHECKED: pesca LURE ordinaria→hookset/CATCH→diálogo/registro→health keep-release→cleanup. +3 evidencias/+2 localizadores;sin UKI,premios,assets o disco verificados. Se reutiliza PLAYER-031 sin repetir entradas genéricas de pesca. Sin mod,build ni runtime; solo atlas.
+
+## CP-R94 — KYTAG09: reclasificación gráfica y selección por progreso
+
+Padre remoto verificado 240a8b7f498618d4c919db0199159ff2eb3af359. PRES-160/161 STATIC_CROSSCHECKED, +1 localizador: Twilight Film Tag adquiere modelo/BTK por tipo,selecciona con DarkClearLV y dibuja en BG;Delete suelta ARC. CERRADO_SELECTIVO sin assets,sharing,GPU o fallo parcial universal. Pista Q-11 de CP-R93 rectificada a Q-10;sin repetir auditoría BTK. Sin mod,build ni runtime; solo atlas.

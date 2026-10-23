@@ -570,13 +570,14 @@
   {
     "system_id": "models_animations_materials",
     "coverage": "READ",
-    "scope": "READ parcial: cadenas previas y CP-R87 Title/BPK→MatColor0,frame/binding separados y retirada;sin LOD/skin/BVA/Windows globales.",
+    "scope": "READ parcial: cadenas previas y CP-R87 Title/BPK→MatColor0,frame/binding separados y retirada;sin LOD/skin/BVA/Windows globales. CP-R94 KYTAG09 film gráfico por progreso, sin promoción global.",
     "reports": [
       "systems/models_animations_materials.md"
     ],
     "files_examined": [
       "include/SSystem/SComponent/c_phase.h",
       "include/d/actor/d_a_demo00.h",
+      "include/d/actor/d_a_kytag09.h",
       "include/d/actor/d_a_npc_coach.h",
       "include/d/actor/d_a_obj_sakuita.h",
       "include/d/d_com_inf_game.h",
@@ -602,6 +603,7 @@
       "libs/dolphin/src/gf/GFPixel.cpp",
       "src/d/actor/d_a_demo00.cpp",
       "src/d/actor/d_a_door_boss.cpp",
+      "src/d/actor/d_a_kytag09.cpp",
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_npc_coach.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
@@ -613,6 +615,7 @@
       "src/d/d_drawlist.cpp",
       "src/d/d_resorce.cpp",
       "src/d/d_s_play.cpp",
+      "src/d/d_save.cpp",
       "src/d/d_simple_model.cpp",
       "src/dusk/interp/material.cpp",
       "src/dusk/mods/svc/texture.cpp",
@@ -629,6 +632,7 @@
     "paths": [
       "include/SSystem/SComponent/c_phase.h",
       "include/d/actor/d_a_demo00.h",
+      "include/d/actor/d_a_kytag09.h",
       "include/d/actor/d_a_npc_coach.h",
       "include/d/actor/d_a_obj_sakuita.h",
       "include/d/d_com_inf_game.h",
@@ -655,6 +659,7 @@
       "sdk/include/mods/svc/interp.h",
       "src/d/actor/d_a_demo00.cpp",
       "src/d/actor/d_a_door_boss.cpp",
+      "src/d/actor/d_a_kytag09.cpp",
       "src/d/actor/d_a_midna.cpp",
       "src/d/actor/d_a_npc_coach.cpp",
       "src/d/actor/d_a_obj_automata.cpp",
@@ -666,6 +671,7 @@
       "src/d/d_drawlist.cpp",
       "src/d/d_resorce.cpp",
       "src/d/d_s_play.cpp",
+      "src/d/d_save.cpp",
       "src/d/d_simple_model.cpp",
       "src/dusk/interp/material.cpp",
       "src/dusk/mods/svc/texture.cpp",
@@ -684,7 +690,8 @@
       "stages_rooms_layers",
       "actors_ai_npcs",
       "audio_particles_effects",
-      "cutscenes_dialogue"
+      "cutscenes_dialogue",
+      "flags_events_progression"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -725,7 +732,9 @@
       "PRES-153",
       "PRES-157",
       "PRES-158",
-      "PRES-159"
+      "PRES-159",
+      "PRES-160",
+      "PRES-161"
     ]
   },
   {
