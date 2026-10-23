@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R91",
+  "checkpoint": "CP-R92",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -26105,6 +26105,191 @@
           "line_start": 776,
           "line_end": 812,
           "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L776-L812"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-032",
+      "claim": "ControllerConfig acciones conserva puntero ActionBindConfigVar del array global porport. on_pressed cancela captura previa y arma pendiente sin arm;poll exige neutral antes de leer botón. Escape se evalúa antes de armado y llama unmap (no cancel). Nueva selección setValue+config.save+finish; mismo botón desasigna. Es UI interna,sin servicio SDK de remap completo.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 998,
+          "line_end": 1030,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L998-L1030"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 1039,
+          "line_end": 1061,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L1039-L1061"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 1116,
+          "line_end": 1148,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L1116-L1148"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 1150,
+          "line_end": 1187,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L1150-L1187"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 141,
+          "line_end": 162,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L141-L162"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.hpp",
+          "line_start": 42,
+          "line_end": 55,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.hpp#L42-L55"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/action_bindings.cpp",
+          "line_start": 19,
+          "line_end": 29,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/action_bindings.cpp#L19-L29"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-033",
+      "claim": "ActionBindConfigVar es ConfigVar<int>;setValue cambia valor/capa y quita override por defecto. Se reutiliza PLAYER-002/004 para pollingJUTGamePad y filtroUI;trigger cur&&!prev tiene consumidor camera que prepara comStat1000/gear0, y Link puede salir de subjectivity. Valor asignado,trigger y cámara presentada son estados distintos;backend Aurora/PAD ydispositivo no certificados.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/config_var.hpp",
+          "line_start": 258,
+          "line_end": 270,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/config_var.hpp#L258-L270"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/config_var.hpp",
+          "line_start": 385,
+          "line_end": 385,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/config_var.hpp#L385-L385"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "libs/JSystem/src/JUtility/JUTGamePad.cpp",
+          "line_start": 90,
+          "line_end": 95,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/libs/JSystem/src/JUtility/JUTGamePad.cpp#L90-L95"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/action_bindings.cpp",
+          "line_start": 131,
+          "line_end": 134,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/action_bindings.cpp#L131-L134"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/d_camera.cpp",
+          "line_start": 849,
+          "line_end": 859,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_camera.cpp#L849-L859"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/d/actor/d_a_alink_link.inc",
+          "line_start": 233,
+          "line_end": 247,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink_link.inc#L233-L247"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 1125,
+          "line_end": 1147,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L1125-L1147"
+        }
+      ],
+      "limitations": [
+        "Cadena estática seleccionada del pin; no universalizar otros consumidores.",
+        "Sin build,juego,ABI/export ni hook Windows comprobados."
+      ]
+    },
+    {
+      "id": "PORT-034",
+      "claim": "finish libera punterospending y suprime navegación hasta neutral,PADSerializeMappings delegado. cancel_pending solo limpia captura/flags,sin restaurar valor ya aplicado;hide cancela y llama config.save. Save retorna void,omite pathvacío y captura excepción de WriteAllText/ReplaceFile con log,sin ACKUI. Unmap action no llama save explícito en esa rama;no inferir durabilidad ni rollback por cerrar ventana.",
+      "level": "STATIC_CROSSCHECKED",
+      "sources": [
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 274,
+          "line_end": 284,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L274-L284"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 1138,
+          "line_end": 1176,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L1138-L1176"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 1199,
+          "line_end": 1222,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L1199-L1222"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/config.cpp",
+          "line_start": 538,
+          "line_end": 567,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/config.cpp#L538-L567"
+        },
+        {
+          "repo": "TwilitRealm/dusklight",
+          "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+          "path": "src/dusk/ui/controller_config.cpp",
+          "line_start": 246,
+          "line_end": 271,
+          "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L246-L271"
         }
       ],
       "limitations": [

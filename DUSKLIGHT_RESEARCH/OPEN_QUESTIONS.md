@@ -124,3 +124,5 @@ CP-R89 Q-02/ownership/Q-13: SDK-026..028 precisan streams owned→read count/sta
 CP-R90 Q-09/stages: WORLD-043..045 contrastan Tag_ChgRestart→RAM/latch→Link restart→playerInit(-1);WORLD-046 inferencia condicionada de ID PLAYER ausente tras assert. Quedan composición,scopes/durabilidad,Tag_SetRestart y recuperación de toda cola;no repetir reset/opening. Alternar arbitraje del SDK.
 
 CP-R91 Q-14: WORLD-047..049 contrastan arbitraje Flow patch por posiciónmod/commitsequence y retiro para lookup futuro;WORLD-050 inferencia condicionada de nodo copiado y arista retirada durante callback. Faltan combinaciones reales,recursos/idiomas y reentrada/DLL;no prometer rollback jugable o coexistencia Windows. Alternar diagnóstico/configuración interna.
+
+CP-R92 Q-13/controles: PORT-032..034 amplían PLAYER-004 con UIcaptura→CVar→polling/trigger→cámara y cancel/save. Escape desasigna;cancel solo referencias;savevoid sin ACK. Quedan reconexión,captura/visibilidad,reentrada y backend PADSerializeMappings;sin configuración/dispositivos personales. Alternar gameplay pesca.

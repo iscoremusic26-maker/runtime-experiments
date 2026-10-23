@@ -1345,7 +1345,7 @@
   {
     "system_id": "player_and_controls",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: muestras previas y CP-R75 BGOnsen→timerLink→deltaLife→MeterRAM/cleanup;sin curaciónruntime universal.",
+    "scope": "CROSSCHECKED selectiva: muestras previas y CP-R75 BGOnsen→timerLink→deltaLife→MeterRAM/cleanup;sin curaciónruntime universal. CP-R92 añade captura interna de action binding→CVar→trigger/consumidor,cleanup sin rollback.",
     "reports": [
       "systems/player_and_controls.md"
     ],
@@ -1361,14 +1361,20 @@
       "sdk/include/mods/svc/hook.hpp",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_alink_link.inc",
       "src/d/actor/d_a_alink_wolf.inc",
       "src/d/actor/d_a_obj_onsen.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_movebg_actor.cpp",
+      "src/d/d_camera.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_meter2.cpp",
       "src/dusk/action_bindings.cpp",
       "src/dusk/action_bindings.h",
+      "src/dusk/config.cpp",
+      "src/dusk/config_var.hpp",
+      "src/dusk/ui/controller_config.cpp",
+      "src/dusk/ui/controller_config.hpp",
       "src/m_Do/m_Do_controller_pad.cpp"
     ],
     "pending": [
@@ -1388,14 +1394,20 @@
       "sdk/include/mods/svc/hook.hpp",
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_alink_damage.inc",
+      "src/d/actor/d_a_alink_link.inc",
       "src/d/actor/d_a_alink_wolf.inc",
       "src/d/actor/d_a_obj_onsen.cpp",
       "src/d/d_bg_s.cpp",
       "src/d/d_bg_s_movebg_actor.cpp",
+      "src/d/d_camera.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_meter2.cpp",
       "src/dusk/action_bindings.cpp",
       "src/dusk/action_bindings.h",
+      "src/dusk/config.cpp",
+      "src/dusk/config_var.hpp",
+      "src/dusk/ui/controller_config.cpp",
+      "src/dusk/ui/controller_config.hpp",
       "src/m_Do/m_Do_controller_pad.cpp"
     ],
     "dependencies": [
@@ -1405,7 +1417,9 @@
       "flags_events_progression",
       "environment_weather_time",
       "hud_ui_text",
-      "save_load"
+      "save_load",
+      "port_support",
+      "sdk_services"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1420,7 +1434,10 @@
       "PLAYER-034",
       "PLAYER-096",
       "PLAYER-097",
-      "PLAYER-098"
+      "PLAYER-098",
+      "PORT-032",
+      "PORT-033",
+      "PORT-034"
     ]
   },
   {
@@ -2403,23 +2420,28 @@
   {
     "system_id": "port_support",
     "coverage": "READ",
-    "scope": "READ parcial: soporte previo y CP-R79 callback stub configurado→buffer→ImGui/clear por frame;dispatch de logger Borealis bloqueado,backend/durabilidad pendientes.",
+    "scope": "READ parcial: soporte previo y CP-R79 callback stub configurado→buffer→ImGui/clear por frame;dispatch de logger Borealis bloqueado,backend/durabilidad pendientes. CP-R92 ControllerConfig acciones, sin dispositivos o configuración personales.",
     "reports": [
       "systems/port_achievements.md",
       "systems/port_speedrun_livesplit.md",
       "SYSTEM_DEPENDENCIES.md",
       "systems/port_presence.md",
       "systems/port_commands.md",
-      "systems/port_disc_validation.md"
+      "systems/port_disc_validation.md",
+      "systems/player_and_controls.md"
     ],
     "paths": [
+      "libs/JSystem/src/JUtility/JUTGamePad.cpp",
       "sdk/include/mods/svc/log.h",
+      "src/d/actor/d_a_alink_link.inc",
+      "src/d/d_camera.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event.cpp",
       "src/d/d_file_select.cpp",
       "src/d/d_menu_letter.cpp",
       "src/dusk/achievements.cpp",
       "src/dusk/achievements.h",
+      "src/dusk/action_bindings.cpp",
       "src/dusk/commands.cpp",
       "src/dusk/commands.hpp",
       "src/dusk/config.cpp",
@@ -2451,6 +2473,8 @@
       "src/dusk/ui/achievements.cpp",
       "src/dusk/ui/command_console.cpp",
       "src/dusk/ui/command_console.hpp",
+      "src/dusk/ui/controller_config.cpp",
+      "src/dusk/ui/controller_config.hpp",
       "src/dusk/ui/document.cpp",
       "src/dusk/ui/event.cpp",
       "src/dusk/ui/logs_window.cpp",
@@ -2472,7 +2496,8 @@
       "flags_events_progression",
       "external_dependencies",
       "sdk_services",
-      "memory_ownership"
+      "memory_ownership",
+      "player_and_controls"
     ],
     "pending": [
       "Resto de checks de logros y diagnósticos.",
@@ -2509,17 +2534,26 @@
       "PORT-028",
       "PORT-029",
       "PORT-030",
-      "PORT-031"
+      "PORT-031",
+      "PORT-032",
+      "PORT-033",
+      "PORT-034"
     ],
     "files_examined": [
+      "libs/JSystem/src/JUtility/JUTGamePad.cpp",
       "sdk/include/mods/svc/log.h",
+      "src/d/actor/d_a_alink_link.inc",
+      "src/d/d_camera.cpp",
       "src/d/d_com_inf_game.cpp",
       "src/d/d_event.cpp",
       "src/d/d_menu_letter.cpp",
       "src/dusk/achievements.cpp",
       "src/dusk/achievements.h",
+      "src/dusk/action_bindings.cpp",
       "src/dusk/commands.cpp",
       "src/dusk/commands.hpp",
+      "src/dusk/config.cpp",
+      "src/dusk/config_var.hpp",
       "src/dusk/discord_presence.cpp",
       "src/dusk/discord_presence.hpp",
       "src/dusk/game_clock.cpp",
@@ -2545,6 +2579,8 @@
       "src/dusk/ui/achievements.cpp",
       "src/dusk/ui/command_console.cpp",
       "src/dusk/ui/command_console.hpp",
+      "src/dusk/ui/controller_config.cpp",
+      "src/dusk/ui/controller_config.hpp",
       "src/dusk/ui/document.cpp",
       "src/dusk/ui/event.cpp",
       "src/dusk/ui/logs_window.cpp",

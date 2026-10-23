@@ -195,3 +195,5 @@ CP-R89: SDK File.open→SlotMap File owned→read/count/error→take_owned antes
 CP-R90: Tag_ChgRestart regiónXZ/switch→dSv_restart room,pos,yaw→Link/startRestartRoom→dStage nextStage(-1)/roomParam→playerInit append. Flags,estado RAM,cola de escena y guardado permanecen fronteras diferentes (WORLD-043..046).
 
 CP-R91: Flow graph/patch commit→selector por clave y posiciónmod/sequence→resolve BMG→copia local dMsgFlow→edge tardío→remove_graph/detach para futuros lookups (WORLD-047..050). Frontera de arbitraje SDK y estado consumidor,sin transacción del diálogo entero.
+
+CP-R92: ControllerConfig selector→pendingAction CVar prestado→neutral/poll→setValue→actionPressData/trigger→camera/Link;finish/cancel/hide/save son rutas diferentes (PORT-032..034). Reutiliza PLAYER-002/004,no nuevo servicio de remapeo.

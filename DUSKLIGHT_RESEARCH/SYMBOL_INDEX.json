@@ -12827,5 +12827,60 @@
     "evidence_ids": [
       "WORLD-048"
     ]
+  },
+  {
+    "symbol": "dusk::ui::ControllerConfigWindow::poll_pending_binding",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/ui/controller_config.cpp",
+      "line_start": 1039,
+      "line_end": 1136,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L1039-L1136"
+    },
+    "signature": "void dusk::ui::ControllerConfigWindow::poll_pending_binding()",
+    "purpose": "Estado de captura y asignación de acción,con gate neutral y desasignación.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Window update;port y settings válidos;backend input disponible."
+    ],
+    "risks": [
+      "Escape no es rollback;no remapeador público completo ni input Windows probado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-032",
+      "PORT-033"
+    ]
+  },
+  {
+    "symbol": "dusk::ui::ControllerConfigWindow::cancel_pending_binding",
+    "kind": "method",
+    "system_id": "player_and_controls",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/ui/controller_config.cpp",
+      "line_start": 1199,
+      "line_end": 1214,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/ui/controller_config.cpp#L1199-L1214"
+    },
+    "signature": "void dusk::ui::ControllerConfigWindow::cancel_pending_binding()",
+    "purpose": "Limpia referencias temporales de captura sin deshacer cambios previos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Instancia UI viva."
+    ],
+    "risks": [
+      "Cancelar captura no restaura binding/config;ABI/export pendientes."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PORT-034"
+    ]
   }
 ]

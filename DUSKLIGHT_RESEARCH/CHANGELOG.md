@@ -375,3 +375,7 @@ Padre remoto verificado b31b677301963f7d45399ccc7c235ff7fd03fe0c. WORLD-043..045
 ## CP-R91 — Flow patches: prioridad, resolución y alcance de reversión
 
 Padre remoto verificado 4f92f17d4399202ceacd6c961acd7cd55bdaa87f. WORLD-047..049 STATIC_CROSSCHECKED y WORLD-050 STATIC_INFERRED: patches nativos→commit→ganador→resolve→retirada/copia viva. +4 evidencias/+3 símbolos (dos slots oficiales). Self-remove con arista custom puede acabar enEND bajo condiciones explícitas;no gameplay/runtime observado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R92 — ControllerConfig: captura, trigger y cancelación
+
+Padre remoto verificado a93351201372d1d97d9072287492aac1c83b10ad. PORT-032..034 STATIC_CROSSCHECKED: UIacción→neutral/captura→CVar→trigger/consumidorcamera→finish/cancel/hide/savevoid. +3 evidencias/+2 localizadores. Reutiliza PLAYER-002/004 y ConfigService;sin abrir dispositivos/configuración o garantizar durabilidad. Sin mod,build ni runtime; solo atlas.

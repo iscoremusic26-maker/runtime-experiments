@@ -185,3 +185,5 @@ CP-R89 / SDK-027/028: close consumehandle antes del resultado backend;error no p
 CP-R90 / WORLD-046: si falta playerNo en tabla y se continúa tras assert,la copia usa entry_p fuera de entradas válidas;no asset ni crash observado. WORLD-043: switchFF no latchea;room del dato PLAYER/tag y room almacenada del jugador no se presumen iguales. Delete no restaura checkpoint ni switch;no transacción.
 
 CP-R91 / WORLD-048/050: patch ganador no resoluble termina lookup sin probar perdedor;remove_graph no revierte nodo ya copiado. Bajo self-remove de evento con edge custom del mismo grafo,lookup posterior puede terminar enEND. Condiciones explícitas,no evento/fallo runtime observado.
+
+CP-R92 / PORT-034: cancelar captura/hide no revierte binding ya aplicado. Savevoid no comunica a ControllerConfig fallos de reemplazo;desasignar y guardar son fases distintas. Backend de serialización y reconexión pendientes,sin pérdida de config ni acción accidental observadas.
