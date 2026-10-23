@@ -110,3 +110,5 @@ CP-R82 Q-01/Q-02/Q-14: CALLBACK-047..049 precisan contextmenu dismiss→retirarh
 CP-R83 Q-10: PRES-151..153 contrastan Midna/invisibleModel→arraypacket→Zsort→paseprofundidad yreset. Modelo prestado distinto de posiciónstack consumida;GPUdrain/ordenheap/otrasramas siguen pendientes. No repetir skin/BTP/BRK.
 
 CP-R84 Q-12: PLAYER-103..106 añaden SekizoaTYPE0/1→eventJUMP/GOAL→SekiDoor→SW2/recarga. Assets/cutprms yparejas siguenpendientes. PLAYER-106 condiciónfunciónsinllamada esinferenciaconfuente,no falloobservado. No atribuirCopyRod ni repetirRollgoal.
+
+CP-R85 Q-01/Q-02: CALLBACK-050..052 contrastan Flow register_query→PROBE/EXECUTE→arista y retiro. No asumir pureza, exactly-once, owner.active gate o drenaje; graph mutation/reentrada/DLL permanecen NOT_VERIFIED. Alternar Q-11; no repetir Message resolver.

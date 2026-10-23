@@ -32,3 +32,5 @@ Durante play sin pausa, PC avanza `dDemo_c::update` si prelaunch está cerrado y
 Pendiente mínimo: seguir enlaces JMessage desde `resolve_message_for_control`/`resolve_message` hasta el dibujado; validar ownership de referencias entre grafos y cierre de diálogo durante detach; inventariar `.stb`/event_list y créditos/THP; auditar semántica de cada builtin y Luau bindings. El archivo movie_player fue localizado, no auditado; ninguna funcionalidad de cutscene universal se certifica por esta ficha.
 
 Cobertura del checkpoint: **CROSSCHECKED** para las rutas citadas de esta ficha; demás rutas del subsistema permanecen INVENTARIED o pendientes de trazado. Sin runtime Windows/DX12.
+
+CP-R85: CALLBACK-050..052 documentan Flow query custom, PROBE de Knob20 frente a EXECUTE y fallback0. Véase [ownership y cancelación](callback_ownership_and_cancellation.md); no se añade otro motor de eventos ni se repite Message/BMG.

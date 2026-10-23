@@ -181,3 +181,5 @@ CP-R82 CALLBACK-047..049: descriptorcopiado→UiSlotmenu/documento→dismiss/onc
 CP-R83 PRES-151..153: MidnaARC/heap→modelo prestado+packets porjoint→posiciónsortconsumida→Zxlu lista con punteros→paseZ→resetbucket/heapactor. [Modelos](systems/models_animations_materials.md).
 
 CP-R84 PLAYER-103..106: LinkPlayerFly/Tmp31→NpcTeventOrder→staffcutJump→tagsArea+pareja→GOAL→door.open/Execute/Destroyed→SW2/cutEnd→Createposterior. [Otros sistemas](systems/other_systems.md).
+
+CP-R85: Knob20 → dMsgFlow.checkOpenDoor(PROBE) / branchNodeProc(EXECUTE) → Flow query → result/edge; modDetached retira IDs. CALLBACK-050..052 conectan cutscenes_dialogue, callback_ownership_and_cancellation y sdk_services sin inferir apertura física o barrera de unload.

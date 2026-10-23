@@ -323,20 +323,23 @@
   {
     "system_id": "cutscenes_dialogue",
     "coverage": "CROSSCHECKED",
-    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados.",
+    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados. CP-R85 añade query custom y consumidor Knob20, sin cobertura global.",
     "reports": [
       "systems/cutscenes_dialogue.md"
     ],
     "files_examined": [
       "sdk/include/mods/svc/flow.h",
       "sdk/include/mods/svc/message.h",
+      "src/d/actor/d_a_door_knob00.cpp",
       "src/d/actor/d_a_kytag04.cpp",
       "src/d/d_demo.cpp",
       "src/d/d_event.cpp",
       "src/d/d_event_manager.cpp",
       "src/d/d_msg_flow.cpp",
       "src/d/d_s_play.cpp",
-      "src/dusk/mods/svc/flow.cpp"
+      "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/svc/flow.cpp",
+      "src/dusk/mods/svc/flow.hpp"
     ],
     "pending": [
       "JMessage render/control completo",
@@ -347,18 +350,22 @@
     "paths": [
       "sdk/include/mods/svc/flow.h",
       "sdk/include/mods/svc/message.h",
+      "src/d/actor/d_a_door_knob00.cpp",
       "src/d/actor/d_a_kytag04.cpp",
       "src/d/d_demo.cpp",
       "src/d/d_event.cpp",
       "src/d/d_event_manager.cpp",
       "src/d/d_msg_flow.cpp",
       "src/d/d_s_play.cpp",
-      "src/dusk/mods/svc/flow.cpp"
+      "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/svc/flow.cpp",
+      "src/dusk/mods/svc/flow.hpp"
     ],
     "dependencies": [
       "flags_events_progression",
       "resources_archives_overlays",
-      "sdk_services"
+      "sdk_services",
+      "callback_ownership_and_cancellation"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -369,7 +376,10 @@
       "WORLD-026",
       "WORLD-027",
       "ARCH-021",
-      "ARCH-022"
+      "ARCH-022",
+      "CALLBACK-050",
+      "CALLBACK-051",
+      "CALLBACK-052"
     ]
   },
   {
@@ -2050,7 +2060,7 @@
   {
     "system_id": "callback_ownership_and_cancellation",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R82 menúcontextual copia→dismiss/retirada→callbackancla/active→destrucción diferida;sin barrera universal de reentrancia/unload.",
+    "scope": "CROSSCHECKED selectiva: rutas previas y CP-R85 Flow query registro→PROBE/EXECUTE→resultado/arista→detach; sin garantía universal de callbacks, reentrancia o unload.",
     "reports": [
       "systems/callback_ownership_and_cancellation.md"
     ],
@@ -2060,6 +2070,7 @@
       "sdk/include/mods/svc/config.h",
       "sdk/include/mods/svc/file.h",
       "sdk/include/mods/svc/file.hpp",
+      "sdk/include/mods/svc/flow.h",
       "sdk/include/mods/svc/host.h",
       "sdk/include/mods/svc/http.h",
       "sdk/include/mods/svc/interp.h",
@@ -2073,8 +2084,10 @@
       "sdk/include/mods/svc/websocket.h",
       "sdk/include/mods/svc/websocket.hpp",
       "sdk/include/mods/svc/window.h",
+      "src/d/actor/d_a_door_knob00.cpp",
       "src/d/actor/d_a_tbox.cpp",
       "src/d/d_drawlist.cpp",
+      "src/d/d_msg_flow.cpp",
       "src/d/d_msg_object.cpp",
       "src/dusk/config.cpp",
       "src/dusk/config.hpp",
@@ -2088,6 +2101,7 @@
       "src/dusk/mods/svc/config.cpp",
       "src/dusk/mods/svc/file.cpp",
       "src/dusk/mods/svc/flow.cpp",
+      "src/dusk/mods/svc/flow.hpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/dusk/mods/svc/host.cpp",
       "src/dusk/mods/svc/http.cpp",
@@ -2122,6 +2136,7 @@
       "sdk/include/mods/svc/config.h",
       "sdk/include/mods/svc/file.h",
       "sdk/include/mods/svc/file.hpp",
+      "sdk/include/mods/svc/flow.h",
       "sdk/include/mods/svc/host.h",
       "sdk/include/mods/svc/http.h",
       "sdk/include/mods/svc/interp.h",
@@ -2135,8 +2150,10 @@
       "sdk/include/mods/svc/websocket.h",
       "sdk/include/mods/svc/websocket.hpp",
       "sdk/include/mods/svc/window.h",
+      "src/d/actor/d_a_door_knob00.cpp",
       "src/d/actor/d_a_tbox.cpp",
       "src/d/d_drawlist.cpp",
+      "src/d/d_msg_flow.cpp",
       "src/d/d_msg_object.cpp",
       "src/dusk/config.cpp",
       "src/dusk/config.hpp",
@@ -2150,6 +2167,7 @@
       "src/dusk/mods/svc/config.cpp",
       "src/dusk/mods/svc/file.cpp",
       "src/dusk/mods/svc/flow.cpp",
+      "src/dusk/mods/svc/flow.hpp",
       "src/dusk/mods/svc/gfx.cpp",
       "src/dusk/mods/svc/host.cpp",
       "src/dusk/mods/svc/http.cpp",
@@ -2235,7 +2253,10 @@
       "CALLBACK-046",
       "CALLBACK-047",
       "CALLBACK-048",
-      "CALLBACK-049"
+      "CALLBACK-049",
+      "CALLBACK-050",
+      "CALLBACK-051",
+      "CALLBACK-052"
     ]
   },
   {

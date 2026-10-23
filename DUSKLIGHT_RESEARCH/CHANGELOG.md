@@ -347,3 +347,7 @@ Padre remoto verificado 792d3440fe1622e1d4e96cc1a5c3aa92b8fa7723. PRES-151..153 
 ## CP-R84 — Sekizoa: evento, puerta y flag de finalización
 
 Padre remoto verificado 1d5525d4e7e3d58ba875f9db1b7b48878eebac7d. PLAYER-103..105 STATIC_CROSSCHECKED y PLAYER-106 STATIC_INFERRED: guardián→GOAL/prm3→SekiDoor→SW2; skip/prm9 separado. Identidad 0x132 contrastada en rama GCN, búsqueda limitada y NULL como precondición. Destroyed no acredita Delete. Assets/cuts, composición y durabilidad pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R85 — Flow query: PROBE, EXECUTE y resultado de error
+
+Padre remoto verificado 83cfe6096ec30bde47cb4b6911680ad29135dbe2. CALLBACK-050..052 STATIC_CROSSCHECKED: registro público, consumidor Knob20/PROBE frente a EXECUTE, copia local/resultado0 y retiro en detach. +3 evidencias/+3 símbolos (uno oficial). No pureza, exactly-once o unload garantizado. Sin mod,build ni runtime; solo atlas.

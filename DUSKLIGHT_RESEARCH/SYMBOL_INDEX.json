@@ -12331,5 +12331,87 @@
       "PLAYER-105",
       "PLAYER-106"
     ]
+  },
+  {
+    "symbol": "FlowService::register_query",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/flow.h",
+      "line_start": 176,
+      "line_end": 177,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/flow.h#L176-L177"
+    },
+    "signature": "ModResult (*register_query)(ModContext*, const char*, FlowQueryFn, void*, FlowQueryId*)",
+    "purpose": "Registro público de query, distinto de commit/evaluación.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto/nombre/fn/out válidos; pool disponible."
+    ],
+    "risks": [
+      "No acredita ejecución ni unload seguro."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-050"
+    ]
+  },
+  {
+    "symbol": "dusk::flow::dispatch_query",
+    "kind": "function",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/flow.cpp",
+      "line_start": 840,
+      "line_end": 868,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L840-L868"
+    },
+    "signature": "uint16_t dispatch_query(uint16_t, const void*, uint16_t, uint8_t, FlowQueryPhase, uint16_t)",
+    "purpose": "Copia local y retorno acotado o fallback cero.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Consumidor TARGET_PC; datos prestados durante llamada."
+    ],
+    "risks": [
+      "Sin owner.active gate; ABI/export Windows no comprobados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-051",
+      "CALLBACK-052"
+    ]
+  },
+  {
+    "symbol": "dMsgFlow_c::checkOpenDoor",
+    "kind": "method",
+    "system_id": "callback_ownership_and_cancellation",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_msg_flow.cpp",
+      "line_start": 133,
+      "line_end": 263,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_msg_flow.cpp#L133-L263"
+    },
+    "signature": "int dMsgFlow_c::checkOpenDoor(fopAc_ac_c*, int*)",
+    "purpose": "Recorrido PROBE de ramas para detectar evento OPEN_DOOR.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "TalkNow inactivo; flow y aristas resolubles."
+    ],
+    "risks": [
+      "Puede consultar callback sin ejecutar el diálogo; no mide apertura real."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "CALLBACK-051"
+    ]
   }
 ]
