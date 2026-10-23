@@ -197,3 +197,5 @@ CP-R90: Tag_ChgRestart regiónXZ/switch→dSv_restart room,pos,yaw→Link/startR
 CP-R91: Flow graph/patch commit→selector por clave y posiciónmod/sequence→resolve BMG→copia local dMsgFlow→edge tardío→remove_graph/detach para futuros lookups (WORLD-047..050). Frontera de arbitraje SDK y estado consumidor,sin transacción del diálogo entero.
 
 CP-R92: ControllerConfig selector→pendingAction CVar prestado→neutral/poll→setValue→actionPressData/trigger→camera/Link;finish/cancel/hide/save son rutas diferentes (PORT-032..034). Reutiliza PLAYER-002/004,no nuevo servicio de remapeo.
+
+CP-R93: fish rodID/search→rod hookset/fishaction52→fish60/rod6→lure_catch flow/registro→health1release/health2delete→destructores independientes. PLAYER-110..112 conectan gameplay/controles/flow/progreso/recursos,sin garantía de persistencia.

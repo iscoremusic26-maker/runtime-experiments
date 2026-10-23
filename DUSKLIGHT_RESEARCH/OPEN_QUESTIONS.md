@@ -126,3 +126,5 @@ CP-R90 Q-09/stages: WORLD-043..045 contrastan Tag_ChgRestart→RAM/latch→Link 
 CP-R91 Q-14: WORLD-047..049 contrastan arbitraje Flow patch por posiciónmod/commitsequence y retiro para lookup futuro;WORLD-050 inferencia condicionada de nodo copiado y arista retirada durante callback. Faltan combinaciones reales,recursos/idiomas y reentrada/DLL;no prometer rollback jugable o coexistencia Windows. Alternar diagnóstico/configuración interna.
 
 CP-R92 Q-13/controles: PORT-032..034 amplían PLAYER-004 con UIcaptura→CVar→polling/trigger→cámara y cancel/save. Escape desasigna;cancel solo referencias;savevoid sin ACK. Quedan reconexión,captura/visibilidad,reentrada y backend PADSerializeMappings;sin configuración/dispositivos personales. Alternar gameplay pesca.
+
+CP-R93 Q-12: PLAYER-110..112 amplían PLAYER-031 con pesca LURE ordinaria hookset→CATCH→flow/registro→health keep-release→cleanup. No cubre UKI,premios,alquiler,fishKind4/5,assets ni durabilidad. Compañeros vivos son precondición en catch;sin crash/runtime. Alternar ambiente/controlador nuevo.

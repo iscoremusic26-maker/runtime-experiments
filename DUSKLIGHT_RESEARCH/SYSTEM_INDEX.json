@@ -1539,11 +1539,12 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "CROSSCHECKED selectiva: familias previas y CP-R84 SekizoaTYPE0/1→cutJump/GOAL→SekiDoor→SW2/recarga;assets/parejas/cleanupglobal pendientes. CP-R88 añade Bombf/NBOMB tracker→carry→ausencia/reposición, sin cobertura global.",
+    "scope": "CROSSCHECKED selectiva: familias previas y CP-R84 SekizoaTYPE0/1→cutJump/GOAL→SekiDoor→SW2/recarga;assets/parejas/cleanupglobal pendientes. CP-R88 añade Bombf/NBOMB tracker→carry→ausencia/reposición, sin cobertura global. CP-R93 añade pesca lure hookset→catch→diálogo/keep-release→cleanup, no toda pesca.",
     "reports": [
       "systems/other_systems.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_mg_rod.h",
       "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_carry.h",
       "include/d/actor/d_a_obj_digplace.h",
@@ -1623,6 +1624,7 @@
       "src/d/d_save.cpp",
       "src/d/d_shop_system.cpp",
       "src/d/d_timer.cpp",
+      "src/dusk/version.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
       "src/f_op/f_op_msg_mng.cpp",
@@ -1637,6 +1639,7 @@
       "Recompensas/persistencia"
     ],
     "paths": [
+      "include/d/actor/d_a_mg_rod.h",
       "include/d/actor/d_a_npc_myna2.h",
       "include/d/actor/d_a_obj_carry.h",
       "include/d/actor/d_a_obj_digplace.h",
@@ -1716,6 +1719,7 @@
       "src/d/d_save.cpp",
       "src/d/d_shop_system.cpp",
       "src/d/d_timer.cpp",
+      "src/dusk/version.cpp",
       "src/f_op/f_op_actor.cpp",
       "src/f_op/f_op_actor_mng.cpp",
       "src/f_op/f_op_msg_mng.cpp",
@@ -1800,7 +1804,10 @@
       "PLAYER-106",
       "PLAYER-107",
       "PLAYER-108",
-      "PLAYER-109"
+      "PLAYER-109",
+      "PLAYER-110",
+      "PLAYER-111",
+      "PLAYER-112"
     ]
   },
   {

@@ -187,3 +187,5 @@ CP-R90 / WORLD-046: si falta playerNo en tabla y se continúa tras assert,la cop
 CP-R91 / WORLD-048/050: patch ganador no resoluble termina lookup sin probar perdedor;remove_graph no revierte nodo ya copiado. Bajo self-remove de evento con edge custom del mismo grafo,lookup posterior puede terminar enEND. Condiciones explícitas,no evento/fallo runtime observado.
 
 CP-R92 / PORT-034: cancelar captura/hide no revierte binding ya aplicado. Savevoid no comunica a ControllerConfig fallos de reemplazo;desasignar y guardar son fases distintas. Backend de serialización y reconexión pendientes,sin pérdida de config ni acción accidental observadas.
+
+CP-R93 / PLAYER-112: health de caña/pez se usa como protocolo0/1/2 de catch,no presumir HP normal. LookupNULL tiene fallback en mf_hit pero no en mf_catch/lure_catch;retirar compañero no drena protocolo. Parámetros/species/flows deben ser compatibles;sin crash ni pérdida de progreso observados.

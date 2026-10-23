@@ -379,3 +379,7 @@ Padre remoto verificado 4f92f17d4399202ceacd6c961acd7cd55bdaa87f. WORLD-047..049
 ## CP-R92 — ControllerConfig: captura, trigger y cancelación
 
 Padre remoto verificado a93351201372d1d97d9072287492aac1c83b10ad. PORT-032..034 STATIC_CROSSCHECKED: UIacción→neutral/captura→CVar→trigger/consumidorcamera→finish/cancel/hide/savevoid. +3 evidencias/+2 localizadores. Reutiliza PLAYER-002/004 y ConfigService;sin abrir dispositivos/configuración o garantizar durabilidad. Sin mod,build ni runtime; solo atlas.
+
+## CP-R93 — Pesca LURE: diálogo, keep-release y lifecycle
+
+Padre remoto verificado fb4a17774518789cd5169603eb92d236db4df1f6. PLAYER-110..112 STATIC_CROSSCHECKED: pesca LURE ordinaria→hookset/CATCH→diálogo/registro→health keep-release→cleanup. +3 evidencias/+2 localizadores;sin UKI,premios,assets o disco verificados. Se reutiliza PLAYER-031 sin repetir entradas genéricas de pesca. Sin mod,build ni runtime; solo atlas.

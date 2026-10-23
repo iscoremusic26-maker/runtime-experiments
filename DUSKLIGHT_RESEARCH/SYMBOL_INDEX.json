@@ -12882,5 +12882,61 @@
     "evidence_ids": [
       "PORT-034"
     ]
+  },
+  {
+    "symbol": "mf_catch",
+    "kind": "function",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_mg_fish.cpp",
+      "line_start": 2133,
+      "line_end": 2227,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_mg_fish.cpp#L2133-L2227"
+    },
+    "signature": "static void mf_catch(mg_fish_class*)",
+    "purpose": "Consume health handshake de caña y solicita delete o release.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Pez inicializado,rod/jugador vivos;timers y contexto de lurecatch."
+    ],
+    "risks": [
+      "Lookup rod sin guarda en ruta normal;sin ownership por ID ni cleanup universal."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-111",
+      "PLAYER-112"
+    ]
+  },
+  {
+    "symbol": "lure_catch",
+    "kind": "function",
+    "system_id": "other_systems",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_mg_rod.cpp",
+      "line_start": 2528,
+      "line_end": 2743,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_mg_rod.cpp#L2528-L2743"
+    },
+    "signature": "static void lure_catch(dmg_rod_class*)",
+    "purpose": "Diálogo de resultado y decisión keep/release con protocolo health.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Rod lure y fishID válido;fishKind representativo0..3,assetsflow apropiados."
+    ],
+    "risks": [
+      "No contador de capturas/universalreward ni disco confirmado;ABI/export Windows pendientes."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PLAYER-111",
+      "PLAYER-112"
+    ]
   }
 ]
