@@ -323,12 +323,13 @@
   {
     "system_id": "cutscenes_dialogue",
     "coverage": "CROSSCHECKED",
-    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados. CP-R85 añade query custom y consumidor Knob20, sin cobertura global.",
+    "scope": "Flujos seleccionados de contrato/implementación y consumidores; no revisión completa de todos los estados. CP-R85 añade query custom y consumidor Knob20, sin cobertura global. CP-R91 añade arbitraje de patches nativos y retirada frente a copia viva, sin snapshot transaccional.",
     "reports": [
       "systems/cutscenes_dialogue.md"
     ],
     "files_examined": [
       "sdk/include/mods/svc/flow.h",
+      "sdk/include/mods/svc/flow.hpp",
       "sdk/include/mods/svc/message.h",
       "src/d/actor/d_a_door_knob00.cpp",
       "src/d/actor/d_a_kytag04.cpp",
@@ -349,6 +350,7 @@
     ],
     "paths": [
       "sdk/include/mods/svc/flow.h",
+      "sdk/include/mods/svc/flow.hpp",
       "sdk/include/mods/svc/message.h",
       "src/d/actor/d_a_door_knob00.cpp",
       "src/d/actor/d_a_kytag04.cpp",
@@ -379,7 +381,11 @@
       "ARCH-022",
       "CALLBACK-050",
       "CALLBACK-051",
-      "CALLBACK-052"
+      "CALLBACK-052",
+      "WORLD-047",
+      "WORLD-048",
+      "WORLD-049",
+      "WORLD-050"
     ]
   },
   {

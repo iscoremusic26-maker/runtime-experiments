@@ -371,3 +371,7 @@ Padre remoto verificado fabd99ad94c448fe003f38bc713e98248fdd7592. SDK-026..028 S
 ## CP-R90 — Tag_ChgRestart: checkpoint RAM y consumo de recarga
 
 Padre remoto verificado b31b677301963f7d45399ccc7c235ff7fd03fe0c. WORLD-043..045 STATIC_CROSSCHECKED y WORLD-046 STATIC_INFERRED: tag regiónXZ/switch→restart RAM→Link/stage→playerInit(-1),Delete sin rollback y fallo de PLAYER ausente condicionado a assert. +4 evidencias/+2 localizadores;no escena/save/Windows observados. Sin mod,build ni runtime; solo atlas.
+
+## CP-R91 — Flow patches: prioridad, resolución y alcance de reversión
+
+Padre remoto verificado 4f92f17d4399202ceacd6c961acd7cd55bdaa87f. WORLD-047..049 STATIC_CROSSCHECKED y WORLD-050 STATIC_INFERRED: patches nativos→commit→ganador→resolve→retirada/copia viva. +4 evidencias/+3 símbolos (dos slots oficiales). Self-remove con arista custom puede acabar enEND bajo condiciones explícitas;no gameplay/runtime observado. Sin mod,build ni runtime; solo atlas.

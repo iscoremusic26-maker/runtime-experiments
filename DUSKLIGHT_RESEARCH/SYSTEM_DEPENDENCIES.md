@@ -193,3 +193,5 @@ CP-R88: Bombf matriz/ID→fastCreate NBOMB→SubCreate→request/ExecuteQ→Flow
 CP-R89: SDK File.open→SlotMap File owned→read/count/error→take_owned antes de close→detach/destructor;consumidor File RAII conserva límites de error (SDK-026..028). Dependencias memoria/SDK/backend,sin dispatcher o red nuevos.
 
 CP-R90: Tag_ChgRestart regiónXZ/switch→dSv_restart room,pos,yaw→Link/startRestartRoom→dStage nextStage(-1)/roomParam→playerInit append. Flags,estado RAM,cola de escena y guardado permanecen fronteras diferentes (WORLD-043..046).
+
+CP-R91: Flow graph/patch commit→selector por clave y posiciónmod/sequence→resolve BMG→copia local dMsgFlow→edge tardío→remove_graph/detach para futuros lookups (WORLD-047..050). Frontera de arbitraje SDK y estado consumidor,sin transacción del diálogo entero.

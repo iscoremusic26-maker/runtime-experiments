@@ -23,3 +23,5 @@ Presencia del port: POTENTIAL_REQUIRES_VERIFICATION como interfaz C++ interna, s
 Matrices interpoladas: OFFICIAL_SERVICE InterpService (SDK-013 aclarado,PRES-094..097). recordMOD_OK no confirma muestra fuera de ventana; valores copiados,key global compartida. Forget/detach borra muestras,no restaura anterior ni confirma GPU; [ownership](systems/callback_ownership_and_cancellation.md).
 
 WebSocketService polling: SDK-024/CALLBACK-028..031,slots oficiales poll_event/close. Snapshot de handles no prolonga payload permod; closeaceptado no CLOSED ni cupo liberado. WrapperC++detach solo local; backend/drain sin certificar. [Ownership](systems/callback_ownership_and_cancellation.md).
+
+CP-R91: FlowService patch_node/remove_graph son OFFICIAL_SERVICE;la reversión retira patches para futuros lookups, no restaura efectos de un nodo ya consumido. WORLD-047..050, [flujos](systems/cutscenes_dialogue.md). Ganador por clave/posiciónmod/commitsequence;sin coexistencia Windows probada.

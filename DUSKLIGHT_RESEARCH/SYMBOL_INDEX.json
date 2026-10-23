@@ -12744,5 +12744,88 @@
       "WORLD-044",
       "WORLD-045"
     ]
+  },
+  {
+    "symbol": "FlowService::patch_node",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/flow.h",
+      "line_start": 169,
+      "line_end": 170,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/flow.h#L169-L170"
+    },
+    "signature": "ModResult (*patch_node)(ModContext*, FlowGraphHandle, uint16_t, const FlowNodeData*)",
+    "purpose": "Copia patch nativo hasta commit;no resuelve conflicto por rechazo.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Grafo owned no committed;índice nativo y nodo válidos."
+    ],
+    "risks": [
+      "Commit no es victoria ni efecto;sin coexistencia Windows probada."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-047",
+      "WORLD-048"
+    ]
+  },
+  {
+    "symbol": "FlowService::remove_graph",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/flow.h",
+      "line_start": 174,
+      "line_end": 174,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/flow.h#L174-L174"
+    },
+    "signature": "ModResult (*remove_graph)(ModContext*, FlowGraphHandle)",
+    "purpose": "Retira registros,modifica futuros lookups sin rollback del consumidor.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Grafo owned vigente."
+    ],
+    "risks": [
+      "No restaura estado jugable ni copia local actual."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-049",
+      "WORLD-050"
+    ]
+  },
+  {
+    "symbol": "dusk::flow::winning_patch",
+    "kind": "function",
+    "system_id": "cutscenes_dialogue",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/dusk/mods/svc/flow.cpp",
+      "line_start": 367,
+      "line_end": 395,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/svc/flow.cpp#L367-L395"
+    },
+    "signature": "const PatchRecord* winning_patch(uint16_t, uint16_t, bool)",
+    "purpose": "Selecciona patch activo por modposition/commitsequence.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Owner válido;lookup porgrupo/índice/tipo."
+    ],
+    "risks": [
+      "Ganador no resoluble no activa fallback perdedor;ABI/export no certificados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-048"
+    ]
   }
 ]

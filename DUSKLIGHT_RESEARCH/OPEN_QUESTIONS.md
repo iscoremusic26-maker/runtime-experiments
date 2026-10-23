@@ -122,3 +122,5 @@ CP-R88 Q-12: PLAYER-107..109 contrastan Bombf/NBOMB fastCreate→crecimiento/car
 CP-R89 Q-02/ownership/Q-13: SDK-026..028 precisan streams owned→read count/status→close consumehandle→detach y wrapper RAII. No callback nuevo:Q-01 sigue parcial. Backend,cursor/EOF/durabilidad y teardown completo NOT_VERIFIED;no datos personales ni I/O del juego. Alternar stage/restart.
 
 CP-R90 Q-09/stages: WORLD-043..045 contrastan Tag_ChgRestart→RAM/latch→Link restart→playerInit(-1);WORLD-046 inferencia condicionada de ID PLAYER ausente tras assert. Quedan composición,scopes/durabilidad,Tag_SetRestart y recuperación de toda cola;no repetir reset/opening. Alternar arbitraje del SDK.
+
+CP-R91 Q-14: WORLD-047..049 contrastan arbitraje Flow patch por posiciónmod/commitsequence y retiro para lookup futuro;WORLD-050 inferencia condicionada de nodo copiado y arista retirada durante callback. Faltan combinaciones reales,recursos/idiomas y reentrada/DLL;no prometer rollback jugable o coexistencia Windows. Alternar diagnóstico/configuración interna.
