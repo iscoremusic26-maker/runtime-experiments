@@ -12605,5 +12605,88 @@
     "evidence_ids": [
       "PLAYER-109"
     ]
+  },
+  {
+    "symbol": "FileService::open",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/file.h",
+      "line_start": 91,
+      "line_end": 92,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L91-L92"
+    },
+    "signature": "ModResult (*open)(ModContext*, const char*, FileOpenMode, FileStreamHandle*)",
+    "purpose": "Ranura stream owned;aceptación de backend distinta de read/close.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Contexto/location/mode/out válidos;servicio disponible."
+    ],
+    "risks": [
+      "Location opaca;backend Windows no certificado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-026"
+    ]
+  },
+  {
+    "symbol": "FileService::read",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/file.h",
+      "line_start": 94,
+      "line_end": 95,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L94-L95"
+    },
+    "signature": "ModResult (*read)(ModContext*, FileStreamHandle, void*, uint64_t, uint64_t*)",
+    "purpose": "Lectura con count separado de resultado.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Stream owned no writable;buffer/out válidos;game thread."
+    ],
+    "risks": [
+      "Lectura corta posible con OK;backend/cursor no comprobados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-026",
+      "SDK-028"
+    ]
+  },
+  {
+    "symbol": "FileService::close",
+    "kind": "service",
+    "system_id": "sdk_services",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "sdk/include/mods/svc/file.h",
+      "line_start": 100,
+      "line_end": 101,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/sdk/include/mods/svc/file.h#L100-L101"
+    },
+    "signature": "ModResult (*close)(ModContext*, FileStreamHandle)",
+    "purpose": "Retira registro antes de informar resultado de cierre.",
+    "dependencies": [],
+    "integration": "OFFICIAL_SERVICE",
+    "conditions": [
+      "Handleowned vivo y contexto válido."
+    ],
+    "risks": [
+      "Error no conserva mismo handle para retry;RAII no confirma durabilidad."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "SDK-027",
+      "SDK-028"
+    ]
   }
 ]

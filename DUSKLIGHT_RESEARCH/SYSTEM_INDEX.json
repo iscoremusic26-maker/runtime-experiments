@@ -1068,7 +1068,7 @@
   {
     "system_id": "sdk_services",
     "coverage": "CROSSCHECKED",
-    "scope": "Contratos seleccionados; CP-R46 WebSocketService connect→poll/OPEN→views→close/CLOSED/lifecycle,distinto de callbackHTTP; backend/slots completos sin auditar.",
+    "scope": "Contratos seleccionados; CP-R46 WebSocketService connect→poll/OPEN→views→close/CLOSED/lifecycle,distinto de callbackHTTP; backend/slots completos sin auditar. CP-R89 streams open/read/close contrastados con wrapper C++,sin nuevo dispatcher.",
     "reports": [
       "SDK_AND_SERVICES.md"
     ],
@@ -1079,6 +1079,7 @@
       "sdk/include/mods/api.h",
       "sdk/include/mods/svc/config.h",
       "sdk/include/mods/svc/file.h",
+      "sdk/include/mods/svc/file.hpp",
       "sdk/include/mods/svc/http.h",
       "sdk/include/mods/svc/interp.h",
       "sdk/include/mods/svc/interp.hpp",
@@ -1090,6 +1091,7 @@
       "src/dusk/interp/frame_interpolation.cpp",
       "src/dusk/interp/lerp.h",
       "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/svc/file.cpp",
       "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/interp.cpp",
       "src/dusk/mods/svc/registry.cpp",
@@ -1101,7 +1103,8 @@
       "cameras_rendering",
       "runtime_and_lifecycle",
       "callback_ownership_and_cancellation",
-      "external_dependencies"
+      "external_dependencies",
+      "memory_ownership"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -1122,9 +1125,14 @@
       "CALLBACK-031",
       "PORT-026",
       "CALLBACK-037",
-      "CALLBACK-038"
+      "CALLBACK-038",
+      "SDK-026",
+      "SDK-027",
+      "SDK-028"
     ],
     "files_examined": [
+      "sdk/include/mods/svc/file.h",
+      "sdk/include/mods/svc/file.hpp",
       "sdk/include/mods/svc/interp.h",
       "sdk/include/mods/svc/interp.hpp",
       "sdk/include/mods/svc/websocket.h",
@@ -1133,6 +1141,7 @@
       "src/dusk/interp/frame_interpolation.cpp",
       "src/dusk/interp/lerp.h",
       "src/dusk/mods/loader/context.cpp",
+      "src/dusk/mods/svc/file.cpp",
       "src/dusk/mods/svc/internal.hpp",
       "src/dusk/mods/svc/interp.cpp",
       "src/dusk/mods/svc/registry.cpp",
@@ -1951,7 +1960,7 @@
   {
     "system_id": "memory_ownership",
     "coverage": "CROSSCHECKED",
-    "scope": "CROSSCHECKED selectiva: heap/TLSprevios y CP61 Disposer por dirección→destructorvirtual→resetarena;no todas allocations ni barreraunload.",
+    "scope": "CROSSCHECKED selectiva: heap/TLSprevios y CP61 Disposer por dirección→destructorvirtual→resetarena;no todas allocations ni barreraunload. CP-R89 añade streams FileService/RAII/cierre consumido, sin garantías de backend.",
     "reports": [
       "systems/memory_ownership.md"
     ],
@@ -1965,8 +1974,12 @@
       "libs/JSystem/src/JKernel/JKRDisposer.cpp",
       "libs/JSystem/src/JKernel/JKRHeap.cpp",
       "libs/JSystem/src/JKernel/JKRSolidHeap.cpp",
+      "sdk/include/mods/svc/file.h",
+      "sdk/include/mods/svc/file.hpp",
       "src/d/d_timer.cpp",
       "src/dusk/OSThread.cpp",
+      "src/dusk/mods/svc/file.cpp",
+      "src/dusk/mods/svc/internal.hpp",
       "src/f_op/f_op_actor_mng.cpp",
       "src/f_op/f_op_draw_tag.cpp",
       "src/f_op/f_op_msg.cpp",
@@ -1987,8 +2000,12 @@
       "libs/JSystem/src/JKernel/JKRDisposer.cpp",
       "libs/JSystem/src/JKernel/JKRHeap.cpp",
       "libs/JSystem/src/JKernel/JKRSolidHeap.cpp",
+      "sdk/include/mods/svc/file.h",
+      "sdk/include/mods/svc/file.hpp",
       "src/d/d_timer.cpp",
       "src/dusk/OSThread.cpp",
+      "src/dusk/mods/svc/file.cpp",
+      "src/dusk/mods/svc/internal.hpp",
       "src/f_op/f_op_actor_mng.cpp",
       "src/f_op/f_op_draw_tag.cpp",
       "src/f_op/f_op_msg.cpp",
@@ -1999,7 +2016,9 @@
       "runtime_and_lifecycle",
       "hud_ui_text",
       "actors_ai_npcs",
-      "resources_archives_overlays"
+      "resources_archives_overlays",
+      "sdk_services",
+      "external_dependencies"
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
@@ -2012,7 +2031,10 @@
       "ROOT-013",
       "ROOT-014",
       "ROOT-015",
-      "ROOT-016"
+      "ROOT-016",
+      "SDK-026",
+      "SDK-027",
+      "SDK-028"
     ]
   },
   {

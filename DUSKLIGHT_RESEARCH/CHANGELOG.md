@@ -363,3 +363,7 @@ Padre remoto verificado 4b57a14b43797a8295b0bffc8e5723ad63675515. PRES-157..159 
 ## CP-R88 — Bombf: creación rápida, ID y reposición
 
 Padre remoto verificado 52c637f012f513dc8ecc94e629a94ba90694fb73. PLAYER-107..109 STATIC_CROSSCHECKED: planta/Bombf→fastCreate NBOMB→crecimiento/carry→ausencia/counter150→reposición y cleanup independiente. +3 evidencias/+3 localizadores. FastCreate puntero no es request asíncrono ni primera Execute;NULL GetID seguro. Sin mod,build ni runtime; solo atlas.
+
+## CP-R89 — FileService streams: count, handle y cierre
+
+Padre remoto verificado fabd99ad94c448fe003f38bc713e98248fdd7592. SDK-026..028 STATIC_CROSSCHECKED: streams open/read/close,SlotMap owner/generación,consumidor File RAII y detach. +3 evidencias/+3 slots oficiales;no nuevo dispatcher. Lectura corta no es error automático;close consumehandle antes de conocer éxito. Backend/cursor/durabilidad pendientes. Sin mod,build ni runtime; solo atlas.

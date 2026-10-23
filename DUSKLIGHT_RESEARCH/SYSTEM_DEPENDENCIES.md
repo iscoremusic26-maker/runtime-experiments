@@ -189,3 +189,5 @@ CP-R86: switches home.room → intensidad KYTAG01 → fog/gather/moya compartido
 CP-R87: Title ARC/BPK13→J3DAnmColorKey con backing prestado→mDoExt_bpkAnm→material slot0→ColorBlock MatColor;resDelete/Delete y remove animator son fases distintas (PRES-157..159). Reutiliza JKR/dRes y materialcalc anteriores,sin auditar todo renderer.
 
 CP-R88: Bombf matriz/ID→fastCreate NBOMB→SubCreate→request/ExecuteQ→FlowerWait/carry→delete solicitado→lookup ausencia/counter150. Recursos y cleanup padre/hijo separados (PLAYER-107..109);relación gameplay/actores/lifecycle,sin árbol propietario implícito.
+
+CP-R89: SDK File.open→SlotMap File owned→read/count/error→take_owned antes de close→detach/destructor;consumidor File RAII conserva límites de error (SDK-026..028). Dependencias memoria/SDK/backend,sin dispatcher o red nuevos.

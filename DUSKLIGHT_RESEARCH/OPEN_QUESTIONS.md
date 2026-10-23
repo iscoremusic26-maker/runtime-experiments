@@ -118,3 +118,5 @@ CP-R86 Q-11: PRES-154..156 contrastan KYTAG01 variante0 dos switches→fade→fo
 CP-R87 Q-10: PRES-157..159 contrastan Title/BPK→MatColor0 y retiro, distinto de TEV/BRK. BVA tiene loader localizado sin consumidor cerrado;no crear evidencia de compatibilidad. Quedan assets,sharing,parser/fallos parciales y GPUdrain;no repetir BLS/BLK. Alternar gameplay.
 
 CP-R88 Q-12: PLAYER-107..109 contrastan Bombf/NBOMB fastCreate→crecimiento/carry→lookup ausente→reposicion150. Recolección no inicia por sí sola reposición;Delete padre no borra hijo. Unload/room,otros estados de bombas y callbacks de daño completos pendientes. Alternar servicio/soporte;no reauditar scheduler.
+
+CP-R89 Q-02/ownership/Q-13: SDK-026..028 precisan streams owned→read count/status→close consumehandle→detach y wrapper RAII. No callback nuevo:Q-01 sigue parcial. Backend,cursor/EOF/durabilidad y teardown completo NOT_VERIFIED;no datos personales ni I/O del juego. Alternar stage/restart.
