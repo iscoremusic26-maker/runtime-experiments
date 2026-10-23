@@ -1,6 +1,6 @@
 # Atlas técnico general de Dusklight 2.0.3 para mods .dusk
 
-Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`); objetivo Windows x64 / DirectX 12 / GZ2E01 USA. **CP-R94: KYTAG09: reclasificación gráfica y selección por progreso; sin mod objetivo.** La cobertura es selectiva y se declara por sistema, sin afirmar comprensión completa del juego.
+Fuente fijada: `40457c6adb381928e4b5fef6ed459ed291edd5e2` (`v2.0.3`); objetivo Windows x64 / DirectX 12 / GZ2E01 USA. **CP-R95: Brechas priorizadas y puerta documental V1; sin mod objetivo.** La cobertura es selectiva y se declara por sistema, sin afirmar comprensión completa del juego.
 
 ## Acceso rápido
 
@@ -39,3 +39,5 @@ Soporte adicional: [presencia del port, gates y lifecycle](systems/port_presence
 Soporte adicional: [comandos host,parser y lifecycle de consola](systems/port_commands.md),sin ejecución ni CommandService público acreditado.
 
 Soporte adicional: [diagnóstico de disco,worker y cancelación](systems/port_disc_validation.md),solo fuente; sin inspeccionar imágenes personales ni verificar bytes de un disco.
+
+Puerta de primera versión estática: [criterios,brechas priorizadas y dictamen](V1_READINESS.md). CP-R95: V1_NOT_READY mientras se completa auditoría semántica enfocada y guía;los seis READ no son por sí solos un defecto.

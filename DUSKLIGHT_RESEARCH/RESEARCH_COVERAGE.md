@@ -1,4 +1,4 @@
-# Cobertura real — CP-R94
+# Cobertura real — CP-R95
 
 ## Alcance y denominadores
 
@@ -235,3 +235,7 @@ CP-R92: ControllerConfig: captura, trigger y cancelación. Cadena seleccionada;2
 CP-R93: Pesca LURE: diálogo, keep-release y lifecycle. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
 
 CP-R94: KYTAG09: reclasificación gráfica y selección por progreso. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
+
+CP-R95: [auditoría de cierre V1](V1_READINESS.md) clasifica brechas de las seis áreas READ sin promoción. Platform_backend se localiza además en pin/ABI;other_systems conserva READ global. Comprobación complementaria28 scopes/pendientes/rutas y24 fichas accesibles,no semántica exhaustiva.
+
+CP-R95: Brechas priorizadas y puerta documental V1. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.

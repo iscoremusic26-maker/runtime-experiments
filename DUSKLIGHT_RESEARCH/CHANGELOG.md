@@ -387,3 +387,7 @@ Padre remoto verificado fb4a17774518789cd5169603eb92d236db4df1f6. PLAYER-110..11
 ## CP-R94 — KYTAG09: reclasificación gráfica y selección por progreso
 
 Padre remoto verificado 240a8b7f498618d4c919db0199159ff2eb3af359. PRES-160/161 STATIC_CROSSCHECKED, +1 localizador: Twilight Film Tag adquiere modelo/BTK por tipo,selecciona con DarkClearLV y dibuja en BG;Delete suelta ARC. CERRADO_SELECTIVO sin assets,sharing,GPU o fallo parcial universal. Pista Q-11 de CP-R93 rectificada a Q-10;sin repetir auditoría BTK. Sin mod,build ni runtime; solo atlas.
+
+## CP-R95 — Brechas priorizadas y puerta documental V1
+
+Padre remoto verificado e4d713d7c2d85d74a9fcf02dfc026ac6fe5677da. Auditoría editorial de seis READ:28 entradas con scope/pending/rutas/reportes,24 fichas accesibles. V1_READINESS define criterios I–VIII y tres tareas críticas de cierre,con mejoras diferibles/bloqueos separados. V1_NOT_READY;0 IDs nuevos/0 símbolos nuevos,ninguna promoción de cobertura. Sin mod,build ni runtime; solo atlas.

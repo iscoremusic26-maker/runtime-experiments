@@ -460,8 +460,8 @@
       "src/m_Do/m_Do_ext.cpp"
     ],
     "pending": [
-      "JUTCacheFont japonés completo, TextBoxEx, charset/BMG y todos los consumidores/menús.",
-      "Backend/errores de montaje y última liberación con asserts sin ejecución Windows."
+      "Variantes de TextBoxEx/TevBlock,assets TBX2,charsets/JUTCacheFont japonés y refresh global no contrastados por completo.",
+      "HUD dinámico datos→layout de medidores solo muestreado;montaje/última liberación y backend Windows pendientes."
     ],
     "paths": [
       "include/d/d_stage.h",
@@ -626,8 +626,8 @@
       "src/m_Do/m_Do_graphic.cpp"
     ],
     "pending": [
-      "Formatos BMD/BCK completos,otros morf por actor,skin/LOD y platform runtime.",
-      "Todos los fallos de alloc/disposers,sharing simultáneo y orden GPU no auditados."
+      "LOD/BVA sin cadena completa,otros flags/fastpaths de skin y formatos completos;las muestras de skin/BLS/BLK ya tienen evidencia.",
+      "Assets,sharing simultáneo,fallos de alloc/disposers y orden GPU no certificados."
     ],
     "paths": [
       "include/SSystem/SComponent/c_phase.h",
@@ -1548,7 +1548,7 @@
   {
     "system_id": "other_systems",
     "coverage": "READ",
-    "scope": "CROSSCHECKED selectiva: familias previas y CP-R84 SekizoaTYPE0/1→cutJump/GOAL→SekiDoor→SW2/recarga;assets/parejas/cleanupglobal pendientes. CP-R88 añade Bombf/NBOMB tracker→carry→ausencia/reposición, sin cobertura global. CP-R93 añade pesca lure hookset→catch→diálogo/keep-release→cleanup, no toda pesca.",
+    "scope": "READ global con cadenas STATIC_CROSSCHECKED selectivas: puzzles,actores,tienda,Rollgoal,Bombf y pesca LURE;no todas familias ni assets,recompensas o durabilidad.",
     "reports": [
       "systems/other_systems.md"
     ],
@@ -1643,9 +1643,9 @@
       "src/f_pc/f_pc_manager.cpp"
     ],
     "pending": [
-      "Pesca y minijuegos completos",
-      "Puzzles por familia",
-      "Recompensas/persistencia"
+      "Pesca UKI/alquiler,otras familias NPC/boss/puzzles y minijuegos no cubiertos por las muestras.",
+      "Assets de cuts/flows y compañeros de Sekizoa/MYNA2;sin atribuir control de Cetro del Dominio.",
+      "Resultados RAM frente a recompensas/guardado y teardown abrupto siguen parciales."
     ],
     "paths": [
       "include/d/actor/d_a_mg_rod.h",
@@ -2097,9 +2097,12 @@
   {
     "system_id": "platform_backend",
     "coverage": "READ",
-    "scope": "Rutas seleccionadas; profundidad original BOUNDARY_SAMPLED; no auditoría integral del sistema.",
+    "scope": "READ de fronteras del host;internos Aurora/Borealis/cosmetics/randomizer BLOCKED_BY_EXTERNAL_SOURCE según SOURCE_PIN. Sin ABI,exports,DX12 o backendIO certificados.",
     "reports": [
-      "systems/memory_ownership.md"
+      "SOURCE_PIN.md",
+      "HOOKING_AND_ABI.md",
+      "systems/memory_ownership.md",
+      "SYSTEM_DEPENDENCIES.md"
     ],
     "files_examined": [
       "CMakeLists.txt",
@@ -2107,7 +2110,8 @@
       "src/dusk/OSThread.cpp"
     ],
     "pending": [
-      "Implementación Aurora/Dawn/DX12 y dependencias transitivas ausentes."
+      "Contenidos de cuatro gitlinks fijados ausentes;Dawn/DX12,IO/drain/atomicidad externos no inventados.",
+      "Imagen/import library/manifiesto Windows concreto y mediciones ABI/runtime no disponibles en esta campaña."
     ],
     "paths": [
       "CMakeLists.txt",
@@ -2397,10 +2401,11 @@
   {
     "system_id": "documentation",
     "coverage": "INVENTARIED",
-    "scope": "Rutas nominales de soporte; no se acredita revisión integral de implementaciones.",
+    "scope": "Organización documental inventariada;CP-R95 incorpora puerta V1 y brechas priorizadas,sin promover cobertura técnica.",
     "reports": [
       "SYSTEM_DEPENDENCIES.md",
-      "INVENTORY.md"
+      "INVENTORY.md",
+      "V1_READINESS.md"
     ],
     "paths": [
       "docs/",
@@ -2408,7 +2413,7 @@
     ],
     "dependencies": [],
     "pending": [
-      "Lectura por mecanismo según prioridad; sin contarlo como sistema estudiado."
+      "V1-C01 revisión semántica de alto riesgo,V1-C02 guía y V1-C03 consistencia/publicación final."
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": []
@@ -2516,8 +2521,8 @@
       "player_and_controls"
     ],
     "pending": [
-      "Resto de checks de logros y diagnósticos.",
-      "LiveSplit backend/ACK y reset completos; presencia backend Borealis/handlers/ACK y capacidades Windows sin verificar."
+      "Otras reglas de logros/diagnósticos/configuración son mejoras de cobertura;familias representativas ya localizables.",
+      "LiveSplit/presencia/IO/logger/PADSerializeMappings:ACK,drain,handlers,backend Windows y durabilidad no certificados."
     ],
     "dependency_scope": "Relaciones seleccionadas de las fichas, no grafo completo del código.",
     "evidence_ids": [
