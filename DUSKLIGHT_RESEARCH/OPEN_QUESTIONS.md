@@ -132,3 +132,5 @@ CP-R93 Q-12: PLAYER-110..112 amplían PLAYER-031 con pesca LURE ordinaria hookse
 CP-R94 Q-10: KYTAG09 film gráfico→selección por DarkClearLV→Draw BTK/BG→resDelete, PRES-160/161 CERRADO_SELECTIVO. La pista Q-11 de CP-R93 se reclasifica;no había evidencia ambiental que borrar. Próximo bloque:auditoría de brechas V1 de seis áreas READ,priorizada por impacto;no otro actor arbitrario.
 
 CP-R95 prioriza cierre documental en V1_READINESS:V1-C01 auditoría semántica de alto riesgo,V1-C02 guía de consulta/propiedad y V1-C03 consistencia/publicación final. No se cierran Q-01..14 ni se exige resolver todos los READ. La investigación técnica nueva se justifica por impacto, no por actor o contador.
+
+CP-R96 / Q-04 y clasificación transversal: dos etiquetas oficiales corregidas con trazabilidad en [AUDIT_FINDINGS](AUDIT_FINDINGS.md);no se resolvió export/ABI Windows. V1-C01 realizado;C02 guía y C03 comprobación final aún críticos para el dictamen. Sin IDs nuevos ni cierre de grupos Q.

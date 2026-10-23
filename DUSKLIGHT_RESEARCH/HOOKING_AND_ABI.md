@@ -2,7 +2,7 @@
 
 Ámbito: commit `40457c6adb381928e4b5fef6ed459ed291edd5e2`, Windows x64 / DX12 como destino. Revisión estática de contratos, implementación y consumidores; no se compiló ni se ejecutó un hook. La capacidad general del SDK y la disponibilidad real de un target concreto son dos evidencias distintas. Véase [ciclo de vida](systems/runtime_and_lifecycle.md) y [servicios](SDK_AND_SERVICES.md).
 
-## ABI que se puede afirmar
+## Contrato ABI declarado y validaciones del loader
 
 La ABI nativa exige ModResult de cuatro bytes, ServiceHeader versionado y registros modmeta alineados a ocho bytes; el parser exige exactamente un header y ABI_VERSION coincidente.
 

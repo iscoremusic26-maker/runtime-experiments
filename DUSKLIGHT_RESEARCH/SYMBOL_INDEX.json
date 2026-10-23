@@ -2789,17 +2789,19 @@
       "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
       "path": "src/dusk/mods/item_gives.cpp",
       "line_start": 367,
-      "line_end": 396
+      "line_end": 396,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/dusk/mods/item_gives.cpp#L367-L396"
     },
     "signature": "void dusk::mods::svc::item_gives_tick()",
     "purpose": "Despacha cola y reintentos de grant al finalizar frame del servicio.",
     "dependencies": [
       "ItemService"
     ],
-    "integration": "OFFICIAL_SERVICE",
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
     "conditions": [
       "Consumir mediante ItemService::give_item y observe_gives; función interna no es entrada SDK directa.",
-      "MOD_OK de enqueue no confirma entrega."
+      "MOD_OK de enqueue no confirma entrega.",
+      "CP-R96 rectifica clasificación OFFICIAL_SERVICE anterior: WORLD-021: helper host de cola; las entradas públicas son ItemService::give_item/observe_gives, no este tick."
     ],
     "risks": [
       "Entrega diferida; cambio de slot limpia cola.",
@@ -3220,7 +3222,8 @@
       "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
       "path": "include/d/d_stage.h",
       "line_start": 221,
-      "line_end": 228
+      "line_end": 228,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/include/d/d_stage.h#L221-L228"
     },
     "signature": "struct stage_tgsc_data_class { char name[8]; fopAcM_prmBase_class base; fopAcM_prmScale_class scale; };",
     "purpose": "Registro TGSC/SCOB/TGDR/Door anotado0x24 con assert histórico no activo en PC; sizeof Windows no medido. Distinguir stride, tramo CRC y0x23 público.",
@@ -3228,10 +3231,11 @@
       "fopAcM_prmBase_class",
       "fopAcM_prmScale_class"
     ],
-    "integration": "OFFICIAL_SERVICE",
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
     "conditions": [
       "StageService acepta0x23 bytes; no asumir sizeof(stage_tgsc_data_class) aceptado ni0x24 Windows medido.",
-      "CP-R22 rectifica redacción de tamaño, sin modificar WORLD-033."
+      "CP-R22 rectifica redacción de tamaño, sin modificar WORLD-033.",
+      "CP-R96 rectifica clasificación OFFICIAL_SERVICE anterior: WORLD-033/038/039/040: estructura game-side, no slot SDK; 0x23 es payload admitido, no sizeof Windows medido."
     ],
     "risks": [
       "Desajuste de tamaño/API y padding.",
@@ -3286,7 +3290,8 @@
       "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
       "path": "src/d/actor/d_a_alink.cpp",
       "line_start": 17814,
-      "line_end": 18338
+      "line_end": 18338,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L17814-L18338"
     },
     "signature": "int daAlink_c::execute()",
     "purpose": "Coordina input, procedimientos, equipamiento, movimiento y colisión de Link.",
@@ -3298,7 +3303,8 @@
     "integration": "TYPED_HOOK",
     "conditions": [
       "Native .dusk con FEATURES game y GameService ABI 2.0.",
-      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook.",
+      "TYPED_HOOK conserva la ruta de ejemplo documentada en PLAYER-034, no acredita export ni resolución Windows."
     ],
     "risks": [
       "No conservar punteros de actor o recurso entre escenas o tras destrucción.",
@@ -3557,7 +3563,8 @@
       "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
       "path": "src/d/actor/d_a_alink.cpp",
       "line_start": 13013,
-      "line_end": 13178
+      "line_end": 13178,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_alink.cpp#L13013-L13178"
     },
     "signature": "void daAlink_c::posMove()",
     "purpose": "Integra movimiento de Link con animación, pendiente, agua y equipo.",
@@ -3569,7 +3576,8 @@
     "integration": "TYPED_HOOK",
     "conditions": [
       "Native .dusk con FEATURES game y GameService ABI 2.0.",
-      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook."
+      "Confirmar símbolo, firma y ciclo de vida en el ejecutable Windows x64 fijado antes de instalar un hook.",
+      "TYPED_HOOK conserva la ruta de ejemplo documentada en PLAYER-034, no acredita export ni resolución Windows."
     ],
     "risks": [
       "CrrPos y posteriores ramas pueden corregir o restaurar posición.",

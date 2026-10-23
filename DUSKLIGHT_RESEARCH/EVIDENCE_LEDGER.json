@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "checkpoint": "CP-R95",
+  "checkpoint": "CP-R96",
   "source_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
   "evidence": [
     {
@@ -3018,7 +3018,8 @@
         }
       ],
       "limitations": [
-        "Análisis estático; ejecución Windows/DX12/GZ2E01 no observada."
+        "Análisis estático; ejecución Windows/DX12/GZ2E01 no observada.",
+        "CP-R96: se corrige solo la clasificación del símbolo item_gives_tick a POTENTIAL_REQUIRES_VERIFICATION; helper interno, no ranura SDK. Claim y nivel se conservan."
       ]
     },
     {
@@ -3428,7 +3429,8 @@
       "limitations": [
         "No se compiló ni se probó llamada en Windows; no afirmar bug de runtime demostrado.",
         "Distinguir padding de estructura y bytes significativos; no modificar host/SDK.",
-        "No inferir tamaño Windows a partir de comentario o assert histórico; no se afirma fallo runtime."
+        "No inferir tamaño Windows a partir de comentario o assert histórico; no se afirma fallo runtime.",
+        "CP-R96: stage_tgsc_data_class se reclasifica como localizador interno POTENTIAL_REQUIRES_VERIFICATION, no OFFICIAL_SERVICE. StageService público y rectificación CP-R22 se conservan."
       ]
     },
     {

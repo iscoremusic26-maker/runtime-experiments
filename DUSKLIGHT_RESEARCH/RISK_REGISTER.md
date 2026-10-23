@@ -189,3 +189,5 @@ CP-R91 / WORLD-048/050: patch ganador no resoluble termina lookup sin probar per
 CP-R92 / PORT-034: cancelar captura/hide no revierte binding ya aplicado. Savevoid no comunica a ControllerConfig fallos de reemplazo;desasignar y guardar son fases distintas. Backend de serialización y reconexión pendientes,sin pérdida de config ni acción accidental observadas.
 
 CP-R93 / PLAYER-112: health de caña/pez se usa como protocolo0/1/2 de catch,no presumir HP normal. LookupNULL tiene fallback en mf_hit pero no en mf_catch/lure_catch;retirar compañero no drena protocolo. Parámetros/species/flows deben ser compatibles;sin crash ni pérdida de progreso observados.
+
+CP-R96: se corrigen etiquetas OFFICIAL_SERVICE de item_gives_tick y stage_tgsc_data_class a POTENTIAL_REQUIRES_VERIFICATION. WORLD-021/033 y rangos de soporte conservados;no invocar helper interno por confundirlo con API. [Auditoría enfocada](AUDIT_FINDINGS.md) conserva cinco rutas TYPED_HOOK documentadas sin certificar resolución/ABI/unload Windows.

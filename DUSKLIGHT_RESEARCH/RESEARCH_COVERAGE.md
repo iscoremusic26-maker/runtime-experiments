@@ -1,4 +1,4 @@
-# Cobertura real — CP-R95
+# Cobertura real — CP-R96
 
 ## Alcance y denominadores
 
@@ -239,3 +239,5 @@ CP-R94: KYTAG09: reclasificación gráfica y selección por progreso. Cadena sel
 CP-R95: [auditoría de cierre V1](V1_READINESS.md) clasifica brechas de las seis áreas READ sin promoción. Platform_backend se localiza además en pin/ABI;other_systems conserva READ global. Comprobación complementaria28 scopes/pendientes/rutas y24 fichas accesibles,no semántica exhaustiva.
 
 CP-R95: Brechas priorizadas y puerta documental V1. Cadena seleccionada;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.
+
+CP-R96: Auditoría semántica y dos correcciones de clasificación. Revisión editorial enfocada, sin cadena nueva;28 entradas,18 CROSSCHECKED selectivas,6 READ,4 INVENTARIED sin promoción global.

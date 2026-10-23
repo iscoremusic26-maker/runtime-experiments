@@ -391,3 +391,7 @@ Padre remoto verificado 240a8b7f498618d4c919db0199159ff2eb3af359. PRES-160/161 S
 ## CP-R95 — Brechas priorizadas y puerta documental V1
 
 Padre remoto verificado e4d713d7c2d85d74a9fcf02dfc026ac6fe5677da. Auditoría editorial de seis READ:28 entradas con scope/pending/rutas/reportes,24 fichas accesibles. V1_READINESS define criterios I–VIII y tres tareas críticas de cierre,con mejoras diferibles/bloqueos separados. V1_NOT_READY;0 IDs nuevos/0 símbolos nuevos,ninguna promoción de cobertura. Sin mod,build ni runtime; solo atlas.
+
+## CP-R96 — Auditoría semántica y dos correcciones de clasificación
+
+Padre remoto verificado 8e4a5492a0b31e3104a75b71c8632c0302fc9d0f. Auditoría V1-C01: item_gives_tick y stage_tgsc_data_class pasan de OFFICIAL_SERVICE a POTENTIAL_REQUIRES_VERIFICATION;WORLD-021/033 anotan la corrección sin cambiar claim/nivel. Se mantienen cinco TYPED_HOOK por procedencia explícita;UI2.3,GameService época y Save/Luau delimitados. AUDIT_FINDINGS.md registra método/alcance;0 nuevos IDs y0 símbolos netos. Oficial87/potential360/typed5. V1_NOT_READY:restan C02/C03. Sin mod,build ni runtime; solo atlas.
