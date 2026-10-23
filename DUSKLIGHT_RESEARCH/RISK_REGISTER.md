@@ -173,3 +173,5 @@ CP-R83: invJntPacket conserva modelo,joint y recursos hasta draw;reset bucket no
 CP-R84 / PLAYER-106 STATIC_INFERRED: SekiDoorDestroyed noDelete;condición !dComIfGp_event_runCheck sin() no invocaquery ynoalcanzadelete enesebrazo. Sin actorpersistente/crashobservados;otraslimpiezasposibles. ActorMngrs IDs no posesión ygetActorPNULL no cubierto en varioscuts.
 
 CP-R85 / CALLBACK-052: una query ausente, inválida o con excepción puede aportar resultado0 al consumidor, que intenta la primera arista. No es rollback ni aborto obligatorio. Copia de record/contexto no prolonga userdata, speaker ni DLL; dispatcher no incluye gate active. Reentrada/retirada durante llamada y grafo resultante pendientes, sin fallo runtime observado.
+
+CP-R86 / PRES-156: gate de room/intensidad0 y Delete de KYTAG01 no son rollback del fog global. Retención depende del último ratio (puede estar ya a0),otros escritores e inicialización;sin defecto visual observado. Cámara/jugador se dereferencian sin guardas en helper;vigencia es precondición,sin crash afirmado.

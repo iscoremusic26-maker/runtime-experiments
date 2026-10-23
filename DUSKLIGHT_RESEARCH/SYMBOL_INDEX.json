@@ -12413,5 +12413,60 @@
     "evidence_ids": [
       "CALLBACK-051"
     ]
+  },
+  {
+    "symbol": "daKytag01_Execute",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag01.cpp",
+      "line_start": 112,
+      "line_end": 158,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag01.cpp#L112-L158"
+    },
+    "signature": "static int daKytag01_Execute(kytag01_class*)",
+    "purpose": "Gates de room/switch y fade→publicación/borrado solicitado.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Cadena variante0; cámara/jugador/ambiente válidos."
+    ],
+    "risks": [
+      "No restaura globales ni confirma borrado completado."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-154",
+      "PRES-156"
+    ]
+  },
+  {
+    "symbol": "mist_tag_move",
+    "kind": "function",
+    "system_id": "environment_weather_time",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_kytag01.cpp",
+      "line_start": 37,
+      "line_end": 106,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_kytag01.cpp#L37-L106"
+    },
+    "signature": "static void mist_tag_move(kytag01_class*)",
+    "purpose": "Convierte geometría e intensidad en fog/gather/moya compartidos.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Actor y cámara/jugador vivos; intensidad>0 en caller elegido."
+    ],
+    "risks": [
+      "No owner/arbitraje; ABI/export/hook Windows no certificados."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "PRES-155"
+    ]
   }
 ]

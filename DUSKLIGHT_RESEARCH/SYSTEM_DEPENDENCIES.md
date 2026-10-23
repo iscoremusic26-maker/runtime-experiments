@@ -183,3 +183,5 @@ CP-R83 PRES-151..153: MidnaARC/heap→modelo prestado+packets porjoint→posici�
 CP-R84 PLAYER-103..106: LinkPlayerFly/Tmp31→NpcTeventOrder→staffcutJump→tagsArea+pareja→GOAL→door.open/Execute/Destroyed→SW2/cutEnd→Createposterior. [Otros sistemas](systems/other_systems.md).
 
 CP-R85: Knob20 → dMsgFlow.checkOpenDoor(PROBE) / branchNodeProc(EXECUTE) → Flow query → result/edge; modDetached retira IDs. CALLBACK-050..052 conectan cutscenes_dialogue, callback_ownership_and_cancellation y sdk_services sin inferir apertura física o barrera de unload.
+
+CP-R86: switches home.room → intensidad KYTAG01 → fog/gather/moya compartidos → setLight/GX; fopAcM_delete y Delete no restauran escritor anterior (PRES-154..156). Relación selectiva ambiente/flags/lifecycle, no orden total del scheduler.

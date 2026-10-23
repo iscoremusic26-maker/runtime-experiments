@@ -351,3 +351,7 @@ Padre remoto verificado 1d5525d4e7e3d58ba875f9db1b7b48878eebac7d. PLAYER-103..10
 ## CP-R85 — Flow query: PROBE, EXECUTE y resultado de error
 
 Padre remoto verificado 83cfe6096ec30bde47cb4b6911680ad29135dbe2. CALLBACK-050..052 STATIC_CROSSCHECKED: registro público, consumidor Knob20/PROBE frente a EXECUTE, copia local/resultado0 y retiro en detach. +3 evidencias/+3 símbolos (uno oficial). No pureza, exactly-once o unload garantizado. Sin mod,build ni runtime; solo atlas.
+
+## CP-R86 — KYTAG01: switches, intensidad de niebla y salida
+
+Padre remoto verificado ca99820563d5077d1a1cd7395c0ff237d08ba0c8. PRES-154..156 STATIC_CROSSCHECKED: variante0 de KYTAG01, anillo/cámara, switches y fade local, publicación de fog/gather, consumidor y salida sin rollback. +3 evidencias/+2 localizadores. Se reutiliza PRES-125 para setter; no render/audio observado. Sin mod,build ni runtime; solo atlas.

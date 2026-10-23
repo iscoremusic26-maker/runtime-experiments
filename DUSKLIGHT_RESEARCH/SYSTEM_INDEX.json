@@ -1730,11 +1730,12 @@
   {
     "system_id": "environment_weather_time",
     "coverage": "READ",
-    "scope": "READ parcial: cadenas previas y CP-R80 KYTAG13 subrangos→packet nieve→draw/cleanup global;validación de parámetros/orden/Windows pendientes.",
+    "scope": "READ parcial: cadenas previas y CP-R86 KYTAG01 variante0 switch→fade local→fog/gather global→consumidor;cleanup selectivo,otros tipos/orden/Windows pendientes.",
     "reports": [
       "systems/environment_weather_time.md"
     ],
     "files_examined": [
+      "include/d/actor/d_a_kytag01.h",
       "include/d/actor/d_a_kytag02.h",
       "include/d/actor/d_a_kytag07.h",
       "include/d/actor/d_a_kytag08.h",
@@ -1756,6 +1757,7 @@
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
       "src/d/actor/d_a_bg.cpp",
+      "src/d/actor/d_a_kytag01.cpp",
       "src/d/actor/d_a_kytag02.cpp",
       "src/d/actor/d_a_kytag03.cpp",
       "src/d/actor/d_a_kytag06.cpp",
@@ -1798,6 +1800,7 @@
       "Otros escritores del tiempo y comportamiento visual/audible runtime."
     ],
     "paths": [
+      "include/d/actor/d_a_kytag01.h",
       "include/d/actor/d_a_kytag02.h",
       "include/d/actor/d_a_kytag07.h",
       "include/d/actor/d_a_kytag08.h",
@@ -1819,6 +1822,7 @@
       "src/d/actor/d_a_alink.cpp",
       "src/d/actor/d_a_b_ob.cpp",
       "src/d/actor/d_a_bg.cpp",
+      "src/d/actor/d_a_kytag01.cpp",
       "src/d/actor/d_a_kytag02.cpp",
       "src/d/actor/d_a_kytag03.cpp",
       "src/d/actor/d_a_kytag06.cpp",
@@ -1912,7 +1916,10 @@
       "PRES-147",
       "PRES-148",
       "PRES-149",
-      "PRES-150"
+      "PRES-150",
+      "PRES-154",
+      "PRES-155",
+      "PRES-156"
     ]
   },
   {
