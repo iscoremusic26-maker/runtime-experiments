@@ -367,3 +367,7 @@ Padre remoto verificado 52c637f012f513dc8ecc94e629a94ba90694fb73. PLAYER-107..10
 ## CP-R89 — FileService streams: count, handle y cierre
 
 Padre remoto verificado fabd99ad94c448fe003f38bc713e98248fdd7592. SDK-026..028 STATIC_CROSSCHECKED: streams open/read/close,SlotMap owner/generación,consumidor File RAII y detach. +3 evidencias/+3 slots oficiales;no nuevo dispatcher. Lectura corta no es error automático;close consumehandle antes de conocer éxito. Backend/cursor/durabilidad pendientes. Sin mod,build ni runtime; solo atlas.
+
+## CP-R90 — Tag_ChgRestart: checkpoint RAM y consumo de recarga
+
+Padre remoto verificado b31b677301963f7d45399ccc7c235ff7fd03fe0c. WORLD-043..045 STATIC_CROSSCHECKED y WORLD-046 STATIC_INFERRED: tag regiónXZ/switch→restart RAM→Link/stage→playerInit(-1),Delete sin rollback y fallo de PLAYER ausente condicionado a assert. +4 evidencias/+2 localizadores;no escena/save/Windows observados. Sin mod,build ni runtime; solo atlas.

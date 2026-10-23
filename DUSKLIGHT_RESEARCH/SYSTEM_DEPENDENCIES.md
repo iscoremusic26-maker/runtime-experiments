@@ -191,3 +191,5 @@ CP-R87: Title ARC/BPK13→J3DAnmColorKey con backing prestado→mDoExt_bpkAnm→
 CP-R88: Bombf matriz/ID→fastCreate NBOMB→SubCreate→request/ExecuteQ→FlowerWait/carry→delete solicitado→lookup ausencia/counter150. Recursos y cleanup padre/hijo separados (PLAYER-107..109);relación gameplay/actores/lifecycle,sin árbol propietario implícito.
 
 CP-R89: SDK File.open→SlotMap File owned→read/count/error→take_owned antes de close→detach/destructor;consumidor File RAII conserva límites de error (SDK-026..028). Dependencias memoria/SDK/backend,sin dispatcher o red nuevos.
+
+CP-R90: Tag_ChgRestart regiónXZ/switch→dSv_restart room,pos,yaw→Link/startRestartRoom→dStage nextStage(-1)/roomParam→playerInit append. Flags,estado RAM,cola de escena y guardado permanecen fronteras diferentes (WORLD-043..046).

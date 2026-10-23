@@ -12688,5 +12688,61 @@
       "SDK-027",
       "SDK-028"
     ]
+  },
+  {
+    "symbol": "daTagChgRestart_c::execute",
+    "kind": "method",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/actor/d_a_tag_chgrestart.cpp",
+      "line_start": 70,
+      "line_end": 118,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/actor/d_a_tag_chgrestart.cpp#L70-L118"
+    },
+    "signature": "int daTagChgRestart_c::execute()",
+    "purpose": "Región XZ y switch→restart RAM.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Jugador/tabla PLAYER válidos;switch compatible;colocación coherente."
+    ],
+    "risks": [
+      "Sin altura/fallback local para ID ausente;no scene ni persistencia confirmadas."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-043",
+      "WORLD-046"
+    ]
+  },
+  {
+    "symbol": "dSv_restart_c::setRoom",
+    "kind": "method",
+    "system_id": "stages_rooms_layers",
+    "source": {
+      "repo": "TwilitRealm/dusklight",
+      "commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "path": "src/d/d_save.cpp",
+      "line_start": 1488,
+      "line_end": 1492,
+      "url": "https://github.com/TwilitRealm/dusklight/blob/40457c6adb381928e4b5fef6ed459ed291edd5e2/src/d/d_save.cpp#L1488-L1492"
+    },
+    "signature": "void dSv_restart_c::setRoom(const cXyz&, s16, s8)",
+    "purpose": "Actualiza tres campos del checkpoint de sala.",
+    "dependencies": [],
+    "integration": "POTENTIAL_REQUIRES_VERIFICATION",
+    "conditions": [
+      "Estado global de juego vigente."
+    ],
+    "risks": [
+      "No escribe roomParam/startPoint ni guarda disco;ABI/export pendientes."
+    ],
+    "evidence_level": "STATIC_CROSSCHECKED",
+    "evidence_ids": [
+      "WORLD-044",
+      "WORLD-045"
+    ]
   }
 ]

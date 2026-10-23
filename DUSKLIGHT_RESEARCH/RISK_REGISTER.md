@@ -181,3 +181,5 @@ CP-R87 / PRES-158/159: play/entry BPK no confirma binding (locked/materialAnm au
 CP-R88 / PLAYER-107..109: ID observado no es ownership de NBOMB. FastCreateNULL conserva retry con contador0;éxito de SubCreate aún depende de publicar request en ExecuteQ. Retirar planta no cancela bomba por este destructor. Sin duplicación,crash o temporalidad runtime observados.
 
 CP-R89 / SDK-027/028: close consumehandle antes del resultado backend;error no permite retry con mismoID. RAII/destructor descartan resultado y size ignora status;no confundir con I/O exitoso o durabilidad. Backend Borealis ausente;sin pérdida de datos/flushfallido observado.
+
+CP-R90 / WORLD-046: si falta playerNo en tabla y se continúa tras assert,la copia usa entry_p fuera de entradas válidas;no asset ni crash observado. WORLD-043: switchFF no latchea;room del dato PLAYER/tag y room almacenada del jugador no se presumen iguales. Delete no restaura checkpoint ni switch;no transacción.
