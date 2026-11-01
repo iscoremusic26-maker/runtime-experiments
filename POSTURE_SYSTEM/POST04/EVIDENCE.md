@@ -12,7 +12,7 @@ POST04 es un checkpoint **independiente** del cierre documental de POST03.1; su 
 | `WINDOWS_MSVC_PASS` / `PE_AUDIT_PASS` | **sí** [C] | §6 |
 | `POST04_WINDOWS_BUILD_VERIFIED` | **sí** [C] | §6 |
 | `ARTIFACT_DOWNLOADED_VERIFIED` | **sí** | §6 (descarga independiente en CI + mía) |
-| `POST04_HUMAN_RUNTIME_PENDING` | **true** | nadie ha cargado POST04 en Dusklight |
+| `POST04_HUMAN_RUNTIME_PENDING` | **cerrado (acotado)** | ver §8: A1/B1 reales |
 | `POST04_RUNTIME_PASS`, `COMPATIBILITY_PASS` | **NO** | requieren log posterior |
 | `TIMEBASE_PAUSE_UNVERIFIED` | **sí** | `POST04_POSTURE_POLICY.md` §5 |
 | POST03.1 | `POST031_A1/B1_SCOPED_RUNTIME_PASS`, `CLASSIFICATION_SCOPED_RUNTIME_PASS` (acotado) | `POST03_1/RUNTIME_EVIDENCE_A1_B1.md` |
@@ -67,3 +67,10 @@ Reglas heredadas más: sin memoria dinámica/E/S/hilos (`new`, `malloc`, `std::v
 - Sin medición de rendimiento. Sin cobertura en juego de ARROW, BOMB, SHIELD_ATTACK, SLINGSHOT y AT_TYPE_40; `OTHER_VERIFIED` no identifica arma.
 - Los valores de política son provisionales; que un Bokoblin de 40 HP no llegue al umbral no es un fallo de POST04.
 - D1–D5 siguen abiertas. G2 y G3: `NOT_STARTED`. POST05–POST08: no iniciados.
+
+## 8. Cierre humano A1/B1 (2026-11-01) [R]
+- **Logs:** `dusklight-20261101-102951.log` (A1, 2/2 mods) y `dusklight-20261101-102439.log` (B1, 8/8 mods). Leídos completos y verificados por bytes, líneas y SHA-256. No hay logs crudos en el repo.
+- **Resultado:** 27 informes = 24 `HIT_CONFIRMED` + 3 Finish; 12 ponderados; 2 marcas de ruptura; 7 unidades recuperadas; 0 violaciones en la reconstrucción independiente. Detalle: `RUNTIME_EVIDENCE_A1_B1.md`.
+- **Etiquetas:** `POST04_A1_SCOPED_RUNTIME_PASS`, `POST04_B1_FULL_STACK_SCOPED_RUNTIME_PASS`, `POST04_ACCUMULATION_SCOPED_RUNTIME_PASS`, `POST04_REGEN_SCOPED_RUNTIME_PASS` (acotada), `POST04_BREAK_MARKER_SCOPED_RUNTIME_PASS` y `POST04_RUNTIME_PASS_SCOPED`.
+- **Alcance de A1:** no valida acumulación ni recuperación, porque su único golpe fue letal.
+- **Sin cambio compilado:** el cierre solo añade documentación, `evidence/` y `evidence_tools/`, que no están en el libro de control de CI. El `.dusk` probado sigue siendo `ccf0f2d`.

@@ -1,6 +1,6 @@
 # POST04 — Núcleo numérico pasivo de postura (TEST privado): runbook
 
-**Estado:** `POST04_HUMAN_RUNTIME_PENDING`. Compila con MSVC y supera las auditorías de CI, pero **nadie lo ha cargado en Dusklight**. No existe `POST04_RUNTIME_PASS` hasta tu log real.
+**Estado:** sesiones humanas A1/B1 incorporadas (2026-11-01; `RUNTIME_EVIDENCE_A1_B1.md`): `POST04_RUNTIME_PASS_SCOPED`, sin compatibilidad universal. Texto original: `POST04_HUMAN_RUNTIME_PENDING`. Compila con MSVC y supera las auditorías de CI, pero **nadie lo ha cargado en Dusklight**. No existe `POST04_RUNTIME_PASS` hasta tu log real.
 POST04 **reemplaza** a POST03.1, POST03, POST02 y POST01: ID propio `dev.posture.post04_numeric_observer`, versión `0.4.0`. **Nunca los cargues a la vez**: los cinco enganchan el mismo método (`daE_OC_c::damage_check`) y los IDs distintos no lo impiden.
 
 ## Qué hace y qué no

@@ -1,0 +1,18 @@
+{
+ "note": "raw logs are NOT versioned; only these metadata and the sanitized derivatives",
+ "schema_version": 1,
+ "sources": {
+  "A1": {
+   "bytes": 160072,
+   "file_name": "dusklight-20261101-102951.log",
+   "sha256": "12fa22d0871b9f56661becd307db2e583408fa69a3e649662e8c4357f9c7ef17",
+   "splitlines": 1960
+  },
+  "B1": {
+   "bytes": 982863,
+   "file_name": "dusklight-20261101-102439.log",
+   "sha256": "d3595694ffe1856124074b66482815a8d5b52778bd8944d6a93c7e4464adb70c",
+   "splitlines": 5847
+  }
+ }
+}

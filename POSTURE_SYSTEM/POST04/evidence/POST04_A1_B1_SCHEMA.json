@@ -1,0 +1,32 @@
+{
+ "notes": {
+  "break_ready": "1 on the weighted hit that crossed P<100 -> P=100",
+  "posture_*": "POST04 decision for that event; empty for Finish"
+ },
+ "schema_version": 1,
+ "tsv_columns": [
+  "session",
+  "event",
+  "id",
+  "generation",
+  "kind",
+  "family",
+  "at",
+  "tg",
+  "sel_class",
+  "hp_pre",
+  "hp_post",
+  "lethal",
+  "mode_pre",
+  "mode_post",
+  "state_pre",
+  "state_post",
+  "posture_action",
+  "posture_reason",
+  "before",
+  "delta",
+  "after",
+  "break_ready",
+  "tick"
+ ]
+}

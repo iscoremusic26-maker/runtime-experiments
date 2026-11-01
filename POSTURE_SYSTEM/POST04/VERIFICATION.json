@@ -11,12 +11,20 @@
     "PE_NEGATIVES_REJECTED": true,
     "POST04_WINDOWS_BUILD_VERIFIED": true,
     "ARTIFACT_DOWNLOADED_VERIFIED": true,
-    "POST04_HUMAN_RUNTIME_PENDING": true,
+    "POST04_HUMAN_RUNTIME_PENDING": false,
     "POST04_RUNTIME_PASS": false,
     "COMPATIBILITY_PASS": false,
     "UNIVERSAL_COMPATIBILITY_PASS": false,
     "TIMEBASE_PAUSE_UNVERIFIED": true,
-    "BALANCE_APPROVED": false
+    "BALANCE_APPROVED": false,
+    "POST04_A1_SCOPED_RUNTIME_PASS": true,
+    "POST04_B1_FULL_STACK_SCOPED_RUNTIME_PASS": true,
+    "POST04_ACCUMULATION_SCOPED_RUNTIME_PASS": true,
+    "POST04_REGEN_SCOPED_RUNTIME_PASS": true,
+    "POST04_BREAK_MARKER_SCOPED_RUNTIME_PASS": true,
+    "POST04_RUNTIME_PASS_SCOPED": true,
+    "PERFORMANCE_PASS": false,
+    "_note_runtime": "Scoped to the two A1/B1 logs only. A1 validates startup/identity/lethal-skip/shutdown, NOT accumulation or recovery; B1 validates SWORD accumulation, 2 break markers and one 7-unit recovery run."
   },
   "gates": {
     "post031": "SCOPED_RUNTIME_PASS (A1+B1)",
@@ -155,13 +163,13 @@
     "expires_utc": "2026-12-01T15:16:35Z"
   },
   "risks_not_tested": [
-    "no in-game run of POST04",
+    "IRON_BALL +50 never exercised in game",
+    "recovery all the way to 0",
     "recovery during menus/pause (TIMEBASE_PAUSE_UNVERIFIED)",
-    "performance not measured",
-    "ARROW/BOMB/SHIELD_ATTACK/SLINGSHOT/AT_TYPE_40 never observed in game",
-    "OTHER_VERIFIED does not identify a weapon",
-    "policy values are provisional",
-    "D1-D5 unresolved"
+    "ARROW/BOMB/BOOMERANG/SLINGSHOT/AT_TYPE_40",
+    "isolated performance",
+    "Blue-specific policy (D1)",
+    "universal compatibility"
   ],
   "pending_decisions": {
     "D1": "Blue origin undeterminable (DEVF)",
@@ -170,5 +178,46 @@
     "D4": "boomerang/shield untouched",
     "D5": "posture bar neither computed for display nor drawn"
   },
-  "next": "Human A/B session with POST04 (README_TEST.md). POST05 is NOT started."
+  "next": "POST05 (selective reactions) is a separate checkpoint built on this documentary closure; the compiled POST04 binary ccf0f2d is frozen.",
+  "human_evidence_a1_b1": {
+    "provenance": "USER_SUPPLIED_RAW_WINDOWS_LOG_ANALYZED",
+    "read_by_claude_code": true,
+    "raw_log_in_repo": false,
+    "A1": {
+      "file": "dusklight-20261101-102951.log",
+      "sha256": "12fa22d0871b9f56661becd307db2e583408fa69a3e649662e8c4357f9c7ef17",
+      "bytes": 160072,
+      "splitlines": 1960,
+      "mods": "2/2 POST04 0.4.0 + Zora Swim 1.3.0"
+    },
+    "B1": {
+      "file": "dusklight-20261101-102439.log",
+      "sha256": "d3595694ffe1856124074b66482815a8d5b52778bd8944d6a93c7e4464adb70c",
+      "bytes": 982863,
+      "splitlines": 5847,
+      "mods": "8/8"
+    },
+    "reports": 27,
+    "hit_confirmed": 24,
+    "finish_native": 3,
+    "weighted": 12,
+    "crossings": 2,
+    "units_recovered": 7,
+    "units_added_closed_live_B1": [
+      300,
+      293,
+      0
+    ],
+    "extractor": "evidence_tools/extract_posture_runtime.py",
+    "extractor_tests": "evidence_tools/test_extract_posture_runtime.py (10 tests; 14/14 extractor mutations detected)",
+    "violations": 0,
+    "deterministic": true,
+    "doc": "RUNTIME_EVIDENCE_A1_B1.md",
+    "sanitized_data": [
+      "evidence/POST04_A1_B1_EVENTS_SANITIZED.tsv",
+      "evidence/POST04_A1_B1_SUMMARY_SANITIZED.json",
+      "evidence/POST04_A1_B1_SOURCE_MANIFEST.json",
+      "evidence/POST04_A1_B1_SCHEMA.json"
+    ]
+  }
 }
