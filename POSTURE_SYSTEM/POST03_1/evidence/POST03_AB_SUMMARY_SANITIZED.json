@@ -1,0 +1,395 @@
+{
+ "aggregate": {
+  "events": 26,
+  "family_sword": 4,
+  "family_unavailable": 20,
+  "finish_native": 2,
+  "hit_confirmed": 24
+ },
+ "sessions": {
+  "A": {
+   "all_mods_unloaded": true,
+   "backend": "D3D12",
+   "bytes": 325190,
+   "conservation": {
+    "cross_generation": 0,
+    "discarded": 0,
+    "dup_post_orphan": 0,
+    "dup_serial_gate": 0,
+    "judged": 6,
+    "ok": 1,
+    "pending": 0,
+    "started": 6
+   },
+   "derived": {
+    "actors_hit": [
+     490,
+     491,
+     549,
+     550
+    ],
+    "dual_tg_events": 1,
+    "events": 6,
+    "family_sword": 0,
+    "family_unavailable": 6,
+    "finish_native": 0,
+    "hit_confirmed": 6,
+    "implausible_collider": 6,
+    "pair_distinct_events": 1,
+    "sword_actor_generations": []
+   },
+   "file_name": "dusklight-20261101-081057.log",
+   "hit_summary": {
+    "anomalies": 0,
+    "cand_discarded": 0,
+    "cand_started": 6,
+    "classification_unavailable": 6,
+    "collider_unmatched": 6,
+    "confirmed": 6,
+    "cooldown_blocked": 54,
+    "cooldown_with_tg": 0,
+    "cross_generation_drops": 0,
+    "dual_tg": 1,
+    "duplicates_suppressed": 0,
+    "events_emitted": 6,
+    "excluded": 8375,
+    "family_sword_shield_arrow_bomb_iron_boomerang_at40_sling_other_ambiguous_unavail": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     6
+    ],
+    "finish": 0,
+    "finish_discarded": 0,
+    "finish_started": 0,
+    "finish_unexpected": 0,
+    "hp_changed": 6,
+    "lethal": 4,
+    "no_tg": 8798,
+    "not_processed": 0,
+    "pair_distinct": 1,
+    "pre_finish_cooldown_no_tg_tg_unknown": [
+     0,
+     54,
+     8798,
+     6,
+     0
+    ],
+    "processed_mismatch": 0,
+    "raw_tg": 6,
+    "unknown_unsafe": 0
+   },
+   "hook_installed": true,
+   "hook_target": {
+    "declared_target_resolved": "1",
+    "inline_sites_flag": "0",
+    "resolve": "MOD_OK",
+    "same_address": "1"
+   },
+   "incidents": {
+    "CalcDivideInfo_warning_lines": 501,
+    "PERF_WINDOW_lines": 0,
+    "PERF_WINDOW_with_MEASUREMENT_NOT_AN_ERROR": 0,
+    "texture_replacement_warning_lines": 109
+   },
+   "init": {
+    "capacity": "64",
+    "host": "2.0.3.0",
+    "log_cap": "2000",
+    "source_commit": "f350522fc2097cbbe786c57df2f005ba0b4981b3",
+    "version": "0.3.0"
+   },
+   "mods": [
+    {
+     "id": "com.blueflaregames.zora_swim",
+     "name": "Zora Swim",
+     "version": "1.3.0"
+    },
+    {
+     "id": "dev.posture.post03_hit_classification",
+     "name": "Enemy Posture System - POST03 hit classification observer (TEST)",
+     "version": "0.3.0"
+    }
+   ],
+   "mods_active": "2/2",
+   "post03_shutdown": true,
+   "sha256": "e495427aaf3ba3f5ee4c6b8ab887f24a4df290faa43455903da16f8fcffb1bb5",
+   "splitlines": 4250,
+   "summary": {
+    "absent_verified": 17,
+    "active": 2,
+    "address_reused": 0,
+    "admission_changes": 0,
+    "calls": 17233,
+    "capacity_drops": 0,
+    "capacity_evictions": 0,
+    "context_retired": 0,
+    "death_seen": 8,
+    "discarded": 0,
+    "dropped": 0,
+    "epoch": 5,
+    "frame_overflow": 0,
+    "generation_rollovers": 0,
+    "identity_conflicts": 0,
+    "invalid_keys": 0,
+    "log_dropped": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "log_errors": 0,
+    "log_life_hit_other_summary_written": [
+     44,
+     6,
+     3,
+     0
+    ],
+    "lookup_unavailable": 0,
+    "lookups": 647,
+    "max_active": 9,
+    "pending": 0,
+    "post_generation_mismatch": 0,
+    "records_created": 19,
+    "revalidated": 0,
+    "stale_frames": 0,
+    "stale_picks": 0,
+    "throttled": 0,
+    "unmatched_post": 0,
+    "unverified": 0
+   }
+  },
+  "B": {
+   "all_mods_unloaded": true,
+   "backend": "D3D12",
+   "bars_bridge": {
+    "invalid": 0,
+    "ok": 81381,
+    "queries": 145165,
+    "rejected": 0,
+    "unavailable": 2
+   },
+   "bars_draw": {
+    "barsDrawn": 11968,
+    "packetDraws": 8789,
+    "refused": 0
+   },
+   "bytes": 875205,
+   "conservation": {
+    "cross_generation": 0,
+    "discarded": 0,
+    "dup_post_orphan": 0,
+    "dup_serial_gate": 0,
+    "judged": 20,
+    "ok": 1,
+    "pending": 0,
+    "started": 20
+   },
+   "derived": {
+    "actors_hit": [
+     161,
+     162,
+     221,
+     222,
+     562
+    ],
+    "dual_tg_events": 11,
+    "events": 20,
+    "family_sword": 4,
+    "family_unavailable": 14,
+    "finish_native": 2,
+    "hit_confirmed": 18,
+    "implausible_collider": 14,
+    "pair_distinct_events": 1,
+    "sword_actor_generations": [
+     [
+      562,
+      19
+     ]
+    ]
+   },
+   "file_name": "dusklight-20261101-080341.log",
+   "hit_summary": {
+    "anomalies": 0,
+    "cand_discarded": 0,
+    "cand_started": 18,
+    "classification_unavailable": 14,
+    "collider_unmatched": 14,
+    "confirmed": 18,
+    "cooldown_blocked": 168,
+    "cooldown_with_tg": 0,
+    "cross_generation_drops": 0,
+    "dual_tg": 11,
+    "duplicates_suppressed": 0,
+    "events_emitted": 20,
+    "excluded": 27774,
+    "family_sword_shield_arrow_bomb_iron_boomerang_at40_sling_other_ambiguous_unavail": [
+     4,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     14
+    ],
+    "finish": 2,
+    "finish_discarded": 0,
+    "finish_started": 2,
+    "finish_unexpected": 0,
+    "hp_changed": 19,
+    "lethal": 4,
+    "no_tg": 14436,
+    "not_processed": 0,
+    "pair_distinct": 1,
+    "pre_finish_cooldown_no_tg_tg_unknown": [
+     2,
+     168,
+     14436,
+     18,
+     0
+    ],
+    "processed_mismatch": 0,
+    "raw_tg": 18,
+    "unknown_unsafe": 5407
+   },
+   "hm_core_profiles": {
+    "496": 3,
+    "510": 58
+   },
+   "hm_summary": {
+    "diff": 0,
+    "events": 73,
+    "identityMismatch": 0,
+    "match": 73,
+    "orphanPre": 0,
+    "paired": 73,
+    "post": 73,
+    "pre": 73,
+    "readFail": 0,
+    "threadMismatch": 0,
+    "unmatchedPost": 0,
+    "valid": 73
+   },
+   "hook_installed": true,
+   "hook_target": {
+    "declared_target_resolved": "1",
+    "inline_sites_flag": "0",
+    "resolve": "MOD_OK",
+    "same_address": "1"
+   },
+   "incidents": {
+    "CalcDivideInfo_warning_lines": 355,
+    "PERF_WINDOW_lines": 27,
+    "PERF_WINDOW_with_MEASUREMENT_NOT_AN_ERROR": 27,
+    "texture_replacement_warning_lines": 115
+   },
+   "init": {
+    "capacity": "64",
+    "host": "2.0.3.0",
+    "log_cap": "2000",
+    "source_commit": "f350522fc2097cbbe786c57df2f005ba0b4981b3",
+    "version": "0.3.0"
+   },
+   "mods": [
+    {
+     "id": "com.blueflaregames.zora_swim",
+     "name": "Zora Swim",
+     "version": "1.3.0"
+    },
+    {
+     "id": "dev.bokoblin.expansion",
+     "name": "Bokoblin Expansion",
+     "version": "0.17.0"
+    },
+    {
+     "id": "dev.devf.cp06_native_config_dual",
+     "name": "Enemy Variant Framework",
+     "version": "0.15.0"
+    },
+    {
+     "id": "com.dusklight.enemy_health_bars_203",
+     "name": "Enemy Health Bars (2.0.3 port, CP06 Armos TEST)",
+     "version": "2.0.3-cp06-armos-test"
+    },
+    {
+     "id": "com.dusklight.enemy_health_multiplier_203",
+     "name": "Enemy Health Multiplier 2.0.3 (CP11 arrow route TEST)",
+     "version": "2.0.3-cp11-arrow-route-test"
+    },
+    {
+     "id": "dev.posture.post03_hit_classification",
+     "name": "Enemy Posture System - POST03 hit classification observer (TEST)",
+     "version": "0.3.0"
+    },
+    {
+     "id": "dev.twilitrealm.luau",
+     "name": "Luau Support",
+     "version": "1.0.0"
+    },
+    {
+     "id": "dev.twilitrealm.randomizer",
+     "name": "Dusklight Randomizer",
+     "version": "1.0.6"
+    }
+   ],
+   "mods_active": "8/8",
+   "post03_shutdown": true,
+   "sha256": "92495e7359458c23c73eb2c5139c5b0f5b6bf46dfd50fb0359db85dfa8747a06",
+   "splitlines": 5396,
+   "summary": {
+    "absent_verified": 17,
+    "active": 4,
+    "address_reused": 0,
+    "admission_changes": 42,
+    "calls": 47805,
+    "capacity_drops": 0,
+    "capacity_evictions": 0,
+    "context_retired": 0,
+    "death_seen": 12,
+    "discarded": 0,
+    "dropped": 0,
+    "epoch": 5,
+    "frame_overflow": 0,
+    "generation_rollovers": 0,
+    "identity_conflicts": 0,
+    "invalid_keys": 0,
+    "log_dropped": [
+     0,
+     0,
+     0,
+     0
+    ],
+    "log_errors": 0,
+    "log_life_hit_other_summary_written": [
+     90,
+     20,
+     3,
+     6
+    ],
+    "lookup_unavailable": 0,
+    "lookups": 1586,
+    "max_active": 10,
+    "pending": 0,
+    "post_generation_mismatch": 0,
+    "records_created": 21,
+    "revalidated": 0,
+    "stale_frames": 0,
+    "stale_picks": 0,
+    "throttled": 2,
+    "unmatched_post": 0,
+    "unverified": 0
+   }
+  }
+ }
+}
