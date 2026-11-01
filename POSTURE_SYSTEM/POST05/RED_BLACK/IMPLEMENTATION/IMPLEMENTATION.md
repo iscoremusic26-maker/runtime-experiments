@@ -71,6 +71,53 @@ Solo lectura, en `read_aux` (PRE y POST de la misma llamada):
 - **Sin cambios:** `restore_reaction()` sigue escribiendo solo `mActionMode`, `mOcState` y `mOldActionMode`, con relectura previa y verificación posterior. Sin `HOOK_SKIP_ORIGINAL`.
 - **Política:** `g.rx.e2_policy = MatureBC` se fija una sola vez (lo audita `source_audit`). Por defecto vale `Deferred`, que reproduce 0.5.1 en los laboratorios heredados.
 
+## CI y binario [C]
+- **Run:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41362833995. `build` e `independent-download` en éxito al primer intento.
+- **Origen del build:**
+  - espejo `ci/posture-post05-rb-implementation` @ `19d23d8dad8839463be2eee2167d0e119a48940c`;
+  - fuente `e554fd1b4201ac1b4b67790d4f1f3f99974cff20`;
+  - libro de control de 40 archivos verificado por el build.
+- **Compilador y labs:** MSVC 19.51.36260 x64. Los 7 laboratorios, con MSVC, dan los mismos conteos que con g++ y ASAN+UBSAN: 1660 / 29558 / 12826 / 556878 / 36933 / 55972 / 21007, todos con 0 fallos.
+- **Auditorías:** `SOURCE_AUDIT_PASS`, `PE_AUDIT_PASS` y 11/11 negativas PE rechazadas.
+- **Imports y exports:** los mismos 3 imports del juego que 0.5.1 (`damage_check` thunk, `dComIfGp_getStartStageName`, `fopAcM_SearchByID`) y los mismos 5 exports.
+- **Artefactos:**
+
+| | id | bytes | SHA-256 |
+|---|---|---|---|
+| ZIP `POST05RB_TEST_41362833995_1` | 13105797739 | 35222 | `f550a3c365d2b9416e09c8c68bdfc7b88028616cc2fa61fe6853240900964456` |
+| `.dusk` `POSTURE_POST05_2_RB_PRIVATE_TEST_windows-amd64_e554fd1b4201.dusk` | — | 34128 | `f39b88278ff864f71824f7ccbea27246f1039832c22ade163f4094df57145021` |
+| `mod.dll` | — | 69632 | `efc70b9dafb7ba3c2153fbcf351bab894d3df106888244e95843fc9f23602f59` |
+
+- **Descarga independiente por ID** (API, fuera del job), recalculada:
+  - ZIP y `.dusk` coinciden con el digest de GitHub, el manifiesto y `SHA256SUMS`;
+  - `mod.json` es idéntico byte a byte al de la fuente.
+- **Desensamblado de la DLL descargada:**
+  - **Escrituras al actor:** exactamente 3 stores a sus campos de modo (`0x8c8`/`0x8d0`/`0x8cc` en 0x180006337–34a, tras la relectura `cmp`). 0 stores a HP (`0x656`), cooldown (`0x8ec`), timers (`0x8e0`/`0x8e2`), flags (`0x69a`), bits de esfera (`0xce8`/`0xd08`/`0xea0`/`0xec0`), `mName` (`0x8c0`) ni `mAtInfo`.
+  - **Lecturas nuevas (`read_aux`, 0x18000a63b):** `mov 0x6d8(%rdi)` → `mpMorf`; `movzbl 0x20`, `movzbl 0x21`, `movzwl 0x24`, `mov 0x28` y `mov 0x2c` sobre `mpMorf`; `mov 0x620(%rdi)` → `speedF`.
+  - **Sin escrituras por `mpMorf`:** se carga una sola vez y todos sus stores van al struct de salida.
+- **Binario distinto del baseline 0.5.1 (DLL de 65536 bytes):** se esperaba por las lecturas y la política nuevas. **Nadie ha cargado la DLL.**
+
+## Pruebas [L]
+| Suite | Comprobaciones | Fallos | Nota |
+|---|---|---|---|
+| `hit_lab` / `lifecycle_lab` / `collider_lab` / `posture_lab` / `reaction_lab` | 1660 / 29558 / 12826 / 556878 / 36933 | 0 | conteos idénticos a 0.5.0 y 0.5.1 |
+| `compat_lab` | 55972 | 0 | semántica 0.5.1 (`E2Policy::Deferred`); solo versión, motivos y campos de formato actualizados |
+| **`rb_lab`** | **21007** | 0 | parte A (motor completo + gemelos) y parte B (código real de CP21) |
+
+Cifras de `rb_lab`:
+- **Parte B, gemelos con CP21:**
+  - 7280 gemelos;
+  - **6680 ticks elegibles idénticos** al gemelo "misma vida perdida sin golpe", 0 distintos;
+  - 240 ticks no elegibles distintos: 160 de arranque y 80 de `frame` 1, que el gate excluye;
+  - 360 ticks no elegibles idénticos (exclusión conservadora);
+  - 1540 casos Black 3→6 con la potencia 6 escrita en el POST de Expansion (POST05 lee 3 en PRE y POST);
+  - 300 ticks distintos del gemelo sin golpe; los 60 elegibles entre ellos son solo el efecto de la furia del Black, comprobado como golpe de furia bien formado.
+- **Predicado independiente:** 6000 decisiones aleatorias. Toda decisión `ELIGIBLE` cumple todas las condiciones; hubo 268 elegibles, 50 de ellas E_OC2.
+- **Mutaciones (`tests/run_mutations.py`):** **173/173**, sin ninguna inválida:
+  - 122 lógicas detectadas, 22 de ellas nuevas (RB01–RB22);
+  - 51 negativas de fuente rechazadas, 9 de ellas nuevas (S43–S51);
+  - salida en `evidence/MUTATIONS_0_5_2.txt`.
+
 ## Riesgos residuales conocidos
 1. **Lo no visto en pantalla:** si la animación continúa, contacta y suena bien solo lo puede confirmar la prueba humana [P].
 2. **Golpes de Red que ahora conectan:** pueden activar el robo de vida de Expansion. Es un contacto legítimo, no una duplicación, pero cambia el balance respecto a vanilla.

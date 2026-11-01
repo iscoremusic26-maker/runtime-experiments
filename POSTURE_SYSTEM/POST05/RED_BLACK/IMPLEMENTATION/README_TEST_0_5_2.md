@@ -2,6 +2,12 @@
 
 **Estado:** `HUMAN_RUNTIME_PENDING`. La versión compila con MSVC y supera las auditorías del CI, pero **nadie la ha cargado en el juego**. Los laboratorios no prueban animaciones, contactos, sonido ni FPS. Para eso sirve esta prueba.
 
+## Artefacto (TEST privado)
+- **Descarga:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41362833995/artifacts/13105797739 (ZIP `POST05RB_TEST_41362833995_1`, 35222 bytes)
+- **Instala solo** `POSTURE_POST05_2_RB_PRIVATE_TEST_windows-amd64_e554fd1b4201.dusk`: **34128 bytes**, SHA-256 **`f39b88278ff864f71824f7ccbea27246f1039832c22ade163f4094df57145021`**.
+- **Caducidad:** 2026-12-01 23:36 UTC.
+- **Vuelta atrás:** el `.dusk` de 0.5.1 (`f5be0ed2e00c196ce261db72756256fd5513229c4370ae4deee62ae6d90b83fb`), que no se ha reemplazado.
+
 ## Instalación (con el juego cerrado)
 1. **Guarda el `.dusk` de 0.5.1** (`f5be0ed2…83fb`). Es tu vuelta atrás.
 2. **Retira de la carpeta de mods** el `.dusk` de POST05 0.5.1, el de 0.5.0 y cualquier POST04/03.1/03/02/01. Mismo ID: **nunca dos a la vez**.
