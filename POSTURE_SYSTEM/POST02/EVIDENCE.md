@@ -11,8 +11,9 @@ Fecha: 2026-11-01. Entorno local: WSL2/Linux, sin MSVC, sin Windows y sin juego.
 | `WINDOWS_MSVC_PASS` | sí | MSVC 19.51.36260 x64, ejecución 41277388694 |
 | `PE_AUDIT_PASS` | sí | `pe_audit.py` con imports fijados y razonados |
 | `ARTIFACT_DOWNLOADED_VERIFIED` | sí | descarga independiente en CI y descarga mía a carpetas nuevas con SHA-256 |
-| `HUMAN_RUNTIME_PENDING` | pendiente | nadie ha cargado POST02 en Dusklight |
-| `HUMAN_PASS`, `LIFECYCLE_RUNTIME_PASS`, `COMPATIBILITY_PASS` | NO | sin log real de POST02 |
+| `HUMAN_RUNTIME_PENDING` | **cerrado de forma acotada** (actualizado el 2026-11-01, §7) | dos sesiones reales; resumen recibido (`USER_SUPPLIED_RUNTIME_LOG_SUMMARY`) |
+| `HUMAN_PASS`, `LIFECYCLE_RUNTIME_PASS` | **`SCOPED_RUNTIME_PASS`** | solo las condiciones de §7; Claude no leyó los bytes de los logs |
+| `COMPATIBILITY_PASS` | acotado a la configuración de §7; **no** `UNIVERSAL_COMPATIBILITY_PASS` | |
 | G1 (POST01) | `SCOPED_RUNTIME_PASS` | `POST01/EVIDENCE.md` §8, resumen aportado por el usuario |
 | G2, G3 | `NOT_STARTED` | |
 
@@ -66,3 +67,15 @@ Mutaciones deliberadas del ledger (8) todas detectadas por el lab: sin detecció
 - Dos TG simultáneos, múltiples hitboxes y deduplicación de impactos son de POST03; aquí `TG_CANDIDATE` sigue siendo el bit TG crudo y el tipo de AT sigue omitido (sin guarda segura de actor).
 - Blue de DEVF: `origin=UNDETERMINED`. D1–D5 pendientes. `CalcDivideInfo` (incidencia de POST01 no atribuida) no se investigó.
 - HM/Bars: fuentes sin demostración de reconstrucción byte a byte (heredado). Coexistencia con DEVF/HM/Bars **no probada** con POST02.
+
+## 7. Cierre humano acotado de POST02 (añadido el 2026-11-01; solo documental)
+**Procedencia: `USER_SUPPLIED_RUNTIME_LOG_SUMMARY`** (`[U]`). Los dos logs los analizó otro asistente; Claude **no ha leído sus bytes** y **`RAW_LOG_IN_REPO` = no**. Se registran solo nombres, tamaños, SHA-256 y cifras, sin rutas ni datos personales. Todo lo anterior de este documento (build, CI, artefacto) queda como estaba.
+
+| Sesión | Log · SHA-256 · tamaño · líneas | Mods | Resultado reportado |
+|---|---|---|---|
+| Aislada de combate | `dusklight-20261101-004538.log` · `82572f583500fd909b367e464a1575a6793209302d5cbcf42c88f60caaa05c17` · 332521 bytes · 4377 líneas (`splitlines()`; un visor puede mostrar 4378) | POST02 + Zora Swim 1.3.0 (2/2) | Dusklight 2.0.3 D3D12; POST02 0.2.0; `resolve=MOD_OK`, `inline_sites_flag=0`, PRE/POST OK. `POST02_SUMMARY tag=SHUTDOWN`: calls=21122; adm(cand/e_oc2/other/unsafe)=9052/12070/0/0; records_created=20, active=6, max_active=9, death_seen=8, absent_verified=14; lookups=707, lookup_unavailable=0; admission_changes=0; pre(finish/cooldown/no_tg/tg/unknown)=0/54/8992/6/0; hits=6, processed=6, accepted_likely=6, finish=0; anomalies=0, identity_conflicts=0, capacity_drops=0, capacity_evictions=0; unmatched_post=0, discarded=0, frame_overflow=0, post_generation_mismatch=0; log dropped=0, errors=0. Cierre normal. Los 6 impactos fueron letales 40→0 sobre E_OC candidatos, varios con `tg=cc0+cc1` (una llamada con dos TG no se duplicó). `CalcDivideInfo` 544 y 108 avisos de texturas: diagnósticos del motor, sin atribución a POST02 |
+| Combinada | `dusklight-20261101-004941.log` · `39662abbf7812aa63c9465197b734eaf15b7942dd1a8bbbedeaae7a32bfdb892` · 816979 bytes · 5271 líneas (`splitlines()`; un visor puede mostrar 5272) | POST02, HM, Bars, DEVF, Expansion, Zora Swim, Randomizer, Luau (8/8) | Hook instalado sin inline; cierre normal; sin anomalías internas. `POST02_SUMMARY tag=SHUTDOWN`: calls=40429; adm=12148/25731/0/2550; records_created=22, active=5, max_active=10, death_seen=12, absent_verified=17; lookups=1132, lookup_unavailable=0; admission_changes=24; pre(finish/cooldown/no_tg/tg/unknown)=5/216/11903/24/0; hits=29, processed=24, accepted_likely=24, finish=5; anomalies=0, identity_conflicts=0, capacity_drops=0, capacity_evictions=0; unmatched_post=0, discarded=0, frame_overflow=0, post_generation_mismatch=0; log dropped=0, log_errors=0. Blues de DEVF (actor 221 gen 3, actor 222 gen 4, otros): `E_OC_CANDIDATE → UNKNOWN_UNSAFE → E_OC_CANDIDATE` con `identity=KEPT` y **sin** generación nueva; no se usa como clasificación de origen. HM CP11 ×2: `cc_at_check` PRE/POST 50/50, events=50, HP match=50, diff=0, identityMismatch=0, threadMismatch=0 (tipos HM: SWORD 47, STUN 2, …; **los 50 de HM no tienen por qué igualar los 24 de POST02**: perfiles y condiciones distintos; no hay correlación 1:1 inventada). Bars CP06: queries=108316, ok=62858, use-native=45456, unavailable=2, invalid=0, rejected=0, barsDrawn=8056, packetDraws=6666. `CalcDivideInfo` 376; 108 avisos de texturas; 20 eventos `PERF_WINDOW` de DEVF como `MEASUREMENT_NOT_AN_ERROR` |
+
+- **Alcance:** `SCOPED_RUNTIME_PASS` para identidad por generación, retirada verificada por consulta (`absent_verified` > 0 sin `lookup_unavailable`), convivencia con HM/Bars/DEVF/Expansion en esas dos configuraciones y cierre limpio. **No** es `UNIVERSAL_COMPATIBILITY_PASS` ni una medición de sobrecarga. Un Finish nativo observado no es un Finish generado por ruptura: G2/G3 siguen `NOT_STARTED`.
+- **Incidencia no atribuida:** `CalcDivideInfo`/texturas aparecen también sin POST02 en sesiones anteriores; no se culpa ni se absuelve a POST02.
+- **Pendiente tras este PASS:** el instante exacto de `create` no es observable (`FIRST_SEEN` ≠ spawn); D1 (Blue) sigue abierto.

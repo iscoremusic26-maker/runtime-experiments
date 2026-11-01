@@ -1,0 +1,192 @@
+{
+  "checkpoint": "POST03",
+  "title": "Hit detection, de-duplication and conservative classification (passive .dusk, Dusklight 2.0.3 Windows x64 DX12)",
+  "generated_utc": "2026-11-01T06:45:00Z",
+  "labels": {
+    "SOURCE_IMPLEMENTED": true,
+    "SOURCE_AUDIT_PASS": true,
+    "LAB_PASS": true,
+    "DEDUP_LAB_PASS": true,
+    "WINDOWS_MSVC_PASS": true,
+    "PE_AUDIT_PASS": true,
+    "ARTIFACT_DOWNLOADED_VERIFIED": true,
+    "CLASSIFICATION_COVERAGE": "lab-only per native branch; real game [P]",
+    "HUMAN_RUNTIME_PENDING": true,
+    "HUMAN_PASS": false,
+    "POST03_RUNTIME_PASS": false,
+    "COMPATIBILITY_PASS": false,
+    "UNIVERSAL_COMPATIBILITY_PASS": false
+  },
+  "gates": {
+    "G1_post01": "SCOPED_RUNTIME_PASS",
+    "post02": "SCOPED_RUNTIME_PASS",
+    "G2": "NOT_STARTED",
+    "G3": "NOT_STARTED",
+    "POST04": "NOT_STARTED"
+  },
+  "source": {
+    "official_sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora_commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "windows_zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf",
+    "importlib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "base_post02_head": "70266db733b323e76469bcc83f35a7037154ea9a",
+    "base_post02_compiled_source": "3d6539010fb29038ea9ee7704592400fe33a4eba",
+    "base_ci_post02_head": "ececd6f83df875835f6a0c8efefe560737165677",
+    "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+    "source_branch": "feature/posture-post03-hit-classification-dedup",
+    "compiled_source_commit": "f350522fc2097cbbe786c57df2f005ba0b4981b3",
+    "docs_commit": "see git log of this branch (documents only, after compiled_source_commit)",
+    "ci_repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "ci_branch": "ci/posture-post03-hit-classification-dedup",
+    "ci_head_of_final_run": "64cb2464d1da65fc18639e522045f47469830ca3"
+  },
+  "hooks": {
+    "declared_targets": [
+      "daE_OC_c::damage_check"
+    ],
+    "count": 1,
+    "pre_always_continue": true,
+    "skip_original": false,
+    "replace": false,
+    "pmf_bytes": 8,
+    "thunk_bound_import": "?damage_check@daE_OC_c@@QEAAXXZ"
+  },
+  "abi_static_asserts_compiled_by_msvc": {
+    "fopAc_ac_c::health": "0x656",
+    "fopAc_ac_c::actor_status": "0x580",
+    "daE_OC_c::mActionMode": "0x8c8",
+    "daE_OC_c::mOcState": "0x8d0",
+    "daE_OC_c::field_0x6cc": "0x8ec",
+    "daE_OC_c::mOldActionMode": "0x8cc",
+    "daE_OC_c::mAtInfo": "0x1398",
+    "dCcU_AtInfo::mpCollider": "0 (first field)",
+    "cCcD_Obj::GetAtType()": "inline const u32",
+    "offsets_origin": "disassembly of the official dusklight.exe damage_check/setActionMode, not retail comments"
+  },
+  "hit_model": {
+    "unit": "one damage_check call = one frame token = at most one event",
+    "verdicts": [
+      "FINISH_NATIVE_OBSERVED",
+      "FINISH_UNEXPECTED_STATE",
+      "HIT_CONFIRMED",
+      "HIT_PROCESSED_SIGNATURE_MISMATCH",
+      "HIT_CANDIDATE_NOT_PROCESSED"
+    ],
+    "hit_confirmed_definition": "PRE cooldown==0 with raw TG bit AND cooldown 0->nonzero AND mode in {DAMAGE 5, BIG_DAMAGE 6} AND mOldActionMode==pre mode (invariants P1+P2, source)",
+    "not_meaning": "HP was subtracted",
+    "accepted_confirmed": "not emitted",
+    "weapon_family": "first match of the native if/else chain, read once from mAtInfo.mpCollider after HIT_CONFIRMED when it equals a sphere's raw hit obj; else UNAVAILABLE/AMBIGUOUS/OTHER_VERIFIED",
+    "unavailable_from_this_hook": [
+      "sword subtype",
+      "attacker",
+      "attack power",
+      "whether cc_at_check ran",
+      "exact create instant"
+    ]
+  },
+  "reads_omitted": [
+    {
+      "item": "GetAc/GetTgHitAc/dCcD_GObjInf::ChkTgHit/GetTgHitObj",
+      "reason": "caches mAc / sets mApid (d_cc_d.cpp:26-37)"
+    },
+    {
+      "item": "mAtInfo.mHitType/mAttackPower/mpActor",
+      "reason": "freshness not provable from one hook (cc_at_check may be skipped)"
+    },
+    {
+      "item": "Link getCutType",
+      "reason": "would require reading Link"
+    }
+  ],
+  "writes": "private mod memory and LogService lines only",
+  "game_imports_from_dusklight_exe": {
+    "?damage_check@daE_OC_c@@QEAAXXZ": "hook thunk",
+    "?fopAcM_SearchByID@@YAHIPEAPEAVfopAc_ac_c@@@Z": "read-only existence lookup, mod_update only",
+    "?dComIfGp_getStartStageName@@YAPEBDXZ": "stage name for epoch"
+  },
+  "new_imports_vs_post02": 0,
+  "ci_runs": [
+    {
+      "id": 41280645366,
+      "mirror_of": "205402e",
+      "result": "failure",
+      "reason": "pe_audit matched free log text 'cc_at_check'; rule refined to decorated symbols; build+labs OK"
+    },
+    {
+      "id": 41280823158,
+      "mirror_of": "f350522",
+      "result": "success",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41280823158"
+    }
+  ],
+  "toolchain": {
+    "cl": "19.51.36260",
+    "vc_tools": "14.51.36231",
+    "windows_sdk": "10.0.26100.0",
+    "cmake": "4.4.4",
+    "ninja": "1.13.2",
+    "std": "c++20"
+  },
+  "lab": {
+    "hit_lab": {
+      "checks": 1660,
+      "failures": 0
+    },
+    "lifecycle_lab": {
+      "checks": 29558,
+      "failures": 0
+    },
+    "msvc_ci_same_labs": true,
+    "kind": "model of damage_check derived from source; not runtime",
+    "logic_mutations_detected": "16/16",
+    "source_audit_negatives_rejected": "10/10",
+    "pe_negatives_rejected_local": "8/8"
+  },
+  "artifact": {
+    "filename": "POSTURE_POST03_HIT_CLASSIFICATION_windows-amd64_f350522fc209.dusk",
+    "bytes": 19688,
+    "sha256": "59c8145e6c29914ef4b602b892d35d73ba6f0946923270ab278387f992ad3c9f",
+    "dll_bytes": 44032,
+    "dll_sha256": "90733da156f41ce897de54f011b7ea02c6e34a84b8097d9208b4a8b966fff267",
+    "mod_id": "dev.posture.post03_hit_classification",
+    "version": "0.3.0",
+    "actions_artifact": "POST03_TEST_41280823158_1",
+    "actions_artifact_id": 13073232413,
+    "actions_artifact_zip_bytes": 20565,
+    "actions_artifact_digest": "sha256:2bc8a12f9b098c6a257b2b48de4a664fae12b2fab67d58f60eb5d9b61df7aa83",
+    "direct_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41280823158/artifacts/13073232413",
+    "direct_url_check": "artifact id->run->name confirmed through the Actions API; private web page not opened",
+    "expires_utc": "2026-12-01T06:27:16Z",
+    "downloaded_independently": true,
+    "installed": false,
+    "dll_loaded": false,
+    "game_executed": false
+  },
+  "post02_doc_update": {
+    "files": [
+      "POSTURE_SYSTEM/POST02/EVIDENCE.md",
+      "POSTURE_SYSTEM/POST02/VERIFICATION.json"
+    ],
+    "nature": "documentary only",
+    "provenance": "USER_SUPPLIED_RUNTIME_LOG_SUMMARY",
+    "raw_log_in_repo": false
+  },
+  "risks_not_tested": [
+    "real at=0x.. values and family correctness in the game",
+    "the single collider dereference in the real game (same object the native code dereferences in the same call)",
+    "runtime cost",
+    "DEVF Blue vs native indistinguishable",
+    "HM/Bars/DEVF coexistence with POST03",
+    "cooldown_with_tg expected from DEVF Helm duplicate blocking",
+    "CalcDivideInfo unattributed"
+  ],
+  "pending_decisions": {
+    "D1": "pending",
+    "D2": "pending",
+    "D3": "pending",
+    "D4": "pending",
+    "D5": "pending"
+  },
+  "next": "POST04 NOT started"
+}

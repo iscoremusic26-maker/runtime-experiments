@@ -9,10 +9,13 @@
     "WINDOWS_MSVC_PASS": true,
     "PE_AUDIT_PASS": true,
     "ARTIFACT_DOWNLOADED_VERIFIED": true,
-    "HUMAN_RUNTIME_PENDING": true,
+    "HUMAN_RUNTIME_PENDING": false,
     "HUMAN_PASS": false,
     "LIFECYCLE_RUNTIME_PASS": false,
-    "COMPATIBILITY_PASS": false
+    "COMPATIBILITY_PASS": false,
+    "HUMAN_RUNTIME_SCOPED_PASS": true,
+    "LIFECYCLE_RUNTIME_SCOPED_PASS": true,
+    "UNIVERSAL_COMPATIBILITY_PASS": false
   },
   "gates": {
     "G1_post01": "SCOPED_RUNTIME_PASS (USER_SUPPLIED_RUNTIME_LOG_SUMMARY; see POST01/EVIDENCE.md section 8)",
@@ -180,5 +183,33 @@
     "D4": "pending",
     "D5": "pending"
   },
-  "next": "POST03 NOT started"
+  "next": "POST03 NOT started",
+  "human_runtime_closure": {
+    "provenance": "USER_SUPPLIED_RUNTIME_LOG_SUMMARY",
+    "written": "2026-11-01",
+    "note": "Resumen de dos logs reales recibido del usuario. Claude NO ha leido los bytes (no estan en el repo ni en el WSL). RAW_LOG_IN_REPO=false.",
+    "raw_log_in_repo": false,
+    "sessions": {
+      "isolated_with_zora_swim": {
+        "log": "dusklight-20261101-004538.log",
+        "sha256": "82572f583500fd909b367e464a1575a6793209302d5cbcf42c88f60caaa05c17",
+        "bytes": 332521,
+        "lines_splitlines": 4377,
+        "mods_active": "2/2 (POST02 + Zora Swim 1.3.0)",
+        "summary": "calls=21122; adm=9052/12070/0/0; records_created=20 active=6 max_active=9 death_seen=8 absent_verified=14; lookups=707 lookup_unavailable=0; admission_changes=0; pre=0/54/8992/6/0; hits=6 processed=6 accepted_likely=6 finish=0; anomalies=0 identity_conflicts=0 capacity_drops=0 capacity_evictions=0; unmatched_post=0 discarded=0 frame_overflow=0 post_generation_mismatch=0; log dropped=0 errors=0; clean shutdown",
+        "notes": "6 impactos letales 40->0 sobre E_OC candidatos; varios con tg=cc0+cc1 sin duplicar; CalcDivideInfo=544, texture warnings=108"
+      },
+      "combined_8_of_8": {
+        "log": "dusklight-20261101-004941.log",
+        "sha256": "39662abbf7812aa63c9465197b734eaf15b7942dd1a8bbbedeaae7a32bfdb892",
+        "bytes": 816979,
+        "lines_splitlines": 5271,
+        "mods_active": "8/8 (POST02, HM, Bars, DEVF, Expansion, Zora Swim, Randomizer, Luau)",
+        "summary": "calls=40429; adm=12148/25731/0/2550; records_created=22 active=5 max_active=10 death_seen=12 absent_verified=17; lookups=1132 lookup_unavailable=0; admission_changes=24; pre=5/216/11903/24/0; hits=29 processed=24 accepted_likely=24 finish=5; anomalies=0 identity_conflicts=0 capacity_drops=0 capacity_evictions=0; unmatched_post=0 discarded=0 frame_overflow=0 post_generation_mismatch=0; log dropped=0 errors=0; clean shutdown",
+        "notes": "Blue DEVF E_OC_CANDIDATE->UNKNOWN_UNSAFE->E_OC_CANDIDATE con identity=KEPT sin generacion nueva; HM CP11 x2 cc_at_check 50/50 HP match=50 diff=0 (no correlacion 1:1 con POST02); Bars CP06 queries=108316 ok=62858 use-native=45456 unavailable=2 invalid=0 rejected=0; CalcDivideInfo=376; PERF_WINDOW DEVF = MEASUREMENT_NOT_AN_ERROR"
+      }
+    },
+    "scope": "SCOPED_RUNTIME_PASS en estas condiciones; no UNIVERSAL_COMPATIBILITY_PASS; sin medicion de sobrecarga.",
+    "open": "CalcDivideInfo no atribuido; D1 Blue abierto; create no observable; G2/G3 NOT_STARTED"
+  }
 }
