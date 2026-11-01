@@ -1,0 +1,184 @@
+{
+  "checkpoint": "POST02",
+  "title": "Per-instance identity (id+generation) and lifecycle observer (passive .dusk, Dusklight 2.0.3 Windows x64 DX12)",
+  "generated_utc": "2026-11-01T05:50:00Z",
+  "labels": {
+    "SOURCE_IMPLEMENTED": true,
+    "SOURCE_AUDIT_PASS": true,
+    "LAB_PASS": true,
+    "WINDOWS_MSVC_PASS": true,
+    "PE_AUDIT_PASS": true,
+    "ARTIFACT_DOWNLOADED_VERIFIED": true,
+    "HUMAN_RUNTIME_PENDING": true,
+    "HUMAN_PASS": false,
+    "LIFECYCLE_RUNTIME_PASS": false,
+    "COMPATIBILITY_PASS": false
+  },
+  "gates": {
+    "G1_post01": "SCOPED_RUNTIME_PASS (USER_SUPPLIED_RUNTIME_LOG_SUMMARY; see POST01/EVIDENCE.md section 8)",
+    "G2": "NOT_STARTED",
+    "G3": "NOT_STARTED",
+    "POST03": "NOT_STARTED"
+  },
+  "source": {
+    "official_sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora_commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "windows_zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf",
+    "importlib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "base_post01_head": "0d58080c0d76fbedbca8a4005622fadd3c7a760f",
+    "base_ci_post01_head": "037f29a1ee7f53b6b36919dde3d4e675fb4a9329",
+    "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+    "source_branch": "feature/posture-post02-instance-lifecycle",
+    "compiled_source_commit": "3d6539010fb29038ea9ee7704592400fe33a4eba",
+    "docs_commit": "see git log of this branch (documents only, after compiled_source_commit)",
+    "ci_repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "ci_branch": "ci/posture-post02-instance-lifecycle",
+    "ci_head_of_final_run": "ececd6f83df875835f6a0c8efefe560737165677"
+  },
+  "hooks": {
+    "declared_targets": [
+      "daE_OC_c::damage_check"
+    ],
+    "count": 1,
+    "pre_always_continue": true,
+    "skip_original": false,
+    "replace": false,
+    "pmf_bytes": 8,
+    "thunk_bound_import": "?damage_check@daE_OC_c@@QEAAXXZ",
+    "install_order": "POST then PRE; uninstall on PRE failure; disabled if rollback fails"
+  },
+  "abi_static_asserts_compiled_by_msvc": {
+    "fopAc_ac_c::health": "0x656",
+    "fopAc_ac_c::actor_status": "0x580",
+    "daE_OC_c::mActionMode": "0x8c8",
+    "daE_OC_c::mOcState": "0x8d0",
+    "daE_OC_c::field_0x6cc": "0x8ec",
+    "fopAcM_SearchByID(fpc_ProcID, fopAc_ac_c**)": "returns s32"
+  },
+  "identity": {
+    "key": "id (u32, sentinels 0/0xFFFFFFFE/0xFFFFFFFF rejected) + opaque ptr (never dereferenced or logged) + monotonic ledger generation (u64, never reused, 0 reserved) + epoch",
+    "capacity": 64,
+    "allocation": "FREE, oldest RETIRED, oldest UNVERIFIED (CAPACITY_EVICTED), else CAPACITY_EXHAUSTED; ACTIVE/DEATH_SEEN never evicted",
+    "origin": "always UNDETERMINED for E_OC_CANDIDATE (DEVF Blue indistinguishable); NA otherwise"
+  },
+  "lifecycle": {
+    "states": [
+      "ACTIVE",
+      "DEATH_SEEN",
+      "UNVERIFIED",
+      "RETIRED"
+    ],
+    "retire_reasons": {
+      "LOOKUP_ABSENT_VERIFIED": "delete_claim=1 (only one)",
+      "ADDRESS_REUSED_BY_OTHER_ID": "delete_claim=0",
+      "IDENTITY_CONFLICT_SAME_ID_OTHER_ADDRESS": "delete_claim=0",
+      "CAPACITY_EVICTED": "delete_claim=0",
+      "CONTEXT_RETIRED": "delete_claim=0"
+    },
+    "sweep": {
+      "where": "mod_update only",
+      "period_ticks": 10,
+      "quota": 2,
+      "api": "fopAcM_SearchByID(id,&out) read-only; out is the only pointer read"
+    },
+    "epoch": "FNV-1a of first 8 bytes of dComIfGp_getStartStageName(); label only"
+  },
+  "reads_omitted": [
+    {
+      "item": "GetAc/GetTgHitAc/dCcD_GObjInf::ChkTgHit",
+      "reason": "caches mAc (d_cc_d.cpp:26-37)"
+    },
+    {
+      "item": "attacker collider AT type",
+      "reason": "no safe actor guard"
+    }
+  ],
+  "writes": "private mod memory and LogService lines only",
+  "game_imports_from_dusklight_exe": {
+    "?damage_check@daE_OC_c@@QEAAXXZ": "hook thunk",
+    "?fopAcM_SearchByID@@YAHIPEAPEAVfopAc_ac_c@@@Z": "read-only existence lookup, mod_update only",
+    "?dComIfGp_getStartStageName@@YAPEBDXZ": "stage name for epoch"
+  },
+  "ci_runs": [
+    {
+      "id": 41277289817,
+      "mirror_of": "3cb2cc7",
+      "result": "failure",
+      "reason": "PE pin only (ordering, __std_terminate); build+lab OK"
+    },
+    {
+      "id": 41277388694,
+      "mirror_of": "3d65390",
+      "result": "success",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41277388694"
+    }
+  ],
+  "toolchain": {
+    "cl": "19.51.36260",
+    "vc_tools": "14.51.36231",
+    "windows_sdk": "10.0.26100.0",
+    "cmake": "4.4.4",
+    "ninja": "1.13.2",
+    "std": "c++20"
+  },
+  "lab": {
+    "local_gpp_asan_ubsan": {
+      "checks": 29557,
+      "failures": 0
+    },
+    "msvc_ci": {
+      "checks": 29557,
+      "failures": 0
+    },
+    "mutations_detected": 8,
+    "source_audit_negatives_rejected": 6,
+    "kind": "doubles, not runtime"
+  },
+  "artifact": {
+    "filename": "POSTURE_POST02_INSTANCE_LIFECYCLE_windows-amd64_3d6539010fb2.dusk",
+    "bytes": 16883,
+    "sha256": "addeb770324f931947023d98fc804a4aab96f34637cd4114d6a9a5f26c5fff59",
+    "dll_bytes": 38400,
+    "dll_sha256": "a6bb6b39f01511d5da972781e03a3bee7b2dbbfd1b25ec771a35ef3792712b54",
+    "mod_id": "dev.posture.post02_instance_lifecycle",
+    "version": "0.2.0",
+    "actions_artifact": "POST02_TEST_41277388694_1",
+    "actions_artifact_id": 13071996061,
+    "actions_artifact_zip_bytes": 17715,
+    "actions_artifact_digest": "sha256:0641137b2d8904277e707c67ccd377f3eaa383692a800556467db356364f5fcf",
+    "direct_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41277388694/artifacts/13071996061",
+    "direct_url_check": "artifact id->run->name confirmed through the Actions API; the private web page was not opened",
+    "expires_utc": "2026-12-01T05:34:15Z",
+    "downloaded_independently": true,
+    "installed": false,
+    "dll_loaded": false,
+    "game_executed": false
+  },
+  "post01_doc_update": {
+    "files": [
+      "POSTURE_SYSTEM/POST01/EVIDENCE.md",
+      "POSTURE_SYSTEM/POST01/VERIFICATION.json"
+    ],
+    "nature": "documentary only; build facts unchanged",
+    "provenance": "USER_SUPPLIED_RUNTIME_LOG_SUMMARY",
+    "raw_log_in_repo": false
+  },
+  "risks_not_tested": [
+    "fopAcM_SearchByID behaviour in the real game (source says read-only; a live actor must never be reported absent)",
+    "runtime cost of existence queries",
+    "mod_update ordering in the real exe",
+    "stage-name epoch does not see room changes inside a stage",
+    "DEVF Blue vs native E_OC indistinguishable",
+    "coexistence of POST02 with HM/Bars/DEVF not tested",
+    "CalcDivideInfo incident (POST01 sessions) unattributed"
+  ],
+  "pending_decisions": {
+    "D1": "pending",
+    "D2": "pending",
+    "D3": "pending",
+    "D4": "pending",
+    "D5": "pending"
+  },
+  "next": "POST03 NOT started"
+}

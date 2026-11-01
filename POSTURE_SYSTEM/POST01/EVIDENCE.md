@@ -9,10 +9,10 @@ Fecha: 2026-11-01T04:5xZ (2026-10-31 America/Panama). Entorno local: WSL2/Linux,
 | `LAB_PASS` | sí (dobles, no runtime) | local g++ 20 `-fsanitize=address,undefined`: 8724 comprobaciones, 0 fallos; 4 mutaciones detectadas. En MSVC: el mismo lab, 8724 comprobaciones, `RESULT=LAB_PASS` (CI) |
 | `WINDOWS_MSVC_PASS` | sí | MSVC 19.51.36260 x64 en `windows-latest`, ejecución 41274486531 |
 | `ARTIFACT_DOWNLOADED_VERIFIED` | sí | descarga independiente en CI (job `independent-download`) **y** mía, con SHA-256 calculado en una carpeta nueva |
-| `HUMAN_RUNTIME_PENDING` | pendiente | nadie lo ha cargado en Dusklight |
-| `HUMAN_PASS` | NO | sin observación humana |
-| G1 | `INSTRUMENTED_PENDING_RUNTIME` | G2 y G3 no iniciados |
-| `COMPATIBILITY_PASS` | NO | sin configuraciones reales de HM/Bars/DEVF |
+| `HUMAN_RUNTIME_PENDING` | **cerrado de forma acotada** (actualizado el 2026-11-01, §8) | el usuario probó el .dusk en tres sesiones; resumen recibido (`USER_SUPPLIED_RUNTIME_LOG_SUMMARY`) |
+| `HUMAN_PASS` | NO (sin log crudo accesible a Claude) | ver §8 |
+| G1 | **`SCOPED_RUNTIME_PASS`** (antes `INSTRUMENTED_PENDING_RUNTIME`) | hook PRE/POST, lectura coherente y convivencia en 3 configuraciones; NO `UNIVERSAL_COMPATIBILITY_PASS`. G2 y G3 no iniciados |
+| `COMPATIBILITY_PASS` | NO universal | solo las configuraciones de §8 |
 
 ## 2. Fuente y SDK
 - SDK oficial: `TwilitRealm/dusklight` @ `40457c6adb381928e4b5fef6ed459ed291edd5e2`; Aurora @ `3227d76c60e1e782ca576610bce61c9e7744d8be` (coincide con el submódulo del árbol oficial, `gh api …/contents/extern/aurora`).
@@ -54,3 +54,17 @@ Descarga con `gh run download` a carpetas nuevas; `sha256sum -c SHA256SUMS.txt` 
 - Un warning de inline en el log del host invalida G1 aunque el hook se haya instalado.
 - La pasividad del binario no se demuestra solo con imports: se apoya en revisión de fuente, auditoría de texto, build y, sobre todo, la prueba humana pendiente.
 - Bloqueos: ninguno de acceso. No se usó `SOURCE_CI.json` ni el espejo CP10 de DEVF.
+
+## 8. Cierre humano acotado de G1 (añadido el 2026-11-01; solo documental)
+**Procedencia: `USER_SUPPLIED_RUNTIME_LOG_SUMMARY`.** El usuario entregó tres logs reales a otro asistente, que los analizó; ese análisis es lo que se registra aquí. **Claude no ha leído los bytes de esos logs** (no están en el repo ni en el WSL) y **`RAW_LOG_IN_REPO` = no**: no se suben logs crudos. Se conservan solo nombres, tamaños, SHA-256 y cifras, sin rutas ni datos personales. Todo lo anterior de este documento (build, CI, artefacto) permanece como estaba.
+
+| Sesión | Log (SHA-256, bytes, líneas) | Mods | Resultado reportado |
+|---|---|---|---|
+| A — control, sin POST01 | `dusklight-20261101-000122.log` · `8b090ce9e83142163b41162b7327dacc6bc6d7a0fa5f345b4a621c2b2a4400fb` · 414542 · 3408 | 7/7 | Dusklight 2.0.3 D3D12. HM: 4 golpes sobre E_OC perfil 510, 0 desajustes. `CalcDivideInfo`=1. Cierre normal |
+| B — POST01 + HM + Bars + DEVF/Expansion | `dusklight-20261101-000523.log` · `833bd2cef74df68615385d8b3f51c850a40c50c17ff21b0cfe68cfb25e4500a1` · 503559 · 4514 | 8/8 | `resolve=MOD_OK`, `same_address=1`, `inline_sites_flag=0`, PRE/POST instalados. `POST01_SUMMARY`: calls=12747; adm(cand/e_oc2/other/unsafe)=3492/7842/0/1413; pre(finish/cooldown/no_tg/tg/unknown)=1/135/3341/15/0; hits=16, processed=15, accepted_likely=15, finish=1, anomalies=0; unmatched_post=0, discarded=0, frame_overflow=0; ledger(ins/wrap/ptr_mismatch)=20/4/0; log_errors=0. HM: 15 golpes de espada sobre E_OC perfil 510, 15/15 emparejados, HP coincide en 15, diff=0. Blue de DEVF observados sin atribuir origen. **Finish nativo observado, no provocado por Posture.** `CalcDivideInfo`=375. Cierre normal |
+| C — POST01 + Zora Swim 1.3.0 | `dusklight-20261101-000942.log` · `687f2b5f4aaf1a53fcd5a8ec8e4825d9e00038e36d9c72c42686c51f18fdd04b` · 450033 · 6055 | 2/2 (POST01 y Zora Swim; **sin** HM/Bars/DEVF/Expansion) | Hook igual que en B. `POST01_SUMMARY`: calls=12090; adm=5090/7000/0/0; pre=0/27/5060/3/0; hits=3, processed=3, accepted_likely=3, finish=0, anomalies=0; unmatched_post=0, discarded=0, frame_overflow=0; ledger(ins/wrap/ptr_mismatch)=27/11/0; log_errors=0. Tres golpes letales sobre E_OC candidatos (no generaliza la clasificación de armas). `CalcDivideInfo`=674. Cierre normal |
+
+- No hubo `was inlined into callers`, ni `POST01_DISABLED`, ni crash en B/C. El `inline_sites_flag` real fue 0.
+- `ledger_wraps` > 0 es el reemplazo circular del ledger provisional de 16 entradas, no un bug; POST02 lo sustituye.
+- **Alcance:** la pasividad se OBSERVÓ en pruebas acotadas, no se demostró formalmente para todas las combinaciones. G1 = `SCOPED_RUNTIME_PASS`; no hay `UNIVERSAL_COMPATIBILITY_PASS`. Ver un Finish natural no equivale a generar un Finish por ruptura: G2/G3 siguen `NOT_STARTED`.
+- **Incidencia no atribuida:** los avisos `CalcDivideInfo` aparecen también en el control A. Las sesiones difieren en actividad y duración, así que no se culpa ni se absuelve a POST01. Queda como diagnóstico de seguimiento, fuera del alcance de POST02.

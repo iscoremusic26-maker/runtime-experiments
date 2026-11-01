@@ -7,12 +7,14 @@
     "LAB_PASS": true,
     "WINDOWS_MSVC_PASS": true,
     "ARTIFACT_DOWNLOADED_VERIFIED": true,
-    "HUMAN_RUNTIME_PENDING": true,
+    "HUMAN_RUNTIME_PENDING": false,
     "HUMAN_PASS": false,
-    "COMPATIBILITY_PASS": false
+    "COMPATIBILITY_PASS": false,
+    "HUMAN_RUNTIME_SCOPED_PASS": true,
+    "UNIVERSAL_COMPATIBILITY_PASS": false
   },
   "gates": {
-    "G1": "INSTRUMENTED_PENDING_RUNTIME",
+    "G1": "SCOPED_RUNTIME_PASS",
     "G2": "NOT_STARTED",
     "G3": "NOT_STARTED"
   },
@@ -159,5 +161,52 @@
     "D4": "pending",
     "D5": "pending"
   },
-  "next": "POST02 (identity and lifecycle per instance) is NOT started"
+  "next": "POST02 (identity and lifecycle per instance) is NOT started",
+  "human_runtime_closure": {
+    "provenance": "USER_SUPPLIED_RUNTIME_LOG_SUMMARY",
+    "note": "Analisis de tres logs reales recibido del usuario. Claude NO ha leido los bytes de esos logs (no estan en el repo ni en el WSL). Los logs crudos NO se suben a GitHub (RAW_LOG_IN_REPO=false). Se conservan solo nombres, tamanos, SHA-256 y cifras.",
+    "raw_log_in_repo": false,
+    "host": "Dusklight 2.0.3 D3D12",
+    "sessions": {
+      "A_control_without_post01": {
+        "log": "dusklight-20261101-000122.log",
+        "sha256": "8b090ce9e83142163b41162b7327dacc6bc6d7a0fa5f345b4a621c2b2a4400fb",
+        "bytes": 414542,
+        "lines": 3408,
+        "mods_active": "7/7",
+        "summary": "HM: 4 golpes sobre E_OC perfil 510, 0 mismatch; CalcDivideInfo=1; cierre normal"
+      },
+      "B_post01_with_hm_bars_devf": {
+        "log": "dusklight-20261101-000523.log",
+        "sha256": "833bd2cef74df68615385d8b3f51c850a40c50c17ff21b0cfe68cfb25e4500a1",
+        "bytes": 503559,
+        "lines": 4514,
+        "mods_active": "8/8",
+        "hook": "resolve=MOD_OK same_address=1 inline_sites_flag=0 PRE/POST installed",
+        "post01_summary": "calls=12747; adm(cand/e_oc2/other/unsafe)=3492/7842/0/1413; pre(finish/cooldown/no_tg/tg/unknown)=1/135/3341/15/0; hits=16 processed=15 accepted_likely=15 finish=1 anomalies=0; unmatched_post=0 discarded=0 frame_overflow=0; ledger(ins/wrap/ptr_mismatch)=20/4/0; log_errors=0",
+        "hm": "15 golpes de espada sobre E_OC perfil 510, 15/15 emparejados, HP match=15 diff=0",
+        "notes": "Blue de DEVF observados sin atribuir origen; Finish nativo OBSERVADO, no provocado por Posture; CalcDivideInfo=375; cierre normal"
+      },
+      "C_post01_with_zora_swim_1_3_0": {
+        "log": "dusklight-20261101-000942.log",
+        "sha256": "687f2b5f4aaf1a53fcd5a8ec8e4825d9e00038e36d9c72c42686c51f18fdd04b",
+        "bytes": 450033,
+        "lines": 6055,
+        "mods_active": "2/2 (POST01 + Zora Swim 1.3.0; sin HM/Bars/DEVF/Expansion)",
+        "hook": "resolve=MOD_OK same_address=1 inline_sites_flag=0 PRE/POST installed",
+        "post01_summary": "calls=12090; adm(cand/e_oc2/other/unsafe)=5090/7000/0/0; pre(finish/cooldown/no_tg/tg/unknown)=0/27/5060/3/0; hits=3 processed=3 accepted_likely=3 finish=0 anomalies=0; unmatched_post=0 discarded=0 frame_overflow=0; ledger(ins/wrap/ptr_mismatch)=27/11/0; log_errors=0",
+        "notes": "3 golpes letales sobre E_OC candidatos (no generaliza la clasificacion de armas); CalcDivideInfo=674; cierre normal"
+      }
+    },
+    "not_observed": [
+      "was inlined into callers",
+      "POST01_DISABLED",
+      "crash"
+    ],
+    "scope": "Pasividad OBSERVADA en pruebas acotadas, no demostrada formalmente bajo todas las combinaciones. G1 = SCOPED_RUNTIME_PASS (hook PRE/POST, lectura coherente y convivencia en esas tres configuraciones); NO UNIVERSAL_COMPATIBILITY_PASS.",
+    "open_followup": "Los avisos CalcDivideInfo de A/B/C son una incidencia NO ATRIBUIDA (las sesiones difieren en actividad y duracion). No se culpa ni se absuelve a POST01. Seguimiento sin desviar POST02.",
+    "g2_g3": "NOT_STARTED (un Finish nativo observado no equivale a generar un Finish por ruptura)",
+    "ledger_note": "ledger_wraps>0 es reemplazo circular del ledger provisional de 16 entradas, no un bug; POST02 lo sustituye."
+  },
+  "pending_decisions_note": "D1-D5 siguen pendientes."
 }
