@@ -8,7 +8,7 @@ Etiquetas: **[S]** fuente `d_a_e_oc.cpp` (decompilación de referencia) · **[B]
 ## Respuestas
 | # | Comprobación | Resultado | Evidencia |
 |---|---|---|---|
-| 1 | E_OC y E_OC2 son la misma clase `daE_OC_c` (mismo perfil 510) y solo cambia `mName`, elegido en `create` por el byte alto de `current.angle.x` | **sí** | [S] `create` ~2734–2739. [R] Expansion comprueba `profname==510` para ambos (`exp mod.cpp` 900) |
+| 1 | E_OC y E_OC2 son la misma clase `daE_OC_c` (mismo perfil 510) y solo cambia `mName`, elegido en `create` por el byte alto de `current.angle.x` | **sí** | [S] `create` ~2734–2739; Expansion 0.17.0 comprueba `profname==510` para ambos (`mod.cpp` líneas 900 y 1779 en `192a773`) |
 | 2 | Diferencias de `create`: E_OC tiene `AtAtp(1,1)`, HP 40 y el bit de estado `0x10000`; E_OC2 tiene `AtAtp(2,2)`, HP 220 y no tiene `0x10000`. Recursos de modelo distintos | **sí** | [S] 2772–2801 |
 | 3 | `damage_check` lee `mName` **una sola vez**: la rama de tirachinas (E_OC pierde 5 HP; E_OC2 solo emite un SE) | **sí** | [S] línea 730. [B] en el cuerpo `0x140e06390–0x140e067e3`, la única lectura de `+0x8c0` (`mName`) está en `0x140e06670`, seguida de un `strcmp` inline contra `.rdata 0x141eb3174` = `"E_OC\0"` |
 | 4 | `damage_check` no lee `AtAtp` ni el bit `0x10000` | **sí** | [S]. [B] ningún acceso a esos campos en el cuerpo |

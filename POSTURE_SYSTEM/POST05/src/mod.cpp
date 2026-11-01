@@ -444,7 +444,7 @@ MOD_EXPORT ModResult mod_initialize(ModError* err) {
   std::snprintf(line, sizeof(line),
                 "POST05_INIT version=%s source_commit=%s policy_id=%s writes_to_game=1 write_set=mActionMode+mOcState+mOldActionMode_restore_pre "
                 "trigger=final_setActionMode_DAMAGE eligible=SWORD_nonlethal_weighted_below_100 pre=ATTACK_0_1_2 cd=0>10 hook_skip_original=0 hp_untouched=1 "
-                "layout_check=runtime_vs_exe admission_policy=%s e_oc_atp=1|2 e_oc2_atp=1|2|3|6 e_oc2=OBSERVE_POSTURE_NO_SUPPRESSION power_change_in_call=SKIP_UNSAFE",
+                "layout_check=runtime_vs_exe admission_policy=%s e_oc_atp=1|2 e_oc2_atp=1|2|3|6 e_oc2=OBSERVE_POSTURE_ONLY power_change=SKIP_UNSAFE",
                 post05::kReactionVersion, POST05_SOURCE_COMMIT, post05::policy::kPolicyId, name(g.eng.policy));
   emit(LogCat::Other, LOG_LEVEL_INFO, line);
   log_target_resolution();
