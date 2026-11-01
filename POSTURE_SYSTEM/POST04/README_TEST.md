@@ -9,7 +9,13 @@ POST04 **reemplaza** a POST03.1, POST03, POST02 y POST01: ID propio `dev.posture
 - Los valores (25/50/100/120/6) son una política de laboratorio **provisional** (`POST04_POSTURE_POLICY.md`).
 
 ## Artefacto
-@@ARTIFACT@@
+- **Enlace directo del artefacto (ZIP de GitHub con el .dusk):** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41320296108/artifacts/13089436064 (repo privado: requiere sesión con acceso). La API de Actions confirma que el id `13089436064` pertenece al run `41320296108` y se llama `POST04_TEST_41320296108_1`.
+- Run: https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41320296108 (jobs `build` e `independent-download` en éxito).
+- Comando opcional: `gh run download 41320296108 --repo iscoremusic26-maker/codex-cp00-inputs --name POST04_TEST_41320296108_1`
+- El ZIP (29018 bytes, SHA-256 `cc982b568f1468df27e9af4a37857b05a862530b675915e76b0613ce015b3ac3`) contiene `POSTURE_POST04_NUMERIC_OBSERVER_windows-amd64_ccf0f2d2b7b1.dusk` (**28145 bytes**), `DOWNLOAD_MANIFEST.json` y `SHA256SUMS.txt`. **Instala solo el .dusk.**
+- SHA-256 del .dusk: `d43e46b37760f93090f162e3807f6b70640695dccda61870836000d1bf42f8f7` (`Get-FileHash -Algorithm SHA256`; si difiere, detente). SHA-256 de la DLL interna: `84c3fb46b7ee2e3791a7d4be6d090018c04ad0660e634c47f1ff9a26643b27d9` (58368 bytes). Caduca el **2026-12-01 15:16 UTC**.
+- Compilado desde el commit fuente `ccf0f2d2b7b12092cf3407ae49bc8ba42a8ebd64` (rama `feature/posture-post04-numeric-core`), espejo de CI `9578db97647e9f60a33ad779182af4519158f78b`.
+- Host: Dusklight 2.0.3 (`dusklight.exe` SHA-256 `ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049`); con otra versión el mod se niega a cargar.
 
 ## Instalar / quitar (juego cerrado)
 1. Cierra Dusklight del todo; respalda partidas/config como siempre.

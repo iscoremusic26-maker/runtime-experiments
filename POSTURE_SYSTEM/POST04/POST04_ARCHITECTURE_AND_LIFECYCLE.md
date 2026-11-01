@@ -29,6 +29,8 @@ Etiquetas: **[S]** fuente · **[C]** MSVC/CI · **[L]** laboratorio · **[P]** p
 | `src/mod.cpp` | envoltura `PostureEngine`; `drain_posture()`; `POST04_INIT`; el tick matemático en `do_update`; cierre ordenado; ID/nombres |
 | `tests/` | `hit_lab`, `lifecycle_lab`, `collider_lab` heredados (dos aserciones de contrato actualizadas: presupuesto 1500 y `v=0.4.0`; mismos 1660 / 29558 / 12826 comprobaciones que en POST03.1); `posture_lab` nuevo |
 
+Medido con `diff` contra `POST03_1/src` y `POST03_1/tests` (líneas `<`/`>`): `hit_core.hpp` **0**, `engine.hpp` **1** (`+1`), `lifecycle_core.hpp` 16, `mod.cpp` 98; `hit_lab.cpp` **0**, `lifecycle_lab.cpp` 2 (una aserción), `collider_lab.cpp` 2 (una aserción). Los directorios `POST00`, `POST01`, `POST02`, `POST03` y `POST03_1` no tienen ninguna diferencia respecto al commit documental de cierre `509c6926fbba3d007bc3fba32bbb37c10436fa25`.
+
 ## 3. Sidecar de postura
 - **Estructura:** `Entry ent_[64]` paralelo al ledger. Entrada = `{bound, latched, dead, frozen, in_run, posture(u8), id, generation(u64), k, last_hit_tick, last_applied_event, last_adv_seq, …}`. Memoria fija O(64); sin heap, sin locks, sin E/S en el gancho.
 - **Clave:** `slot + generation + id`. La generación del ledger es global y monótona (única por vida); el sidecar guarda además `handled_gen_[slot]` para no volver a ligar una generación ya cerrada.

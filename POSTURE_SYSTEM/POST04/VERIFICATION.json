@@ -1,0 +1,174 @@
+{
+  "checkpoint": "POST04",
+  "title": "Passive per-instance numeric posture core (accumulation / recovery / threshold marker) on the POST03.1 observer",
+  "generated_utc": "2026-11-01T15:45:00Z",
+  "labels": {
+    "POST04_SOURCE_IMPLEMENTED": true,
+    "LAB_PASS": true,
+    "SOURCE_AUDIT_PASS": true,
+    "WINDOWS_MSVC_PASS": true,
+    "PE_AUDIT_PASS": true,
+    "PE_NEGATIVES_REJECTED": true,
+    "POST04_WINDOWS_BUILD_VERIFIED": true,
+    "ARTIFACT_DOWNLOADED_VERIFIED": true,
+    "POST04_HUMAN_RUNTIME_PENDING": true,
+    "POST04_RUNTIME_PASS": false,
+    "COMPATIBILITY_PASS": false,
+    "UNIVERSAL_COMPATIBILITY_PASS": false,
+    "TIMEBASE_PAUSE_UNVERIFIED": true,
+    "BALANCE_APPROVED": false
+  },
+  "gates": {
+    "post031": "SCOPED_RUNTIME_PASS (A1+B1)",
+    "G2": "NOT_STARTED",
+    "G3": "NOT_STARTED",
+    "POST05": "NOT_STARTED",
+    "POST06": "NOT_STARTED",
+    "POST07": "NOT_STARTED",
+    "POST08": "NOT_STARTED"
+  },
+  "source": {
+    "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+    "source_branch": "feature/posture-post04-numeric-core",
+    "base_post031_docs_commit": "509c6926fbba3d007bc3fba32bbb37c10436fa25",
+    "base_post031_compiled_commit": "cab67784e418fbcca0dd99d145eaf7168c50ea4a",
+    "compiled_source_commit": "ccf0f2d2b7b12092cf3407ae49bc8ba42a8ebd64",
+    "ci_repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "ci_branch": "ci/posture-post04-numeric-core",
+    "ci_head_of_final_run": "9578db97647e9f60a33ad779182af4519158f78b",
+    "ci_main_pinned": "9f95a34d93810b55250e8b833a2e343757cf8a01",
+    "official_sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora_commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "earlier_checkpoints_diff_vs_base": "0 lines (POST00..POST03_1)"
+  },
+  "policy": {
+    "id": "POST04_TEST_POLICY_V1_PROVISIONAL",
+    "max_posture": 100,
+    "threshold": 100,
+    "weights": {
+      "SWORD": 25,
+      "IRON_BALL": 50,
+      "all_other": 0
+    },
+    "recover_delay_ticks": 120,
+    "recover_period_ticks": 6,
+    "first_recovery_unit_at_k": 126,
+    "timebase": "mod_update sim tick (kSimPeriod 1/30 s at time scale 1; nominal)",
+    "balance": "PROVISIONAL"
+  },
+  "lab": {
+    "hit_lab": {
+      "checks": 1660,
+      "failures": 0
+    },
+    "lifecycle_lab": {
+      "checks": 29558,
+      "failures": 0
+    },
+    "collider_lab": {
+      "checks": 12826,
+      "failures": 0
+    },
+    "posture_lab": {
+      "checks": 556878,
+      "failures": 0
+    },
+    "msvc_ci_same_labs": true,
+    "oracle_compares": 555627,
+    "real_trace_events_replayed": 36,
+    "python_tool_tests": "11 (1 optional skipped locally)",
+    "mutations_detected": {
+      "inherited_logic": "25/25",
+      "posture": "28/28",
+      "source_negatives_rejected": "27/27",
+      "total": "80/80"
+    },
+    "extractor_mutations_detected": "8/8",
+    "kind": "LAB_WITH_DOUBLES_NOT_RUNTIME"
+  },
+  "ci_runs": [
+    {
+      "run": "41319547787",
+      "result": "failure",
+      "reason": "PE pin: memset CRT import"
+    },
+    {
+      "run": "41319804337",
+      "result": "failure",
+      "reason": "finalisation bug in own build script"
+    },
+    {
+      "run": "41320016172",
+      "result": "success",
+      "reason": "intermediate candidate 3183d83, superseded"
+    },
+    {
+      "run": "41320296108",
+      "result": "success",
+      "reason": "final candidate"
+    }
+  ],
+  "toolchain": {
+    "cl": "19.51.36260",
+    "vc_tools": "14.51.36231",
+    "visual_studio": "18.0",
+    "windows_sdk": "10.0.26100.0",
+    "cmake": "4.4.4",
+    "ninja": "1.13.2"
+  },
+  "pe": {
+    "machine": "AMD64",
+    "exports": [
+      "mod_ctx",
+      "mod_initialize",
+      "mod_meta",
+      "mod_shutdown",
+      "mod_update"
+    ],
+    "hook_records": 1,
+    "game_imports": [
+      "?damage_check@daE_OC_c@@QEAAXXZ",
+      "?fopAcM_SearchByID@@YAHIPEAPEAVfopAc_ac_c@@@Z",
+      "?dComIfGp_getStartStageName@@YAPEBDXZ"
+    ],
+    "new_game_imports_vs_post031": 0,
+    "new_crt_imports_vs_post031": [
+      "VCRUNTIME140.dll!memset (compiler-generated zero-init of fixed arrays)"
+    ],
+    "negatives_rejected": "11/11"
+  },
+  "artifact": {
+    "filename": "POSTURE_POST04_NUMERIC_OBSERVER_windows-amd64_ccf0f2d2b7b1.dusk",
+    "bytes": 28145,
+    "sha256": "d43e46b37760f93090f162e3807f6b70640695dccda61870836000d1bf42f8f7",
+    "dll_bytes": 58368,
+    "dll_sha256": "84c3fb46b7ee2e3791a7d4be6d090018c04ad0660e634c47f1ff9a26643b27d9",
+    "mod_id": "dev.posture.post04_numeric_observer",
+    "version": "0.4.0",
+    "actions_artifact": "POST04_TEST_41320296108_1",
+    "actions_artifact_id": 13089436064,
+    "actions_artifact_zip_bytes": 29018,
+    "actions_artifact_digest": "sha256:cc982b568f1468df27e9af4a37857b05a862530b675915e76b0613ce015b3ac3",
+    "direct_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41320296108/artifacts/13089436064",
+    "direct_url_check": "GitHub Actions API: artifact id -> run -> name -> head_sha verified; the web page was not opened (private repo)",
+    "expires_utc": "2026-12-01T15:16:35Z"
+  },
+  "risks_not_tested": [
+    "no in-game run of POST04",
+    "recovery during menus/pause (TIMEBASE_PAUSE_UNVERIFIED)",
+    "performance not measured",
+    "ARROW/BOMB/SHIELD_ATTACK/SLINGSHOT/AT_TYPE_40 never observed in game",
+    "OTHER_VERIFIED does not identify a weapon",
+    "policy values are provisional",
+    "D1-D5 unresolved"
+  ],
+  "pending_decisions": {
+    "D1": "Blue origin undeterminable (DEVF)",
+    "D2": "ATTACK as suppression mode (POST05 hypothesis)",
+    "D3": "no BIG_DAMAGE cancelled",
+    "D4": "boomerang/shield untouched",
+    "D5": "posture bar neither computed for display nor drawn"
+  },
+  "next": "Human A/B session with POST04 (README_TEST.md). POST05 is NOT started."
+}
