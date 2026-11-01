@@ -45,6 +45,13 @@ Por cuadro de simulación [S]: `duskExecute()` → `mod_update` → `fpcM_Manage
 - **Disabled / fallo de gancho / excepción:** `PostureEngine` es inerte si el observador está deshabilitado (`on_pre/on_post/on_update` vuelven de inmediato): no acumula ni avanza el reloj. Un fallo de instalación deja los callbacks sin efecto y el original sigue.
 - **`mod_shutdown`:** `on_shutdown()` (sync + cierre de carreras abiertas, solo aritmética) → resumen. No se consulta ni se desreferencia ninguna instancia.
 
+### Auditoría del orden `do_update` / `emit_summary` / reloj (exigida por el encargo)
+Texto de `mod_update` en `src/mod.cpp`: `emit_disabled_once()` → si el observador está deshabilitado, **sale** (ni barre ni avanza el reloj) → `do_update()` → `if (summary_due()) emit_summary("PERIODIC")`.
+- `do_update()`: (1) `epoch.update(...)`; (2) `if (sweep_due())` → barrido (cuota 2, `fopAcM_SearchByID`); (3) **siempre** `g.pe.on_update()` = `sync` + `advance()`; (4) `drain_posture()`.
+- `sweep_due()` incrementa **su propio** contador `tick` y devuelve `true` cada 10 llamadas. Ese contador **no** es el reloj de postura: el reloj es `Posture::now_` y se incrementa en `advance()`, incondicionalmente, una vez por `mod_update`. Un barrido irregular o un cupo agotado no omite ni multiplica unidades de recuperación (T20: el ritmo con 1 y con 20 actores es idéntico).
+- `summary_due()` depende de `calls` (llamadas al gancho), no del reloj; el resumen se emite **después** del tick de esa llamada, de modo que `audit()` ve el estado ya sincronizado y avanzado. Los resúmenes son acumulativos: ninguna línea periódica suma dos veces.
+- En `mod_shutdown`: `on_shutdown()` (sync + cierre de carreras) → `drain_posture()` → `emit_summary("SHUTDOWN")`; el `audit()` del resumen no desreferencia nada.
+
 ## 5. Coste y límites
 Gancho: sin trabajo extra en las llamadas sin golpe (excepto `sync` O(64) cuando el ledger cambió); un golpe confirmado cuesta un `consume` O(1). `mod_update`: `sync` + `advance` = 2 × O(64) aritmética por tick, sin lecturas del juego. Estructuras fijas: ledger 64 + sidecar 64 + cola 128 + contadores. Sin consultas `fopAcM_SearchByID` adicionales (siguen siendo ≤ 2 cada 10 `mod_update`). El rendimiento real **no está medido** [P].
 
