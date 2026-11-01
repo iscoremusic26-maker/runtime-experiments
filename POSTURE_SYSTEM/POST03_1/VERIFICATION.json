@@ -1,0 +1,222 @@
+{
+  "checkpoint": "POST03.1",
+  "title": "Collider-gate correction (4-byte read alignment) + passive collider diagnostics + A/B runtime evidence",
+  "generated_utc": "2026-11-01T14:10:00Z",
+  "labels": {
+    "EVIDENCE_AB_INCORPORATED": true,
+    "ROOT_CAUSE_RUNTIME_INSTRUMENTED_PENDING": true,
+    "SOURCE_IMPLEMENTED": true,
+    "SOURCE_FIX_IMPLEMENTED": true,
+    "SOURCE_AUDIT_PASS": true,
+    "LAB_PASS": true,
+    "DEDUP_LAB_PASS": true,
+    "WINDOWS_MSVC_PASS": true,
+    "PE_AUDIT_PASS": true,
+    "ARTIFACT_DOWNLOADED_VERIFIED": true,
+    "HUMAN_RUNTIME_PENDING": true,
+    "CLASSIFICATION_FIXED": false,
+    "CLASSIFICATION_RUNTIME_PASS": false,
+    "COMPATIBILITY_PASS": false,
+    "UNIVERSAL_COMPATIBILITY_PASS": false
+  },
+  "gates": {
+    "post03": "SCOPED_HIT_OBSERVATION_PASS + CLASSIFICATION_RUNTIME_PARTIAL",
+    "G1_post01": "SCOPED_RUNTIME_PASS",
+    "post02": "SCOPED_RUNTIME_PASS",
+    "G2": "NOT_STARTED",
+    "G3": "NOT_STARTED",
+    "POST04": "NOT_STARTED"
+  },
+  "human_evidence": {
+    "provenance": "USER_SUPPLIED_RAW_WINDOWS_LOG_ANALYZED",
+    "read_by_claude_code": true,
+    "raw_log_in_repo": false,
+    "A": {
+      "file": "dusklight-20261101-081057.log",
+      "sha256": "e495427aaf3ba3f5ee4c6b8ab887f24a4df290faa43455903da16f8fcffb1bb5",
+      "bytes": 325190,
+      "splitlines": 4250,
+      "mods": "2/2 POST03 0.3.0 + Zora Swim 1.3.0"
+    },
+    "B": {
+      "file": "dusklight-20261101-080341.log",
+      "sha256": "92495e7359458c23c73eb2c5139c5b0f5b6bf46dfd50fb0359db85dfa8747a06",
+      "bytes": 875205,
+      "splitlines": 5396,
+      "mods": "8/8"
+    },
+    "events": {
+      "total": 26,
+      "hit_confirmed": 24,
+      "finish_native": 2,
+      "family_unavailable": 20,
+      "family_sword": 4,
+      "A": 6,
+      "B": 20,
+      "dual_tg_events": {
+        "A": 1,
+        "B": 11
+      }
+    },
+    "by_link_instance": {
+      "A": {
+        "434": {
+          "confirmed": 6,
+          "unavailable": 6,
+          "sword": 0
+        }
+      },
+      "B": {
+        "105": {
+          "confirmed": 14,
+          "unavailable": 14,
+          "sword": 0
+        },
+        "506": {
+          "confirmed": 4,
+          "unavailable": 0,
+          "sword": 4
+        }
+      }
+    },
+    "doc": "POSTURE_SYSTEM/POST03/RUNTIME_EVIDENCE_A_B.md",
+    "sanitized_data": "POSTURE_SYSTEM/POST03_1/evidence/"
+  },
+  "source": {
+    "official_sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora_commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "windows_zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf",
+    "importlib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "base_post03_head": "0a67b19687b5cbaadc4e851ecd7cf4e1340e1b40",
+    "base_post03_compiled_source": "f350522fc2097cbbe786c57df2f005ba0b4981b3",
+    "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+    "source_branch": "feature/posture-post03-1-collider-classification",
+    "compiled_source_commit": "cab67784e418fbcca0dd99d145eaf7168c50ea4a",
+    "docs_commit": "see git log of this branch (documents only, after compiled_source_commit)",
+    "ci_repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "ci_branch": "ci/posture-post03-1-collider-classification",
+    "ci_head_of_final_run": "ad637a4805a64e69262933325a9d02c989e8f468"
+  },
+  "fix": {
+    "what": "deref gate: mAtInfo.mpCollider == raw hit obj of cc1/cc0 (same call) AND >=0x10000 AND multiple of 4 (was 8)",
+    "why": "host heap guarantees only 4-byte alignment (JKRExpHeap allocFromTail(size), ALIGN_NEXT(size,4)); the only read is a 4-byte int at +0x20",
+    "unchanged": [
+      "single hook",
+      "PRE always HOOK_CONTINUE",
+      "P1+P2 HIT_CONFIRMED",
+      "one read per event",
+      "no GetAc/GetTgHitAc/ChkTgHit derived",
+      "no new imports"
+    ],
+    "diagnostics": [
+      "reason(7)",
+      "sel_class",
+      "raw_cc0_class",
+      "raw_cc1_class",
+      "deref_ok_mod8_0/4"
+    ],
+    "proven_in_runtime": false
+  },
+  "abi_static_asserts_compiled_by_msvc": {
+    "fopAc_ac_c::health": "0x656",
+    "actor_status": "0x580",
+    "mActionMode": "0x8c8",
+    "mOldActionMode": "0x8cc",
+    "mOcState": "0x8d0",
+    "field_0x6cc": "0x8ec",
+    "mAtInfo": "0x1398",
+    "alignof(cCcD_Obj)": 8,
+    "sizeof(GetAtType())": 4
+  },
+  "game_imports_from_dusklight_exe": [
+    "?damage_check@daE_OC_c@@QEAAXXZ",
+    "?fopAcM_SearchByID@@YAHIPEAPEAVfopAc_ac_c@@@Z",
+    "?dComIfGp_getStartStageName@@YAPEBDXZ"
+  ],
+  "new_imports_vs_post03": 0,
+  "ci_runs": [
+    {
+      "id": 41312672161,
+      "mirror_of": "592f123",
+      "result": "success",
+      "note": "did not run collider_lab (target missing); discarded"
+    },
+    {
+      "id": 41312890342,
+      "mirror_of": "6ac8a7d",
+      "result": "success",
+      "note": "superseded"
+    },
+    {
+      "id": 41313246091,
+      "mirror_of": "cab6778",
+      "result": "success",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41313246091"
+    }
+  ],
+  "toolchain": {
+    "cl": "19.51.36260",
+    "vc_tools": "14.51.36231",
+    "windows_sdk": "10.0.26100.0",
+    "cmake": "4.4.4",
+    "ninja": "1.13.2",
+    "std": "c++20"
+  },
+  "lab": {
+    "hit_lab": {
+      "checks": 1660,
+      "failures": 0
+    },
+    "lifecycle_lab": {
+      "checks": 29558,
+      "failures": 0
+    },
+    "collider_lab": {
+      "checks": 12826,
+      "failures": 0
+    },
+    "python_extractor_tests": 6,
+    "msvc_ci_same_labs": true,
+    "logic_mutations_detected": "25/25",
+    "source_audit_negatives_rejected": "14/14",
+    "pe_negatives_rejected_local": "7/7",
+    "kind": "doubles/opaque pointers, not runtime"
+  },
+  "artifact": {
+    "filename": "POSTURE_POST031_COLLIDER_CLASSIFICATION_windows-amd64_cab67784e418.dusk",
+    "bytes": 20534,
+    "sha256": "1f140011a20c4d28bc790af358ccb26d4247f69c3d69399ac72756475ed89cbd",
+    "dll_bytes": 46080,
+    "dll_sha256": "9c50ab0c9703017b918501a9da5528aba2678bc899550b019891055eb7a19517",
+    "mod_id": "dev.posture.post03_1_collider_classification",
+    "version": "0.3.1",
+    "actions_artifact": "POST031_TEST_41313246091_1",
+    "actions_artifact_id": 13085797554,
+    "actions_artifact_zip_bytes": 21431,
+    "actions_artifact_digest": "sha256:1d1522d3956c5689a6c311a8888c590fe40b72f606233fc575dbfcc63513d813",
+    "direct_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41313246091/artifacts/13085797554",
+    "direct_url_check": "artifact id->run->name confirmed through the Actions API; private web page not opened",
+    "expires_utc": "2026-12-01T13:52:15Z",
+    "downloaded_independently": true,
+    "installed": false,
+    "dll_loaded": false,
+    "game_executed": false
+  },
+  "risks_not_tested": [
+    "real residue of the rejected pointers (mod8_4 hypothesis unconfirmed)",
+    "the new mod8_4 read in the real game",
+    "other weapon families in the real game",
+    "runtime cost",
+    "DEVF Blue vs native indistinguishable",
+    "CalcDivideInfo/texture/PERF_WINDOW unattributed"
+  ],
+  "pending_decisions": {
+    "D1": "pending",
+    "D2": "pending",
+    "D3": "pending",
+    "D4": "pending",
+    "D5": "pending"
+  },
+  "next": "POST04 NOT started; requires a real POST03.1 log to unblock classification"
+}

@@ -11,11 +11,15 @@
     "PE_AUDIT_PASS": true,
     "ARTIFACT_DOWNLOADED_VERIFIED": true,
     "CLASSIFICATION_COVERAGE": "lab-only per native branch; real game [P]",
-    "HUMAN_RUNTIME_PENDING": true,
+    "HUMAN_RUNTIME_PENDING": false,
     "HUMAN_PASS": false,
     "POST03_RUNTIME_PASS": false,
     "COMPATIBILITY_PASS": false,
-    "UNIVERSAL_COMPATIBILITY_PASS": false
+    "UNIVERSAL_COMPATIBILITY_PASS": false,
+    "POST03_RUNTIME_SCOPED_OBSERVED": true,
+    "CLASSIFICATION_RUNTIME_PARTIAL": true,
+    "POST03_1_FIX_PENDING": true,
+    "CLASSIFICATION_RUNTIME_PASS": false
   },
   "gates": {
     "G1_post01": "SCOPED_RUNTIME_PASS",
@@ -188,5 +192,37 @@
     "D4": "pending",
     "D5": "pending"
   },
-  "next": "POST04 NOT started"
+  "next": "POST04 NOT started",
+  "human_runtime_closure": {
+    "written": "2026-11-01",
+    "provenance": "USER_SUPPLIED_RAW_WINDOWS_LOG_ANALYZED",
+    "read_by_claude_code": true,
+    "raw_log_in_repo": false,
+    "logs": [
+      {
+        "file": "dusklight-20261101-081057.log",
+        "sha256": "e495427aaf3ba3f5ee4c6b8ab887f24a4df290faa43455903da16f8fcffb1bb5",
+        "bytes": 325190,
+        "splitlines": 4250,
+        "mods": "2/2"
+      },
+      {
+        "file": "dusklight-20261101-080341.log",
+        "sha256": "92495e7359458c23c73eb2c5139c5b0f5b6bf46dfd50fb0359db85dfa8747a06",
+        "bytes": 875205,
+        "splitlines": 5396,
+        "mods": "8/8"
+      }
+    ],
+    "events": {
+      "total": 26,
+      "hit_confirmed": 24,
+      "finish_native": 2,
+      "family_unavailable": 20,
+      "family_sword": 4
+    },
+    "doc": "POSTURE_SYSTEM/POST03/RUNTIME_EVIDENCE_A_B.md",
+    "verdict": "SCOPED observation/identity/dedup PASS; classification PARTIAL; no CLASSIFICATION_RUNTIME_PASS",
+    "fix": "POSTURE_SYSTEM/POST03_1"
+  }
 }

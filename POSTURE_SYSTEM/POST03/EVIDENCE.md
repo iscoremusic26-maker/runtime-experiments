@@ -13,8 +13,11 @@ Etiquetas de evidencia: [S] fuente · [B] binario · [C] MSVC/PE/CI · [L] labor
 | `PE_AUDIT_PASS` | sí [C] | imports fijados y razonados |
 | `ARTIFACT_DOWNLOADED_VERIFIED` | sí | descarga independiente en CI y mía, con SHA-256 |
 | `CLASSIFICATION_COVERAGE` | por rama nativa, solo [L]: 8 familias + `OTHER_VERIFIED`, `AMBIGUOUS`, `UNAVAILABLE`. En juego real: [P] | `HIT_PATH_AUDIT.md` §4 |
-| `HUMAN_RUNTIME_PENDING` | pendiente | nadie ha cargado POST03 en Dusklight |
-| `HUMAN_PASS`, `POST03_RUNTIME_PASS`, `COMPATIBILITY_PASS`, `UNIVERSAL_COMPATIBILITY_PASS` | NO | sin log real de POST03 |
+| `HUMAN_RUNTIME_PENDING` | **cerrado de forma acotada** (actualizado el 2026-11-01) | dos sesiones reales A/B; ver `RUNTIME_EVIDENCE_A_B.md` |
+| `POST03_RUNTIME_SCOPED_OBSERVED` | sí | 26 eventos, 0 duplicados, `CONSERVATION ok=1`, cierres limpios [R] |
+| `CLASSIFICATION_RUNTIME_PARTIAL` | sí (4/24 SWORD; 20/24 `UNAVAILABLE`) | **no** es `CLASSIFICATION_RUNTIME_PASS` |
+| `POST03_1_FIX_PENDING` | sí | corrección en `POSTURE_SYSTEM/POST03_1` |
+| `HUMAN_PASS`, `COMPATIBILITY_PASS`, `UNIVERSAL_COMPATIBILITY_PASS` | NO | solo las dos configuraciones observadas |
 | POST02 | `SCOPED_RUNTIME_PASS` [U] | `POST02/EVIDENCE.md` §7 |
 | G1 (POST01) | `SCOPED_RUNTIME_PASS` [U] | `POST01/EVIDENCE.md` §8 |
 | G2, G3 | `NOT_STARTED` | |
@@ -54,3 +57,6 @@ Etiquetas de evidencia: [S] fuente · [B] binario · [C] MSVC/PE/CI · [L] labor
 - Las familias reales (`at=0x…`) y el comportamiento de la lectura del collider son [P] hasta tu log. Subtipo de espada, atacante, potencia y ejecución de `cc_at_check`: no disponibles desde este hook.
 - Epoch por nombre de stage, `FIRST_SEEN` ≠ spawn, Blue indistinguible (D1), `CalcDivideInfo` sin atribuir, HM/Bars sin reconstrucción byte a byte (heredado). Coexistencia con DEVF/HM/Bars de POST03: no probada.
 - El source audit y el PE audit no son una prueba formal de no mutación.
+
+## 8. Cierre humano acotado (añadido el 2026-11-01; solo documental)
+Dos logs reales de Windows/DX12 (A: POST03 + Zora Swim, 2/2; B: 8/8 con HM, Bars, DEVF y Expansion) fueron **leídos completos por Claude Code** y verificados por SHA-256; el análisis completo, los 26 eventos saneados, la correlación con la instancia de Link y los criterios de las incidencias están en [`RUNTIME_EVIDENCE_A_B.md`](RUNTIME_EVIDENCE_A_B.md). No se versionan los logs. Resultado: observación, identidad, ciclo de vida y deduplicación en `SCOPED_RUNTIME_PASS`; clasificación de familia **parcial** (`SELECTED_COLLIDER_IMPLAUSIBLE` en 20/24 golpes confirmados, también sin HM/Bars/DEVF). La corrección se desarrolla en `POSTURE_SYSTEM/POST03_1` (`ROOT_CAUSE_RUNTIME_INSTRUMENTED_PENDING`). El código y el artefacto de POST03 no se tocaron.
