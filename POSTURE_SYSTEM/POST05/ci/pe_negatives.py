@@ -1,4 +1,4 @@
-"""POST04: pruebas NEGATIVAS del auditor PE sobre COPIAS alteradas de la DLL real. Cada alteracion debe hacer que pe_audit NO devuelva PE_AUDIT_PASS.
+"""POST05: pruebas NEGATIVAS del auditor PE sobre COPIAS alteradas de la DLL real. Cada alteracion debe hacer que pe_audit NO devuelva PE_AUDIT_PASS.
 Demuestra que la auditoria detectaria: cambio de arquitectura, import nuevo, import mutador, export alterado, hook apuntando a otro metodo,
 dependencia alterada, archivo truncado y cabecera corrupta. Sin ejecutar nada. Uso: pe_negatives.py <dll> <expected_pe.json> -> JSON; salida != 0 si algun caso pasa."""
 import json

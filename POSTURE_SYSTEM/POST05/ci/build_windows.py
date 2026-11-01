@@ -1,6 +1,6 @@
-"""POST04: build MSVC x64 REAL + laboratorio + auditorias + paquete .dusk privado. Nunca carga la DLL ni ejecuta el juego.
+"""POST05: build MSVC x64 REAL + laboratorio + auditorias + paquete .dusk privado. Nunca carga la DLL ni ejecuta el juego.
 Uso (runner windows-latest tras msvc-dev-cmd):
-  python build_windows.py --source .official --inputs .private-inputs --ci-source POSTURE_SYSTEM/POST04_CI_SOURCE.json --work <dir>"""
+  python build_windows.py --source .official --inputs .private-inputs --ci-source POSTURE_SYSTEM/POST05_CI_SOURCE.json --work <dir>"""
 import argparse
 import datetime
 import hashlib
@@ -29,7 +29,7 @@ PINS = {
     'importlib_crc': 0x70C35731,
     'host_exe_sha256': 'ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049',
 }
-TARGET = 'post04_numeric_observer'
+TARGET = 'post05_selective_reactions'
 
 
 def sha(b):
@@ -74,7 +74,7 @@ def main():
     try:
         if os.name != 'nt':
             raise RuntimeError('Windows required')
-        if os.getenv('GITHUB_REF') != 'refs/heads/ci/posture-post04-numeric-core':
+        if os.getenv('GITHUB_REF') != 'refs/heads/ci/posture-post05-selective-reactions':
             raise RuntimeError('Exclusive CI branch required')
         # --- procedencia del codigo compilado -----------------------------------------------------------------
         cs = json.loads(a.ci_source.read_text())
@@ -122,17 +122,17 @@ def main():
         # --- configurar, laboratorio, modulo ------------------------------------------------------------------
         run('configure', ['cmake', '-S', str(PROJECT), '-B', str(build), '-G', 'Ninja', '-DCMAKE_BUILD_TYPE=Release',
                           '-DDUSK_SOURCE=' + str(source), '-DDUSK_GAME_EXE=' + str(lib), '-DCMAKE_EXPORT_COMPILE_COMMANDS=ON',
-                          '-DPOST04_SOURCE_COMMIT=' + cs['source_commit']])
-        for n, lab in enumerate(['hit_lab', 'lifecycle_lab', 'collider_lab', 'posture_lab'], 1):
-            run('build-lab%d' % n, ['cmake', '--build', str(build), '--target', 'post04_' + lab, '--parallel', '2'])
-            run('run-lab%d' % n, [str(build / ('post04_' + lab + '.exe'))])
-        for lab_log in ('run-lab1', 'run-lab2', 'run-lab3', 'run-lab4'):
+                          '-DPOST05_SOURCE_COMMIT=' + cs['source_commit']])
+        for n, lab in enumerate(['hit_lab', 'lifecycle_lab', 'collider_lab', 'posture_lab', 'reaction_lab'], 1):
+            run('build-lab%d' % n, ['cmake', '--build', str(build), '--target', 'post05_' + lab, '--parallel', '2'])
+            run('run-lab%d' % n, [str(build / ('post05_' + lab + '.exe'))])
+        for lab_log in ('run-lab1', 'run-lab2', 'run-lab3', 'run-lab4', 'run-lab5'):
             lab = (ev / (lab_log + '.log')).read_text()
             if 'RESULT=LAB_PASS' not in lab or 'failures=0' not in lab:
                 raise RuntimeError('Laboratory did not pass: ' + lab_log)
         # --- el formateador real compilado con MSVC debe producir EXACTAMENTE la muestra versionada (generada con g++) y el extractor debe aceptarla ---
         sample = ev / 'sample-msvc.log'
-        run('emit-sample', [str(build / 'post04_posture_lab.exe'), '--emit-sample', str(sample)])
+        run('emit-sample', [str(build / 'post05_posture_lab.exe'), '--emit-sample', str(sample)])
         committed = lf((PROJECT / 'tests' / 'data' / 'sample_post04_formatter_output.log').read_bytes())
         if lf(sample.read_bytes()) != committed:
             raise RuntimeError('MSVC formatter output differs from the committed sample (formatter drift or compiler-dependent output)')
@@ -193,19 +193,20 @@ def main():
                         'dll_in_package_equals_loose': True, 'mod_json_equals_source': True}
         r['labels'].append('WINDOWS_MSVC_PASS')
         # --- entrega privada ----------------------------------------------------------------------------------
-        name = 'POSTURE_POST04_NUMERIC_OBSERVER_windows-amd64_%s.dusk' % cs['source_commit'][:12]
+        name = 'POSTURE_POST05_SELECTIVE_REACTIONS_windows-amd64_%s.dusk' % cs['source_commit'][:12]
         delivery = work / 'delivery'
         delivery.mkdir(exist_ok=True)
         shutil.copyfile(pkg, delivery / name)
         meta = {'filename': name, 'package_bytes': len(pb), 'package_sha256': sha(pb), 'dll_sha256': sha(before), 'source_repo': cs['source_repo'],
                 'source_commit': cs['source_commit'], 'ci_head': r['ci_head'], 'workflow_run_id': r['run_id'], 'official_sdk': PINS['official_commit'],
                 'aurora': PINS['aurora_commit'], 'mod_id': manifest['id'], 'version': manifest['version'], 'private_test_build': True,
-                'installed': False, 'runtime_tested': False, 'runtime_status': 'HUMAN_RUNTIME_PENDING', 'gameplay_changes': False,
-                'hook_targets': ['daE_OC_c::damage_check'], 'posture': 'PASSIVE_NUMERIC_CORE_PENDING_RUNTIME', 'policy_id': 'POST04_TEST_POLICY_V1_PROVISIONAL', 'game_actions': 'NONE', 'lookup': 'fopAcM_SearchByID in mod_update only'}
+                'installed': False, 'runtime_tested': False, 'runtime_status': 'HUMAN_RUNTIME_PENDING', 'gameplay_changes': True,
+                'game_writes': 'daE_OC_c mActionMode/mOcState/mOldActionMode restored to pre-call values, gated (see POST05_WRITE_EFFECTS_AUDIT.md)',
+                'hook_targets': ['daE_OC_c::damage_check'], 'posture': 'POST04_CORE_PASSIVE', 'reaction_policy_id': 'POST05_TEST_POLICY_V1_ATTACK_STATES_0_1_2', 'game_actions': 'SELECTIVE_DAMAGE_REACTION_UNDO', 'lookup': 'fopAcM_SearchByID in mod_update only'}
         (delivery / 'DOWNLOAD_MANIFEST.json').write_text(json.dumps(meta, indent=2) + '\n')
         (delivery / 'SHA256SUMS.txt').write_text('%s  %s\n' % (sha(pb), name))
         shutil.copyfile(delivery / 'DOWNLOAD_MANIFEST.json', ev / 'DOWNLOAD_MANIFEST.json')
-        r['status'] = 'POST04_PACKAGE_PASS_DOWNLOAD_PENDING'
+        r['status'] = 'POST05_PACKAGE_PASS_DOWNLOAD_PENDING'
     except Exception as ex:  # noqa: BLE001
         r['error'] = str(ex)
         print('ERROR:', ex, flush=True)

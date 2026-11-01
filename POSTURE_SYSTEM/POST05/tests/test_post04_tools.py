@@ -34,6 +34,11 @@ class T(unittest.TestCase):
         self.assertEqual(out1.read_bytes(), out2.read_bytes())
         self.assertEqual(out1.read_bytes(), (HERE / 'real_trace.inc').read_bytes(), 'real_trace.inc is stale: rerun gen_real_trace.py')
 
+    def test_reaction_trace_is_current(self):  # POST05: la traza de los 27 informes reales y su decision esperada
+        out = self.d / 'r.inc'
+        subprocess.run([sys.executable, '-I', str(HERE / 'gen_reaction_trace.py'), str(HERE / 'data' / 'post04_a1_b1_events.tsv'), str(out)], check=True, capture_output=True)
+        self.assertEqual(out.read_bytes(), (HERE / 'reaction_trace.inc').read_bytes(), 'reaction_trace.inc is stale: rerun gen_reaction_trace.py')
+
     def test_sample_matches_fresh_formatter_output(self):
         fresh = os.environ.get('POST04_FRESH_SAMPLE')
         if not fresh:

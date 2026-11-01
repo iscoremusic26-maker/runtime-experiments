@@ -1,4 +1,4 @@
-"""POST04: auditoria de solo lectura de un mod.dll (PE32+ AMD64). Sin ejecutar nada.
+"""POST05: auditoria de solo lectura de un mod.dll (PE32+ AMD64). Sin ejecutar nada.
 Reglas duras: un unico registro HOOK_MEM sobre daE_OC_c::damage_check enlazado a su thunk de importacion; sin exports de servicio,
 sin TLS/delay-imports; ningun import mutador; imports del juego y de CRT/sistema EXACTAMENTE iguales a ci/expected_pe.json
 (revisado a mano la primera vez que se genero). Uso: pe_audit.py <dll> [--expected ci/expected_pe.json] -> JSON en stdout."""

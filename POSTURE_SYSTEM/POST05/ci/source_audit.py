@@ -1,4 +1,4 @@
-"""POST04: auditoria estatica de PASIVIDAD sobre src/*.cpp|hpp (texto). No es una prueba formal: es una red contra regresiones.
+"""POST05: auditoria estatica de PASIVIDAD sobre src/*.cpp|hpp (texto). No es una prueba formal: es una red contra regresiones.
 Uso: source_audit.py <proyecto>  -> JSON; salida distinta de 0 si falla alguna regla."""
 import json
 import re
@@ -98,6 +98,25 @@ def main(project):
             for m in re.finditer(r'ChkTgHit', text):
                 if not text[:m.start()].endswith('cCcD_ObjHitInf::'):
                     res['errors'].append('mod.cpp: ChkTgHit must be the raw base-class cCcD_ObjHitInf::ChkTgHit')
+            # POST05: la UNICA escritura al juego. Toda asignacion a traves de '->' en mod.cpp debe estar en restore_reaction y ser una de las tres.
+            rr = re.search(r'void restore_reaction\(daE_OC_c\* r, int mode, int state, int old_mode\) noexcept \{(.*?)\n\}\n', text, flags=re.S)
+            writes = list(re.finditer(r'(\w+)\s*->\s*([\w\.\[\]]+)\s*(=(?!=)|\+=|-=|\|=|&=|\^=|<<=|>>=|\+\+|--)', text))
+            allowed = {'mActionMode', 'mOcState', 'mOldActionMode'}
+            inside = [w for w in writes if rr and rr.start(1) <= w.start() < rr.end(1)]
+            if not rr or len(inside) != 3 or {w.group(2) for w in inside} != allowed or any(w.group(1) != 'r' or w.group(3) != '=' for w in inside):
+                res['errors'].append('mod.cpp: restore_reaction must assign exactly mActionMode, mOcState and mOldActionMode through r and nothing else')
+            for w in writes:
+                if w not in inside:
+                    res['errors'].append('mod.cpp: write through a pointer outside restore_reaction: %s' % w.group(0)[:60])
+            if len(re.findall(r'\brestore_reaction\s*\(', text)) != 2:
+                res['errors'].append('mod.cpp: restore_reaction must be defined once and called once (from the POST05 writer)')
+            for m in re.finditer(r'Chk(?:Tg|Co)Set', text):
+                if not text[:m.start()].endswith('cCcD_ObjHitInf::'):
+                    res['errors'].append('mod.cpp: ChkTgSet/ChkCoSet must be the raw base-class const getters')
+            lm = re.search(r'bool layout_matches_binary\(daE_OC_c\* a\) noexcept \{.*?\n\}\n', text, flags=re.S)
+            gets = [m.start() for m in re.finditer(r'GetObj(?:Tg|Co)\s*\(', text)]
+            if len(gets) != 4 or not lm or any(not (lm.start() <= g < lm.end()) for g in gets):
+                res['errors'].append('mod.cpp: GetObjTg/GetObjCo may only be used (address only) inside layout_matches_binary')
             for m in re.finditer(r'GetTgHitObj', text):
                 if not text[:m.start()].endswith('cCcD_ObjHitInf::'):
                     res['errors'].append('mod.cpp: GetTgHitObj must be the raw base-class cCcD_ObjHitInf::GetTgHitObj')
@@ -114,7 +133,7 @@ def main(project):
     # el reloj de postura: UN avance por mod_update y UN consumo por evento, ambos solo desde la envoltura
     if len(re.findall(r'\.advance\s*\(\s*\)', blob)) != 1 or len(re.findall(r'\bvoid\s+advance\s*\(', blob)) != 1:
         res['errors'].append('px.advance() must be defined once and called once (PostureEngine::on_update)')
-    if len(re.findall(r'\.consume\s*\(', blob)) != 1 or len(re.findall(r'\bvoid\s+consume\s*\(', blob)) != 1:
+    if len(re.findall(r'\.consume\s*\(', blob)) != 1 or len(re.findall(r'\b(?:void|ConsumeOutcome)\s+consume\s*\(', blob)) != 1:
         res['errors'].append('px.consume() must be defined once and called once (PostureEngine::on_post)')
     mc = [t for t in all_text if 'do_update' in t]
     if mc and len(re.findall(r'\bg\.pe\.on_update\s*\(', mc[0])) != 1:

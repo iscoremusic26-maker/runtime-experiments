@@ -206,7 +206,7 @@ class Reaction {
     return true;
   }
   static constexpr unsigned kLogCap = 300;
-  void disable_for_test() noexcept { session_disabled_ = true; }
+  void close_session() noexcept { session_disabled_ = true; }
 
  private:
   std::uint64_t last_event_ = 0;

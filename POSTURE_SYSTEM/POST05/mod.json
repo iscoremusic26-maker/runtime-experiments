@@ -1,7 +1,7 @@
 {
-  "id": "dev.posture.post04_numeric_observer",
-  "name": "Enemy Posture System - POST04 passive numeric posture core (TEST)",
-  "version": "0.4.0",
+  "id": "dev.posture.post05_selective_reactions",
+  "name": "Enemy Posture System - POST05 selective reaction suppression (TEST)",
+  "version": "0.5.0",
   "author": "Dusklight community mods",
-  "description": "PRIVATE TEST. POST04: per-instance posture accumulation/recovery/threshold as pure arithmetic on top of the POST03.1 observer. One PRE+POST hook, PRE always continues; existence lookups only in mod_update. Replaces POST03.1/03/02/01: never load them together. Writes only log lines. No suppression, no knockdown, no HUD, no reaction changes. POST04_BREAK_READY is a diagnostic log line only. Balance values are provisional. Human Windows DX12 validation pending."
+  "description": "PRIVATE TEST. POST05: on top of the POST03.1 observer and the POST04 posture core, an ordinary non-lethal sword hit that lands while an admitted E_OC Bokoblin is in ATTACK (states 0/1/2) and does not cross the posture threshold no longer starts the DAMAGE flinch: the final setActionMode(DAMAGE) of damage_check is undone by restoring the three mode fields to their pre-call values. HP, hit SE, hit-stop, cooldown and all other reactions (BIG_DAMAGE, death, Finish, threshold hit, other weapons, E_OC2) stay vanilla. One PRE+POST hook, PRE always continues. Replaces POST04/03.1/03/02/01: never load them together. Human Windows DX12 validation pending."
 }

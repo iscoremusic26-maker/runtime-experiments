@@ -1,4 +1,4 @@
-"""POST04: verificacion INDEPENDIENTE del artefacto descargado (no del directorio de compilacion).
+"""POST05: verificacion INDEPENDIENTE del artefacto descargado (no del directorio de compilacion).
 Uso: verify_download.py --download <dir> --project <POST04> --ci-source <json> --out <dir>"""
 import argparse
 import hashlib
@@ -41,7 +41,7 @@ def main():
         sums = (dusk.parent / 'SHA256SUMS.txt').read_text().split()
         if sha(data) != meta['package_sha256'] or sums != [meta['package_sha256'], dusk.name] or meta['package_bytes'] != len(data):
             raise RuntimeError('Hash/size mismatch between .dusk, manifest and SHA256SUMS')
-        if meta['source_commit'] != cs['source_commit'] or meta['runtime_tested'] or meta['gameplay_changes']:
+        if meta['source_commit'] != cs['source_commit'] or meta['runtime_tested'] or meta['gameplay_changes'] is not True or 'game_writes' not in meta:
             raise RuntimeError('Manifest provenance/claims mismatch')
         with zipfile.ZipFile(dusk) as z:
             members = [i.filename for i in z.infolist()]

@@ -1,6 +1,7 @@
-// Enemy Posture System, POST04: NUCLEO NUMERICO PASIVO de postura por instancia sobre el observador de POST03.1 (deteccion, clasificacion,
-// deduplicacion, identidad/ciclo de vida). Consume cada HIT_CONFIRMED una sola vez y lleva una postura entera por (slot, generation, id). PASIVO:
-// no escribe nada en el juego; POST04_BREAK_READY es solo una linea de log.
+// Enemy Posture System, POST05: supresion SELECTIVA de UNA reaccion ordinaria (DAMAGE) sobre el observador de POST03.1 y la postura de POST04.
+// Unica escritura al juego: restore_reaction() devuelve mActionMode/mOcState/mOldActionMode a sus valores PRE de ESTA llamada, solo cuando
+// reaction_core.hpp lo autoriza (espada no letal ponderada, ATTACK 0/1/2, cooldown 0->10, efectos extra de setActionMode no-ops, layout = binario).
+// Todo lo demas sigue pasivo. POST04_BREAK_READY sigue siendo solo una linea de log.
 // Un unico hook: daE_OC_c::damage_check (PRE siempre HOOK_CONTINUE + POST). La unica consulta extra es de SOLO LECTURA, corre en mod_update
 // (fuera de fpcM_Management) y es fopAcM_SearchByID(id, &out) sobre un ID ya observado. Nunca se desreferencia un puntero guardado.
 // La unica desreferencia de collider ocurre en el POST, sobre mAtInfo.mpCollider, solo tras un impacto PROCESADO y confirmado cuyo
@@ -20,10 +21,10 @@
 #include <cstring>
 #include <type_traits>
 #include <utility>
-#include "posture_core.hpp"
+#include "reaction_core.hpp"
 
-#ifndef POST04_SOURCE_COMMIT
-#define POST04_SOURCE_COMMIT "unset"
+#ifndef POST05_SOURCE_COMMIT
+#define POST05_SOURCE_COMMIT "unset"
 #endif
 
 DEFINE_MOD();
@@ -31,7 +32,7 @@ IMPORT_SERVICE(HostService, svc_host);
 IMPORT_SERVICE(LogService, svc_log);
 IMPORT_SERVICE(HookService, svc_hook);
 // El UNICO objetivo de hook de este modulo.
-DEFINE_HOOK(&daE_OC_c::damage_check, EocDamageCheckPost04);
+DEFINE_HOOK(&daE_OC_c::damage_check, EocDamageCheckPost05);
 
 // ---- ABI: tipos y offsets Win64 comprobados en compilacion (los mismos de POST01, medidos en el EXE oficial) -------------
 static_assert(std::is_same_v<decltype(&daE_OC_c::damage_check), void (daE_OC_c::*)()>, "damage_check signature");
@@ -55,6 +56,13 @@ static_assert(std::is_same_v<decltype(std::declval<const cCcD_Obj&>().GetAtType(
 static_assert(sizeof(decltype(std::declval<const cCcD_Obj&>().GetAtType())) == 4, "the only collider read is a 4-byte int");
 static_assert(alignof(cCcD_Obj) == 8, "hypothesis recorded in the audit: cCcD_Obj is declared 8-aligned (the host heap only guarantees 4)");
 static_assert(MOD_OK == 0, "install_sequence assumes MOD_OK == 0");
+// POST05: campos que setActionMode escribe ademas del modo (binario 0x140e0d260: u32 en +0x8e0, and $0xff7f en +0x69a) y que deben haber sido no-ops.
+static_assert(std::is_same_v<decltype(daE_OC_c::field_0x6c0), s16> && std::is_same_v<decltype(daE_OC_c::field_0x6c2), s16>, "timer types");
+static_assert(offsetof(daE_OC_c, field_0x6c0) == 0x8e0 && offsetof(daE_OC_c, field_0x6c2) == 0x8e2, "field_0x6c0/6c2 offsets != exe (u32 write at +0x8e0)");
+static_assert(std::is_same_v<decltype(fopEn_enemy_c::mFlags), u16> && offsetof(fopEn_enemy_c, mFlags) == 0x69a, "fopEn_enemy_c::mFlags != exe (+0x69a)");
+static_assert(fopEn_enemy_c::fopEn_flag_HeadLock == 0x80, "HeadLock bit != exe (and $0xff7f)");
+static_assert(sizeof(dCcD_Sph) == 0x1b8, "dCcD_Sph stride != exe (0xea0 - 0xce8)");
+static_assert(std::is_polymorphic_v<cCcD_ObjTg> && std::is_polymorphic_v<cCcD_ObjCo>, "Tg/Co objects carry a vptr before mSPrm under MSVC x64");
 // Consulta de existencia: la sobrecarga NO inline (f_op_actor_mng.cpp:152): 0 = ausente; 1 con out==NULL = en creacion; 1 con out = presente.
 static_assert(std::is_same_v<decltype(fopAcM_SearchByID(std::declval<fpc_ProcID>(), std::declval<fopAc_ac_c**>())), s32>,
               "fopAcM_SearchByID(id, out) signature");
@@ -67,6 +75,8 @@ using namespace post03;
 struct Runtime {
   post04::PostureEngine pe;
   Engine& eng = pe.eng;
+  post05::Reaction rx;
+  int layout = -1;  // -1 sin comprobar, 0 no coincide con el binario (supresion cerrada para la sesion), 1 coincide
   bool installed = false;
   unsigned consecutive_log_errors = 0;
 } g;
@@ -184,6 +194,44 @@ void emit_hit(const HitReport& rep) noexcept {
   emit(LogCat::Hit, rep.j.kind == HitKind::FinishUnexpected ? LOG_LEVEL_WARN : LOG_LEVEL_INFO, line);
 }
 
+// POST05: lecturas auxiliares (solo getters const; mismos campos que setActionMode toca ademas del modo).
+NativeAux read_aux(const daE_OC_c* a) noexcept {
+  NativeAux x;
+  x.valid = 1;
+  x.t6c0 = a->field_0x6c0;
+  x.t6c2 = a->field_0x6c2;
+  x.head_lock = a->checkHeadLockFlg() ? 1 : 0;
+  x.set_bits = static_cast<std::uint8_t>((a->mSphs_cc[0].cCcD_ObjHitInf::ChkTgSet() ? 1 : 0) | (a->mSphs_cc[0].cCcD_ObjHitInf::ChkCoSet() ? 2 : 0) |
+                                         (a->mSphs_cc[1].cCcD_ObjHitInf::ChkTgSet() ? 4 : 0) | (a->mSphs_cc[1].cCcD_ObjHitInf::ChkCoSet() ? 8 : 0));
+  return x;
+}
+
+// POST05: el layout que leen ChkTgSet/ChkCoSet debe ser EXACTAMENTE el que escribe setActionMode en el EXE (orl $1 en +0xce8/+0xd08/+0xea0/+0xec0;
+// mSPrm va tras el vptr). Solo aritmetica de direcciones de subobjetos: no lee ni escribe nada. Si no coincide, la supresion queda cerrada.
+bool layout_matches_binary(daE_OC_c* a) noexcept {
+  const std::uintptr_t base = reinterpret_cast<std::uintptr_t>(a);
+  const auto at = [&](const void* p) { return reinterpret_cast<std::uintptr_t>(p) - base + sizeof(void*); };
+  return at(&a->mSphs_cc[0].GetObjTg()) == 0xce8 && at(&a->mSphs_cc[0].GetObjCo()) == 0xd08 && at(&a->mSphs_cc[1].GetObjTg()) == 0xea0 &&
+         at(&a->mSphs_cc[1].GetObjCo()) == 0xec0;
+}
+
+post05::LiveMode read_live(const daE_OC_c* r) noexcept { return post05::LiveMode{r->mActionMode, r->mOcState, r->mOldActionMode}; }
+
+// UNICA escritura al juego de todo el modulo: deshace exactamente la ultima setActionMode(DAMAGE) de damage_check (ver reaction_core.hpp).
+void restore_reaction(daE_OC_c* r, int mode, int state, int old_mode) noexcept {
+  r->mActionMode = mode;
+  r->mOcState = state;
+  r->mOldActionMode = old_mode;
+}
+
+void emit_decision(const HitReport& rep, const post05::DecisionResult& d, post05::Apply ap) noexcept {
+  if (!d.counted || rep.j.kind != HitKind::Confirmed) return;  // Finish/no confirmados: solo contadores
+  if (!g.rx.log_take()) return;
+  char line[kLogLineMax];
+  if (post05::fmt_decision(line, sizeof(line), rep, g.pe.last, d, ap) <= 0) return;
+  emit(LogCat::Hit, ap == post05::Apply::VerifyFailed ? LOG_LEVEL_WARN : LOG_LEVEL_INFO, line);
+}
+
 void do_pre(daE_OC_c* a) noexcept {
   PreReads r;
   r.facts = read_facts(a);
@@ -191,6 +239,7 @@ void do_pre(daE_OC_c* a) noexcept {
     read_core(a, r.snap);
     r.raw0 = raw_hit_obj(a->mSphs_cc[0]);
     r.raw1 = raw_hit_obj(a->mSphs_cc[1]);
+    r.aux = read_aux(a);
   }
   Events ev;
   g.pe.on_pre(reinterpret_cast<std::uintptr_t>(a), static_cast<std::uint32_t>(fopAcM_GetID(a)), r, ev);
@@ -204,6 +253,7 @@ void do_post(daE_OC_c* a) noexcept {
   if (r.alive) {
     read_core(a, r.snap);
     r.selected = reinterpret_cast<std::uintptr_t>(a->mAtInfo.mpCollider);  // valor del puntero; no se desreferencia aqui
+    r.aux = read_aux(a);
   }
   Events ev;
   HitReport rep;
@@ -211,6 +261,13 @@ void do_post(daE_OC_c* a) noexcept {
   emit_events(ev);
   if (has_event) emit_hit(rep);
   drain_posture();
+  if (!has_event) return;
+  if (g.layout < 0) g.layout = layout_matches_binary(a) ? 1 : 0;
+  if (g.layout == 0 && !g.rx.session_disabled()) g.rx.close_session();  // layout distinto del binario: cerrado (se informa en el resumen)
+  post05::Apply ap = post05::Apply::NotAttempted;
+  const post05::DecisionResult d = post05::process(g.rx, g.pe, rep, [a] { return read_live(a); },
+                                                   [a](int m, int st, int o) { restore_reaction(a, m, st, o); }, ap);
+  emit_decision(rep, d, ap);
 }
 
 HookAction on_pre(ModContext*, void* args, void*, void*) noexcept {
@@ -293,7 +350,7 @@ void log_target_resolution() noexcept {
   } catch (...) {
     r = MOD_ERROR;
   }
-  void* declared = EocDamageCheckPost04::resolved_target();
+  void* declared = EocDamageCheckPost05::resolved_target();
   const unsigned f = static_cast<unsigned>(flags);
   std::snprintf(line, sizeof(line),
                 "POST03_TARGET resolve=%s declared_target_resolved=%d same_address=%d flags=0x%02x inline_sites_flag=%d "
@@ -326,6 +383,12 @@ void emit_summary(const char* tag) noexcept {
   emit(LogCat::Summary, LOG_LEVEL_INFO, line);
   post04::fmt_conservation(line, sizeof(line), g.pe.px, au, tag);
   emit(LogCat::Summary, LOG_LEVEL_INFO, line);
+  post05::fmt_summary(line, sizeof(line), g.rx, tag);
+  emit(LogCat::Summary, LOG_LEVEL_INFO, line);
+  std::snprintf(line, sizeof(line), "POST05_LAYOUT tag=%s layout=%s", tag, g.layout < 0 ? "UNCHECKED" : (g.layout ? "MATCHES_EXE" : "MISMATCH_SUPPRESSION_CLOSED"));
+  emit(LogCat::Summary, LOG_LEVEL_INFO, line);
+  post05::fmt_conservation(line, sizeof(line), g.rx, tag);
+  emit(LogCat::Summary, LOG_LEVEL_INFO, line);
 }
 
 }  // namespace
@@ -335,20 +398,20 @@ extern "C" {
 MOD_EXPORT ModResult mod_initialize(ModError* err) {
   char line[kLogLineMax];
   const bool log_ok = compatible(svc_log, 1, 0) && svc_log->write;
-  if (!log_ok) return mods::set_error(err, MOD_UNSUPPORTED, "POST04: LogService incompatible");
+  if (!log_ok) return mods::set_error(err, MOD_UNSUPPORTED, "POST05: LogService incompatible");
   if (!mod_ctx || !compatible(svc_host, 2, 2) || !svc_host->version ||
       (std::strcmp(svc_host->version, "2.0.3") != 0 && std::strcmp(svc_host->version, "2.0.3.0") != 0)) {
     g.eng.obs.disable("HOST_NOT_2_0_3");
     std::snprintf(line, sizeof(line), "POST03_HOOK_FAILED stage=HOST_CHECK reason=HOST_NOT_2_0_3 host=%s",
                   (svc_host && svc_host->version) ? svc_host->version : "UNKNOWN");
     emit(LogCat::Other, LOG_LEVEL_ERROR, line);
-    return mods::set_error(err, MOD_UNSUPPORTED, "POST04 requires Dusklight 2.0.3");
+    return mods::set_error(err, MOD_UNSUPPORTED, "POST05 requires Dusklight 2.0.3");
   }
   if (!compatible(svc_hook, 1, 1) || !svc_hook->install || !svc_hook->add_pre || !svc_hook->add_post || !svc_hook->dispatch_pre ||
       !svc_hook->dispatch_post || !svc_hook->uninstall || !svc_hook->resolve) {
     g.eng.obs.disable("HOOK_SERVICE_INCOMPATIBLE");
     emit(LogCat::Other, LOG_LEVEL_ERROR, "POST03_HOOK_FAILED stage=HOOK_SERVICE_CHECK reason=HOOK_SERVICE_INCOMPATIBLE");
-    return mods::set_error(err, MOD_UNSUPPORTED, "POST04: HookService 1.1 required");
+    return mods::set_error(err, MOD_UNSUPPORTED, "POST05: HookService 1.1 required");
   }
 
   g.eng.masks = kMasks;  // (g.eng es g.pe.eng)
@@ -356,35 +419,41 @@ MOD_EXPORT ModResult mod_initialize(ModError* err) {
   for (unsigned i = 0; svc_host->build_id && i < svc_host->build_id_len && i < 20; ++i)
     std::snprintf(build_id + i * 2, sizeof(build_id) - i * 2, "%02x", svc_host->build_id[i]);
   std::snprintf(line, sizeof(line),
-                "POST03_1_INIT id=dev.posture.post04_numeric_observer version=%s source_commit=%s host=%s host_build_id=%s passive=1 "
+                "POST03_1_INIT id=dev.posture.post05_selective_reactions version=%s source_commit=%s host=%s host_build_id=%s passive=1 "
                 "hook_target=daE_OC_c::damage_check pmf_bytes=%u capacity=%u sweep_period_ticks=%u sweep_quota=%u log_cap=%u "
                 "lookup=fopAcM_SearchByID(mod_update_only) hit_signature=cooldown_set+reaction_committed collider_read=mAtInfo.mpCollider_after_confirmed_only "
                 "deref_gate=eq_raw_hit_obj+align4 sizeof_cCcD_Obj=%u alignof_cCcD_Obj=%u",
-                kModVersion, POST04_SOURCE_COMMIT, svc_host->version, build_id[0] ? build_id : "EMPTY",
+                kModVersion, POST05_SOURCE_COMMIT, svc_host->version, build_id[0] ? build_id : "EMPTY",
                 static_cast<unsigned>(sizeof(decltype(&daE_OC_c::damage_check))), kCapacity, kSweepPeriodTicks, kSweepQuota, kBudgetTotal,
                 static_cast<unsigned>(sizeof(cCcD_Obj)), static_cast<unsigned>(alignof(cCcD_Obj)));
   emit(LogCat::Other, LOG_LEVEL_INFO, line);
   std::snprintf(line, sizeof(line),
-                "POST04_INIT id=dev.posture.post04_numeric_observer version=%s source_commit=%s policy_id=%s passive=1 writes_to_game=0 game_actions=NONE "
+                "POST04_INIT id=dev.posture.post05_selective_reactions version=%s source_commit=%s policy_id=%s posture_core_passive=1 "
                 "hook_target=daE_OC_c::damage_check hook_pre=HOOK_CONTINUE_ALWAYS hook_post=passive capacity=%u key=slot+generation+id "
                 "max_posture=%d threshold=%d weights(sword/iron/all_other)=%d/%d/0 recover_delay_ticks=%llu recover_period_ticks=%llu "
                 "timebase=MOD_UPDATE_SIM_TICK timebase_nominal_hz=30 timebase_basis=source_game_clock_time_scale_1 TIMEBASE_PAUSE_UNVERIFIED balance=PROVISIONAL log_budget_posture=%u",
-                post04::kPostureVersion, POST04_SOURCE_COMMIT, post04::policy::kPolicyId, post04::kCap, post04::policy::kMaxPosture, post04::policy::kThreshold,
+                post04::kPostureVersion, POST05_SOURCE_COMMIT, post04::policy::kPolicyId, post04::kCap, post04::policy::kMaxPosture, post04::policy::kThreshold,
                 post04::policy::kWeightSword, post04::policy::kWeightIronBall, static_cast<unsigned long long>(post04::policy::kRecoverDelayTicks),
                 static_cast<unsigned long long>(post04::policy::kRecoverPeriodTicks), post04::Posture::kLogBudget);
+  emit(LogCat::Other, LOG_LEVEL_INFO, line);
+  std::snprintf(line, sizeof(line),
+                "POST05_INIT version=%s source_commit=%s policy_id=%s writes_to_game=1 write_set=mActionMode+mOcState+mOldActionMode_restore_pre "
+                "trigger=final_setActionMode_DAMAGE eligible=SWORD_nonlethal_weighted_below_100 pre=ATTACK_0_1_2 cd=0>10 hook_skip_original=0 hp_untouched=1 "
+                "layout_check=runtime_vs_exe",
+                post05::kReactionVersion, POST05_SOURCE_COMMIT, post05::policy::kPolicyId);
   emit(LogCat::Other, LOG_LEVEL_INFO, line);
   log_target_resolution();
 
   const InstallOutcome out = install_sequence(
-      [] { return static_cast<int>(mods::hook::add_post<EocDamageCheckPost04>(on_post)); },
-      [] { return static_cast<int>(mods::hook::add_pre<EocDamageCheckPost04>(on_pre)); },
-      [] { return static_cast<int>(mods::hook::uninstall<EocDamageCheckPost04>()); });
+      [] { return static_cast<int>(mods::hook::add_post<EocDamageCheckPost05>(on_post)); },
+      [] { return static_cast<int>(mods::hook::add_pre<EocDamageCheckPost05>(on_pre)); },
+      [] { return static_cast<int>(mods::hook::uninstall<EocDamageCheckPost05>()); });
   if (out.state != InstallState::Ok) {
     g.eng.obs.disable("HOOK_INSTALL_FAILED");  // aunque algun callback hubiese quedado registrado, no hara nada
     std::snprintf(line, sizeof(line), "POST03_HOOK_FAILED stage=%s post=%s pre=%s rollback=%s (no partial execution: callbacks disabled)",
                   name(out.state), result_text(out.post), result_text(out.pre), result_text(out.rollback));
     emit(LogCat::Other, LOG_LEVEL_ERROR, line);
-    return mods::set_error(err, MOD_ERROR, "POST04: damage_check hook installation failed; mod inert");
+    return mods::set_error(err, MOD_ERROR, "POST05: damage_check hook installation failed; mod inert");
   }
   g.installed = true;
   emit(LogCat::Other, LOG_LEVEL_INFO,

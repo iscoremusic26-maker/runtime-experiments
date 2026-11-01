@@ -1,18 +1,18 @@
-name: POSTURE POST04 numeric posture core Windows (private TEST)
+name: POSTURE POST05 selective reactions Windows (private TEST)
 on:
   push:
     branches:
-      - 'ci/posture-post04-numeric-core'
+      - 'ci/posture-post05-selective-reactions'
     paths:
-      - 'POSTURE_SYSTEM/POST04/**'
-      - 'POSTURE_SYSTEM/POST04_CI_SOURCE.json'
-      - '.github/workflows/posture-post04-numeric-core.yml'
+      - 'POSTURE_SYSTEM/POST05/**'
+      - 'POSTURE_SYSTEM/POST05_CI_SOURCE.json'
+      - '.github/workflows/posture-post05-selective-reactions.yml'
 permissions:
   contents: read
   actions: read
 jobs:
   build:
-    if: github.repository == 'iscoremusic26-maker/codex-cp00-inputs' && github.event.repository.private == true && github.ref == 'refs/heads/ci/posture-post04-numeric-core'
+    if: github.repository == 'iscoremusic26-maker/codex-cp00-inputs' && github.event.repository.private == true && github.ref == 'refs/heads/ci/posture-post05-selective-reactions'
     runs-on: windows-latest
     timeout-minutes: 25
     env:
@@ -55,22 +55,22 @@ jobs:
       - name: Build MSVC x64, run labs, audit PE, package. NEVER loads the DLL or the game.
         shell: pwsh
         run: |
-          python POSTURE_SYSTEM/POST04/ci/build_windows.py --source .official --inputs .private-inputs --ci-source POSTURE_SYSTEM/POST04_CI_SOURCE.json --work "$env:RUNNER_TEMP/post04"
+          python POSTURE_SYSTEM/POST05/ci/build_windows.py --source .official --inputs .private-inputs --ci-source POSTURE_SYSTEM/POST05_CI_SOURCE.json --work "$env:RUNNER_TEMP/post05"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - name: Sanitized text evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: POST04_TEXT_${{ github.run_id }}_${{ github.run_attempt }}
-          path: ${{ runner.temp }}/post04/evidence/
+          name: POST05_TEXT_${{ github.run_id }}_${{ github.run_attempt }}
+          path: ${{ runner.temp }}/post05/evidence/
           retention-days: 30
           if-no-files-found: error
       - name: Private TEST package (not installed, not a release)
         if: success()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
-          name: POST04_TEST_${{ github.run_id }}_${{ github.run_attempt }}
-          path: ${{ runner.temp }}/post04/delivery/
+          name: POST05_TEST_${{ github.run_id }}_${{ github.run_attempt }}
+          path: ${{ runner.temp }}/post05/delivery/
           retention-days: 30
           if-no-files-found: error
   independent-download:
@@ -93,14 +93,14 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         shell: pwsh
         run: |
-          gh run download ${{ github.run_id }} --repo ${{ github.repository }} --name "POST04_TEST_${{ github.run_id }}_${{ github.run_attempt }}" --dir "$env:RUNNER_TEMP/dl"
+          gh run download ${{ github.run_id }} --repo ${{ github.repository }} --name "POST05_TEST_${{ github.run_id }}_${{ github.run_attempt }}" --dir "$env:RUNNER_TEMP/dl"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          python POSTURE_SYSTEM/POST04/ci/verify_download.py --download "$env:RUNNER_TEMP/dl" --project POSTURE_SYSTEM/POST04 --ci-source POSTURE_SYSTEM/POST04_CI_SOURCE.json --out "$env:RUNNER_TEMP/dlev"
+          python POSTURE_SYSTEM/POST05/ci/verify_download.py --download "$env:RUNNER_TEMP/dl" --project POSTURE_SYSTEM/POST05 --ci-source POSTURE_SYSTEM/POST05_CI_SOURCE.json --out "$env:RUNNER_TEMP/dlev"
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         if: always()
         with:
-          name: POST04_DOWNLOAD_VERIFIED_${{ github.run_id }}_${{ github.run_attempt }}
+          name: POST05_DOWNLOAD_VERIFIED_${{ github.run_id }}_${{ github.run_attempt }}
           path: ${{ runner.temp }}/dlev/
           retention-days: 30
           if-no-files-found: error
