@@ -26,6 +26,11 @@ POST05 solo actúa si esos tres efectos fueron **no-ops** en esta llamada, compr
 
 Con eso, restaurar los tres campos a su valor PRE deja la memoria del actor idéntica a la de un `damage_check` que hubiera omitido solo esa sentencia final. [L] Gemelos T16/T20 (mismo guion con POST05 abierto y cerrado): todos los campos modelados fuera de esos tres son idénticos (HP, cooldown, temporizadores, bits Tg/Co, HeadLock, collider y un campo testigo), igual que las cifras de POST03/POST04. Es una comparación del modelo, no del actor real completo.
 
+**Comprobación sobre la DLL real [C] (run 41337085240):**
+- Las lecturas `ChkTgSet/ChkCoSet` se compilaron exactamente sobre `+0xce8/+0xd08/+0xea0/+0xec0`.
+- MSVC resolvió `layout_matches_binary` como verdadera en tiempo de compilación.
+- Las únicas escrituras de la DLL a esos campos del actor son `mov %edx,0x8c8(%rax)`, `mov %r8d,0x8d0(%rax)` y `mov %r9d,0x8cc(%rax)`.
+
 El layout de las esferas no se puede fijar con `static_assert`, porque los miembros son `protected`. Se comprueba en tiempo de ejecución con aritmética de direcciones de `GetObjTg()/GetObjCo()` (sin leer ni escribir) frente a `+0xce8/+0xd08/+0xea0/+0xec0`, más el vptr. **Si no coincide, la supresión se cierra para toda la sesión** (`POST05_LAYOUT … MISMATCH_SUPPRESSION_CLOSED`) y el mod sigue siendo pasivo.
 
 ## 3. Orden dentro del cuadro y lo que NO se deshace
