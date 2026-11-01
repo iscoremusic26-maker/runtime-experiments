@@ -1,0 +1,163 @@
+{
+  "checkpoint": "POST01",
+  "title": "Passive observer .dusk for daE_OC_c::damage_check (Dusklight 2.0.3, Windows x64 DX12)",
+  "generated_utc": "2026-11-01T04:55:00Z",
+  "labels": {
+    "SOURCE_IMPLEMENTED": true,
+    "LAB_PASS": true,
+    "WINDOWS_MSVC_PASS": true,
+    "ARTIFACT_DOWNLOADED_VERIFIED": true,
+    "HUMAN_RUNTIME_PENDING": true,
+    "HUMAN_PASS": false,
+    "COMPATIBILITY_PASS": false
+  },
+  "gates": {
+    "G1": "INSTRUMENTED_PENDING_RUNTIME",
+    "G2": "NOT_STARTED",
+    "G3": "NOT_STARTED"
+  },
+  "source": {
+    "official_sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "aurora_commit": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "windows_zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf",
+    "importlib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "post00_branch": "docs/posture-post00-audit-20261031",
+    "post00_head": "7fa57ef6b6513ae8a841c4ff0d75bb5332698b8e",
+    "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+    "source_branch": "feature/posture-post01-passive-observer",
+    "compiled_source_commit": "ba7b7ac262ba31e7cd44d113f18cc91e1ad73fd0",
+    "docs_commit": "see git log of this branch (documents only, after compiled_source_commit)",
+    "ci_repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "ci_branch": "ci/posture-post01-passive-observer",
+    "ci_head_of_final_run": "037f29a1ee7f53b6b36919dde3d4e675fb4a9329"
+  },
+  "hooks": {
+    "declared_targets": [
+      "daE_OC_c::damage_check"
+    ],
+    "count": 1,
+    "pre_always_continue": true,
+    "skip_original": false,
+    "replace": false,
+    "signature": "void (daE_OC_c::*)()",
+    "pmf_bytes": 8,
+    "thunk_bound_import": "?damage_check@daE_OC_c@@QEAAXXZ",
+    "install_order": "POST then PRE; uninstall on PRE failure; disabled if rollback fails"
+  },
+  "abi_static_asserts_compiled_by_msvc": {
+    "fopAc_ac_c::health": "0x656",
+    "fopAc_ac_c::actor_status": "0x580",
+    "daE_OC_c::mActionMode": "0x8c8",
+    "daE_OC_c::mOcState": "0x8d0",
+    "daE_OC_c::field_0x6cc": "0x8ec",
+    "offsets_origin": "disassembly of the official dusklight.exe, not retail header comments"
+  },
+  "reads_omitted": [
+    {
+      "item": "dCcD_GAtTgCoCommonBase::GetAc / GetTgHitAc / dCcD_GObjInf::ChkTgHit",
+      "reason": "GetAc writes cache mAc and may set mApid=-1 (d_cc_d.cpp:26-37); not passive"
+    },
+    {
+      "item": "attacker collider AT type",
+      "reason": "no safe actor guard; mGObjTg protected"
+    },
+    {
+      "item": "mAtInfo",
+      "reason": "may be stale after early return; deferred to POST03"
+    }
+  ],
+  "writes": "private mod memory and LogService lines only",
+  "ci_runs": [
+    {
+      "id": 41273872316,
+      "mirror_of": "00c5e55",
+      "result": "failure",
+      "reason": "type name Frame collided with aurora dolphin/perf.h"
+    },
+    {
+      "id": 41274001710,
+      "mirror_of": "72232a0",
+      "result": "failure",
+      "reason": "PE imports unpinned; GetAc import found and removed"
+    },
+    {
+      "id": 41274204620,
+      "mirror_of": "6a80ebe",
+      "result": "failure",
+      "reason": "pin mismatch (__std_terminate no longer imported)"
+    },
+    {
+      "id": 41274352210,
+      "mirror_of": "b4a0196",
+      "result": "build success, independent-download failure",
+      "reason": "CRLF in verification checkout, CI-only issue"
+    },
+    {
+      "id": 41274486531,
+      "mirror_of": "ba7b7ac",
+      "result": "success",
+      "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41274486531"
+    }
+  ],
+  "toolchain": {
+    "cl": "19.51.36260",
+    "vc_tools": "14.51.36231",
+    "windows_sdk": "10.0.26100.0",
+    "cmake": "4.4.4",
+    "ninja": "1.13.2",
+    "std": "c++20"
+  },
+  "lab": {
+    "local_gpp_asan_ubsan": {
+      "checks": 8724,
+      "failures": 0
+    },
+    "msvc_ci": {
+      "checks": 8724,
+      "failures": 0
+    },
+    "mutations_detected": 4,
+    "kind": "doubles, not runtime"
+  },
+  "static_audits": {
+    "source_audit": "SOURCE_AUDIT_PASS (5 local negatives rejected)",
+    "pe_audit": "PE_AUDIT_PASS pinned",
+    "game_imports": [
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "independent_objdump_confirms": true
+  },
+  "artifact": {
+    "filename": "POSTURE_POST01_PASSIVE_OBSERVER_windows-amd64_ba7b7ac262ba.dusk",
+    "bytes": 12693,
+    "sha256": "adfe9f1884a7bb05fa4607b6814da48b670bc73be4060cbaf7df7eaac3ec9766",
+    "dll_bytes": 24064,
+    "dll_sha256": "7a6dafa50a0c33fa6036348115032517e7953b64d60e78b72a27013fddefd361",
+    "mod_id": "dev.posture.post01_passive_observer",
+    "version": "0.1.0",
+    "actions_artifact": "POST01_TEST_41274486531_1",
+    "actions_artifact_digest": "sha256:41f889adc866d7d4b4f03a9b65a9c26bd34f8dfd43088004c3393cf21a9d186e",
+    "expires": "2026-12-01",
+    "downloaded_independently": true,
+    "installed": false,
+    "dll_loaded": false,
+    "game_executed": false
+  },
+  "risks_not_tested": [
+    "hook installation and absence of inline warning in the real host",
+    "PRE/POST ordering with DEVF execute hook and HM cc_at_check hook",
+    "DEVF Blue vs native E_OC indistinguishable (origin=UNDETERMINED)",
+    "runtime cost and equivalence of timing",
+    "HM/Bars sources not proven byte-identical to the validated .dusk",
+    "TG_CANDIDATE is the raw TG bit (wider than native ChkTgHit)"
+  ],
+  "pending_decisions": {
+    "D1": "pending",
+    "D2": "pending",
+    "D3": "pending",
+    "D4": "pending",
+    "D5": "pending"
+  },
+  "next": "POST02 (identity and lifecycle per instance) is NOT started"
+}
