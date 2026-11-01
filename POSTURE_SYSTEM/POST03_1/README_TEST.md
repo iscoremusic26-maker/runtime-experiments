@@ -1,6 +1,6 @@
 # POST03.1 — Corrección de la guarda de collider + diagnóstico (TEST privado): runbook
 
-**Estado:** `HUMAN_RUNTIME_PENDING`. Compila con MSVC y supera auditorías de CI, pero **nadie lo ha cargado en Dusklight**. La corrección es `SOURCE_FIX_IMPLEMENTED`; `CLASSIFICATION_FIXED` solo tras tu log.
+**Estado:** A1/B1 humanos incorporados (2026-11-01, ver `RUNTIME_EVIDENCE_A1_B1.md`): `POST031_A1_SCOPED_RUNTIME_PASS`, `POST031_B1_SCOPED_RUNTIME_PASS`, `CLASSIFICATION_SCOPED_RUNTIME_PASS` (acotada; `UNIVERSAL_COMPATIBILITY_PASS=false`). Texto original de esta sección: `HUMAN_RUNTIME_PENDING`. Compila con MSVC y supera auditorías de CI, pero **nadie lo ha cargado en Dusklight**. La corrección es `SOURCE_FIX_IMPLEMENTED`; `CLASSIFICATION_FIXED` solo tras tu log.
 Reemplaza a POST03/02/01: ID propio `dev.posture.post03_1_collider_classification`, v0.3.1. Con otro ID que POST03, **Dusklight cargaría ambos si los dejas en la carpeta** (los duplicados solo se descartan con el mismo ID, `loader.cpp:159-163`): **retira siempre POST03 antes**.
 
 ## Artefacto

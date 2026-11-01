@@ -52,3 +52,11 @@ Fecha: 2026-11-01. Local: WSL2/Linux; el juego **no** se ejecutó y la DLL **no*
 
 ## 7. Límites
 No hay residuo de puntero en los logs actuales: la causa sigue sin confirmar [P]. La nueva lectura con `mod8_4` es [P] hasta el log. Subtipo de espada, atacante, potencia y `cc_at_check` siguen sin disponibilidad; D1–D5 abiertos; `CalcDivideInfo`/texturas/`PERF_WINDOW` no atribuidos; rendimiento no medido; G2/G3 sin empezar.
+
+## 8. Cierre humano A1/B1 (2026-11-01) [R]
+- Logs leídos completos y verificados por tamaño, líneas y SHA-256: `dusklight-20261101-090925.log` (A1, 332709 bytes, 4200 líneas, `b8424dbd…31b55`) y `dusklight-20261101-090302.log` (B1, 890364 bytes, 7007 líneas, `427ef9f6…8372f`). No hay logs crudos en el repo.
+- Extractor determinista por lista blanca `tests/extract_runtime_evidence_a1_b1.py` + 11 pruebas (privacidad, contadores, hash/bytes/líneas erróneos, evento fuera de lista blanca, tag POST03 desconocido, entrada incompleta, determinismo, logs reales opcionales); 6 mutaciones del propio extractor detectadas.
+- Resultado: 36 eventos = 33 `HIT_CONFIRMED` + 3 `FINISH_NATIVE_OBSERVED`; 33/33 lecturas de tipo válidas; SWORD 23, IRON_BALL 4, BOOMERANG 1, OTHER_VERIFIED 5, UNAVAILABLE 0; 21 colliders `mod8_4` válidos; **0 discrepancias** entre lo reconstruido y los contadores del mod. Detalle y límites: `RUNTIME_EVIDENCE_A1_B1.md`.
+- Etiquetas añadidas: `POST031_A1_SCOPED_RUNTIME_PASS`, `POST031_B1_SCOPED_RUNTIME_PASS`, `COLLIDER_ALIGNMENT_RUNTIME_OBSERVED`, `CLASSIFICATION_SCOPED_RUNTIME_PASS` (acotada). Siguen **false**: `CLASSIFICATION_FIXED`, `UNIVERSAL_COMPATIBILITY_PASS`. `POST04_HUMAN_RUNTIME_PENDING=true`.
+- Matiz respecto a §7 y a la auditoría de causa: la clase del puntero depende del **objeto collider**, no solo de la instancia de Link (A1 pid 105 tiene `mod8_0` y `mod8_4`). El §7 «sin residuo en el log» se refiere a los logs de POST03; la hipótesis de alineación queda respaldada, no demostrada de forma contrafactual.
+- Sin cobertura en juego: ARROW, BOMB, SHIELD_ATTACK, SLINGSHOT, AT_TYPE_40 y casos adversariales. `OTHER_VERIFIED` no identifica arma.

@@ -1,0 +1,18 @@
+{
+ "notes": "los logs crudos NO se versionan; solo estos metadatos y la evidencia saneada",
+ "schema_version": 1,
+ "sources": {
+  "A1": {
+   "bytes": 332709,
+   "file_name": "dusklight-20261101-090925.log",
+   "sha256": "b8424dbda469c18c88358047ec92369ad6faaf845d2acbee66a31ac61d031b55",
+   "splitlines": 4200
+  },
+  "B1": {
+   "bytes": 890364,
+   "file_name": "dusklight-20261101-090302.log",
+   "sha256": "427ef9f66da5ba054a652413382b8b8cc0c2cc46e8fb6fb3b00541878118372f",
+   "splitlines": 7007
+  }
+ }
+}

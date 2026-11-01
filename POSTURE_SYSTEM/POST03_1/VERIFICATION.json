@@ -13,11 +13,18 @@
     "WINDOWS_MSVC_PASS": true,
     "PE_AUDIT_PASS": true,
     "ARTIFACT_DOWNLOADED_VERIFIED": true,
-    "HUMAN_RUNTIME_PENDING": true,
+    "HUMAN_RUNTIME_PENDING": false,
     "CLASSIFICATION_FIXED": false,
     "CLASSIFICATION_RUNTIME_PASS": false,
     "COMPATIBILITY_PASS": false,
-    "UNIVERSAL_COMPATIBILITY_PASS": false
+    "UNIVERSAL_COMPATIBILITY_PASS": false,
+    "EVIDENCE_A1_B1_INCORPORATED": true,
+    "POST031_A1_SCOPED_RUNTIME_PASS": true,
+    "POST031_B1_SCOPED_RUNTIME_PASS": true,
+    "COLLIDER_ALIGNMENT_RUNTIME_OBSERVED": true,
+    "CLASSIFICATION_SCOPED_RUNTIME_PASS": true,
+    "POST04_HUMAN_RUNTIME_PENDING": true,
+    "_note_a1_b1": "HUMAN_RUNTIME_PENDING para POST03.1 queda cerrado SOLO en el alcance de los dos logs A1/B1; CLASSIFICATION_FIXED sigue false (la causa se respalda, no se demuestra de forma contrafactual); familias ARROW/BOMB/SHIELD_ATTACK/SLINGSHOT/AT_TYPE_40 sin evidencia en juego."
   },
   "gates": {
     "post03": "SCOPED_HIT_OBSERVATION_PASS + CLASSIFICATION_RUNTIME_PARTIAL",
@@ -25,7 +32,8 @@
     "post02": "SCOPED_RUNTIME_PASS",
     "G2": "NOT_STARTED",
     "G3": "NOT_STARTED",
-    "POST04": "NOT_STARTED"
+    "POST04": "NOT_STARTED (at the time of this documentary closure commit)",
+    "post031": "SCOPED_RUNTIME_PASS (A1+B1) / UNIVERSAL_COMPATIBILITY_PASS=false"
   },
   "human_evidence": {
     "provenance": "USER_SUPPLIED_RAW_WINDOWS_LOG_ANALYZED",
@@ -218,5 +226,68 @@
     "D4": "pending",
     "D5": "pending"
   },
-  "next": "POST04 NOT started; requires a real POST03.1 log to unblock classification"
+  "next": "POST03.1 A1/B1 closure is documentary only. Families ARROW/BOMB/SHIELD_ATTACK/SLINGSHOT/AT_TYPE_40 remain without in-game evidence.",
+  "human_evidence_a1_b1": {
+    "provenance": "USER_SUPPLIED_RAW_WINDOWS_LOG_ANALYZED",
+    "read_by_claude_code": true,
+    "raw_log_in_repo": false,
+    "A1": {
+      "file": "dusklight-20261101-090925.log",
+      "sha256": "b8424dbda469c18c88358047ec92369ad6faaf845d2acbee66a31ac61d031b55",
+      "bytes": 332709,
+      "splitlines": 4200,
+      "mods": "2/2 POST03.1 0.3.1 + Zora Swim 1.3.0"
+    },
+    "B1": {
+      "file": "dusklight-20261101-090302.log",
+      "sha256": "427ef9f66da5ba054a652413382b8b8cc0c2cc46e8fb6fb3b00541878118372f",
+      "bytes": 890364,
+      "splitlines": 7007,
+      "mods": "8/8"
+    },
+    "events": {
+      "total": 36,
+      "hit_confirmed": 33,
+      "finish_native": 3,
+      "A1": {
+        "hit_confirmed": 12,
+        "finish": 0
+      },
+      "B1": {
+        "hit_confirmed": 21,
+        "finish": 3
+      }
+    },
+    "family": {
+      "SWORD": 23,
+      "IRON_BALL": 4,
+      "BOOMERANG": 1,
+      "OTHER_VERIFIED": 5,
+      "UNAVAILABLE": 0,
+      "AMBIGUOUS": 0,
+      "ARROW": 0,
+      "BOMB": 0,
+      "SHIELD_ATTACK": 0,
+      "SLINGSHOT": 0,
+      "AT_TYPE_40": 0
+    },
+    "collider": {
+      "valid_type_reads": "33/33",
+      "sel_class_mod8_4": 21,
+      "sel_class_mod8_0": 12,
+      "match_cc0": 5,
+      "match_cc1": 28
+    },
+    "extractor_cross_check_discrepancies": 0,
+    "doc": "RUNTIME_EVIDENCE_A1_B1.md",
+    "sanitized_data": [
+      "evidence/POST031_A1_B1_EVENTS_SANITIZED.tsv",
+      "evidence/POST031_A1_B1_SUMMARY_SANITIZED.json",
+      "evidence/POST031_A1_B1_SOURCE_MANIFEST.json",
+      "evidence/POST031_A1_B1_SCHEMA.json"
+    ],
+    "extractor": "tests/extract_runtime_evidence_a1_b1.py",
+    "extractor_tests": "tests/test_extract_runtime_evidence_a1_b1.py (11 tests, 1 con logs reales opcional; 6/6 mutaciones del extractor detectadas)",
+    "deterministic": "dos ejecuciones producen salidas identicas byte a byte"
+  }
 }
