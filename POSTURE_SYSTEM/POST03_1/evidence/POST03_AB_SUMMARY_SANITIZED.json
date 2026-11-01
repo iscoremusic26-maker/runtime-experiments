@@ -28,6 +28,13 @@
      549,
      550
     ],
+    "by_link_instance": {
+     "434": {
+      "confirmed": 6,
+      "sword": 0,
+      "unavailable": 6
+     }
+    },
     "dual_tg_events": 1,
     "events": 6,
     "family_sword": 0,
@@ -106,6 +113,12 @@
     "source_commit": "f350522fc2097cbbe786c57df2f005ba0b4981b3",
     "version": "0.3.0"
    },
+   "link_creation_pids": [
+    17,
+    105,
+    265,
+    434
+   ],
    "mods": [
     {
      "id": "com.blueflaregames.zora_swim",
@@ -200,6 +213,18 @@
      222,
      562
     ],
+    "by_link_instance": {
+     "105": {
+      "confirmed": 14,
+      "sword": 0,
+      "unavailable": 14
+     },
+     "506": {
+      "confirmed": 4,
+      "sword": 4,
+      "unavailable": 0
+     }
+    },
     "dual_tg_events": 11,
     "events": 20,
     "family_sword": 4,
@@ -301,6 +326,12 @@
     "source_commit": "f350522fc2097cbbe786c57df2f005ba0b4981b3",
     "version": "0.3.0"
    },
+   "link_creation_pids": [
+    17,
+    105,
+    335,
+    506
+   ],
    "mods": [
     {
      "id": "com.blueflaregames.zora_swim",
