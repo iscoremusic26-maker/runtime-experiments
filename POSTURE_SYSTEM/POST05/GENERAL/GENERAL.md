@@ -54,6 +54,35 @@ Todo lo demás del golpe se conserva:
 - **E_OC2 con Expansion:** la fase y el entorno solo se **registran**. Si el golpe cae en el tick de arranque o en el `frame` 1 de un x2, ese golpe se suprime y su velocidad queda nativa. En el log sale `compat=EXPANSION_RATE_NATIVE_THIS_BLOW`.
   - Código real de CP21: 32 casos, todos bien formados (una sola escritura de `rate`, sin x2 tardío, sin barrido huérfano, chip ≤ 1, fin de clip nativo).
 
+## CI y binario [C][B]
+- **Run:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41371589990. `build` e `independent-download` en éxito al primer intento.
+- **Origen del build:** espejo `ci/posture-post05-general-anti-stagger` @ `2ec9298fcc22bde351db1866eeb5ea340f4f4124`; fuente compilada `3053a75113024335cf583ed14474ddc2a4a62839`; libro de control de 41 archivos.
+- **Labs con MSVC:** los 8 labs (incluido `general_lab`, 5560) dan los mismos conteos que con g++.
+- **Auditorías:** `SOURCE_AUDIT_PASS` (con las reglas nuevas del escritor y de la política), `PE_AUDIT_PASS` y 11/11 negativas PE.
+- **Imports y exports:** los mismos 3 imports del juego y los mismos 5 exports.
+- **Descarga:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41371589990/artifacts/13109308222 (ZIP `POST05G_TEST_41371589990_1`, 38212 bytes, `b731db78…3394`).
+- **`.dusk`:** `POSTURE_POST05_4_GENERAL_PRIVATE_TEST_windows-amd64_3053a7511302.dusk`, **36965 bytes**, SHA-256 **`d3b7ddb63dc300bf55d42fca184bea9c12c72b3797c105b5e43337b2126d2a91`**. Caduca el 2026-12-02 01:17 UTC.
+- **DLL:** 75264 bytes, `3d4c9de9a15846de4ea497ccb3d3a23c57340b02015c55d7847996f2ea858c9f`. `mod.json` es idéntico al de la fuente.
+- **Descarga independiente por ID** (API): ZIP y `.dusk` coinciden con el digest y con `SHA256SUMS`. El job lo marca `ARTIFACT_DOWNLOADED_VERIFIED`.
+- **Escrituras en la DLL descargada:** exactamente 10 stores al actor, en `restore_reaction` (0x180001290–354), tras la relectura `cmp`:
+  - `0x8c8`, `0x8d0` y `0x8cc` (modo);
+  - `0x8e0` y `0x8e2` (timers, 16 bits);
+  - `0x69a` (16 bits, solo el bit `0x80` cambia);
+  - `or $1` / `and ~1` del bit 0 en `0xce8`, `0xd08`, `0xea0` y `0xec0`. Son las mismas operaciones que `setActionMode`/`offTgSph` del EXE [B].
+  - 0 stores a HP (`0x656`), cooldown (`0x8ec`), `mName`, `mAtInfo`, `mpMorf` o `speedF`.
+
+## Cobertura
+| Variante y estado | IMPLEMENTED | LAB_PASS | CI_PASS | Runtime |
+|---|---|---|---|---|
+| Blue solo: WAIT/WALK/WATCH/SOUND → descubre (FIND 1) sin daño | sí | sí | sí | HUMAN_RUNTIME_PENDING |
+| Blue solo y en grupo: FIND, ATTACK, DAMAGE en curso | sí | sí | sí | HUMAN_RUNTIME_PENDING |
+| Red nativo (caso real 172 en FIND, regeneración 23→98) | sí | sí (fixture) | sí | HUMAN_RUNTIME_PENDING |
+| Red y Black con Expansion en cualquier modo normal | sí | sí (CP21 en ATTACK) | sí | HUMAN_RUNTIME_PENDING |
+| Golpe en el tick de arranque o en el `frame` 1 x2 con Expansion | sí (sin tambaleo; velocidad nativa en ese golpe) | sí (CP21: bien formado) | sí | PENDIENTE: par privado de Expansion para conservar x2 |
+| BIG_DAMAGE por debajo de 100 (giros, salto, 4.º corte, bola) | sí | sí | sí | HUMAN_RUNTIME_PENDING |
+| Flecha, escudo y bumerán por debajo de 100 | sí (decisión de diseño a confirmar) | sí | sí | HUMAN_RUNTIME_PENDING |
+| Cruce a 100 / latch / letal / Finish / guion | nativo | sí | sí | [R] observado en 0.5.x |
+
 ## Lo que queda sin cubrir (no se presenta como PASS)
 1. **Velocidad de Expansion en 1–2 ticks:**
    - **Qué pasa:** con Expansion, un golpe en el tick de arranque o en el `frame` 1 de un golpe x2 no tambalea, pero ese golpe pierde su x1,15/x2. Expansion lee el golpe en su PRE (`red_ai_policy.hpp` :381/:374 y su equivalente en Black), antes del hook.
