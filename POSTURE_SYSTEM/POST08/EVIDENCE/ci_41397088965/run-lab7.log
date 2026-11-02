@@ -1,0 +1,5 @@
+eligible_predicate: decisions=6000 eligible=268 e2_eligible=50
+cp21_twins: twins=7280 eligible_identical=6880 nonelig_differs=240 (startup=160 frame1=80) nonelig_identical=160 black_power_3to6_in_post=1580 differs_from_no_hit=300 (eligible: black_fury_start_effect=60)
+cp21_twins_053: newly_eligible=200 identical=200 native_only_rule_would_break_with_expansion=120
+cp21_general_degraded: start_or_frame1_hits=32 rate_lost=24 (all well formed)
+POST05_RB_LAB checks=21313 failures=0 RESULT=LAB_PASS

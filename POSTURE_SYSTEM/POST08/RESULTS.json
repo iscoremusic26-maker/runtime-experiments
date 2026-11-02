@@ -1,0 +1,113 @@
+{
+  "version": "0.8.0",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "menu_name": "Enemy Posture System PRIVATE TEST",
+  "verdict": "PARTIAL_CANDIDATE / HUMAN_RUNTIME_PENDING",
+  "labels": [
+    "SOURCE_TRACED",
+    "ABI_CONFIRMED",
+    "CORE_PASS",
+    "LINK_DEFENSE_PATH_VERIFIED(source+inline flag; runtime pending)",
+    "PE_AUDIT_PASS",
+    "CI_PASS",
+    "ARTIFACT_VERIFIED",
+    "HUMAN_RUNTIME_PENDING",
+    "PARTIAL_CANDIDATE"
+  ],
+  "not_claimed": [
+    "HUMAN_PASS",
+    "TIMING_PASS",
+    "BLACK_FURY_PARRY",
+    "FPS"
+  ],
+  "base": {
+    "compiled": "f0e92c9f1d74d1b2d46447705fe1353cb3833eb8",
+    "branch_head": "0dad4e53d483e54b3c2f4172f93bf2915233eec7",
+    "diff_in_POST05": "none (docs only)"
+  },
+  "source": {
+    "branch": "feature/posture-post08-parry",
+    "compiled_commit": "1eda39a7f603f796e18920dae73e4b12f7d0236a"
+  },
+  "ci": {
+    "branch": "ci/posture-post08-parry",
+    "base": "4ecfd429db63177e20d2a424c27dc3062d5a3bdc",
+    "head": "e0bd06b2d889e21e55bb65983fd215090b454457",
+    "run": 41397088965,
+    "conclusion": "success",
+    "jobs": {
+      "build": "success",
+      "independent-download": "success"
+    },
+    "msvc": "14.51.36231"
+  },
+  "artifact": {
+    "id": 13118929802,
+    "name": "POST08_TEST_41397088965_1",
+    "zip_bytes": 65007,
+    "zip_sha256": "05fad582cda196be78162695eefdb13b5074ceda500e58e3f13839cb23e3fef6",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41397088965/artifacts/13118929802",
+    "expires": "2026-12-02T06:02:13Z",
+    "dusk": "POSTURE_POST08_0_PARRY_PRIVATE_TEST_windows-amd64_1eda39a7f603.dusk",
+    "dusk_bytes": 63252,
+    "dusk_sha256": "ef3a7ef4b281aa9541e329d53d8851910ae91133b18a2738cb5f7c973f79719a",
+    "dll_bytes": 135168,
+    "dll_sha256": "0049e3fd9e9132d72f527b50e4f4865acdf32c283534e140e4da28756ba08429",
+    "verified": [
+      "CI independent-download ARTIFACT_DOWNLOADED_VERIFIED (artifact 13119079616)",
+      "local download by artifact id: SHA256SUMS, mod.json == source, PE_AUDIT_PASS with the 0.7.0 import pin (unchanged)"
+    ]
+  },
+  "rollback": {
+    "version": "0.7.0",
+    "dusk": "POSTURE_POST07_0_HUD_PRIVATE_TEST_windows-amd64_f0e92c9f1d74.dusk",
+    "sha256": "070533d756f1329db3e48a47c00e0245deee08fff7fc0243a647bcd7ead23afd",
+    "run": 41392661597,
+    "artifact": 13118435513
+  },
+  "labs_msvc": {
+    "hit_lab": 1660,
+    "lifecycle_lab": 29558,
+    "collider_lab": 12826,
+    "posture_lab": 556878,
+    "reaction_lab": 36933,
+    "compat_lab": 55991,
+    "rb_lab": 21313,
+    "general_lab": 5560,
+    "break_lab": 243624,
+    "hud_lab": 57742,
+    "parry_lab": 910,
+    "failures": 0
+  },
+  "mutations": {
+    "count": 99,
+    "detected": 99
+  },
+  "pe": {
+    "status": "PE_AUDIT_PASS",
+    "imports": "identical to 0.7.0 (35 game imports, no new import)",
+    "hook_mem": 5,
+    "new_hooks": 0,
+    "pe_negatives": "11/11 rejected"
+  },
+  "binary_audit": {
+    "reads": "post08_judge: sphere At hit bit 0x1028+0x14, hit obj +0x18, AtShieldHit +0x94 (indexed per sphere); Link cmpw $0x1e,0x4144, movss 0x2d4c/0x45d8/0x45dc, lea 0xb28/0xce8/0xea8 = EXE",
+    "stores_vs_0_7_0": "added exactly the 10 restore_reaction field stores inlined in post08_step (deflection); removed none; no HP/cooldown/Link/animation stores added"
+  },
+  "policy": {
+    "kParryPostureGain": 40,
+    "window_frames": "[-1,+5] of ANM_SHIELD_ATTACK from attack start (PROVISIONAL)",
+    "fury_black": "refused (Expansion chip)",
+    "deflect": "ATTACK state 3 from PRE",
+    "break": "POST06 BREAK_BY_PARRY"
+  },
+  "human_pending": [
+    "real timing window feel",
+    "Link life unchanged on CONFIRMED (POST08_LINK_LIFE_CHECK)",
+    "no stun below 100 on CONFIRMED",
+    "break by parry stun + single pulse",
+    "Shield->Helm and decisive sword after a parry break",
+    "Black fury behaves as 0.7.0",
+    "8-mod session, groups, FPS on Intel UHD"
+  ]
+}
