@@ -1,0 +1,21 @@
+{
+  "dll_sha256": "71abb0d064e77570891e469521316b273e09b2c6ff97187a632a7e1c8b7d434f",
+  "native_code_executed": false,
+  "review": "Two OR bit1 stores in cc_set PRE and two AND ~1 stores in paired POST, only verified own At mSPrm offsets; source auditor restricts helper/calls and the runtime layout gate must match. This review does not replace a human runtime test.",
+  "stores": [
+    {
+      "callback": "on_cc_post_fix01",
+      "static_instructions": [
+        "180019a8f:\t83 a0 38 10 00 00 fe \tandl   $0xfffffffe,0x1038(%rax)",
+        "180019aa2:\t83 a0 f0 11 00 00 fe \tandl   $0xfffffffe,0x11f0(%rax)"
+      ]
+    },
+    {
+      "callback": "on_cc_pre_fix01",
+      "static_instructions": [
+        "180019d0b:\t83 8b 38 10 00 00 01 \torl    $0x1,0x1038(%rbx)",
+        "180019d16:\t83 8b f0 11 00 00 01 \torl    $0x1,0x11f0(%rbx)"
+      ]
+    }
+  ]
+}

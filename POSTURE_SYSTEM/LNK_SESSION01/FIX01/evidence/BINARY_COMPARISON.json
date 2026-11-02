@@ -1,0 +1,62 @@
+{
+  "baseline_game_imports": 35,
+  "final_game_imports": 39,
+  "added_game_imports": [
+    "?cc_set@daE_OC_c@@QEAAXXZ",
+    "?checkDamageAction@daAlink_c@@QEAAHXZ",
+    "?checkPolyDamage@daAlink_c@@QEAAHXZ",
+    "?executeAttack@daE_OC_c@@QEAAXXZ"
+  ],
+  "removed_game_imports": [],
+  "other_import_libraries_and_symbols_unchanged": true,
+  "exports_unchanged": true,
+  "baseline_hooks": 6,
+  "final_hooks": 10,
+  "final_hook_targets": {
+    "dMeter2_c::_delete": [
+      "dusklight.exe",
+      "?_delete@dMeter2_c@@QEAAHXZ"
+    ],
+    "dMeter2_c::_draw": [
+      "dusklight.exe",
+      "?_draw@dMeter2_c@@QEAAHXZ"
+    ],
+    "dMeter2_c::_execute": [
+      "dusklight.exe",
+      "?_execute@dMeter2_c@@QEAAHXZ"
+    ],
+    "dMeterButton_c::draw": null,
+    "daAlink_c::checkDamageAction": [
+      "dusklight.exe",
+      "?checkDamageAction@daAlink_c@@QEAAHXZ"
+    ],
+    "daAlink_c::checkPolyDamage": [
+      "dusklight.exe",
+      "?checkPolyDamage@daAlink_c@@QEAAHXZ"
+    ],
+    "daE_OC_c::cc_set": [
+      "dusklight.exe",
+      "?cc_set@daE_OC_c@@QEAAXXZ"
+    ],
+    "daE_OC_c::damage_check": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "daE_OC_c::executeAttack": [
+      "dusklight.exe",
+      "?executeAttack@daE_OC_c@@QEAAXXZ"
+    ],
+    "daE_OC_c::executeDamage": [
+      "dusklight.exe",
+      "?executeDamage@daE_OC_c@@QEAAXXZ"
+    ]
+  },
+  "final_hook_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 8,
+    "HOOK_MEM_EXT": 2,
+    "IMPORT": 5
+  },
+  "new_game_writer": "own AtSet bit0 only, scoped to paired cc_set callbacks",
+  "no_new_Link_or_HP_writes": true
+}

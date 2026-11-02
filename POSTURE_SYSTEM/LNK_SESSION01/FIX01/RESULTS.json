@@ -1,0 +1,171 @@
+{
+  "status": "WINDOWS_MSVC_PASS_AND_ARTIFACT_DOWNLOADED_VERIFIED",
+  "runtime_status": "HUMAN_RUNTIME_PENDING",
+  "ai_source_lab_status": "SOURCE_AND_LAB_ROOT_CLASS_PROVEN",
+  "actor222_exact_causality": "AI_CAUSALITY_UNVERIFIED_WITHOUT_FULL_RUNTIME_LOG",
+  "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+  "source_branch": "feature/posture-lnks1-fix01-direct-hit-ai-liveness",
+  "source_compiled_commit": "5454f32e0bb1fbdfde6ac866e94104e1b56df6be",
+  "source_compiled_tree": "b1da74167543ea387e5ef53677c5b3ee6f014435",
+  "ci_repo": "iscoremusic26-maker/codex-cp00-inputs",
+  "ci_branch": "ci/posture-lnks1-fix01-direct-hit-ai-liveness",
+  "ci_commit": "6e615ea4134d105566905ddd6911f4c8fdd2230a",
+  "run_id": 41524848968,
+  "artifact_id": 13179886722,
+  "artifact_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41524848968/artifacts/13179886722",
+  "artifact_expires_panama": "2026-12-02T16:09:08-05:00",
+  "filename": "POSTURE_LNK_SESSION01_FIX01_0_10_1_DIRECT_HITS_AI_STABILITY_PRIVATE_TEST_windows-amd64_5454f32e0bb1.dusk",
+  "package_bytes": 96454,
+  "package_sha256": "e7b8d5dff337ae1274abc586278999527efe3c1f5c40623b051a8403a29c397d",
+  "dll_bytes": 224256,
+  "dll_sha256": "71abb0d064e77570891e469521316b273e09b2c6ff97187a632a7e1c8b7d434f",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "version": "0.10.1",
+  "pe_status": "PE_AUDIT_PASS",
+  "game_imports": 39,
+  "hook_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 8,
+    "HOOK_MEM_EXT": 2,
+    "IMPORT": 5
+  },
+  "hook_targets": [
+    "dMeter2_c::_delete",
+    "dMeter2_c::_draw",
+    "dMeter2_c::_execute",
+    "dMeterButton_c::draw",
+    "daAlink_c::checkDamageAction",
+    "daAlink_c::checkPolyDamage",
+    "daE_OC_c::cc_set",
+    "daE_OC_c::damage_check",
+    "daE_OC_c::executeAttack",
+    "daE_OC_c::executeDamage"
+  ],
+  "labs": {
+    "hit_lab.txt": {
+      "checks": 1660,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "posture_lab.txt": {
+      "checks": 556878,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "parry_lab.txt": {
+      "checks": 1570,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "collider_lab.txt": {
+      "checks": 12826,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnks1_lab.txt": {
+      "checks": 178,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "hud_lab.txt": {
+      "checks": 57742,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnk_lab.txt": {
+      "checks": 528,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "fix01_lab.txt": {
+      "checks": 21570,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "break_lab.txt": {
+      "checks": 243624,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "compat_lab.txt": {
+      "checks": 55992,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "general_lab.txt": {
+      "checks": 5560,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "rb_lab.txt": {
+      "checks": 21313,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lifecycle_lab.txt": {
+      "checks": 29558,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "reaction_lab.txt": {
+      "checks": 36933,
+      "failures": 0,
+      "result": "LAB_PASS"
+    }
+  },
+  "lab_checks_total_each_compiler": 1045932,
+  "mutations": {
+    "detected": 236,
+    "total": 236
+  },
+  "pe_negative_cases": 19,
+  "pmf_decoder_static": {
+    "valid": 5,
+    "rejected": 10,
+    "native_code_executed": false
+  },
+  "download_metadata_negative_rejected": true,
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "VSCMD_ARG_TGT_ARCH": "x64",
+    "VisualStudioVersion": "18.0",
+    "WindowsSDKVersion": "10.0.26100.0\\"
+  },
+  "new_enemy_writer": "paired own AtSet registration mask in cc_set PRE/POST only, verified offsets1038/11f0, engine clears contacts; original On bits preserved",
+  "new_Link_writes": false,
+  "new_HP_writes": false,
+  "dll_loaded": false,
+  "game_executed": false,
+  "runtime_log_available": false,
+  "rollback": {
+    "version": "0.9.0 LNK01",
+    "source_commit": "10dff331f2013965cee41e4890a8585489478a92",
+    "artifact_id": 13166950661,
+    "run_id": 41495366683,
+    "bytes": 80077,
+    "sha256": "8f1562aac831257b89aafa069d182d98e2f5ac0bff876d7e1eab638b72f4672c",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41495366683/artifacts/13166950661",
+    "historical_metadata_not_redownloaded_in_fix01": true
+  },
+  "scope": {
+    "pull_request": false,
+    "merge": false,
+    "tag": false,
+    "release": false,
+    "host_modified": false,
+    "sdk_modified": false,
+    "other_mods_modified": false,
+    "rom_iso_saves_accessed_or_modified": false
+  },
+  "independent_download_artifact_id": 13180445338,
+  "ci_jobs": {
+    "build": {
+      "id": 125549822065,
+      "conclusion": "success"
+    },
+    "independent_download": {
+      "id": 125552841982,
+      "conclusion": "success"
+    }
+  }
+}

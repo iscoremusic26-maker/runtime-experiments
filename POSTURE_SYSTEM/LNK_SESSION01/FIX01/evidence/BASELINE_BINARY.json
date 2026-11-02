@@ -1,0 +1,130 @@
+{
+  "version": "0.10.0",
+  "source_commit": "9453e603c3db5b37c90affec5c619e89ae267cec",
+  "ci_commit": "d135b95f00706d733ba0df023095759c4f5ca08b",
+  "run": 41506630106,
+  "artifact": 13172155570,
+  "dll_bytes": 187392,
+  "dll_sha256": "8a37b64cc51240bf2378d58c9dcf3bfb954b891a1addeb82211fe7c9655f57f6",
+  "imports": {
+    "dusklight.exe": [
+      "??0J2DOrthoGraph@@QEAA@MMMMMM@Z",
+      "?_delete@dMeter2_c@@QEAAHXZ",
+      "?_draw@dMeter2_c@@QEAAHXZ",
+      "?_execute@dMeter2_c@@QEAAHXZ",
+      "?checkMasterSwordEquip@daPy_py_c@@SAHXZ",
+      "?dCam_getBody@@YAPEAVdCamera_c@@XZ",
+      "?dComIfGd_getView@@YAPEAUview_class@@XZ",
+      "?dComIfGp_getCurrentGrafPort@@YAPEAVJ2DGrafContext@@XZ",
+      "?dComIfGp_getLinkPlayer@@YAPEAVdaPy_py_c@@XZ",
+      "?dComIfGp_getStartStageName@@YAPEBDXZ",
+      "?dComIfGs_getSelectEquipSword@@YAEXZ",
+      "?dMeter2Info_getMeterClass@@YAPEAVdMeter2_c@@XZ",
+      "?dMeter2Info_getWindowStatus@@YAEXZ",
+      "?damage_check@daE_OC_c@@QEAAXXZ",
+      "?executeDamage@daE_OC_c@@QEAAXXZ",
+      "?fillBox@J2DGrafContext@@QEAAXAEBU?$TBox2@M@JGeometry@@@Z",
+      "?fopAcM_SearchByID@@YAHIPEAPEAVfopAc_ac_c@@@Z",
+      "?fopAcM_searchActorDistance@@YAMPEBVfopAc_ac_c@@0@Z",
+      "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+      "?g_fopAcTg_Queue@@3Unode_list_class@@A",
+      "?lineBGCheck@dCamera_c@@QEAA_NPEAUcXyz@@0I@Z",
+      "?mDoLib_project@@YAXPEAUVec@@0@Z",
+      "?m_heightF@mDoGph_gInf_c@@2MA",
+      "?m_minXF@mDoGph_gInf_c@@2MA",
+      "?m_minYF@mDoGph_gInf_c@@2MA",
+      "?m_widthF@mDoGph_gInf_c@@2MA",
+      "?place@J2DGrafContext@@UEAAXAEBU?$TBox2@M@JGeometry@@@Z",
+      "?set@dDlst_list_c@@QEAAHAEAPEAPEAVdDlst_base_c@@0PEAV2@@Z",
+      "?setColor@J2DGrafContext@@QEAAXUTColor@JUtility@@000@Z",
+      "?setOrtho@J2DOrthoGraph@@QEAAXAEBU?$TBox2@M@JGeometry@@MM@Z",
+      "?setPort@J2DGrafContext@@UEAAXXZ",
+      "?setPort@J2DOrthoGraph@@UEAAXXZ",
+      "?setScissor@J2DGrafContext@@UEAAXXZ",
+      "?setup2D@J2DGrafContext@@UEAAXXZ",
+      "PSVECSquareMag"
+    ],
+    "VCRUNTIME140.dll": [
+      "__C_specific_handler",
+      "__std_terminate",
+      "__std_type_info_destroy_list",
+      "memcpy",
+      "memset"
+    ],
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "api-ms-win-crt-math-l1-1-0.dll": [
+      "sqrtf"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_cexit",
+      "_configure_narrow_argv",
+      "_execute_onexit_table",
+      "_initialize_narrow_environment",
+      "_initialize_onexit_table",
+      "_initterm",
+      "_initterm_e",
+      "_seh_filter_dll"
+    ],
+    "api-ms-win-crt-heap-l1-1-0.dll": [
+      "free"
+    ],
+    "KERNEL32.dll": [
+      "DisableThreadLibraryCalls",
+      "GetCurrentProcessId",
+      "GetCurrentThreadId",
+      "GetSystemTimeAsFileTime",
+      "InitializeSListHead",
+      "QueryPerformanceCounter"
+    ]
+  },
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "hooks": [
+    {
+      "names": [
+        "??_7daE_OC_c@@6B@",
+        "daE_OC_c::damage_check"
+      ]
+    },
+    {
+      "names": [
+        "??_7daE_OC_c@@6B@",
+        "daE_OC_c::executeDamage"
+      ]
+    },
+    {
+      "names": [
+        "??_7dMeter2_c@@6B@",
+        "dMeter2_c::_execute"
+      ]
+    },
+    {
+      "names": [
+        "??_7dMeter2_c@@6B@",
+        "dMeter2_c::_draw"
+      ]
+    },
+    {
+      "names": [
+        "??_7dMeter2_c@@6B@",
+        "dMeter2_c::_delete"
+      ]
+    },
+    {
+      "names": [
+        "??_7dMeterButton_c@@6B@",
+        "dMeterButton_c::draw"
+      ]
+    }
+  ]
+}

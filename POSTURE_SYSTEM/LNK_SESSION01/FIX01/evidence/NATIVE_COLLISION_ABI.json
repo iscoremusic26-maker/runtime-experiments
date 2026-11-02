@@ -1,0 +1,43 @@
+{
+  "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+  "executed": false,
+  "basis": "objdump of pinned official EXE, source matching pinned Git blobs",
+  "cc_set": {
+    "signature": "void (daE_OC_c::*)()",
+    "import": "?cc_set@daE_OC_c@@QEAAXXZ",
+    "thunk": "0x14001edc1",
+    "body": "0x140e04b60",
+    "calls_native_Set_for_At": [
+      "0x140e04e4c",
+      "0x140e04e60"
+    ],
+    "own_sphere_offsets": [
+      "0x1028",
+      "0x11e0"
+    ],
+    "At_mSPrm_offsets": [
+      "0x1038",
+      "0x11f0"
+    ],
+    "AtSet_mask": 1
+  },
+  "native_Set": {
+    "thunk": "0x140036d5e",
+    "body": "0x1413889e0",
+    "AtSet_test": "testb $1,0x10(%rdx)",
+    "at_list_capacity": 256,
+    "at_count_offset": "0x500c"
+  },
+  "native_ChkAtTg": {
+    "thunk": "0x1400576ad",
+    "body": "0x141387c90",
+    "clears_first_call": "0x141387ca2 -> 0x140052f04",
+    "Off_entries_skipped_test": "0x141387d1c testb $1,0x10(%rcx)"
+  },
+  "native_ClrAtHitInf": {
+    "thunk": "0x140052f04",
+    "body": "0x1413883a0",
+    "only_registered_At_list": true
+  },
+  "writer_scope": "temporary On of requested previously Off own AtSet bits in cc_set PRE; paired POST Off before global collision; engine clears the old hit and skips collision; original On bits preserved"
+}

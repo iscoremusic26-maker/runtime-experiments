@@ -1,0 +1,7 @@
+{
+  "status": "ARTIFACT_VERIFY_FAIL",
+  "errors": [
+    "Download manifest hook/import claims differ from actual audited DLL"
+  ],
+  "test": "Downloaded intermediate artifact with stale nine-hook metadata is rejected against its actual ten-hook DLL"
+}

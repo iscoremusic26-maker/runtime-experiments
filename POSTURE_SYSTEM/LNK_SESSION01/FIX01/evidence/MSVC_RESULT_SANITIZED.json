@@ -1,0 +1,381 @@
+{
+  "status": "POST05_PACKAGE_PASS_DOWNLOAD_PENDING",
+  "labels": [
+    "LAB_PASS_MSVC",
+    "WINDOWS_MSVC_BUILD_OK",
+    "PE_NEGATIVES_REJECTED",
+    "WINDOWS_MSVC_PASS"
+  ],
+  "source_commit": "5454f32e0bb1fbdfde6ac866e94104e1b56df6be",
+  "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+  "run_id": "41524848968",
+  "ci_head": "6e615ea4134d105566905ddd6911f4c8fdd2230a",
+  "ledger_files": 55,
+  "dependencies": {
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "importlib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "official_sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "win_zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf"
+  },
+  "production_units": [
+    "game_feature.cpp",
+    "mod.cpp"
+  ],
+  "loose_dll": {
+    "bytes": 224256,
+    "sha256": "71abb0d064e77570891e469521316b273e09b2c6ff97187a632a7e1c8b7d434f"
+  },
+  "package": {
+    "bytes": 96454,
+    "dll_in_package_equals_loose": true,
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "mod_json_equals_source": true,
+    "sha256": "e7b8d5dff337ae1274abc586278999527efe3c1f5c40623b051a8403a29c397d",
+    "version": "0.10.1"
+  },
+  "source_audit": {
+    "define_hook_count": 10,
+    "errors": [],
+    "files": [
+      "break_core.hpp",
+      "engine.hpp",
+      "fix01_core.hpp",
+      "helm_core.hpp",
+      "hit_core.hpp",
+      "hud_core.hpp",
+      "lifecycle_core.hpp",
+      "lnk_core.hpp",
+      "mod.cpp",
+      "parry_core.hpp",
+      "posture_core.hpp",
+      "reaction_core.hpp"
+    ],
+    "status": "SOURCE_AUDIT_PASS"
+  },
+  "formatter_sample_identical_msvc_gpp": true,
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "VSCMD_ARG_TGT_ARCH": "x64",
+    "VisualStudioVersion": "18.0",
+    "WindowsSDKVersion": "10.0.26100.0\\"
+  },
+  "game_executed": false,
+  "dll_loaded": false,
+  "host_built": false,
+  "phases": [
+    {
+      "label": "compiler",
+      "exit": 0,
+      "seconds": 2.328
+    },
+    {
+      "label": "cmake-version",
+      "exit": 0,
+      "seconds": 0.766
+    },
+    {
+      "label": "ninja-version",
+      "exit": 0,
+      "seconds": 0.125
+    },
+    {
+      "label": "tool-tests",
+      "exit": 0,
+      "seconds": 0.531
+    },
+    {
+      "label": "pmf-static-tests",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "source-audit",
+      "exit": 0,
+      "seconds": 0.313
+    },
+    {
+      "label": "configure",
+      "exit": 0,
+      "seconds": 5.578
+    },
+    {
+      "label": "build-lab1",
+      "exit": 0,
+      "seconds": 4.906
+    },
+    {
+      "label": "run-lab1",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "build-lab2",
+      "exit": 0,
+      "seconds": 2.64
+    },
+    {
+      "label": "run-lab2",
+      "exit": 0,
+      "seconds": 0.094
+    },
+    {
+      "label": "build-lab3",
+      "exit": 0,
+      "seconds": 1.187
+    },
+    {
+      "label": "run-lab3",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "build-lab4",
+      "exit": 0,
+      "seconds": 5.469
+    },
+    {
+      "label": "run-lab4",
+      "exit": 0,
+      "seconds": 0.125
+    },
+    {
+      "label": "build-lab5",
+      "exit": 0,
+      "seconds": 4.265
+    },
+    {
+      "label": "run-lab5",
+      "exit": 0,
+      "seconds": 0.235
+    },
+    {
+      "label": "build-lab6",
+      "exit": 0,
+      "seconds": 4.969
+    },
+    {
+      "label": "run-lab6",
+      "exit": 0,
+      "seconds": 0.25
+    },
+    {
+      "label": "build-lab7",
+      "exit": 0,
+      "seconds": 4.515
+    },
+    {
+      "label": "run-lab7",
+      "exit": 0,
+      "seconds": 0.25
+    },
+    {
+      "label": "build-lab8",
+      "exit": 0,
+      "seconds": 3.516
+    },
+    {
+      "label": "run-lab8",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "build-lab9",
+      "exit": 0,
+      "seconds": 3.86
+    },
+    {
+      "label": "run-lab9",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "build-lab10",
+      "exit": 0,
+      "seconds": 6.656
+    },
+    {
+      "label": "run-lab10",
+      "exit": 0,
+      "seconds": 0.094
+    },
+    {
+      "label": "build-lab11",
+      "exit": 0,
+      "seconds": 8.25
+    },
+    {
+      "label": "run-lab11",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "build-lab12",
+      "exit": 0,
+      "seconds": 5.422
+    },
+    {
+      "label": "run-lab12",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "build-lab13",
+      "exit": 0,
+      "seconds": 4.844
+    },
+    {
+      "label": "run-lab13",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "build-lab14",
+      "exit": 0,
+      "seconds": 5.14
+    },
+    {
+      "label": "run-lab14",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "rework-mutations",
+      "exit": 0,
+      "seconds": 185.594
+    },
+    {
+      "label": "hud-reference-renders",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "lnk01-reference-renders",
+      "exit": 0,
+      "seconds": 0.188
+    },
+    {
+      "label": "emit-sample",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "extract-sample",
+      "exit": 0,
+      "seconds": 0.063
+    },
+    {
+      "label": "build-mod",
+      "exit": 0,
+      "seconds": 7.172
+    },
+    {
+      "label": "dumpbin-headers",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "dumpbin-imports",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "dumpbin-exports",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "pe-negatives",
+      "exit": 0,
+      "seconds": 0.125
+    },
+    {
+      "label": "build-package",
+      "exit": 0,
+      "seconds": 0.328
+    }
+  ],
+  "labs": {
+    "hit": {
+      "checks": 1660,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lifecycle": {
+      "checks": 29558,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "collider": {
+      "checks": 12826,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "posture": {
+      "checks": 556878,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "reaction": {
+      "checks": 36933,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "compat": {
+      "checks": 55992,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "rb": {
+      "checks": 21313,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "general": {
+      "checks": 5560,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "break": {
+      "checks": 243624,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "hud": {
+      "checks": 57742,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "parry": {
+      "checks": 1570,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnk": {
+      "checks": 528,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnks1": {
+      "checks": 178,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "fix01": {
+      "checks": 21570,
+      "failures": 0,
+      "result": "LAB_PASS"
+    }
+  },
+  "mutations": {
+    "count": 236,
+    "detected": 236
+  },
+  "note": "Build result precedes independent download; use LOCAL_DOWNLOAD_VERIFICATION and CI_DOWNLOAD_VERIFICATION for final download status. Commands/runner paths/environment logs intentionally omitted."
+}
