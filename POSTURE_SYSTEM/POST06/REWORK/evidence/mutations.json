@@ -1,0 +1,86 @@
+{
+  "mutations": [
+    {
+      "mutation": "timed_fall",
+      "detected": true
+    },
+    {
+      "mutation": "old_120",
+      "detected": true
+    },
+    {
+      "mutation": "shield_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "break_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "duplicate_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "foreign_sword",
+      "detected": true
+    },
+    {
+      "mutation": "helm_without_shield",
+      "detected": true
+    },
+    {
+      "mutation": "renew_shield_window",
+      "detected": true
+    },
+    {
+      "mutation": "long_timeout",
+      "detected": true
+    },
+    {
+      "mutation": "wrong_abort_posture",
+      "detected": true
+    },
+    {
+      "mutation": "wrong_timeout_posture",
+      "detected": true
+    },
+    {
+      "mutation": "early_rearm",
+      "detected": true
+    },
+    {
+      "mutation": "no_normalize_helm",
+      "detected": true
+    },
+    {
+      "mutation": "heal_native_loss",
+      "detected": true
+    },
+    {
+      "mutation": "double_rounding",
+      "detected": true
+    },
+    {
+      "mutation": "extra_hp",
+      "detected": true
+    },
+    {
+      "mutation": "power",
+      "detected": true
+    },
+    {
+      "mutation": "anim_rate",
+      "detected": true
+    },
+    {
+      "mutation": "cooldown_elsewhere",
+      "detected": true
+    },
+    {
+      "mutation": "second_writer",
+      "detected": true
+    }
+  ],
+  "count": 20,
+  "detected": 20
+}

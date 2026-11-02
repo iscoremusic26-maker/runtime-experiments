@@ -1,0 +1,4 @@
+b04: drop_at=91 hits=9 inact=0 max=1
+b18: aborted=1 posture=0 failed=60 phase=TRACKING mode=3
+break_counters: see per-test checks
+POST06_BREAK_LAB checks=434 failures=0 RESULT=LAB_PASS
