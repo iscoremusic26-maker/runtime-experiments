@@ -1,0 +1,123 @@
+{
+  "version": "0.8.2",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "compiled_source_commit": "62533c27730de14abcf65bf8d6d3ed409db2503f",
+  "ci_commit": "4bd5553e891fc331d89ccb41034475216a4af42c",
+  "status": "PARTIAL_CANDIDATE / HUMAN_RUNTIME_PENDING",
+  "labels": [
+    "SOURCE_TRACED",
+    "ROOT_CAUSE_PROVEN(A: source + 0.8.1 log + lab)",
+    "AI_LAB_PASS(LAB_MODEL_ONLY)",
+    "CORE_PASS",
+    "CI_PASS",
+    "PE_AUDIT_PASS",
+    "ARTIFACT_VERIFIED",
+    "HUMAN_RUNTIME_PENDING"
+  ],
+  "not_claimed": [
+    "HUMAN_PASS",
+    "ROOT_CAUSE_PROVEN_B",
+    "AI_PASS_IN_GAME"
+  ],
+  "root_cause_A": "E_OC At hit records survive until the sphere is armed again (cCcS registers/clears only armed At colliders); 0.8.1 wrote ATTACK/3 (and POST06 break stun) in damage_check POST before executeAttack could arm, leaving the contact record alive -> native frame~1 guard rebound loop while Link guards + false parries on the stale record",
+  "root_cause_B": "HYPOTHESIS: same stale record with delayed effect (actor keeps looping whenever Link guards against another actor); POST05 restoration audited exact, not implicated; human confirmation pending via POST08_AI_TRACE cause=SUPPRESSION",
+  "additional_bugs_found": [
+    "false CONFIRMED on stale At records (6 in log, enemy_frame=1, transitioned=0)",
+    "BREAK_BY_PARRY in contact call leaves stale record (221 L3040->L3064)",
+    "contact telemetry flooded by stale records"
+  ],
+  "bugs_fixed": [
+    "freshness gate ArmTrack/STALE_CONTACT",
+    "native deflection (no ATTACK/3 while Link guarded), RestorePre for native shield stun, ForceRecoil only if Link unprotected",
+    "BREAK_BY_PARRY deferred one call (POST06 waits)"
+  ],
+  "suspected_only": [
+    "sword BREAK_SHIELD_STUN in the same tick as an At contact (rare; monitored)",
+    "group stall B in game"
+  ],
+  "log_baseline": {
+    "file": "dusklight-20261102-081838",
+    "confirmed": 23,
+    "false_confirmed_frame1": 6,
+    "contacts_verified": 5646,
+    "not_attacking": 4922,
+    "breaks_by_parry": 6,
+    "invariant_ok": 1
+  },
+  "new_telemetry": [
+    "POST08_AI_TRACE START/SUSPECTED/END",
+    "POST08_SUMMARY part=4/4",
+    "STALE_CONTACT result"
+  ],
+  "evidence_labels": {
+    "R": "0.8.1 human log",
+    "S": "host 40457c6 source",
+    "B": "downloaded DLL",
+    "L": "parry_lab LAB_MODEL_ONLY"
+  },
+  "test_matrix": "POSTURE_SYSTEM/POST08/FIX02/AI_STALL_TEST_MATRIX.md",
+  "lab_msvc_counts": {
+    "hit_lab": 1660,
+    "lifecycle_lab": 29558,
+    "collider_lab": 12826,
+    "posture_lab": 556878,
+    "reaction_lab": 36933,
+    "compat_lab": 55991,
+    "rb_lab": 21313,
+    "general_lab": 5560,
+    "break_lab": 243624,
+    "hud_lab": 57742,
+    "parry_lab": 1570,
+    "failures": 0
+  },
+  "lab_sim_key_numbers": {
+    "v081_after_parry": {
+      "armed_swings": 1,
+      "aborted_swings": 51,
+      "monitor": "AI_STALL_SUSPECTED"
+    },
+    "fix02_after_parry": {
+      "armed_swings": 15,
+      "aborted_swings": 0
+    },
+    "v081_false_parries_sa_spam": 7,
+    "fix02_false_parries_sa_spam": 0
+  },
+  "mutation_count": 130,
+  "mutation_detected": 130,
+  "mutations_new_fix02": 18,
+  "PE_audit": "PE_AUDIT_PASS, 11/11 negatives rejected",
+  "import_diff": "none vs 0.8.1/0.8.0/0.7.0 pin",
+  "hooks_diff": "none (5 HOOK_MEM)",
+  "write_set_diff": "actor stores identical to 0.8.1; 3 heuristic hits are the P8 constructor of our own pending_break table (this=P8), verified in disassembly",
+  "ABI_and_readback": "new reads only from values already read (PRE snapshot/aux); deflect writes verified by same_live readback; static_asserts unchanged",
+  "performance": "O(1) per call; ArmTrack 64 slots; AiWatch 8 watches x 6-sample ring; 220 trace lines cap; FPS HUMAN_PENDING",
+  "artifact_id": 13147887858,
+  "artifact_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41458296635/artifacts/13147887858",
+  "artifact_expires": "2026-12-02T14:07:10Z",
+  "dusk": "POSTURE_POST08_2_FIX02_PRIVATE_TEST_windows-amd64_62533c27730d.dusk",
+  "dusk_bytes": 70775,
+  "sha256": "b0e245e687b313ce07b1efaf8ba3bc3e2cfe65205ed4dba5d909dc716c7166ba",
+  "zip_bytes": 72696,
+  "zip_sha256": "0d893da29bb38add244617cee5bca84a5c9548a4a86c155bfc34abe79df9925b",
+  "dll_bytes": 148992,
+  "dll_sha256": "e4d6a7e9dc8bb288cf682c4b034d55f7669304912509adc1c4f786696f5916ea",
+  "independent_download": "CI ARTIFACT_DOWNLOADED_VERIFIED (13148266918) + local download by id (SHA, mod.json == source, PE pin)",
+  "rollbacks": {
+    "stable": "POST07 0.7.0 POSTURE_POST07_0_HUD_PRIVATE_TEST_windows-amd64_f0e92c9f1d74.dusk sha256 070533d756f1329db3e48a47c00e0245deee08fff7fc0243a647bcd7ead23afd",
+    "not_safe": "0.8.1 (HUMAN_AI_REGRESSION_OBSERVED)"
+  },
+  "known_limits": [
+    "LAB_MODEL_ONLY simulation (one weapon overlap per swing, supported by 0.8.0 log 79/74)",
+    "ForceRecoil fallback (Link unprotected) can still leave a stale record (rare)",
+    "Black fury excluded from parry",
+    "B not proven"
+  ],
+  "human_pending": [
+    "parries keep Bokoblins attacking (A1-A3)",
+    "A->B->A sword switching without stall (B3)",
+    "groups 3-8 mixed variants",
+    "break by parry deferred stun feel",
+    "HM/EHB, Expansion abilities, FPS"
+  ]
+}
