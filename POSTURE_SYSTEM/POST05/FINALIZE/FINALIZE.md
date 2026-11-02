@@ -57,6 +57,33 @@ Logs `dusklight-20261101-185034` (POST05 + Zora Swim, SHA-256 `f083dba9…a7594`
   - 240 ticks no elegibles difieren: arranque y `frame` 1 con x2 pendiente.
 - **Labs** (MSVC = g++ con ASAN y UBSAN): 1660 / 29558 / 12826 / 556878 / 36933 / 55987 / 21272, con 0 fallos.
 
+## CI y binario [C]
+- **Run:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41366769060. `build` e `independent-download` en éxito al primer intento.
+- **Origen del build:** espejo `ci/posture-post05-finalize` @ `e97261f80defe21b391d5758bacca2697072cc51`; fuente compilada `cf2fa7816f1401a626c37ea5d239dceec387d8b6`; libro de control de 40 archivos.
+- **Compilador y labs:** MSVC 19.51.36260. Los 7 labs, con MSVC, dan los mismos conteos que con g++.
+- **Auditorías:** `SOURCE_AUDIT_PASS`, `PE_AUDIT_PASS` y 11/11 negativas PE.
+- **Imports y exports:** los mismos 3 imports del juego y los mismos 5 exports. La consulta de servicio es una llamada indirecta a través de `svc_host`, sin imports nuevos.
+- **Descarga:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41366769060/artifacts/13107547306 (ZIP `POST05F_TEST_41366769060_1`, 36315 bytes, `acfb5e4f…d42f`).
+- **`.dusk`:** `POSTURE_POST05_3_FINALIZE_PRIVATE_TEST_windows-amd64_cf2fa7816f14.dusk`, **35136 bytes**, SHA-256 **`cf120e41d35faac8e21d069dc2140e0abd9e8b6782baf9464ce8e793791bae44`**.
+- **DLL:** 71680 bytes, `3e4e3a0c94012aaf42242ad19222f42b793fe73e0fba45dc478d71a13b25a0a6`. `mod.json` es idéntico al de la fuente. Caduca el 2026-12-02 00:23 UTC.
+- **Descarga independiente por ID** (API): ZIP y `.dusk` coinciden con el digest, el manifiesto y `SHA256SUMS`. El job lo marca `ARTIFACT_DOWNLOADED_VERIFIED`.
+- **DLL descargada desensamblada:** exactamente 3 stores al actor (`0x8c8`/`0x8d0`/`0x8cc`, 0x180006477–48a). 0 stores a HP, cooldown, timers, flags, bits de esfera, `mName` ni `mAtInfo`. Lecturas `0x6d8`/`0x620` solo en `read_aux`.
+
+## Cobertura por variante y fase
+| Variante / fase | IMPLEMENTED | LAB_PASS | CI_PASS | Runtime |
+|---|---|---|---|---|
+| Blue E_OC nativo, solo y en grupo (ATTACK 0/1/2) | sí (sin cambios) | sí | sí | HUMAN_RUNTIME_PENDING (0.5.2 [R] OK) |
+| Red nativo sin Expansion: B/C maduro, frenada | sí | sí | sí | HUMAN_RUNTIME_PENDING ([R] 0.5.2 OK) |
+| **Red nativo sin Expansion: arranque, `frame` 1, fin de clip** | **sí (nuevo)** | sí (fixture del evento real) | sí | HUMAN_RUNTIME_PENDING |
+| Red de Expansion: B/C maduro, frenada | sí | sí (CP21) | sí | HUMAN_RUNTIME_PENDING |
+| **Red de Expansion: `frame` 1 con x1,15** | **sí (nuevo)** | sí (CP21) | sí | HUMAN_RUNTIME_PENDING |
+| Red de Expansion: arranque, `frame` 1 con x2 posible, fin de clip | vanilla | contraejemplo CP21 | sí | BLOCKED_EVIDENCE (x2 se perdería) |
+| Black 3/3: B/C maduro, frenada y **`frame` 1 (nuevo)** | sí | sí (CP21) | sí | HUMAN_RUNTIME_PENDING |
+| Black 6/6: B/C maduro, frenada | sí | sí (CP21) | sí | HUMAN_RUNTIME_PENDING |
+| Black 6/6: arranque, `frame` 1 (x2 pendiente), fin de clip (cadena) | vanilla | contraejemplo CP21 | sí | BLOCKED_EVIDENCE |
+| BIG_DAMAGE (giratorios, salto, 4.º corte, Mortal Draw) | vanilla | — | — | sin caso < 100 en [R] |
+| Postura → 100 y latch | vanilla (POST06 no existe) | sí | sí | [R] observado |
+
 ## Fase IV: otras rutas (auditoría breve) [S][R]
 - **Espadazos que van a BIG_DAMAGE en `damage_check`:**
   - 4.º corte seguido (`getCutCount() >= 4`);
