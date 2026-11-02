@@ -1,0 +1,22 @@
+L10 sweep parries=10 blocks=8
+L19 worst_quads=26
+L01 checks=56 failures=0
+L02 checks=317 failures=0
+L03 checks=6 failures=0
+L04 checks=4 failures=0
+L05 checks=3 failures=0
+L06 checks=3 failures=0
+L07 checks=3 failures=0
+L08 checks=12 failures=0
+L09 checks=6 failures=0
+L10 checks=42 failures=0
+L11 checks=11 failures=0
+L12 checks=6 failures=0
+L13 checks=12 failures=0
+L14 checks=15 failures=0
+L15 checks=5 failures=0
+L16 checks=11 failures=0
+L17 checks=4 failures=0
+L18 checks=8 failures=0
+L19 checks=4 failures=0
+LNK01_LAB checks=528 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY

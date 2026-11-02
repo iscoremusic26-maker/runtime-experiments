@@ -1,0 +1,149 @@
+{
+  "checkpoint": "LNK_SESSION01 (LNK02+LNK03+LNK04+LNK07)",
+  "version": "0.10.0",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "verdict": {
+    "LNK02": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_PASS (LAB_MODEL_ONLY)",
+      "ci": "CI_PASS",
+      "pe_audit": "PE_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "LNK03": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_PASS (LAB_MODEL_ONLY)",
+      "ci": "CI_PASS",
+      "pe_audit": "PE_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "LNK04": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_PASS (LAB_MODEL_ONLY)",
+      "ci": "CI_PASS",
+      "pe_audit": "PE_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "LNK07": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_PASS (LAB_MODEL_ONLY)",
+      "ci": "CI_PASS",
+      "pe_audit": "PE_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    }
+  },
+  "base": {
+    "branch": "feature/posture-lnk01-player-hud-block-posture",
+    "compiled_commit": "10dff331f2013965cee41e4890a8585489478a92",
+    "dusk_sha256": "8f1562aac831257b89aafa069d182d98e2f5ac0bff876d7e1eab638b72f4672c",
+    "human": "LNK01_HUMAN_PASS_ACOTADO (user log dusklight-20261102-131253, not opened by Claude)"
+  },
+  "source": {
+    "repo": "iscoremusic26-maker/Mods-Duskligh",
+    "branch": "feature/posture-lnk02-03-04-07-player-posture",
+    "compiled_commit": "9453e603c3db5b37c90affec5c619e89ae267cec"
+  },
+  "ci": {
+    "repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "branch": "ci/posture-lnk02-03-04-07-player-posture",
+    "ci_head": "d135b95",
+    "run_id": 41506630106,
+    "jobs": {
+      "build": "success",
+      "independent-download": "success"
+    },
+    "toolchain": "MSVC 14.51.36231 x64"
+  },
+  "artifact": {
+    "id": 13172155570,
+    "name": "LNKS1_TEST_41506630106_1",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41506630106/artifacts/13172155570",
+    "expires": "2026-12-02T19:11:32Z",
+    "zip_bytes": 88540,
+    "zip_sha256": "2316a0feaf6ab4547b0aba01071ff7a69271bc66e0f2f340154844a445437a3c",
+    "dusk": "POSTURE_LNK_SESSION01_0_10_0_DIRECT_HITS_REGEN_VARIANTS_PRIVATE_TEST_windows-amd64_9453e603c3db.dusk",
+    "dusk_bytes": 85987,
+    "dusk_sha256": "f381cb42a5247bed85326b818955b3b4c1d26b8c0ea079e2c87a78e044516e6c",
+    "dll_bytes": 187392,
+    "dll_sha256": "8a37b64cc51240bf2378d58c9dcf3bfb954b891a1addeb82211fe7c9655f57f6",
+    "only_playable_package": true,
+    "verification": "CI independent-download ARTIFACT_DOWNLOADED_VERIFIED (13172435742); local download by id: real ZIP .dusk with mod.json + PE32+ x86-64 DLL only, mod.json byte-identical, PE_AUDIT_PASS with the unchanged LNK01 pin, 14/14 negatives rejected"
+  },
+  "labs_msvc": {
+    "hit_lab": 1660,
+    "lifecycle_lab": 29558,
+    "collider_lab": 12826,
+    "posture_lab": 556878,
+    "reaction_lab": 36933,
+    "compat_lab": 55991,
+    "rb_lab": 21313,
+    "general_lab": 5560,
+    "break_lab": 243624,
+    "hud_lab": 57742,
+    "parry_lab": 1570,
+    "lnk_lab": 528,
+    "lnks1_lab": 178,
+    "failures": 0
+  },
+  "mutations": {
+    "total": 194,
+    "detected": 194,
+    "inherited": 168,
+    "new": 26,
+    "new_logic": 18,
+    "new_source_audit": 8,
+    "repointed_lnk01": 4
+  },
+  "pe": {
+    "hook_mem": 6,
+    "hooks_new": 0,
+    "game_imports_added": [],
+    "pin": "unchanged from LNK01 0.9.0"
+  },
+  "binary_store_audit": "new functions store only into the mod's own data (VariantTrack table via lea rip, LinkNow return struct, Posture object); Link pointer only compared/tested",
+  "weights": {
+    "block": {
+      "BLUE": 20,
+      "RED": 25,
+      "BLACK": 30,
+      "BLACK_FURY": 35,
+      "UNKNOWN": 20
+    },
+    "direct": {
+      "BLUE": 30,
+      "RED": 35,
+      "BLACK": 40,
+      "BLACK_FURY": 45,
+      "UNKNOWN": 30
+    },
+    "special": {
+      "EXPANSION_GROUP_POWER_X2_BLUE": "+5/+5"
+    },
+    "parry_link": 0
+  },
+  "regen": {
+    "delay_ticks": 30,
+    "pts_per_s_by_life": {
+      ">=75%": 10,
+      ">=50%": 8,
+      ">=25%": 5,
+      "<25%": 2
+    },
+    "safe_guard_multiplier": 1.5,
+    "life_units": "getLife() vs (getMaxLife()/5)*4"
+  },
+  "limitations": [
+    "legacy DEVF Blue born already grouped (atp2 never 1) reads as RED",
+    "floor damage + Bokoblin first-cylinder hit in the same tick would be credited to the Bokoblin",
+    "100 is visual only; native guard break unchanged (LNK05/06)"
+  ],
+  "rollback": {
+    "primary": "LNK01 0.9.0 (10dff331f201, 8f1562aa...672c)",
+    "historic": "POST08 FIX02 0.8.2 (62533c27730d, b0e245e6...66ba)",
+    "never": "0.8.1"
+  }
+}

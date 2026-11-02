@@ -1,0 +1,198 @@
+{
+  "errors": [],
+  "exports": [
+    "mod_ctx",
+    "mod_initialize",
+    "mod_meta",
+    "mod_shutdown",
+    "mod_update"
+  ],
+  "file_bytes": 187392,
+  "game_imports": {
+    "??0J2DOrthoGraph@@QEAA@MMMMMM@Z": "POST07 painter: local ortho context (stack object)",
+    "?_delete@dMeter2_c@@QEAAHXZ": "POST07 hook thunk: HUD meter delete PRE = scrub our packet (always continues)",
+    "?_draw@dMeter2_c@@QEAAHXZ": "POST07 hook thunk: HUD meter draw POST = sample + queue our 2D packet",
+    "?_execute@dMeter2_c@@QEAAHXZ": "POST07 hook thunk: HUD meter execute POST = simulation tick counter",
+    "?checkMasterSwordEquip@daPy_py_c@@SAHXZ": "Read-only sword identity for CP21 Helm 100/50 rule",
+    "?dCam_getBody@@YAPEAVdCamera_c@@XZ": "POST07: camera for the read-only line-of-sight query",
+    "?dComIfGd_getView@@YAPEAUview_class@@XZ": "POST07: projection precondition (view present)",
+    "?dComIfGp_getCurrentGrafPort@@YAPEAVJ2DGrafContext@@XZ": "POST07 painter: restore the native 2D port after painting",
+    "?dComIfGp_getLinkPlayer@@YAPEAVdaPy_py_c@@XZ": "Read-only live Link lookup; no cached player pointer",
+    "?dComIfGp_getStartStageName@@YAPEBDXZ": "lectura del nombre del stage de inicio para el epoch de contexto (puntero a miembro)",
+    "?dComIfGs_getSelectEquipSword@@YAEXZ": "Read-only selected sword id for Wood exclusion",
+    "?dMeter2Info_getMeterClass@@YAPEAVdMeter2_c@@XZ": "POST07 painter: HUD meter state re-check inside the painter",
+    "?dMeter2Info_getWindowStatus@@YAEXZ": "POST07: menu window open => no HUD",
+    "?damage_check@daE_OC_c@@QEAAXXZ": "thunk del unico hook (PRE/POST observacionales)",
+    "?executeDamage@daE_OC_c@@QEAAXXZ": "POST only; suppress premature HeadLock until real Shield Attack",
+    "?fillBox@J2DGrafContext@@QEAAXAEBU?$TBox2@M@JGeometry@@@Z": "POST07 painter: one quad of the posture bar",
+    "?fopAcM_SearchByID@@YAHIPEAPEAVfopAc_ac_c@@@Z": "consulta de existencia de solo lectura (fpcM_IsCreating + recorrido de g_fopAcTg_Queue), solo en mod_update",
+    "?fopAcM_searchActorDistance@@YAMPEBVfopAc_ac_c@@0@Z": "POST07: player distance for the 3700-4500 fade (pure)",
+    "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A": "POST07: game info (pause/event/player life/camera; draw list for our packet)",
+    "?g_fopAcTg_Queue@@3Unode_list_class@@A": "POST07: ONE read-only walk of the live actor queue per simulation tick (hud_sim_pass)",
+    "?lineBGCheck@dCamera_c@@QEAA_NPEAUcXyz@@0I@Z": "POST07: read-only camera line of sight to the anchor (same flags as EHB)",
+    "?mDoLib_project@@YAXPEAUVec@@0@Z": "POST07: world anchor -> ortho point (pure projection)",
+    "?m_heightF@mDoGph_gInf_c@@2MA": "POST07: logical viewport height (read)",
+    "?m_minXF@mDoGph_gInf_c@@2MA": "POST07: logical viewport left (read)",
+    "?m_minYF@mDoGph_gInf_c@@2MA": "POST07: logical viewport top (read)",
+    "?m_widthF@mDoGph_gInf_c@@2MA": "POST07: logical viewport width (read)",
+    "?place@J2DGrafContext@@UEAAXAEBU?$TBox2@M@JGeometry@@@Z": "POST07: vtable slot of the compiler-emitted J2DGrafContext vtable (not called by the mod)",
+    "?set@dDlst_list_c@@QEAAHAEAPEAPEAVdDlst_base_c@@0PEAV2@@Z": "POST07: native 2D list insertion (inline set2DXlu) of OUR packet only",
+    "?setColor@J2DGrafContext@@QEAAXUTColor@JUtility@@000@Z": "POST07 painter: per-corner colours of the local context",
+    "?setOrtho@J2DOrthoGraph@@QEAAXAEBU?$TBox2@M@JGeometry@@MM@Z": "POST07 painter: logical widescreen bounds of the local context",
+    "?setPort@J2DGrafContext@@UEAAXXZ": "POST07: vtable slot of the compiler-emitted J2DGrafContext vtable (not called by the mod)",
+    "?setPort@J2DOrthoGraph@@UEAAXXZ": "POST07 painter: viewport/projection of the local context",
+    "?setScissor@J2DGrafContext@@UEAAXXZ": "POST07: vtable slot of the compiler-emitted J2DGrafContext vtable (not called by the mod)",
+    "?setup2D@J2DGrafContext@@UEAAXXZ": "POST07: vtable slot of the compiler-emitted J2DGrafContext vtable (not called by the mod)",
+    "PSVECSquareMag": "POST07: cXyz::abs() of the camera-to-anchor vector (pure)"
+  },
+  "hook_thunk_bound_import": [
+    "dusklight.exe",
+    "?damage_check@daE_OC_c@@QEAAXXZ"
+  ],
+  "hook_thunks": {
+    "dMeter2_c::_delete": [
+      "dusklight.exe",
+      "?_delete@dMeter2_c@@QEAAHXZ"
+    ],
+    "dMeter2_c::_draw": [
+      "dusklight.exe",
+      "?_draw@dMeter2_c@@QEAAHXZ"
+    ],
+    "dMeter2_c::_execute": [
+      "dusklight.exe",
+      "?_execute@dMeter2_c@@QEAAHXZ"
+    ],
+    "dMeterButton_c::draw": null,
+    "daE_OC_c::damage_check": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "daE_OC_c::executeDamage": [
+      "dusklight.exe",
+      "?executeDamage@daE_OC_c@@QEAAXXZ"
+    ]
+  },
+  "imports": {
+    "KERNEL32.dll": [
+      "DisableThreadLibraryCalls",
+      "GetCurrentProcessId",
+      "GetCurrentThreadId",
+      "GetSystemTimeAsFileTime",
+      "InitializeSListHead",
+      "QueryPerformanceCounter"
+    ],
+    "VCRUNTIME140.dll": [
+      "__C_specific_handler",
+      "__std_terminate",
+      "__std_type_info_destroy_list",
+      "memcpy",
+      "memset"
+    ],
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "api-ms-win-crt-heap-l1-1-0.dll": [
+      "free"
+    ],
+    "api-ms-win-crt-math-l1-1-0.dll": [
+      "sqrtf"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_cexit",
+      "_configure_narrow_argv",
+      "_execute_onexit_table",
+      "_initialize_narrow_environment",
+      "_initialize_onexit_table",
+      "_initterm",
+      "_initterm_e",
+      "_seh_filter_dll"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "dusklight.exe": [
+      "??0J2DOrthoGraph@@QEAA@MMMMMM@Z",
+      "?_delete@dMeter2_c@@QEAAHXZ",
+      "?_draw@dMeter2_c@@QEAAHXZ",
+      "?_execute@dMeter2_c@@QEAAHXZ",
+      "?checkMasterSwordEquip@daPy_py_c@@SAHXZ",
+      "?dCam_getBody@@YAPEAVdCamera_c@@XZ",
+      "?dComIfGd_getView@@YAPEAUview_class@@XZ",
+      "?dComIfGp_getCurrentGrafPort@@YAPEAVJ2DGrafContext@@XZ",
+      "?dComIfGp_getLinkPlayer@@YAPEAVdaPy_py_c@@XZ",
+      "?dComIfGp_getStartStageName@@YAPEBDXZ",
+      "?dComIfGs_getSelectEquipSword@@YAEXZ",
+      "?dMeter2Info_getMeterClass@@YAPEAVdMeter2_c@@XZ",
+      "?dMeter2Info_getWindowStatus@@YAEXZ",
+      "?damage_check@daE_OC_c@@QEAAXXZ",
+      "?executeDamage@daE_OC_c@@QEAAXXZ",
+      "?fillBox@J2DGrafContext@@QEAAXAEBU?$TBox2@M@JGeometry@@@Z",
+      "?fopAcM_SearchByID@@YAHIPEAPEAVfopAc_ac_c@@@Z",
+      "?fopAcM_searchActorDistance@@YAMPEBVfopAc_ac_c@@0@Z",
+      "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+      "?g_fopAcTg_Queue@@3Unode_list_class@@A",
+      "?lineBGCheck@dCamera_c@@QEAA_NPEAUcXyz@@0I@Z",
+      "?mDoLib_project@@YAXPEAUVec@@0@Z",
+      "?m_heightF@mDoGph_gInf_c@@2MA",
+      "?m_minXF@mDoGph_gInf_c@@2MA",
+      "?m_minYF@mDoGph_gInf_c@@2MA",
+      "?m_widthF@mDoGph_gInf_c@@2MA",
+      "?place@J2DGrafContext@@UEAAXAEBU?$TBox2@M@JGeometry@@@Z",
+      "?set@dDlst_list_c@@QEAAHAEAPEAPEAVdDlst_base_c@@0PEAV2@@Z",
+      "?setColor@J2DGrafContext@@QEAAXUTColor@JUtility@@000@Z",
+      "?setOrtho@J2DOrthoGraph@@QEAAXAEBU?$TBox2@M@JGeometry@@MM@Z",
+      "?setPort@J2DGrafContext@@UEAAXXZ",
+      "?setPort@J2DOrthoGraph@@UEAAXXZ",
+      "?setScissor@J2DGrafContext@@UEAAXXZ",
+      "?setup2D@J2DGrafContext@@UEAAXXZ",
+      "PSVECSquareMag"
+    ]
+  },
+  "machine": "0x8664",
+  "meta_imports": [
+    [
+      "dev.twilitrealm.dusklight.game",
+      2,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.hook",
+      1,
+      1
+    ],
+    [
+      "dev.twilitrealm.dusklight.host",
+      2,
+      2
+    ],
+    [
+      "dev.twilitrealm.dusklight.interp",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.log",
+      1,
+      0
+    ]
+  ],
+  "meta_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 6,
+    "IMPORT": 5
+  },
+  "pinned": true,
+  "sections": [
+    ".text",
+    ".rdata",
+    ".data",
+    ".pdata",
+    "modmeta",
+    ".rsrc",
+    ".reloc"
+  ],
+  "status": "PE_AUDIT_PASS",
+  "vcall_hooks": {
+    "dMeterButton_c::draw": 0
+  }
+}

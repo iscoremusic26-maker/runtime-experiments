@@ -1,0 +1,22 @@
+{
+  "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "errors": [],
+  "package_sha256": "f381cb42a5247bed85326b818955b3b4c1d26b8c0ea079e2c87a78e044516e6c",
+  "package_bytes": 85987,
+  "dll_sha256": "8a37b64cc51240bf2378d58c9dcf3bfb954b891a1addeb82211fe7c9655f57f6",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "version": "0.10.0",
+  "members": [
+    "mod.json",
+    "lib/",
+    "lib/windows-amd64/",
+    "lib/windows-amd64/mod.dll"
+  ],
+  "pe_audit_status": "PE_AUDIT_PASS",
+  "hook_thunk_bound_import": [
+    "dusklight.exe",
+    "?damage_check@daE_OC_c@@QEAAXXZ"
+  ],
+  "filename": "POSTURE_LNK_SESSION01_0_10_0_DIRECT_HITS_REGEN_VARIANTS_PRIVATE_TEST_windows-amd64_9453e603c3db.dusk",
+  "runtime_tested": false
+}
