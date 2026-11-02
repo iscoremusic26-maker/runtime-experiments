@@ -1,0 +1,30 @@
+H26_PERF_LAB_CPU build_ns_per_bar=638.0 worst_quads=51 max_frame_quads=816 (lab CPU, not the game GPU)
+H01 checks=352 failures=0
+H02 checks=13816 failures=0
+H03 checks=304 failures=0
+H04 checks=121 failures=0
+H05 checks=14884 failures=0
+H06 checks=205 failures=0
+H07 checks=27632 failures=0
+H08 checks=7 failures=0
+H09 checks=122 failures=0
+H10 checks=2 failures=0
+H11 checks=166 failures=0
+H12 checks=3 failures=0
+H13 checks=4 failures=0
+H14 checks=18 failures=0
+H15 checks=11 failures=0
+H16 checks=4 failures=0
+H17 checks=17 failures=0
+H18 checks=3 failures=0
+H19 checks=5 failures=0
+H20 checks=6 failures=0
+H21 checks=7 failures=0
+H22 checks=3 failures=0
+H23 checks=40 failures=0
+H24 checks=3 failures=0
+H25 checks=1 failures=0
+H26 checks=3 failures=0
+H27 checks=1 failures=0
+H28 checks=2 failures=0
+POST07_HUD_LAB checks=57742 failures=0 RESULT=LAB_PASS

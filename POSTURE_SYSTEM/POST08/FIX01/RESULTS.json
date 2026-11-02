@@ -1,0 +1,125 @@
+{
+  "version": "0.8.1",
+  "name": "POST08 FIX01",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "menu_name": "Enemy Posture System PRIVATE TEST",
+  "verdict": "PARTIAL_CANDIDATE / HUMAN_RUNTIME_PENDING",
+  "labels": [
+    "SOURCE_TRACED",
+    "ABI_CONFIRMED",
+    "ROOT_CAUSE_REPRODUCED(lab timeline + source; process order inferred from the 0/79 log)",
+    "CORE_PASS",
+    "CI_PASS",
+    "PE_AUDIT_PASS",
+    "ARTIFACT_VERIFIED",
+    "HUMAN_RUNTIME_PENDING"
+  ],
+  "not_claimed": [
+    "HUMAN_PASS",
+    "TIMING_PASS",
+    "BLACK_FURY_PARRY"
+  ],
+  "base": {
+    "defective": "1eda39a7f603f796e18920dae73e4b12f7d0236a",
+    "defective_status": "CI_PASS / HUMAN_PARRY_FAIL (0/79)",
+    "branch_from": "96c6c42"
+  },
+  "root_cause": "Link enters PROC_GUARD_SLIP in its own execute of the tick after the blocked pass (before the Bokoblin damage_check); 0.8.0 read mProcID at that moment",
+  "human_log_0_8_0": {
+    "file": "dusklight-20261102-073401",
+    "contacts_verified": 79,
+    "normal_guard": 74,
+    "not_blocked": 5,
+    "candidates": 0,
+    "shield_attacks_on_swinging_bokoblins": 60
+  },
+  "source": {
+    "branch": "feature/posture-post08-fix01-contact-timing",
+    "commits": [
+      "0a06af10246364b117551c230a627aa00600410d",
+      "d70f9674e3ba8c17b94d6c69506346be4e1d2195"
+    ],
+    "compiled_commit": "d70f9674e3ba8c17b94d6c69506346be4e1d2195"
+  },
+  "ci": {
+    "branch": "ci/posture-post08-fix01-contact-timing",
+    "base": "e0bd06b2d889e21e55bb65983fd215090b454457",
+    "head": "e6d5a201327b9907e6bbf0cafd9d590f49112dfc",
+    "runs": [
+      {
+        "run": 41449701818,
+        "conclusion": "failure",
+        "reason": "PE pin: new CRT import strcmp (labs 11/11 and mutations 112/112 already passed); removed instead of widening the pin"
+      },
+      {
+        "run": 41450316723,
+        "conclusion": "success",
+        "jobs": {
+          "build": "success",
+          "independent-download": "success"
+        }
+      }
+    ]
+  },
+  "artifact": {
+    "id": 13144835814,
+    "name": "POST081_TEST_41450316723_1",
+    "zip_bytes": 67643,
+    "zip_sha256": "f41ad1cfd3695deb7040658b64af8479f9ecdbf8106a1b1fb0e353b754a50d27",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41450316723/artifacts/13144835814",
+    "expires": "2026-12-02T13:11:29Z",
+    "dusk": "POSTURE_POST08_1_FIX01_PRIVATE_TEST_windows-amd64_d70f9674e3ba.dusk",
+    "dusk_bytes": 65741,
+    "dusk_sha256": "d3fb369af3d7d37f0d88c3e47c43638441c2577d923ee12af41701788189fb5e",
+    "dll_bytes": 140288,
+    "dll_sha256": "855a6e67dcc28683fb9ed4c1a9860f929a17efcb79b97b2e43b87af1b788ac23",
+    "verified": [
+      "CI independent-download ARTIFACT_DOWNLOADED_VERIFIED (13144138810)",
+      "local download by id: SHA256SUMS, mod.json == source, PE_AUDIT_PASS with the 0.7.0/0.8.0 pin"
+    ]
+  },
+  "rollback_stable": {
+    "version": "0.7.0",
+    "dusk": "POSTURE_POST07_0_HUD_PRIVATE_TEST_windows-amd64_f0e92c9f1d74.dusk",
+    "sha256": "070533d756f1329db3e48a47c00e0245deee08fff7fc0243a647bcd7ead23afd"
+  },
+  "labs_msvc": {
+    "hit_lab": 1660,
+    "lifecycle_lab": 29558,
+    "collider_lab": 12826,
+    "posture_lab": 556878,
+    "reaction_lab": 36933,
+    "compat_lab": 55991,
+    "rb_lab": 21313,
+    "general_lab": 5560,
+    "break_lab": 243624,
+    "hud_lab": 57742,
+    "parry_lab": 1231,
+    "failures": 0
+  },
+  "mutations": {
+    "count": 112,
+    "detected": 112,
+    "new_in_fix01": 13
+  },
+  "binary": {
+    "stores_vs_0_8_0": "identical (none added, none removed)",
+    "new_reads": "do_update (post08_observe_link): Link 0x4144/0x2d4c/0x45d8/0x45dc",
+    "hooks": "5, none new",
+    "imports": "identical to 0.7.0/0.8.0"
+  },
+  "window": {
+    "frames": "[-1,+9] of ANM_SHIELD_ATTACK",
+    "ticks_cap": 11,
+    "effective": "first 10 ticks of the Shield Attack = 0.333 s",
+    "status": "PROVISIONAL"
+  },
+  "human_pending": [
+    "at least one CONFIRMED in game",
+    "Link life unchanged on CONFIRMED",
+    "no stun below 100",
+    "break by parry + single pulse",
+    "window feel",
+    "8 mods, groups, FPS"
+  ]
+}
