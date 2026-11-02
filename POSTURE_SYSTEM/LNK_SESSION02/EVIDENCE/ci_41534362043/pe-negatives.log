@@ -1,0 +1,126 @@
+{
+ "baseline": "PE_AUDIT_PASS",
+ "cases": [
+  {
+   "case": "N1 arquitectura i386 en vez de AMD64",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "machine is not AMD64"
+  },
+  {
+   "case": "N2 import nuevo del juego (fopAcM_SearchByID alterado)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "unreviewed game import ?fopAcM_SearchByIE@@YAHIPEAPEAVfopAc_ac_c@@@Z"
+  },
+  {
+   "case": "N3 import mutador del sistema (WriteProcessMemory)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "forbidden symbol WriteProcessMemory in imports/exports: ['WriteProcessMemory']"
+  },
+  {
+   "case": "N4 import CRT nuevo (memset -> memmov)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "PIN_MISMATCH imports: got {'dusklight.exe': ['??0J2DOrthoGraph@@QEAA@MMMMMM@Z', '?_delete@"
+  },
+  {
+   "case": "N5 export alterado (mod_update)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "PIN_MISMATCH exports: got ['mod_ctx', 'mod_initialize', 'mod_meta', 'mod_shutdown', 'mod_u"
+  },
+  {
+   "case": "N6 el registro HOOK_MEM apunta a otro metodo (nombre en modmeta)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "unexpected hook target set"
+  },
+  {
+   "case": "N6b hook reenlazado a otro simbolo importado (thunk)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "hook thunk bound to ('dusklight.exe', '?damage_chexk@daE_OC_c@@QEAAXXZ')"
+  },
+  {
+   "case": "N7 dependencia alterada (KERNEL32.dll)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "PIN_MISMATCH imports: got {'dusklight.exe': ['??0J2DOrthoGraph@@QEAA@MMMMMM@Z', '?_delete@"
+  },
+  {
+   "case": "N8 import del juego no revisado (getStartStageName -> otro)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "unreviewed game import ?dComIfGp_getStartStageNamX@@YAPEBDXZ"
+  },
+  {
+   "case": "N9 archivo truncado",
+   "status": "REJECTED_BY_EXCEPTION",
+   "rejected": true,
+   "first_error": "error"
+  },
+  {
+   "case": "N10 cabecera MZ corrupta",
+   "status": "REJECTED_BY_EXCEPTION",
+   "rejected": true,
+   "first_error": "ValueError"
+  },
+  {
+   "case": "N15 native Link PMF size corrupted",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "extended PMF rejected: unapproved extended member target/layout"
+  },
+  {
+   "case": "N16 null Link materializer",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "extended PMF rejected: unmapped rva -0x180000000"
+  },
+  {
+   "case": "N17 arbitrary materializer code",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "extended PMF rejected: unsupported materializer opcode at 0x180019960: cc83ec28488d05cd960"
+  },
+  {
+   "case": "N18 unexpected extended hook flags",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "extended PMF rejected: unapproved extended member target/layout"
+  },
+  {
+   "case": "N19 extended target name changed",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "unexpected hook target set"
+  },
+  {
+   "case": "N14 transicion nativa de Link no revisada (procGuardBreakInit -> otro metodo)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "unreviewed game import ?procGuardBreakInix@daAlink_c@@QEAAHXZ"
+  },
+  {
+   "case": "N11 hook virtual renombrado (dMeterButton_c::draw -> otro metodo)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "unexpected hook target set"
+  },
+  {
+   "case": "N12 vtable del hook virtual alterada",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "hook names ['??_7dMeterButtoN_c@@6B@', 'dMeterButton_c::draw']"
+  },
+  {
+   "case": "N13 thunk vcall del hook virtual alterado (otro slot / salto directo)",
+   "status": "PE_AUDIT_FAIL",
+   "rejected": true,
+   "first_error": "virtual hook dMeterButton_c::draw: PMF is not a slot-0 vcall thunk (got None)"
+  }
+ ],
+ "passed_unexpectedly": 0
+}

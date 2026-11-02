@@ -1,0 +1,10 @@
+B08 sweep runs=8064 saturated=7392 mod_breaks=6008 native_breaks=2907 parry_cancels=0 identical_to_0_10_1=536
+B01 checks=48 failures=0
+B02 checks=8 failures=0
+B03 checks=39 failures=0
+B04 checks=19 failures=0
+B05 checks=18 failures=0
+B06 checks=6 failures=0
+B07 checks=8 failures=0
+B08 checks=103285 failures=0
+LNK_S2_LAB checks=103431 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY

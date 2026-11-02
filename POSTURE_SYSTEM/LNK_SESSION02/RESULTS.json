@@ -1,0 +1,100 @@
+{
+  "checkpoint": "LNK_SESSION02 (LNK05+LNK06)",
+  "version": "0.11.0",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "verdict": {
+    "LNK05": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_PASS (LAB_MODEL_ONLY)",
+      "ci": "CI_PASS",
+      "pe_audit": "PE_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "LNK06": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_PASS (LAB_MODEL_ONLY)",
+      "ci": "CI_PASS",
+      "pe_audit": "PE_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    }
+  },
+  "base": {
+    "version": "0.10.1 FIX01",
+    "branch": "feature/posture-lnks1-fix01-direct-hit-ai-liveness",
+    "compiled_commit": "5454f32e0bb1fbdfde6ac866e94104e1b56df6be",
+    "dusk_sha256": "e7b8d5dff337ae1274abc586278999527efe3c1f5c40623b051a8403a29c397d",
+    "human": "HUMAN_PASS_ACOTADO per the user's brief (log dusklight-20261102-161734, not opened by Claude)"
+  },
+  "source": {
+    "repo": "iscoremusic26-maker/Mods-Duskligh",
+    "branch": "feature/posture-lnk05-lnk06-native-link-guard-break",
+    "compiled_commit": "b68b3ff3c941cca8446f1d36d984170f7eb8b316"
+  },
+  "ci": {
+    "repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "branch": "ci/posture-lnk05-lnk06-native-link-guard-break",
+    "ci_head": "6fb103140b963bb484018e39b9a80f24a2fcf9de",
+    "run_id": 41534362043,
+    "jobs": {
+      "build": "success",
+      "independent-download": "success"
+    },
+    "toolchain": "MSVC 14.51.36231 x64 (cl 19.51.36260)",
+    "labels": [
+      "LAB_PASS_MSVC",
+      "WINDOWS_MSVC_BUILD_OK",
+      "PE_NEGATIVES_REJECTED",
+      "WINDOWS_MSVC_PASS"
+    ]
+  },
+  "artifact": {
+    "id": 13183756914,
+    "name": "LNKS2_TEST_41534362043_1",
+    "zip_sha256": "8844ccc8717fe581b1cf58f1f3ec64585b4e8873cc8591f2464f085d4800e8b8",
+    "expires": "2026-12-02",
+    "filename": "POSTURE_LNK_SESSION02_0_11_0_NATIVE_LINK_GUARD_BREAK_RECOVERY_PRIVATE_TEST_windows-amd64_b68b3ff3c941.dusk",
+    "dusk_bytes": 101695,
+    "dusk_sha256": "6f880aff5d589931e0100879685b6c1efad9b76bb7478a8b1b891b48daecbcc2",
+    "dll_sha256": "9e30cb0651b4d76a28e4965d861563bb1997b79df580bf07a51175f4ac8f3e24",
+    "members": [
+      "mod.json",
+      "lib/windows-amd64/mod.dll"
+    ]
+  },
+  "local_verification": {
+    "download": "artifact downloaded by id through the GitHub API",
+    "verify_download": "ARTIFACT_DOWNLOADED_VERIFIED (hash, SHA256SUMS, members, mod.json == source, DLL hash, PE pin, procGuardBreakInit claim)",
+    "pe_audit": "PE_AUDIT_PASS pinned (40 game imports; HOOK_MEM 8 + HOOK_MEM_EXT 2; HEADER 1; IMPORT 5)",
+    "pe_negatives": "20/20 rejected",
+    "binary_store_audit": "one call to the procGuardBreakInit import thunk, inside the inlined checkDamageAction POST callback after the gate (inline mask test 0x4070C52 on +0x42fc, proc==0x1f refusal, allowed-origin table); immediately followed by movzwl +0x4144 (mProcID readback) compared with 0x1f; all 14 accesses to +0x4144/+0x42fc/+0x66c in the DLL are reads; no store through the Link register in that function"
+  },
+  "tests": {
+    "labs": 15,
+    "lab_checks_total": 1149363,
+    "inherited_14_lab_checks": 1045932,
+    "lnks2_lab_checks": 103431,
+    "lnks2_sweep_runs": 8064,
+    "mutations": "293/293 detected (236 inherited + 35 LNK05/06 logic + 22 source negatives)",
+    "source_audit": "SOURCE_AUDIT_PASS"
+  },
+  "hooks": {
+    "targets": 10,
+    "new_targets": 0,
+    "new_callbacks": "1 extra POST on daAlink_c::checkDamageAction",
+    "game_imports": 40,
+    "new_game_import": "?procGuardBreakInit@daAlink_c@@QEAAHXZ"
+  },
+  "link_writes": "NATIVE_TRANSITION_ONLY: daAlink_c::procGuardBreakInit() (the game's own routine); no mProcID/field_0x2fd5/mModeFlg/mDamageTimer/life writes, no artificial damage",
+  "values_unchanged": "weights Blue 20/30 Red 25/35 Black 30/40 Fury 35/45 Unknown 20/30 group +5; regen 10/8/5/2 x1.5 safe guard, 30-tick delay; parry +0 Link / +40 enemy; HUD 0.5,0.87 width 0.32; prompts hidden",
+  "rollback": {
+    "version": "0.10.1 FIX01",
+    "dusk_sha256": "e7b8d5dff337ae1274abc586278999527efe3c1f5c40623b051a8403a29c397d",
+    "never": [
+      "0.9.0 as base",
+      "0.8.1"
+    ]
+  },
+  "human": "HUMAN_RUNTIME_PENDING"
+}

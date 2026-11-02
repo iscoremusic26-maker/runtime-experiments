@@ -1,0 +1,22 @@
+{
+  "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "errors": [],
+  "package_sha256": "6f880aff5d589931e0100879685b6c1efad9b76bb7478a8b1b891b48daecbcc2",
+  "package_bytes": 101695,
+  "dll_sha256": "9e30cb0651b4d76a28e4965d861563bb1997b79df580bf07a51175f4ac8f3e24",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "version": "0.11.0",
+  "members": [
+    "mod.json",
+    "lib/",
+    "lib/windows-amd64/",
+    "lib/windows-amd64/mod.dll"
+  ],
+  "pe_audit_status": "PE_AUDIT_PASS",
+  "hook_thunk_bound_import": [
+    "dusklight.exe",
+    "?damage_check@daE_OC_c@@QEAAXXZ"
+  ],
+  "filename": "POSTURE_LNK_SESSION02_0_11_0_NATIVE_LINK_GUARD_BREAK_RECOVERY_PRIVATE_TEST_windows-amd64_b68b3ff3c941.dusk",
+  "runtime_tested": false
+}
