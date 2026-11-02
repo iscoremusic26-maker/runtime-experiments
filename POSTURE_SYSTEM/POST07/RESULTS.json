@@ -1,0 +1,138 @@
+{
+  "version": "0.7.0",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "menu_name": "Enemy Posture System PRIVATE TEST",
+  "verdict_labels": [
+    "SOURCE_IMPLEMENTED",
+    "HUD_RENDER_IMPLEMENTED",
+    "LAB_PASS",
+    "CI_PASS",
+    "PE_PASS",
+    "ARTIFACT_VERIFIED",
+    "HUMAN_RUNTIME_PENDING",
+    "LAYOUT_PARTIAL"
+  ],
+  "not_claimed": [
+    "PIXEL_ALIGNMENT_PASS",
+    "VISUAL_PASS",
+    "RUNTIME_PASS",
+    "PERF_PASS_ON_INTEL_UHD"
+  ],
+  "source": {
+    "repo": "iscoremusic26-maker/Mods-Duskligh",
+    "branch": "feature/posture-post07-hud",
+    "base": "5037d3f311c31dfb6b57a98a0c754b9e2bfd5ba9",
+    "code_commit": "c23a69c7cf62ea30d66424ddb662949a29b5cf99",
+    "compiled_commit": "f0e92c9f1d74d1b2d46447705fe1353cb3833eb8"
+  },
+  "ci": {
+    "repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "branch": "ci/posture-post07-hud",
+    "base": "3860ca54970ce4dcb3a3b995edc6f68eb44126a3",
+    "runs": [
+      {
+        "run": 41392200339,
+        "head": "770b52464318a64d641f16e44153f734d4907de0",
+        "source": "c23a69c7cf62",
+        "conclusion": "failure",
+        "reason": "PE pin: 4 J2DGrafContext vtable-slot imports + CRT free/sqrtf not predicted; everything before the PE audit passed"
+      },
+      {
+        "run": 41392661597,
+        "head": "4ecfd429db63177e20d2a424c27dc3062d5a3bdc",
+        "source": "f0e92c9f1d74",
+        "conclusion": "success",
+        "jobs": {
+          "build": "success",
+          "independent-download": "success"
+        },
+        "msvc": "14.51.36231"
+      }
+    ]
+  },
+  "artifact": {
+    "id": 13118435513,
+    "name": "POST07_TEST_41392661597_1",
+    "zip_bytes": 58253,
+    "zip_sha256": "bccc31a501c6e349b76fc24324ce32d1c95fafc668bd8125fcd9836ca06979bc",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41392661597/artifacts/13118435513",
+    "expires": "2026-12-02T05:14:28Z",
+    "dusk": "POSTURE_POST07_0_HUD_PRIVATE_TEST_windows-amd64_f0e92c9f1d74.dusk",
+    "dusk_bytes": 56686,
+    "dusk_sha256": "070533d756f1329db3e48a47c00e0245deee08fff7fc0243a647bcd7ead23afd",
+    "dll_bytes": 123392,
+    "dll_sha256": "ca507493b39b40247f78cefc4e388220c5516096c2a9cfb4056d02968f0609d9",
+    "verified": [
+      "CI job independent-download ARTIFACT_DOWNLOADED_VERIFIED (artifact 13117854433)",
+      "local download by artifact ID: SHA256SUMS match, mod.json == source, PE_AUDIT_PASS with the pinned expectation"
+    ]
+  },
+  "rollback": {
+    "version": "0.6.1",
+    "run": 41386845338,
+    "artifact": 13115359099,
+    "dusk": "POSTURE_POST06_1_REWORK_PRIVATE_TEST_windows-amd64_5037d3f311c3.dusk",
+    "bytes": 44011,
+    "sha256": "408b0c32679b1b930658e79e5f72ae123a4cf49bd382d98d2c549bb0285c030a",
+    "sha_reverified_locally": true
+  },
+  "labs_msvc": {
+    "hit_lab": 1660,
+    "lifecycle_lab": 29558,
+    "collider_lab": 12826,
+    "posture_lab": 556878,
+    "reaction_lab": 36933,
+    "compat_lab": 55991,
+    "rb_lab": 21313,
+    "general_lab": 5560,
+    "break_lab": 243624,
+    "hud_lab": 57742,
+    "failures": 0
+  },
+  "labs_gpp_local": "identical counts (EVIDENCE/local_labs_gpp.txt)",
+  "mutations": {
+    "count": 64,
+    "detected": 64,
+    "post06": 21,
+    "fix_rearm50": 4,
+    "hud_logic": 23,
+    "source_audit_negatives": 16
+  },
+  "pe": {
+    "status": "PE_AUDIT_PASS",
+    "hook_mem": 5,
+    "game_imports": 35,
+    "new_game_imports": 28,
+    "crt_added": [
+      "sqrtf",
+      "free"
+    ],
+    "optional_service": "dev.twilitrealm.dusklight.interp 1.0",
+    "pe_negatives_rejected": "11/11"
+  },
+  "dll_store_audit": {
+    "method": "objdump of the downloaded DLL vs the 0.6.1 rollback DLL; stores with actor displacements (0x8c8,0x8cc,0x8d0,0x8e0,0x8e2,0x69a,0xce8,0xd08,0xea0,0xec0,0x656,0x650,0x668)",
+    "result": "per-field store multiset identical to 0.6.1 (MSVC merged post06_recover old_mode=5/state=0 into one movq at 0x8cc); all in do_pre/do_post/post06_step/restore_reaction; zero in hud_sim_pass, hud_packet_paint, hud_drop_all, on_meter_*"
+  },
+  "hud": {
+    "placement": "sy+3.4..sy+6.0 below the EHB-equivalent life bar (sy-2..sy+2), half width 14",
+    "fill": "centre to both ends, E=f*12.42",
+    "max_quads_per_bar": 51,
+    "max_bars_painted": 16,
+    "slots": 64,
+    "reference_renders": "EVIDENCE/ci_41392661597/POST07_REFERENCE_RENDER_{720p,1080p,2160p}.png (MSVC, LAB raster model, not game screenshots)"
+  },
+  "rearm50": {
+    "verdict": "FIX_REARM50 (case i proven)",
+    "evidence": "EVIDENCE/REARM50_LOG_EXCERPT.md",
+    "log": "dusklight-20261101-231855 (read with permission, temporary copy deleted)"
+  },
+  "human_pending": [
+    "in-game look and pixel alignment under EHB (captures 1-4)",
+    "no ghost bars on room change/death",
+    "pulse once per crossing in game",
+    "FPS with 6-8 Bokoblins on Intel UHD",
+    "REARM_AFTER_NATIVE_GET_UP_REDIRECTED_0 in a Blue group with Expansion",
+    "8-mod compatibility"
+  ]
+}

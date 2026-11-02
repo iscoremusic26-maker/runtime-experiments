@@ -1,0 +1,262 @@
+{
+  "mutations": [
+    {
+      "mutation": "shield_collider_missing",
+      "detected": true
+    },
+    {
+      "mutation": "shield_is_sword",
+      "detected": true
+    },
+    {
+      "mutation": "nondecisive_fall",
+      "detected": true
+    },
+    {
+      "mutation": "helm_episode_lost",
+      "detected": true
+    },
+    {
+      "mutation": "helm_stale_contact",
+      "detected": true
+    },
+    {
+      "mutation": "helm_shield_contact",
+      "detected": true
+    },
+    {
+      "mutation": "timed_fall",
+      "detected": true
+    },
+    {
+      "mutation": "old_120",
+      "detected": true
+    },
+    {
+      "mutation": "shield_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "break_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "duplicate_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "foreign_sword",
+      "detected": true
+    },
+    {
+      "mutation": "helm_without_shield",
+      "detected": true
+    },
+    {
+      "mutation": "renew_shield_window",
+      "detected": true
+    },
+    {
+      "mutation": "long_timeout",
+      "detected": true
+    },
+    {
+      "mutation": "wrong_abort_posture",
+      "detected": true
+    },
+    {
+      "mutation": "wrong_timeout_posture",
+      "detected": true
+    },
+    {
+      "mutation": "early_rearm",
+      "detected": true
+    },
+    {
+      "mutation": "no_normalize_helm",
+      "detected": true
+    },
+    {
+      "mutation": "heal_native_loss",
+      "detected": true
+    },
+    {
+      "mutation": "double_rounding",
+      "detected": true
+    },
+    {
+      "mutation": "redirect_rearm_50",
+      "detected": true
+    },
+    {
+      "mutation": "redirect_hit_rearms",
+      "detected": true
+    },
+    {
+      "mutation": "redirect_from_down",
+      "detected": true
+    },
+    {
+      "mutation": "redirect_uncounted",
+      "detected": true
+    },
+    {
+      "mutation": "hud_fill_one_side",
+      "detected": true
+    },
+    {
+      "mutation": "hud_fill_double",
+      "detected": true
+    },
+    {
+      "mutation": "hud_overlaps_life",
+      "detected": true
+    },
+    {
+      "mutation": "hud_pulse_every_tick",
+      "detected": true
+    },
+    {
+      "mutation": "hud_pulse_on_bind",
+      "detected": true
+    },
+    {
+      "mutation": "hud_no_identity_reset",
+      "detected": true
+    },
+    {
+      "mutation": "hud_ghost_kept",
+      "detected": true
+    },
+    {
+      "mutation": "hud_dead_phase_shown",
+      "detected": true
+    },
+    {
+      "mutation": "hud_pause_animates",
+      "detected": true
+    },
+    {
+      "mutation": "hud_green_ramp",
+      "detected": true
+    },
+    {
+      "mutation": "hud_opaque_blend",
+      "detected": true
+    },
+    {
+      "mutation": "hud_j2d_swap_missing",
+      "detected": true
+    },
+    {
+      "mutation": "hud_frozen_shown",
+      "detected": true
+    },
+    {
+      "mutation": "hud_zero_shown",
+      "detected": true
+    },
+    {
+      "mutation": "hud_premature_unbroken",
+      "detected": true
+    },
+    {
+      "mutation": "hud_budget_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "hud_farthest_first",
+      "detected": true
+    },
+    {
+      "mutation": "hud_scrub_keeps_packet",
+      "detected": true
+    },
+    {
+      "mutation": "hud_queue_without_hud",
+      "detected": true
+    },
+    {
+      "mutation": "hud_anchor_drops",
+      "detected": true
+    },
+    {
+      "mutation": "hud_head_offset",
+      "detected": true
+    },
+    {
+      "mutation": "hud_fade_band",
+      "detected": true
+    },
+    {
+      "mutation": "hud_asym_tip",
+      "detected": true
+    },
+    {
+      "mutation": "extra_hp",
+      "detected": true
+    },
+    {
+      "mutation": "power",
+      "detected": true
+    },
+    {
+      "mutation": "anim_rate",
+      "detected": true
+    },
+    {
+      "mutation": "cooldown_elsewhere",
+      "detected": true
+    },
+    {
+      "mutation": "second_writer",
+      "detected": true
+    },
+    {
+      "mutation": "hud_writes_meter",
+      "detected": true
+    },
+    {
+      "mutation": "hud_writes_health",
+      "detected": true
+    },
+    {
+      "mutation": "hud_rearms_posture",
+      "detected": true
+    },
+    {
+      "mutation": "hud_reads_breaker_internals",
+      "detected": true
+    },
+    {
+      "mutation": "hud_second_queue_walk",
+      "detected": true
+    },
+    {
+      "mutation": "hud_direct_set",
+      "detected": true
+    },
+    {
+      "mutation": "hud_painter_reads_posture",
+      "detected": true
+    },
+    {
+      "mutation": "hud_no_scrub_on_shutdown",
+      "detected": true
+    },
+    {
+      "mutation": "hud_extra_service",
+      "detected": true
+    },
+    {
+      "mutation": "hud_extra_hook",
+      "detected": true
+    },
+    {
+      "mutation": "hud_core_reads_posture",
+      "detected": true
+    }
+  ],
+  "count": 64,
+  "detected": 64
+}

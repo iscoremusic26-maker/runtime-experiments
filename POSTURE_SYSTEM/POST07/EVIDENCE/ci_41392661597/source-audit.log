@@ -1,0 +1,16 @@
+{
+  "files": [
+    "break_core.hpp",
+    "engine.hpp",
+    "helm_core.hpp",
+    "hit_core.hpp",
+    "hud_core.hpp",
+    "lifecycle_core.hpp",
+    "mod.cpp",
+    "posture_core.hpp",
+    "reaction_core.hpp"
+  ],
+  "errors": [],
+  "define_hook_count": 5,
+  "status": "SOURCE_AUDIT_PASS"
+}

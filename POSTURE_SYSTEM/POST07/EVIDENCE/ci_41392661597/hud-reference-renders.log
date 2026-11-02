@@ -1,0 +1,39 @@
+RENDER <WORK>\evidence/POST07_REFERENCE_RENDER_1080p.png 97x348 rows=12 scale=2.411 px/unit OK
+RENDER_ROW 0 posture_10
+RENDER_ROW 1 posture_25
+RENDER_ROW 2 posture_50
+RENDER_ROW 3 posture_75
+RENDER_ROW 4 posture_90
+RENDER_ROW 5 hit_75
+RENDER_ROW 6 recover_60
+RENDER_ROW 7 crossing_pulse_start
+RENDER_ROW 8 crossing_pulse_mid
+RENDER_ROW 9 stagger_open_breathe_lo
+RENDER_ROW 10 stagger_open_breathe_hi
+RENDER_ROW 11 missed_stun_retract_70
+RENDER <WORK>\evidence/POST07_REFERENCE_RENDER_2160p.png 193x695 rows=12 scale=4.821 px/unit OK
+RENDER_ROW 0 posture_10
+RENDER_ROW 1 posture_25
+RENDER_ROW 2 posture_50
+RENDER_ROW 3 posture_75
+RENDER_ROW 4 posture_90
+RENDER_ROW 5 hit_75
+RENDER_ROW 6 recover_60
+RENDER_ROW 7 crossing_pulse_start
+RENDER_ROW 8 crossing_pulse_mid
+RENDER_ROW 9 stagger_open_breathe_lo
+RENDER_ROW 10 stagger_open_breathe_hi
+RENDER_ROW 11 missed_stun_retract_70
+RENDER <WORK>\evidence/POST07_REFERENCE_RENDER_720p.png 65x232 rows=12 scale=1.607 px/unit OK
+RENDER_ROW 0 posture_10
+RENDER_ROW 1 posture_25
+RENDER_ROW 2 posture_50
+RENDER_ROW 3 posture_75
+RENDER_ROW 4 posture_90
+RENDER_ROW 5 hit_75
+RENDER_ROW 6 recover_60
+RENDER_ROW 7 crossing_pulse_start
+RENDER_ROW 8 crossing_pulse_mid
+RENDER_ROW 9 stagger_open_breathe_lo
+RENDER_ROW 10 stagger_open_breathe_hi
+RENDER_ROW 11 missed_stun_retract_70
