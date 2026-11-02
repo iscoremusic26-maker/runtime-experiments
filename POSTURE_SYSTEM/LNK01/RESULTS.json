@@ -1,0 +1,135 @@
+{
+  "checkpoint": "LNK01",
+  "version": "0.9.0",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "verdict": {
+    "source": "SOURCE_IMPLEMENTED",
+    "lab": "LAB_PASS (LAB_MODEL_ONLY)",
+    "ci": "CI_PASS",
+    "pe_audit": "PE_AUDIT_PASS",
+    "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "runtime": "HUMAN_RUNTIME_PENDING",
+    "visual": "HUMAN_VISUAL_PENDING"
+  },
+  "base": {
+    "branch": "feature/posture-post08-fix02-ai-recovery",
+    "compiled_commit": "62533c27730de14abcf65bf8d6d3ed409db2503f",
+    "dusk_sha256": "b0e245e687b313ce07b1efaf8ba3bc3e2cfe65205ed4dba5d909dc716c7166ba"
+  },
+  "source": {
+    "repo": "iscoremusic26-maker/Mods-Duskligh",
+    "branch": "feature/posture-lnk01-player-hud-block-posture",
+    "compiled_commit": "10dff331f2013965cee41e4890a8585489478a92"
+  },
+  "ci": {
+    "repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "branch": "ci/posture-lnk01-player-hud-block-posture",
+    "ci_head": "eff2eb0",
+    "run_id": 41495366683,
+    "jobs": {
+      "build": "success",
+      "independent-download": "success"
+    },
+    "toolchain": "MSVC 14.51.36231, VS 18.0, Windows SDK 10.0.26100.0, x64",
+    "host_pin": "40457c6adb381928e4b5fef6ed459ed291edd5e2"
+  },
+  "artifact": {
+    "id": 13166950661,
+    "name": "LNK01_TEST_41495366683_1",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41495366683/artifacts/13166950661",
+    "expires": "2026-12-02T17:57:43Z",
+    "zip_bytes": 82359,
+    "zip_sha256": "492d9a436933612806b333bc49e12e8463c5bf28b5f6da7616d87004e90bce1a",
+    "dusk": "POSTURE_LNK01_0_9_0_LINK_BAR_HIDE_ACTION_PROMPTS_PRIVATE_TEST_windows-amd64_10dff331f201.dusk",
+    "dusk_bytes": 80077,
+    "dusk_sha256": "8f1562aac831257b89aafa069d182d98e2f5ac0bff876d7e1eab638b72f4672c",
+    "dll_bytes": 169984,
+    "dll_sha256": "c6cc7f4ceb5cbde6cba09e908a1c55d85922666e427b05d6e35c38ed4d8a0a86",
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "verification": {
+      "ci_independent_download": "ARTIFACT_DOWNLOADED_VERIFIED (artifact 13165209538)",
+      "local_download_by_id": "SHA OK, real ZIP (.dusk) with mod.json + DLL only, no EXE/ROM, mod.json byte-identical to source, PE_AUDIT_PASS with the pin, 14/14 PE negatives rejected"
+    }
+  },
+  "labs_msvc": {
+    "hit_lab": 1660,
+    "lifecycle_lab": 29558,
+    "collider_lab": 12826,
+    "posture_lab": 556878,
+    "reaction_lab": 36933,
+    "compat_lab": 55991,
+    "rb_lab": 21313,
+    "general_lab": 5560,
+    "break_lab": 243624,
+    "hud_lab": 57742,
+    "parry_lab": 1570,
+    "lnk_lab": 528,
+    "failures": 0,
+    "inherited_counts_identical_to_0_8_2": true
+  },
+  "mutations": {
+    "total": 168,
+    "detected": 168,
+    "inherited": 130,
+    "new_lnk01": 38,
+    "new_logic": 22,
+    "new_source_audit": 16
+  },
+  "pe": {
+    "hook_mem": 6,
+    "new_hook": "dMeterButton_c::draw (virtual, local slot-0 vcall thunk, PRE+POST HOOK_CONTINUE)",
+    "game_imports_added": [],
+    "game_imports_removed": [],
+    "crt_imports_changed": false,
+    "negatives": 14
+  },
+  "binary_store_audit": {
+    "new_game_memory_stores": [
+      "action_ui_step: mov byte [rsi+0xb0], 0 (J2DPane::mVisible of the prompt button screen root)",
+      "on_prompt_draw_pre: mov word [rbx+0x5d2], 0x1616 (two sparkle slots -> BUTTON_NONE, own draw only)",
+      "on_prompt_draw_post: mov byte [rdx+0x5d2]/[rdx+0x5d3] (exact restore)"
+    ],
+    "ownership": "HUD_VISUAL_ONLY",
+    "actor_writes_added": 0,
+    "link_writes": 0
+  },
+  "hud": {
+    "centre_norm": [
+      0.5,
+      0.87
+    ],
+    "width": "32% of the 16:9 safe width",
+    "px_1080p": "614x16 (fill 11)",
+    "enemy_bar_px_1080p": "~67",
+    "layer": "2D XLU after 2D OpaTop (POST07 packet, drawn last)"
+  },
+  "action_prompts": {
+    "family": "dMeterButton_c (dMeter2_c::mpEmpButton), zelda_game_image_button_info.blo, centred, mEmpButtonPosY=175/448",
+    "hidden": "button screen root (all icons, action texts, arrows) + sparkles",
+    "kept": "floating message frame/text, top-right A/B/X/Y cluster, all other HUD, cutscene-skip prompt"
+  },
+  "link_posture": {
+    "max": 100,
+    "gain_block": 20,
+    "gain_parry": 0,
+    "regen_delay_ticks": 30,
+    "regen_pts_per_s": 10,
+    "timebase": "mod_update sim tick (30 Hz)",
+    "native_guard_break": "untouched (LNK05)"
+  },
+  "pending_human": [
+    "bar position/size/look",
+    "no bottom action prompts and controls working",
+    "+20 per real block, no gain on parry",
+    "regen/fade",
+    "8-mod regression incl. POST08 parries and AI",
+    "resolutions/ultrawide",
+    "wolf/horse/swim/room change/death"
+  ],
+  "rollback": "0.8.2 FIX02 (62533c27730d, b0e245e6...66ba); never 0.8.1"
+}

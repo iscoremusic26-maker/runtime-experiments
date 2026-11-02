@@ -1,0 +1,22 @@
+{
+  "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "errors": [],
+  "package_sha256": "8f1562aac831257b89aafa069d182d98e2f5ac0bff876d7e1eab638b72f4672c",
+  "package_bytes": 80077,
+  "dll_sha256": "c6cc7f4ceb5cbde6cba09e908a1c55d85922666e427b05d6e35c38ed4d8a0a86",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "version": "0.9.0",
+  "members": [
+    "mod.json",
+    "lib/",
+    "lib/windows-amd64/",
+    "lib/windows-amd64/mod.dll"
+  ],
+  "pe_audit_status": "PE_AUDIT_PASS",
+  "hook_thunk_bound_import": [
+    "dusklight.exe",
+    "?damage_check@daE_OC_c@@QEAAXXZ"
+  ],
+  "filename": "POSTURE_LNK01_0_9_0_LINK_BAR_HIDE_ACTION_PROMPTS_PRIVATE_TEST_windows-amd64_10dff331f201.dusk",
+  "runtime_tested": false
+}
