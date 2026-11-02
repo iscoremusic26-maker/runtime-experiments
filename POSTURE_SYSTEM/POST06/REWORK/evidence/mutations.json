@@ -1,6 +1,30 @@
 {
   "mutations": [
     {
+      "mutation": "shield_collider_missing",
+      "detected": true
+    },
+    {
+      "mutation": "shield_is_sword",
+      "detected": true
+    },
+    {
+      "mutation": "nondecisive_fall",
+      "detected": true
+    },
+    {
+      "mutation": "helm_episode_lost",
+      "detected": true
+    },
+    {
+      "mutation": "helm_stale_contact",
+      "detected": true
+    },
+    {
+      "mutation": "helm_shield_contact",
+      "detected": true
+    },
+    {
       "mutation": "timed_fall",
       "detected": true
     },
@@ -81,6 +105,6 @@
       "detected": true
     }
   ],
-  "count": 20,
-  "detected": 20
+  "count": 26,
+  "detected": 26
 }

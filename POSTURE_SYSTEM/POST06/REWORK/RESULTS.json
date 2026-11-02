@@ -1,10 +1,64 @@
 {
-  "status": "SOURCE_IMPLEMENTED_CI_PENDING",
-  "base_compiled": "a0a81535639459275702371324448e96a5d17575",
-  "new_version": "0.6.1",
-  "runtime": "HUMAN_RUNTIME_PENDING",
-  "logs": "LOG_NOT_LOCALLY_AVAILABLE",
-  "window": "min(native stun animation lifetime,90 own actor executions)",
-  "new_artifact": null,
-  "scope": "Independent CP21-equivalent Helm + shield-stun opportunity + decisive x1.50; no timed fall"
+  "status": "PARTIAL_CANDIDATE_HUMAN_RUNTIME_PENDING",
+  "implemented": "shield stun -> real decisive sword/Helm x1.50 once -> native fall/Finish/getup; standing timeout50; no timed fall",
+  "qualification": "Native stun can end before90 own executes; visual duration and Shield->Helm timing need human verification",
+  "source_compiled": "5037d3f311c31dfb6b57a98a0c754b9e2bfd5ba9",
+  "source_base": "a0a81535639459275702371324448e96a5d17575",
+  "source_branch": "feature/posture-post06-rework",
+  "ci_sha": "3860ca54970ce4dcb3a3b995edc6f68eb44126a3",
+  "ci_branch": "ci/posture-post06-rework",
+  "run": 41386845338,
+  "artifact": 13115359099,
+  "artifact_zip_sha256": "75aa6be2fc8d7062e373eddd21bd8e5d7d2f45cda1f41dd4513a4ea72039a2bd",
+  "filename": "POSTURE_POST06_1_REWORK_PRIVATE_TEST_windows-amd64_5037d3f311c3.dusk",
+  "bytes": 44011,
+  "sha256": "408b0c32679b1b930658e79e5f72ae123a4cf49bd382d98d2c549bb0285c030a",
+  "dll_bytes": 89088,
+  "dll_sha256": "a5f1cc37e3f90af1fb145dc5845b3326957a9d9ff89b8f694475a9ef04ecfca2",
+  "expires_utc": "2026-12-02T04:11:03Z",
+  "expires_panama": "2026-12-01 23:11:03 America/Panama",
+  "independent_download_verified": true,
+  "labels": [
+    "SOURCE_IMPLEMENTED",
+    "LAB_PASS",
+    "CI_PASS",
+    "PE_AUDIT_PASS",
+    "HUMAN_RUNTIME_PENDING"
+  ],
+  "log_0_5_4": "LOG_NOT_LOCALLY_AVAILABLE",
+  "log_0_6_0": "LOG_NOT_LOCALLY_AVAILABLE",
+  "baseline_labs": {
+    "hit": 1660,
+    "lifecycle": 29558,
+    "collider": 12826,
+    "posture": 556878,
+    "reaction": 36933,
+    "compat": 55991,
+    "rb": 21313,
+    "general": 5560,
+    "break": 434
+  },
+  "new_break_checks": 242681,
+  "new_mutations": {
+    "detected": 26,
+    "total": 26,
+    "platforms": [
+      "g++",
+      "MSVC"
+    ]
+  },
+  "baseline_mutations": {
+    "detected": 240,
+    "total": 240,
+    "commit": "a0a81535639459275702371324448e96a5d17575"
+  },
+  "lsan": "disabled under ptrace; ASAN+UBSAN used",
+  "runtime_tested_by_agent": false,
+  "ci_build_stage_status": "POST05_PACKAGE_PASS_DOWNLOAD_PENDING",
+  "ci_download_stage_status": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "pe_negatives": {
+    "rejected": 10,
+    "passed_unexpectedly": 0
+  },
+  "source_file_hashes_verified": 44
 }

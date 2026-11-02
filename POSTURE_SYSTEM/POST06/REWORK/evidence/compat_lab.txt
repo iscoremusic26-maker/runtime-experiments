@@ -1,3 +1,2 @@
-FAIL /workspace/work/post06-rework/POSTURE_SYSTEM/POST05/tests/compat_lab.cpp:644  !std::strcmp(kModVersion, "0.6.0") && !std::strcmp(post04::kPostureVersion, "0.6.0") && !std::strcmp(post05::kReactionVersion, "0.6.0")
 stress coverage: oracle_compares=52872 applied=140 (atp2=73) e_oc2_deferred=25174 (would_be_eligible=133) power_changed=14 unsafe=56 vanilla=27488
-POST05_COMPAT_LAB checks=55991 failures=1 RESULT=FAIL
+POST05_COMPAT_LAB checks=55991 failures=0 RESULT=LAB_PASS

@@ -1,0 +1,16 @@
+{
+  "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "run": 41386845338,
+  "artifact": 13115359099,
+  "zip_bytes": 45394,
+  "zip_sha256": "75aa6be2fc8d7062e373eddd21bd8e5d7d2f45cda1f41dd4513a4ea72039a2bd",
+  "package_bytes": 44011,
+  "package_sha256": "408b0c32679b1b930658e79e5f72ae123a4cf49bd382d98d2c549bb0285c030a",
+  "dll_bytes": 89088,
+  "dll_sha256": "a5f1cc37e3f90af1fb145dc5845b3326957a9d9ff89b8f694475a9ef04ecfca2",
+  "source_compiled": "5037d3f311c31dfb6b57a98a0c754b9e2bfd5ba9",
+  "manifest_id_version_verified": true,
+  "pe_audit_status": "PE_AUDIT_PASS",
+  "game_executed": false,
+  "dll_loaded": false
+}
