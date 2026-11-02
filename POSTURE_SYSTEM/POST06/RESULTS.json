@@ -1,0 +1,51 @@
+{
+ "verdict": "POST06_PRIVATE_HUMAN_PENDING",
+ "version": "0.6.0",
+ "mod_id": "dev.posture.post05_selective_reactions",
+ "source": {
+  "branch": "feature/posture-post06-break-punish",
+  "compiled_commit": "a0a81535639459275702371324448e96a5d17575",
+  "base_0_5_4": "3053a75113024335cf583ed14474ddc2a4a62839"
+ },
+ "ci": {
+  "branch": "ci/posture-post06-break-punish",
+  "head": "3b17ac8762ebba250ffba891009f0e4e9634e15a",
+  "run": 41376998495,
+  "artifact_id": 13111921457,
+  "dusk": {
+   "name": "POSTURE_POST06_0_BREAK_PRIVATE_TEST_windows-amd64_a0a815356394.dusk",
+   "bytes": 41519,
+   "sha256": "fcc61396736c38591d4bca803386d975427a09cc3f30e7d026ad177bd504e94e"
+  },
+  "dll": {
+   "bytes": 83456,
+   "sha256": "89065ad66ff619c70fc16d551969e71eedd311ab19c04b04ac948de9fda64042"
+  },
+  "new_game_imports": 0,
+  "audits": [
+   "SOURCE_AUDIT_PASS",
+   "PE_AUDIT_PASS",
+   "PE_NEGATIVES 11/11",
+   "ARTIFACT_DOWNLOADED_VERIFIED"
+  ]
+ },
+ "rollback": {
+  "version": "0.5.4",
+  "artifact_id": 13109308222,
+  "dusk_sha256": "d3b7ddb63dc300bf55d42fca184bea9c12c72b3797c105b5e43337b2126d2a91"
+ },
+ "labs": {
+  "hit": 1660,
+  "lifecycle": 29558,
+  "collider": 12826,
+  "posture": 556878,
+  "reaction": 36933,
+  "compat": 55991,
+  "rb": 21313,
+  "general": 5560,
+  "break": 434,
+  "failures": 0
+ },
+ "mutations": "240/240 (169 logic incl. BK01-BK18, 71 source incl. S66-S71)",
+ "runtime": "HUMAN_RUNTIME_PENDING"
+}

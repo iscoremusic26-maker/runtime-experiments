@@ -3,7 +3,8 @@
 **Estado:** `HUMAN_RUNTIME_PENDING`. Compila y supera las auditorías del CI, pero nadie la ha cargado en el juego.
 
 ## Instalación (con el juego cerrado)
-- **Instala solo el `.dusk` 0.6.0.** El enlace y el SHA-256 están en `IMPLEMENTATION.md`, sección «CI y binario».
+- **Descarga:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41376998495/artifacts/13111921457
+- **Instala solo** `POSTURE_POST06_0_BREAK_PRIVATE_TEST_windows-amd64_a0a815356394.dusk`: 41519 bytes, SHA-256 `fcc61396736c38591d4bca803386d975427a09cc3f30e7d026ad177bd504e94e`. Caduca el 2026-12-02.
 - **Mismo ID que POST05:** retira el 0.5.4. **Nunca los dos a la vez.**
 - **Rollback a 0.5.4:** cierra el juego, borra el 0.6.0 y copia `POSTURE_POST05_4_GENERAL_PRIVATE_TEST_windows-amd64_3053a7511302.dusk` (SHA-256 `d3b7ddb63dc300bf55d42fca184bea9c12c72b3797c105b5e43337b2126d2a91`). No hay que tocar partidas.
 

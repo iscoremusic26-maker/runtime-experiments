@@ -88,6 +88,37 @@ Mismo hook único (`daE_OC_c::damage_check`), PRE siempre `HOOK_CONTINUE`, sin i
   - escritura que no verifica (sin cambio de fase, aborto por límite).
 - **Labs heredados:** hit/lifecycle/collider/posture/reaction/compat/rb/general con sus conteos.
 
+## CI y binario [C][B]
+- **Run:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41376998495. `build` e `independent-download` en éxito al primer intento.
+- **Origen del build:** espejo `ci/posture-post06-break-punish` @ `3b17ac8762ebba250ffba891009f0e4e9634e15a`; fuente compilada `a0a81535639459275702371324448e96a5d17575`; libro de control de 43 archivos.
+- **Compilador y labs:** MSVC 19.51. Los 9 labs dan los mismos conteos que con g++.
+- **Auditorías:** `SOURCE_AUDIT_PASS` (reglas nuevas de `write_vitality` y de los tres sitios de `restore_reaction`), `PE_AUDIT_PASS` y 11/11 negativas PE.
+- **Imports y exports:** los mismos 3 imports del juego y los mismos 5 exports.
+- **Descarga:** https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41376998495/artifacts/13111921457 (ZIP `POST06_TEST_41376998495_1`, 42960 bytes, `c1aef421…a9e3`).
+- **`.dusk`:** `POSTURE_POST06_0_BREAK_PRIVATE_TEST_windows-amd64_a0a815356394.dusk`, **41519 bytes**, SHA-256 **`fcc61396736c38591d4bca803386d975427a09cc3f30e7d026ad177bd504e94e`**. Caduca el 2026-12-02 02:20 UTC.
+- **DLL:** 83456 bytes, `89065ad66ff619c70fc16d551969e71eedd311ab19c04b04ac948de9fda64042`. `mod.json` es idéntico al de la fuente.
+- **Descarga independiente por ID:** coincide con el digest y con `SHA256SUMS`. El job lo marca `ARTIFACT_DOWNLOADED_VERIFIED`.
+- **DLL descargada:**
+  - **Caída de POST06** (0x18000c3ef–435): `0x8cc ← modo`, `0x8c8 ← 6`, u32 `0x8e0 ← 0`, `and $0xff7f` en `0x69a`, `0x8d0 ← 0` y `orl $1` en `0xce8/0xd08/0xea0/0xec0`. Es la misma secuencia que `setActionMode` del EXE (0x140e0d260). La máscara de modos compilada, `0x181bb`, es {0,1,3,4,5,7,8,15,16}.
+  - **Bonus:** solo `mov %si,0x656` (vida) y `movl $0,0x650` (atención, en la rama letal).
+  - **Restauración de 0.5.4:** sin cambios.
+  - 0 stores a cooldown, `mName`, `mAtInfo`, `mpMorf`, `speedF` o AtAtp.
+
+## Matriz de requisitos
+| Requisito | Estado |
+|---|---|
+| Por debajo de 100, sin tambaleo (0.5.4) | IMPLEMENTED, LAB_PASS, CI_PASS; 0.5.4 visto por el usuario [R]; 0.6.0 HUMAN_RUNTIME_PENDING |
+| Ruptura única por ciclo | IMPLEMENTED, LAB_PASS, CI_PASS, HUMAN_RUNTIME_PENDING |
+| Castigo con reacciones nativas | IMPLEMENTED, LAB_PASS, CI_PASS, HUMAN_RUNTIME_PENDING |
+| x1,20 fijo en espadazos (no en la ruptura, Finish ni otras familias) | IMPLEMENTED, LAB_PASS (12/12/12, fracciones, letal), CI_PASS, HUMAN_RUNTIME_PENDING |
+| Caída a 1 s sin espadazo / 3 s máximo | IMPLEMENTED, LAB_PASS, CI_PASS, HUMAN_RUNTIME_PENDING |
+| Derribo nativo previo sin doble caída | IMPLEMENTED, LAB_PASS, CI_PASS, HUMAN_RUNTIME_PENDING |
+| Finish nativo en el suelo | sin escrituras de POST06 (nativo); LAB_PASS en el modelo; HUMAN_RUNTIME_PENDING |
+| Levantamiento nativo y rearme solo tras FIND | IMPLEMENTED, LAB_PASS, CI_PASS, HUMAN_RUNTIME_PENDING |
+| Recuperación 5/4/3/2/1 por banda de vida | IMPLEMENTED, LAB_PASS (exacta), CI_PASS, HUMAN_RUNTIME_PENDING |
+| Sin HUD ni efectos o sonidos nuevos | cumplido |
+| Expansion (x2, cadena, chip, robo de vida) | sin cambios de contrato con Expansion; HUMAN_RUNTIME_PENDING. Límite x2 de 0.5.4 sin empeorar |
+
 ## Lo que no se puede saber sin jugar [P]
 - Que la caída provocada por POST06 se vea como la nativa: es la misma rama de BIG_DAMAGE, pero la dirección del salto es la del último golpe.
 - Que el Finish aparezca y funcione en el suelo.
