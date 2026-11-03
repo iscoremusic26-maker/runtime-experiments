@@ -1,0 +1,24 @@
+{
+  "base_compiled_source": "2d0e59329f14d822c1905ee7953d337959932f1f",
+  "sections": [
+    {
+      "name": "HUD_FIX03_ownership_and_leases",
+      "bytes": 27883,
+      "sha256": "98ca1e03197bd75043247715bb21b89d26afd658972361fdb1eee56155752cb9",
+      "byte_identical": true
+    },
+    {
+      "name": "Link_and_native_contacts",
+      "bytes": 59566,
+      "sha256": "63a81faa6b39bc60e459a1404f41ea92e8186e0dbb78b1437447ce64041b6593",
+      "byte_identical": true
+    },
+    {
+      "name": "enemy_alignment_and_presentation",
+      "bytes": 42684,
+      "sha256": "a91a7c8a496dcdc434e37c39465c98b2fd225426e32750609857c59b2b44f9e7",
+      "byte_identical": true
+    }
+  ],
+  "baseline_pin_file_unchanged": true
+}

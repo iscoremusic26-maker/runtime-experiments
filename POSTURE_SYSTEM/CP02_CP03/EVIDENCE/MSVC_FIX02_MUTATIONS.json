@@ -1,0 +1,74 @@
+{
+  "positive_control": "PASS",
+  "count": 11,
+  "detected": 11,
+  "timeouts": 0,
+  "mutations": [
+    {
+      "mutation": "foreign_string_collateral",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "ui_disabled",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "ui_no_pane_suppression",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "ui_no_restore",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "ui_outfont_leak",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "ui_direct_picture_leak",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "ui_string_leak",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "ui_font_restore_wrong",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "mirror_context_reset_lost",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "mirror_native_handle_retained",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    },
+    {
+      "mutation": "mirror_wrong_offset",
+      "status": "KILLED",
+      "detected": true,
+      "timeout": false
+    }
+  ]
+}

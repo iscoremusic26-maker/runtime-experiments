@@ -1,0 +1,13 @@
+{
+  "post06_step_only_diagnostics_changed": true,
+  "do_update_only_eligible_argument_changed": true,
+  "break_core.hpp_only_approved_constants": true,
+  "parry_core.hpp_only_approved_constants": true,
+  "posture_consume_unchanged": true,
+  "posture_rearm_unchanged": true,
+  "posture_preview_parry_unchanged": true,
+  "posture_apply_parry_unchanged": true,
+  "posture_sync_slot_unchanged": true,
+  "posture_close_run_unchanged": true,
+  "source_commit": "8c72aec291a7473f1752c702137229cc2224c998"
+}

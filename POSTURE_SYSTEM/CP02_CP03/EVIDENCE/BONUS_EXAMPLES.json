@@ -1,0 +1,38 @@
+{
+  "BLACK": {
+    "base": 100,
+    "extra": 50,
+    "combined_loss": 150,
+    "source_log": "dusklight-20261103-114656.log (0.11.4)",
+    "log_sha256": "ed86073768987359a9016d0b7a07d8dc5fb30f5b8bd7c9c8ff229287c9c7b259",
+    "generation_matched": true,
+    "native_runtime_for_0_11_6": false
+  },
+  "BLACK_FURY": {
+    "base": 40,
+    "extra": 20,
+    "combined_loss": 60,
+    "source_log": "dusklight-20261103-114656.log (0.11.4)",
+    "log_sha256": "ed86073768987359a9016d0b7a07d8dc5fb30f5b8bd7c9c8ff229287c9c7b259",
+    "generation_matched": true,
+    "native_runtime_for_0_11_6": false
+  },
+  "RED": {
+    "base": 40,
+    "extra": 20,
+    "combined_loss": 60,
+    "source_log": "dusklight-20261103-114656.log (0.11.4)",
+    "log_sha256": "ed86073768987359a9016d0b7a07d8dc5fb30f5b8bd7c9c8ff229287c9c7b259",
+    "generation_matched": true,
+    "native_runtime_for_0_11_6": false
+  },
+  "BLUE": {
+    "base": 40,
+    "extra": 20,
+    "combined_loss": 60,
+    "source_log": "dusklight-20261103-114656.log (0.11.4)",
+    "log_sha256": "ed86073768987359a9016d0b7a07d8dc5fb30f5b8bd7c9c8ff229287c9c7b259",
+    "generation_matched": true,
+    "native_runtime_for_0_11_6": false
+  }
+}

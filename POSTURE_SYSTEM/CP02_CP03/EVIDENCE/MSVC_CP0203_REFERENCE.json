@@ -1,0 +1,21 @@
+{
+  "status": "LAB_PASS",
+  "base_compiled_and_executed_model": true,
+  "old_policy_rejected": true,
+  "reference": "Python fractions.Fraction, independent input boundaries",
+  "results": [
+    {
+      "source": "BASE_0_11_5",
+      "checks": 2908,
+      "policy_mismatches": 2694,
+      "trace_sha256": "b0c071230ca7fc4b02bea86583243a5a31a35985d1eda0de9340315d5b254f7e"
+    },
+    {
+      "source": "CURRENT",
+      "checks": 2908,
+      "policy_mismatches": 0,
+      "trace_sha256": "97fba60e9df85747b790cad0664ca52f0a8fdc399398573d9a289519dba67e4a"
+    }
+  ],
+  "native_runtime": false
+}

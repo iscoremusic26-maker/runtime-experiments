@@ -1,0 +1,24 @@
+{
+  "source_base": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+  "approved_cp02_functions": 2,
+  "approved_cp02_cp03_headers": 3,
+  "functions_pinned": 107,
+  "headers_pinned": 15,
+  "native_code_executed": false,
+  "errors": [],
+  "scoped_native_stores": {
+    "on_shield_post_fx": {
+      "register_btr_bit27": 1,
+      "guard_flag_store_plus678": 1
+    },
+    "on_collision_pre_fx": {
+      "register_btr_bit27": 1,
+      "guard_flag_store_plus678": 1
+    },
+    "on_stick_post_fx": {
+      "and_buttonB_clear_plus40e9": 1
+    }
+  },
+  "actual_instruction_negatives_rejected": 2,
+  "status": "STORE_AUDIT_PASS"
+}

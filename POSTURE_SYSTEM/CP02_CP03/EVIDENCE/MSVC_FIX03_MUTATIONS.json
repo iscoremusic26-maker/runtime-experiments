@@ -1,0 +1,48 @@
+{
+  "positive_control": "PASS",
+  "count": 8,
+  "detected": 8,
+  "timeouts": 0,
+  "mutations": [
+    {
+      "mutation": "foreign_geometry_erase",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "slot_not_invading",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "slot_geometry_disabled",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "owner_leak",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "pikari_not_masked",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "pikari_foreign_owner",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "foreign_picture_erased",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "foreign_outfont_erased",
+      "status": "KILLED",
+      "timeout": false
+    }
+  ]
+}

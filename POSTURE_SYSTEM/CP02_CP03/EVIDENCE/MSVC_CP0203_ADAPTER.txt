@@ -1,0 +1,2 @@
+CP0203_ADAPTER checks=4325 failures=0 RESULT=LAB_PASS actual_callbacks=post06_step+do_update native_runtime=0
+

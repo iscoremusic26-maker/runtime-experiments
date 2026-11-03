@@ -1,0 +1,222 @@
+{
+  "version": "0.11.6",
+  "verdict": "PRIVATE_TEST_CP02_CP03_TECHNICAL_IMPLEMENTED_HUMAN_RUNTIME_PENDING",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "source_branch": "feature/posture-cp02-cp03-0-11-6",
+  "compiled_source": "8c72aec291a7473f1752c702137229cc2224c998",
+  "compiled_source_tree": "750f74c649cd6bbb33789852ac839b2011c52736",
+  "base_compiled_0_11_5": "2d0e59329f14d822c1905ee7953d337959932f1f",
+  "base_documentation_not_compiled": "3202a09bd5af89a58789e33921985279d89bce62",
+  "base_human_approval": "USER_CONFIRMED_ALL_WORKED_PERFECTLY_IN_CURRENT_BRIEF; applies only to0.11.5/eight mods",
+  "documentation": "separate descendant commit, not used for existing binary",
+  "ci_branch": "ci/posture-cp02-cp03-0-11-6",
+  "ci_commit": "505cd3fd053011e6dc7f78dfa73d7d039c57c23a",
+  "run": 41703645193,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41703645193",
+  "jobs": [
+    {
+      "id": 126153152083,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126161691833,
+      "name": "independent-download",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifact_id": 13264179241,
+  "artifact_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41703645193/artifacts/13264179241",
+  "artifact_expires_at": "2026-12-03T19:44:30Z",
+  "artifact_expires_panama": "2026-12-03T14:44:30-05:00",
+  "filename": "POSTURE_CP02_CP03_0_11_6_PRIVATE_TEST_windows-amd64_8c72aec291a7.dusk",
+  "package_bytes": 137486,
+  "package_sha256": "0aa8e8d2941d644a33765fe288bc3f9867cc1e188506fed691caf069c63fb019",
+  "dll_sha256": "533885afcc504b258eb6c647447b3edacaffffd16e68d7ae73ef5b832311b262",
+  "CP02": {
+    "states": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ],
+    "before_rates": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "rates": [
+      10,
+      7,
+      4,
+      2,
+      1
+    ],
+    "before_delay": 120,
+    "delay_eligible_ticks": 60,
+    "tick_hz_nominal": 30,
+    "invalid_hp_fallback": 5,
+    "hp_max_source": "OBSERVED_MAX_THIS_GENERATION",
+    "hp_max_limitation": "observed lower bound; first-seen injured actor can be classified at100percent of observed max; true max not certified",
+    "production_pause_gate": "existing lg.sim_active read only, no Link behavior modification"
+  },
+  "CP03": {
+    "states": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ],
+    "before_window": [
+      -1,
+      9
+    ],
+    "window": [
+      -1,
+      7
+    ],
+    "before_age": 11,
+    "age": 9,
+    "gains_unchanged": [
+      40,
+      27,
+      20
+    ],
+    "fury": "unchanged reject possible chip",
+    "decisive": "unchanged extra=(base+1)/2 once per valid cycle",
+    "Link5to8": "EVALUATED_NOT_APPROVED_NOT_APPLIED",
+    "Link_confirmed_parry_cost": 0
+  },
+  "preserved": [
+    "HUD FIX03 ownership/Pikari/leases",
+    "independent Link presentation",
+    "Scoop and upper/general native HUD",
+    "CP06 alignment/interpolation",
+    "Link controls/regen/75tick penalty/rearm",
+    "variant weights and decisive bonus",
+    "other seven mods, SDK, host, EXE, ROM and saves"
+  ],
+  "validation": {
+    "windows_msvc": "PASS",
+    "pe": "PE_AUDIT_PASS",
+    "independent_download": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "local_api_download": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "labs": 19,
+    "lab_checks": 2881551,
+    "inherited_mutations": 412,
+    "new_cp0203_mutations": 22,
+    "total_mutations": 434,
+    "timeouts": 0,
+    "old_semantic_source_negatives": 114,
+    "retained_hud_source_negatives": 12,
+    "native_instruction_negatives": 2,
+    "pe_negative_cases": 20,
+    "baseline_functions": 107,
+    "unchanged_function_pins": 105,
+    "approved_function_exceptions": 2,
+    "baseline_headers": 15,
+    "approved_header_exceptions": 3,
+    "lifecycle_version_only_normalized": true,
+    "production_adapter_checks": 4325,
+    "hud_adapter_checks": 67218,
+    "independent_reference": {
+      "status": "LAB_PASS",
+      "base_compiled_and_executed_model": true,
+      "old_policy_rejected": true,
+      "reference": "Python fractions.Fraction, independent input boundaries",
+      "results": [
+        {
+          "source": "BASE_0_11_5",
+          "checks": 2908,
+          "policy_mismatches": 2694,
+          "trace_sha256": "b0c071230ca7fc4b02bea86583243a5a31a35985d1eda0de9340315d5b254f7e"
+        },
+        {
+          "source": "CURRENT",
+          "checks": 2908,
+          "policy_mismatches": 0,
+          "trace_sha256": "97fba60e9df85747b790cad0664ca52f0a8fdc399398573d9a289519dba67e4a"
+        }
+      ],
+      "native_runtime": false
+    },
+    "alignment_reference": {
+      "status": "LAB_PASS",
+      "checks": 2875378,
+      "paired_bar_presentations": 716386,
+      "presentation_frames": 9834,
+      "max_relative_logical_error": 4.577636718572364e-06,
+      "constant_life_posture_centre_delta": 4.7,
+      "old_max_height_regression_error": 80,
+      "old_regression_rejected": true,
+      "oracle_trace_sha256": "d814b90194a6b381873e2ff5c7148171813f1801000e5ec85417bc201b2d2674",
+      "production_trace_sha256": "ebca129ff3c20f940d47e193953c505d06d41b4f7e2dbb626744cfb4f5d8c8db",
+      "source_outputs": [
+        {
+          "output": "ALIGN02 checks=1793058 failures=0 RESULT=LAB_PASS paired_presentations=716386 legacy_regression_divergences=1 native_game=NOT_EXECUTED",
+          "model_seconds": 0.3990692000000422
+        },
+        {
+          "output": "ALIGN02 checks=2468746 failures=0 RESULT=LAB_PASS paired_presentations=716386 legacy_regression_divergences=1 native_game=NOT_EXECUTED",
+          "model_seconds": 0.9193046999999979
+        }
+      ],
+      "native_runtime": false
+    },
+    "msvc_warnings": {
+      "count": 9,
+      "lines": [
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant",
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation",
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation",
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation",
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation",
+        "<OFFICIAL>\\include\\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'",
+        "<OFFICIAL>\\include\\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'",
+        "<OFFICIAL>\\include\\d/d_stage.h(408): warning C4068: unknown pragma 'push'",
+        "<OFFICIAL>\\include\\d/d_stage.h(439): warning C4068: unknown pragma 'pop'"
+      ],
+      "origin": "official SDK headers; SDK unmodified"
+    },
+    "native_game_executed": false,
+    "fps_or_dx12_pixel_measurement": false
+  },
+  "human_runtime_A": "PENDING",
+  "human_runtime_B_eight_mods": "PENDING",
+  "runtime_limits": [
+    "models and synthetic/native-I/O adapter only; host and DLL never executed",
+    "30/60 model proof concerns equal simulation ticks, not real FPS measurement",
+    "native HP maximum can be unknown; observed max is not an infallible true max",
+    "precision/balance and A/B feel not certified by numerical labs"
+  ],
+  "rollback": {
+    "version": "0.11.5",
+    "source": "2d0e59329f14d822c1905ee7953d337959932f1f",
+    "sha256": "1dbf22a4c985e2ff334bd774faba86ac6bef717e55d135dbca7755103cd2f660",
+    "run": 41687970224,
+    "artifact": 13255667942
+  },
+  "superseded_runs": [
+    {
+      "run": 41700811384,
+      "source": "e8050042c4e0ad012a2eb563b0af08aaae02bd9a",
+      "state": "FAILED_STRICT_FORMATTER_SAMPLE_GATE_AFTER_MSVCCORE_PE_19LABS_434MUTATIONS_PASS",
+      "candidate_published": false,
+      "correction": "Only synthetic formatter fixture refreshed; GCC and MSVC samples identical; runtime src unchanged"
+    }
+  ],
+  "no_pr_merge_release_tag": true,
+  "runtime_tested": false
+}

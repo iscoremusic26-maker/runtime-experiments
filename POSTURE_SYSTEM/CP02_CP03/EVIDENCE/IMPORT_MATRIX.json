@@ -1,0 +1,55 @@
+{
+  "base": "2d0e59329f14d822c1905ee7953d337959932f1f",
+  "identical_import_sets": true,
+  "game_import_count": 55,
+  "new_imports": [],
+  "new_hooks": [],
+  "service_imports": [
+    [
+      "com.dusklight.enemy_health_multiplier_203.vitals",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.game",
+      2,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.gfx",
+      1,
+      4
+    ],
+    [
+      "dev.twilitrealm.dusklight.hook",
+      1,
+      1
+    ],
+    [
+      "dev.twilitrealm.dusklight.host",
+      2,
+      2
+    ],
+    [
+      "dev.twilitrealm.dusklight.interp",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.log",
+      1,
+      0
+    ]
+  ],
+  "hook_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 14,
+    "HOOK_MEM_EXT": 8,
+    "IMPORT": 7
+  },
+  "vcall_slots": {
+    "COutFont_c::draw": 24,
+    "dMeterButton_c::draw": 0,
+    "static_cast<void (J2DPicture::*)(f32,f32,f32,f32,bool,bool,bool)>(&J2DPicture::draw)": 440
+  }
+}

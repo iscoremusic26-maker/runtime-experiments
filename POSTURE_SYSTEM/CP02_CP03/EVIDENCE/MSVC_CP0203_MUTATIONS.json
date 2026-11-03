@@ -1,0 +1,118 @@
+{
+  "positive_controls": "PASS",
+  "count": 22,
+  "detected": 22,
+  "timeouts": 0,
+  "mutations": [
+    {
+      "mutation": "old_setter_clamp5",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "old_advance_clamp5",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "old_delay120",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "early_regen",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "top_rate5",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "second_rate4",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "third_rate3",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "boundary75_inclusive",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "boundary50_inclusive",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "boundary25_inclusive",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "boundary10_inclusive",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "fraction_lost_on_rate_change",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "old_parry_frame9",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "old_parry_age11",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "parry_negative_slack_lost",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "parry_fraction_not_reset",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "parry_reward_changed",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "decisive_x2",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "Link5to8_applied",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "production_no_pause_gate",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "production_rate_update_lost",
+      "status": "KILLED",
+      "timeout": false
+    },
+    {
+      "mutation": "stale_max_generation",
+      "status": "KILLED",
+      "timeout": false
+    }
+  ]
+}

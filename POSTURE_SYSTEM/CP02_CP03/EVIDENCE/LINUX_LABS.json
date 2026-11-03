@@ -1,0 +1,97 @@
+[
+  {
+    "lab": "hit",
+    "exit": 0,
+    "summary": "POST03_1_HIT_LAB checks=1660 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "lifecycle",
+    "exit": 0,
+    "summary": "POST03_1_LIFECYCLE_LAB checks=29558 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "collider",
+    "exit": 0,
+    "summary": "POST03_1_COLLIDER_LAB checks=12826 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "posture",
+    "exit": 0,
+    "summary": "POST04_POSTURE_LAB checks=556878 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "reaction",
+    "exit": 0,
+    "summary": "POST05_REACTION_LAB checks=36933 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "compat",
+    "exit": 0,
+    "summary": "POST05_COMPAT_LAB checks=55992 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "rb",
+    "exit": 0,
+    "summary": "POST05_RB_LAB checks=21313 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "general",
+    "exit": 0,
+    "summary": "POST05_GENERAL_LAB checks=5560 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "break",
+    "exit": 0,
+    "summary": "POST06_REWORK_LAB checks=243624 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "hud",
+    "exit": 0,
+    "summary": "POST07_HUD_LAB checks=57742 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "parry",
+    "exit": 0,
+    "summary": "POST08_PARRY_LAB checks=1579 failures=0 RESULT=LAB_PASS"
+  },
+  {
+    "lab": "lnk",
+    "exit": 0,
+    "summary": "LNK01_LAB checks=528 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY"
+  },
+  {
+    "lab": "lnks1",
+    "exit": 0,
+    "summary": "LNK_S1_LAB checks=174 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY"
+  },
+  {
+    "lab": "fix01",
+    "exit": 0,
+    "summary": "LNK_S1_FIX01_LAB checks=21570 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY"
+  },
+  {
+    "lab": "lnks2",
+    "exit": 0,
+    "summary": "LNK_S2_LAB checks=103431 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY"
+  },
+  {
+    "lab": "lnks2fix",
+    "exit": 0,
+    "summary": "LNK_S2_FIX01_LAB checks=103187 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY"
+  },
+  {
+    "lab": "balance",
+    "exit": 0,
+    "summary": "POST_BAL01_LAB checks=8623 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY"
+  },
+  {
+    "lab": "hudfix",
+    "exit": 0,
+    "summary": "HUD_FIX01 checks=1567941 failures=0 RESULT=LAB_PASS model_only=1 EHB_ALIGNMENT=NOT_TESTED NATIVE_DRAW=HUMAN_RUNTIME_PENDING"
+  },
+  {
+    "lab": "cp0203",
+    "exit": 0,
+    "summary": "CP0203_LAB checks=52432 failures=0 RESULT=LAB_PASS native_runtime=0"
+  }
+]
