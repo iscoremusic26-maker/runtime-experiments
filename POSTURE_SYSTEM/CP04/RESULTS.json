@@ -13,7 +13,7 @@
     "new_source_negatives": 11,
     "source_audit": "SOURCE_AUDIT_PASS",
     "native_game_executed": false,
-    "pe_native_name_policy_checks": 20
+    "pe_native_name_policy_checks": 29
   },
   "runtime": "HUMAN_RUNTIME_PENDING",
   "shield_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING",
@@ -34,6 +34,14 @@
       "state": "WINDOWS_MSVC_BUILD_PASS_PE_POLICY_NOT_YET_UPDATED",
       "package_produced": false,
       "cause": "Strict PE gate still expected14/8 instead of15/9 hooks, retained two blanket mutator-name bans despite authorized exact CP04 transitions, and needed the verified read-only getLayerNo export in the allowlist. Exact signatures, remaining bans and total63 game imports are retained in the updated policy."
+    },
+    {
+      "run": 41742333871,
+      "source": "4a81ede8b33c064696d761e5faf7e11f4d0e2a42",
+      "ci": "59bbe2cd976bb04308f46b00687c1dd86306d8c7",
+      "state": "MSVC_PASS_PE_PASS_LEGACY_STORE_PASS_NEW_SCOPE_RATE_ENCODING_REJECTED",
+      "package_produced": false,
+      "cause": "New scope detector accepted MOVSS only; native float-bit copy may use equivalent32bit MOV. The strict detector now recognizes these two32bit forms, rejects REX.W/other offsets, mutates the actual matched displacement and records all bounded writer bytes for review. Both native import bindings and the16bit gap store already passed."
     }
   ],
   "latest_source_delta": "Reuse frozen actual LNK input snapshot after its R release/rearm processing; test same-tick rearm R+B and consumed-B snapshot in both hook registration orders. Untrusted native clip resets invalidate current provenance while preserving the previous contact-pass record. Strict exact known speed handoff.",
