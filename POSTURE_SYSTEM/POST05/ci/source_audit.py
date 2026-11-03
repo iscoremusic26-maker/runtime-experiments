@@ -75,13 +75,13 @@ def fix02_spans(text):
     return spans
 
 def fix02_strip(text):
-    for a,b in reversed(fix02_spans(text)):
+    for a,b in sorted(fix02_spans(text),reverse=True):
         text=text[:a]+text[a:b].replace('HOOK_SKIP_ORIGINAL','HOOK_CONTINUE')+text[b:]
     # Authentic read-only parent lookup, restricted to its exact original body.
     exact='bool allied(const fopAc_ac_c* actor) {\n    if (actor->name == fpcNm_E_HB_e && fpcM_GetParam(actor) == 0xffff0040) return true;\n    if (actor->name == fpcNm_E_HB_LEAF_e) {\n        auto* parent = static_cast<fopAc_ac_c*>(fpcM_SearchByID(actor->parentActorID));\n        return parent && parent->name == fpcNm_E_HB_e && fpcM_GetParam(parent) == 0xffff0040;\n    }\n    return false;\n}'
-    clean=re.sub(r'\s+','',text)
-    if re.sub(r'\s+','',exact) in clean:
-        text=text.replace('fpcM_SearchByID(actor->parentActorID)','FIX02_READ_PARENT(actor->parentActorID)')
+    body=re.search(r'bool allied\(const fopAc_ac_c\* actor\) \{.*?\n\}',text,re.S)
+    if body and re.sub(r'\s+','',body.group(0))==re.sub(r'\s+','',exact):
+        text=text[:body.start()]+body.group(0).replace('fpcM_SearchByID(actor->parentActorID)','FIX02_READ_PARENT(actor->parentActorID)')+text[body.end():]
     return text
 
 LOCAL_INCLUDES = {'cp06/tracker.h', 'hudfix_core.hpp', 'balance_core.hpp', 'balance_adapter.hpp', 'lnks2fix_core.hpp', 'lnks2_core.hpp', 'engine.hpp', 'hit_core.hpp', 'lifecycle_core.hpp', 'posture_core.hpp', 'reaction_core.hpp', 'hud_core.hpp', 'parry_core.hpp', 'lnk_core.hpp'}
