@@ -5,14 +5,15 @@
   "source_branch": "feature/light-fades-twice-cp04-0-11-7",
   "state": "SOURCE_READY_WINDOWS_CI_PENDING",
   "local_evidence": {
-    "cp04_core_checks": 307077,
-    "cp04_production_callback_checks": 12270,
-    "behavior_mutations": 30,
-    "detected": 30,
+    "cp04_core_checks": 307095,
+    "cp04_production_callback_checks": 12285,
+    "behavior_mutations": 34,
+    "detected": 34,
     "timeouts": 0,
     "new_source_negatives": 11,
     "source_audit": "SOURCE_AUDIT_PASS",
-    "native_game_executed": false
+    "native_game_executed": false,
+    "pe_native_name_policy_checks": 13
   },
   "runtime": "HUMAN_RUNTIME_PENDING",
   "shield_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING",
@@ -25,6 +26,15 @@
       "state": "MSVC_REJECTED_WRONG_ABI_ASSERT_CONSTANT",
       "package_produced": false,
       "cause": "mProcVar1 is0x4166 (GuardSlip decrement/load);0x416a is mProcVar3, not the body interpolation count. Only compile-time assertion/docs changed; typed runtime member access was already correct."
+    },
+    {
+      "run": 41739246453,
+      "source": "28574619eb560c32d95b153600a30d90a26403f4",
+      "ci": "51ba36b03b17797e2fa5263a260de8db68062cbf",
+      "state": "WINDOWS_MSVC_BUILD_PASS_PE_POLICY_NOT_YET_UPDATED",
+      "package_produced": false,
+      "cause": "Strict PE gate still expected14/8 instead of15/9 hooks, retained two blanket mutator-name bans despite authorized exact CP04 transitions, and needed the verified read-only getLayerNo export in the allowlist. Exact signatures, remaining bans and total63 game imports are retained in the updated policy."
     }
-  ]
+  ],
+  "latest_source_delta": "Reuse frozen actual LNK input snapshot after its R release/rearm processing; test same-tick rearm R+B and consumed-B snapshot in both hook registration orders. Untrusted native clip resets invalidate current provenance while preserving the previous contact-pass record. Strict exact known speed handoff."
 }
