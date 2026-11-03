@@ -1,0 +1,11 @@
+{
+  "filename": "POSTURE_BALANCE_SESSION01_0_11_2_BLUE_RED_BLACK_STANDING_REARM25_PRIVATE_TEST_windows-amd64_a0a4d43718bc.dusk",
+  "bytes": 113297,
+  "sha256": "2aa715980bc81af0db13622fc9e210100bcd973cd1255044d570a91f092eba0a",
+  "dll_bytes": 259584,
+  "dll_sha256": "16c045dddba650c4b0bbcded71df716809f9d26255bff2550a86f45f29c89fe2",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "version": "0.11.2",
+  "source_sha_embedded_in_dll": true,
+  "zip_digests_match_github_metadata": true
+}

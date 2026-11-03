@@ -1,0 +1,418 @@
+{
+  "status": "POST05_PACKAGE_PASS_DOWNLOAD_PENDING",
+  "labels": [
+    "WINDOWS_MSVC_BUILD_OK",
+    "PE_NEGATIVES_REJECTED",
+    "LAB_PASS_MSVC",
+    "WINDOWS_MSVC_PASS"
+  ],
+  "source_commit": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+  "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+  "run_id": "41570019310",
+  "ci_head": "29f1a29e0fbdf7ff5d4d0cfbfd44c1deb34af830",
+  "ledger_files": 64,
+  "dependencies": {
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "importlib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "official_sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "win_zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf"
+  },
+  "production_units": [
+    "game_feature.cpp",
+    "mod.cpp"
+  ],
+  "loose_dll": {
+    "bytes": 259584,
+    "sha256": "16c045dddba650c4b0bbcded71df716809f9d26255bff2550a86f45f29c89fe2"
+  },
+  "package": {
+    "bytes": 113297,
+    "dll_in_package_equals_loose": true,
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "mod_json_equals_source": true,
+    "sha256": "2aa715980bc81af0db13622fc9e210100bcd973cd1255044d570a91f092eba0a",
+    "version": "0.11.2"
+  },
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "VSCMD_ARG_TGT_ARCH": "x64",
+    "VisualStudioVersion": "18.0",
+    "WindowsSDKVersion": "10.0.26100.0\\"
+  },
+  "formatter_sample_identical_msvc_gpp": true,
+  "game_executed": false,
+  "dll_loaded": false,
+  "host_built": false,
+  "phases": [
+    {
+      "label": "compiler",
+      "exit": 0,
+      "seconds": 2.797
+    },
+    {
+      "label": "cmake-version",
+      "exit": 0,
+      "seconds": 0.89
+    },
+    {
+      "label": "ninja-version",
+      "exit": 0,
+      "seconds": 0.204
+    },
+    {
+      "label": "tool-tests",
+      "exit": 0,
+      "seconds": 0.468
+    },
+    {
+      "label": "pmf-static-tests",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "source-barrier",
+      "exit": 0,
+      "seconds": 0.156
+    },
+    {
+      "label": "source-audit",
+      "exit": 0,
+      "seconds": 0.454
+    },
+    {
+      "label": "configure",
+      "exit": 0,
+      "seconds": 6.234
+    },
+    {
+      "label": "build-mod",
+      "exit": 0,
+      "seconds": 9.922
+    },
+    {
+      "label": "dumpbin-headers",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "dumpbin-imports",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "dumpbin-exports",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "store-audit",
+      "exit": 0,
+      "seconds": 0.156
+    },
+    {
+      "label": "pe-negatives",
+      "exit": 0,
+      "seconds": 0.172
+    },
+    {
+      "label": "build-lab1",
+      "exit": 0,
+      "seconds": 3.125
+    },
+    {
+      "label": "run-lab1",
+      "exit": 0,
+      "seconds": 0.032
+    },
+    {
+      "label": "build-lab2",
+      "exit": 0,
+      "seconds": 2.531
+    },
+    {
+      "label": "run-lab2",
+      "exit": 0,
+      "seconds": 0.078
+    },
+    {
+      "label": "build-lab3",
+      "exit": 0,
+      "seconds": 1.266
+    },
+    {
+      "label": "run-lab3",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "build-lab4",
+      "exit": 0,
+      "seconds": 5.328
+    },
+    {
+      "label": "run-lab4",
+      "exit": 0,
+      "seconds": 0.125
+    },
+    {
+      "label": "build-lab5",
+      "exit": 0,
+      "seconds": 4.094
+    },
+    {
+      "label": "run-lab5",
+      "exit": 0,
+      "seconds": 0.234
+    },
+    {
+      "label": "build-lab6",
+      "exit": 0,
+      "seconds": 4.797
+    },
+    {
+      "label": "run-lab6",
+      "exit": 0,
+      "seconds": 0.25
+    },
+    {
+      "label": "build-lab7",
+      "exit": 0,
+      "seconds": 4.234
+    },
+    {
+      "label": "run-lab7",
+      "exit": 0,
+      "seconds": 0.235
+    },
+    {
+      "label": "build-lab8",
+      "exit": 0,
+      "seconds": 4.109
+    },
+    {
+      "label": "run-lab8",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "build-lab9",
+      "exit": 0,
+      "seconds": 6.485
+    },
+    {
+      "label": "run-lab9",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "build-lab10",
+      "exit": 0,
+      "seconds": 12.094
+    },
+    {
+      "label": "run-lab10",
+      "exit": 0,
+      "seconds": 0.109
+    },
+    {
+      "label": "build-lab11",
+      "exit": 0,
+      "seconds": 9.032
+    },
+    {
+      "label": "run-lab11",
+      "exit": 0,
+      "seconds": 0.015
+    },
+    {
+      "label": "build-lab12",
+      "exit": 0,
+      "seconds": 4.844
+    },
+    {
+      "label": "run-lab12",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "build-lab13",
+      "exit": 0,
+      "seconds": 4.0
+    },
+    {
+      "label": "run-lab13",
+      "exit": 0,
+      "seconds": 0.047
+    },
+    {
+      "label": "build-lab14",
+      "exit": 0,
+      "seconds": 4.812
+    },
+    {
+      "label": "run-lab14",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "build-lab15",
+      "exit": 0,
+      "seconds": 4.593
+    },
+    {
+      "label": "run-lab15",
+      "exit": 0,
+      "seconds": 0.672
+    },
+    {
+      "label": "build-lab16",
+      "exit": 0,
+      "seconds": 4.235
+    },
+    {
+      "label": "run-lab16",
+      "exit": 0,
+      "seconds": 0.656
+    },
+    {
+      "label": "build-lab17",
+      "exit": 0,
+      "seconds": 7.609
+    },
+    {
+      "label": "run-lab17",
+      "exit": 0,
+      "seconds": 0.016
+    },
+    {
+      "label": "rework-mutations",
+      "exit": 0,
+      "seconds": 491.625
+    },
+    {
+      "label": "hud-reference-renders",
+      "exit": 0,
+      "seconds": 0.031
+    },
+    {
+      "label": "lnk01-reference-renders",
+      "exit": 0,
+      "seconds": 0.188
+    },
+    {
+      "label": "emit-sample",
+      "exit": 0,
+      "seconds": 0.0
+    },
+    {
+      "label": "extract-sample",
+      "exit": 0,
+      "seconds": 0.062
+    },
+    {
+      "label": "build-package",
+      "exit": 0,
+      "seconds": 0.313
+    }
+  ],
+  "labs": {
+    "hit": {
+      "checks": 1660,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lifecycle": {
+      "checks": 29558,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "collider": {
+      "checks": 12826,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "posture": {
+      "checks": 556878,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "reaction": {
+      "checks": 36933,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "compat": {
+      "checks": 55992,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "rb": {
+      "checks": 21313,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "general": {
+      "checks": 5560,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "break": {
+      "checks": 243624,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "hud": {
+      "checks": 57742,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "parry": {
+      "checks": 1571,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnk": {
+      "checks": 528,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnks1": {
+      "checks": 178,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "fix01": {
+      "checks": 21570,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnks2": {
+      "checks": 103431,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnks2fix": {
+      "checks": 103187,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "balance": {
+      "checks": 8603,
+      "failures": 0,
+      "result": "LAB_PASS"
+    }
+  },
+  "mutations": {
+    "count": 380,
+    "detected": 380,
+    "timeouts": 0
+  },
+  "note": "Build result precedes independent download; final statuses in download verification JSON. Commands/runner paths/environment logs intentionally omitted."
+}

@@ -1,0 +1,22 @@
+{
+  "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "errors": [],
+  "package_sha256": "2aa715980bc81af0db13622fc9e210100bcd973cd1255044d570a91f092eba0a",
+  "package_bytes": 113297,
+  "dll_sha256": "16c045dddba650c4b0bbcded71df716809f9d26255bff2550a86f45f29c89fe2",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "version": "0.11.2",
+  "members": [
+    "mod.json",
+    "lib/",
+    "lib/windows-amd64/",
+    "lib/windows-amd64/mod.dll"
+  ],
+  "pe_audit_status": "PE_AUDIT_PASS",
+  "hook_thunk_bound_import": [
+    "dusklight.exe",
+    "?damage_check@daE_OC_c@@QEAAXXZ"
+  ],
+  "filename": "POSTURE_BALANCE_SESSION01_0_11_2_BLUE_RED_BLACK_STANDING_REARM25_PRIVATE_TEST_windows-amd64_a0a4d43718bc.dusk",
+  "runtime_tested": false
+}

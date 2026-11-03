@@ -1,0 +1,95 @@
+{
+  "compiler": "g++ C++20 ASAN+UBSAN -no-pie; LeakSanitizer disabled by environment ptrace restriction",
+  "game_executed": false,
+  "labs": {
+    "balance_lab.txt": {
+      "checks": 8603,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "hit_lab.txt": {
+      "checks": 1660,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "posture_lab.txt": {
+      "checks": 556878,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "parry_lab.txt": {
+      "checks": 1571,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "collider_lab.txt": {
+      "checks": 12826,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnks1_lab.txt": {
+      "checks": 178,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "hud_lab.txt": {
+      "checks": 57742,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnk_lab.txt": {
+      "checks": 528,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "fix01_lab.txt": {
+      "checks": 21570,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "break_lab.txt": {
+      "checks": 243624,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "compat_lab.txt": {
+      "checks": 55992,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "general_lab.txt": {
+      "checks": 5560,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "rb_lab.txt": {
+      "checks": 21313,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnks2_lab.txt": {
+      "checks": 103431,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lifecycle_lab.txt": {
+      "checks": 29558,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "reaction_lab.txt": {
+      "checks": 36933,
+      "failures": 0,
+      "result": "LAB_PASS"
+    },
+    "lnks2fix_lab.txt": {
+      "checks": 103187,
+      "failures": 0,
+      "result": "LAB_PASS"
+    }
+  },
+  "total_checks": 1261154,
+  "baseline_16_checks": 1252550,
+  "new_balance_checks": 8603,
+  "additional_inherited_parry_call_conservation_check": 1
+}

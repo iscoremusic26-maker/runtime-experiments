@@ -1,0 +1,338 @@
+{
+  "checkpoint": "POSTURE_BALANCE_SESSION01",
+  "version": "0.11.2",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "status": "AUTOMATED_CHECKS_PASS_HUMAN_RUNTIME_PENDING",
+  "verdict": {
+    "POST04_VARIANT_WEIGHTS": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "human": "HUMAN_RUNTIME_PENDING"
+    },
+    "POST08_VARIANT_PARRY_AND_RECEIPT": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "human": "HUMAN_RUNTIME_PENDING"
+    },
+    "POST06_STANDING_REARM25": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "human": "HUMAN_RUNTIME_PENDING"
+    },
+    "IDENTITY_HP_REGEN_SEPARATION": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "human": "HUMAN_RUNTIME_PENDING"
+    },
+    "INHERITED_LINK_0_11_1": {
+      "source": "UNCHANGED_EXCEPT_ENEMY_CREDIT_DIAGNOSTIC",
+      "lab": "LAB_MODEL_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "human_baseline": "USER_REPORTED_VALIDATED_LIMITED",
+      "human_0_11_2": "HUMAN_RUNTIME_PENDING"
+    },
+    "EIGHT_MOD_INTEGRATION": {
+      "source": "UNCHANGED_OTHER_MODS_AND_SHARED_NATIVE_WRITERS",
+      "lab": "LAB_MODEL_PASS",
+      "human": "HUMAN_RUNTIME_PENDING"
+    }
+  },
+  "base": {
+    "compiled_commit": "8879ea08649eccee828798f3b6767e2cd655b48f",
+    "docs_close": "2f77145edfd55a7a3596ad893e234b303ccf6aae",
+    "code_diff_of_close": 0,
+    "dusk_bytes": 109650,
+    "dusk_sha256": "8325dcf92d1ad7f39b330cef55713930d4dfce39c7baba27f64c8ec7d23e93ac",
+    "artifact_downloaded_here": true,
+    "human_log": "dusklight-20261102-195749.log",
+    "full_log_available_here": false,
+    "human_evidence_source": "User task brief; historical docs not rewritten"
+  },
+  "source": {
+    "repo": "iscoremusic26-maker/Mods-Duskligh",
+    "branch": "feature/posture-balance-s01-0-11-2-blue-red-black",
+    "compiled_commit": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+    "compiled_tree": "945a29e89e046f42268102a6e61d5901cd5df6ad",
+    "ledger_files": 64
+  },
+  "ci": {
+    "repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "branch": "ci/posture-balance-s01-0-11-2-blue-red-black",
+    "commit": "29f1a29e0fbdf7ff5d4d0cfbfd44c1deb34af830",
+    "run_id": 41570019310,
+    "jobs": {
+      "build": {
+        "id": 125700482578,
+        "conclusion": "success"
+      },
+      "independent-download": {
+        "id": 125704200970,
+        "conclusion": "success"
+      }
+    },
+    "toolchain": {
+      "VCToolsVersion": "14.51.36231",
+      "VSCMD_ARG_TGT_ARCH": "x64",
+      "VisualStudioVersion": "18.0",
+      "WindowsSDKVersion": "10.0.26100.0\\"
+    }
+  },
+  "artifact": {
+    "id": 13201587185,
+    "name": "BAL01_TEST_41570019310_1",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41570019310/artifacts/13201587185",
+    "filename": "POSTURE_BALANCE_SESSION01_0_11_2_BLUE_RED_BLACK_STANDING_REARM25_PRIVATE_TEST_windows-amd64_a0a4d43718bc.dusk",
+    "bytes": 113297,
+    "sha256": "2aa715980bc81af0db13622fc9e210100bcd973cd1255044d570a91f092eba0a",
+    "dll_bytes": 259584,
+    "dll_sha256": "16c045dddba650c4b0bbcded71df716809f9d26255bff2550a86f45f29c89fe2",
+    "zip_digest": "sha256:d8030c1cb6cc6fea69e4d991a8438981d85dde58e70db1b4a58221960a0694d7",
+    "expires_utc": "2026-12-03T03:16:04Z",
+    "expires_panama": "2026-12-02T22:16:04-05:00",
+    "download_proof_artifact_id": 13200779339,
+    "independent_ci_download_verified": true,
+    "local_download_verified": true,
+    "dll_loaded": false,
+    "game_executed": false
+  },
+  "policy": {
+    "weights_sword_parry_iron": {
+      "BLUE": [
+        25,
+        40,
+        50
+      ],
+      "RED": [
+        17,
+        27,
+        33
+      ],
+      "BLACK": [
+        13,
+        20,
+        25
+      ],
+      "BLACK_FURY": [
+        13,
+        20,
+        25
+      ]
+    },
+    "from_zero_counts_sword_parry_iron": {
+      "BLUE": [
+        4,
+        3,
+        2
+      ],
+      "RED": [
+        6,
+        4,
+        4
+      ],
+      "BLACK": [
+        8,
+        5,
+        4
+      ]
+    },
+    "from_standing25_counts_sword_parry_iron": {
+      "BLUE": [
+        3,
+        2,
+        2
+      ],
+      "RED": [
+        5,
+        3,
+        3
+      ],
+      "BLACK": [
+        6,
+        4,
+        3
+      ]
+    },
+    "fury_parry": "Only if already admitted by unchanged POST08; chip/fury rejection preserved",
+    "red_iron_three": 99,
+    "red_iron_break_contact": 4,
+    "standing_rearm": 25,
+    "native_getup_rearm": 0,
+    "cap": 100,
+    "threshold": 100,
+    "regen_delay_ticks": 120,
+    "regen_ticks_per_second": 30,
+    "regen_points_per_second": [
+      5,
+      4,
+      3,
+      2,
+      1
+    ],
+    "unknown_safe_contact_fallback": "explicit0.11.1 reference25/40/50, never guessed Red/Black",
+    "link_policy": "UNCHANGED_NUMERIC_0.11.1",
+    "approximate_capacity_is_not_full_regeneration_equivalence": true,
+    "reserved_next_checkpoint": "0.11.3"
+  },
+  "checks": {
+    "labs": {
+      "hit": {
+        "checks": 1660,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "lifecycle": {
+        "checks": 29558,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "collider": {
+        "checks": 12826,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "posture": {
+        "checks": 556878,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "reaction": {
+        "checks": 36933,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "compat": {
+        "checks": 55992,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "rb": {
+        "checks": 21313,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "general": {
+        "checks": 5560,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "break": {
+        "checks": 243624,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "hud": {
+        "checks": 57742,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "parry": {
+        "checks": 1571,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "lnk": {
+        "checks": 528,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "lnks1": {
+        "checks": 178,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "fix01": {
+        "checks": 21570,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "lnks2": {
+        "checks": 103431,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "lnks2fix": {
+        "checks": 103187,
+        "failures": 0,
+        "result": "LAB_PASS"
+      },
+      "balance": {
+        "checks": 8603,
+        "failures": 0,
+        "result": "LAB_PASS"
+      }
+    },
+    "checks_per_compiler": 1261154,
+    "baseline_16_checks": 1252550,
+    "new_balance_checks": 8603,
+    "new_parry_call_conservation_check": 1,
+    "mutations": {
+      "count": 380,
+      "killed": 380,
+      "survived": 0,
+      "timeout": 0,
+      "error": 0,
+      "inherited": 353,
+      "new_balance": 27
+    },
+    "source_audit": "SOURCE_AUDIT_PASS",
+    "store_audit": "STORE_AUDIT_PASS",
+    "inherited_functions_pinned": 32,
+    "inherited_headers_pinned": 10,
+    "scoped_binary_store_negatives": 2,
+    "pe_audit": "PE_AUDIT_PASS",
+    "pe_negatives_rejected": 20,
+    "formatter_gxx_msvc_identical": true
+  },
+  "binary_comparison": {
+    "game_imports": 48,
+    "hook_targets": 16,
+    "meta_kinds": {
+      "HEADER": 1,
+      "HOOK_MEM": 8,
+      "HOOK_MEM_EXT": 8,
+      "IMPORT": 5
+    },
+    "all_import_libraries_and_symbols_unchanged": true,
+    "exports_unchanged": true,
+    "new_native_writes": 0,
+    "new_hooks": 0,
+    "new_game_imports": 0,
+    "new_crt_imports": 0
+  },
+  "rollback": {
+    "primary_version": "0.11.1",
+    "primary_sha256": "8325dcf92d1ad7f39b330cef55713930d4dfce39c7baba27f64c8ec7d23e93ac",
+    "primary_artifact": 13194926059,
+    "primary_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41554571299/artifacts/13194926059",
+    "secondary_version": "0.11.0",
+    "secondary_sha256": "6f880aff5d589931e0100879685b6c1efad9b76bb7478a8b1b891b48daecbcc2",
+    "never": [
+      "0.9.0",
+      "0.8.1"
+    ]
+  },
+  "scope": {
+    "other_mods_changed": false,
+    "devf_cp10_changed": false,
+    "host_sdk_exe_changed": false,
+    "rom_save_accessed_or_changed": false,
+    "installed": false,
+    "pr": false,
+    "merge": false,
+    "tag": false,
+    "release": false,
+    "performance_runtime": "NOT_MEASURED"
+  }
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "path": "DEVF/CP21_PUBLIC_RELEASE/runtime/DEVF/CP10_4_VARIANT_IDENTITY_HP/expansion/variant_policy.hpp",
+    "git_blob": "3e7418c4aa26e82b03d80d53068093085bf6407e",
+    "sha256": "c27a33e15ecc68c636d92a008d9f7b04026ccad2a062ceedce81c886fc790642",
+    "matches_frozen_source_tree": true,
+    "repository_path": "POSTURE_SYSTEM/POST05/RED_BLACK/vendor/cp21/DEVF/CP21_PUBLIC_RELEASE/runtime/DEVF/CP10_4_VARIANT_IDENTITY_HP/expansion/variant_policy.hpp"
+  },
+  {
+    "path": "DEVF/CP21_PUBLIC_RELEASE/runtime/DEVF/CP10_5_DAMAGE_BLUE_RED_BLACK/expansion/damage_policy.hpp",
+    "git_blob": "63a3cd071bfe771bc07f1087594ed13ae436a019",
+    "sha256": "bb3e61f8672d17cdc944bef83a865dab422b0b7a64f85ab76ce296b08457ef38",
+    "matches_frozen_source_tree": true,
+    "repository_path": "POSTURE_SYSTEM/POST05/RED_BLACK/vendor/cp21/DEVF/CP21_PUBLIC_RELEASE/runtime/DEVF/CP10_5_DAMAGE_BLUE_RED_BLACK/expansion/damage_policy.hpp"
+  },
+  {
+    "path": "DEVF/CP21_PUBLIC_RELEASE/runtime/DEVF/CP10_6_DYNAMIC_BLUE_BLACK/expansion/dynamic_policy.hpp",
+    "git_blob": "d1b4afca6c4025258856b1c13cdbd785d563089d",
+    "sha256": "f55196593a88d9ad516dfdc9a168ed0bad3960dd51c0316cc1a5adcf75936a49",
+    "matches_frozen_source_tree": true,
+    "repository_path": "POSTURE_SYSTEM/POST05/RED_BLACK/vendor/cp21/DEVF/CP21_PUBLIC_RELEASE/runtime/DEVF/CP10_6_DYNAMIC_BLUE_BLACK/expansion/dynamic_policy.hpp"
+  },
+  {
+    "path": "DEVF/CP21_PUBLIC_RELEASE/runtime/DEVF/CP19_FIX02_UNIVERSAL_AUDIO_BLACK_SHIELD_CHIP/expansion/mod.cpp",
+    "git_blob": "85642911ab80e8bd6f90e32d818be2fa52595830",
+    "sha256": "2cfb0ea974b9631f8d4c228d2c71f140cb7ef5f10a7cc81a3b0ea11993a84a5e",
+    "matches_frozen_source_tree": null,
+    "note": "Full integration source separately fetched from its original CP21 commit and matched exactly; baseline vendors only its policy fixtures.",
+    "original_source_commit": "192a7731623d69baacdd37011db60ce894d9de18",
+    "matches_original_source_commit": true
+  }
+]

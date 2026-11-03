@@ -1,0 +1,126 @@
+{
+  "base": "8879ea08649eccee828798f3b6767e2cd655b48f",
+  "compiled_head": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+  "files": [
+    {
+      "path": "POSTURE_SYSTEM/POST05/CMakeLists.txt",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/ci/baseline_0_11_1_barrier.json",
+      "status": "added",
+      "additions": 51,
+      "deletions": 0
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/ci/build_windows.py",
+      "status": "modified",
+      "additions": 38,
+      "deletions": 34
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/ci/source_audit.py",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 1
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/ci/store_audit.py",
+      "status": "added",
+      "additions": 74,
+      "deletions": 0
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/ci/verify_download.py",
+      "status": "modified",
+      "additions": 6,
+      "deletions": 1
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/ci/windows-post05.yml",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 8
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/mod.json",
+      "status": "modified",
+      "additions": 3,
+      "deletions": 3
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/src/balance_adapter.hpp",
+      "status": "added",
+      "additions": 19,
+      "deletions": 0
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/src/balance_core.hpp",
+      "status": "added",
+      "additions": 43,
+      "deletions": 0
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/src/break_core.hpp",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 8
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/src/lifecycle_core.hpp",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/src/mod.cpp",
+      "status": "modified",
+      "additions": 50,
+      "deletions": 11
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/src/posture_core.hpp",
+      "status": "modified",
+      "additions": 55,
+      "deletions": 21
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/tests/balance_lab.cpp",
+      "status": "added",
+      "additions": 91,
+      "deletions": 0
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/tests/break_lab.cpp",
+      "status": "modified",
+      "additions": 9,
+      "deletions": 9
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/tests/compat_lab.cpp",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/tests/data/sample_post04_formatter_output.log",
+      "status": "modified",
+      "additions": 1,
+      "deletions": 1
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/tests/parry_lab.cpp",
+      "status": "modified",
+      "additions": 8,
+      "deletions": 3
+    },
+    {
+      "path": "POSTURE_SYSTEM/POST05/tests/run_mutations.py",
+      "status": "modified",
+      "additions": 47,
+      "deletions": 9
+    }
+  ]
+}

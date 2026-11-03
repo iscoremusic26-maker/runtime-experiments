@@ -1,0 +1,30 @@
+{
+  "pure_functions": [
+    {
+      "file": "posture_core.hpp",
+      "function": "advance",
+      "canonical_sha256": "d7edc013e950b72a13fc664570b78f7213af8dccdc1c687ce58c94d5546de0d0",
+      "unchanged": true
+    },
+    {
+      "file": "break_core.hpp",
+      "function": "regen_rate_for",
+      "canonical_sha256": "8aacbd111fcf7ff64f72dddf3c85489d09ba30255d309a81fcd6b59f598c2ced",
+      "unchanged": true
+    },
+    {
+      "file": "posture_core.hpp",
+      "function": "on_pre",
+      "canonical_sha256": "c80cb5af5d9e9c4cbc933e625a292c5cb3010eb6b3c3776b7b5c30f760b65734",
+      "unchanged": true
+    },
+    {
+      "file": "posture_core.hpp",
+      "function": "on_update",
+      "canonical_sha256": "f1cab10cb6231ac85c5dc340946a743f788c4fd7ff23e7697874fccc10c4c0d8",
+      "unchanged": true
+    }
+  ],
+  "break_core_only_approved_standing_target_and_counter_labels_changed": true,
+  "comparison_base": "8879ea08649eccee828798f3b6767e2cd655b48f"
+}
