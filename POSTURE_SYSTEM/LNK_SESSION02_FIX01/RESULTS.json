@@ -1,0 +1,165 @@
+{
+  "checkpoint": "LNK_SESSION02_FIX01 (manual shield + extended post-break penalty)",
+  "version": "0.11.1",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "verdict": {
+    "MANUAL_SHIELD": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows_build": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "R_B_PARRY": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows_build": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "EXTENDED_PENALTY": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows_build": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "DODGE_BLOCK": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows_build": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "LNK04_REGEN": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows_build": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "REGRESSIONS": {
+      "source": "SOURCE_IMPLEMENTED",
+      "lab": "LAB_MODEL_PASS",
+      "windows_build": "WINDOWS_BUILD_PASS",
+      "binary": "BINARY_AUDIT_PASS",
+      "artifact": "ARTIFACT_DOWNLOADED_VERIFIED",
+      "runtime": "HUMAN_RUNTIME_PENDING"
+    }
+  },
+  "base": {
+    "version": "0.11.0",
+    "compiled_commit": "b68b3ff3c941cca8446f1d36d984170f7eb8b316",
+    "dusk_sha256": "6f880aff5d589931e0100879685b6c1efad9b76bb7478a8b1b891b48daecbcc2",
+    "branched_from": "a503461 (docs-only child of b68b3ff; 0-line POST05 diff)",
+    "human": "HUMAN_RUNTIME_OBSERVED_ACOTADO per the user's brief (log dusklight-20261102-172208, not opened by Claude)"
+  },
+  "external_source": {
+    "mod": "Lazy Shield Rework 1.0.0 (com.kamilink.lazytweaks) by Kamilink",
+    "repo": "https://github.com/kamilink7/lazytweaks-modapi",
+    "commit": "62620e726cc0803008408427abe701e42f1b5e33",
+    "hooks_cpp_blob": "a0c7a320f2cd1ced216c69ea7bd73d7b4aa2e271",
+    "license": "no LICENSE file in the commit; user-reported public permission NOT verified by Claude",
+    "imported": "manual shielding (setShieldGuard POST, clear-only), R+B Shield Attack (setRStatus member PRE + spActionTrigger POST), contextual B consumption (setStickData POST)",
+    "not_imported": [
+      "crouch shielding (procWait/procMove PRE)",
+      "setSmallGuard replace",
+      "procGuardSlipInit/setSingleAnimeParam/setSingleAnime crouch anim hooks",
+      "handleQuickTransform HUD Z alpha",
+      "swordSwingTrigger POST (redundant)",
+      "procGuardAttackInit PRE (single native caller)",
+      "global dComIfGp_setRStatus hook (replaced by the Link member)"
+    ]
+  },
+  "source": {
+    "repo": "iscoremusic26-maker/Mods-Duskligh",
+    "branch": "feature/posture-lnks2-fix01-manual-shield-extended-vulnerability",
+    "compiled_commit": "8879ea08649eccee828798f3b6767e2cd655b48f"
+  },
+  "ci": {
+    "repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "branch": "ci/posture-lnks2-fix01-manual-shield-extended-vulnerability",
+    "ci_head": "0a1be3f8adbf9920523533956c0417783b93ae9a",
+    "run_id": 41554571299,
+    "jobs": {
+      "build": "success",
+      "independent-download": "success"
+    },
+    "toolchain": "MSVC 14.51.36231 x64 (cl 19.51.36260)",
+    "labels": [
+      "LAB_PASS_MSVC",
+      "WINDOWS_MSVC_BUILD_OK",
+      "PE_NEGATIVES_REJECTED",
+      "WINDOWS_MSVC_PASS"
+    ]
+  },
+  "artifact": {
+    "id": 13194926059,
+    "name": "LNKS2F_TEST_41554571299_1",
+    "zip_sha256": "16deba04d92172c88f6c41199990816cddd2003bee8234a0c908d870e97e3168",
+    "expires": "2026-12-03",
+    "filename": "POSTURE_LNK_SESSION02_FIX01_0_11_1_MANUAL_SHIELD_EXTENDED_VULNERABILITY_PRIVATE_TEST_windows-amd64_8879ea08649e.dusk",
+    "dusk_bytes": 109650,
+    "dusk_sha256": "8325dcf92d1ad7f39b330cef55713930d4dfce39c7baba27f64c8ec7d23e93ac",
+    "dll_sha256": "d0f8cdceee558fdba5f0cd1b1305af4493c1bc2d12461dd7bbf5ab35b0d44076",
+    "members": [
+      "mod.json",
+      "lib/windows-amd64/mod.dll"
+    ]
+  },
+  "local_verification": {
+    "verify_download": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "pe_audit": "PE_AUDIT_PASS pinned (48 game imports; HOOK_MEM 8 + HOOK_MEM_EXT 8; HEADER 1; IMPORT 5)",
+    "pe_negatives": "20/20 rejected",
+    "binary_store_audit": "mNoResetFlg2 (+0x678): exactly 2 stores, both btrl $0x1b (clear FLG2_UNK_8000000) - setShieldGuard POST and setCollision PRE; 0 bts/or of that bit anywhere; mItemTrigger (+0x40e9): 1 store, andb $-0x9 (clear BTN_B); mProcID/mModeFlg/mDamageTimer/mItemButton/mEquipItem/mMoveAngle/field_0x2fb0: reads only; procGuardBreakInit 1 call site, setBStatus 1, dComIfGp_getDoStatus 1"
+  },
+  "hooks": {
+    "hooks_old": 10,
+    "hooks_new": 6,
+    "hooks_total": 16,
+    "new": [
+      "daAlink_c::setStickData POST",
+      "daAlink_c::setShieldGuard POST",
+      "daAlink_c::setRStatus(u8) PRE",
+      "daAlink_c::spActionTrigger POST",
+      "daAlink_c::checkMoveDoAction PRE",
+      "daAlink_c::setCollision PRE"
+    ],
+    "new_calls": [
+      "dComIfGp_getDoStatus (read)",
+      "daAlink_c::setBStatus (HUD label)"
+    ],
+    "game_imports": 48,
+    "policy": "all-or-nothing; any failure -> 0.11.0 behaviour"
+  },
+  "balance": {
+    "total_penalty_ticks": 75,
+    "timebase": "mod_update simulation tick, 30 Hz nominal => 2.5 s; pause/menu frozen; measured from the confirmed native entry",
+    "native_animation": "untouched: speed 1.0, cancel 28, end 35 (0.11.0 human: cancel 28-29 ticks, end 36)",
+    "effective_end": "max(native exit, 75 active ticks)"
+  },
+  "tests": {
+    "labs": 16,
+    "lab_checks_total": 1252550,
+    "inherited_15_lab_checks": 1149363,
+    "lnks2fix_lab_checks": 103187,
+    "lnks2fix_sweep_runs": 9216,
+    "mutations": "353/353 detected, 0 timeouts (236 + 57 LNK05/06 + 60 FIX01)",
+    "source_audit": "SOURCE_AUDIT_PASS",
+    "note": "one earlier local mutation run hung on mutant fx_rearm_during_penalty (unbounded loop in the lab); lab loops bounded and runner timeout added (timeouts never counted as detections) before the final run"
+  },
+  "rollback": {
+    "primary": "0.11.0 6f880aff5d589931e0100879685b6c1efad9b76bb7478a8b1b891b48daecbcc2",
+    "second_level": "0.10.1 e7b8d5dff337ae1274abc586278999527efe3c1f5c40623b051a8403a29c397d",
+    "never": [
+      "0.9.0",
+      "0.8.1"
+    ]
+  },
+  "human": "HUMAN_RUNTIME_PENDING"
+}

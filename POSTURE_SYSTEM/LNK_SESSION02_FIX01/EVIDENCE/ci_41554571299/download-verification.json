@@ -1,0 +1,22 @@
+{
+  "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "errors": [],
+  "package_sha256": "8325dcf92d1ad7f39b330cef55713930d4dfce39c7baba27f64c8ec7d23e93ac",
+  "package_bytes": 109650,
+  "dll_sha256": "d0f8cdceee558fdba5f0cd1b1305af4493c1bc2d12461dd7bbf5ab35b0d44076",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "version": "0.11.1",
+  "members": [
+    "mod.json",
+    "lib/",
+    "lib/windows-amd64/",
+    "lib/windows-amd64/mod.dll"
+  ],
+  "pe_audit_status": "PE_AUDIT_PASS",
+  "hook_thunk_bound_import": [
+    "dusklight.exe",
+    "?damage_check@daE_OC_c@@QEAAXXZ"
+  ],
+  "filename": "POSTURE_LNK_SESSION02_FIX01_0_11_1_MANUAL_SHIELD_EXTENDED_VULNERABILITY_PRIVATE_TEST_windows-amd64_8879ea08649e.dusk",
+  "runtime_tested": false
+}

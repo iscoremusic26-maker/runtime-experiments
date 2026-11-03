@@ -1,0 +1,11 @@
+F08 sweep runs=9216 with_break=9072 rearmed=5786 dodge_denied_runs=6093
+F01 checks=29 failures=0
+F02 checks=153 failures=0
+F03 checks=14 failures=0
+F04 checks=47 failures=0
+F05 checks=13 failures=0
+F06 checks=9 failures=0
+F07 checks=5 failures=0
+F08 checks=102913 failures=0
+F09 checks=4 failures=0
+LNK_S2_FIX01_LAB checks=103187 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY

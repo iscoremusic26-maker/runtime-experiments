@@ -1,0 +1,1419 @@
+{
+  "mutations": [
+    {
+      "mutation": "shield_collider_missing",
+      "detected": true
+    },
+    {
+      "mutation": "shield_is_sword",
+      "detected": true
+    },
+    {
+      "mutation": "nondecisive_fall",
+      "detected": true
+    },
+    {
+      "mutation": "helm_episode_lost",
+      "detected": true
+    },
+    {
+      "mutation": "helm_stale_contact",
+      "detected": true
+    },
+    {
+      "mutation": "helm_shield_contact",
+      "detected": true
+    },
+    {
+      "mutation": "timed_fall",
+      "detected": true
+    },
+    {
+      "mutation": "old_120",
+      "detected": true
+    },
+    {
+      "mutation": "shield_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "break_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "duplicate_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "foreign_sword",
+      "detected": true
+    },
+    {
+      "mutation": "helm_without_shield",
+      "detected": true
+    },
+    {
+      "mutation": "renew_shield_window",
+      "detected": true
+    },
+    {
+      "mutation": "long_timeout",
+      "detected": true
+    },
+    {
+      "mutation": "wrong_abort_posture",
+      "detected": true
+    },
+    {
+      "mutation": "wrong_timeout_posture",
+      "detected": true
+    },
+    {
+      "mutation": "early_rearm",
+      "detected": true
+    },
+    {
+      "mutation": "no_normalize_helm",
+      "detected": true
+    },
+    {
+      "mutation": "heal_native_loss",
+      "detected": true
+    },
+    {
+      "mutation": "double_rounding",
+      "detected": true
+    },
+    {
+      "mutation": "redirect_rearm_50",
+      "detected": true
+    },
+    {
+      "mutation": "redirect_hit_rearms",
+      "detected": true
+    },
+    {
+      "mutation": "redirect_from_down",
+      "detected": true
+    },
+    {
+      "mutation": "redirect_uncounted",
+      "detected": true
+    },
+    {
+      "mutation": "hud_fill_one_side",
+      "detected": true
+    },
+    {
+      "mutation": "hud_fill_double",
+      "detected": true
+    },
+    {
+      "mutation": "hud_overlaps_life",
+      "detected": true
+    },
+    {
+      "mutation": "hud_pulse_every_tick",
+      "detected": true
+    },
+    {
+      "mutation": "hud_pulse_on_bind",
+      "detected": true
+    },
+    {
+      "mutation": "hud_no_identity_reset",
+      "detected": true
+    },
+    {
+      "mutation": "hud_ghost_kept",
+      "detected": true
+    },
+    {
+      "mutation": "hud_dead_phase_shown",
+      "detected": true
+    },
+    {
+      "mutation": "hud_pause_animates",
+      "detected": true
+    },
+    {
+      "mutation": "hud_green_ramp",
+      "detected": true
+    },
+    {
+      "mutation": "hud_opaque_blend",
+      "detected": true
+    },
+    {
+      "mutation": "hud_j2d_swap_missing",
+      "detected": true
+    },
+    {
+      "mutation": "hud_frozen_shown",
+      "detected": true
+    },
+    {
+      "mutation": "hud_zero_shown",
+      "detected": true
+    },
+    {
+      "mutation": "hud_premature_unbroken",
+      "detected": true
+    },
+    {
+      "mutation": "hud_budget_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "hud_farthest_first",
+      "detected": true
+    },
+    {
+      "mutation": "hud_scrub_keeps_packet",
+      "detected": true
+    },
+    {
+      "mutation": "hud_queue_without_hud",
+      "detected": true
+    },
+    {
+      "mutation": "hud_anchor_drops",
+      "detected": true
+    },
+    {
+      "mutation": "hud_head_offset",
+      "detected": true
+    },
+    {
+      "mutation": "hud_fade_band",
+      "detected": true
+    },
+    {
+      "mutation": "hud_asym_tip",
+      "detected": true
+    },
+    {
+      "mutation": "parry_no_shield_flag",
+      "detected": true
+    },
+    {
+      "mutation": "parry_proximity_not_link",
+      "detected": true
+    },
+    {
+      "mutation": "parry_any_guard",
+      "detected": true
+    },
+    {
+      "mutation": "parry_wide_window",
+      "detected": true
+    },
+    {
+      "mutation": "parry_narrow_window_v080",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_uses_now_state",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_window_uses_now",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_no_snapshot_check",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_snapshot_any_tick",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_snapshot_any_link",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_no_tick_cap",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_serial_never_closes",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_link_change_inherits",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_hist_wrong_bin",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_break_no_wait",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_no_fresh_gate",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_always_force_recoil",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_arm_from_frame0",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_fresh_any_later_tick",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_fresh_ignores_armed",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_fresh_ignores_identity",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_break_counts_protected",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_restore_not_pre",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_stale_counts_contact",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_watch_blind_aborts",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_watch_ko_is_stall",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_watch_timer_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_watch_any_generation",
+      "detected": true
+    },
+    {
+      "mutation": "parry_late_allowed",
+      "detected": true
+    },
+    {
+      "mutation": "parry_double_sphere",
+      "detected": true
+    },
+    {
+      "mutation": "parry_no_restart_token",
+      "detected": true
+    },
+    {
+      "mutation": "parry_latched_allowed",
+      "detected": true
+    },
+    {
+      "mutation": "parry_fury_allowed",
+      "detected": true
+    },
+    {
+      "mutation": "parry_idle_allowed",
+      "detected": true
+    },
+    {
+      "mutation": "parry_generation_inherit",
+      "detected": true
+    },
+    {
+      "mutation": "parry_commit_twice",
+      "detected": true
+    },
+    {
+      "mutation": "parry_deflect_any_shape",
+      "detected": true
+    },
+    {
+      "mutation": "parry_deflect_state",
+      "detected": true
+    },
+    {
+      "mutation": "posture_gain_80",
+      "detected": true
+    },
+    {
+      "mutation": "posture_no_saturation",
+      "detected": true
+    },
+    {
+      "mutation": "posture_no_regen_reset",
+      "detected": true
+    },
+    {
+      "mutation": "posture_no_token_dedupe",
+      "detected": true
+    },
+    {
+      "mutation": "posture_parry_latched",
+      "detected": true
+    },
+    {
+      "mutation": "posture_no_crossing_count",
+      "detected": true
+    },
+    {
+      "mutation": "posture_audit_weakened",
+      "detected": true
+    },
+    {
+      "mutation": "break_parry_not_delivered",
+      "detected": true
+    },
+    {
+      "mutation": "break_parry_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "break_parry_free_helm",
+      "detected": true
+    },
+    {
+      "mutation": "break_parry_over_fall",
+      "detected": true
+    },
+    {
+      "mutation": "break_latched_any",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_hide_first_object_only",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_mask_never_restored",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_mask_foreign_prompt",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_no_vptr_check",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_stale_counts",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_guard_after_parry_counts",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_parry_gives_gain",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_no_dedup",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_confuse_attackers",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_block_without_shield_flag",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_regen_assumes_60hz",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_regen_no_delay",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_regen_in_pause",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_regen_negative",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_no_reset_on_link_change",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_pulse_every_tick",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_asym_fill",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_not_centred",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_absolute_units",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_packet_only_enemies",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_no_hold_at_zero",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_gain_40",
+      "detected": true
+    },
+    {
+      "mutation": "s1_no_tg_attribution",
+      "detected": true
+    },
+    {
+      "mutation": "s1_no_edge_required",
+      "detected": true
+    },
+    {
+      "mutation": "s1_no_life_required",
+      "detected": true
+    },
+    {
+      "mutation": "s1_ambiguous_credited",
+      "detected": true
+    },
+    {
+      "mutation": "s1_edge_any_timer",
+      "detected": true
+    },
+    {
+      "mutation": "s1_direct_weight_as_block",
+      "detected": true
+    },
+    {
+      "mutation": "s1_band_inverted",
+      "detected": true
+    },
+    {
+      "mutation": "s1_band_flat",
+      "detected": true
+    },
+    {
+      "mutation": "s1_guard_no_bonus",
+      "detected": true
+    },
+    {
+      "mutation": "s1_guard_shortens_delay",
+      "detected": true
+    },
+    {
+      "mutation": "s1_fury_as_black",
+      "detected": true
+    },
+    {
+      "mutation": "s1_unknown_as_black",
+      "detected": true
+    },
+    {
+      "mutation": "s1_history_inherited",
+      "detected": true
+    },
+    {
+      "mutation": "s1_legacy_blue_as_red",
+      "detected": true
+    },
+    {
+      "mutation": "s1_no_group_adjust",
+      "detected": true
+    },
+    {
+      "mutation": "s1_invalid_life_fast",
+      "detected": true
+    },
+    {
+      "mutation": "s1_life_ref_after_damage",
+      "detected": true
+    },
+    {
+      "mutation": "s1_parry_then_direct",
+      "detected": true
+    },
+    {
+      "mutation": "f01_native_completion_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "f01_original_late_tg",
+      "detected": true
+    },
+    {
+      "mutation": "f01_wrong_tick",
+      "detected": true
+    },
+    {
+      "mutation": "f01_foreign_source",
+      "detected": true
+    },
+    {
+      "mutation": "f01_native_timer",
+      "detected": true
+    },
+    {
+      "mutation": "f01_environment",
+      "detected": true
+    },
+    {
+      "mutation": "f01_unseen_poly",
+      "detected": true
+    },
+    {
+      "mutation": "f01_electric",
+      "detected": true
+    },
+    {
+      "mutation": "f01_magic_armor",
+      "detected": true
+    },
+    {
+      "mutation": "f01_block_chip",
+      "detected": true
+    },
+    {
+      "mutation": "f01_identity",
+      "detected": true
+    },
+    {
+      "mutation": "f01_stale_contact",
+      "detected": true
+    },
+    {
+      "mutation": "f01_parry_contact",
+      "detected": true
+    },
+    {
+      "mutation": "f01_ambiguous",
+      "detected": true
+    },
+    {
+      "mutation": "f01_loop_clip_restored",
+      "detected": true
+    },
+    {
+      "mutation": "f01_animation_changed",
+      "detected": true
+    },
+    {
+      "mutation": "f01_reverse_attack",
+      "detected": true
+    },
+    {
+      "mutation": "f01_recoil_positive",
+      "detected": true
+    },
+    {
+      "mutation": "f01_physical_chain",
+      "detected": true
+    },
+    {
+      "mutation": "f01_guard_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "f01_historical_arm_blind",
+      "detected": true
+    },
+    {
+      "mutation": "f01_dead_is_recovery",
+      "detected": true
+    },
+    {
+      "mutation": "f01_no_actual_arm",
+      "detected": true
+    },
+    {
+      "mutation": "f01_no_native_arm_observation",
+      "detected": true
+    },
+    {
+      "mutation": "f01_ignores_restarts",
+      "detected": true
+    },
+    {
+      "mutation": "f01_aborts_not_diagnosed",
+      "detected": true
+    },
+    {
+      "mutation": "f01_expired_is_pass",
+      "detected": true
+    },
+    {
+      "mutation": "f01_cleanup_ignores_fresh",
+      "detected": true
+    },
+    {
+      "mutation": "f01_cleanup_ignores_attack",
+      "detected": true
+    },
+    {
+      "mutation": "f01_cleanup_changes_native_on",
+      "detected": true
+    },
+    {
+      "mutation": "f01_cleanup_wrong_identity",
+      "detected": true
+    },
+    {
+      "mutation": "f01_cleanup_wrong_generation",
+      "detected": true
+    },
+    {
+      "mutation": "f01_cleanup_wrong_tick",
+      "detected": true
+    },
+    {
+      "mutation": "f01_cleanup_false_verify",
+      "detected": true
+    },
+    {
+      "mutation": "f01_dead_legacy_false_pass",
+      "detected": true
+    },
+    {
+      "mutation": "s2_queue_requests",
+      "detected": true
+    },
+    {
+      "mutation": "s2_block_long_deadline",
+      "detected": true
+    },
+    {
+      "mutation": "s2_direct_short_deadline",
+      "detected": true
+    },
+    {
+      "mutation": "s2_gate_no_expiry",
+      "detected": true
+    },
+    {
+      "mutation": "s2_gate_any_link",
+      "detected": true
+    },
+    {
+      "mutation": "s2_gate_wolf",
+      "detected": true
+    },
+    {
+      "mutation": "s2_gate_dead",
+      "detected": true
+    },
+    {
+      "mutation": "s2_gate_pause",
+      "detected": true
+    },
+    {
+      "mutation": "s2_gate_event",
+      "detected": true
+    },
+    {
+      "mutation": "s2_rebreak",
+      "detected": true
+    },
+    {
+      "mutation": "s2_any_origin",
+      "detected": true
+    },
+    {
+      "mutation": "s2_shield_attack_origin",
+      "detected": true
+    },
+    {
+      "mutation": "s2_damage_origin",
+      "detected": true
+    },
+    {
+      "mutation": "s2_no_slip_origin",
+      "detected": true
+    },
+    {
+      "mutation": "s2_mode_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "s2_special_mode_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "s2_damage_veto_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "s2_entry_unverified",
+      "detected": true
+    },
+    {
+      "mutation": "s2_no_parry_cancel",
+      "detected": true
+    },
+    {
+      "mutation": "s2_no_expiry_observe",
+      "detected": true
+    },
+    {
+      "mutation": "s2_no_adoption",
+      "detected": true
+    },
+    {
+      "mutation": "s2_adopt_unsaturated",
+      "detected": true
+    },
+    {
+      "mutation": "s2_same_link_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "s2_pause_counts",
+      "detected": true
+    },
+    {
+      "mutation": "s2_stuck_forces_exit",
+      "detected": true
+    },
+    {
+      "mutation": "s2_dead_recovers",
+      "detected": true
+    },
+    {
+      "mutation": "s2_end_as_cancel",
+      "detected": true
+    },
+    {
+      "mutation": "s2_early_exit_is_recovery",
+      "detected": true
+    },
+    {
+      "mutation": "s2_cancel_frame",
+      "detected": true
+    },
+    {
+      "mutation": "s2_reset_on_abort",
+      "detected": true
+    },
+    {
+      "mutation": "s2_hold_always",
+      "detected": true
+    },
+    {
+      "mutation": "s2_hold_never",
+      "detected": true
+    },
+    {
+      "mutation": "s2_hold_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "s2_reset_not_accounted",
+      "detected": true
+    },
+    {
+      "mutation": "s2_reset_keeps_value",
+      "detected": true
+    },
+    {
+      "mutation": "fx_auto_shield_L",
+      "detected": true
+    },
+    {
+      "mutation": "fx_mandatory_cleared",
+      "detected": true
+    },
+    {
+      "mutation": "fx_guard_in_penalty",
+      "detected": true
+    },
+    {
+      "mutation": "fx_guard_before_rearm",
+      "detected": true
+    },
+    {
+      "mutation": "fx_rearm_while_held",
+      "detected": true
+    },
+    {
+      "mutation": "fx_rearm_during_penalty",
+      "detected": true
+    },
+    {
+      "mutation": "fx_no_release_needed",
+      "detected": true
+    },
+    {
+      "mutation": "fx_bash_in_penalty",
+      "detected": true
+    },
+    {
+      "mutation": "fx_bash_without_r",
+      "detected": true
+    },
+    {
+      "mutation": "fx_dodge_free",
+      "detected": true
+    },
+    {
+      "mutation": "fx_dodge_native_only",
+      "detected": true
+    },
+    {
+      "mutation": "fx_backflip_free",
+      "detected": true
+    },
+    {
+      "mutation": "fx_frontroll_free",
+      "detected": true
+    },
+    {
+      "mutation": "fx_sidehop_free",
+      "detected": true
+    },
+    {
+      "mutation": "fx_window_native_only",
+      "detected": true
+    },
+    {
+      "mutation": "fx_window_short",
+      "detected": true
+    },
+    {
+      "mutation": "fx_window_off_by_one",
+      "detected": true
+    },
+    {
+      "mutation": "fx_pause_counts",
+      "detected": true
+    },
+    {
+      "mutation": "fx_latch_extended",
+      "detected": true
+    },
+    {
+      "mutation": "fx_clock_restart",
+      "detected": true
+    },
+    {
+      "mutation": "fx_transplant",
+      "detected": true
+    },
+    {
+      "mutation": "fx_event_no_abort",
+      "detected": true
+    },
+    {
+      "mutation": "fx_abort_leaves_latch",
+      "detected": true
+    },
+    {
+      "mutation": "fx_watchdog_forces_exit",
+      "detected": true
+    },
+    {
+      "mutation": "fx_requests_open",
+      "detected": true
+    },
+    {
+      "mutation": "fx_consume_b_global",
+      "detected": true
+    },
+    {
+      "mutation": "fx_consume_b_unoffered",
+      "detected": true
+    },
+    {
+      "mutation": "fx_bonus_r_only",
+      "detected": true
+    },
+    {
+      "mutation": "fx_bonus_in_rearm",
+      "detected": true
+    },
+    {
+      "mutation": "fx_backward_threshold",
+      "detected": true
+    },
+    {
+      "mutation": "lnk05_cancel_speed",
+      "detected": true
+    },
+    {
+      "mutation": "extra_hp",
+      "detected": true
+    },
+    {
+      "mutation": "power",
+      "detected": true
+    },
+    {
+      "mutation": "anim_rate",
+      "detected": true
+    },
+    {
+      "mutation": "cooldown_elsewhere",
+      "detected": true
+    },
+    {
+      "mutation": "second_writer",
+      "detected": true
+    },
+    {
+      "mutation": "at_set_outside_helper",
+      "detected": true
+    },
+    {
+      "mutation": "f01_adapter_guard_removed",
+      "detected": true
+    },
+    {
+      "mutation": "f01_capture_no_first_priority",
+      "detected": true
+    },
+    {
+      "mutation": "f01_native_source_fabricated",
+      "detected": true
+    },
+    {
+      "mutation": "f01_native_hook_writes",
+      "detected": true
+    },
+    {
+      "mutation": "f01_actual_arm_fabricated",
+      "detected": true
+    },
+    {
+      "mutation": "f01_poly_result_ignored",
+      "detected": true
+    },
+    {
+      "mutation": "hud_writes_meter",
+      "detected": true
+    },
+    {
+      "mutation": "hud_writes_health",
+      "detected": true
+    },
+    {
+      "mutation": "hud_rearms_posture",
+      "detected": true
+    },
+    {
+      "mutation": "hud_reads_breaker_internals",
+      "detected": true
+    },
+    {
+      "mutation": "hud_second_queue_walk",
+      "detected": true
+    },
+    {
+      "mutation": "hud_direct_set",
+      "detected": true
+    },
+    {
+      "mutation": "hud_painter_reads_posture",
+      "detected": true
+    },
+    {
+      "mutation": "hud_no_scrub_on_shutdown",
+      "detected": true
+    },
+    {
+      "mutation": "hud_extra_service",
+      "detected": true
+    },
+    {
+      "mutation": "hud_extra_hook",
+      "detected": true
+    },
+    {
+      "mutation": "hud_core_reads_posture",
+      "detected": true
+    },
+    {
+      "mutation": "parry_writes_hp",
+      "detected": true
+    },
+    {
+      "mutation": "parry_writes_link",
+      "detected": true
+    },
+    {
+      "mutation": "parry_cached_actor_read",
+      "detected": true
+    },
+    {
+      "mutation": "parry_judge_writes",
+      "detected": true
+    },
+    {
+      "mutation": "parry_second_deflect",
+      "detected": true
+    },
+    {
+      "mutation": "parry_target_not_pre",
+      "detected": true
+    },
+    {
+      "mutation": "parry_no_shape_check",
+      "detected": true
+    },
+    {
+      "mutation": "parry_apply_outside",
+      "detected": true
+    },
+    {
+      "mutation": "parry_disabled_twice",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_judge_uses_now",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_observe_twice",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_judge_ignores_fresh",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_state3_always",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_note_before_writes",
+      "detected": true
+    },
+    {
+      "mutation": "fix02_watch_writes",
+      "detected": true
+    },
+    {
+      "mutation": "fix01_observe_writes",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_hides_whole_hud",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_shows_again",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_global_alpha",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_writes_link_proc",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_writes_guard_counter",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_writes_life",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_contact_twice",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_contact_before_parry",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_regen_in_draw",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_painter_reads_posture",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_pre_installed_first",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_mask_any_prompt",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_no_vptr_guard",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_hide_outside_step",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_regen_ignores_pause",
+      "detected": true
+    },
+    {
+      "mutation": "lnk_extra_slot_write",
+      "detected": true
+    },
+    {
+      "mutation": "s1_writes_damage_timer",
+      "detected": true
+    },
+    {
+      "mutation": "s1_pre_clears_tg",
+      "detected": true
+    },
+    {
+      "mutation": "s1_guard_ignores_invulnerability",
+      "detected": true
+    },
+    {
+      "mutation": "s1_confirm_twice",
+      "detected": true
+    },
+    {
+      "mutation": "s1_any_cylinder",
+      "detected": true
+    },
+    {
+      "mutation": "s1_tg_assumed",
+      "detected": true
+    },
+    {
+      "mutation": "s1_writes_pending_life",
+      "detected": true
+    },
+    {
+      "mutation": "s1_regen_before_confirm",
+      "detected": true
+    },
+    {
+      "mutation": "s2_writes_proc",
+      "detected": true
+    },
+    {
+      "mutation": "s2_writes_counter",
+      "detected": true
+    },
+    {
+      "mutation": "s2_writes_mode",
+      "detected": true
+    },
+    {
+      "mutation": "s2_on_mode_flag",
+      "detected": true
+    },
+    {
+      "mutation": "s2_writes_damage_timer",
+      "detected": true
+    },
+    {
+      "mutation": "s2_slip_route",
+      "detected": true
+    },
+    {
+      "mutation": "s2_damage_route",
+      "detected": true
+    },
+    {
+      "mutation": "s2_double_call",
+      "detected": true
+    },
+    {
+      "mutation": "s2_entry_assumed",
+      "detected": true
+    },
+    {
+      "mutation": "s2_call_before_gate",
+      "detected": true
+    },
+    {
+      "mutation": "s2_call_from_update",
+      "detected": true
+    },
+    {
+      "mutation": "s2_no_pending_check",
+      "detected": true
+    },
+    {
+      "mutation": "s2_damage_veto_blind",
+      "detected": true
+    },
+    {
+      "mutation": "s2_second_hook",
+      "detected": true
+    },
+    {
+      "mutation": "s2_reset_unconditional",
+      "detected": true
+    },
+    {
+      "mutation": "s2_reset_at_request",
+      "detected": true
+    },
+    {
+      "mutation": "s2_regen_request",
+      "detected": true
+    },
+    {
+      "mutation": "s2_parry_requests",
+      "detected": true
+    },
+    {
+      "mutation": "s2_no_parry_cancel",
+      "detected": true
+    },
+    {
+      "mutation": "s2_observe_twice",
+      "detected": true
+    },
+    {
+      "mutation": "s2_hold_forced",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_hook_crouch_procwait",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_hook_dodge_proc",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_hook_anim",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_flag_on",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_third_flag_off",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_flag_off_unconditional",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_b_global",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_second_input_write",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_raw_pad",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_writes_proc",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_anim_rate",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_damage_artificial",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_reset_on_complete",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_skip_any_status",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_dodge_always",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_collision_in_break",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_collision_always",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_partial_install",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_enable_early",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_bonus_r_held",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_request_unblocked",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_second_native_call",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_begin_on_request",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_lose_fix01_hook",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_const_dup",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_bstatus_always",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_bash_forced",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_crouch_shield",
+      "detected": true
+    },
+    {
+      "mutation": "s2f_core_impure",
+      "detected": true
+    },
+    {
+      "mutation": "s2_core_impure",
+      "detected": true
+    }
+  ],
+  "count": 353,
+  "detected": 353,
+  "timeouts": 0
+}

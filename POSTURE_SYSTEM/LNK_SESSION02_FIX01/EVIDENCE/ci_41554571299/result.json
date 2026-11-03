@@ -1,0 +1,779 @@
+{
+  "ci_head": "0a1be3f8adbf9920523533956c0417783b93ae9a",
+  "dependencies": {
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "importlib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "official_sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "win_zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf"
+  },
+  "dll_loaded": false,
+  "ended_utc": "2026-11-03T00:51:27.215368+00:00",
+  "formatter_sample_identical_msvc_gpp": true,
+  "game_executed": false,
+  "host_built": false,
+  "hud_reference_renders": [
+    "POST07_REFERENCE_RENDER_1080p.png",
+    "POST07_REFERENCE_RENDER_2160p.png",
+    "POST07_REFERENCE_RENDER_720p.png"
+  ],
+  "labels": [
+    "LAB_PASS_MSVC",
+    "WINDOWS_MSVC_BUILD_OK",
+    "PE_NEGATIVES_REJECTED",
+    "WINDOWS_MSVC_PASS"
+  ],
+  "ledger_files": 59,
+  "lnk01_reference_renders": [
+    "LNK01_REFERENCE_RENDER_1080p.png",
+    "LNK01_REFERENCE_RENDER_720p.png",
+    "LNK01_REFERENCE_RENDER_ultrawide_2560x1080.png"
+  ],
+  "loose_dll": {
+    "bytes": 252928,
+    "sha256": "d0f8cdceee558fdba5f0cd1b1305af4493c1bc2d12461dd7bbf5ab35b0d44076"
+  },
+  "package": {
+    "bytes": 109650,
+    "dll_in_package_equals_loose": true,
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "mod_json_equals_source": true,
+    "sha256": "8325dcf92d1ad7f39b330cef55713930d4dfce39c7baba27f64c8ec7d23e93ac",
+    "version": "0.11.1"
+  },
+  "pe_audit": {
+    "errors": [],
+    "hook_thunk_bound_import": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "pinned": true,
+    "status": "PE_AUDIT_PASS"
+  },
+  "pe_negatives": {
+    "baseline": "PE_AUDIT_PASS",
+    "cases": [
+      {
+        "case": "N1 arquitectura i386 en vez de AMD64",
+        "first_error": "machine is not AMD64",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N2 import nuevo del juego (fopAcM_SearchByID alterado)",
+        "first_error": "unreviewed game import ?fopAcM_SearchByIE@@YAHIPEAPEAVfopAc_ac_c@@@Z",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N3 import mutador del sistema (WriteProcessMemory)",
+        "first_error": "forbidden symbol WriteProcessMemory in imports/exports: ['WriteProcessMemory']",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N4 import CRT nuevo (memset -> memmov)",
+        "first_error": "PIN_MISMATCH imports: got {'dusklight.exe': ['??0J2DOrthoGraph@@QEAA@MMMMMM@Z', '?_delete@",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N5 export alterado (mod_update)",
+        "first_error": "PIN_MISMATCH exports: got ['mod_ctx', 'mod_initialize', 'mod_meta', 'mod_shutdown', 'mod_u",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N6 el registro HOOK_MEM apunta a otro metodo (nombre en modmeta)",
+        "first_error": "unexpected hook target set",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N6b hook reenlazado a otro simbolo importado (thunk)",
+        "first_error": "hook thunk bound to ('dusklight.exe', '?damage_chexk@daE_OC_c@@QEAAXXZ')",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N7 dependencia alterada (KERNEL32.dll)",
+        "first_error": "PIN_MISMATCH imports: got {'dusklight.exe': ['??0J2DOrthoGraph@@QEAA@MMMMMM@Z', '?_delete@",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N8 import del juego no revisado (getStartStageName -> otro)",
+        "first_error": "unreviewed game import ?dComIfGp_getStartStageNamX@@YAPEBDXZ",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N9 archivo truncado",
+        "first_error": "error",
+        "rejected": true,
+        "status": "REJECTED_BY_EXCEPTION"
+      },
+      {
+        "case": "N10 cabecera MZ corrupta",
+        "first_error": "ValueError",
+        "rejected": true,
+        "status": "REJECTED_BY_EXCEPTION"
+      },
+      {
+        "case": "N15 native Link PMF size corrupted",
+        "first_error": "extended PMF rejected: unapproved extended member target/layout",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N16 null Link materializer",
+        "first_error": "extended PMF rejected: unmapped rva -0x180000000",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N17 arbitrary materializer code",
+        "first_error": "extended PMF rejected: unsupported materializer opcode at 0x18001a830: cc83ec28488d05c7b10",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N18 unexpected extended hook flags",
+        "first_error": "extended PMF rejected: unapproved extended member target/layout",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N19 extended target name changed",
+        "first_error": "unexpected hook target set",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N14 transicion nativa de Link no revisada (procGuardBreakInit -> otro metodo)",
+        "first_error": "unreviewed game import ?procGuardBreakInix@daAlink_c@@QEAAHXZ",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N11 hook virtual renombrado (dMeterButton_c::draw -> otro metodo)",
+        "first_error": "unexpected hook target set",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N12 vtable del hook virtual alterada",
+        "first_error": "hook names ['??_7dMeterButtoN_c@@6B@', 'dMeterButton_c::draw']",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N13 thunk vcall del hook virtual alterado (otro slot / salto directo)",
+        "first_error": "virtual hook dMeterButton_c::draw: PMF is not a slot-0 vcall thunk (got None)",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      }
+    ],
+    "passed_unexpectedly": 0
+  },
+  "phases": [
+    {
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "exit": 0,
+      "label": "compiler",
+      "seconds": 3.234
+    },
+    {
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "exit": 0,
+      "label": "cmake-version",
+      "seconds": 1.641
+    },
+    {
+      "command": [
+        "ninja",
+        "--version"
+      ],
+      "exit": 0,
+      "label": "ninja-version",
+      "seconds": 0.125
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_post04_tools.py"
+      ],
+      "exit": 0,
+      "label": "tool-tests",
+      "seconds": 1.016
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_pmf_audit.py"
+      ],
+      "exit": 0,
+      "label": "pmf-static-tests",
+      "seconds": 0.062
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\source_audit.py",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05"
+      ],
+      "exit": 0,
+      "label": "source-audit",
+      "seconds": 0.61
+    },
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DPOST05_SOURCE_COMMIT=8879ea08649eccee828798f3b6767e2cd655b48f"
+      ],
+      "exit": 0,
+      "label": "configure",
+      "seconds": 7.25
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_hit_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab1",
+      "seconds": 6.14
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_hit_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab1",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lifecycle_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab2",
+      "seconds": 4.594
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lifecycle_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab2",
+      "seconds": 0.094
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_collider_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab3",
+      "seconds": 1.219
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_collider_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab3",
+      "seconds": 0.015
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_posture_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab4",
+      "seconds": 5.594
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_posture_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab4",
+      "seconds": 0.156
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_reaction_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab5",
+      "seconds": 4.25
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_reaction_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab5",
+      "seconds": 0.235
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_compat_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab6",
+      "seconds": 7.109
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_compat_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab6",
+      "seconds": 0.359
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_rb_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab7",
+      "seconds": 11.704
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_rb_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab7",
+      "seconds": 0.546
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_general_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab8",
+      "seconds": 8.204
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_general_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab8",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_break_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab9",
+      "seconds": 8.39
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_break_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab9",
+      "seconds": 0.032
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_hud_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab10",
+      "seconds": 23.265
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_hud_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab10",
+      "seconds": 0.078
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_parry_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab11",
+      "seconds": 8.125
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_parry_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab11",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lnk_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab12",
+      "seconds": 5.125
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnk_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab12",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lnks1_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab13",
+      "seconds": 4.625
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnks1_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab13",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_fix01_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab14",
+      "seconds": 5.359
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_fix01_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab14",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lnks2_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab15",
+      "seconds": 4.937
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnks2_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab15",
+      "seconds": 0.657
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lnks2fix_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab16",
+      "seconds": 4.562
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnks2fix_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab16",
+      "seconds": 0.656
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\run_mutations.py"
+      ],
+      "exit": 0,
+      "label": "rework-mutations",
+      "seconds": 447.547
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_hud_lab.exe",
+        "--render",
+        "<WORK>\\evidence"
+      ],
+      "exit": 0,
+      "label": "hud-reference-renders",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnk_lab.exe",
+        "--render",
+        "<WORK>\\evidence"
+      ],
+      "exit": 0,
+      "label": "lnk01-reference-renders",
+      "seconds": 0.203
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_posture_lab.exe",
+        "--emit-sample",
+        "<WORK>\\evidence\\sample-msvc.log"
+      ],
+      "exit": 0,
+      "label": "emit-sample",
+      "seconds": 0.0
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\extract_post04_evidence.py",
+        "--log",
+        "<WORK>\\evidence\\sample-msvc.log",
+        "--output-dir",
+        "<WORK>\\sample-extract"
+      ],
+      "exit": 0,
+      "label": "extract-sample",
+      "seconds": 0.062
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_selective_reactions",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-mod",
+      "seconds": 7.954
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\post05_selective_reactions.dll"
+      ],
+      "exit": 0,
+      "label": "dumpbin-headers",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\post05_selective_reactions.dll"
+      ],
+      "exit": 0,
+      "label": "dumpbin-imports",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\post05_selective_reactions.dll"
+      ],
+      "exit": 0,
+      "label": "dumpbin-exports",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\pe_negatives.py",
+        "<WORK>\\build\\post05_selective_reactions.dll",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\expected_pe.json"
+      ],
+      "exit": 0,
+      "label": "pe-negatives",
+      "seconds": 0.172
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_selective_reactions_package",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-package",
+      "seconds": 0.297
+    }
+  ],
+  "production_units": [
+    "game_feature.cpp",
+    "mod.cpp"
+  ],
+  "run_id": "41554571299",
+  "source_audit": {
+    "define_hook_count": 16,
+    "errors": [],
+    "files": [
+      "break_core.hpp",
+      "engine.hpp",
+      "fix01_core.hpp",
+      "helm_core.hpp",
+      "hit_core.hpp",
+      "hud_core.hpp",
+      "lifecycle_core.hpp",
+      "lnk_core.hpp",
+      "lnks2_core.hpp",
+      "lnks2fix_core.hpp",
+      "mod.cpp",
+      "parry_core.hpp",
+      "posture_core.hpp",
+      "reaction_core.hpp"
+    ],
+    "status": "SOURCE_AUDIT_PASS"
+  },
+  "source_commit": "8879ea08649eccee828798f3b6767e2cd655b48f",
+  "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+  "started_utc": "2026-11-03T00:41:40.134827+00:00",
+  "status": "POST05_PACKAGE_PASS_DOWNLOAD_PENDING",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "VSCMD_ARG_TGT_ARCH": "x64",
+    "VisualStudioVersion": "18.0",
+    "WindowsSDKVersion": "10.0.26100.0\\"
+  }
+}
