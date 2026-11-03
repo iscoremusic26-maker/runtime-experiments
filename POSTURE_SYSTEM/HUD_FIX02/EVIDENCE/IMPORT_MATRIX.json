@@ -1,0 +1,75 @@
+{
+  "inherited_game_imports": 49,
+  "current_game_imports": 54,
+  "removed": [],
+  "new": [
+    {
+      "symbol": "?checkNowWolfEyeUp@daPy_py_c@@SAHXZ",
+      "reason": "Read-only senses state identical CP06 snapshot eligibility"
+    },
+    {
+      "symbol": "?dComIfGs_wolfeye_effect_check@@YAHXZ",
+      "reason": "Read-only senses state identical CP06 snapshot eligibility"
+    },
+    {
+      "symbol": "?draw@J2DPane@@QEAAXMMPEBVJ2DGrafContext@@_N1@Z",
+      "reason": "FIX02 scoped visual-only pane draw argument; original caches execute; paired POST restores by-value bool"
+    },
+    {
+      "symbol": "?drawString_size_scale@JUTFont@@QEAAMMMMMPEBDI_N@Z",
+      "reason": "FIX02 direct text original executes for exact advance; paired local font-color alpha lease"
+    },
+    {
+      "symbol": "?fpcEx_SearchByID@@YAPEAUbase_process_class@@I@Z",
+      "reason": "FIX02 CP06 authentic allied Helmasaur-leaf rule: live parent process lookup by ID, read-only; never cached"
+    }
+  ],
+  "service_imports": [
+    [
+      "com.dusklight.enemy_health_multiplier_203.vitals",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.game",
+      2,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.gfx",
+      1,
+      4
+    ],
+    [
+      "dev.twilitrealm.dusklight.hook",
+      1,
+      1
+    ],
+    [
+      "dev.twilitrealm.dusklight.host",
+      2,
+      2
+    ],
+    [
+      "dev.twilitrealm.dusklight.interp",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.log",
+      1,
+      0
+    ]
+  ],
+  "hook_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 13,
+    "HOOK_MEM_EXT": 8,
+    "IMPORT": 7
+  },
+  "vcall_slots": {
+    "COutFont_c::draw": 24,
+    "dMeterButton_c::draw": 0,
+    "static_cast<void (J2DPicture::*)(f32,f32,f32,f32,bool,bool,bool)>(&J2DPicture::draw)": 440
+  }
+}

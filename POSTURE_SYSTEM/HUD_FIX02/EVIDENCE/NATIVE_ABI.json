@@ -1,0 +1,32 @@
+{
+  "J2DPicture": [
+    {
+      "slot": 55,
+      "byte_offset": 440,
+      "symbol": "?draw@J2DPicture@@UEAAXMMMM_N00@Z"
+    }
+  ],
+  "COutFont_c": [
+    {
+      "slot": 3,
+      "byte_offset": 24,
+      "symbol": "?draw@COutFont_c@@UEAAXPEAVJ2DTextBox@@MMM@Z"
+    }
+  ],
+  "?draw@J2DPane@@": [
+    "?draw@J2DPane@@QEAAXMMPEBVJ2DGrafContext@@_N1@Z"
+  ],
+  "?drawString_size_scale@JUTFont@@": [
+    "?drawString_size_scale@JUTFont@@QEAAMMMMMPEBDI_N@Z"
+  ],
+  "?fpcM_SearchByID@@": [],
+  "?checkNowWolfEyeUp@": [
+    "?checkNowWolfEyeUp@daPy_py_c@@SAHXZ"
+  ],
+  "?dComIfGs_wolfeye_effect_check@@": [
+    "?dComIfGs_wolfeye_effect_check@@YAHXZ"
+  ],
+  "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+  "official_sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "measurement": "Static MSVC RTTI CompleteObjectLocator -> primary vtable -> export target/thunk. EXE never executed."
+}

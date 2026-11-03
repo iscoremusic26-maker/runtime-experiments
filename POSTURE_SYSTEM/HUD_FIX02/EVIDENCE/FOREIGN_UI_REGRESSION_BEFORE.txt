@@ -1,0 +1,2 @@
+UI02_FAIL foreign noninvading string must survive prompt union
+

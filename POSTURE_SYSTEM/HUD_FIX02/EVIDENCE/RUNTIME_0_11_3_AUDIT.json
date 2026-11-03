@@ -1,0 +1,71 @@
+{
+  "file": "dusklight-20261103-090930.log",
+  "bytes": 2994351,
+  "lines": 15736,
+  "sha256": "13b60a10c44fbdd7b61b2bf9658d4ec3f168768bb3bc86f0f35d85a6c1126d05",
+  "families": {
+    "POST_BAL01_NORMALIZED_VARIANT_WEIGHTS": 1,
+    "POST07_INIT": 1,
+    "POST_HUD_FIX01_INIT": 1,
+    "LNK_FIX01_INIT": 2,
+    "POST_BAL01_INIT": 1,
+    "LNK_FIX01_SHIELD": 180,
+    "LNK_FIX01_REGEN": 80,
+    "POST07_HUD_FIRST_QUEUE": 1,
+    "POST_HUD_FIX01_TRANSITION": 48,
+    "POST_BAL01_HIT": 101,
+    "LNK_FIX01_PENALTY": 16,
+    "POST_HUD_FIX01_SUMMARY": 10,
+    "POST07_HUD_SUMMARY": 9,
+    "POST_BAL01_SUMMARY": 50,
+    "LNK_FIX01_SUMMARY": 10,
+    "LNK_FIX01_DODGE": 3,
+    "POST_BAL01_REGEN": 48,
+    "POST_BAL01_REARM": 3,
+    "LNK_FIX01_SHIELD_ATTACK": 43,
+    "POST_BAL01_PARRY": 23
+  },
+  "summaries": [
+    "POST_HUD_FIX01_SUMMARY tag=SHUTDOWN enabled=0 frames=40087 bar_required=10900 bar_drawn=10900 transitions=28 screens=74116 relocated_groups=0 restored_leases=0 unsupported_contexts=0 overflows=0 unpaired=0 remaining_bound_intersections=131339 scoop_offered_frames=0 weighted_sword_contacts=47 weighted_sword_near_bar_off=0 phase=IDLE evidence=RUNTIME_COUNTERS_NOT_PIXEL_PROOF"
+  ],
+  "screenshot": "NOT_AVAILABLE",
+  "subsystem_summaries": {
+    "POST_HUD_FIX01_SUMMARY": {
+      "count": 10,
+      "last": "POST_HUD_FIX01_SUMMARY tag=SHUTDOWN enabled=0 frames=40087 bar_required=10900 bar_drawn=10900 transitions=28 screens=74116 relocated_groups=0 restored_leases=0 unsupported_contexts=0 overflows=0 unpaired=0 remaining_bound_intersections=131339 scoop_offered_frames=0 weighted_sword_contacts=47 weighted_sword_near_bar_off=0 phase=IDLE evidence=RUNTIME_COUNTERS_NOT_PIXEL_PROOF"
+    },
+    "POST07_HUD_SUMMARY": {
+      "count": 9,
+      "last": "POST07_HUD_SUMMARY v=0.7.0 tag=PERIODIC active=1 interp=PRESENT meter_exec=17749 meter_draw=50349 meter_delete=4 passes=17749 binds=134 resets=0 cleared_missing=118 cleared_dead=1 pulses=8 hits=58 recoveries=235 frozen_hidden=0 paused=0 published=6207 queued=5756 refused=0 hud_not_queued=0 packet_draws=10998 skipped=0 painted=11800 quads=485196 over_budget=0 max_visible=3 interp_hit=11875 interp_miss=152 scrubbed=0 scanned_max=224 matched_max=19"
+    },
+    "LNK_FIX01_SUMMARY": {
+      "count": 10,
+      "last": "LNK_FIX01_SUMMARY v=0.11.1 tag=SHUTDOWN enabled=1 state=READY total_penalty_ticks=75 begins(ext/latch)=4/0 duplicate_begins=0 native_exits=4 post_vulnerable=4 completes=4 rearmed=1 aborted=3 watchdog=0 window_ticks(min/max)=75/75 native_ticks(min/max)=29/36 active_ticks=300 paused_ticks=0 held_through_unlock=1 released_after_unlock=3 r_edges=46 r_down/up=46/46 guard(enabled/no_r/penalty/rearm/mandatory)=2658/1541/149/184/628 flag_clears(guard/collision)=1874/4 bash(accepted/denied_penalty/b_without_r)=43/0/0 bash_offered=4160 b_consumed=45 bstatus_set=2726 dodge_denied(backflip/sidehop/side_roll/frontroll)=3/0/0/0 requests_blocked=0 regen_x1_5(on/off)=89/89 anomalies(slip/guard_attack/small_guard)=0/0/0 failures=0 executes=18943 invariants=1 lines(shield/bash/penalty/dodge/regen/input)=120+42/43+0/16+0/3+0/80+98/60+32"
+    },
+    "LNK_FIX01_PENALTY": {
+      "count": 16,
+      "last": "LNK_FIX01_PENALTY event=ABORTED_SAFE reason=DEAD state=REARM_REQUIRED>READY origin=MOD_BREAK extended=1 link_id=1376 epoch=6 entry_tick=14092 tick=14247 active_ticks=75 native_ticks=29 remaining=0 total_penalty_ticks=75"
+    },
+    "LNK05_SUMMARY": {
+      "count": 0,
+      "last": null
+    },
+    "POST_BAL01_SUMMARY": {
+      "count": 50,
+      "last": "POST_BAL01_SUMMARY tag=SHUTDOWN variant=UNKNOWN sword=0 iron=0 parries=0 units=0 crossings=0 breaks_delivered=0 rearms_standing25=0 rearms_getup0=0 rate_changes=0 unavailable=0 stale=0 preview_mismatch=0 delivery_duplicate=0 duplicates_avoided=0 ambiguous=0 audit_units=1 balance_units=1 balance_events=1 units_added=1481 recovered=284 closed=947 rearmed=250 live=0 log_drops=0 summary_drops=0 evidence=RUNTIME"
+    }
+  },
+  "warning_categories_only": {
+    "other": 38,
+    "DEVF": 72
+  },
+  "initialization": {
+    "POST_HUD_FIX01_INIT": [
+      "POST_HUD_FIX01_INIT version=0.11.3 route=SCREEN_GEOMETRIC_REFLOW+GFX_FRAME_PAIR surfaces=ALL_NATIVE_J2D_SCREENS(button/aux/waku/text/pikari/foreign) root_hiding=OFF sparkle_mask=OFF actions=NATIVE player=INDEPENDENT_AFTER_HUD enemy_anchor=UNCHANGED_CP06_EXACT_SOURCE_UNAVAILABLE render_scissor_contexts=COUNTED_REFUSED human=HUMAN_RUNTIME_PENDING"
+    ],
+    "POST_BAL01_INIT": [
+      "POST_BAL01_INIT version=0.11.2 cap=100 threshold=100 weights(sword/parry/iron)[blue/red/black/fury]=25/40/50,17/27/33,13/20/25,13/20/25 rearm_standing=25 rearm_getup=0 regen_posture=UNCHANGED(120ticks,5/4/3/2/1,30Hz) link_policy=UNCHANGED(0.11.1) classification=LNK07_RESOURCE+BOTH_AT_SPHERES+GENERATION_HISTORY source=0c50f035a55d627379d6f6e2dcd8a04297f905ed hooks=16 game_imports=48 new_native_writes=0 enabled=1 evidence=ENGINE_SOURCE+LAB+CI runtime=HUMAN_RUNTIME_PENDING"
+    ]
+  },
+  "token_warning_classification_scope": "lines containing WARN/ERROR/FATAL token, not proof of severity or cause"
+}

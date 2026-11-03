@@ -1,0 +1,3 @@
+HUD_FIX02_ADAPTER checks=43008 failures=0 RESULT=LAB_PASS production_callbacks=1 old_policy_rejected=1 native_runtime=0 suppressed=4872 kept=9128
+
+MODEL_FIXTURE_SECONDS 0.04558279999997694

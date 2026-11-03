@@ -1,0 +1,27 @@
+{
+  "compiled_base": "0c50f035a55d627379d6f6e2dcd8a04297f905ed",
+  "current_source": "061e1793d687c958d10e9d0c63ae898c369bda24",
+  "callbacks": [
+    {
+      "function": "hudfix_before",
+      "baseline_sha256": "daa19354533e90408fd5c2c5b647378b5e26a8a7b48fe9a7ac97f3f24b462e1f",
+      "current_sha256": "f9a26d989f4d173ab063a1988618fb1931732f9d4cebb592a288077c3494a5ce",
+      "only_added_statements": [
+        "uf.text_n=uf.cluster_n=0;",
+        "ui02_end_frame(); (AFTER only)"
+      ],
+      "normalized_equal": true
+    },
+    {
+      "function": "hudfix_after",
+      "baseline_sha256": "f40383c20919c8ef7c1a53904eeca3d91ccaee5bd2ca20ba3f51fef43af4a4e8",
+      "current_sha256": "ae6e46c05c1f525afcab35712b6a462b9050e7d432b5c0e38a5560557b114d0a",
+      "only_added_statements": [
+        "uf.text_n=uf.cluster_n=0;",
+        "ui02_end_frame(); (AFTER only)"
+      ],
+      "normalized_equal": true
+    }
+  ],
+  "actual_runtime": "HUMAN_RUNTIME_PENDING"
+}

@@ -1,0 +1,152 @@
+{
+  "version": "0.11.4",
+  "verdict": "PRIVATE_TEST_BOTH_NEW_FIXES_IMPLEMENTED_HUMAN_RUNTIME_PENDING",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "source_branch": "feature/posture-hud-fix02-0-11-4",
+  "compiled_source": "061e1793d687c958d10e9d0c63ae898c369bda24",
+  "compiled_source_tree": "5f73c4b52dcf94ab4c6941947c3b9109788e6274",
+  "base_0_11_3": "0c50f035a55d627379d6f6e2dcd8a04297f905ed",
+  "combat_baseline_0_11_2": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+  "documentation": "separate descendant commit; never attributed to this binary",
+  "ci_branch": "ci/posture-hud-fix02-0-11-4",
+  "ci_commit": "f87098b4451e942a183aeb37d9ea39ad57d10861",
+  "run": 41673271040,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41673271040",
+  "jobs": [
+    {
+      "id": 126046981938,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126054809868,
+      "name": "independent-download",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifact_id": 13248769855,
+  "artifact_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41673271040/artifacts/13248769855",
+  "artifact_expires_at": "2026-12-03T16:33:41Z",
+  "filename": "POSTURE_HUD_FIX02_0_11_4_PRIVATE_TEST_windows-amd64_061e1793d687.dusk",
+  "package_bytes": 136658,
+  "package_sha256": "c63d436e8a475ef5b19732ac1006fad14599921232eca5545c33fb477d415fa4",
+  "dll_sha256": "07cc40de8211129eac91024eaf6b7f98d93d2bab89749db16a5beda9823d3210",
+  "bugs": {
+    "A": {
+      "issue": "Scoop/contextual actions",
+      "states": [
+        "SOURCE_IMPLEMENTED",
+        "SOURCE_AUDIT_PASS",
+        "LAB_PASS",
+        "WINDOWS_MSVC_PASS",
+        "PE_AUDIT_PASS",
+        "ARTIFACT_DOWNLOADED_VERIFIED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "human_0_11_3": "USER_CONFIRMED_FIXED",
+      "fix02": "PRESERVED; visual conflicts suppressed without changing native action/input; no reflow",
+      "human_0_11_4": "PENDING"
+    },
+    "B": {
+      "issue": "lower prompts overlap Link",
+      "states": [
+        "SOURCE_IMPLEMENTED",
+        "SOURCE_AUDIT_PASS",
+        "LAB_PASS",
+        "WINDOWS_MSVC_PASS",
+        "PE_AUDIT_PASS",
+        "ARTIFACT_DOWNLOADED_VERIFIED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "fix02": "CONDITIONAL_SUPPRESSION_IMPLEMENTED; pane/outfont/direct picture/direct text, native22 action kinds",
+      "production_fixture": "old policy fails suppression contract; FIX02 passes; upper-right retained",
+      "coverage_limits": [
+        "4screen/512node/48depth/64pane/4font nesting bounds",
+        "unknown/overflow observations counted, not pixel-proof",
+        "native raster/order/renderer still human pending"
+      ]
+    },
+    "C": {
+      "issue": "relative alignment with EHB CP06",
+      "states": [
+        "SOURCE_IMPLEMENTED",
+        "SOURCE_AUDIT_PASS",
+        "LAB_PASS",
+        "WINDOWS_MSVC_PASS",
+        "PE_AUDIT_PASS",
+        "ARTIFACT_DOWNLOADED_VERIFIED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "fix02": "AUTHENTIC_FULL_TRACKER_MIRROR_IMPLEMENTED",
+      "reference_commit": "7bb569a9cdf047034dc940fa5733c0f339a1e962",
+      "reference_mod_tree": "a0434c361791e59e07f158581cb4e9f9205052a6",
+      "demonstrated_previous_error": 80,
+      "units": "orthographic logical units, not pixels",
+      "fixture_visibility": "posture alpha forced1 to isolate geometry; not a count of native private-HUD publications",
+      "paired_presentations": 716386,
+      "presentation_frames": 9834,
+      "max_relative_logical_error": 4.577636718572364e-06,
+      "constant_centre_delta": 4.7,
+      "assumptions": [
+        "exact supplied CP06 source/version and immutable default normal enabled option",
+        "cold start, same native snapshots and public interpolation service",
+        "native callback ordering/render and <=1px human measurement pending"
+      ],
+      "ehb_private_api_used": false,
+      "blocked": false
+    },
+    "D": {
+      "issue": "Link flicker during sword contacts",
+      "states": [
+        "SOURCE_IMPLEMENTED",
+        "SOURCE_AUDIT_PASS",
+        "LAB_PASS",
+        "WINDOWS_MSVC_PASS",
+        "PE_AUDIT_PASS",
+        "ARTIFACT_DOWNLOADED_VERIFIED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "human_0_11_3": "USER_CONFIRMED_FIXED",
+      "fix02": "INDEPENDENT_PRESENTATION_PRESERVED; callback body parity except per-frame UI value cleanup",
+      "human_0_11_4": "PENDING"
+    }
+  },
+  "validation": {
+    "windows_msvc": "PASS",
+    "pe": "PE_AUDIT_PASS",
+    "independent_download": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "local_api_download": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "old_labs": 18,
+    "old_lab_checks": 2829095,
+    "old_mutations": 393,
+    "new_mutations": 11,
+    "total_mutations": 404,
+    "timeouts": 0,
+    "semantic_source_negatives": 114,
+    "source_audit_positive_clone": "PASS",
+    "native_instruction_negatives": 2,
+    "pe_negative_cases": 20,
+    "pinned_functions": 107,
+    "pinned_headers": 15,
+    "source_adapter_checks": 43008,
+    "alignment_comparison_checks": 2875378,
+    "native_game_executed": false,
+    "fps_or_dx12_pixel_measurement": false
+  },
+  "rollback": {
+    "0.11.3": {
+      "sha256": "99b1176322e35045f59be01dacefb25de06ba6d262a548af2bd08b5a6a4b5efc",
+      "run": 41647231559,
+      "artifact": 13235219659
+    },
+    "0.11.2": {
+      "sha256": "2aa715980bc81af0db13622fc9e210100bcd973cd1255044d570a91f092eba0a",
+      "run": 41570019310,
+      "artifact": 13201587185
+    }
+  },
+  "no_pr_merge_release_tag": true,
+  "runtime_tested": false
+}
