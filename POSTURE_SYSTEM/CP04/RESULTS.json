@@ -13,7 +13,7 @@
     "new_source_negatives": 11,
     "source_audit": "SOURCE_AUDIT_PASS",
     "native_game_executed": false,
-    "pe_native_name_policy_checks": 13
+    "pe_native_name_policy_checks": 20
   },
   "runtime": "HUMAN_RUNTIME_PENDING",
   "shield_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING",
@@ -36,5 +36,6 @@
       "cause": "Strict PE gate still expected14/8 instead of15/9 hooks, retained two blanket mutator-name bans despite authorized exact CP04 transitions, and needed the verified read-only getLayerNo export in the allowlist. Exact signatures, remaining bans and total63 game imports are retained in the updated policy."
     }
   ],
-  "latest_source_delta": "Reuse frozen actual LNK input snapshot after its R release/rearm processing; test same-tick rearm R+B and consumed-B snapshot in both hook registration orders. Untrusted native clip resets invalidate current provenance while preserving the previous contact-pass record. Strict exact known speed handoff."
+  "latest_source_delta": "Reuse frozen actual LNK input snapshot after its R release/rearm processing; test same-tick rearm R+B and consumed-B snapshot in both hook registration orders. Untrusted native clip resets invalidate current provenance while preserving the previous contact-pass record. Strict exact known speed handoff.",
+  "native_import_thunk_reference": "Actual0.11.6 MSVC procGuardBreakInit uses E8 to an FF25 import thunk (one direct E8, zero in-scope FF15). CP04 scope audit resolves both forms with a bounded8-hop chain and wrong-target/loop/bounds negatives."
 }
