@@ -1,0 +1,21 @@
+{
+  "version": "0.11.7",
+  "technical_id": "dev.posture.post05_selective_reactions",
+  "compiled_base": "8c72aec291a7473f1752c702137229cc2224c998",
+  "source_branch": "feature/light-fades-twice-cp04-0-11-7",
+  "state": "SOURCE_READY_WINDOWS_CI_PENDING",
+  "local_evidence": {
+    "cp04_core_checks": 307077,
+    "cp04_production_callback_checks": 12270,
+    "behavior_mutations": 30,
+    "detected": 30,
+    "timeouts": 0,
+    "new_source_negatives": 11,
+    "source_audit": "SOURCE_AUDIT_PASS",
+    "native_game_executed": false
+  },
+  "runtime": "HUMAN_RUNTIME_PENDING",
+  "shield_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING",
+  "artifact": null,
+  "note": "The final separate documentary commit will bind the actual compiled source, successful run and downloaded hashes. No artifact or Windows success is asserted here."
+}
