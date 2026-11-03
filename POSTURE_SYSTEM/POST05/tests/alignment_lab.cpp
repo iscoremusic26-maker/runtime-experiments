@@ -97,7 +97,7 @@ int main(int argc,char** argv){
   clear();world={};const unsigned n=scenario%3==0?70:scenario%3==1?300:1;fill(n,70);
   for(unsigned t=1;t<=100;++t){
    world.onscreen=!(t>=30&&t<50);world.los=!(t>=60&&t<75);world.distance=t%11==0?4600:t%7==0?4100:100;
-   world.cameraX=float(t%17);world.cameraY=float(t%13);world.zoom=0.5f+float(scenario%4)*0.3f;
+   me.width=scenario%2?796.444f:608;me.minX=scenario%2?-94.222f:0;world.cameraX=float(t%17);world.cameraY=float(t%13);world.zoom=0.5f+float(scenario%4)*0.3f;
    for(unsigned i=0;i<n;++i){auto& a=own[i];a.pos.y=float(t%9);a.pos.x=float((t+i)%23);a.attentionPos.y=a.pos.y+(t<25?120:50);a.eye.y=a.pos.y+45;
     a.targetable=t%19!=0;a.condition=t>=40&&t<55?4:0;a.status=t%31==0?0x1000000:0;a.health.current=t==99?0:220+int(scenario%2)*220;
     if(t==80)a.id+=5000;if(scenario%5==0&&t>85)a.attentionPos.y=0.0f/0.0f;
@@ -105,6 +105,9 @@ int main(int argc,char** argv){
    tick(t,n,!(t>=20&&t<25),scenario%2!=0,1+(t+scenario)%3);
   }
  }
+ // Full queue cap and tracker admission/retirement under rotating candidate order.
+ clear();world={};me.width=608;me.minX=0;
+ for(unsigned t=1;t<=20;++t){fill(4100,70);for(unsigned i=0;i<4100;++i){unsigned identity=(i+t*256)%4100;own[i].address=0x10000+identity*256;own[i].id=identity+1;}tick(t,4100,true,false,3);}
  // Stage/player change and meter deletion use the exact same clear contract.
  clear();fill(1,60);world={};tick(1,1);clear();tick(2,1);
  for(unsigned change=0;change<5;++change){
