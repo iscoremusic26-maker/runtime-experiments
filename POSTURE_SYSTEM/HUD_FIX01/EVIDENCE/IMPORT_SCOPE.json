@@ -1,0 +1,29 @@
+{
+  "baseline_source": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+  "current_source": "0c50f035a55d627379d6f6e2dcd8a04297f905ed",
+  "game_imports_added": [
+    "?draw@J2DScreen@@QEAAXMMPEBVJ2DGrafContext@@@Z"
+  ],
+  "game_imports_removed": [],
+  "non_game_imports_unchanged": true,
+  "baseline_meta_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 8,
+    "IMPORT": 5,
+    "HOOK_MEM_EXT": 8
+  },
+  "current_meta_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 9,
+    "IMPORT": 6,
+    "HOOK_MEM_EXT": 8
+  },
+  "service_imports_added": [
+    [
+      "dev.twilitrealm.dusklight.gfx",
+      1,
+      4
+    ]
+  ],
+  "resume_change_from_24a4": "Only new pure HUD core + its tests/mutations; no mod.cpp, ABI, writer, hook/import or gameplay header changes."
+}

@@ -1,0 +1,225 @@
+{
+  "checkpoint": "HUD_FIX01",
+  "version": "0.11.3",
+  "verdict": "PRIVATE_TEST_PARTIAL_HUMAN_RUNTIME_PENDING",
+  "human_runtime_tested": false,
+  "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+  "source_branch": "feature/posture-hud-fix01-0-11-3",
+  "compiled_source_commit": "0c50f035a55d627379d6f6e2dcd8a04297f905ed",
+  "compiled_source_tree": "93e1d46dcca708c710afcb622be88abec05b0e86",
+  "gameplay_base_commit": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+  "documentation": "Separate docs-only descendant commit containing this file. It did not compile this binary.",
+  "ci": {
+    "repo": "iscoremusic26-maker/codex-cp00-inputs",
+    "branch": "ci/posture-hud-fix01-0-11-3",
+    "commit": "705518fcee785adb380a56713b6d477d7e041746",
+    "run": 41647231559,
+    "workflow": ".github/workflows/posture-hud-fix01-0-11-3.yml",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41647231559",
+    "jobs": [
+      {
+        "id": 125955649317,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 125960293000,
+        "name": "independent-download",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ]
+  },
+  "delivery": {
+    "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "errors": [],
+    "package_sha256": "99b1176322e35045f59be01dacefb25de06ba6d262a548af2bd08b5a6a4b5efc",
+    "package_bytes": 122100,
+    "dll_sha256": "dd183194f478119bf003b5e391d236e1bc465f0bebe1cbd32722e65b5c90985e",
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "version": "0.11.3",
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "pe_audit_status": "PE_AUDIT_PASS",
+    "hook_thunk_bound_import": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "filename": "POSTURE_HUD_FIX01_0_11_3_PRIVATE_TEST_windows-amd64_0c50f035a55d.dusk",
+    "runtime_tested": false,
+    "artifact_id": 13235219659,
+    "artifact_name": "HUDFIX01_TEST_41647231559_1",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41647231559/artifacts/13235219659",
+    "artifact_zip_bytes": 126252,
+    "artifact_zip_sha256": "0a4bd5ac7f64c9f3b9f839fbc37fe87d15596045fb4d695590d75e747e48e06b",
+    "expires_at_utc": "2026-12-03T13:54:18Z",
+    "expires_at_America_Panama": "2026-12-03T08:54:18-05:00",
+    "independent_job_verified": true,
+    "independent_local_download_verified": true,
+    "installed": false
+  },
+  "bugs": {
+    "A": {
+      "issue": "Scoop/contextual prompts",
+      "states": [
+        "SOURCE_IMPLEMENTED",
+        "SOURCE_AUDIT_PASS",
+        "LAB_PASS",
+        "WINDOWS_MSVC_PASS",
+        "PE_AUDIT_PASS",
+        "ARTIFACT_DOWNLOADED_VERIFIED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "scope": "Disable old persistent root hiding and sparkle masking; preserve native actions/texts; reflow supported J2D presentation.",
+      "human_pending": "Native Scoop offer/priority, visible text/icon and successful execution with/without bar, bottle and room transitions."
+    },
+    "B": {
+      "issue": "Link bar exclusion",
+      "states": [
+        "SOURCE_IMPLEMENTED",
+        "SOURCE_AUDIT_PASS",
+        "LAB_PASS",
+        "WINDOWS_MSVC_PASS",
+        "PE_AUDIT_PASS",
+        "ARTIFACT_DOWNLOADED_VERIFIED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "coverage": "PARTIAL_SUPPORTED_J2D_CONTEXTS",
+      "scope": "Maximum pulse/frame envelope; live orthographic screen reflow, same-screen obstacle avoidance and noncompeting UI preservation.",
+      "remaining": [
+        "Unknown/scissored/other-ortho contexts are refused.",
+        "512-node/depth48 limits, singular transforms and no free space preserve native draw; remaining overlap is possible.",
+        "Cross-screen collisions, direct non-J2DScreen output, screen backgrounds and overflow beyond padded leaf bounds are not universally covered.",
+        "No native Windows pixel/collision/first-last-frame proof."
+      ]
+    },
+    "C": {
+      "issue": "Enemy posture vs EHB CP06 alignment",
+      "states": [
+        "BLOCKED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "source_implemented": false,
+      "source_unchanged": true,
+      "alignment_lab_pass": false,
+      "same_frame_delta_measured": false,
+      "reason": "No authentic accessible CP06 source/binary or versioned read-only anchor API. Existing enemy anchor/interpolation preserved, not replaced by an approximation.",
+      "global_binary_checks": "Component compiles and is included in the audited package unchanged; those checks do NOT certify alignment."
+    },
+    "D": {
+      "issue": "Link bar flicker",
+      "states": [
+        "SOURCE_IMPLEMENTED",
+        "SOURCE_AUDIT_PASS",
+        "LAB_PASS",
+        "WINDOWS_MSVC_PASS",
+        "PE_AUDIT_PASS",
+        "ARTIFACT_DOWNLOADED_VERIFIED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "scope": "One BEFORE_HUD snapshot / AFTER_HUD player painter per admitted presentation, independent of enemy packet/count/new tick; legitimate fade/native hiding retained.",
+      "root_cause_status": "Original sword-flicker causality NOT proved by 0.11.2 log. This removes rendering dependencies; human sword-chain test remains mandatory."
+    }
+  },
+  "validation": {
+    "msvc_labs": 18,
+    "gxx_labs": 18,
+    "checks_per_compiler": 2829095,
+    "production_adapter_model_checks_per_compiler": 47702,
+    "mutations_msvc": {
+      "total": 393,
+      "inherited": 380,
+      "HUD": 13,
+      "killed": 393,
+      "timeouts": 0,
+      "errors": 0
+    },
+    "mutations_gxx": "380 inherited cases reused from the completed run; final13 HUD mutants rerun; all393 detections recorded, no timeout/error. Native gameplay headers are frozen.",
+    "pe_negatives_rejected": 20,
+    "actual_instruction_store_negatives_rejected": 2,
+    "pmf_static_valid": 5,
+    "pmf_static_negatives_rejected": 10,
+    "python_tool_tests": 12,
+    "python_optional_skip": 1,
+    "actual_msvc_formatter_comparison": "PASS; independent required comparison despite optional unittest skip.",
+    "functions_pinned": 107,
+    "inherited_headers_pinned": 15,
+    "game_imports": 49,
+    "hook_targets": 17,
+    "service_import_records": 6,
+    "CRT_imports": "UNCHANGED from0.11.2",
+    "game_executed": false,
+    "DLL_loaded": false,
+    "game_host_built": false,
+    "renders": "LAB references, not native game screenshots.",
+    "performance": "No native HUD CPU/GPU or presentation FPS measurement."
+  },
+  "unchanged": {
+    "weights_sword_parry_iron": {
+      "BLUE": [
+        25,
+        40,
+        50
+      ],
+      "RED": [
+        17,
+        27,
+        33
+      ],
+      "BLACK": [
+        13,
+        20,
+        25
+      ],
+      "BLACK_FURY": [
+        13,
+        20,
+        25
+      ]
+    },
+    "cap_threshold": [
+      100,
+      100
+    ],
+    "rearm_standing": 25,
+    "rearm_native_full_getup": 0,
+    "decisive_multiplier": 1.5,
+    "manual_guard": "L locks, held R guards; R+B Shield Attack/parry; normal B sword",
+    "Link_penalty_active_ticks": 75,
+    "shield_rearm": "release R then new press after unlock",
+    "HP_regen_AI_damage_audio_camera_saves": "UNCHANGED; other mods untouched",
+    "enemy_HP_regen_rules": "Expansion220/330/440 and2/3/4 HP/s unchanged; HM independently scales without duplicate writes",
+    "posture_regeneration": "UNCHANGED",
+    "enemy_anchor_and_interpolation": "UNCHANGED; C blocked"
+  },
+  "coexistence": {
+    "A_mod_only_0_11_3": "NOT_EXECUTED",
+    "B_eight_mods_0_11_3": "NOT_EXECUTED",
+    "B_0_11_2_log": "Eight expected mods found; user-observed baseline, not validation of the new HUD.",
+    "HM_x2": "NOT_EXECUTED"
+  },
+  "superseded_candidate": {
+    "source": "24a4e1880258a5ef97488ed4fa3455f079e5315a",
+    "ci": "0bbb528d607817ccb6e4eac522b848aff64f302f",
+    "run": 41580806911,
+    "artifact": 13206227935,
+    "jobs": "bothSUCCESS",
+    "bytes": 120575,
+    "sha256": "6a3399338771d9b2c9aef1c819ea6e01796c59a2cdaa7e071988e43bda233968",
+    "reason": "Read-only continuation audit found an introduced same-screen hint collision in the production-adapter model; bounded geometry fix required a new build. Do not install both candidates."
+  },
+  "rollback": {
+    "version": "0.11.2",
+    "compiled_source": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+    "run": 41570019310,
+    "artifact": 13201587185,
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41570019310/artifacts/13201587185",
+    "sha256": "2aa715980bc81af0db13622fc9e210100bcd973cd1255044d570a91f092eba0a"
+  },
+  "scope": "No PR, merge, tag, release, stable-branch update, installation or edits to another mod/SDK/EXE/save/configuration."
+}

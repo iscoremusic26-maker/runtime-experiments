@@ -1,0 +1,135 @@
+{
+  "labs": [
+    {
+      "lab": "hit",
+      "checks": 1660,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "466ae8a8c8688896ef42fddb1eb35ca7567c0c0854961d5c6065ed2e13559223"
+    },
+    {
+      "lab": "lifecycle",
+      "checks": 29558,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "5ef1e732ce54947bb21c867a042084a3b8e085541db26b2fd220895f42b271a8"
+    },
+    {
+      "lab": "collider",
+      "checks": 12826,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "7c61374adfc80fa91753c7d90872b6bfe2355630aab9d8f2e3d1397d29a93a28"
+    },
+    {
+      "lab": "posture",
+      "checks": 556878,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "55206106594d743a45a494c9b47e0ca3e13f5776cc3786df627ddaddd5dd771b"
+    },
+    {
+      "lab": "reaction",
+      "checks": 36933,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "a046fccbb59ed86d98ea4b25ebb1cecae5d19882a74c4fc83217f14ae7c50692"
+    },
+    {
+      "lab": "compat",
+      "checks": 55992,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "48a0827550baf930ec573cbc9a633dbbed5eb7a0cab59cf8fb2358f3b5617b54"
+    },
+    {
+      "lab": "rb",
+      "checks": 21313,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "89780de3d14ac4c85e96bf095b2292e457b4c8219ae3067072761357dcb3801e"
+    },
+    {
+      "lab": "general",
+      "checks": 5560,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "bb2d841e7672c405f44b04cf12c2d4e501623fe61c76c9ce2a89f90cc1d7b61b"
+    },
+    {
+      "lab": "break",
+      "checks": 243624,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "907a3d0d3f9c7bb31983a1115615895d3552901f93c6f52db9e9c52f1f7f05b3"
+    },
+    {
+      "lab": "hud",
+      "checks": 57742,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "fc272d02c031a0d5e988c5af05bc8365f1484050d35219f38365d28140b4b1cd"
+    },
+    {
+      "lab": "parry",
+      "checks": 1571,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "9b42048d6191e3e3f0097a26e49bf0f35d8e303bf7f48be87c9c92bc46fc6955"
+    },
+    {
+      "lab": "lnk",
+      "checks": 528,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "82d891116ef7eb01cece9c30b4bde3efee748f1dd9fed9b2a8fb1e8c4c33fd0f"
+    },
+    {
+      "lab": "lnks1",
+      "checks": 178,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "2e854d8eb9cf2ed02d71f2698f36ac979129e22e0cf2a18be5215e4f3427f41d"
+    },
+    {
+      "lab": "fix01",
+      "checks": 21570,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "f1648201803d3e65271093cfd256ee6a1305b8d94bd1c7f88375e0ab3713982e"
+    },
+    {
+      "lab": "lnks2",
+      "checks": 103431,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "657d57b64061e8f56359fd57952bb89f23d580b519203a80f1c724f3c9c301be"
+    },
+    {
+      "lab": "lnks2fix",
+      "checks": 103187,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "da99f12ea69ffa19f229169aa8b8c88b914e7ee07b276a15dc7f6cf9332b23bf"
+    },
+    {
+      "lab": "balance",
+      "checks": 8603,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "53108d77dea5a1630213321bdfbeddae9dded19f321567b6f5cf2dc0b187ddf7"
+    },
+    {
+      "lab": "hudfix",
+      "checks": 1567941,
+      "status": "LAB_MODEL_PASS",
+      "compiler": "g++ ASAN+UBSAN -no-pie",
+      "sha256": "66eccbc50ae5cb1f08b9bf09df3bc10c1ed223999eaf54f8a44c9747d83757c6"
+    }
+  ],
+  "count": 18,
+  "checks": 2829095,
+  "game_executed": false,
+  "all_pass": true,
+  "note": "17 inherited g++ ASAN/UBSAN labs reused because their production headers and native bodies are frozen; new occupied-space HUD lab rerun, plus actual production-adapter model separately. Earlier aggregate fixed to use final summary checks, not per-family first match."
+}

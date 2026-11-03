@@ -1,0 +1,1341 @@
+{
+  "file": "dusklight-20261102-223104.log",
+  "bytes": 6395642,
+  "sha256": "483b285fa9b2d86027323318558f1f389fceb5a64558ea5cae65f3cf3bb86a0a",
+  "lines": 29945,
+  "all_lines_read": true,
+  "families": {
+    "POSTURE_BALANCE_SESSION01_0_11_2_BLUE_RED_BLACK_STANDING_REARM25_PRIVATE_TEST_windows": 1,
+    "POST03_1_INIT": 1,
+    "POST04_INIT": 1,
+    "POST05_INIT": 1,
+    "POST06_INIT": 1,
+    "POST08_INIT": 1,
+    "POST08_INIT_DETECT": 1,
+    "POST03_TARGET": 1,
+    "POST03_HOOK_INSTALLED": 1,
+    "POST07_INIT": 1,
+    "LNK01_INIT": 1,
+    "LNK_S1_INIT": 1,
+    "POST_BAL01_INIT": 1,
+    "LNK_S1_FIX01_INIT": 1,
+    "LNK_S2_INIT": 1,
+    "LNK_FIX01_INIT": 1,
+    "POST05_E2_ENV": 1,
+    "LNK01_REGEN": 60,
+    "LNK_S1_REGEN": 120,
+    "PERF_WINDOW": 155,
+    "LNK01_ACTION_UI": 40,
+    "POST03_INSTANCE_FIRST_SEEN": 108,
+    "POST04_POSTURE_BIND": 105,
+    "LNK_FIX01_SHIELD": 180,
+    "LNK_FIX01_REGEN": 80,
+    "LNK_FIX01_SHIELD_ATTACK": 120,
+    "POST08_SHIELD_ATTACK_START": 80,
+    "POST03_HIT_EVENT": 289,
+    "POST_BAL01_HIT": 104,
+    "POST04_POSTURE_HIT": 195,
+    "POST05_DECISION": 274,
+    "LNK_S1_FIX01_AI": 256,
+    "POST08_AI_TRACE": 134,
+    "POST_BAL01_PARRY": 35,
+    "POST08_EVENT": 199,
+    "LNK_S1_PARRY": 80,
+    "LNK01_BLOCK": 200,
+    "POST07_HUD_FIRST_QUEUE": 1,
+    "POST08_LINK_LIFE_CHECK": 24,
+    "POST08_SHIELD_ATTACK_END": 80,
+    "LNK01_GUARD": 40,
+    "LNK_S1_BALANCE": 99,
+    "LNK01_HUD_LAYOUT": 1,
+    "LNK05_EVENT": 7,
+    "LNK05_NATIVE_BREAK": 5,
+    "LNK06_EVENT": 5,
+    "LNK_FIX01_PENALTY": 22,
+    "LNK06_RECOVERY": 5,
+    "POST04_POSTURE_REGEN": 64,
+    "LNK_S1_FIX01_DIRECT": 43,
+    "LNK_S1_DIRECT": 38,
+    "POST04_BREAK_READY": 42,
+    "POST06_EVENT": 137,
+    "POST_BAL01_REGEN": 37,
+    "POST03_INSTANCE_DEATH_SEEN": 38,
+    "LNK05_GATE": 33,
+    "POST03_INSTANCE_RETIRED": 100,
+    "POST04_POSTURE_RETIRE": 94,
+    "POST03_SUMMARY": 10,
+    "POST03_HIT_SUMMARY": 9,
+    "POST03_1_COLLIDER_DIAG": 9,
+    "POST03_CONSERVATION": 9,
+    "POST04_SUMMARY": 9,
+    "POST04_CONSERVATION": 9,
+    "POST05_SUMMARY": 9,
+    "POST05_LAYOUT": 9,
+    "POST05_CONSERVATION": 9,
+    "POST06_SUMMARY": 9,
+    "POST07_HUD_SUMMARY": 9,
+    "POST08_SUMMARY": 100,
+    "POST_BAL01_SUMMARY": 65,
+    "LNK01_SUMMARY": 50,
+    "LNK_S1_SUMMARY": 50,
+    "LNK_S2_SUMMARY": 25,
+    "LNK_FIX01_SUMMARY": 25,
+    "LNK_S1_FIX01_AI_CLEANUP": 25,
+    "LNK_S1_FIX01_SUMMARY": 25,
+    "POST_BAL01_REARM": 4,
+    "LNK_FIX01_DODGE": 6,
+    "POST03_SHUTDOWN": 1
+  },
+  "mods": [
+    {
+      "id": "com.blueflaregames.zora_swim",
+      "name": "Zora Swim",
+      "version": "1.3.0"
+    },
+    {
+      "id": "dev.bokoblin.expansion",
+      "name": "Bokoblin Expansion",
+      "version": "0.17.0"
+    },
+    {
+      "id": "dev.devf.cp06_native_config_dual",
+      "name": "Enemy Variant Framework",
+      "version": "0.15.0"
+    },
+    {
+      "id": "com.dusklight.enemy_health_bars_203",
+      "name": "Enemy Health Bars (2.0.3 port, CP06 Armos TEST)",
+      "version": "2.0.3-cp06-armos-test"
+    },
+    {
+      "id": "com.dusklight.enemy_health_multiplier_203",
+      "name": "Enemy Health Multiplier 2.0.3 (CP11 arrow route TEST)",
+      "version": "2.0.3-cp11-arrow-route-test"
+    },
+    {
+      "id": "dev.posture.post05_selective_reactions",
+      "name": "Enemy Posture System 0.11.2 PRIVATE TEST",
+      "version": "0.11.2"
+    },
+    {
+      "id": "dev.twilitrealm.luau",
+      "name": "Luau Support",
+      "version": "1.0.0"
+    },
+    {
+      "id": "dev.twilitrealm.randomizer",
+      "name": "Dusklight Randomizer",
+      "version": "1.0.6"
+    }
+  ],
+  "hud_summaries": [
+    {
+      "line": 4076,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "2480",
+        "meter_draw": "7482",
+        "meter_delete": "1",
+        "passes": "2480",
+        "binds": "20",
+        "resets": "0",
+        "cleared_missing": "12",
+        "cleared_dead": "0",
+        "pulses": "2",
+        "hits": "14",
+        "recoveries": "100",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "1612",
+        "queued": "1340",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "2677",
+        "skipped": "0",
+        "painted": "3083",
+        "quads": "127178",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "3183",
+        "interp_miss": "38",
+        "scrubbed": "0",
+        "scanned_max": "143",
+        "matched_max": "10"
+      }
+    },
+    {
+      "line": 4933,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "5202",
+        "meter_draw": "15563",
+        "meter_delete": "1",
+        "passes": "5202",
+        "binds": "20",
+        "resets": "0",
+        "cleared_missing": "14",
+        "cleared_dead": "0",
+        "pulses": "5",
+        "hits": "35",
+        "recoveries": "195",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "3913",
+        "queued": "3024",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "5892",
+        "skipped": "0",
+        "painted": "7260",
+        "quads": "298059",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "7451",
+        "interp_miss": "80",
+        "scrubbed": "0",
+        "scanned_max": "143",
+        "matched_max": "10"
+      }
+    },
+    {
+      "line": 9070,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "9450",
+        "meter_draw": "27392",
+        "meter_delete": "3",
+        "passes": "9450",
+        "binds": "39",
+        "resets": "0",
+        "cleared_missing": "20",
+        "cleared_dead": "0",
+        "pulses": "10",
+        "hits": "56",
+        "recoveries": "298",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "6087",
+        "queued": "4558",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "8015",
+        "skipped": "0",
+        "painted": "10044",
+        "quads": "415227",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "10232",
+        "interp_miss": "108",
+        "scrubbed": "0",
+        "scanned_max": "207",
+        "matched_max": "19"
+      }
+    },
+    {
+      "line": 11346,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "11098",
+        "meter_draw": "32378",
+        "meter_delete": "4",
+        "passes": "11098",
+        "binds": "96",
+        "resets": "0",
+        "cleared_missing": "77",
+        "cleared_dead": "0",
+        "pulses": "10",
+        "hits": "59",
+        "recoveries": "312",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "6363",
+        "queued": "4834",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "8564",
+        "skipped": "0",
+        "painted": "10593",
+        "quads": "437187",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "10771",
+        "interp_miss": "118",
+        "scrubbed": "0",
+        "scanned_max": "208",
+        "matched_max": "19"
+      }
+    },
+    {
+      "line": 11699,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "12117",
+        "meter_draw": "35510",
+        "meter_delete": "4",
+        "passes": "12117",
+        "binds": "96",
+        "resets": "0",
+        "cleared_missing": "78",
+        "cleared_dead": "0",
+        "pulses": "11",
+        "hits": "69",
+        "recoveries": "313",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "6980",
+        "queued": "5451",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "9798",
+        "skipped": "0",
+        "painted": "11827",
+        "quads": "487555",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "11985",
+        "interp_miss": "138",
+        "scrubbed": "0",
+        "scanned_max": "209",
+        "matched_max": "19"
+      }
+    },
+    {
+      "line": 11983,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "13215",
+        "meter_draw": "38834",
+        "meter_delete": "4",
+        "passes": "13215",
+        "binds": "96",
+        "resets": "0",
+        "cleared_missing": "79",
+        "cleared_dead": "0",
+        "pulses": "12",
+        "hits": "74",
+        "recoveries": "313",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "7344",
+        "queued": "5815",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "10526",
+        "skipped": "0",
+        "painted": "12555",
+        "quads": "519035",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "12709",
+        "interp_miss": "142",
+        "scrubbed": "0",
+        "scanned_max": "209",
+        "matched_max": "19"
+      }
+    },
+    {
+      "line": 12611,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "14340",
+        "meter_draw": "42254",
+        "meter_delete": "4",
+        "passes": "14340",
+        "binds": "96",
+        "resets": "0",
+        "cleared_missing": "79",
+        "cleared_dead": "0",
+        "pulses": "13",
+        "hits": "86",
+        "recoveries": "415",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "8986",
+        "queued": "6709",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "12314",
+        "skipped": "0",
+        "painted": "15800",
+        "quads": "650199",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "15965",
+        "interp_miss": "170",
+        "scrubbed": "0",
+        "scanned_max": "209",
+        "matched_max": "19"
+      }
+    },
+    {
+      "line": 12949,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "15798",
+        "meter_draw": "46696",
+        "meter_delete": "4",
+        "passes": "15798",
+        "binds": "124",
+        "resets": "0",
+        "cleared_missing": "110",
+        "cleared_dead": "0",
+        "pulses": "15",
+        "hits": "91",
+        "recoveries": "450",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "9918",
+        "queued": "7347",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "13589",
+        "skipped": "0",
+        "painted": "17503",
+        "quads": "724279",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "17805",
+        "interp_miss": "192",
+        "scrubbed": "0",
+        "scanned_max": "209",
+        "matched_max": "19"
+      }
+    },
+    {
+      "line": 13440,
+      "fields": {
+        "v": "0.7.0",
+        "tag": "PERIODIC",
+        "active": "1",
+        "interp": "PRESENT",
+        "meter_exec": "17124",
+        "meter_draw": "50731",
+        "meter_delete": "4",
+        "passes": "17124",
+        "binds": "124",
+        "resets": "0",
+        "cleared_missing": "111",
+        "cleared_dead": "0",
+        "pulses": "19",
+        "hits": "107",
+        "recoveries": "477",
+        "frozen_hidden": "0",
+        "paused": "0",
+        "published": "11347",
+        "queued": "8319",
+        "refused": "0",
+        "hud_not_queued": "0",
+        "packet_draws": "15529",
+        "skipped": "0",
+        "painted": "20293",
+        "quads": "843833",
+        "over_budget": "0",
+        "max_visible": "2",
+        "interp_hit": "20608",
+        "interp_miss": "241",
+        "scrubbed": "0",
+        "scanned_max": "209",
+        "matched_max": "19"
+      }
+    }
+  ],
+  "action_ui_events": {
+    "logged": 40,
+    "all_root_hidden": true,
+    "first_line": 2028,
+    "last_line": 28286
+  },
+  "link_ui_shutdown": {
+    "v": "0.11.0",
+    "tag": "SHUTDOWN",
+    "part": "2/2",
+    "button_hud": "HIDDEN_ACTIVE",
+    "sparkle_hook": "ON",
+    "ui_checks": "187475",
+    "hidden_frames": "15008",
+    "hide_writes": "144",
+    "already_hidden": "14864",
+    "no_prompt": "49121",
+    "no_meter": "123346",
+    "missing_tags_or_layout_refused": "0",
+    "prompts_seen": "144",
+    "meters_seen": "5",
+    "hud_recreated": "0",
+    "hide_verify_failed": "0",
+    "sparkle_masks": "4999",
+    "restores": "4999",
+    "foreign_prompt_draws": "15402",
+    "mask_refused": "0",
+    "unpaired": "0",
+    "prompt_draws": "20401",
+    "live": "4999",
+    "hud_ticks": "37873",
+    "hud_paused": "7670",
+    "hud_frames": "25486",
+    "hud_quads": "575019",
+    "bar_hits": "97",
+    "bar_pulses": "6",
+    "bar_fade_outs": "27",
+    "bar_resets": "16",
+    "hidden_not_human": "393",
+    "layout_changes": "1"
+  },
+  "balance_shutdown": [
+    {
+      "tag": "SHUTDOWN",
+      "variant": "BLUE",
+      "sword": "69",
+      "iron": "0",
+      "parries": "37",
+      "units": "2887",
+      "crossings": "24",
+      "breaks_delivered": "24",
+      "rearms_standing25": "9",
+      "rearms_getup0": "3",
+      "rate_changes": "92",
+      "unavailable": "0",
+      "stale": "0",
+      "preview_mismatch": "0",
+      "delivery_duplicate": "0",
+      "duplicates_avoided": "0",
+      "ambiguous": "0",
+      "audit_units": "1",
+      "balance_units": "1",
+      "balance_events": "1",
+      "units_added": "5886",
+      "recovered": "1425",
+      "closed": "3086",
+      "rearmed": "1375",
+      "live": "0",
+      "log_drops": "486",
+      "summary_drops": "12",
+      "evidence": "RUNTIME"
+    },
+    {
+      "tag": "SHUTDOWN",
+      "variant": "RED",
+      "sword": "65",
+      "iron": "0",
+      "parries": "36",
+      "units": "1952",
+      "crossings": "14",
+      "breaks_delivered": "14",
+      "rearms_standing25": "3",
+      "rearms_getup0": "1",
+      "rate_changes": "61",
+      "unavailable": "0",
+      "stale": "0",
+      "preview_mismatch": "0",
+      "delivery_duplicate": "0",
+      "duplicates_avoided": "0",
+      "ambiguous": "0",
+      "audit_units": "1",
+      "balance_units": "1",
+      "balance_events": "1",
+      "units_added": "5886",
+      "recovered": "1425",
+      "closed": "3086",
+      "rearmed": "1375",
+      "live": "0",
+      "log_drops": "486",
+      "summary_drops": "12",
+      "evidence": "RUNTIME"
+    },
+    {
+      "tag": "SHUTDOWN",
+      "variant": "BLACK",
+      "sword": "12",
+      "iron": "0",
+      "parries": "22",
+      "units": "596",
+      "crossings": "3",
+      "breaks_delivered": "3",
+      "rearms_standing25": "0",
+      "rearms_getup0": "0",
+      "rate_changes": "6",
+      "unavailable": "0",
+      "stale": "0",
+      "preview_mismatch": "0",
+      "delivery_duplicate": "0",
+      "duplicates_avoided": "0",
+      "ambiguous": "0",
+      "audit_units": "1",
+      "balance_units": "1",
+      "balance_events": "1",
+      "units_added": "5886",
+      "recovered": "1425",
+      "closed": "3086",
+      "rearmed": "1375",
+      "live": "0",
+      "log_drops": "486",
+      "summary_drops": "12",
+      "evidence": "RUNTIME"
+    },
+    {
+      "tag": "SHUTDOWN",
+      "variant": "BLACK_FURY",
+      "sword": "36",
+      "iron": "0",
+      "parries": "0",
+      "units": "451",
+      "crossings": "4",
+      "breaks_delivered": "4",
+      "rearms_standing25": "1",
+      "rearms_getup0": "0",
+      "rate_changes": "27",
+      "unavailable": "0",
+      "stale": "0",
+      "preview_mismatch": "0",
+      "delivery_duplicate": "0",
+      "duplicates_avoided": "0",
+      "ambiguous": "0",
+      "audit_units": "1",
+      "balance_units": "1",
+      "balance_events": "1",
+      "units_added": "5886",
+      "recovered": "1425",
+      "closed": "3086",
+      "rearmed": "1375",
+      "live": "0",
+      "log_drops": "486",
+      "summary_drops": "12",
+      "evidence": "RUNTIME"
+    },
+    {
+      "tag": "SHUTDOWN",
+      "variant": "UNKNOWN",
+      "sword": "0",
+      "iron": "0",
+      "parries": "0",
+      "units": "0",
+      "crossings": "0",
+      "breaks_delivered": "0",
+      "rearms_standing25": "0",
+      "rearms_getup0": "0",
+      "rate_changes": "0",
+      "unavailable": "0",
+      "stale": "0",
+      "preview_mismatch": "0",
+      "delivery_duplicate": "0",
+      "duplicates_avoided": "0",
+      "ambiguous": "0",
+      "audit_units": "1",
+      "balance_units": "1",
+      "balance_events": "1",
+      "units_added": "5886",
+      "recovered": "1425",
+      "closed": "3086",
+      "rearmed": "1375",
+      "live": "0",
+      "log_drops": "486",
+      "summary_drops": "12",
+      "evidence": "RUNTIME"
+    }
+  ],
+  "severity_counts": {
+    "INFO": 10012,
+    "DEBUG": 19543,
+    "WARNING": 215,
+    "ERROR": 155
+  },
+  "errors_all_perf_window": true,
+  "posture_errors": [],
+  "inline_setRStatus_warning": 1,
+  "stage_room_observations": [
+    {
+      "stage": "F_SP121",
+      "room": -1,
+      "events": 477
+    },
+    {
+      "stage": "F_SP121",
+      "room": 0,
+      "events": 7
+    },
+    {
+      "stage": "F_SP121",
+      "room": 2,
+      "events": 29
+    },
+    {
+      "stage": "F_SP121",
+      "room": 3,
+      "events": 98
+    },
+    {
+      "stage": "F_SP121",
+      "room": 7,
+      "events": 3
+    },
+    {
+      "stage": "F_SP121",
+      "room": 9,
+      "events": 73
+    },
+    {
+      "stage": "F_SP121",
+      "room": 10,
+      "events": 760
+    },
+    {
+      "stage": "F_SP121",
+      "room": 12,
+      "events": 5
+    }
+  ],
+  "scoop_log_mentions": 0,
+  "limits": [
+    "No per-line wall-clock timestamps or screenshot bounding boxes.",
+    "Old HUD summaries exhausted the shared logging budget before shutdown: last sample is not a session total.",
+    "No old per-contact player alpha/draw serial trace: sword flicker causality cannot be proved.",
+    "Foreign prompt count identifies a different object from mpEmpButton; it does not prove cinematographic origin.",
+    "Interpolation hits/misses are counts, not measured EHB/posture deltas."
+  ],
+  "perf_windows": 155,
+  "perf_schema_example": "owner=dev.bokoblin.expansion version=0.17.0 window=1 sim_ticks=300 wall_ms=10289 tick_interval_us=(mean=34414,p50=33500,p95=50000,p99=103500,max=456279) over_40ms=31 over_50ms=14 over_67ms=3 catchup_under_8ms=9 paused_or_load_over_1s=0 mod_cpu_us=(total=4074,per_tick=13,max_tick=113) hook_calls=0 auras=(avg_x10=0,max=0) bokoblins_tracked_max=0 emitters_created=0 eye_texture_swaps=0 counter_hz=9999893 evidence=WALL_CLOCK_BETWEEN_SIM_TICKS_NOT_GPU_TIME level_note=MEASUREMENT_NOT_AN_ERROR",
+  "perf_telemetry": {
+    "owner": "Bokoblin Expansion, not posture HUD",
+    "meaning": "wall interval between simulation ticks, NOT GPU or presentation FPS",
+    "windows": 155,
+    "window_metric_ranges_us": {
+      "p50": {
+        "min": 33500,
+        "median": 33500,
+        "max": 33500
+      },
+      "p95": {
+        "min": 33500,
+        "median": 34000,
+        "max": 50000
+      },
+      "p99": {
+        "min": 33638,
+        "median": 34481,
+        "max": 103500
+      }
+    },
+    "first_window": {
+      "line": 851,
+      "mean": 34414,
+      "p50": 33500,
+      "p95": 50000,
+      "p99": 103500,
+      "max": 456279,
+      "expansion_cpu_per_tick_us": 13
+    },
+    "hud_cpu_or_presentation_fps": "NOT_MEASURED"
+  },
+  "explicit_invariant_fail_lines": [],
+  "actor_observation_room_sequence": [],
+  "warnings": {
+    "aurora_texture": 187,
+    "dusk": [
+      {
+        "line": 177,
+        "kind": "posture_setRStatus_inlined"
+      },
+      {
+        "line": 3915,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 3921,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 3924,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 3947,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 3952,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 3975,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 3994,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4013,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4031,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4035,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4243,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4250,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4259,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4270,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4320,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4337,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4338,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4351,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4365,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4390,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4448,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4451,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4460,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4468,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 4469,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 5071,
+        "kind": "CalcDivideInfo"
+      },
+      {
+        "line": 5081,
+        "kind": "CalcDivideInfo"
+      }
+    ]
+  },
+  "expansion_room_observation_sequence": [
+    {
+      "line": 143,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 144,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 146,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 147,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 148,
+      "stage": "F_SP121",
+      "room": 0,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 149,
+      "stage": "F_SP121",
+      "room": 12,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 150,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 152,
+      "stage": "F_SP121",
+      "room": 0,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 153,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 3111,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 3215,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4523,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4525,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4685,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4687,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4767,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4769,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4786,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4788,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4849,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4851,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4902,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4904,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4978,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 4980,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5036,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5038,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5067,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5069,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5184,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5186,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5259,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5261,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5323,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5325,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5384,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 5386,
+      "stage": "F_SP121",
+      "room": 3,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 8717,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 8895,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 9012,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 11045,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 11185,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 13764,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 13765,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 19023,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 19137,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 19951,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 19952,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 20037,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 20038,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 20450,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 20451,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 20894,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 20896,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 23005,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 23116,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 27848,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 27962,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 28496,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 28497,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 28547,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 28548,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 28773,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 28774,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 28807,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 28808,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29407,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29880,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29886,
+      "stage": "F_SP121",
+      "room": 0,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29890,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29898,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29904,
+      "stage": "F_SP121",
+      "room": 12,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29912,
+      "stage": "F_SP121",
+      "room": 0,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29918,
+      "stage": "F_SP121",
+      "room": 7,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29924,
+      "stage": "F_SP121",
+      "room": 2,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29926,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29928,
+      "stage": "F_SP121",
+      "room": 10,
+      "source": "Expansion event, not proof of room-change time"
+    },
+    {
+      "line": 29943,
+      "stage": "F_SP121",
+      "room": 9,
+      "source": "Expansion event, not proof of room-change time"
+    }
+  ]
+}

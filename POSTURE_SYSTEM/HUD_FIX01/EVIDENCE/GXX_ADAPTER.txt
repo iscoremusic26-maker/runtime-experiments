@@ -1,0 +1,2 @@
+HUD_FIX01_ADAPTER checks=47702 failures=0 RESULT=LAB_PASS actual_production_callbacks=1 native_game_executed=0
+

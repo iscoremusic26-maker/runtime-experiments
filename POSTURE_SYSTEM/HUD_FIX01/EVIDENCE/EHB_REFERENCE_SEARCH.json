@@ -1,0 +1,114 @@
+{
+  "status": "BLOCKED_EXACT_EHB_CP06_REFERENCE_UNAVAILABLE",
+  "historical_source_commit": "e9b42a4dab2e7a4e0e69b2d634dedacaa7ce2102",
+  "historical_game_bars_cpp_sha256": "8a726dbe5db9e36ba95775b50e1071604856655857db2333821f8ce39624f3e1",
+  "historical_local_source_paths_exist": false,
+  "accessible_workspace_home_tmp_source_filename_search_matches": 0,
+  "archives_read": [
+    {
+      "file": "post05-rb-msvc-research.zip",
+      "entries": 3
+    },
+    {
+      "file": "github-actions-artifact-13201587185.zip",
+      "entries": 3
+    },
+    {
+      "file": "POST06_DOWNLOAD_VERIFIED_41386845338_1.zip",
+      "entries": 1
+    },
+    {
+      "file": "cp21-baseline.zip",
+      "entries": 1
+    },
+    {
+      "file": "POST06_TEXT_41386845338_1.zip",
+      "entries": 42
+    },
+    {
+      "file": "github-actions-artifact-13199909716.zip",
+      "entries": 55
+    },
+    {
+      "file": "github-actions-artifact-13180030294.zip",
+      "entries": 3
+    },
+    {
+      "file": "github-actions-artifact-13206227935.zip",
+      "entries": 3
+    },
+    {
+      "file": "post05-baseline.zip",
+      "entries": 3
+    },
+    {
+      "file": "POST06_TEST_41386845338_1.zip",
+      "entries": 3
+    },
+    {
+      "file": "github-actions-artifact-13194896157.zip",
+      "entries": 65
+    },
+    {
+      "file": "github-actions-artifact-13179721932.zip",
+      "entries": 61
+    },
+    {
+      "file": "github-actions-artifact-13180445338.zip",
+      "entries": 1
+    },
+    {
+      "file": "github-actions-artifact-13194926059.zip",
+      "entries": 3
+    },
+    {
+      "file": "github-actions-artifact-13201442420.zip",
+      "entries": 69
+    },
+    {
+      "file": "POST06_TEST_41384941523_1.zip",
+      "entries": 3
+    },
+    {
+      "file": "POST06_TEXT_41384941523_1.zip",
+      "entries": 42
+    },
+    {
+      "file": "github-actions-artifact-13179886722.zip",
+      "entries": 3
+    },
+    {
+      "file": "github-actions-artifact-13206322661.zip",
+      "entries": 1
+    },
+    {
+      "file": "github-actions-artifact-13200779339.zip",
+      "entries": 1
+    },
+    {
+      "file": "github-actions-artifact-13179690729.zip",
+      "entries": 61
+    },
+    {
+      "file": "LNKS1_BASE_0100.zip",
+      "entries": 3
+    },
+    {
+      "file": "github-actions-artifact-13205309423.zip",
+      "entries": 72
+    },
+    {
+      "file": "Dusklight-v2.0.3-win32-x86_64.zip",
+      "entries": 63
+    },
+    {
+      "file": "dusklight-2.0.3.zip",
+      "entries": 19861
+    }
+  ],
+  "archive_matches": [],
+  "api": "No versioned read-only anchor API or authentic EHB binary/source was found in the accessible context. Absence of a discovered API is not proof that none exists.",
+  "source_authority": "POSTURE_SYSTEM/POST00/SOURCE_INVENTORY.md section3 and VERIFICATION.json at compiled 0.11.2; POST07/DESIGN_SPEC.md is a rules summary, not exact EHB source.",
+  "action": "Keep all enemy anchor/interpolation code byte-identical to compiled 0.11.2. No guessed offsets, API, hook into EHB or edits to another mod.",
+  "alignment_claim": "No measured same-frame EHB/posture delta available; no PIXEL_ALIGNMENT_PASS."
+}

@@ -1,0 +1,98 @@
+{
+  "count": 18,
+  "checks": 2829095,
+  "labs": [
+    {
+      "number": 1,
+      "summary": "POST03_1_HIT_LAB checks=1660 failures=0 RESULT=LAB_PASS",
+      "checks": 1660
+    },
+    {
+      "number": 2,
+      "summary": "POST03_1_LIFECYCLE_LAB checks=29558 failures=0 RESULT=LAB_PASS",
+      "checks": 29558
+    },
+    {
+      "number": 3,
+      "summary": "POST03_1_COLLIDER_LAB checks=12826 failures=0 RESULT=LAB_PASS",
+      "checks": 12826
+    },
+    {
+      "number": 4,
+      "summary": "POST04_POSTURE_LAB checks=556878 failures=0 RESULT=LAB_PASS",
+      "checks": 556878
+    },
+    {
+      "number": 5,
+      "summary": "POST05_REACTION_LAB checks=36933 failures=0 RESULT=LAB_PASS",
+      "checks": 36933
+    },
+    {
+      "number": 6,
+      "summary": "POST05_COMPAT_LAB checks=55992 failures=0 RESULT=LAB_PASS",
+      "checks": 55992
+    },
+    {
+      "number": 7,
+      "summary": "POST05_RB_LAB checks=21313 failures=0 RESULT=LAB_PASS",
+      "checks": 21313
+    },
+    {
+      "number": 8,
+      "summary": "POST05_GENERAL_LAB checks=5560 failures=0 RESULT=LAB_PASS",
+      "checks": 5560
+    },
+    {
+      "number": 9,
+      "summary": "POST06_REWORK_LAB checks=243624 failures=0 RESULT=LAB_PASS",
+      "checks": 243624
+    },
+    {
+      "number": 10,
+      "summary": "POST07_HUD_LAB checks=57742 failures=0 RESULT=LAB_PASS",
+      "checks": 57742
+    },
+    {
+      "number": 11,
+      "summary": "POST08_PARRY_LAB checks=1571 failures=0 RESULT=LAB_PASS",
+      "checks": 1571
+    },
+    {
+      "number": 12,
+      "summary": "LNK01_LAB checks=528 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY",
+      "checks": 528
+    },
+    {
+      "number": 13,
+      "summary": "LNK_S1_LAB checks=178 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY",
+      "checks": 178
+    },
+    {
+      "number": 14,
+      "summary": "LNK_S1_FIX01_LAB checks=21570 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY",
+      "checks": 21570
+    },
+    {
+      "number": 15,
+      "summary": "LNK_S2_LAB checks=103431 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY",
+      "checks": 103431
+    },
+    {
+      "number": 16,
+      "summary": "LNK_S2_FIX01_LAB checks=103187 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY",
+      "checks": 103187
+    },
+    {
+      "number": 17,
+      "summary": "POST_BAL01_LAB checks=8603 failures=0 RESULT=LAB_PASS LAB_MODEL_ONLY",
+      "checks": 8603
+    },
+    {
+      "number": 18,
+      "summary": "HUD_FIX01 checks=1567941 failures=0 RESULT=LAB_PASS model_only=1 EHB_ALIGNMENT=NOT_TESTED NATIVE_DRAW=HUMAN_RUNTIME_PENDING",
+      "checks": 1567941
+    }
+  ],
+  "production_adapter_checks": 47702,
+  "native_game_executed": false
+}

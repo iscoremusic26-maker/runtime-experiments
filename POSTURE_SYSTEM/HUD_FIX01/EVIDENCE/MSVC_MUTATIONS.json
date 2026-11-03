@@ -1,0 +1,1972 @@
+{
+  "mutations": [
+    {
+      "mutation": "shield_collider_missing",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "shield_is_sword",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "nondecisive_fall",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "helm_episode_lost",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "helm_stale_contact",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "helm_shield_contact",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "timed_fall",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "old_120",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "shield_bonus",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "break_bonus",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "duplicate_bonus",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "foreign_sword",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "helm_without_shield",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "renew_shield_window",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "long_timeout",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "wrong_abort_posture",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "wrong_timeout_posture",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "early_rearm",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "no_normalize_helm",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "heal_native_loss",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "double_rounding",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "redirect_rearm_50",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "redirect_hit_rearms",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "redirect_from_down",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "redirect_uncounted",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_fill_one_side",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_fill_double",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_overlaps_life",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_pulse_every_tick",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_pulse_on_bind",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_no_identity_reset",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_ghost_kept",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_dead_phase_shown",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_pause_animates",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_green_ramp",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_opaque_blend",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_j2d_swap_missing",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_frozen_shown",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_zero_shown",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_premature_unbroken",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_budget_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_farthest_first",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_scrub_keeps_packet",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_queue_without_hud",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_anchor_drops",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_head_offset",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_fade_band",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_asym_tip",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_no_shield_flag",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_proximity_not_link",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_any_guard",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_wide_window",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_narrow_window_v080",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_uses_now_state",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_window_uses_now",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_no_snapshot_check",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_snapshot_any_tick",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_snapshot_any_link",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_no_tick_cap",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_serial_never_closes",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_link_change_inherits",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_hist_wrong_bin",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_break_no_wait",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_no_fresh_gate",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_always_force_recoil",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_arm_from_frame0",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_fresh_any_later_tick",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_fresh_ignores_armed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_fresh_ignores_identity",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_break_counts_protected",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_restore_not_pre",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_stale_counts_contact",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_watch_blind_aborts",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_watch_ko_is_stall",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_watch_timer_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_watch_any_generation",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_late_allowed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_double_sphere",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_no_restart_token",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_latched_allowed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_fury_allowed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_idle_allowed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_generation_inherit",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_commit_twice",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_deflect_any_shape",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_deflect_state",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "posture_gain_80",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "posture_no_saturation",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "posture_no_regen_reset",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "posture_no_token_dedupe",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "posture_parry_latched",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "posture_no_crossing_count",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "posture_audit_weakened",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "break_parry_not_delivered",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "break_parry_bonus",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "break_parry_free_helm",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "break_parry_over_fall",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "break_latched_any",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_hide_first_object_only",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_mask_never_restored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_mask_foreign_prompt",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_no_vptr_check",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_stale_counts",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_guard_after_parry_counts",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_parry_gives_gain",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_no_dedup",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_confuse_attackers",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_block_without_shield_flag",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_regen_assumes_60hz",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_regen_no_delay",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_regen_in_pause",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_regen_negative",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_no_reset_on_link_change",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_pulse_every_tick",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_asym_fill",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_not_centred",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_absolute_units",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_packet_only_enemies",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_no_hold_at_zero",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_gain_40",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_no_tg_attribution",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_no_edge_required",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_no_life_required",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_ambiguous_credited",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_edge_any_timer",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_direct_weight_as_block",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_band_inverted",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_band_flat",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_guard_no_bonus",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_guard_shortens_delay",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_fury_as_black",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_unknown_as_black",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_history_inherited",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_legacy_blue_as_red",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_no_group_adjust",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_invalid_life_fast",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_life_ref_after_damage",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_parry_then_direct",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_native_completion_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_original_late_tg",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_wrong_tick",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_foreign_source",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_native_timer",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_environment",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_unseen_poly",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_electric",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_magic_armor",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_block_chip",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_identity",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_stale_contact",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_parry_contact",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_ambiguous",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_loop_clip_restored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_animation_changed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_reverse_attack",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_recoil_positive",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_physical_chain",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_guard_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_historical_arm_blind",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_dead_is_recovery",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_no_actual_arm",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_no_native_arm_observation",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_ignores_restarts",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_aborts_not_diagnosed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_expired_is_pass",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_cleanup_ignores_fresh",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_cleanup_ignores_attack",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_cleanup_changes_native_on",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_cleanup_wrong_identity",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_cleanup_wrong_generation",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_cleanup_wrong_tick",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_cleanup_false_verify",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_dead_legacy_false_pass",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_queue_requests",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_block_long_deadline",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_direct_short_deadline",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_gate_no_expiry",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_gate_any_link",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_gate_wolf",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_gate_dead",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_gate_pause",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_gate_event",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_rebreak",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_any_origin",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_shield_attack_origin",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_damage_origin",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_no_slip_origin",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_mode_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_special_mode_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_damage_veto_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_entry_unverified",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_no_parry_cancel",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_no_expiry_observe",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_no_adoption",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_adopt_unsaturated",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_same_link_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_pause_counts",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_stuck_forces_exit",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_dead_recovers",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_end_as_cancel",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_early_exit_is_recovery",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_cancel_frame",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_reset_on_abort",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_hold_always",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_hold_never",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_hold_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_reset_not_accounted",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_reset_keeps_value",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_auto_shield_L",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_mandatory_cleared",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_guard_in_penalty",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_guard_before_rearm",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_rearm_while_held",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_rearm_during_penalty",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_no_release_needed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_bash_in_penalty",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_bash_without_r",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_dodge_free",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_dodge_native_only",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_backflip_free",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_frontroll_free",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_sidehop_free",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_window_native_only",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_window_short",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_window_off_by_one",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_pause_counts",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_latch_extended",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_clock_restart",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_transplant",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_event_no_abort",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_abort_leaves_latch",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_watchdog_forces_exit",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_requests_open",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_consume_b_global",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_consume_b_unoffered",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_bonus_r_only",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_bonus_in_rearm",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fx_backward_threshold",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk05_cancel_speed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_red_sword",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_red_parry",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_red_iron34",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_black_sword",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_black_parry",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_black_iron",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_fury_different",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_standing50",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_snapshot_id",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_snapshot_gen",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_snapshot_epoch",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_no_fallback",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_capture_ignores_valid",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_classifier_forces_blue",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_consume_legacy",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_preview_legacy",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_commit_legacy",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_commit_ignores_receipt",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_preview_id_unbound",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_preview_epoch_unbound",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_preview_token_unbound",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_preview_gain_unbound",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_preview_before_unbound",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_preview_source_unbound",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_rearm_accepts50",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_rearmed_wrong_units",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "bal_delivered_twice",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_ignore_occupied",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_move_unrelated_root",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_band_no_halo",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_band_no_pulse",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_overlap_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_collision_not_moved",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_move_wrong_sign",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_viewport_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_overflow_writes",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_inverse_wrong",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_hide_player_without_enemy",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_minimal_hud_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hf_fade_stuck_on",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "extra_hp",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "power",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "anim_rate",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "cooldown_elsewhere",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "second_writer",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "at_set_outside_helper",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_adapter_guard_removed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_capture_no_first_priority",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_native_source_fabricated",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_native_hook_writes",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_actual_arm_fabricated",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "f01_poly_result_ignored",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_writes_meter",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_writes_health",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_rearms_posture",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_reads_breaker_internals",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_second_queue_walk",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_direct_set",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_painter_reads_posture",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_no_scrub_on_shutdown",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_extra_service",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_extra_hook",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "hud_core_reads_posture",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_writes_hp",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_writes_link",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_cached_actor_read",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_judge_writes",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_second_deflect",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_target_not_pre",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_no_shape_check",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_apply_outside",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "parry_disabled_twice",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_judge_uses_now",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_observe_twice",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_judge_ignores_fresh",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_state3_always",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_note_before_writes",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix02_watch_writes",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "fix01_observe_writes",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_hides_whole_hud",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_shows_again",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_global_alpha",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_writes_link_proc",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_writes_guard_counter",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_writes_life",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_contact_twice",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_contact_before_parry",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_regen_in_draw",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_painter_reads_posture",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_pre_installed_first",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_mask_any_prompt",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_no_vptr_guard",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_hide_outside_step",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_regen_ignores_pause",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "lnk_extra_slot_write",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_writes_damage_timer",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_pre_clears_tg",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_guard_ignores_invulnerability",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_confirm_twice",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_any_cylinder",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_tg_assumed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_writes_pending_life",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s1_regen_before_confirm",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_writes_proc",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_writes_counter",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_writes_mode",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_on_mode_flag",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_writes_damage_timer",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_slip_route",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_damage_route",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_double_call",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_entry_assumed",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_call_before_gate",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_call_from_update",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_no_pending_check",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_damage_veto_blind",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_second_hook",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_reset_unconditional",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_reset_at_request",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_regen_request",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_parry_requests",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_no_parry_cancel",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_observe_twice",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_hold_forced",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_hook_crouch_procwait",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_hook_dodge_proc",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_hook_anim",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_flag_on",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_third_flag_off",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_flag_off_unconditional",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_b_global",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_second_input_write",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_raw_pad",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_writes_proc",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_anim_rate",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_damage_artificial",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_reset_on_complete",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_skip_any_status",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_dodge_always",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_collision_in_break",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_collision_always",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_partial_install",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_enable_early",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_bonus_r_held",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_request_unblocked",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_second_native_call",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_begin_on_request",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_lose_fix01_hook",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_const_dup",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_bstatus_always",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_bash_forced",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_crouch_shield",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2f_core_impure",
+      "detected": true,
+      "status": "KILLED"
+    },
+    {
+      "mutation": "s2_core_impure",
+      "detected": true,
+      "status": "KILLED"
+    }
+  ],
+  "count": 393,
+  "detected": 393,
+  "timeouts": 0
+}

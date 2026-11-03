@@ -1,0 +1,1 @@
+production_adapter_collision_model existing_hint=(330.0,360.0) relocated_hint=(348.4,373.4) introduced_overlap=1 bar_clear=1 native_runtime=NOT_EXECUTED
