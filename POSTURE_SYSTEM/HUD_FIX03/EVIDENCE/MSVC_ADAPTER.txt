@@ -1,0 +1,5 @@
+BASE_0_11_4_REGRESSION_PROVEN checks=32 root_disabled=1 protected_draws_lost=10 native_game=NOT_EXECUTED
+
+HUD_FIX03_ADAPTER checks=67218 failures=0 RESULT=LAB_PASS scenarios=528 protected_draws=5280 lower_text_draws_hidden=1240 root_suppressed=0 preserved_roots=1060 original_fx_updates=1056 native_game=NOT_EXECUTED
+
+{"status": "LAB_PASS", "same_scene_base_regression_proven": true, "base_reference_sha256": "4129c63de19b47a7acf60ca5e0b4e8a9db0427c04933c55ac7bef9b483be278d", "outputs": ["BASE_0_11_4_REGRESSION_PROVEN checks=32 root_disabled=1 protected_draws_lost=10 native_game=NOT_EXECUTED", "HUD_FIX03_ADAPTER checks=67218 failures=0 RESULT=LAB_PASS scenarios=528 protected_draws=5280 lower_text_draws_hidden=1240 root_suppressed=0 preserved_roots=1060 original_fx_updates=1056 native_game=NOT_EXECUTED"], "native_runtime": false}

@@ -1,0 +1,54 @@
+{
+  "status": "NEGATIVES_PASS",
+  "count": 12,
+  "cases": [
+    {
+      "name": "foreign_geometry_erase",
+      "rejected": true
+    },
+    {
+      "name": "slot_not_invading",
+      "rejected": true
+    },
+    {
+      "name": "slot_geometry_disabled",
+      "rejected": true
+    },
+    {
+      "name": "owner_leak",
+      "rejected": true
+    },
+    {
+      "name": "pikari_not_masked",
+      "rejected": true
+    },
+    {
+      "name": "pikari_foreign_owner",
+      "rejected": true
+    },
+    {
+      "name": "foreign_picture_erased",
+      "rejected": true
+    },
+    {
+      "name": "foreign_outfont_erased",
+      "rejected": true
+    },
+    {
+      "name": "owner_check_lost",
+      "rejected": true
+    },
+    {
+      "name": "tags_ignored",
+      "rejected": true
+    },
+    {
+      "name": "screen_guard_lost",
+      "rejected": true
+    },
+    {
+      "name": "old_generic_mask",
+      "rejected": true
+    }
+  ]
+}

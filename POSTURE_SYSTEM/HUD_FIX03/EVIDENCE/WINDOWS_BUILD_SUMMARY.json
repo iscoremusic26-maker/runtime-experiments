@@ -1,0 +1,346 @@
+{
+  "source_commit": "2d0e59329f14d822c1905ee7953d337959932f1f",
+  "ci_head": "29230b450e0b77bdab7aa3edc1f272e17e2a168b",
+  "labels": [
+    "WINDOWS_MSVC_BUILD_OK",
+    "PE_NEGATIVES_REJECTED",
+    "LAB_PASS_MSVC",
+    "WINDOWS_MSVC_PASS"
+  ],
+  "production_units": [
+    "game_feature.cpp",
+    "hm_bridge.cpp",
+    "mod.cpp",
+    "tracker.cpp"
+  ],
+  "loose_dll": {
+    "bytes": 1125376,
+    "sha256": "060e460dccc126178a8a882081c45ebf358d055c6b7dfe0127ac4c2751c17f86"
+  },
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "VSCMD_ARG_TGT_ARCH": "x64",
+    "VisualStudioVersion": "18.0",
+    "WindowsSDKVersion": "10.0.26100.0\\"
+  },
+  "phases": [
+    {
+      "label": "compiler",
+      "seconds": 6.454,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "seconds": 2.843,
+      "exit": 0
+    },
+    {
+      "label": "ninja-version",
+      "seconds": 0.297,
+      "exit": 0
+    },
+    {
+      "label": "tool-tests",
+      "seconds": 0.594,
+      "exit": 0
+    },
+    {
+      "label": "pmf-static-tests",
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "hudfix-production-adapter",
+      "seconds": 11.062,
+      "exit": 0
+    },
+    {
+      "label": "fix03-parity",
+      "seconds": 0.11,
+      "exit": 0
+    },
+    {
+      "label": "fix03-source-negatives",
+      "seconds": 10.968,
+      "exit": 0
+    },
+    {
+      "label": "source-barrier",
+      "seconds": 0.469,
+      "exit": 0
+    },
+    {
+      "label": "source-audit",
+      "seconds": 0.75,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "seconds": 12.485,
+      "exit": 0
+    },
+    {
+      "label": "build-mod",
+      "seconds": 13.687,
+      "exit": 0
+    },
+    {
+      "label": "dumpbin-headers",
+      "seconds": 0.078,
+      "exit": 0
+    },
+    {
+      "label": "dumpbin-imports",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "dumpbin-exports",
+      "seconds": 0.032,
+      "exit": 0
+    },
+    {
+      "label": "store-audit",
+      "seconds": 0.578,
+      "exit": 0
+    },
+    {
+      "label": "pe-negatives",
+      "seconds": 0.469,
+      "exit": 0
+    },
+    {
+      "label": "hudfix02-production-adapter",
+      "seconds": 2.828,
+      "exit": 0
+    },
+    {
+      "label": "cp06-authentic-pair",
+      "seconds": 6.844,
+      "exit": 0
+    },
+    {
+      "label": "build-lab1",
+      "seconds": 3.234,
+      "exit": 0
+    },
+    {
+      "label": "run-lab1",
+      "seconds": 0.032,
+      "exit": 0
+    },
+    {
+      "label": "build-lab2",
+      "seconds": 2.484,
+      "exit": 0
+    },
+    {
+      "label": "run-lab2",
+      "seconds": 0.078,
+      "exit": 0
+    },
+    {
+      "label": "build-lab3",
+      "seconds": 1.156,
+      "exit": 0
+    },
+    {
+      "label": "run-lab3",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "build-lab4",
+      "seconds": 5.094,
+      "exit": 0
+    },
+    {
+      "label": "run-lab4",
+      "seconds": 0.125,
+      "exit": 0
+    },
+    {
+      "label": "build-lab5",
+      "seconds": 4.015,
+      "exit": 0
+    },
+    {
+      "label": "run-lab5",
+      "seconds": 0.219,
+      "exit": 0
+    },
+    {
+      "label": "build-lab6",
+      "seconds": 4.813,
+      "exit": 0
+    },
+    {
+      "label": "run-lab6",
+      "seconds": 0.25,
+      "exit": 0
+    },
+    {
+      "label": "build-lab7",
+      "seconds": 4.156,
+      "exit": 0
+    },
+    {
+      "label": "run-lab7",
+      "seconds": 0.25,
+      "exit": 0
+    },
+    {
+      "label": "build-lab8",
+      "seconds": 3.281,
+      "exit": 0
+    },
+    {
+      "label": "run-lab8",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "build-lab9",
+      "seconds": 4.14,
+      "exit": 0
+    },
+    {
+      "label": "run-lab9",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "build-lab10",
+      "seconds": 6.906,
+      "exit": 0
+    },
+    {
+      "label": "run-lab10",
+      "seconds": 0.078,
+      "exit": 0
+    },
+    {
+      "label": "build-lab11",
+      "seconds": 8.782,
+      "exit": 0
+    },
+    {
+      "label": "run-lab11",
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "build-lab12",
+      "seconds": 4.844,
+      "exit": 0
+    },
+    {
+      "label": "run-lab12",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "build-lab13",
+      "seconds": 4.094,
+      "exit": 0
+    },
+    {
+      "label": "run-lab13",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "build-lab14",
+      "seconds": 5.188,
+      "exit": 0
+    },
+    {
+      "label": "run-lab14",
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "build-lab15",
+      "seconds": 4.766,
+      "exit": 0
+    },
+    {
+      "label": "run-lab15",
+      "seconds": 0.641,
+      "exit": 0
+    },
+    {
+      "label": "build-lab16",
+      "seconds": 4.234,
+      "exit": 0
+    },
+    {
+      "label": "run-lab16",
+      "seconds": 0.641,
+      "exit": 0
+    },
+    {
+      "label": "build-lab17",
+      "seconds": 7.781,
+      "exit": 0
+    },
+    {
+      "label": "run-lab17",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "build-lab18",
+      "seconds": 1.406,
+      "exit": 0
+    },
+    {
+      "label": "run-lab18",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "fix03-mutations",
+      "seconds": 20.594,
+      "exit": 0
+    },
+    {
+      "label": "fix02-mutations",
+      "seconds": 41.375,
+      "exit": 0
+    },
+    {
+      "label": "rework-mutations",
+      "seconds": 560.75,
+      "exit": 0
+    },
+    {
+      "label": "hud-reference-renders",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "lnk01-reference-renders",
+      "seconds": 0.203,
+      "exit": 0
+    },
+    {
+      "label": "emit-sample",
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "extract-sample",
+      "seconds": 0.063,
+      "exit": 0
+    },
+    {
+      "label": "build-package",
+      "seconds": 0.344,
+      "exit": 0
+    }
+  ],
+  "game_executed": false,
+  "dll_loaded": false,
+  "host_built": false
+}

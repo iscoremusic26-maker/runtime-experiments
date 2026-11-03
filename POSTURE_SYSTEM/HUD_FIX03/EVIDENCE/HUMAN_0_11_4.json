@@ -1,0 +1,20 @@
+{
+  "bytes": 3024339,
+  "lines": 16422,
+  "sha256": "ed86073768987359a9016d0b7a07d8dc5fb30f5b8bd7c9c8ff229287c9c7b259",
+  "source": "dusklight-20261103-114656.log",
+  "summaries": {
+    "POST_HUD_FIX02_SUMMARY": "POST_HUD_FIX02_SUMMARY tag=SHUTDOWN active=0 screens=61696 repeated_screen_calls_same_frame=13022 screen_calls_per_frame_max=10 panes_observed=4207236 visible_candidates=61696 slots_observed=3610 invading_slots=3610 masked_nodes=167466 pane_suppressed=61696 pane_restored=61696 direct_picture_observed=67620 picture_suppressed=9660 outfont_observed=0 outfont_suppressed=0 direct_string_observed=0 string_suppressed=0 font_restored=0 noninvading_kept=57960 unknown_routes=0 overflows=0 unpaired=0 uncovered_observations=0 alignment_samples=14561 alignment_not_life_visible=184735 mirror_resets=487 metric=OBSERVED_DRAW_ROUTES_NOT_GAME_PIXELS",
+    "POST_HUD_FIX01_SUMMARY": "POST_HUD_FIX01_SUMMARY tag=SHUTDOWN enabled=0 frames=32569 bar_required=9660 bar_drawn=9660 transitions=28 screens=0 relocated_groups=0 restored_leases=0 unsupported_contexts=0 overflows=0 unpaired=0 remaining_bound_intersections=0 scoop_offered_frames=0 weighted_sword_contacts=67 weighted_sword_near_bar_off=0 phase=IDLE evidence=RUNTIME_COUNTERS_NOT_PIXEL_PROOF",
+    "POST_HUD_FIX02_INIT": "POST_HUD_FIX02_INIT version=0.11.4 route=CONDITIONAL_SUPPRESSION_PANE+OUTFONT+DIRECT_PICTURE+DIRECT_STRING reflow=OFF persistent_root_hide=OFF actions=NATIVE player=UNCHANGED_INDEPENDENT_AFTER_HUD enemy_anchor=CP06_AUTHENTIC_TRACKER_REPLICA reference=7bb569a9cdf047034dc940fa5733c0f339a1e962 human=HUMAN_RUNTIME_PENDING",
+    "POST_BAL01_INIT": "POST_BAL01_INIT version=0.11.2 cap=100 threshold=100 weights(sword/parry/iron)[blue/red/black/fury]=25/40/50,17/27/33,13/20/25,13/20/25 rearm_standing=25 rearm_getup=0 regen_posture=UNCHANGED(120ticks,5/4/3/2/1,30Hz) link_policy=UNCHANGED(0.11.1) classification=LNK07_RESOURCE+BOTH_AT_SPHERES+GENERATION_HISTORY source=061e1793d687c958d10e9d0c63ae898c369bda24 hooks=16 game_imports=48 new_native_writes=0 enabled=1 evidence=ENGINE_SOURCE+LAB+CI runtime=HUMAN_RUNTIME_PENDING",
+    "LNK_FIX01_SUMMARY": "LNK_FIX01_SUMMARY v=0.11.1 tag=SHUTDOWN enabled=1 state=READY total_penalty_ticks=75 begins(ext/latch)=2/0 duplicate_begins=0 native_exits=2 post_vulnerable=2 completes=2 rearmed=1 aborted=1 watchdog=0 window_ticks(min/max)=75/75 native_ticks(min/max)=29/29 active_ticks=150 paused_ticks=0 held_through_unlock=0 released_after_unlock=2 r_edges=32 r_down/up=32/32 guard(enabled/no_r/penalty/rearm/mandatory)=1633/1766/45/277/326 flag_clears(guard/collision)=2088/2 bash(accepted/denied_penalty/b_without_r)=24/0/0 bash_offered=3056 b_consumed=27 bstatus_set=1653 dodge_denied(backflip/sidehop/side_roll/frontroll)=2/1/0/5 requests_blocked=0 regen_x1_5(on/off)=51/51 anomalies(slip/guard_attack/small_guard)=0/0/0 failures=0 executes=13193 invariants=1 lines(shield/bash/penalty/dodge/regen/input)=120+13/24+0/8+0/8+0/80+22/60+4"
+  },
+  "images": "BOTH_VISIBLE_IN_CHAT_INSPECTED; not copied to repository",
+  "human_feedback": {
+    "alignment": "CONFIRMED_FIXED_0.11.4",
+    "scoop": "CONFIRMED_FIXED_0.11.4",
+    "flicker": "CONFIRMED_FIXED_0.11.4",
+    "general_hud": "REGRESSION_VISIBLE"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "version": "0.11.5",
+  "verdict": "PRIVATE_TEST_FIX03_TECHNICAL_IMPLEMENTED_HUMAN_RUNTIME_PENDING",
+  "states": [
+    "SOURCE_IMPLEMENTED",
+    "SOURCE_AUDIT_PASS",
+    "LAB_PASS",
+    "WINDOWS_MSVC_PASS",
+    "PE_AUDIT_PASS",
+    "INDEPENDENT_DOWNLOAD_PASS",
+    "ARTIFACT_DOWNLOADED_VERIFIED",
+    "HUMAN_RUNTIME_PENDING"
+  ],
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "source_branch": "feature/posture-hud-fix03-0-11-5",
+  "compiled_source": "2d0e59329f14d822c1905ee7953d337959932f1f",
+  "compiled_source_tree": "e195359357334db23a94c4174a9ef1081f733f07",
+  "base_compiled_0_11_4": "061e1793d687c958d10e9d0c63ae898c369bda24",
+  "combat_baseline_0_11_2": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+  "documentation": "separate descendant commit, never attributed to binary; compiled_source is authoritative",
+  "ci_branch": "ci/posture-hud-fix03-0-11-5",
+  "ci_commit": "29230b450e0b77bdab7aa3edc1f272e17e2a168b",
+  "run": 41687970224,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41687970224",
+  "jobs": [
+    {
+      "id": 126098671229,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126106771742,
+      "name": "independent-download",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifact_id": 13255667942,
+  "artifact_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41687970224/artifacts/13255667942",
+  "artifact_expires_at": "2026-12-03T18:04:19Z",
+  "artifact_expires_panama": "2026-12-03T13:04:19-05:00",
+  "filename": "POSTURE_HUD_FIX03_0_11_5_PRIVATE_TEST_windows-amd64_2d0e59329f14.dusk",
+  "package_bytes": 137446,
+  "package_sha256": "1dbf22a4c985e2ff334bd774faba86ac6bef717e55d135dbca7755103cd2f660",
+  "dll_sha256": "060e460dccc126178a8a882081c45ebf358d055c6b7dfe0127ac4c2751c17f86",
+  "bugs": {
+    "A_Scoop": {
+      "state": "PRESERVED_FROM_HUMAN_CONFIRMED_0_11_4",
+      "current_runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "B_lower_prompts_and_general_HUD": {
+      "states": [
+        "SOURCE_IMPLEMENTED",
+        "SOURCE_AUDIT_PASS",
+        "LAB_PASS",
+        "WINDOWS_MSVC_PASS",
+        "PE_AUDIT_PASS",
+        "INDEPENDENT_DOWNLOAD_PASS",
+        "ARTIFACT_DOWNLOADED_VERIFIED",
+        "HUMAN_RUNTIME_PENDING"
+      ],
+      "scope": "live native mpEmpButton owner, exact two slot subtrees, geometry; roots and foreign draws never suppressed",
+      "same_scene_base_regression_proven": true
+    },
+    "C_EHB_alignment": {
+      "state": "PRESERVED_EXACT_0_11_4_ALGORITHM",
+      "human_0_11_4": "USER_CONFIRMED_FIXED",
+      "current_runtime": "HUMAN_RUNTIME_PENDING"
+    },
+    "D_Link_flicker": {
+      "state": "PRESERVED_EXACT_0_11_4_PRESENTATION",
+      "human_0_11_4": "USER_CONFIRMED_FIXED",
+      "current_runtime": "HUMAN_RUNTIME_PENDING"
+    }
+  },
+  "validation": {
+    "windows_msvc": "PASS",
+    "pe": "PE_AUDIT_PASS",
+    "independent_download": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "local_api_download": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "old_labs": 18,
+    "old_lab_checks": 2829095,
+    "old_mutations": 393,
+    "retained_fix02_mutations": 11,
+    "new_fix03_mutations": 8,
+    "total_mutations": 412,
+    "timeouts": 0,
+    "old_semantic_source_negatives": 114,
+    "new_source_negatives": 12,
+    "native_instruction_negatives": 2,
+    "pe_negative_cases": 20,
+    "pinned_combat_functions": 107,
+    "pinned_combat_headers": 15,
+    "adapter_checks": 67218,
+    "base_regression_checks": 32,
+    "alignment_comparison": {
+      "status": "LAB_PASS",
+      "checks": 2875378,
+      "paired_bar_presentations": 716386,
+      "presentation_frames": 9834,
+      "max_relative_logical_error": 4.577636718572364e-06,
+      "constant_life_posture_centre_delta": 4.7,
+      "old_max_height_regression_error": 80,
+      "old_regression_rejected": true,
+      "oracle_trace_sha256": "d814b90194a6b381873e2ff5c7148171813f1801000e5ec85417bc201b2d2674",
+      "production_trace_sha256": "ebca129ff3c20f940d47e193953c505d06d41b4f7e2dbb626744cfb4f5d8c8db",
+      "source_outputs": [
+        {
+          "output": "ALIGN02 checks=1793058 failures=0 RESULT=LAB_PASS paired_presentations=716386 legacy_regression_divergences=1 native_game=NOT_EXECUTED",
+          "model_seconds": 0.37804269999992357
+        },
+        {
+          "output": "ALIGN02 checks=2468746 failures=0 RESULT=LAB_PASS paired_presentations=716386 legacy_regression_divergences=1 native_game=NOT_EXECUTED",
+          "model_seconds": 0.8318142000000535
+        }
+      ],
+      "native_runtime": false
+    },
+    "native_game_executed": false,
+    "fps_or_dx12_pixel_measurement": false,
+    "msvc_warnings": {
+      "count": 9,
+      "codes": [
+        "C4068",
+        "C4805",
+        "C4806"
+      ],
+      "origin": "official SDK headers; SDK unmodified",
+      "lines": [
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JUtility/JUTTexture.h(79): warning C4806: '|': unsafe operation: no value of type 'bool' promoted to type 'int' can equal the given constant",
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&=': unsafe mix of type 'bool' and type 'int' in operation",
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JSupport/JSUIosBase.h(28): warning C4805: '&': unsafe mix of type 'bool' and type 'int' in operation",
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|=': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation",
+        "<OFFICIAL>\\libs\\JSystem\\include\\JSystem/JSupport/JSUIosBase.h(29): warning C4805: '|': unsafe mix of type 'bool' and type 'JSUIosBase::EIoState' in operation",
+        "<OFFICIAL>\\include\\SSystem/SComponent/c_cc_d.h(235): warning C4068: unknown pragma 'push'",
+        "<OFFICIAL>\\include\\SSystem/SComponent/c_cc_d.h(261): warning C4068: unknown pragma 'pop'",
+        "<OFFICIAL>\\include\\d/d_stage.h(408): warning C4068: unknown pragma 'push'",
+        "<OFFICIAL>\\include\\d/d_stage.h(439): warning C4068: unknown pragma 'pop'"
+      ]
+    }
+  },
+  "runtime_limits": [
+    "native host and DLL never executed",
+    "no FPS/DX12 raster validation",
+    "unknown routes/capacity preserve HUD and count uncovered; not every pixel or mod layout certified",
+    "same exact CP06 source/options and public presentation interpolation assumptions retained"
+  ],
+  "rollback": {
+    "0.11.4": {
+      "sha256": "c63d436e8a475ef5b19732ac1006fad14599921232eca5545c33fb477d415fa4",
+      "run": 41673271040,
+      "artifact": 13248769855
+    },
+    "0.11.2": {
+      "sha256": "2aa715980bc81af0db13622fc9e210100bcd973cd1255044d570a91f092eba0a",
+      "run": 41570019310,
+      "artifact": 13201587185
+    }
+  },
+  "superseded_runs": [
+    {
+      "run": 41687415617,
+      "state": "FAILED_BEFORE_NATIVE_BUILD",
+      "reason": "isolated Python sibling module import; fixed in compiled_source",
+      "artifact_candidate": false
+    }
+  ],
+  "no_pr_merge_release_tag": true,
+  "runtime_tested": false
+}

@@ -1,0 +1,12 @@
+{
+  "?drawPikari@dMeter2Draw_c@@QEAAXMMPEAMMUTColor@JUtility@@111MEM@Z": {
+    "rva": "0xa166f0",
+    "body_prefix_hex": "405355565741564881ec8000"
+  },
+  "?getTypeID@J2DScreen@@UEBAGXZ": {
+    "rva": "0x166dd10",
+    "body_prefix_hex": "b808000000c3cccccccccccc"
+  },
+  "exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+  "native_executed": false
+}

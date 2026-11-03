@@ -1,0 +1,25 @@
+{
+  "files": [
+    "alignment_core.hpp",
+    "balance_adapter.hpp",
+    "balance_core.hpp",
+    "break_core.hpp",
+    "engine.hpp",
+    "fix01_core.hpp",
+    "helm_core.hpp",
+    "hit_core.hpp",
+    "hud_core.hpp",
+    "hudfix_core.hpp",
+    "lifecycle_core.hpp",
+    "lnk_core.hpp",
+    "lnks2_core.hpp",
+    "lnks2fix_core.hpp",
+    "mod.cpp",
+    "parry_core.hpp",
+    "posture_core.hpp",
+    "reaction_core.hpp"
+  ],
+  "errors": [],
+  "define_hook_count": 22,
+  "status": "SOURCE_AUDIT_PASS"
+}

@@ -1,0 +1,59 @@
+{
+  "inherited_game_imports": 54,
+  "current_game_imports": 55,
+  "removed": [],
+  "new": [
+    {
+      "symbol": "?drawPikari@dMeter2Draw_c@@QEAAXMMPEAMMUTColor@JUtility@@111MEM@Z",
+      "reason": "FIX03 paired Pikari emission ownership by native lower slot animation pointer; original always CONTINUE; no native counter writes"
+    }
+  ],
+  "service_imports": [
+    [
+      "com.dusklight.enemy_health_multiplier_203.vitals",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.game",
+      2,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.gfx",
+      1,
+      4
+    ],
+    [
+      "dev.twilitrealm.dusklight.hook",
+      1,
+      1
+    ],
+    [
+      "dev.twilitrealm.dusklight.host",
+      2,
+      2
+    ],
+    [
+      "dev.twilitrealm.dusklight.interp",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.log",
+      1,
+      0
+    ]
+  ],
+  "hook_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 14,
+    "HOOK_MEM_EXT": 8,
+    "IMPORT": 7
+  },
+  "vcall_slots": {
+    "COutFont_c::draw": 24,
+    "dMeterButton_c::draw": 0,
+    "static_cast<void (J2DPicture::*)(f32,f32,f32,f32,bool,bool,bool)>(&J2DPicture::draw)": 440
+  }
+}
