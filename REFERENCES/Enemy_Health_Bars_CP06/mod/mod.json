@@ -1,0 +1,7 @@
+{
+  "id": "com.dusklight.enemy_health_bars_203",
+  "name": "Enemy Health Bars (2.0.3 port, CP06 Armos TEST)",
+  "version": "2.0.3-cp06-armos-test",
+  "author": "Dusklight community mods",
+  "description": "CP06 Armos TEST of the Enemy Health Bars 2.0.3 port: the TT-FIX01 build plus the Armos (E_AI) bar: it follows the Armos hit counter (3 native steps) instead of the 1000 decoy health, hidden when the Armos is defeated, with or without Enemy Health Multiplier; with a compatible HM vitals provider it shows the exact effective resistance (x2: six steps). Optional import of the Enemy Health Multiplier vitals service. Reads game state only; draws J2D bars; changes no game state."
+}
