@@ -17,5 +17,14 @@
   "runtime": "HUMAN_RUNTIME_PENDING",
   "shield_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING",
   "artifact": null,
-  "note": "The final separate documentary commit will bind the actual compiled source, successful run and downloaded hashes. No artifact or Windows success is asserted here."
+  "note": "The final separate documentary commit will bind the actual compiled source, successful run and downloaded hashes. No artifact or Windows success is asserted here.",
+  "superseded_runs": [
+    {
+      "run": 41738605286,
+      "source": "e7dbcba9c49ff4778ebc163d3eddef8d17a2066d",
+      "state": "MSVC_REJECTED_WRONG_ABI_ASSERT_CONSTANT",
+      "package_produced": false,
+      "cause": "mProcVar1 is0x4166 (GuardSlip decrement/load);0x416a is mProcVar3, not the body interpolation count. Only compile-time assertion/docs changed; typed runtime member access was already correct."
+    }
+  ]
 }
