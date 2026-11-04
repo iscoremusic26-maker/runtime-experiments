@@ -1,0 +1,193 @@
+{
+  "checkpoint": "LIGHT FADES TWICE CP05 FIX02",
+  "version": "0.11.10",
+  "state": "PRIVATE_TEST_TECHNICAL_PASS_HUMAN_RUNTIME_PENDING",
+  "technical_id": "dev.posture.post05_selective_reactions",
+  "components": {
+    "P0_A_ORDINARY_SWORD_PREMATURE_STAGGER": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ],
+    "P0_B_HELD_GUARD_STALE_CONTACT_REBOUND": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ]
+  },
+  "compiled_source": "d6e4c2179c2c42a7aa807ce862290de728abb396",
+  "compiled_tree": "47562231f0dc9c05075ef784cb064a7dd233c6f9",
+  "source_branch": "feature/light-fades-twice-cp05-fix02-0-11-10",
+  "compiled_base": "785f7044a09588ea9f570f09b4b74580e4f7ee93",
+  "documentary_commit": "Separate docs-only successor containing this report; exact compiled source above is authoritative; see branch history for successor SHA.",
+  "ci_commit": "6f7ef784cde3cd1ee17511af863eaf5614aca9b0",
+  "ci_branch": "ci/light-fades-twice-cp05-fix02-0-11-10",
+  "run": 41856406121,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41856406121",
+  "jobs": [
+    {
+      "id": 126666118652,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126678579300,
+      "name": "independent-download",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "artifact": {
+    "id": 13338164623,
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41856406121/artifacts/13338164623",
+    "filename": "LIGHT_FADES_TWICE_CP05_FIX02_0_11_10_PRIVATE_TEST_windows-amd64_d6e4c2179c2c.dusk",
+    "bytes": 169147,
+    "sha256": "9c8f0074962386d7f46984cab43c0cff8fb429911d731e846aa52bef44e4bb4f",
+    "dll_sha256": "5d9fef1e46e9e18fb5c4a49acc4c26758078909bdb7343e1005a5b19cfc45049",
+    "expires_at": "2026-12-04T15:38:41Z",
+    "expires_panama": "2026-12-04 10:38:41 UTC-05:00",
+    "status": "ARTIFACT_DOWNLOADED_VERIFIED"
+  },
+  "evidence_artifacts": {
+    "text": {
+      "id": 13338254532,
+      "name": "CP05_FIX02_TEXT_41856406121_1",
+      "size_in_bytes": 365545,
+      "url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13338254532",
+      "archive_download_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13338254532/zip",
+      "expired": false,
+      "created_at": "2026-11-04T15:38:40Z",
+      "expires_at": "2026-12-04T15:38:38Z",
+      "updated_at": "2026-11-04T15:38:40Z",
+      "digest": "sha256:bf209e605569bfdb0e345827db863a435af94efae1c9e59c794a16ec62a1770d",
+      "workflow_run": {
+        "id": 41856406121,
+        "repository_id": 1414830645,
+        "head_repository_id": 1414830645,
+        "head_branch": "ci/light-fades-twice-cp05-fix02-0-11-10",
+        "head_sha": "6f7ef784cde3cd1ee17511af863eaf5614aca9b0"
+      }
+    },
+    "independent": {
+      "id": 13338214110,
+      "name": "CP05_FIX02_DOWNLOAD_VERIFIED_41856406121_1",
+      "size_in_bytes": 627,
+      "url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13338214110",
+      "archive_download_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13338214110/zip",
+      "expired": false,
+      "created_at": "2026-11-04T15:39:17Z",
+      "expires_at": "2026-12-04T15:39:16Z",
+      "updated_at": "2026-11-04T15:39:17Z",
+      "digest": "sha256:6a2d3e5c99a778122522018b466b98eae43528a19104165025ddc672d8d17435",
+      "workflow_run": {
+        "id": 41856406121,
+        "repository_id": 1414830645,
+        "head_repository_id": 1414830645,
+        "head_branch": "ci/light-fades-twice-cp05-fix02-0-11-10",
+        "head_sha": "6f7ef784cde3cd1ee17511af863eaf5614aca9b0"
+      }
+    }
+  },
+  "counts": {
+    "msvc_labs": 22,
+    "lab_checks": 4486668,
+    "retained_lab_checks": 4272615,
+    "new_core_checks": 214053,
+    "new_native_checks": 2656,
+    "new_guard_checks": 57184,
+    "mutations": 550,
+    "retained_mutations": 525,
+    "new_mutations": 25,
+    "timeouts": 0,
+    "new_source_negatives": 18,
+    "source_negatives": {
+      "fix03": 12,
+      "cp04": 11,
+      "cp05": 16,
+      "cp05-fix01": 12,
+      "cp05-fix02": 18
+    },
+    "legacy_source_mutations_included_not_additional": 114,
+    "pe_negatives": 20,
+    "actual_instruction_negatives": 6,
+    "game_imports": 63,
+    "hook_targets": 24,
+    "service_contracts": 7,
+    "new_hook_targets": 0,
+    "new_native_writers": 0,
+    "frozen_prior_source_files": 34,
+    "legacy_functions": 107,
+    "legacy_headers": 15,
+    "source_ledger_files": 178,
+    "retained_fix01_native_control_checks": 2656,
+    "retained_fix01_native_checks": 36222,
+    "retained_fix01_geometry_checks": 21660
+  },
+  "rollback": {
+    "version": "0.11.7",
+    "status": "LAST_GLOBALLY_HUMAN_APPROVED_BASELINE",
+    "source": "2d103c5562f7199b875d5c4c7de7f00a32922a61",
+    "run": 41746570392,
+    "artifact": 13283289812,
+    "filename": "LIGHT_FADES_TWICE_CP04_0_11_7_PRIVATE_TEST_windows-amd64_2d103c5562f7.dusk",
+    "bytes": 147197,
+    "sha256": "e446ed3ee1111837a9feed628adf939942a006e60913fe66b00d48986b71826e",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41746570392/artifacts/13283289812"
+  },
+  "known_partial_0_11_9": {
+    "source": "785f7044a09588ea9f570f09b4b74580e4f7ee93",
+    "run": 41787837430,
+    "artifact": 13302951716,
+    "bytes": 163257,
+    "sha256": "875e049ebb76f2deee50e7d2c62d73f3fe762d1f936925b4d008648b11cad4e6",
+    "human": "Combos confirmed, P0A/P0B defects reported; not globally approved"
+  },
+  "superseded_failed_runs": [
+    {
+      "run": 41852110830,
+      "source": "5ef6826f16d7a722debe487adcd6c932282cbccf",
+      "ci": "4dfe23646734cb10cdd6b2016e6a93eaedcea657",
+      "reason": "MSVC build passed; unchanged strict PE audit rejected two unintended derived dCcD read imports in the new observer. Replaced with existing explicit inline raw-base reads; no PE policy widening. Also added first-normal-guard ABI initialization coverage.",
+      "candidate": false
+    },
+    {
+      "run": 41854007748,
+      "source": "a6a0128840e678ae951bab75e7ce6516d61e3899",
+      "ci": "08b853bd00c85a762d7f0217227f0607d68ddca6",
+      "reason": "Production MSVC, strict PE and new FIX02 suites passed. Isolated legacy CP02 adapter failed to compile because new observation-only maintenance was not declared in its scoped harness. Added explicit no-op binding; all original assertions and mutants retained.",
+      "candidate": false
+    }
+  ],
+  "superseded_runs": [
+    {
+      "run": 41854007748,
+      "source": "a6a0128840e678ae951bab75e7ce6516d61e3899",
+      "ci": "08b853bd00c85a762d7f0217227f0607d68ddca6",
+      "reason": "Superseded by a diagnostic-only correction: refused terminal receipts now log native_stop_proved=0 instead of constant native_stop=1. Gameplay unchanged."
+    },
+    {
+      "run": 41854975723,
+      "source": "808d05faad1b53d599eae48719d66567c7e633e8",
+      "ci": "101d49809c31924c2bd901b09cfb97d4d1e07473",
+      "reason": "Superseded to repair the same isolated CP02 harness connection; production counter labels also clarified as per-identity cumulative."
+    }
+  ],
+  "native_game_executed": false,
+  "dll_loaded": false,
+  "runtime": "HUMAN_RUNTIME_PENDING",
+  "eight_mod_runtime": "NOT_EXECUTED",
+  "other_mods_modified": false,
+  "host_sdk_exe_rom_saves_modified": false,
+  "pr_merge_tag_release": false
+}

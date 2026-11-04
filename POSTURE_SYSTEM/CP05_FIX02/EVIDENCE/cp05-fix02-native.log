@@ -1,0 +1,12 @@
+FIX02_TERMINAL_OBSERVED source_actor=812 source_generation=27 source_event=29 fixed=0 posture=54>71 native_hp=330>290 terminal_state=3 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=812 source_generation=27 source_event=29 fixed=1 posture=54>71 native_hp=330>290 terminal_state=3 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=813 source_generation=28 source_event=37 fixed=0 posture=0>17 native_hp=330>290 terminal_state=1 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=813 source_generation=28 source_event=37 fixed=1 posture=0>17 native_hp=330>290 terminal_state=1 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=826 source_generation=23 source_event=59 fixed=0 posture=27>44 native_hp=330>290 terminal_state=3 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=826 source_generation=23 source_event=59 fixed=1 posture=27>44 native_hp=330>290 terminal_state=3 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=1168 source_generation=40 source_event=181 fixed=0 posture=0>13 native_hp=335>295 terminal_state=2 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=1168 source_generation=40 source_event=181 fixed=1 posture=0>13 native_hp=335>295 terminal_state=2 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=2411 source_generation=84 source_event=282 fixed=0 posture=44>61 native_hp=295>255 terminal_state=3 native_game_executed=false
+FIX02_TERMINAL_OBSERVED source_actor=2411 source_generation=84 source_event=282 fixed=1 posture=44>61 native_hp=295>255 terminal_state=3 native_game_executed=false
+CP05_FIX02_NATIVE checks=2656 failures=0 RESULT=LAB_PASS native_game_executed=false visual=HUMAN_RUNTIME_PENDING
+

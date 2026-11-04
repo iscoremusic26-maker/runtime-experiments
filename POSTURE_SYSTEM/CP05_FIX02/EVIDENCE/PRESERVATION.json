@@ -1,0 +1,226 @@
+{
+  "base_source": "785f7044a09588ea9f570f09b4b74580e4f7ee93",
+  "compiled_source": "d6e4c2179c2c42a7aa807ce862290de728abb396",
+  "prior_source_files": [
+    {
+      "path": "src/alignment_core.hpp",
+      "base_sha256": "d28096461e2493162a9ec0616890000f6659f030675c857b025731ed08722831",
+      "normalized_current_sha256": "d28096461e2493162a9ec0616890000f6659f030675c857b025731ed08722831"
+    },
+    {
+      "path": "src/balance_adapter.hpp",
+      "base_sha256": "ace126104adff7f35bf91f6e2926925b28a35930a0d1211224655fb3517bf412",
+      "normalized_current_sha256": "ace126104adff7f35bf91f6e2926925b28a35930a0d1211224655fb3517bf412"
+    },
+    {
+      "path": "src/balance_core.hpp",
+      "base_sha256": "42856386f168010669f70311a8ef9fbf1dd59bdca59262c5a830dbec856994e8",
+      "normalized_current_sha256": "42856386f168010669f70311a8ef9fbf1dd59bdca59262c5a830dbec856994e8"
+    },
+    {
+      "path": "src/break_core.hpp",
+      "base_sha256": "5477b3aa8db6198a897937e953bb5984d4d8c67c8c7747959e89b818c8e596cc",
+      "normalized_current_sha256": "5477b3aa8db6198a897937e953bb5984d4d8c67c8c7747959e89b818c8e596cc"
+    },
+    {
+      "path": "src/cp04_adapter.inc",
+      "base_sha256": "de94f0844d65d9b33d8af6f2c9019242debe00d2158d1ecb8e93854d6b57d6ee",
+      "normalized_current_sha256": "de94f0844d65d9b33d8af6f2c9019242debe00d2158d1ecb8e93854d6b57d6ee"
+    },
+    {
+      "path": "src/cp04_combo_core.hpp",
+      "base_sha256": "52469e255caedadf7b11398dd233890f9dfe424b5dcabe94a5ea3bdec2020ba9",
+      "normalized_current_sha256": "52469e255caedadf7b11398dd233890f9dfe424b5dcabe94a5ea3bdec2020ba9"
+    },
+    {
+      "path": "src/cp05_adapter.inc",
+      "base_sha256": "98d525c60b5277dd397ec760da75fd1adcf5b3b58491c08ed9367beb70c9cd17",
+      "normalized_current_sha256": "98d525c60b5277dd397ec760da75fd1adcf5b3b58491c08ed9367beb70c9cd17"
+    },
+    {
+      "path": "src/cp05_combo_core.hpp",
+      "base_sha256": "bf44ddd6a47d89f4a969fdd1de492edada5c1a5bc93b7dfd6c35f239faff924b",
+      "normalized_current_sha256": "bf44ddd6a47d89f4a969fdd1de492edada5c1a5bc93b7dfd6c35f239faff924b"
+    },
+    {
+      "path": "src/cp06/armos_view.h",
+      "base_sha256": "95162b7e3cc95fc38d76cf17f2a02945f09339ce7bcb53e11b9fde06e8d80f02",
+      "normalized_current_sha256": "95162b7e3cc95fc38d76cf17f2a02945f09339ce7bcb53e11b9fde06e8d80f02"
+    },
+    {
+      "path": "src/cp06/hm_bridge.cpp",
+      "base_sha256": "cc4876a2475866aaba1e4501fc1f47ea3aea98ac687dcb2827216a4b91844f64",
+      "normalized_current_sha256": "cc4876a2475866aaba1e4501fc1f47ea3aea98ac687dcb2827216a4b91844f64"
+    },
+    {
+      "path": "src/cp06/hm_bridge.h",
+      "base_sha256": "507cf0f54a5c80b87f8dd5bb22a95d5408aaf3d0f202f2bcef0a0edae4b3467b",
+      "normalized_current_sha256": "507cf0f54a5c80b87f8dd5bb22a95d5408aaf3d0f202f2bcef0a0edae4b3467b"
+    },
+    {
+      "path": "src/cp06/hm_vitals_api.h",
+      "base_sha256": "5f592e4a21190eb2353a4a78a5ee70cfb2ce3b2bed7a54076ce8d80dbaa692c7",
+      "normalized_current_sha256": "5f592e4a21190eb2353a4a78a5ee70cfb2ce3b2bed7a54076ce8d80dbaa692c7"
+    },
+    {
+      "path": "src/cp06/reused/boss_catalog.h",
+      "base_sha256": "1bad1eb79e610d4de13e10f96203b9ec60e43b4d49f634f2f93ec58f37977630",
+      "normalized_current_sha256": "1bad1eb79e610d4de13e10f96203b9ec60e43b4d49f634f2f93ec58f37977630"
+    },
+    {
+      "path": "src/cp06/reused/health_model.h",
+      "base_sha256": "fb81b53bb5df603ee42340730527d2abd7af04f71dab337bed65c5c6c6b60ca5",
+      "normalized_current_sha256": "fb81b53bb5df603ee42340730527d2abd7af04f71dab337bed65c5c6c6b60ca5"
+    },
+    {
+      "path": "src/cp06/reused/normal_model.h",
+      "base_sha256": "bfa08846d7c397261bff2298b9e812230d79e56c291d9525034dd5047f795461",
+      "normalized_current_sha256": "bfa08846d7c397261bff2298b9e812230d79e56c291d9525034dd5047f795461"
+    },
+    {
+      "path": "src/cp06/reused/normal_runtime.h",
+      "base_sha256": "b3cc945aa59572ed28f7d9d87c2731cff67fcd2b0e8a965e887b52c9ac946eb7",
+      "normalized_current_sha256": "b3cc945aa59572ed28f7d9d87c2731cff67fcd2b0e8a965e887b52c9ac946eb7"
+    },
+    {
+      "path": "src/cp06/tektite_view.h",
+      "base_sha256": "19494f125ff117262d08a32e85b0b53eb524ea3b9ef57d0176cd32f4a477b67d",
+      "normalized_current_sha256": "19494f125ff117262d08a32e85b0b53eb524ea3b9ef57d0176cd32f4a477b67d"
+    },
+    {
+      "path": "src/cp06/tracker.cpp",
+      "base_sha256": "31c9cf0e024df6ff21f68bbe2540a11a2640c30fd191f4551daf93589ace26d4",
+      "normalized_current_sha256": "31c9cf0e024df6ff21f68bbe2540a11a2640c30fd191f4551daf93589ace26d4"
+    },
+    {
+      "path": "src/cp06/tracker.h",
+      "base_sha256": "c34732d645a53de701989f40ddd4e8c3082c68864b484b47f5feac8313d0d981",
+      "normalized_current_sha256": "c34732d645a53de701989f40ddd4e8c3082c68864b484b47f5feac8313d0d981"
+    },
+    {
+      "path": "src/engine.hpp",
+      "base_sha256": "0dc3c564472893a3a3b4939ba1f2e652da53228edf6b317ec367c777092ee297",
+      "normalized_current_sha256": "0dc3c564472893a3a3b4939ba1f2e652da53228edf6b317ec367c777092ee297"
+    },
+    {
+      "path": "src/fix01_core.hpp",
+      "base_sha256": "8bffc2df4a7e58cc80f1ffd51d127e23697f2938d39bb00fa52c2390473673d6",
+      "normalized_current_sha256": "8bffc2df4a7e58cc80f1ffd51d127e23697f2938d39bb00fa52c2390473673d6"
+    },
+    {
+      "path": "src/helm_core.hpp",
+      "base_sha256": "1f65437cd995b3d1e86d552a969dcf6ac281f971637304e48584b75fd31424be",
+      "normalized_current_sha256": "1f65437cd995b3d1e86d552a969dcf6ac281f971637304e48584b75fd31424be"
+    },
+    {
+      "path": "src/hit_core.hpp",
+      "base_sha256": "0289a10d8219ade06df31b193d0c84e653014c922ee7951814ca1ddacd34b30c",
+      "normalized_current_sha256": "0289a10d8219ade06df31b193d0c84e653014c922ee7951814ca1ddacd34b30c"
+    },
+    {
+      "path": "src/hud_core.hpp",
+      "base_sha256": "fc83513eebd2e4cd0d1312c374b20df64052d3d6ad7474bae6717b2418d822c3",
+      "normalized_current_sha256": "fc83513eebd2e4cd0d1312c374b20df64052d3d6ad7474bae6717b2418d822c3"
+    },
+    {
+      "path": "src/hudfix_core.hpp",
+      "base_sha256": "0af320dacc1a1ade74bf1797d5d536fee135631811e0eb53e29244b7e7307765",
+      "normalized_current_sha256": "0af320dacc1a1ade74bf1797d5d536fee135631811e0eb53e29244b7e7307765"
+    },
+    {
+      "path": "src/lifecycle_core.hpp",
+      "base_sha256": "aca6b508786f47151c246dedfbed9d45b41fceab398324fcfa93c4b714fba2b1",
+      "normalized_current_sha256": "aca6b508786f47151c246dedfbed9d45b41fceab398324fcfa93c4b714fba2b1"
+    },
+    {
+      "path": "src/lnk_core.hpp",
+      "base_sha256": "8f7fb5fade54414cfc863c5ffe53e3d53e049de920622eac76f8286230743f0c",
+      "normalized_current_sha256": "8f7fb5fade54414cfc863c5ffe53e3d53e049de920622eac76f8286230743f0c"
+    },
+    {
+      "path": "src/lnks2_core.hpp",
+      "base_sha256": "f20511d8d597864d25637b77c2d63814967c097effe4d5fb25d790aeaa225017",
+      "normalized_current_sha256": "f20511d8d597864d25637b77c2d63814967c097effe4d5fb25d790aeaa225017"
+    },
+    {
+      "path": "src/lnks2fix_core.hpp",
+      "base_sha256": "decc4e831d9e8ca9c92bc5c620b98a12a652df08564f21254cf4ac6829a1801c",
+      "normalized_current_sha256": "decc4e831d9e8ca9c92bc5c620b98a12a652df08564f21254cf4ac6829a1801c"
+    },
+    {
+      "path": "src/mod.cpp",
+      "base_sha256": "a86106d32ab0cfaf106790b6054325c5faeb6f6d6612ecba754c9c6479ea4122",
+      "normalized_current_sha256": "a86106d32ab0cfaf106790b6054325c5faeb6f6d6612ecba754c9c6479ea4122"
+    },
+    {
+      "path": "src/parry_core.hpp",
+      "base_sha256": "06b87a24e4a61a2594b92c69aa86481b00a507a8621e686676ce21b2eaa6b2bb",
+      "normalized_current_sha256": "06b87a24e4a61a2594b92c69aa86481b00a507a8621e686676ce21b2eaa6b2bb"
+    },
+    {
+      "path": "src/posture_core.hpp",
+      "base_sha256": "c4f619438a38d352f42c4140ab149a3b510653927e7c17feea841e23120b4830",
+      "normalized_current_sha256": "c4f619438a38d352f42c4140ab149a3b510653927e7c17feea841e23120b4830"
+    },
+    {
+      "path": "src/reaction_core.hpp",
+      "base_sha256": "bc513b5e0bec90e5b9a9d24ccb1f32be46cc0cc74f61402819991a980c4058c5",
+      "normalized_current_sha256": "bc513b5e0bec90e5b9a9d24ccb1f32be46cc0cc74f61402819991a980c4058c5"
+    },
+    {
+      "path": "src/shield_chain_core.hpp",
+      "base_sha256": "65e85b71e761f69641793f7cef2e03e499a1cd966e1d6601e37324e9042f43ec",
+      "normalized_current_sha256": "65e85b71e761f69641793f7cef2e03e499a1cd966e1d6601e37324e9042f43ec"
+    }
+  ],
+  "new_file_hashes": {
+    "src/cp05_fix02_core.hpp": "0ddf3c2ac85fee7d0852eb22822f316bcafe7f440f85c5827d712133f9249b8c",
+    "src/cp05_fix02_monitor.hpp": "6dd984a2484fb3ff6e1fa70153aba0e9ba0dc98bbe620a485040311ce4d98015",
+    "src/cp05_fix02_adapter.inc": "d44c6ed2b6f8017b7518ff2b3fbb5e18ef2e111b017e46c9ead9014f471162ae",
+    "tests/reference/cp05_0_11_9/fix01_core.hpp": "8bffc2df4a7e58cc80f1ffd51d127e23697f2938d39bb00fa52c2390473673d6",
+    "tests/reference/fix02_native_cc_register.inc": "f8aec257ae219474089e2d60d7e178b17c9d05b3b835561bfc18e207922bb1cd",
+    "tests/reference/fix02_native_cc_clear.inc": "80ea48a3c2da85966da257f69a614afa8d54fa1c25f653fbd2ed807017803c4f"
+  },
+  "normalization": "Exact explicit mod.cpp insertions only, lifecycle version bump and7 CP05 log version strings; no broad body re-pin",
+  "legacy_barrier": {
+    "source_base": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+    "approved_cp02_functions": 2,
+    "approved_cp02_cp03_headers": 3,
+    "functions_pinned": 107,
+    "headers_pinned": 15,
+    "native_code_executed": false,
+    "errors": [],
+    "status": "STORE_AUDIT_PASS"
+  },
+  "source_audit": {
+    "files": [
+      "alignment_core.hpp",
+      "balance_adapter.hpp",
+      "balance_core.hpp",
+      "break_core.hpp",
+      "cp04_combo_core.hpp",
+      "cp05_combo_core.hpp",
+      "cp05_fix02_core.hpp",
+      "cp05_fix02_monitor.hpp",
+      "engine.hpp",
+      "fix01_core.hpp",
+      "helm_core.hpp",
+      "hit_core.hpp",
+      "hud_core.hpp",
+      "hudfix_core.hpp",
+      "lifecycle_core.hpp",
+      "lnk_core.hpp",
+      "lnks2_core.hpp",
+      "lnks2fix_core.hpp",
+      "mod.cpp",
+      "parry_core.hpp",
+      "posture_core.hpp",
+      "reaction_core.hpp",
+      "shield_chain_core.hpp"
+    ],
+    "errors": [],
+    "define_hook_count": 22,
+    "status": "SOURCE_AUDIT_PASS"
+  },
+  "rng_cp04_cp05_and_shield_link_hud_byte_frozen": true
+}

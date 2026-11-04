@@ -1,0 +1,98 @@
+{
+  "status": "NEGATIVES_PASS",
+  "positive_clone": "SOURCE_AUDIT_PASS",
+  "count": 18,
+  "timeouts": 0,
+  "cases": [
+    {
+      "case": "new_native_HP_writer",
+      "rejected": true,
+      "expected_cause": "native pointer assignment forbidden"
+    },
+    {
+      "case": "new_Link_proc_writer",
+      "rejected": true,
+      "expected_cause": "native pointer assignment forbidden"
+    },
+    {
+      "case": "new_forced_attack",
+      "rejected": true,
+      "expected_cause": "no new native writer allowed"
+    },
+    {
+      "case": "new_radius_writer",
+      "rejected": true,
+      "expected_cause": "no new native writer allowed"
+    },
+    {
+      "case": "synthetic_AT_writer",
+      "rejected": true,
+      "expected_cause": "no new native writer allowed"
+    },
+    {
+      "case": "new_rate_writer",
+      "rejected": true,
+      "expected_cause": "no new native writer allowed"
+    },
+    {
+      "case": "unconditional_terminal_safety",
+      "rejected": true,
+      "expected_cause": "exact integration changed"
+    },
+    {
+      "case": "legacy_parry_receipt_corrupted",
+      "rejected": true,
+      "expected_cause": "old production changed"
+    },
+    {
+      "case": "guard_cleanup_binding_removed",
+      "rejected": true,
+      "expected_cause": "exact integration changed"
+    },
+    {
+      "case": "terminal_live_readback_removed",
+      "rejected": true,
+      "expected_cause": "production proof/binding missing"
+    },
+    {
+      "case": "terminal_Link_origin_removed",
+      "rejected": true,
+      "expected_cause": "production proof/binding missing"
+    },
+    {
+      "case": "monitor_adds_engine_mutation",
+      "rejected": true,
+      "expected_cause": "no new native writer allowed"
+    },
+    {
+      "case": "native_register_oracle_tampered",
+      "rejected": true,
+      "expected_cause": "reviewed new source/reference changed"
+    },
+    {
+      "case": "native_clear_oracle_tampered",
+      "rejected": true,
+      "expected_cause": "reviewed new source/reference changed"
+    },
+    {
+      "case": "combo_rate_changed",
+      "rejected": true,
+      "expected_cause": "old production changed"
+    },
+    {
+      "case": "Blue_shieldchain_changed",
+      "rejected": true,
+      "expected_cause": "old production changed"
+    },
+    {
+      "case": "files_inventory_removed",
+      "rejected": true,
+      "expected_cause": "exact six-file reference/module inventory required"
+    },
+    {
+      "case": "baseline_files_inventory_removed",
+      "rejected": true,
+      "expected_cause": "frozen production inventory must contain34"
+    }
+  ]
+}

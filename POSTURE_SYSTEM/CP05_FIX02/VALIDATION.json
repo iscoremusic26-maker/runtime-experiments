@@ -1,0 +1,2945 @@
+{
+  "status": "WINDOWS_MSVC_LAB_PASS",
+  "compiled_source": "d6e4c2179c2c42a7aa807ce862290de728abb396",
+  "ci_commit": "6f7ef784cde3cd1ee17511af863eaf5614aca9b0",
+  "run": 41856406121,
+  "toolchain": {
+    "VCToolsVersion": "14.51.36231",
+    "VSCMD_ARG_TGT_ARCH": "x64",
+    "VisualStudioVersion": "18.0",
+    "WindowsSDKVersion": "10.0.26100.0\\"
+  },
+  "labs": [
+    {
+      "name": "hit",
+      "checks": 1660,
+      "status": "LAB_PASS",
+      "evidence": "run-lab1.log"
+    },
+    {
+      "name": "lifecycle",
+      "checks": 29558,
+      "status": "LAB_PASS",
+      "evidence": "run-lab2.log"
+    },
+    {
+      "name": "collider",
+      "checks": 12826,
+      "status": "LAB_PASS",
+      "evidence": "run-lab3.log"
+    },
+    {
+      "name": "posture",
+      "checks": 556878,
+      "status": "LAB_PASS",
+      "evidence": "run-lab4.log"
+    },
+    {
+      "name": "reaction",
+      "checks": 36933,
+      "status": "LAB_PASS",
+      "evidence": "run-lab5.log"
+    },
+    {
+      "name": "compat",
+      "checks": 55992,
+      "status": "LAB_PASS",
+      "evidence": "run-lab6.log"
+    },
+    {
+      "name": "rb",
+      "checks": 21313,
+      "status": "LAB_PASS",
+      "evidence": "run-lab7.log"
+    },
+    {
+      "name": "general",
+      "checks": 5560,
+      "status": "LAB_PASS",
+      "evidence": "run-lab8.log"
+    },
+    {
+      "name": "break",
+      "checks": 243624,
+      "status": "LAB_PASS",
+      "evidence": "run-lab9.log"
+    },
+    {
+      "name": "hud",
+      "checks": 57742,
+      "status": "LAB_PASS",
+      "evidence": "run-lab10.log"
+    },
+    {
+      "name": "parry",
+      "checks": 1579,
+      "status": "LAB_PASS",
+      "evidence": "run-lab11.log"
+    },
+    {
+      "name": "lnk",
+      "checks": 528,
+      "status": "LAB_PASS",
+      "evidence": "run-lab12.log"
+    },
+    {
+      "name": "lnks1",
+      "checks": 174,
+      "status": "LAB_PASS",
+      "evidence": "run-lab13.log"
+    },
+    {
+      "name": "fix01",
+      "checks": 21570,
+      "status": "LAB_PASS",
+      "evidence": "run-lab14.log"
+    },
+    {
+      "name": "lnks2",
+      "checks": 103431,
+      "status": "LAB_PASS",
+      "evidence": "run-lab15.log"
+    },
+    {
+      "name": "lnks2fix",
+      "checks": 103187,
+      "status": "LAB_PASS",
+      "evidence": "run-lab16.log"
+    },
+    {
+      "name": "balance",
+      "checks": 8623,
+      "status": "LAB_PASS",
+      "evidence": "run-lab17.log"
+    },
+    {
+      "name": "hudfix",
+      "checks": 1567941,
+      "status": "LAB_PASS",
+      "evidence": "run-lab18.log"
+    },
+    {
+      "name": "cp0203",
+      "checks": 52432,
+      "status": "LAB_PASS",
+      "evidence": "run-lab19.log"
+    },
+    {
+      "name": "cp04",
+      "checks": 307095,
+      "status": "LAB_PASS",
+      "evidence": "run-lab20.log"
+    },
+    {
+      "name": "cp05",
+      "checks": 1083969,
+      "status": "LAB_PASS",
+      "evidence": "run-lab21.log"
+    },
+    {
+      "name": "cp05_fix02",
+      "checks": 214053,
+      "status": "LAB_PASS",
+      "evidence": "run-lab22.log"
+    }
+  ],
+  "counts": {
+    "msvc_labs": 22,
+    "lab_checks": 4486668,
+    "retained_lab_checks": 4272615,
+    "new_core_checks": 214053,
+    "new_native_checks": 2656,
+    "new_guard_checks": 57184,
+    "mutations": 550,
+    "retained_mutations": 525,
+    "new_mutations": 25,
+    "timeouts": 0,
+    "new_source_negatives": 18,
+    "source_negatives": {
+      "fix03": 12,
+      "cp04": 11,
+      "cp05": 16,
+      "cp05-fix01": 12,
+      "cp05-fix02": 18
+    },
+    "legacy_source_mutations_included_not_additional": 114,
+    "pe_negatives": 20,
+    "actual_instruction_negatives": 6,
+    "game_imports": 63,
+    "hook_targets": 24,
+    "service_contracts": 7,
+    "new_hook_targets": 0,
+    "new_native_writers": 0,
+    "frozen_prior_source_files": 34,
+    "legacy_functions": 107,
+    "legacy_headers": 15,
+    "source_ledger_files": 178,
+    "retained_fix01_native_control_checks": 2656,
+    "retained_fix01_native_checks": 36222,
+    "retained_fix01_geometry_checks": 21660
+  },
+  "production_adapters": [
+    {
+      "name": "cp05-production-adapter",
+      "checks": 142364,
+      "status": "LAB_PASS",
+      "native_game_executed": false
+    },
+    {
+      "name": "cp04-production-adapter",
+      "checks": 12439,
+      "status": "LAB_PASS",
+      "native_game_executed": false
+    },
+    {
+      "name": "cp0203-production-adapter",
+      "checks": 4325,
+      "status": "LAB_PASS",
+      "native_game_executed": false
+    },
+    {
+      "name": "hudfix-production-adapter",
+      "checks": 47702,
+      "status": "LAB_PASS",
+      "native_game_executed": false
+    },
+    {
+      "name": "hudfix02-production-adapter",
+      "checks": 67218,
+      "status": "LAB_PASS",
+      "native_game_executed": false
+    },
+    {
+      "name": "cp06-authentic-pair",
+      "checks": 2875378,
+      "status": "LAB_PASS",
+      "native_game_executed": false
+    }
+  ],
+  "new_terminal_native": {
+    "checks": "2656",
+    "failures": "0",
+    "RESULT": "LAB_PASS",
+    "native_game_executed": "false",
+    "visual": "HUMAN_RUNTIME_PENDING"
+  },
+  "new_terminal_control_rows": [
+    {
+      "source_actor": "812",
+      "source_generation": "27",
+      "source_event": "29",
+      "fixed": "0",
+      "posture": "54>71",
+      "native_hp": "330>290",
+      "terminal_state": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "812",
+      "source_generation": "27",
+      "source_event": "29",
+      "fixed": "1",
+      "posture": "54>71",
+      "native_hp": "330>290",
+      "terminal_state": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "813",
+      "source_generation": "28",
+      "source_event": "37",
+      "fixed": "0",
+      "posture": "0>17",
+      "native_hp": "330>290",
+      "terminal_state": "1",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "813",
+      "source_generation": "28",
+      "source_event": "37",
+      "fixed": "1",
+      "posture": "0>17",
+      "native_hp": "330>290",
+      "terminal_state": "1",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "826",
+      "source_generation": "23",
+      "source_event": "59",
+      "fixed": "0",
+      "posture": "27>44",
+      "native_hp": "330>290",
+      "terminal_state": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "826",
+      "source_generation": "23",
+      "source_event": "59",
+      "fixed": "1",
+      "posture": "27>44",
+      "native_hp": "330>290",
+      "terminal_state": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "1168",
+      "source_generation": "40",
+      "source_event": "181",
+      "fixed": "0",
+      "posture": "0>13",
+      "native_hp": "335>295",
+      "terminal_state": "2",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "1168",
+      "source_generation": "40",
+      "source_event": "181",
+      "fixed": "1",
+      "posture": "0>13",
+      "native_hp": "335>295",
+      "terminal_state": "2",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "2411",
+      "source_generation": "84",
+      "source_event": "282",
+      "fixed": "0",
+      "posture": "44>61",
+      "native_hp": "295>255",
+      "terminal_state": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "source_actor": "2411",
+      "source_generation": "84",
+      "source_event": "282",
+      "fixed": "1",
+      "posture": "44>61",
+      "native_hp": "295>255",
+      "terminal_state": "3",
+      "native_game_executed": "false"
+    }
+  ],
+  "new_guard_native": {
+    "checks": "57184",
+    "failures": "0",
+    "RESULT": "LAB_PASS",
+    "native_game_executed": "false",
+    "visual": "HUMAN_RUNTIME_PENDING"
+  },
+  "guard_AB_controls": [
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "0",
+      "release_R": "0",
+      "starts": "54",
+      "actual_AT_windows": "0",
+      "early_rebounds": "53",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "0",
+      "release_R": "1",
+      "starts": "44",
+      "actual_AT_windows": "7",
+      "early_rebounds": "37",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "1",
+      "release_R": "0",
+      "starts": "42",
+      "actual_AT_windows": "0",
+      "early_rebounds": "41",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "1",
+      "release_R": "1",
+      "starts": "28",
+      "actual_AT_windows": "8",
+      "early_rebounds": "19",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "2",
+      "release_R": "0",
+      "starts": "42",
+      "actual_AT_windows": "0",
+      "early_rebounds": "41",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "2",
+      "release_R": "1",
+      "starts": "28",
+      "actual_AT_windows": "8",
+      "early_rebounds": "19",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "14",
+      "actual_AT_windows": "14",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "3",
+      "release_R": "1",
+      "starts": "14",
+      "actual_AT_windows": "14",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "0",
+      "release_R": "0",
+      "starts": "54",
+      "actual_AT_windows": "0",
+      "early_rebounds": "53",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "0",
+      "release_R": "1",
+      "starts": "44",
+      "actual_AT_windows": "7",
+      "early_rebounds": "37",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "1",
+      "release_R": "0",
+      "starts": "54",
+      "actual_AT_windows": "0",
+      "early_rebounds": "53",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "1",
+      "release_R": "1",
+      "starts": "44",
+      "actual_AT_windows": "7",
+      "early_rebounds": "37",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "2",
+      "release_R": "0",
+      "starts": "54",
+      "actual_AT_windows": "0",
+      "early_rebounds": "53",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "2",
+      "release_R": "1",
+      "starts": "44",
+      "actual_AT_windows": "7",
+      "early_rebounds": "37",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "11",
+      "actual_AT_windows": "11",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "3",
+      "release_R": "1",
+      "starts": "11",
+      "actual_AT_windows": "11",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "0",
+      "release_R": "0",
+      "starts": "54",
+      "actual_AT_windows": "0",
+      "early_rebounds": "53",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "0",
+      "release_R": "1",
+      "starts": "44",
+      "actual_AT_windows": "7",
+      "early_rebounds": "37",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "1",
+      "release_R": "0",
+      "starts": "54",
+      "actual_AT_windows": "0",
+      "early_rebounds": "53",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "1",
+      "release_R": "1",
+      "starts": "44",
+      "actual_AT_windows": "7",
+      "early_rebounds": "37",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "2",
+      "release_R": "0",
+      "starts": "54",
+      "actual_AT_windows": "0",
+      "early_rebounds": "53",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "2",
+      "release_R": "1",
+      "starts": "45",
+      "actual_AT_windows": "8",
+      "early_rebounds": "37",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "12",
+      "actual_AT_windows": "12",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "3",
+      "release_R": "1",
+      "starts": "12",
+      "actual_AT_windows": "12",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "0",
+      "release_R": "0",
+      "starts": "226",
+      "actual_AT_windows": "0",
+      "early_rebounds": "225",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "0",
+      "release_R": "1",
+      "starts": "97",
+      "actual_AT_windows": "5",
+      "early_rebounds": "92",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "1",
+      "release_R": "0",
+      "starts": "226",
+      "actual_AT_windows": "0",
+      "early_rebounds": "225",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "1",
+      "release_R": "1",
+      "starts": "97",
+      "actual_AT_windows": "5",
+      "early_rebounds": "92",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "2",
+      "release_R": "0",
+      "starts": "226",
+      "actual_AT_windows": "0",
+      "early_rebounds": "225",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "2",
+      "release_R": "1",
+      "starts": "97",
+      "actual_AT_windows": "5",
+      "early_rebounds": "92",
+      "engine_clears": "1",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "5",
+      "actual_AT_windows": "5",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "3",
+      "release_R": "1",
+      "starts": "5",
+      "actual_AT_windows": "5",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "2",
+      "controller": "1",
+      "release_R": "0",
+      "starts": "45",
+      "actual_AT_windows": "0",
+      "early_rebounds": "45",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "2",
+      "controller": "2",
+      "release_R": "0",
+      "starts": "45",
+      "actual_AT_windows": "0",
+      "early_rebounds": "45",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "2",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "15",
+      "actual_AT_windows": "15",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "3",
+      "controller": "1",
+      "release_R": "0",
+      "starts": "47",
+      "actual_AT_windows": "0",
+      "early_rebounds": "47",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "3",
+      "controller": "2",
+      "release_R": "0",
+      "starts": "47",
+      "actual_AT_windows": "0",
+      "early_rebounds": "47",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "3",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "15",
+      "actual_AT_windows": "15",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "11",
+      "actual_AT_windows": "11",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "1",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "11",
+      "actual_AT_windows": "11",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "2",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "12",
+      "actual_AT_windows": "12",
+      "early_rebounds": "0",
+      "engine_clears": "13",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "11",
+      "actual_AT_windows": "11",
+      "early_rebounds": "0",
+      "engine_clears": "12",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "2",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "12",
+      "actual_AT_windows": "11",
+      "early_rebounds": "0",
+      "engine_clears": "12",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "3",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "18",
+      "actual_AT_windows": "18",
+      "early_rebounds": "0",
+      "engine_clears": "19",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "0",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "14",
+      "actual_AT_windows": "14",
+      "early_rebounds": "0",
+      "engine_clears": "1",
+      "leased_mask": "3",
+      "native_game_executed": "false"
+    },
+    {
+      "variant": "1",
+      "level": "1",
+      "controller": "3",
+      "release_R": "0",
+      "starts": "54",
+      "actual_AT_windows": "0",
+      "early_rebounds": "53",
+      "engine_clears": "0",
+      "leased_mask": "0",
+      "native_game_executed": "false"
+    }
+  ],
+  "guard_multi_actor": [
+    {
+      "actors": "8",
+      "native_ticks": "500",
+      "own_tokens": "true",
+      "source_native_collision_lists": "true"
+    }
+  ],
+  "guard_control_labels": {
+    "0": "native + Expansion",
+    "1": "CP04 + Expansion",
+    "2": "CP05 FIX01 + Expansion",
+    "3": "CP05 FIX02 + Expansion"
+  },
+  "guard_AB_scope": "700 native-source ticks at controlled225 range; R released at tick300; repeated boundary contacts and8actor/500tick shared collision-list model. Not native game execution.",
+  "mutations": [
+    {
+      "suite": "rework",
+      "count": 393,
+      "detected": 393,
+      "timeouts": 0
+    },
+    {
+      "suite": "fix02",
+      "count": 11,
+      "detected": 11,
+      "timeouts": 0
+    },
+    {
+      "suite": "fix03",
+      "count": 8,
+      "detected": 8,
+      "timeouts": 0
+    },
+    {
+      "suite": "cp0203",
+      "count": 22,
+      "detected": 22,
+      "timeouts": 0
+    },
+    {
+      "suite": "cp04",
+      "count": 34,
+      "detected": 34,
+      "timeouts": 0
+    },
+    {
+      "suite": "cp05",
+      "count": 34,
+      "detected": 34,
+      "timeouts": 0
+    },
+    {
+      "suite": "cp05-fix01",
+      "count": 23,
+      "detected": 23,
+      "timeouts": 0
+    },
+    {
+      "suite": "cp05-fix02",
+      "count": 25,
+      "detected": 25,
+      "timeouts": 0
+    }
+  ],
+  "source_negatives": {
+    "fix03": {
+      "status": "NEGATIVES_PASS",
+      "count": 12,
+      "cases": [
+        {
+          "name": "foreign_geometry_erase",
+          "rejected": true
+        },
+        {
+          "name": "slot_not_invading",
+          "rejected": true
+        },
+        {
+          "name": "slot_geometry_disabled",
+          "rejected": true
+        },
+        {
+          "name": "owner_leak",
+          "rejected": true
+        },
+        {
+          "name": "pikari_not_masked",
+          "rejected": true
+        },
+        {
+          "name": "pikari_foreign_owner",
+          "rejected": true
+        },
+        {
+          "name": "foreign_picture_erased",
+          "rejected": true
+        },
+        {
+          "name": "foreign_outfont_erased",
+          "rejected": true
+        },
+        {
+          "name": "owner_check_lost",
+          "rejected": true
+        },
+        {
+          "name": "tags_ignored",
+          "rejected": true
+        },
+        {
+          "name": "screen_guard_lost",
+          "rejected": true
+        },
+        {
+          "name": "old_generic_mask",
+          "rejected": true
+        }
+      ]
+    },
+    "cp04": {
+      "status": "NEGATIVES_PASS",
+      "count": 11,
+      "cases": [
+        {
+          "case": "native_mode_without_readback",
+          "rejected": true
+        },
+        {
+          "case": "foreign_speed_write",
+          "rejected": true
+        },
+        {
+          "case": "unbuffered_native_restart",
+          "rejected": true
+        },
+        {
+          "case": "real_clip_check_removed",
+          "rejected": true
+        },
+        {
+          "case": "held_B_grants_credits",
+          "rejected": true
+        },
+        {
+          "case": "native_contact_bypass",
+          "rejected": true
+        },
+        {
+          "case": "HUD_root_hidden",
+          "rejected": true
+        },
+        {
+          "case": "Blue_reward_changed",
+          "rejected": true
+        },
+        {
+          "case": "penalty_shortened",
+          "rejected": true
+        },
+        {
+          "case": "native_attack_original_changed",
+          "rejected": true
+        },
+        {
+          "case": "Expansion_oracle_speed_changed",
+          "rejected": true
+        }
+      ]
+    },
+    "cp05": {
+      "status": "NEGATIVES_PASS",
+      "positive_clone": "SOURCE_AUDIT_PASS",
+      "count": 16,
+      "cases": [
+        {
+          "case": "native_HP_write",
+          "rejected": true,
+          "expected_cause": "CP05 forbidden native operation"
+        },
+        {
+          "case": "native_position_write",
+          "rejected": true,
+          "expected_cause": "CP05 game-pointer assignment"
+        },
+        {
+          "case": "native_hitbox_write",
+          "rejected": true,
+          "expected_cause": "CP05 forbidden native operation"
+        },
+        {
+          "case": "new_Link_input_write",
+          "rejected": true,
+          "expected_cause": "CP05 forbidden native operation"
+        },
+        {
+          "case": "direct_mode_write",
+          "rejected": true,
+          "expected_cause": "CP05 forbidden native operation"
+        },
+        {
+          "case": "C5_mode_readback_removed",
+          "rejected": true,
+          "expected_cause": "CP05 exact native writer inventory"
+        },
+        {
+          "case": "Fury_parry_changed",
+          "rejected": true,
+          "expected_cause": "CP05 reviewed/frozen source changed: src/parry_core.hpp"
+        },
+        {
+          "case": "Blue_rate_changed",
+          "rejected": true,
+          "expected_cause": "CP05 reviewed/frozen source changed: src/cp04_combo_core.hpp"
+        },
+        {
+          "case": "HUD_root_changed",
+          "rejected": true,
+          "expected_cause": "CP05 reviewed/frozen source changed: src/mod.cpp"
+        },
+        {
+          "case": "balance_changed",
+          "rejected": true,
+          "expected_cause": "CP05 reviewed/frozen source changed: src/balance_core.hpp"
+        },
+        {
+          "case": "native_Find_oracle_changed",
+          "rejected": true,
+          "expected_cause": "CP05 reviewed/frozen source changed: tests/reference/cp05_native_find.inc"
+        },
+        {
+          "case": "Expansion_Random_odds_changed",
+          "rejected": true,
+          "expected_cause": "CP05 reviewed/frozen source changed: tests/cp21"
+        },
+        {
+          "case": "Expansion_Fury_duration_changed",
+          "rejected": true,
+          "expected_cause": "CP05 reviewed/frozen source changed: tests/cp21"
+        },
+        {
+          "case": "C5_receipt_guard_removed",
+          "rejected": true,
+          "expected_cause": "CP05 reviewed/frozen source changed: src/cp05_adapter.inc"
+        },
+        {
+          "case": "committed_contact_integration_omitted",
+          "rejected": true,
+          "expected_cause": "CP05 exact integration delta changed: mod.cpp"
+        },
+        {
+          "case": "frozen_inventory_emptied",
+          "rejected": true,
+          "expected_cause": "must contain32 exact base files"
+        }
+      ],
+      "timeouts": 0
+    },
+    "cp05-fix01": {
+      "status": "NEGATIVES_PASS",
+      "positive_clone": "SOURCE_AUDIT_PASS",
+      "count": 12,
+      "cases": [
+        {
+          "case": "RNG_changed",
+          "rejected": true,
+          "expected_cause": "CP05 FIX01 frozen RNG changed"
+        },
+        {
+          "case": "old_RNG_oracle_tampered",
+          "rejected": true,
+          "expected_cause": "CP05 FIX01 reviewed reference/source changed"
+        },
+        {
+          "case": "native_damage_oracle_tampered",
+          "rejected": true,
+          "expected_cause": "CP05 FIX01 reviewed reference/source changed"
+        },
+        {
+          "case": "native_geometry_oracle_tampered",
+          "rejected": true,
+          "expected_cause": "CP05 FIX01 reviewed reference/source changed"
+        },
+        {
+          "case": "Link_procedure_write",
+          "rejected": true,
+          "expected_cause": "CP05 forbidden native operation: mProcID"
+        },
+        {
+          "case": "pose_reader_moves_actor",
+          "rejected": true,
+          "expected_cause": "CP05 game-pointer assignment outside"
+        },
+        {
+          "case": "raw_Tg_premature_veto",
+          "rejected": true,
+          "expected_cause": "CP05 FIX01 premature raw Tg veto restored"
+        },
+        {
+          "case": "midcall_PRE_receipt_removed",
+          "rejected": true,
+          "expected_cause": "CP05 FIX01 matching EOC PRE receipt missing"
+        },
+        {
+          "case": "critical_reserve_removed",
+          "rejected": true,
+          "expected_cause": "CP05 FIX01 critical example reserve missing"
+        },
+        {
+          "case": "sampling_cap_changed",
+          "rejected": true,
+          "expected_cause": "CP05 FIX01 native normal sampling cap changed"
+        },
+        {
+          "case": "reference_inventory_emptied",
+          "rejected": true,
+          "expected_cause": "inventory must contain9"
+        },
+        {
+          "case": "native_reference_missing",
+          "rejected": true,
+          "expected_cause": "reviewed reference/source changed"
+        }
+      ],
+      "timeouts": 0
+    },
+    "cp05-fix02": {
+      "status": "NEGATIVES_PASS",
+      "positive_clone": "SOURCE_AUDIT_PASS",
+      "count": 18,
+      "timeouts": 0,
+      "cases": [
+        {
+          "case": "new_native_HP_writer",
+          "rejected": true,
+          "expected_cause": "native pointer assignment forbidden"
+        },
+        {
+          "case": "new_Link_proc_writer",
+          "rejected": true,
+          "expected_cause": "native pointer assignment forbidden"
+        },
+        {
+          "case": "new_forced_attack",
+          "rejected": true,
+          "expected_cause": "no new native writer allowed"
+        },
+        {
+          "case": "new_radius_writer",
+          "rejected": true,
+          "expected_cause": "no new native writer allowed"
+        },
+        {
+          "case": "synthetic_AT_writer",
+          "rejected": true,
+          "expected_cause": "no new native writer allowed"
+        },
+        {
+          "case": "new_rate_writer",
+          "rejected": true,
+          "expected_cause": "no new native writer allowed"
+        },
+        {
+          "case": "unconditional_terminal_safety",
+          "rejected": true,
+          "expected_cause": "exact integration changed"
+        },
+        {
+          "case": "legacy_parry_receipt_corrupted",
+          "rejected": true,
+          "expected_cause": "old production changed"
+        },
+        {
+          "case": "guard_cleanup_binding_removed",
+          "rejected": true,
+          "expected_cause": "exact integration changed"
+        },
+        {
+          "case": "terminal_live_readback_removed",
+          "rejected": true,
+          "expected_cause": "production proof/binding missing"
+        },
+        {
+          "case": "terminal_Link_origin_removed",
+          "rejected": true,
+          "expected_cause": "production proof/binding missing"
+        },
+        {
+          "case": "monitor_adds_engine_mutation",
+          "rejected": true,
+          "expected_cause": "no new native writer allowed"
+        },
+        {
+          "case": "native_register_oracle_tampered",
+          "rejected": true,
+          "expected_cause": "reviewed new source/reference changed"
+        },
+        {
+          "case": "native_clear_oracle_tampered",
+          "rejected": true,
+          "expected_cause": "reviewed new source/reference changed"
+        },
+        {
+          "case": "combo_rate_changed",
+          "rejected": true,
+          "expected_cause": "old production changed"
+        },
+        {
+          "case": "Blue_shieldchain_changed",
+          "rejected": true,
+          "expected_cause": "old production changed"
+        },
+        {
+          "case": "files_inventory_removed",
+          "rejected": true,
+          "expected_cause": "exact six-file reference/module inventory required"
+        },
+        {
+          "case": "baseline_files_inventory_removed",
+          "rejected": true,
+          "expected_cause": "frozen production inventory must contain34"
+        }
+      ]
+    }
+  },
+  "native_references": {
+    "cp05": {
+      "status": "NATIVE_REFERENCE_SOURCE_PASS",
+      "sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "expansion_commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+      "native_find_fixture_exact": true,
+      "normal_witness": "verified E_OC2 profile + actual ATTACK0 PRE + fresh B/C frame1 rawrate1 in earlyPOST + normal115 write in ExpansionPOST0 + identical BCK/end/frame in latePOST",
+      "fury_witness": "existing verified two-sphere ATP3/6 classifier, backed by exact dynamic_policy projection; fresh-start witness also required",
+      "private_cause_api": "NONE; no private mod state read or guessed ABI",
+      "black_rate_reason": "per-swing1.0/1.15 capped at existing normal rate, below frozen POST08>=1.5 Fury/chip veto; no Fury repair",
+      "continuation": "latePOST entry is seen by the NEXT ExpansionPRE as ATTACK0; no synthetic executeAttack calls",
+      "timer": "2->1 native-only lease compare-restored in the same Find4 before ExpansionPOST; changed native modes keep their own timer",
+      "asset_durations": "NOT_OBSERVED; actual getEnd/isStop in production;42/47 lab fixtures synthetic",
+      "native_game_executed": false,
+      "errors": []
+    },
+    "cp05-fix01": {
+      "status": "NATIVE_REFERENCE_SOURCE_PASS",
+      "sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "exact_new_references": 6,
+      "ordering": "OffAt -> native damage_check plus its POST callbacks -> original Attack/Find -> play -> matrices -> cc_set -> execute POST",
+      "raw_Tg": "Native cooldown can ignore it; POST05 can suppress its zeroHP reaction. Observe committed outcome before cancelling.",
+      "geometry": "Actual cc_set centres/radii and native pair/front predicates; lab joint matrices and broadphase I/O remain synthetic",
+      "authentic_BCK_joint_poses_available": false,
+      "native_game_executed": false,
+      "errors": []
+    },
+    "cp05-fix02": {
+      "status": "NATIVE_REFERENCE_SOURCE_PASS",
+      "sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+      "exact_new_references": 2,
+      "native_stop": "state1 OR rate0; terminal proof additionally requires exact B/C endpoint",
+      "native_guard_failure": "last-pass contact at22 read after22: no fresh AtSet registration, residual hit survives and rebounds subsequent starts before14 while Link guards",
+      "inactive_registration_safety": "native ClrAtHitInf precedes native ChkAtSet rejection",
+      "native_game_executed": false,
+      "errors": []
+    }
+  },
+  "pe_negatives": {
+    "baseline": "PE_AUDIT_PASS",
+    "cases": [
+      {
+        "case": "N1 arquitectura i386 en vez de AMD64",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "machine is not AMD64"
+      },
+      {
+        "case": "N2 import nuevo del juego (fopAcM_SearchByID alterado)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "unreviewed game import ?fopAcM_SearchByIE@@YAHIPEAPEAVfopAc_ac_c@@@Z"
+      },
+      {
+        "case": "N3 import mutador del sistema (WriteProcessMemory)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "forbidden symbol WriteProcessMemory in imports/exports: ['WriteProcessMemory']"
+      },
+      {
+        "case": "N4 import CRT nuevo (memset -> memmov)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "PIN_MISMATCH imports: got {'dusklight.exe': ['??0J2DOrthoGraph@@QEAA@MMMMMM@Z', '?_delete@"
+      },
+      {
+        "case": "N5 export alterado (mod_update)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "PIN_MISMATCH exports: got ['mod_ctx', 'mod_initialize', 'mod_meta', 'mod_shutdown', 'mod_u"
+      },
+      {
+        "case": "N6 el registro HOOK_MEM apunta a otro metodo (nombre en modmeta)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "unexpected hook target set"
+      },
+      {
+        "case": "N6b hook reenlazado a otro simbolo importado (thunk)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "hook thunk bound to ('dusklight.exe', '?damage_chexk@daE_OC_c@@QEAAXXZ')"
+      },
+      {
+        "case": "N7 dependencia alterada (KERNEL32.dll)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "PIN_MISMATCH imports: got {'dusklight.exe': ['??0J2DOrthoGraph@@QEAA@MMMMMM@Z', '?_delete@"
+      },
+      {
+        "case": "N8 import del juego no revisado (getStartStageName -> otro)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "unreviewed game import ?dComIfGp_getStartStageNamX@@YAPEBDXZ"
+      },
+      {
+        "case": "N9 archivo truncado",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "expected exactly 15 HOOK_MEM + 9 audited Link HOOK_MEM_EXT (inherited22 + CP04 execute and"
+      },
+      {
+        "case": "N10 cabecera MZ corrupta",
+        "status": "REJECTED_BY_EXCEPTION",
+        "rejected": true,
+        "first_error": "ValueError"
+      },
+      {
+        "case": "N15 native Link PMF size corrupted",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "extended PMF rejected: unapproved extended member target/layout"
+      },
+      {
+        "case": "N16 null Link materializer",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "extended PMF rejected: unmapped rva -0x180000000"
+      },
+      {
+        "case": "N17 arbitrary materializer code",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "extended PMF rejected: unsupported materializer opcode at 0x1800256a0: cc83ec28488d052f4d0"
+      },
+      {
+        "case": "N18 unexpected extended hook flags",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "extended PMF rejected: unapproved extended member target/layout"
+      },
+      {
+        "case": "N19 extended target name changed",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "unexpected hook target set"
+      },
+      {
+        "case": "N14 transicion nativa de Link no revisada (procGuardBreakInit -> otro metodo)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "unreviewed game import ?procGuardBreakInix@daAlink_c@@QEAAHXZ"
+      },
+      {
+        "case": "N11 hook virtual renombrado (dMeterButton_c::draw -> otro metodo)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "unexpected hook target set"
+      },
+      {
+        "case": "N12 vtable del hook virtual alterada",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "hook names ['??_7dMeterButtoN_c@@6B@', 'dMeterButton_c::draw']"
+      },
+      {
+        "case": "N13 thunk vcall del hook virtual alterado (otro slot / salto directo)",
+        "status": "PE_AUDIT_FAIL",
+        "rejected": true,
+        "first_error": "virtual hook dMeterButton_c::draw: PMF is not a slot-0 vcall thunk (got None)"
+      }
+    ],
+    "passed_unexpectedly": 0
+  },
+  "native_writer_scopes": {
+    "legacy": {
+      "source_base": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+      "approved_cp02_functions": 2,
+      "approved_cp02_cp03_headers": 3,
+      "functions_pinned": 107,
+      "headers_pinned": 15,
+      "native_code_executed": false,
+      "errors": [],
+      "scoped_native_stores": {
+        "on_shield_post_fx": {
+          "register_btr_bit27": 1,
+          "guard_flag_store_plus678": 1
+        },
+        "on_collision_pre_fx": {
+          "register_btr_bit27": 1,
+          "guard_flag_store_plus678": 1
+        },
+        "on_stick_post_fx": {
+          "and_buttonB_clear_plus40e9": 1
+        }
+      },
+      "actual_instruction_negatives_rejected": 2,
+      "status": "STORE_AUDIT_PASS"
+    },
+    "cp04": {
+      "status": "CP04_PE_SCOPE_PASS",
+      "scope_bytes": {
+        "cp04_native_rate": 256,
+        "cp04_native_gap": 32,
+        "cp04_native_mode": 80,
+        "cp04_native_shield_restart": 128
+      },
+      "scope_sha256": {
+        "cp04_native_rate": "d4f2309efc28392c7785e22db07e502fb4d8a4ebae25e69d3b7deb6666bf7cc3",
+        "cp04_native_gap": "09f7b7109e6a6e8b0d94ff37d658b9e5ac494cbd60c33d4462433b2c38ac3934",
+        "cp04_native_mode": "34ae31f9383e8ef02be9fcc1976f1be076698b8799b527a3d99ad38efec2bfbc",
+        "cp04_native_shield_restart": "9fe41616935f96e59a32b8136e8a27fc746cc2a09bfefc2b0c813ca9ca067e4b"
+      },
+      "scope_hex": {
+        "cp04_native_rate": "48895c24084889742410574883ec20488bfa488bd94883b9d8060000000f84c800000083b9c8080000040f85bb0000008b81d0080000ffc883f8010f87aa000000be050000008bd6e84fc0020084c07514ba06000000488bcbe83ec00200f6d81bf683e6063bb7b8000000757e488bb3d8060000f30f104e2cf30f5c0d63b003000f540d68b20300f30f1005b8af03000f2fc17656f30f104628e8717c010084c0744880bf9000000000753f8b87c0000000894628488b83d8060000f30f1040280f2e87c00000007a21751fb00188879000000048ff055d5b1100488b5c2430488b7424384883c4205fc332c0488b5c2430488b7424384883c4205fc3cccccc",
+        "cp04_native_gap": "83b9c808000003750f83fa0c770a668991e2080000b001c332c0c3cccccccccc",
+        "cp04_native_mode": "48895c2408574883ec208bda488bf94533c0e8c9c00200399fc8080000751683bfd008000000750db001488b5c24304883c4205fc332c0488b5c24304883c4205fc3cccccccccccccccccccccccccccc",
+        "cp04_native_shield_restart": "48895c24084889742410574883ec20488bf9488b1d575c1100488b35e85b1100e831c00200488d4301483905405c1100753a488d4601483905cb5b1100752d6683bf444100001e7523ba2e000000488bcfe8c4bf020085c07412b001488b5c2430488b7424384883c4205fc332c0488b5c2430488b7424384883c4205fc3cccc"
+      },
+      "stores": {
+        "fresh_clip_rate_store": 1,
+        "fresh_clip_rate_encodings": [
+          "MOV32_FLOAT_BITS"
+        ],
+        "own_gap_timer_store": 1
+      },
+      "native_transition_imports_bound": {
+        "cp04_native_mode": true,
+        "cp04_native_shield_restart": true
+      },
+      "actual_instruction_negatives_rejected": 2,
+      "errors": [],
+      "native_runtime": false
+    },
+    "cp05": {
+      "status": "CP05_PE_SCOPE_PASS",
+      "scope_bytes": {
+        "cp05_native_rate": 384,
+        "cp05_native_timer": 64,
+        "cp05_native_mode": 16
+      },
+      "scope_sha256": {
+        "cp05_native_rate": "383f004671fc644cb3e3ef00176f3e9b68abfc675967ac29eee58e7bfbf9f0e9",
+        "cp05_native_timer": "032597d3a5ed346159358c5971d0b5b981619727c96e4c544c24db5b6de283e9",
+        "cp05_native_mode": "6979a3412f1bffe57320cd23d592579ec4616b2419327481a4379e42d36eb747"
+      },
+      "scope_hex": {
+        "cp05_native_rate": "48895c24084889742410574883ec20488bda488bf980bad9000000000f8447010000e80912000084c00f843a010000807b23020f853001000080bbd4000000000f85230100008b93ac0000000fb64b22e84b2b0200f30f108bcc0000000f2ec80f8a030100000f85fd0000004883bfd8060000000f84ef00000083bfc8080000040f85e20000008b87d0080000ffc883f8010f87d1000000be050000008bd6488bcfe87597020084c07514ba06000000488bcfe864970200f6d81bf683e6063bb3bc0000000f859e000000488b8fd8060000f30f10492cf30f5c0d858703000f540d8a890300f30f1005da8603000f2fc17676f30f1041280f2e05698703007a6875668b83cc000000894128488b87d8060000f30f1040280f2e83cc0000007a337531b2018893d40000000fb643224869c8480b0000488d0513a0110048ff04010fb6c2488b5c2430488b7424384883c4205fc332d20fb6c2488b5c2430488b7424384883c4205fc332c0488b5c2430488b7424384883c4205fc3cccccccccc",
+        "cp05_native_timer": "81faff7f000077274181f8ff7f0000771e0fbf81e20800003bc27513410fbfc0413bc066448981e20800000f94c0c332c0c3cccccccccccccccccccccccccccc",
+        "cp05_native_mode": "e93bd7ffffcccccccccccccccccccccc"
+      },
+      "stores": {
+        "fresh_rate_32bit": 1,
+        "native_timer_16bit": 1,
+        "rate_encodings": [
+          "MOV32_FLOAT_BITS"
+        ]
+      },
+      "mode_call_bound_to_frozen_writer": true,
+      "frozen_writer_bound_to_typed_import": true,
+      "actual_instruction_negatives_rejected": 2,
+      "errors": [],
+      "native_runtime": false
+    }
+  },
+  "legacy_barrier": {
+    "source_base": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+    "approved_cp02_functions": 2,
+    "approved_cp02_cp03_headers": 3,
+    "functions_pinned": 107,
+    "headers_pinned": 15,
+    "native_code_executed": false,
+    "errors": [],
+    "status": "STORE_AUDIT_PASS"
+  },
+  "phases": [
+    {
+      "label": "compiler",
+      "seconds": 2.703,
+      "exit": 0
+    },
+    {
+      "label": "cmake-version",
+      "seconds": 0.797,
+      "exit": 0
+    },
+    {
+      "label": "ninja-version",
+      "seconds": 0.125,
+      "exit": 0
+    },
+    {
+      "label": "tool-tests",
+      "seconds": 0.531,
+      "exit": 0
+    },
+    {
+      "label": "pmf-static-tests",
+      "seconds": 0.063,
+      "exit": 0
+    },
+    {
+      "label": "hudfix-production-adapter",
+      "seconds": 3.953,
+      "exit": 0
+    },
+    {
+      "label": "fix03-parity",
+      "seconds": 0.125,
+      "exit": 0
+    },
+    {
+      "label": "fix03-source-negatives",
+      "seconds": 17.844,
+      "exit": 0
+    },
+    {
+      "label": "cp04-pe-name-policy",
+      "seconds": 0.062,
+      "exit": 0
+    },
+    {
+      "label": "cp04-native-reference",
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "cp05-pe-policy",
+      "seconds": 0.063,
+      "exit": 0
+    },
+    {
+      "label": "cp05-native-reference",
+      "seconds": 0.046,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix01-native-reference",
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix02-native-reference",
+      "seconds": 0.047,
+      "exit": 0
+    },
+    {
+      "label": "source-barrier",
+      "seconds": 0.5,
+      "exit": 0
+    },
+    {
+      "label": "source-audit",
+      "seconds": 1.172,
+      "exit": 0
+    },
+    {
+      "label": "configure",
+      "seconds": 7.078,
+      "exit": 0
+    },
+    {
+      "label": "build-mod",
+      "seconds": 14.156,
+      "exit": 0
+    },
+    {
+      "label": "dumpbin-headers",
+      "seconds": 0.063,
+      "exit": 0
+    },
+    {
+      "label": "dumpbin-imports",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "dumpbin-exports",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "store-audit",
+      "seconds": 0.485,
+      "exit": 0
+    },
+    {
+      "label": "cp04-native-writer-scopes",
+      "seconds": 0.093,
+      "exit": 0
+    },
+    {
+      "label": "cp05-native-writer-scopes",
+      "seconds": 0.094,
+      "exit": 0
+    },
+    {
+      "label": "pe-negatives",
+      "seconds": 1.25,
+      "exit": 0
+    },
+    {
+      "label": "hudfix02-production-adapter",
+      "seconds": 2.375,
+      "exit": 0
+    },
+    {
+      "label": "cp04-production-adapter",
+      "seconds": 1.235,
+      "exit": 0
+    },
+    {
+      "label": "cp04-mutations",
+      "seconds": 24.812,
+      "exit": 0
+    },
+    {
+      "label": "cp04-source-negatives",
+      "seconds": 23.094,
+      "exit": 0
+    },
+    {
+      "label": "cp05-production-adapter",
+      "seconds": 2.437,
+      "exit": 0
+    },
+    {
+      "label": "cp05-mutations",
+      "seconds": 38.36,
+      "exit": 0
+    },
+    {
+      "label": "cp05-source-negatives",
+      "seconds": 25.406,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix01-native",
+      "seconds": 3.219,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix01-geometry",
+      "seconds": 1.265,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix01-mutations",
+      "seconds": 51.578,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix01-source-negatives",
+      "seconds": 19.141,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix02-native",
+      "seconds": 1.625,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix02-guard",
+      "seconds": 1.625,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix02-mutations",
+      "seconds": 29.391,
+      "exit": 0
+    },
+    {
+      "label": "cp05-fix02-source-negatives",
+      "seconds": 28.484,
+      "exit": 0
+    },
+    {
+      "label": "cp0203-production-adapter",
+      "seconds": 1.0,
+      "exit": 0
+    },
+    {
+      "label": "cp0203-independent-reference",
+      "seconds": 1.063,
+      "exit": 0
+    },
+    {
+      "label": "cp0203-mutations",
+      "seconds": 16.703,
+      "exit": 0
+    },
+    {
+      "label": "cp06-authentic-pair",
+      "seconds": 6.765,
+      "exit": 0
+    },
+    {
+      "label": "build-lab1",
+      "seconds": 3.188,
+      "exit": 0
+    },
+    {
+      "label": "run-lab1",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "build-lab2",
+      "seconds": 2.641,
+      "exit": 0
+    },
+    {
+      "label": "run-lab2",
+      "seconds": 0.093,
+      "exit": 0
+    },
+    {
+      "label": "build-lab3",
+      "seconds": 1.204,
+      "exit": 0
+    },
+    {
+      "label": "run-lab3",
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "build-lab4",
+      "seconds": 5.328,
+      "exit": 0
+    },
+    {
+      "label": "run-lab4",
+      "seconds": 0.157,
+      "exit": 0
+    },
+    {
+      "label": "build-lab5",
+      "seconds": 4.312,
+      "exit": 0
+    },
+    {
+      "label": "run-lab5",
+      "seconds": 0.203,
+      "exit": 0
+    },
+    {
+      "label": "build-lab6",
+      "seconds": 4.938,
+      "exit": 0
+    },
+    {
+      "label": "run-lab6",
+      "seconds": 0.234,
+      "exit": 0
+    },
+    {
+      "label": "build-lab7",
+      "seconds": 4.328,
+      "exit": 0
+    },
+    {
+      "label": "run-lab7",
+      "seconds": 0.235,
+      "exit": 0
+    },
+    {
+      "label": "build-lab8",
+      "seconds": 3.406,
+      "exit": 0
+    },
+    {
+      "label": "run-lab8",
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "build-lab9",
+      "seconds": 3.641,
+      "exit": 0
+    },
+    {
+      "label": "run-lab9",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "build-lab10",
+      "seconds": 6.438,
+      "exit": 0
+    },
+    {
+      "label": "run-lab10",
+      "seconds": 0.078,
+      "exit": 0
+    },
+    {
+      "label": "build-lab11",
+      "seconds": 8.891,
+      "exit": 0
+    },
+    {
+      "label": "run-lab11",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "build-lab12",
+      "seconds": 4.906,
+      "exit": 0
+    },
+    {
+      "label": "run-lab12",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "build-lab13",
+      "seconds": 4.172,
+      "exit": 0
+    },
+    {
+      "label": "run-lab13",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "build-lab14",
+      "seconds": 5.094,
+      "exit": 0
+    },
+    {
+      "label": "run-lab14",
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "build-lab15",
+      "seconds": 4.75,
+      "exit": 0
+    },
+    {
+      "label": "run-lab15",
+      "seconds": 0.656,
+      "exit": 0
+    },
+    {
+      "label": "build-lab16",
+      "seconds": 4.375,
+      "exit": 0
+    },
+    {
+      "label": "run-lab16",
+      "seconds": 0.688,
+      "exit": 0
+    },
+    {
+      "label": "build-lab17",
+      "seconds": 8.094,
+      "exit": 0
+    },
+    {
+      "label": "run-lab17",
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "build-lab18",
+      "seconds": 1.422,
+      "exit": 0
+    },
+    {
+      "label": "run-lab18",
+      "seconds": 0.031,
+      "exit": 0
+    },
+    {
+      "label": "build-lab19",
+      "seconds": 2.25,
+      "exit": 0
+    },
+    {
+      "label": "run-lab19",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "build-lab20",
+      "seconds": 1.188,
+      "exit": 0
+    },
+    {
+      "label": "run-lab20",
+      "seconds": 0.015,
+      "exit": 0
+    },
+    {
+      "label": "build-lab21",
+      "seconds": 0.672,
+      "exit": 0
+    },
+    {
+      "label": "run-lab21",
+      "seconds": 0.0,
+      "exit": 0
+    },
+    {
+      "label": "build-lab22",
+      "seconds": 1.047,
+      "exit": 0
+    },
+    {
+      "label": "run-lab22",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "fix03-mutations",
+      "seconds": 21.484,
+      "exit": 0
+    },
+    {
+      "label": "fix02-mutations",
+      "seconds": 44.141,
+      "exit": 0
+    },
+    {
+      "label": "rework-mutations",
+      "seconds": 647.468,
+      "exit": 0
+    },
+    {
+      "label": "hud-reference-renders",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "lnk01-reference-renders",
+      "seconds": 0.187,
+      "exit": 0
+    },
+    {
+      "label": "emit-sample",
+      "seconds": 0.016,
+      "exit": 0
+    },
+    {
+      "label": "extract-sample",
+      "seconds": 0.078,
+      "exit": 0
+    },
+    {
+      "label": "build-package",
+      "seconds": 0.281,
+      "exit": 0
+    }
+  ],
+  "evidence_index": {
+    "build-lab1.log": {
+      "bytes": 128,
+      "sha256": "1e030adca8823ebb1573af59993c85587e25c9a208fb1a123b17e5face50e57e"
+    },
+    "build-lab10.log": {
+      "bytes": 366,
+      "sha256": "cb6bb8a9a426f1e6bb97881687b7eb4686772ad70e35361b3457446921ee7fc1"
+    },
+    "build-lab11.log": {
+      "bytes": 134,
+      "sha256": "47003bcd871fafb853b37b51340504e2a339f6c2a38f8112ff1693e33a0390c0"
+    },
+    "build-lab12.log": {
+      "bytes": 1222,
+      "sha256": "ee29cea681c358f7404b6bdbaafe6a4e942139c9ac7e433f21c558712fe85f88"
+    },
+    "build-lab13.log": {
+      "bytes": 134,
+      "sha256": "61441c04e7b8af78c871fef061bdf3154d61af72656c4d4b6df5414bef583e9d"
+    },
+    "build-lab14.log": {
+      "bytes": 134,
+      "sha256": "623cfca0e561d9d7a6768dc33a82dbafa95fef5b65f9e0f4df4d29794e5b711a"
+    },
+    "build-lab15.log": {
+      "bytes": 619,
+      "sha256": "aed45fa6e309aa8befb8cf45962d81bf5fadf7ce953a8b8b100fa27c80ca8475"
+    },
+    "build-lab16.log": {
+      "bytes": 634,
+      "sha256": "aa645161b7e57f3e79e17c224940f1390f45e0576ddbc99a762a542fceb3e2ba"
+    },
+    "build-lab17.log": {
+      "bytes": 426,
+      "sha256": "772e683ebd20712650fb505ef43939d79c7a8cdc66450afa1895f0507f68d67e"
+    },
+    "build-lab18.log": {
+      "bytes": 235,
+      "sha256": "4d7426b4da15bdb195865c3783ef4ab10f70e56ad44dccb1ddc8eda444ca56aa"
+    },
+    "build-lab19.log": {
+      "bytes": 275,
+      "sha256": "9875c10246a4a3590badaebad08ce364491db05fa7f0de581f604345038d2cfd"
+    },
+    "build-lab2.log": {
+      "bytes": 146,
+      "sha256": "613abc02f38918f93fb4f676e93c94e67a653c323b8d24b47ff249628d500e8a"
+    },
+    "build-lab20.log": {
+      "bytes": 236,
+      "sha256": "eb5c396187a9c5e40d85c76831df386a481dec7fd5be2abf2d9a8263f0c9791b"
+    },
+    "build-lab21.log": {
+      "bytes": 131,
+      "sha256": "47310780d0a396ab6d963f68028b52263541b87c1be3058574eea05cfaee0d04"
+    },
+    "build-lab22.log": {
+      "bytes": 601,
+      "sha256": "b7308b388acf0788093fa88fee3908e1ba91657e09d595c6bde265a637e6b1f8"
+    },
+    "build-lab3.log": {
+      "bytes": 143,
+      "sha256": "976a28e4cc54e777d07de422fa84e96b61615646d032370f977865cd815f0ba4"
+    },
+    "build-lab4.log": {
+      "bytes": 382,
+      "sha256": "a409cfc0c8b12a840ebda010d8178b3b193ac47e39796ec64990369aa707cf25"
+    },
+    "build-lab5.log": {
+      "bytes": 143,
+      "sha256": "808069f04b80df2bf10837172595dff9a52c86c4ca19b273b5af99b6d2e412aa"
+    },
+    "build-lab6.log": {
+      "bytes": 137,
+      "sha256": "71ac60f762869a6122722ca7aa7a56da27a268cdfced0dd68cc51ebf6cbc1334"
+    },
+    "build-lab7.log": {
+      "bytes": 364,
+      "sha256": "570d007f0b0212371ba3b2478dbadcd0aa3277422adf5b66ed0eafc5a285330b"
+    },
+    "build-lab8.log": {
+      "bytes": 140,
+      "sha256": "b340dc864d41214f34be7ad8254f8388dd049874a7c171d8679b2515f6c63281"
+    },
+    "build-lab9.log": {
+      "bytes": 134,
+      "sha256": "551792e0b7bda98685443a89a4cde7633b0779979931649da9f48a5c658693dd"
+    },
+    "build-mod.log": {
+      "bytes": 1604,
+      "sha256": "51a6338a6c8e0c1f83ca1600d77997429d362ed620d124a11fcc7ff8c5d89296"
+    },
+    "build-package.log": {
+      "bytes": 158,
+      "sha256": "a2714da4175593ec873e63e47e94377a0d0e5adee07cd03c58f0cbfcb3e79392"
+    },
+    "cmake-version.log": {
+      "bytes": 93,
+      "sha256": "9fc2e7ad432688db382905e3a3b993a1486cbb04f7ae9b132038d155af10597d"
+    },
+    "compile-commands.json": {
+      "bytes": 4886,
+      "sha256": "b3c335e0b1311c4232a3370baf32bbf6bd07791ed27f8da931b5008744052276"
+    },
+    "compiler.log": {
+      "bytes": 1252,
+      "sha256": "a685d89dbfe76b3bfe177346787bac63e3d8138fb9398553445ab5178e350c7b"
+    },
+    "configure.log": {
+      "bytes": 965,
+      "sha256": "e61bd52c93486160ad5010ecbe47bda241fbebf6b7d43d896adb436f958e2567"
+    },
+    "cp0203-independent-reference.log": {
+      "bytes": 612,
+      "sha256": "46bd72e297a9490d6c60a934f82cd4f6b64e9eda2b51831e7d6b5e43df7b9aa7"
+    },
+    "cp0203-mutations.log": {
+      "bytes": 2467,
+      "sha256": "d5dd3d3b7d9c18d31f73f72b9961ad47ce8e34738cc25d9c322e8c5157b019bc"
+    },
+    "cp0203-production-adapter.log": {
+      "bytes": 113,
+      "sha256": "02d4a85165fbd01540dfd5178677f45f4287e990dea3d3028e03217a4111f8bb"
+    },
+    "cp04-mutations.log": {
+      "bytes": 3954,
+      "sha256": "385c6de81e7c95034d7ef36b53bd18a23844a19e20233539d51c9d870a5dbbb5"
+    },
+    "cp04-native-reference.log": {
+      "bytes": 1823,
+      "sha256": "1a52fb1376092a482bd3e51c7aa908183ee6925d30fe1db9ff950240cf519a3d"
+    },
+    "cp04-native-writer-scopes.log": {
+      "bytes": 2102,
+      "sha256": "f868a1be8b8928227cb64edda3b1d7d14d4bfcb16f85e52a8be81e11e8779baa"
+    },
+    "cp04-pe-name-policy.log": {
+      "bytes": 219,
+      "sha256": "72bfef3be6499c1e14b3ee2036ead4a57de7d9f9d29080d51ba430789843268c"
+    },
+    "cp04-production-adapter.log": {
+      "bytes": 225,
+      "sha256": "316747dc5b341f6c8c434fa01dc6db8fb415641ebb17530fcc49c61e9065fefb"
+    },
+    "cp04-source-negatives.log": {
+      "bytes": 957,
+      "sha256": "840915c9bdbdbb96cbc5c9789fce5bb7b46c221f13e9611d9c38c3ee37c47676"
+    },
+    "cp05-fix01-geometry.log": {
+      "bytes": 483,
+      "sha256": "c5eba7639d2e97154ba8305ddf857ea6996f4466133b3b36176786fde6aed46f"
+    },
+    "cp05-fix01-mutations.log": {
+      "bytes": 4127,
+      "sha256": "19c966689ad63924e1de555ad7aa9111f23e0ae9e8df5970e1a91d7912f340bf"
+    },
+    "cp05-fix01-native-reference.log": {
+      "bytes": 650,
+      "sha256": "a3b0edb39c73d96e3e3281353b82f0aa9896cde29bdb544bc9645e8ea2ab6581"
+    },
+    "cp05-fix01-native.log": {
+      "bytes": 6885,
+      "sha256": "bae16637910f4ad9f647fa5ea81f604b93d6d06f759835a0e082d63825577647"
+    },
+    "cp05-fix01-source-negatives.log": {
+      "bytes": 1920,
+      "sha256": "9e531e01bfade9d55c5be5c3a3e1fb79a6724420a40a6f2828982963f9302564"
+    },
+    "cp05-fix02-guard.log": {
+      "bytes": 7762,
+      "sha256": "5f6388a19b5fe8a616f87880130758f08c26736aa1776d1e3e834b978f6230ff"
+    },
+    "cp05-fix02-mutations.log": {
+      "bytes": 4467,
+      "sha256": "bc9bd4c8e3ea672ceff133088ed74f32420cfc5b9bcf0f1a48afb05cccc29124"
+    },
+    "cp05-fix02-native-reference.log": {
+      "bytes": 554,
+      "sha256": "fc91515c428304bfab9bf98b0e1914aadb0a6839199020d410f04cd794ef31af"
+    },
+    "cp05-fix02-native.log": {
+      "bytes": 1750,
+      "sha256": "1f396be3edb08e1798ac5de33b075b87362b6b5653fa8f87480f0529199a80bf"
+    },
+    "cp05-fix02-source-negatives.log": {
+      "bytes": 2691,
+      "sha256": "9483dd3d705c1b5a2d861406c0f21f6fc728c591e8f7c89a965a15733ec13631"
+    },
+    "cp05-mutations.log": {
+      "bytes": 4939,
+      "sha256": "8d26a7eac4d7a19c325a5ef522780edeb829d52f970b5da5a7e82e92e61799e8"
+    },
+    "cp05-native-reference.log": {
+      "bytes": 1159,
+      "sha256": "c92988adb2d3d2e769999d40c53cf95762406251bc482a5be4a92c291a1e85a6"
+    },
+    "cp05-native-writer-scopes.log": {
+      "bytes": 1821,
+      "sha256": "712cc797b8f2b7ca1829250b3a34a747233147c588fee3be63be534a1511b0f6"
+    },
+    "cp05-pe-policy.log": {
+      "bytes": 74,
+      "sha256": "fc7b8cf9ac74847db5cdc7e09f9f0947ce87158d42d1cba7038cefe9e6e145be"
+    },
+    "cp05-production-adapter.log": {
+      "bytes": 1883,
+      "sha256": "2df0025f5e61491ebbab6a9be58bbf5decb6a44285edf6a8465392cd5b792e8c"
+    },
+    "cp05-source-negatives.log": {
+      "bytes": 2582,
+      "sha256": "ec50d93dd46bbf7caa2d4f0b7cbc004b86659d8d0a699f7f600d4a3da22fc91a"
+    },
+    "cp06-authentic-pair.log": {
+      "bytes": 882,
+      "sha256": "99abb859321c5b21e6a7dcc7b308a882fad5332c6ab9fdfd93b418f3de375f09"
+    },
+    "DOWNLOAD_MANIFEST.json": {
+      "bytes": 15785,
+      "sha256": "f0efe3640172033df8e37ad8311a68b14757f0d34c0ae2652b748ac3924b9250"
+    },
+    "dumpbin-exports.log": {
+      "bytes": 833,
+      "sha256": "3e73486074ff78fc1b73bc6d11af7c2458f41eebcb460b3af0728fbe81508cdb"
+    },
+    "dumpbin-headers.log": {
+      "bytes": 6065,
+      "sha256": "8ea5acc82a0633f7b67bab13a453bea313e4c5fb66317a8d5b65c01c0a9d3597"
+    },
+    "dumpbin-imports.log": {
+      "bytes": 7580,
+      "sha256": "672c92da74e57d4352054de86509887839d92f3588806178ff9990f24fa1eb01"
+    },
+    "emit-sample.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "extract-sample.log": {
+      "bytes": 132,
+      "sha256": "2658d39fca99f54d0dcf3cbcbfb743c640cb5d384bc05529dc4a3abfa389517a"
+    },
+    "fix02-mutations.log": {
+      "bytes": 1582,
+      "sha256": "0b55cdc565075c148ebc119a482ad14b4919695b105c383f5d1e47539d091c21"
+    },
+    "fix03-mutations.log": {
+      "bytes": 974,
+      "sha256": "0331a398acb7a903b59715c7485ee47933322159e97e57d92c352946884d315a"
+    },
+    "fix03-parity.log": {
+      "bytes": 149,
+      "sha256": "f5a4cae4e7547b197057526cfc12e3b4450a45a1e2e40d33059a804c68926a21"
+    },
+    "fix03-source-negatives.log": {
+      "bytes": 980,
+      "sha256": "05399673d1f63931d65166f85b2fb56b01090d4c49ea2d1f8ed35a5af235617f"
+    },
+    "hud-reference-renders.log": {
+      "bytes": 1350,
+      "sha256": "ec7d1360c534737369b1bc01133c79021cefdc43dc107584269a562d4727aac2"
+    },
+    "hudfix-production-adapter.log": {
+      "bytes": 114,
+      "sha256": "a5d387d02bb8426d31c67c9d85da97a5aaa038511f0209b66898055f29206cd3"
+    },
+    "hudfix02-production-adapter.log": {
+      "bytes": 842,
+      "sha256": "80f18cf35db1c7eaa0649681c9a8b22554ad7714832802df1a944122eac30133"
+    },
+    "lnk01-reference-renders.log": {
+      "bytes": 805,
+      "sha256": "02005d41d879c7e430cd21a767bb9eb02938ca3fbccdfd3ef9cc310c11f1855b"
+    },
+    "LNK01_REFERENCE_RENDER_1080p.png": {
+      "bytes": 5254500,
+      "sha256": "51cb479647803c254dfc5b2f03210c503e8c835598b05804dbd7a8ea01941a4c"
+    },
+    "LNK01_REFERENCE_RENDER_720p.png": {
+      "bytes": 2327889,
+      "sha256": "f491fef6c465b300059b3cbd4ffc8231b7d1eba38351ab000c38dd6987b1c20b"
+    },
+    "LNK01_REFERENCE_RENDER_ultrawide_2560x1080.png": {
+      "bytes": 7005670,
+      "sha256": "ee2d6c59b7da0834574a3f879061e93b869818f4e4a191d8e3dcfc8b21fc04d7"
+    },
+    "module-map.log": {
+      "bytes": 325082,
+      "sha256": "2d5c64d19ef3f1d710e5c005b4f1e8a77b5dae7aa9e1f857540df431d0e0ea50"
+    },
+    "ninja-version.log": {
+      "bytes": 8,
+      "sha256": "f7204ca4d4bbe623e6045a5088ac906c5e1966b4fd2a11af9d156bad3327526f"
+    },
+    "pe-audit.json": {
+      "bytes": 18871,
+      "sha256": "53244fa476ce5a6c711120a20375621d82b352313cd6b653d0ab9b9c08c48dc1"
+    },
+    "pe-negatives.log": {
+      "bytes": 4208,
+      "sha256": "aaa54895c6062000564cc7067e203695471bc100947e4a753f99e0210bbc5990"
+    },
+    "pmf-static-tests.log": {
+      "bytes": 101,
+      "sha256": "73f6313369c07bab3e10f6da4d8d1311c3ee4df52411c4ac3407efc0858ebe0a"
+    },
+    "POST07_REFERENCE_RENDER_1080p.png": {
+      "bytes": 101689,
+      "sha256": "8943065f7cf0fa6e3d05dcd98105ae2cf09f5ada474c5e6fc8c5cb7466841001"
+    },
+    "POST07_REFERENCE_RENDER_2160p.png": {
+      "bytes": 403198,
+      "sha256": "72d0950daed3317c36c3f38eec4362581a1b2506cb967690f91c64fea437e2a1"
+    },
+    "POST07_REFERENCE_RENDER_720p.png": {
+      "bytes": 45540,
+      "sha256": "b41cb3676c0ab7c7990e719729f67a18dd5b7b13d9ecf19a23d5ebf69ca8ce37"
+    },
+    "result.json": {
+      "bytes": 33185,
+      "sha256": "4c51b9910a39175248ce8e6427e0b0f26c425ebbfba48b9732be64313ca0c824"
+    },
+    "rework-mutations.log": {
+      "bytes": 51058,
+      "sha256": "d5a41a0a0e228dc214fb5bfa25af5b1b75270ec22d4bd6deed06da04020bf8cb"
+    },
+    "run-lab1.log": {
+      "bytes": 57,
+      "sha256": "2ea1085999db51767e6023d2e88abb8476bfcba26f1afb0554b594741b439669"
+    },
+    "run-lab10.log": {
+      "bytes": 888,
+      "sha256": "a64afe42097acbfcd8926c376bc1637aea444e7484b2b39220d47ecac4da2f6d"
+    },
+    "run-lab11.log": {
+      "bytes": 1097,
+      "sha256": "71368d8164ceb45545b456126d96b3c4be3fc01af373541dd948cc19ea094b19"
+    },
+    "run-lab12.log": {
+      "bytes": 599,
+      "sha256": "cb6c5d419e51ebd91bc244c010784b4266402fce5b55f2a5e4973eccc808dd29"
+    },
+    "run-lab13.log": {
+      "bytes": 371,
+      "sha256": "0daf3b037b7dd54cf9ab44461945588ff9fa43b9c1457e33a8885b56a8a02766"
+    },
+    "run-lab14.log": {
+      "bytes": 73,
+      "sha256": "3b65fbedde71d8d57aa8d7870553042f14d7ce76ff9309e723dd925f4251e6a0"
+    },
+    "run-lab15.log": {
+      "bytes": 388,
+      "sha256": "5e63cdd9fde340e031a9ec8abed20f8d67efa5cf55977edba638a37c558794f2"
+    },
+    "run-lab16.log": {
+      "bytes": 383,
+      "sha256": "9e8a862cb7c8f1bc01aecdbf26911033bb965eb443784933fe094263b0d54104"
+    },
+    "run-lab17.log": {
+      "bytes": 70,
+      "sha256": "be0aa43f37b7eeaffee8bc32635e43a9d220985d72938bc5df22a56db6367ee6"
+    },
+    "run-lab18.log": {
+      "bytes": 125,
+      "sha256": "b2dece573c30c574e27c80489b4b3e28cce464449a78d3fd4af87a937110abc9"
+    },
+    "run-lab19.log": {
+      "bytes": 69,
+      "sha256": "576cc4d8a3a611e3b510429f72cd4dcfd3da0c211b6add081e6729cb5d29f5b7"
+    },
+    "run-lab2.log": {
+      "bytes": 64,
+      "sha256": "2131fa859c4f71bbb904bb72b1667722af400d7bec0423b6b39c812190063eb1"
+    },
+    "run-lab20.log": {
+      "bytes": 116,
+      "sha256": "fab84cea6d934afe0d7bdb585b3643956548797df483d4350078c6b16bd119d4"
+    },
+    "run-lab21.log": {
+      "bytes": 98,
+      "sha256": "f4b075856079e3197df640aa81391b00de4b1f3a057bb5a9e0e84714a7bf741a"
+    },
+    "run-lab22.log": {
+      "bytes": 58,
+      "sha256": "e5e431e4e91933119ec4cd4ce2e70ec11c7eff814a87fc017fa61642595e8bb3"
+    },
+    "run-lab3.log": {
+      "bytes": 63,
+      "sha256": "df2d712664f6a2f73734a769b59d3a10f5d916d8417b5c34e8cf644562d87840"
+    },
+    "run-lab4.log": {
+      "bytes": 208,
+      "sha256": "4465086924be7ad4f2b226d1564dcabd368393e3ab14710f6cb44f8b0e5960e3"
+    },
+    "run-lab5.log": {
+      "bytes": 184,
+      "sha256": "842eae626071a83f38ad5fb298bb4abf2c2551a98339063ad6a333e946afbc1c"
+    },
+    "run-lab6.log": {
+      "bytes": 207,
+      "sha256": "e7ed1ce95183d1503189f6dff14a6e151850908d90be3913eb4b7c091039ff01"
+    },
+    "run-lab7.log": {
+      "bytes": 503,
+      "sha256": "029846da27c2fc5c87c3880049efd9671d7b56ea9e1ae4f42840bbf2b7e3c910"
+    },
+    "run-lab8.log": {
+      "bytes": 200,
+      "sha256": "6449cc0e2cb9013195a223d5634dcd2bc5b0e71812de7a6ec861d400cc89f571"
+    },
+    "run-lab9.log": {
+      "bytes": 60,
+      "sha256": "9b5abe3cfa0f8d2c97b3926de769a262f7f93bf3119994d612955ac312a1601b"
+    },
+    "sample-extract-POST04_EVENTS_SANITIZED.tsv": {
+      "bytes": 1275,
+      "sha256": "d003a413e4d1a1eb01dd4d6dce98495caf88450c766f9b8837419f3123f569f7"
+    },
+    "sample-extract-POST04_SUMMARY_SANITIZED.json": {
+      "bytes": 2845,
+      "sha256": "ab2b29018871745944da460c170d5276abcf2a28d63bbc716ddc003f83ff6afc"
+    },
+    "sample-msvc.log": {
+      "bytes": 4885,
+      "sha256": "bc847324c33590962a663b38b3ba25d054a22801b94acc8417822b86df1aef1f"
+    },
+    "source-audit.log": {
+      "bytes": 668,
+      "sha256": "558ce6a354ebbc9c5804e087073c1c3796a3c39db81b8002359956c65e9c9b99"
+    },
+    "source-barrier.log": {
+      "bytes": 273,
+      "sha256": "7cdfa11564541b0a5d1fa630c35b44d95f6fe6f0d958ed6a28f4c509f6c8265a"
+    },
+    "store-audit.log": {
+      "bytes": 640,
+      "sha256": "851a888b85dbc7a48dd51a0026347ba89f11c9aea226248a0fb1ed55690886dc"
+    },
+    "tool-tests.log": {
+      "bytes": 128,
+      "sha256": "9cc5073c52ceeee01d3839d7bbf9f9f87dec5ba5a7882f9932c3e4bc56ced71a"
+    }
+  },
+  "runtime": "HUMAN_RUNTIME_PENDING",
+  "native_game_executed": false,
+  "limits": [
+    "Actual unchanged native damage/SetAction/offTg/Attack/Find/cc_set and cCcS Set/ClrAtHitInf bodies, actual production terminal proof, old Parry/ArmTrack and cleanup lease, Expansion policy callbacks are exercised.",
+    "SDK I/O, animation controller/joint poses, leaf collision storage, broadphase contact injection, Link input and renderer are modeled. Joint assets and the whole engine are not executed.",
+    "Generation and posture fixtures authenticate their own ledger; old log actor labels do not mean a complete saved-scene replay.",
+    "No eight-mod Windows/DX12 session, real30/60 FPS, physical shield movement, visible spark, sound or exhaustive pursuit/camera certification.",
+    "Controlled225range avoids legitimate Fury out-of-range approach. World-motion integration and actual native target selection are not reconstructed."
+  ],
+  "retained_FIX01": {
+    "native_old_control": {
+      "checks": "2656",
+      "failures": "0",
+      "RESULT": "LAB_PASS",
+      "old_source": "1",
+      "premature_cancel_reproduced": "3",
+      "zero_hp_native_continuations": "0",
+      "native_game_executed": "false",
+      "visual": "HUMAN_RUNTIME_PENDING"
+    },
+    "native_current": {
+      "checks": "36222",
+      "failures": "0",
+      "RESULT": "LAB_PASS",
+      "old_source": "0",
+      "premature_cancel_reproduced": "0",
+      "zero_hp_native_continuations": "3",
+      "native_game_executed": "false",
+      "visual": "HUMAN_RUNTIME_PENDING"
+    },
+    "guard_AB": [
+      {
+        "source": "0.11.8",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "NEVER",
+        "first_AT": "12",
+        "second_AT": "190",
+        "interval": "178",
+        "max_CP05_gap_ticks": "152",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "50",
+        "first_AT": "12",
+        "second_AT": "190",
+        "interval": "178",
+        "max_CP05_gap_ticks": "152",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "NEVER",
+        "first_AT": "12",
+        "second_AT": "146",
+        "interval": "134",
+        "max_CP05_gap_ticks": "107",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "50",
+        "first_AT": "12",
+        "second_AT": "146",
+        "interval": "134",
+        "max_CP05_gap_ticks": "107",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "NEVER",
+        "first_AT": "12",
+        "second_AT": "50",
+        "interval": "38",
+        "max_CP05_gap_ticks": "11",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "0.11.8",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "50",
+        "first_AT": "12",
+        "second_AT": "50",
+        "interval": "38",
+        "max_CP05_gap_ticks": "11",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "NEVER",
+        "first_AT": "16",
+        "second_AT": "84",
+        "interval": "68",
+        "max_CP05_gap_ticks": "38",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "RED4",
+        "release_R_at": "50",
+        "first_AT": "16",
+        "second_AT": "84",
+        "interval": "68",
+        "max_CP05_gap_ticks": "38",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "NEVER",
+        "first_AT": "16",
+        "second_AT": "81",
+        "interval": "65",
+        "max_CP05_gap_ticks": "34",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "BLACK8",
+        "release_R_at": "50",
+        "first_AT": "16",
+        "second_AT": "81",
+        "interval": "65",
+        "max_CP05_gap_ticks": "34",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "NATIVE_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP04_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "46",
+        "interval": "31",
+        "max_CP05_gap_ticks": "0",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "NEVER",
+        "first_AT": "15",
+        "second_AT": "61",
+        "interval": "46",
+        "max_CP05_gap_ticks": "16",
+        "native_game_executed": "false"
+      },
+      {
+        "source": "FIX01",
+        "controller": "CP05_PLUS_EXPANSION",
+        "kind": "BLACK7",
+        "release_R_at": "50",
+        "first_AT": "15",
+        "second_AT": "61",
+        "interval": "46",
+        "max_CP05_gap_ticks": "16",
+        "native_game_executed": "false"
+      }
+    ],
+    "geometry": {
+      "checks": "21660",
+      "failures": "0",
+      "RESULT": "LAB_PASS",
+      "episodes": "38",
+      "native_shield_pairs": "212",
+      "negative_cases": "15920",
+      "native_cc_set_and_pair_and_shield_exact": "true",
+      "joint_poses": "SYNTHETIC",
+      "engine_broadphase": "NOT_EXECUTED",
+      "visual": "HUMAN_RUNTIME_PENDING"
+    },
+    "native_game_executed": false
+  }
+}

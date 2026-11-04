@@ -1,0 +1,10 @@
+{
+  "status": "NATIVE_REFERENCE_SOURCE_PASS",
+  "sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "exact_new_references": 2,
+  "native_stop": "state1 OR rate0; terminal proof additionally requires exact B/C endpoint",
+  "native_guard_failure": "last-pass contact at22 read after22: no fresh AtSet registration, residual hit survives and rebounds subsequent starts before14 while Link guards",
+  "inactive_registration_safety": "native ClrAtHitInf precedes native ChkAtSet rejection",
+  "native_game_executed": false,
+  "errors": []
+}

@@ -1,0 +1,183 @@
+{
+  "count": 25,
+  "detected": 25,
+  "timeouts": 0,
+  "positive_controls": "ACTUAL_TERMINAL_PROOF_NATIVE_TRANSACTION_NATIVE_COLLISION_LEASE_PASS",
+  "mutations": [
+    {
+      "mutation": "guard_first_layout_validation_omitted",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "guard_layout_mismatch_ignored",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_midclip_accepted",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_stop_ignored",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_recoil_positive_frame",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_unknown_BCK_accepted",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_changed_animation_accepted",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_Link_origin_ignored",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_generation_ignored",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_live_frame_ignored",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_live_rate_ignored",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_pause_ignored",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "terminal_lethal_accepted",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "ordinary_guard_cleanup_omitted",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "stale_contact_cleanup_allowed",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "foreign_contact_cleanup_allowed",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "duplicate_contact_cleanup_allowed",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "cc_set_registration_lease_not_restored",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "native_registers_inactive_AT",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "engine_clear_omitted",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "guard_duplicate_sample_advances",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "guard_early_rebound_unobserved",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "guard_R_release_never_ends",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "guard_context_inherits_old_episode",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    },
+    {
+      "mutation": "guard_culling_report_lost",
+      "detected": true,
+      "timeout": false,
+      "status": "KILLED",
+      "failure_tail": null
+    }
+  ]
+}
