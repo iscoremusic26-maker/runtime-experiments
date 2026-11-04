@@ -1,0 +1,91 @@
+{
+  "legacy": {
+    "source_base": "a0a4d43718bca99e7e9cbfd2d1860cac6da1718d",
+    "approved_cp02_functions": 2,
+    "approved_cp02_cp03_headers": 3,
+    "functions_pinned": 107,
+    "headers_pinned": 15,
+    "native_code_executed": false,
+    "errors": [],
+    "scoped_native_stores": {
+      "on_shield_post_fx": {
+        "register_btr_bit27": 1,
+        "guard_flag_store_plus678": 1
+      },
+      "on_collision_pre_fx": {
+        "register_btr_bit27": 1,
+        "guard_flag_store_plus678": 1
+      },
+      "on_stick_post_fx": {
+        "and_buttonB_clear_plus40e9": 1
+      }
+    },
+    "actual_instruction_negatives_rejected": 2,
+    "status": "STORE_AUDIT_PASS"
+  },
+  "cp04": {
+    "status": "CP04_PE_SCOPE_PASS",
+    "scope_bytes": {
+      "cp04_native_rate": 256,
+      "cp04_native_gap": 32,
+      "cp04_native_mode": 80,
+      "cp04_native_shield_restart": 128
+    },
+    "scope_sha256": {
+      "cp04_native_rate": "539e266aeda5a62524887f20168d5431cd8e8e8e06032ec4ac1aeaba6205c8c1",
+      "cp04_native_gap": "09f7b7109e6a6e8b0d94ff37d658b9e5ac494cbd60c33d4462433b2c38ac3934",
+      "cp04_native_mode": "3f84a1739e3365edbaf359fba1a6df3f8bef52ae5e7dbd1da7107093b9bc78ba",
+      "cp04_native_shield_restart": "e33341b0744c766192331d557ea3a4f7a1b26c18df7cc5b1909524991fdb1031"
+    },
+    "scope_hex": {
+      "cp04_native_rate": "48895c24084889742410574883ec20488bfa488bd94883b9d8060000000f84c800000083b9c8080000040f85bb0000008b81d0080000ffc883f8010f87aa000000be050000008bd6e80f9e020084c07514ba06000000488bcbe8fe9d0200f6d81bf683e6063bb7b8000000757e488bb3d8060000f30f104e2cf30f5c0d738503000f540d68870300f30f1005c88403000f2fc17656f30f104628e8915f010084c0744880bf9000000000753f8b87c0000000894628488b83d8060000f30f1040280f2e87c00000007a21751fb00188879000000048ff059d2b1100488b5c2430488b7424384883c4205fc332c0488b5c2430488b7424384883c4205fc3cccccc",
+      "cp04_native_gap": "83b9c808000003750f83fa0c770a668991e2080000b001c332c0c3cccccccccc",
+      "cp04_native_mode": "48895c2408574883ec208bda488bf94533c0e8899e0200399fc8080000751683bfd008000000750db001488b5c24304883c4205fc332c0488b5c24304883c4205fc3cccccccccccccccccccccccccccc",
+      "cp04_native_shield_restart": "48895c24084889742410574883ec20488bf9488b1d972c1100488b35282c1100e8f19d0200488d4301483905802c1100753a488d46014839050b2c1100752d6683bf444100001e7523ba2e000000488bcfe8849d020085c07412b001488b5c2430488b7424384883c4205fc332c0488b5c2430488b7424384883c4205fc3cccc"
+    },
+    "stores": {
+      "fresh_clip_rate_store": 1,
+      "fresh_clip_rate_encodings": [
+        "MOV32_FLOAT_BITS"
+      ],
+      "own_gap_timer_store": 1
+    },
+    "native_transition_imports_bound": {
+      "cp04_native_mode": true,
+      "cp04_native_shield_restart": true
+    },
+    "actual_instruction_negatives_rejected": 2,
+    "errors": [],
+    "native_runtime": false
+  },
+  "cp05": {
+    "status": "CP05_PE_SCOPE_PASS",
+    "scope_bytes": {
+      "cp05_native_rate": 384,
+      "cp05_native_timer": 64,
+      "cp05_native_mode": 16
+    },
+    "scope_sha256": {
+      "cp05_native_rate": "9e16c8f1634fc235c455193be793d0e530614a7d810061fdbefa84a29a8f6ea6",
+      "cp05_native_timer": "032597d3a5ed346159358c5971d0b5b981619727c96e4c544c24db5b6de283e9",
+      "cp05_native_mode": "6979a3412f1bffe57320cd23d592579ec4616b2419327481a4379e42d36eb747"
+    },
+    "scope_hex": {
+      "cp05_native_rate": "48895c24084889742410574883ec20488bda488bf980bad9000000000f8447010000e80912000084c00f843a010000807b23020f853001000080bbd4000000000f85230100008b93ac0000000fb64b22e8bb0b0200f30f108bcc0000000f2ec80f8a030100000f85fd0000004883bfd8060000000f84ef00000083bfc8080000040f85e20000008b87d0080000ffc883f8010f87d1000000be050000008bd6488bcfe83575020084c07514ba06000000488bcfe824750200f6d81bf683e6063bb3bc0000000f859e000000488b8fd8060000f30f10492cf30f5c0d955c03000f540d8a5e0300f30f1005ea5b03000f2fc17676f30f1041280f2e05795c03007a6875668b83cc000000894128488b87d8060000f30f1040280f2e83cc0000007a337531b2018893d40000000fb643224869c8480b0000488d055370110048ff04010fb6c2488b5c2430488b7424384883c4205fc332d20fb6c2488b5c2430488b7424384883c4205fc332c0488b5c2430488b7424384883c4205fc3cccccccccc",
+      "cp05_native_timer": "81faff7f000077274181f8ff7f0000771e0fbf81e20800003bc27513410fbfc0413bc066448981e20800000f94c0c332c0c3cccccccccccccccccccccccccccc",
+      "cp05_native_mode": "e93bd7ffffcccccccccccccccccccccc"
+    },
+    "stores": {
+      "fresh_rate_32bit": 1,
+      "native_timer_16bit": 1,
+      "rate_encodings": [
+        "MOV32_FLOAT_BITS"
+      ]
+    },
+    "mode_call_bound_to_frozen_writer": true,
+    "frozen_writer_bound_to_typed_import": true,
+    "actual_instruction_negatives_rejected": 2,
+    "errors": [],
+    "native_runtime": false
+  }
+}

@@ -1,0 +1,4 @@
+CP05_FIX01_NATIVE_SAMPLES clip=B rate1=9 rate115=7 old_rate145=6 old_rate150=6 physical_trajectory=NOT_AUTHENTICATED
+CP05_FIX01_NATIVE_SAMPLES clip=C rate1=9 rate115=7 old_rate145=6 old_rate150=6 physical_trajectory=NOT_AUTHENTICATED
+CP05_FIX01_GEOMETRY checks=21660 failures=0 RESULT=LAB_PASS episodes=38 native_shield_pairs=212 negative_cases=15920 native_cc_set_and_pair_and_shield_exact=true joint_poses=SYNTHETIC engine_broadphase=NOT_EXECUTED visual=HUMAN_RUNTIME_PENDING
+

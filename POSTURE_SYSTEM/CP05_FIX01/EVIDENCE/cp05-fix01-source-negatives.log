@@ -1,0 +1,68 @@
+{
+  "status": "NEGATIVES_PASS",
+  "positive_clone": "SOURCE_AUDIT_PASS",
+  "count": 12,
+  "cases": [
+    {
+      "case": "RNG_changed",
+      "rejected": true,
+      "expected_cause": "CP05 FIX01 frozen RNG changed"
+    },
+    {
+      "case": "old_RNG_oracle_tampered",
+      "rejected": true,
+      "expected_cause": "CP05 FIX01 reviewed reference/source changed"
+    },
+    {
+      "case": "native_damage_oracle_tampered",
+      "rejected": true,
+      "expected_cause": "CP05 FIX01 reviewed reference/source changed"
+    },
+    {
+      "case": "native_geometry_oracle_tampered",
+      "rejected": true,
+      "expected_cause": "CP05 FIX01 reviewed reference/source changed"
+    },
+    {
+      "case": "Link_procedure_write",
+      "rejected": true,
+      "expected_cause": "CP05 forbidden native operation: mProcID"
+    },
+    {
+      "case": "pose_reader_moves_actor",
+      "rejected": true,
+      "expected_cause": "CP05 game-pointer assignment outside"
+    },
+    {
+      "case": "raw_Tg_premature_veto",
+      "rejected": true,
+      "expected_cause": "CP05 FIX01 premature raw Tg veto restored"
+    },
+    {
+      "case": "midcall_PRE_receipt_removed",
+      "rejected": true,
+      "expected_cause": "CP05 FIX01 matching EOC PRE receipt missing"
+    },
+    {
+      "case": "critical_reserve_removed",
+      "rejected": true,
+      "expected_cause": "CP05 FIX01 critical example reserve missing"
+    },
+    {
+      "case": "sampling_cap_changed",
+      "rejected": true,
+      "expected_cause": "CP05 FIX01 native normal sampling cap changed"
+    },
+    {
+      "case": "reference_inventory_emptied",
+      "rejected": true,
+      "expected_cause": "inventory must contain9"
+    },
+    {
+      "case": "native_reference_missing",
+      "rejected": true,
+      "expected_cause": "reviewed reference/source changed"
+    }
+  ],
+  "timeouts": 0
+}

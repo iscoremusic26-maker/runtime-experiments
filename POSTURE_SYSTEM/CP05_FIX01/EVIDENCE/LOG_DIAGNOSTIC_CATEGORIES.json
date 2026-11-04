@@ -1,0 +1,14 @@
+{
+  "scope": "Whole stream; literal severity-token categories; no causal attribution to CP05",
+  "ERROR_token_lines": 187,
+  "ERROR_with_DEVF_CP12_PERF_WINDOW": 187,
+  "WARNING_token_lines": 5056,
+  "WARNING_with_mip": 199,
+  "WARNING_with_LNK01_INIT": 1,
+  "WARNING_other": 4856,
+  "fatal_token_lines": 0,
+  "WARNING_other_categories": {
+    "inlined_hook": 1,
+    "CalcDivideInfo": 4855
+  }
+}

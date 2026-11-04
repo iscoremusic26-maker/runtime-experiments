@@ -1,0 +1,130 @@
+{
+  "local_download": {
+    "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "errors": [],
+    "package_sha256": "875e049ebb76f2deee50e7d2c62d73f3fe762d1f936925b4d008648b11cad4e6",
+    "package_bytes": 163257,
+    "dll_sha256": "95f368b0b567c114157625f77d4655c41a4e33e1178bf1d6f06a83b57a08f09f",
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "version": "0.11.9",
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "pe_audit_status": "PE_AUDIT_PASS",
+    "hook_thunk_bound_import": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "filename": "LIGHT_FADES_TWICE_CP05_FIX01_0_11_9_PRIVATE_TEST_windows-amd64_785f7044a095.dusk",
+    "runtime_tested": false
+  },
+  "independent_windows_job": {
+    "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "errors": [],
+    "package_sha256": "875e049ebb76f2deee50e7d2c62d73f3fe762d1f936925b4d008648b11cad4e6",
+    "package_bytes": 163257,
+    "dll_sha256": "95f368b0b567c114157625f77d4655c41a4e33e1178bf1d6f06a83b57a08f09f",
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "version": "0.11.9",
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "pe_audit_status": "PE_AUDIT_PASS",
+    "hook_thunk_bound_import": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "filename": "LIGHT_FADES_TWICE_CP05_FIX01_0_11_9_PRIVATE_TEST_windows-amd64_785f7044a095.dusk",
+    "runtime_tested": false
+  },
+  "github": {
+    "run": {
+      "id": 41787837430,
+      "head_sha": "ef57ee342cecd0afee26cc6e35034e6459518320",
+      "status": "completed",
+      "conclusion": "success",
+      "html_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41787837430",
+      "created_at": "2026-11-04T06:47:11Z",
+      "updated_at": "2026-11-04T07:06:33Z"
+    },
+    "jobs": [
+      {
+        "id": 126433974191,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126440660011,
+        "name": "independent-download",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "artifacts": {
+      "text": {
+        "id": 13302956818,
+        "name": "CP05_FIX01_TEXT_41787837430_1",
+        "size_in_bytes": 359707,
+        "url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302956818",
+        "archive_download_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302956818/zip",
+        "expired": false,
+        "created_at": "2026-11-04T07:05:59Z",
+        "expires_at": "2026-12-04T07:05:58Z",
+        "updated_at": "2026-11-04T07:05:59Z",
+        "digest": "sha256:69c5a24b5c11f3e4cb9e78d2f0202d678ee4c33412d7fb66e5ceeea5c30cca0d",
+        "workflow_run": {
+          "id": 41787837430,
+          "repository_id": 1414830645,
+          "head_repository_id": 1414830645,
+          "head_branch": "ci/light-fades-twice-cp05-fix01-0-11-9",
+          "head_sha": "ef57ee342cecd0afee26cc6e35034e6459518320"
+        }
+      },
+      "package": {
+        "id": 13302951716,
+        "name": "CP05_FIX01_TEST_41787837430_1",
+        "size_in_bytes": 166573,
+        "url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302951716",
+        "archive_download_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302951716/zip",
+        "expired": false,
+        "created_at": "2026-11-04T07:06:00Z",
+        "expires_at": "2026-12-04T07:06:00Z",
+        "updated_at": "2026-11-04T07:06:00Z",
+        "digest": "sha256:c18ce96aee879d77271ce53e12dd60e24c3ef238236cae8bcef530a3a62abf80",
+        "workflow_run": {
+          "id": 41787837430,
+          "repository_id": 1414830645,
+          "head_repository_id": 1414830645,
+          "head_branch": "ci/light-fades-twice-cp05-fix01-0-11-9",
+          "head_sha": "ef57ee342cecd0afee26cc6e35034e6459518320"
+        }
+      },
+      "independent": {
+        "id": 13302677574,
+        "name": "CP05_FIX01_DOWNLOAD_VERIFIED_41787837430_1",
+        "size_in_bytes": 626,
+        "url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302677574",
+        "archive_download_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302677574/zip",
+        "expired": false,
+        "created_at": "2026-11-04T07:06:29Z",
+        "expires_at": "2026-12-04T07:06:28Z",
+        "updated_at": "2026-11-04T07:06:29Z",
+        "digest": "sha256:dce8b35fc5b3f679f36ccd95b4101e2efd2e2f20b90752e7188fa6b88d1fdecc",
+        "workflow_run": {
+          "id": 41787837430,
+          "repository_id": 1414830645,
+          "head_repository_id": 1414830645,
+          "head_branch": "ci/light-fades-twice-cp05-fix01-0-11-9",
+          "head_sha": "ef57ee342cecd0afee26cc6e35034e6459518320"
+        }
+      }
+    }
+  }
+}

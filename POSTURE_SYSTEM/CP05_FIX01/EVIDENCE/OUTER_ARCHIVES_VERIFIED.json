@@ -1,0 +1,23 @@
+{
+  "text": {
+    "artifact_id": 13302956818,
+    "bytes": 359707,
+    "sha256": "69c5a24b5c11f3e4cb9e78d2f0202d678ee4c33412d7fb66e5ceeea5c30cca0d",
+    "matches_github_digest": true,
+    "outer_zip_crc": "PASS"
+  },
+  "package": {
+    "artifact_id": 13302951716,
+    "bytes": 166573,
+    "sha256": "c18ce96aee879d77271ce53e12dd60e24c3ef238236cae8bcef530a3a62abf80",
+    "matches_github_digest": true,
+    "outer_zip_crc": "PASS"
+  },
+  "independent": {
+    "artifact_id": 13302677574,
+    "bytes": 626,
+    "sha256": "dce8b35fc5b3f679f36ccd95b4101e2efd2e2f20b90752e7188fa6b88d1fdecc",
+    "matches_github_digest": true,
+    "outer_zip_crc": "PASS"
+  }
+}

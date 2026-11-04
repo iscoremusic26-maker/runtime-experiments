@@ -1,0 +1,312 @@
+{
+  "checkpoint": "LIGHT FADES TWICE CP05 FIX01",
+  "version": "0.11.9",
+  "state": "PRIVATE_TEST_TECHNICAL_PASS_HUMAN_RUNTIME_PENDING",
+  "technical_id": "dev.posture.post05_selective_reactions",
+  "compiled_source": "785f7044a09588ea9f570f09b4b74580e4f7ee93",
+  "compiled_tree": "50a09e9d129f464b2b65ef274bc4876a59915d01",
+  "source_branch": "feature/light-fades-twice-cp05-fix01-0-11-9",
+  "source_compare_url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/compare/e226415ebb4c5ad1d488898357072dc7c503a57d...785f7044a09588ea9f570f09b4b74580e4f7ee93",
+  "documentary_commit": "Separate docs-only successor containing this report; the exact compiled SHA above is authoritative. No self-referential SHA.",
+  "ci_commit": "ef57ee342cecd0afee26cc6e35034e6459518320",
+  "ci_branch": "ci/light-fades-twice-cp05-fix01-0-11-9",
+  "run": 41787837430,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41787837430",
+  "jobs": [
+    {
+      "id": 126433974191,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126440660011,
+      "name": "independent-download",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "components": {
+    "RED4": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ],
+    "BLACK8_NORMAL": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ],
+    "BLACK7_NORMAL": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ],
+    "CONTINUATION_AFTER_ZERO_HP_SHIELD": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ],
+    "TIMER_GUARD_OWNERSHIP": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "INDEPENDENT_DOWNLOAD_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ]
+  },
+  "artifact": {
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41787837430/artifacts/13302951716",
+    "id": 13302951716,
+    "filename": "LIGHT_FADES_TWICE_CP05_FIX01_0_11_9_PRIVATE_TEST_windows-amd64_785f7044a095.dusk",
+    "bytes": 163257,
+    "sha256": "875e049ebb76f2deee50e7d2c62d73f3fe762d1f936925b4d008648b11cad4e6",
+    "dll_sha256": "95f368b0b567c114157625f77d4655c41a4e33e1178bf1d6f06a83b57a08f09f",
+    "expires_at": "2026-12-04T07:06:00Z",
+    "expires_panama": "2026-12-04 02:06:00 UTC-05:00",
+    "status": "ARTIFACT_DOWNLOADED_VERIFIED"
+  },
+  "evidence_artifacts": {
+    "text": {
+      "id": 13302956818,
+      "name": "CP05_FIX01_TEXT_41787837430_1",
+      "size_in_bytes": 359707,
+      "url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302956818",
+      "archive_download_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302956818/zip",
+      "expired": false,
+      "created_at": "2026-11-04T07:05:59Z",
+      "expires_at": "2026-12-04T07:05:58Z",
+      "updated_at": "2026-11-04T07:05:59Z",
+      "digest": "sha256:69c5a24b5c11f3e4cb9e78d2f0202d678ee4c33412d7fb66e5ceeea5c30cca0d",
+      "workflow_run": {
+        "id": 41787837430,
+        "repository_id": 1414830645,
+        "head_repository_id": 1414830645,
+        "head_branch": "ci/light-fades-twice-cp05-fix01-0-11-9",
+        "head_sha": "ef57ee342cecd0afee26cc6e35034e6459518320"
+      }
+    },
+    "independent": {
+      "id": 13302677574,
+      "name": "CP05_FIX01_DOWNLOAD_VERIFIED_41787837430_1",
+      "size_in_bytes": 626,
+      "url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302677574",
+      "archive_download_url": "https://api.github.com/repos/iscoremusic26-maker/codex-cp00-inputs/actions/artifacts/13302677574/zip",
+      "expired": false,
+      "created_at": "2026-11-04T07:06:29Z",
+      "expires_at": "2026-12-04T07:06:28Z",
+      "updated_at": "2026-11-04T07:06:29Z",
+      "digest": "sha256:dce8b35fc5b3f679f36ccd95b4101e2efd2e2f20b90752e7188fa6b88d1fdecc",
+      "workflow_run": {
+        "id": 41787837430,
+        "repository_id": 1414830645,
+        "head_repository_id": 1414830645,
+        "head_branch": "ci/light-fades-twice-cp05-fix01-0-11-9",
+        "head_sha": "ef57ee342cecd0afee26cc6e35034e6459518320"
+      }
+    }
+  },
+  "counts": {
+    "msvc_labs": 21,
+    "msvc_lab_checks": 4272615,
+    "cp05_core_checks": 1083969,
+    "cp05_adapter_checks": 142364,
+    "cp04_adapter_checks": 12439,
+    "fix01_native_old_control_checks": 2656,
+    "fix01_native_current_checks": 36222,
+    "fix01_geometry_checks": 21660,
+    "fix01_geometry_swing_episodes": 38,
+    "fix01_geometry_shield_pairs": 212,
+    "fix01_geometry_negative_cases": 15920,
+    "all_mutations": 525,
+    "retained_mutations": 502,
+    "new_fix01_mutations": 23,
+    "timeouts": 0,
+    "source_negatives": {
+      "fix03": 12,
+      "cp04": 11,
+      "cp05": 16,
+      "cp05-fix01": 12
+    },
+    "source_negatives_already_in_legacy_mutations": 114,
+    "pe_negatives": 20,
+    "actual_instruction_negatives": 6,
+    "game_imports": 63,
+    "hook_targets": 24,
+    "service_contracts": 7,
+    "new_hook_targets_vs_0_11_8": 0,
+    "frozen_old_production_files": 32,
+    "legacy_functions": 107,
+    "legacy_headers": 15,
+    "source_ledger_files": 162
+  },
+  "behavior": {
+    "red_choices": [
+      "NORMAL1/2",
+      "RED4_1/2"
+    ],
+    "black_normal_choices": [
+      "NORMAL1/3",
+      "BLACK8_1/3",
+      "BLACK7_1/3"
+    ],
+    "rng": "BY_ACTOR_GENERATION_CONTEXT_BYTE_IDENTICAL_BIND_DECIDE_REDUCE3",
+    "rates": {
+      "RED4": [
+        1,
+        1.15,
+        1.15,
+        1
+      ],
+      "BLACK8": [
+        1,
+        1,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1.15,
+        1
+      ],
+      "BLACK7": [
+        1.15,
+        1.15,
+        1,
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    "AT_target_ticks": {
+      "RED4": [
+        68,
+        46,
+        72
+      ],
+      "BLACK8": [
+        65,
+        67,
+        46,
+        46,
+        46,
+        46,
+        70
+      ],
+      "BLACK7": [
+        46,
+        68,
+        70,
+        56,
+        56,
+        56
+      ]
+    },
+    "uniform_audio_scale": false,
+    "full_native_clip_and_recoil_authoritative": true,
+    "raw_Tg_deferred_until_native_transaction": true,
+    "timer_lease_compare_before_restore": true,
+    "changed_native_mode_keeps_its_timer": true,
+    "cancelled_execute_reroll": false,
+    "AT_geometry_telemetry": "READ_ONLY",
+    "engine_spark_observation": "NOT_OBSERVED",
+    "shieldchain_post08_cp02_hud": "UNCHANGED",
+    "black_fury_and_red_special": "UNCHANGED_NO_PARRY_REPAIR"
+  },
+  "diagnosis": {
+    "input_log_sha256": "7c6855428160a432544ebec12cf26d33e50835fc6240e3be718f7df9c0fd2242",
+    "whole_log_processed": true,
+    "old_selected": 197,
+    "old_completed": 1,
+    "old_cancelled": 196,
+    "old_native_priority_total": 179,
+    "detailed_native_priority_available": 61,
+    "detailed_shield_before_transaction": 43,
+    "detailed_sword": 17,
+    "detailed_real_Red_special": 1,
+    "later_committed_POST08_within_14_lines_same_actor_generation": 21,
+    "extrapolation_to_all179": false,
+    "physical_misses_disproved": false
+  },
+  "human_pending": [
+    "Pattern visibility and rhythmic readability",
+    "Actual blade/joint path and shield contact at every position",
+    "Visible native spark and block sound",
+    "A new physical Shield Attack motion for each individual parry, including pairs",
+    "Guard-stall comparison in real encounter",
+    "Eight-mod coexistence, Blue approved behavior, Link/HUD/audio/FPS at real30Hz"
+  ],
+  "runtime": "HUMAN_RUNTIME_PENDING",
+  "native_game_executed": false,
+  "dll_loaded": false,
+  "baseline_CP04_human_status": "USER_APPROVED_TWO_VISIBLE_SHIELD_MOTIONS_IN_0_11_7_ONLY",
+  "rollback": {
+    "version": "0.11.7",
+    "source": "2d103c5562f7199b875d5c4c7de7f00a32922a61",
+    "artifact": 13283289812,
+    "run": 41746570392,
+    "bytes": 147197,
+    "sha256": "e446ed3ee1111837a9feed628adf939942a006e60913fe66b00d48986b71826e",
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41746570392/artifacts/13283289812"
+  },
+  "preserved_defective": {
+    "version": "0.11.8",
+    "status": "HUMAN_RUNTIME_REJECTED",
+    "source": "e226415ebb4c5ad1d488898357072dc7c503a57d",
+    "run": 41768178836,
+    "artifact": 13293813585,
+    "sha256": "8905dbee957d43b4dbb2cb2211daf0dc66b8517a3f2a131ec8d1240f3123a7c6"
+  },
+  "superseded_failed_runs": [
+    {
+      "run": 41787262684,
+      "source": "63da3799b0e004f2b44152183b97e806e655023d",
+      "ci": "0f9214bd855567d12721c07be6942c6334915342",
+      "reason": "Windows default cp1252 read of exact UTF-8 SDK reference; failed before native module build; explicit UTF-8 correction only",
+      "candidate": false
+    }
+  ],
+  "limits": [
+    "B42/C47 fixture lengths match44/37 old-log readbacks but do not authenticate joint assets; production reads actual getEnd/isStop",
+    "No mounted audio file; authorized prompt timestamp structure used",
+    "Exact Expansion0.17 observable protocol, not a public private-cause API or unknown-writer authentication",
+    "No native Windows game/DLL execution, FPS measurement or visible spark/physical shield certification",
+    "Native duration, recoil and safety conditions can extend the target deadlines"
+  ],
+  "other_mods_modified": false,
+  "host_sdk_exe_rom_saves_modified": false,
+  "pr_merge_tag_release": false,
+  "local_outer_archives": "EVIDENCE/OUTER_ARCHIVES_VERIFIED.json",
+  "inner_package_crc_and_source": "EVIDENCE/INNER_PACKAGE_VERIFIED.json",
+  "collision_evidence": {
+    "native_code": "SOURCE_AUDIT_PASS_AND_LAB_PASS_EXACT_NATIVE_PREDICATES",
+    "native_AT_centres_radii": "READ_ONLY_TELEMETRY_IMPLEMENTED",
+    "joint_pose_input": "SYNTHETIC_IN_LAB",
+    "full_engine_broadphase": "NOT_EXECUTED",
+    "visible_spark_sound_blade_shield_path": "HUMAN_RUNTIME_PENDING",
+    "fresh_physical_shield_motion": "HUMAN_RUNTIME_PENDING"
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "status": "PE_AUDIT_PASS",
+  "compiled_source": "785f7044a09588ea9f570f09b4b74580e4f7ee93",
+  "imports": {
+    "KERNEL32.dll": [
+      "DisableThreadLibraryCalls",
+      "GetCurrentProcessId",
+      "GetCurrentThreadId",
+      "GetSystemTimeAsFileTime",
+      "InitializeSListHead",
+      "QueryPerformanceCounter"
+    ],
+    "VCRUNTIME140.dll": [
+      "__C_specific_handler",
+      "__std_terminate",
+      "__std_type_info_destroy_list",
+      "memcpy",
+      "memset"
+    ],
+    "VCRUNTIME140_1.dll": [
+      "__CxxFrameHandler4"
+    ],
+    "api-ms-win-crt-heap-l1-1-0.dll": [
+      "free"
+    ],
+    "api-ms-win-crt-math-l1-1-0.dll": [
+      "sqrtf"
+    ],
+    "api-ms-win-crt-runtime-l1-1-0.dll": [
+      "_cexit",
+      "_configure_narrow_argv",
+      "_execute_onexit_table",
+      "_initialize_narrow_environment",
+      "_initialize_onexit_table",
+      "_initterm",
+      "_initterm_e",
+      "_seh_filter_dll"
+    ],
+    "api-ms-win-crt-stdio-l1-1-0.dll": [
+      "__stdio_common_vsprintf"
+    ],
+    "dusklight.exe": [
+      "??0J2DOrthoGraph@@QEAA@MMMMMM@Z",
+      "?_delete@dMeter2_c@@QEAAHXZ",
+      "?_draw@dMeter2_c@@QEAAHXZ",
+      "?_execute@dMeter2_c@@QEAAHXZ",
+      "?cc_set@daE_OC_c@@QEAAXXZ",
+      "?checkBck@daE_OC_c@@QEAA_NH@Z",
+      "?checkBeforeFloorBg@daE_OC_c@@QEAA_NM@Z",
+      "?checkDamageAction@daAlink_c@@QEAAHXZ",
+      "?checkMasterSwordEquip@daPy_py_c@@SAHXZ",
+      "?checkMoveDoAction@daAlink_c@@QEAAHXZ",
+      "?checkNowWolfEyeUp@daPy_py_c@@SAHXZ",
+      "?checkPolyDamage@daAlink_c@@QEAAHXZ",
+      "?checkShieldDraw@daAlink_c@@QEAA_NXZ",
+      "?checkUnderMove0BckNoArc@daAlink_c@@QEBAHW4daAlink_ANM@1@@Z",
+      "?dCam_getBody@@YAPEAVdCamera_c@@XZ",
+      "?dComIfGd_getView@@YAPEAUview_class@@XZ",
+      "?dComIfGp_getCurrentGrafPort@@YAPEAVJ2DGrafContext@@XZ",
+      "?dComIfGp_getDoStatus@@YAEXZ",
+      "?dComIfGp_getLinkPlayer@@YAPEAVdaPy_py_c@@XZ",
+      "?dComIfGp_getStartStageName@@YAPEBDXZ",
+      "?dComIfGs_getSelectEquipSword@@YAEXZ",
+      "?dComIfGs_wolfeye_effect_check@@YAHXZ",
+      "?dMeter2Info_getMeterClass@@YAPEAVdMeter2_c@@XZ",
+      "?dMeter2Info_getWindowStatus@@YAEXZ",
+      "?damage_check@daE_OC_c@@QEAAXXZ",
+      "?draw@J2DPane@@QEAAXMMPEBVJ2DGrafContext@@_N1@Z",
+      "?draw@J2DScreen@@QEAAXMMPEBVJ2DGrafContext@@@Z",
+      "?drawPikari@dMeter2Draw_c@@QEAAXMMPEAMMUTColor@JUtility@@111MEM@Z",
+      "?drawString_size_scale@JUTFont@@QEAAMMMMMPEBDI_N@Z",
+      "?execute@daE_OC_c@@QEAAHXZ",
+      "?executeAttack@daE_OC_c@@QEAAXXZ",
+      "?executeDamage@daE_OC_c@@QEAAXXZ",
+      "?fillBox@J2DGrafContext@@QEAAXAEBU?$TBox2@M@JGeometry@@@Z",
+      "?fopAcM_SearchByID@@YAHIPEAPEAVfopAc_ac_c@@@Z",
+      "?fopAcM_searchActorDistance@@YAMPEBVfopAc_ac_c@@0@Z",
+      "?fpcEx_SearchByID@@YAPEAUbase_process_class@@I@Z",
+      "?g_dComIfG_gameInfo@@3VdComIfG_inf_c@@A",
+      "?g_fopAcTg_Queue@@3Unode_list_class@@A",
+      "?getLayerNo@dComIfG_play_c@@SAHH@Z",
+      "?lineBGCheck@dCamera_c@@QEAA_NPEAUcXyz@@0I@Z",
+      "?mDoLib_project@@YAXPEAUVec@@0@Z",
+      "?m_heightF@mDoGph_gInf_c@@2MA",
+      "?m_minXF@mDoGph_gInf_c@@2MA",
+      "?m_minYF@mDoGph_gInf_c@@2MA",
+      "?m_widthF@mDoGph_gInf_c@@2MA",
+      "?place@J2DGrafContext@@UEAAXAEBU?$TBox2@M@JGeometry@@@Z",
+      "?procGuardAttackInit@daAlink_c@@QEAAHXZ",
+      "?procGuardBreakInit@daAlink_c@@QEAAHXZ",
+      "?set@dDlst_list_c@@QEAAHAEAPEAPEAVdDlst_base_c@@0PEAV2@@Z",
+      "?setActionMode@daE_OC_c@@QEAAXHH@Z",
+      "?setBStatus@daAlink_c@@QEAAXE@Z",
+      "?setCollision@daAlink_c@@QEAAXXZ",
+      "?setColor@J2DGrafContext@@QEAAXUTColor@JUtility@@000@Z",
+      "?setOrtho@J2DOrthoGraph@@QEAAXAEBU?$TBox2@M@JGeometry@@MM@Z",
+      "?setPort@J2DGrafContext@@UEAAXXZ",
+      "?setPort@J2DOrthoGraph@@UEAAXXZ",
+      "?setRStatus@daAlink_c@@QEAAXE@Z",
+      "?setScissor@J2DGrafContext@@UEAAXXZ",
+      "?setShieldGuard@daAlink_c@@QEAAXXZ",
+      "?setStickData@daAlink_c@@QEAAXXZ",
+      "?setup2D@J2DGrafContext@@UEAAXXZ",
+      "?spActionTrigger@daAlink_c@@QEAAHXZ",
+      "PSVECSquareMag"
+    ]
+  },
+  "hook_thunk_bound_import": [
+    "dusklight.exe",
+    "?damage_check@daE_OC_c@@QEAAXXZ"
+  ],
+  "meta_kinds": {
+    "HEADER": 1,
+    "HOOK_MEM": 15,
+    "HOOK_MEM_EXT": 9,
+    "IMPORT": 7
+  },
+  "service_contracts": [
+    [
+      "com.dusklight.enemy_health_multiplier_203.vitals",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.game",
+      2,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.gfx",
+      1,
+      4
+    ],
+    [
+      "dev.twilitrealm.dusklight.hook",
+      1,
+      1
+    ],
+    [
+      "dev.twilitrealm.dusklight.host",
+      2,
+      2
+    ],
+    [
+      "dev.twilitrealm.dusklight.interp",
+      1,
+      0
+    ],
+    [
+      "dev.twilitrealm.dusklight.log",
+      1,
+      0
+    ]
+  ],
+  "errors": []
+}

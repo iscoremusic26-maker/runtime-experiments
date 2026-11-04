@@ -1,0 +1,212 @@
+{
+  "positive_controls": "PASS",
+  "count": 34,
+  "detected": 34,
+  "timeouts": 0,
+  "mutations": [
+    {
+      "mutation": "red_three_quarters",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "black_biased_mod2",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "black_rejection_missing",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "black_eight_to_seven",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "black_seven_to_eight",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "red_four_to_three",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "red_equal_intervals",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "black8_loses_isolated_finish",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "black7_loses_initial_pair",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "active_combo_rerolled",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "duplicate_execution_rerolled",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "tokens_reused",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "special_rate_accepted",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "duplicate_parry_counter",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "posture100_cancel_lost",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "black_normal_misread_as_fury",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "red_too_slow_for_shield_motion",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "deadline_uses_wrong_at_phase",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "context_reuses_old_stream",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "native_rate_write_removed",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "native_timer_write_removed",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "foreign_timer_overwritten",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "restore_after_expansion",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "normal_handoff_bypassed",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "native_fresh_provenance_removed",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "fury_transition_ignored",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "full_clip_truncated_at22",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "posture100_future_not_cancelled",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "normal_choice_seized",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "foreign_motion_jump_accepted",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "ghost_commit_telemetry",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "other_contact_lost",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "early_post_lease_restore_removed",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "pending_continuation_enters_too_early",
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    }
+  ]
+}

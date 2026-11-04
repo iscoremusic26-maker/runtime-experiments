@@ -1,0 +1,169 @@
+{
+  "positive_controls": "CORE_NATIVE_TRANSACTION_GEOMETRY_ADAPTER_PASS",
+  "count": 23,
+  "detected": 23,
+  "timeouts": 0,
+  "mutations": [
+    {
+      "mutation": "premature_raw_Tg_veto",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "HP_loss_guards_removed",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "HP_snapshot_lost",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "weighted_report_generation_ignored",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "weighted_report_freshness_ignored",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "uncommitted_zero_weight_report_is_priority",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "ordinary_Find_recovery_rejected",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "new_native_mode_timer_clobbered",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "midcall_context_acquires_without_PRE",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "retained_native_reaction_misclassified",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "all_swings_flat_fast_rate",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "normal_sampling_cap_exceeded",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "six_second_Red_gap_restored",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "four_second_Black_gap_restored",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "Black7_closing_loses_its_contrast",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "critical_case_example_reserve_lost",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "complete_summary_hidden_by_detail_cap",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "native_no_guard_is_ignored",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "native_far_overlap_is_fabricated",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "native_weapon_radius_inflated",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "interval_histogram_lies",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "foreign_PRE_timer_is_borrowed",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "cancelled_execution_rerolls",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    }
+  ]
+}

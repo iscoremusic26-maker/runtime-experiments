@@ -1,0 +1,88 @@
+{
+  "status": "NEGATIVES_PASS",
+  "positive_clone": "SOURCE_AUDIT_PASS",
+  "count": 16,
+  "cases": [
+    {
+      "case": "native_HP_write",
+      "rejected": true,
+      "expected_cause": "CP05 forbidden native operation"
+    },
+    {
+      "case": "native_position_write",
+      "rejected": true,
+      "expected_cause": "CP05 game-pointer assignment"
+    },
+    {
+      "case": "native_hitbox_write",
+      "rejected": true,
+      "expected_cause": "CP05 forbidden native operation"
+    },
+    {
+      "case": "new_Link_input_write",
+      "rejected": true,
+      "expected_cause": "CP05 forbidden native operation"
+    },
+    {
+      "case": "direct_mode_write",
+      "rejected": true,
+      "expected_cause": "CP05 forbidden native operation"
+    },
+    {
+      "case": "C5_mode_readback_removed",
+      "rejected": true,
+      "expected_cause": "CP05 exact native writer inventory"
+    },
+    {
+      "case": "Fury_parry_changed",
+      "rejected": true,
+      "expected_cause": "CP05 reviewed/frozen source changed: src/parry_core.hpp"
+    },
+    {
+      "case": "Blue_rate_changed",
+      "rejected": true,
+      "expected_cause": "CP05 reviewed/frozen source changed: src/cp04_combo_core.hpp"
+    },
+    {
+      "case": "HUD_root_changed",
+      "rejected": true,
+      "expected_cause": "CP05 reviewed/frozen source changed: src/mod.cpp"
+    },
+    {
+      "case": "balance_changed",
+      "rejected": true,
+      "expected_cause": "CP05 reviewed/frozen source changed: src/balance_core.hpp"
+    },
+    {
+      "case": "native_Find_oracle_changed",
+      "rejected": true,
+      "expected_cause": "CP05 reviewed/frozen source changed: tests/reference/cp05_native_find.inc"
+    },
+    {
+      "case": "Expansion_Random_odds_changed",
+      "rejected": true,
+      "expected_cause": "CP05 reviewed/frozen source changed: tests/cp21"
+    },
+    {
+      "case": "Expansion_Fury_duration_changed",
+      "rejected": true,
+      "expected_cause": "CP05 reviewed/frozen source changed: tests/cp21"
+    },
+    {
+      "case": "C5_receipt_guard_removed",
+      "rejected": true,
+      "expected_cause": "CP05 reviewed/frozen source changed: src/cp05_adapter.inc"
+    },
+    {
+      "case": "committed_contact_integration_omitted",
+      "rejected": true,
+      "expected_cause": "CP05 exact integration delta changed: mod.cpp"
+    },
+    {
+      "case": "frozen_inventory_emptied",
+      "rejected": true,
+      "expected_cause": "must contain32 exact base files"
+    }
+  ],
+  "timeouts": 0
+}

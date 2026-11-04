@@ -1,0 +1,15 @@
+{
+  "status": "NATIVE_REFERENCE_SOURCE_PASS",
+  "sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "expansion_commit": "fe47c8b828939829914d466a425cb1e2c0223cd9",
+  "native_find_fixture_exact": true,
+  "normal_witness": "verified E_OC2 profile + actual ATTACK0 PRE + fresh B/C frame1 rawrate1 in earlyPOST + normal115 write in ExpansionPOST0 + identical BCK/end/frame in latePOST",
+  "fury_witness": "existing verified two-sphere ATP3/6 classifier, backed by exact dynamic_policy projection; fresh-start witness also required",
+  "private_cause_api": "NONE; no private mod state read or guessed ABI",
+  "black_rate_reason": "per-swing1.0/1.15 capped at existing normal rate, below frozen POST08>=1.5 Fury/chip veto; no Fury repair",
+  "continuation": "latePOST entry is seen by the NEXT ExpansionPRE as ATTACK0; no synthetic executeAttack calls",
+  "timer": "2->1 native-only lease compare-restored in the same Find4 before ExpansionPOST; changed native modes keep their own timer",
+  "asset_durations": "NOT_OBSERVED; actual getEnd/isStop in production;42/47 lab fixtures synthetic",
+  "native_game_executed": false,
+  "errors": []
+}

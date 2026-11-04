@@ -1,0 +1,11 @@
+{
+  "status": "NATIVE_REFERENCE_SOURCE_PASS",
+  "sdk_commit": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "exact_new_references": 6,
+  "ordering": "OffAt -> native damage_check plus its POST callbacks -> original Attack/Find -> play -> matrices -> cc_set -> execute POST",
+  "raw_Tg": "Native cooldown can ignore it; POST05 can suppress its zeroHP reaction. Observe committed outcome before cancelling.",
+  "geometry": "Actual cc_set centres/radii and native pair/front predicates; lab joint matrices and broadphase I/O remain synthetic",
+  "authentic_BCK_joint_poses_available": false,
+  "native_game_executed": false,
+  "errors": []
+}

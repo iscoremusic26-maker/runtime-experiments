@@ -1,0 +1,20 @@
+CP05_TIMING kind=RED4 clip=B reverse=0 intervals=68,46,72 native_game_executed=false
+CP05_TIMING kind=RED4 clip=C reverse=0 intervals=68,46,72 native_game_executed=false
+CP05_TIMING kind=RED4 clip=M reverse=0 intervals=68,46,72 native_game_executed=false
+CP05_TIMING kind=RED4 clip=B reverse=1 intervals=68,46,72 native_game_executed=false
+CP05_TIMING kind=RED4 clip=C reverse=1 intervals=68,46,72 native_game_executed=false
+CP05_TIMING kind=RED4 clip=M reverse=1 intervals=68,46,72 native_game_executed=false
+CP05_TIMING kind=BLACK8 clip=B reverse=0 intervals=65,67,46,46,46,46,70 native_game_executed=false
+CP05_TIMING kind=BLACK8 clip=C reverse=0 intervals=65,67,46,46,46,46,70 native_game_executed=false
+CP05_TIMING kind=BLACK8 clip=M reverse=0 intervals=65,67,46,46,46,46,70 native_game_executed=false
+CP05_TIMING kind=BLACK8 clip=B reverse=1 intervals=65,67,46,46,46,46,70 native_game_executed=false
+CP05_TIMING kind=BLACK8 clip=C reverse=1 intervals=65,67,46,46,46,46,70 native_game_executed=false
+CP05_TIMING kind=BLACK8 clip=M reverse=1 intervals=65,67,46,46,46,46,70 native_game_executed=false
+CP05_TIMING kind=BLACK7 clip=B reverse=0 intervals=46,68,70,56,56,56 native_game_executed=false
+CP05_TIMING kind=BLACK7 clip=C reverse=0 intervals=46,68,70,56,56,56 native_game_executed=false
+CP05_TIMING kind=BLACK7 clip=M reverse=0 intervals=46,68,70,56,56,56 native_game_executed=false
+CP05_TIMING kind=BLACK7 clip=B reverse=1 intervals=46,68,70,56,56,56 native_game_executed=false
+CP05_TIMING kind=BLACK7 clip=C reverse=1 intervals=46,68,70,56,56,56 native_game_executed=false
+CP05_TIMING kind=BLACK7 clip=M reverse=1 intervals=46,68,70,56,56,56 native_game_executed=false
+CP05_ADAPTER checks=142364 failures=0 RESULT=LAB_PASS native_attack_and_find_exact=true expansion_red_black_exact_policy=true native_game_executed=false visual=HUMAN_RUNTIME_PENDING
+
