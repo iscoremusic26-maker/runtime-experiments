@@ -53,6 +53,14 @@
       "state": "MSVC_PE_NEW_WRITER_SCOPES_NEW_CP04_LABS_34_MUTATIONS_PASS_OLD_VERSION_LABEL_ASSERT_FAILED",
       "package_produced": false,
       "cause": "compat_lab still required kModVersion0.11.6 despite the approved checkpoint version0.11.7. Only that version expectation changes; posture/reaction component version checks stay0.6.0. All20 GCC labs and the byte-identical formatter sample passed after correcting the label."
+    },
+    {
+      "run": 41745492666,
+      "source": "3c3d4cfe6a5fe827071dc639c7e35aea5eacc8c2",
+      "ci": "5fe866aaa646335104999ad35a5ecf62ad494d9b",
+      "state": "MSVC_20_LABS_CP04_MUTATIONS_PE_PASS_OLD_MUTATION_POSITIVE_CLONE_MISSING_NEW_REFERENCES",
+      "package_produced": false,
+      "cause": "Legacy source-audit clone copied only cp06_reference and fixtures, omitting newly pinned tests/reference and tests/cp21. Clone now copies all tests; strict source/hash gate retained, missing-reference negative still rejected."
     }
   ],
   "latest_source_delta": "Reuse frozen actual LNK input snapshot after its R release/rearm processing; test same-tick rearm R+B and consumed-B snapshot in both hook registration orders. Untrusted native clip resets invalidate current provenance while preserving the previous contact-pass record. Strict exact known speed handoff.",
