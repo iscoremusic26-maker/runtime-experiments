@@ -1,0 +1,733 @@
+{
+  "status": "LAB_TIMING_PASS",
+  "source": "2d103c5562f7199b875d5c4c7de7f00a32922a61",
+  "compiler": "g++ C++20 on Linux; not Windows runtime",
+  "native_function_body_exact": true,
+  "production_adapter_sha256": "de94f0844d65d9b33d8af6f2c9019242debe00d2158d1ecb8e93854d6b57d6ee",
+  "cases": [
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": false,
+      "group_level": 1,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": false,
+      "group_level": 1,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": false,
+      "group_level": 2,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": false,
+      "group_level": 2,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": false,
+      "group_level": 3,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": false,
+      "group_level": 3,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": true,
+      "group_level": 1,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": true,
+      "group_level": 1,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": true,
+      "group_level": 2,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": true,
+      "group_level": 2,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": true,
+      "group_level": 3,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": false,
+      "opposite_registration_order": true,
+      "group_level": 3,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": false,
+      "group_level": 1,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": false,
+      "group_level": 1,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": false,
+      "group_level": 2,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": false,
+      "group_level": 2,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": false,
+      "group_level": 3,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": false,
+      "group_level": 3,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": true,
+      "group_level": 1,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": true,
+      "group_level": 1,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": true,
+      "group_level": 2,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": true,
+      "group_level": 2,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": true,
+      "group_level": 3,
+      "native_BC_variant": "B",
+      "synthetic_clip_end": 42,
+      "native_swing_start_local_ticks": [
+        1,
+        55,
+        109,
+        140
+      ],
+      "native_swing_exit_local_ticks": [
+        43,
+        97,
+        138,
+        169
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        69,
+        119,
+        150
+      ],
+      "AtSet_intervals": [
+        54,
+        50,
+        31
+      ]
+    },
+    {
+      "expansion_policy": true,
+      "opposite_registration_order": true,
+      "group_level": 3,
+      "native_BC_variant": "C",
+      "synthetic_clip_end": 47,
+      "native_swing_start_local_ticks": [
+        1,
+        60,
+        119,
+        153
+      ],
+      "native_swing_exit_local_ticks": [
+        48,
+        107,
+        151,
+        185
+      ],
+      "actual_AtSet_begin_in_port_local_ticks": [
+        15,
+        74,
+        129,
+        163
+      ],
+      "AtSet_intervals": [
+        59,
+        55,
+        34
+      ]
+    }
+  ],
+  "timing_basis": "actual production callbacks plus unmodified native executeAttack compiled against modeled I/O; local simulation executions, injected collisions not used for these no-contact rows",
+  "clip_end_evidence": "42/47 here are synthetic fixture inputs, not a claim of mounted/authenticated BCK asset duration",
+  "native_game_executed": false,
+  "human_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING"
+}

@@ -1,0 +1,106 @@
+{
+  "local": {
+    "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "errors": [],
+    "package_sha256": "e446ed3ee1111837a9feed628adf939942a006e60913fe66b00d48986b71826e",
+    "package_bytes": 147197,
+    "dll_sha256": "037c4b515364ce577a4aa4683eadd66afaf1bced95f1d4cca7705ab3f8b2b5d6",
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "version": "0.11.7",
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "pe_audit_status": "PE_AUDIT_PASS",
+    "hook_thunk_bound_import": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "filename": "LIGHT_FADES_TWICE_CP04_0_11_7_PRIVATE_TEST_windows-amd64_2d103c5562f7.dusk",
+    "runtime_tested": false
+  },
+  "independent_windows_job": {
+    "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+    "errors": [],
+    "package_sha256": "e446ed3ee1111837a9feed628adf939942a006e60913fe66b00d48986b71826e",
+    "package_bytes": 147197,
+    "dll_sha256": "037c4b515364ce577a4aa4683eadd66afaf1bced95f1d4cca7705ab3f8b2b5d6",
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "version": "0.11.7",
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "pe_audit_status": "PE_AUDIT_PASS",
+    "hook_thunk_bound_import": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "filename": "LIGHT_FADES_TWICE_CP04_0_11_7_PRIVATE_TEST_windows-amd64_2d103c5562f7.dusk",
+    "runtime_tested": false
+  },
+  "github": {
+    "jobs": [
+      {
+        "id": 126300959997,
+        "name": "build",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "id": 126307702902,
+        "name": "independent-download",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "artifacts": {
+      "independent": {
+        "id": 13285425024,
+        "name": "CP04_DOWNLOAD_VERIFIED_41746570392_1",
+        "bytes": 621,
+        "expires_at": "2026-12-04T00:40:50Z",
+        "expired": false
+      },
+      "text": {
+        "id": 13284945721,
+        "name": "CP04_TEXT_41746570392_1",
+        "bytes": 346455,
+        "expires_at": "2026-12-04T00:40:18Z",
+        "expired": false
+      },
+      "package": {
+        "id": 13283289812,
+        "name": "CP04_TEST_41746570392_1",
+        "bytes": 150084,
+        "expires_at": "2026-12-04T00:40:20Z",
+        "expired": false
+      }
+    }
+  },
+  "published_archive_digests": [
+    {
+      "artifact_id": 13285425024,
+      "zip_sha256": "a4f16d3851556c7f007e84674dd88dcfec7aa5bbf49fefdea979a4219108de85",
+      "matches_github_digest": true,
+      "zip_crc": "PASS"
+    },
+    {
+      "artifact_id": 13284945721,
+      "zip_sha256": "f4a6a608ed90dd6afcc99399ce45db17081acf3d9a261949e2ea91b5504bacbf",
+      "matches_github_digest": true,
+      "zip_crc": "PASS"
+    },
+    {
+      "artifact_id": 13283289812,
+      "zip_sha256": "b7935d7c47c8781728e5db27576386114ab44b6966a0c27310598b0084fb960d",
+      "matches_github_digest": true,
+      "zip_crc": "PASS"
+    }
+  ],
+  "dusk_inner_crc": "PASS"
+}

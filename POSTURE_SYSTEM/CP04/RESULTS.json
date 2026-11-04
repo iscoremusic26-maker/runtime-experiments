@@ -1,28 +1,132 @@
 {
+  "checkpoint": "LIGHT FADES TWICE CP04",
+  "state": "PRIVATE_TEST_TECHNICAL_PASS_HUMAN_RUNTIME_PENDING",
   "version": "0.11.7",
   "technical_id": "dev.posture.post05_selective_reactions",
   "compiled_base": "8c72aec291a7473f1752c702137229cc2224c998",
+  "compiled_source": "2d103c5562f7199b875d5c4c7de7f00a32922a61",
   "source_branch": "feature/light-fades-twice-cp04-0-11-7",
-  "state": "SOURCE_READY_WINDOWS_CI_PENDING",
-  "local_evidence": {
-    "cp04_core_checks": 307095,
-    "cp04_production_callback_checks": 12439,
-    "behavior_mutations": 34,
-    "detected": 34,
-    "timeouts": 0,
-    "new_source_negatives": 11,
-    "source_audit": "SOURCE_AUDIT_PASS",
-    "native_game_executed": false,
-    "pe_native_name_policy_checks": 29,
-    "all_gcc_labs": 20,
-    "all_gcc_lab_checks": 2922521,
-    "formatter_unchanged": true
+  "source_compare_url": "https://github.com/iscoremusic26-maker/Mods-Duskligh/compare/8c72aec291a7473f1752c702137229cc2224c998...2d103c5562f7199b875d5c4c7de7f00a32922a61",
+  "ci_commit": "62880e8f5e746ac46278ced41250ef0754f08721",
+  "ci_branch": "ci/light-fades-twice-cp04-0-11-7",
+  "run": 41746570392,
+  "run_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41746570392",
+  "jobs": [
+    {
+      "id": 126300959997,
+      "name": "build",
+      "status": "completed",
+      "conclusion": "success"
+    },
+    {
+      "id": 126307702902,
+      "name": "independent-download",
+      "status": "completed",
+      "conclusion": "success"
+    }
+  ],
+  "documentary_commit": "Separate successor commit containing this report; this field deliberately does not claim that successor was compiled.",
+  "artifact": {
+    "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/41746570392/artifacts/13283289812",
+    "id": 13283289812,
+    "filename": "LIGHT_FADES_TWICE_CP04_0_11_7_PRIVATE_TEST_windows-amd64_2d103c5562f7.dusk",
+    "bytes": 147197,
+    "sha256": "e446ed3ee1111837a9feed628adf939942a006e60913fe66b00d48986b71826e",
+    "dll_sha256": "037c4b515364ce577a4aa4683eadd66afaf1bced95f1d4cca7705ab3f8b2b5d6",
+    "expires_at": "2026-12-04T00:40:20Z",
+    "status": "ARTIFACT_DOWNLOADED_VERIFIED"
   },
-  "runtime": "HUMAN_RUNTIME_PENDING",
-  "shield_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING",
-  "artifact": null,
-  "note": "The final separate documentary commit will bind the actual compiled source, successful run and downloaded hashes. No artifact or Windows success is asserted here.",
-  "superseded_runs": [
+  "evidence_artifacts": {
+    "text": {
+      "id": 13284945721,
+      "name": "CP04_TEXT_41746570392_1",
+      "bytes": 346455,
+      "expires_at": "2026-12-04T00:40:18Z",
+      "expired": false
+    },
+    "independent": {
+      "id": 13285425024,
+      "name": "CP04_DOWNLOAD_VERIFIED_41746570392_1",
+      "bytes": 621,
+      "expires_at": "2026-12-04T00:40:50Z",
+      "expired": false
+    }
+  },
+  "components": {
+    "blue_2_plus_2": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING"
+    ],
+    "general_native_shield_chain": [
+      "SOURCE_IMPLEMENTED",
+      "SOURCE_AUDIT_PASS",
+      "LAB_PASS",
+      "WINDOWS_MSVC_PASS",
+      "PE_AUDIT_PASS",
+      "ARTIFACT_DOWNLOADED_VERIFIED",
+      "HUMAN_RUNTIME_PENDING",
+      "VISUAL_SHIELD_MOTION_HUMAN_PENDING"
+    ]
+  },
+  "counts": {
+    "msvc_labs": 20,
+    "msvc_lab_checks": 3188646,
+    "cp04_core_checks": 307095,
+    "cp04_callback_checks": 12439,
+    "all_mutations": 468,
+    "new_cp04_mutations": 34,
+    "timeouts": 0,
+    "pe_negatives": 20,
+    "actual_instruction_negatives": 4,
+    "cp04_source_negatives": 11,
+    "pe_name_thunk_store_policy_checks": 29,
+    "game_imports": 63,
+    "hook_targets": 24,
+    "legacy_functions": 107,
+    "legacy_headers": 15,
+    "service_contracts": 7,
+    "legacy_source_mutations_included": 114
+  },
+  "telemetry": "640 detail lines; complete read-only periodic aggregate every1800 observed simulation ticks, deduplicated per tick; independent SHUTDOWN aggregate with3 gap and3 native AtSet interval counts/min/max.",
+  "behavior": {
+    "selection": "1/2 once per genuine Blue native attack opportunity, including solo/pair/group",
+    "rates": [
+      1,
+      1,
+      1.5,
+      1.5
+    ],
+    "minimum_gap_sim_actor_executes": [
+      12,
+      12,
+      2
+    ],
+    "native_braking_may_extend_gaps": true,
+    "break_at100_cancels_before_next_swing": true,
+    "new_R_B_and_verified_advancing_native_clip_per_parry": true,
+    "one_parry_per_native_shield_action_global": true,
+    "buffer_ticks": 6,
+    "permit_ticks": 30
+  },
+  "preservation": "See PRESERVATION.json: all existing production code matches compiled0.11.6 after exact authorized CP04 insertions/version; no HUD or other-mod source changes.",
+  "material_parry_validity_changes": [
+    "No parry credit before positive native clip progression",
+    "At most one confirmed parry globally per native Shield Attack; other simultaneous contacts remain native blocks",
+    "Untrusted native resets cannot borrow prior input"
+  ],
+  "rollback": {
+    "version": "0.11.6",
+    "source": "8c72aec291a7473f1752c702137229cc2224c998",
+    "run": 41703645193,
+    "artifact": 13264179241,
+    "sha256": "0aa8e8d2941d644a33765fe288bc3f9867cc1e188506fed691caf069c63fb019"
+  },
+  "superseded_failed_runs": [
     {
       "run": 41738605286,
       "source": "e7dbcba9c49ff4778ebc163d3eddef8d17a2066d",
@@ -61,9 +165,27 @@
       "state": "MSVC_20_LABS_CP04_MUTATIONS_PE_PASS_OLD_MUTATION_POSITIVE_CLONE_MISSING_NEW_REFERENCES",
       "package_produced": false,
       "cause": "Legacy source-audit clone copied only cp06_reference and fixtures, omitting newly pinned tests/reference and tests/cp21. Clone now copies all tests; strict source/hash gate retained, missing-reference negative still rejected."
+    },
+    {
+      "run": 41746072029,
+      "source": "5fd982637a72e0863722b0a04fde82b1afa8c560",
+      "ci": "507d0b9bad8f34a3cd7bfb6f8a972d12ea853419",
+      "state": "MSVC_20_LABS_CP04_MUTATIONS_PE_PASS_OLD_MUTATION_POSITIVE_CLONE_MISSING_NEW_REFERENCES",
+      "package_produced": false
     }
   ],
-  "latest_source_delta": "Reuse frozen actual LNK input snapshot after its R release/rearm processing; test same-tick rearm R+B and consumed-B snapshot in both hook registration orders. Untrusted native clip resets invalidate current provenance while preserving the previous contact-pass record. Strict exact known speed handoff.",
-  "native_import_thunk_reference": "Actual0.11.6 MSVC procGuardBreakInit uses E8 to an FF25 import thunk (one direct E8, zero in-scope FF15). CP04 scope audit resolves both forms with a bounded8-hop chain and wrong-target/loop/bounds negatives.",
-  "complete_runtime_telemetry": "Periodic read-only aggregate every1800 observed simulation ticks, deduplicated at the same tick; independent complete SHUTDOWN summary. Both bypass the640 detail-line cap and report gap/AtSet interval counts/min/max."
+  "superseded_intermediate_run": {
+    "run": 41745492666,
+    "source": "3c3d4cfe6a5fe827071dc639c7e35aea5eacc8c2",
+    "reason": "Added explicitly required periodic aggregate; not the delivered candidate"
+  },
+  "limits": [
+    "Native game/DLL never executed; no renderer/broadphase or human motion certification",
+    "42/47 and23..120 are synthetic lab clip lengths; authentic assets not mounted",
+    "Actual eight-mod A/B,30/60FPS and dense-group performance remain human runtime pending",
+    "Hook coexistence uses verified SDK priority and exact Expansion0.17 source; labs cover opposite registration orders"
+  ],
+  "runtime": "HUMAN_RUNTIME_PENDING",
+  "shield_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING",
+  "pr_merge_tag_release": false
 }
