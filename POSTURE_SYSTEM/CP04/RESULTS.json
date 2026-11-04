@@ -6,14 +6,17 @@
   "state": "SOURCE_READY_WINDOWS_CI_PENDING",
   "local_evidence": {
     "cp04_core_checks": 307095,
-    "cp04_production_callback_checks": 12285,
+    "cp04_production_callback_checks": 12429,
     "behavior_mutations": 34,
     "detected": 34,
     "timeouts": 0,
     "new_source_negatives": 11,
     "source_audit": "SOURCE_AUDIT_PASS",
     "native_game_executed": false,
-    "pe_native_name_policy_checks": 29
+    "pe_native_name_policy_checks": 29,
+    "all_gcc_labs": 20,
+    "all_gcc_lab_checks": 2922521,
+    "formatter_unchanged": true
   },
   "runtime": "HUMAN_RUNTIME_PENDING",
   "shield_visual": "VISUAL_SHIELD_MOTION_HUMAN_PENDING",
@@ -42,8 +45,17 @@
       "state": "MSVC_PASS_PE_PASS_LEGACY_STORE_PASS_NEW_SCOPE_RATE_ENCODING_REJECTED",
       "package_produced": false,
       "cause": "New scope detector accepted MOVSS only; native float-bit copy may use equivalent32bit MOV. The strict detector now recognizes these two32bit forms, rejects REX.W/other offsets, mutates the actual matched displacement and records all bounded writer bytes for review. Both native import bindings and the16bit gap store already passed."
+    },
+    {
+      "run": 41743296985,
+      "source": "c54794554a0ea448ff8fffe2c6adf14567f3c2a2",
+      "ci": "0e5c0f0b494bfeaab72c32d76916de76561ad540",
+      "state": "MSVC_PE_NEW_WRITER_SCOPES_NEW_CP04_LABS_34_MUTATIONS_PASS_OLD_VERSION_LABEL_ASSERT_FAILED",
+      "package_produced": false,
+      "cause": "compat_lab still required kModVersion0.11.6 despite the approved checkpoint version0.11.7. Only that version expectation changes; posture/reaction component version checks stay0.6.0. All20 GCC labs and the byte-identical formatter sample passed after correcting the label."
     }
   ],
   "latest_source_delta": "Reuse frozen actual LNK input snapshot after its R release/rearm processing; test same-tick rearm R+B and consumed-B snapshot in both hook registration orders. Untrusted native clip resets invalidate current provenance while preserving the previous contact-pass record. Strict exact known speed handoff.",
-  "native_import_thunk_reference": "Actual0.11.6 MSVC procGuardBreakInit uses E8 to an FF25 import thunk (one direct E8, zero in-scope FF15). CP04 scope audit resolves both forms with a bounded8-hop chain and wrong-target/loop/bounds negatives."
+  "native_import_thunk_reference": "Actual0.11.6 MSVC procGuardBreakInit uses E8 to an FF25 import thunk (one direct E8, zero in-scope FF15). CP04 scope audit resolves both forms with a bounded8-hop chain and wrong-target/loop/bounds negatives.",
+  "complete_runtime_telemetry": "SHUTDOWN also reports the observed3 gap counts/min/max and3 native AtSet interval counts/min/max, plus paused executions, after detailed logging reaches its cap."
 }
