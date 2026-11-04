@@ -6,7 +6,7 @@
   "state": "SOURCE_READY_WINDOWS_CI_PENDING",
   "local_evidence": {
     "cp04_core_checks": 307095,
-    "cp04_production_callback_checks": 12429,
+    "cp04_production_callback_checks": 12439,
     "behavior_mutations": 34,
     "detected": 34,
     "timeouts": 0,
@@ -57,5 +57,5 @@
   ],
   "latest_source_delta": "Reuse frozen actual LNK input snapshot after its R release/rearm processing; test same-tick rearm R+B and consumed-B snapshot in both hook registration orders. Untrusted native clip resets invalidate current provenance while preserving the previous contact-pass record. Strict exact known speed handoff.",
   "native_import_thunk_reference": "Actual0.11.6 MSVC procGuardBreakInit uses E8 to an FF25 import thunk (one direct E8, zero in-scope FF15). CP04 scope audit resolves both forms with a bounded8-hop chain and wrong-target/loop/bounds negatives.",
-  "complete_runtime_telemetry": "SHUTDOWN also reports the observed3 gap counts/min/max and3 native AtSet interval counts/min/max, plus paused executions, after detailed logging reaches its cap."
+  "complete_runtime_telemetry": "Periodic read-only aggregate every1800 observed simulation ticks, deduplicated at the same tick; independent complete SHUTDOWN summary. Both bypass the640 detail-line cap and report gap/AtSet interval counts/min/max."
 }
