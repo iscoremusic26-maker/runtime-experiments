@@ -1,0 +1,1390 @@
+{
+  "ci_head": "06c64426de52fc8268e5499e1780c2ce5d4f89f7",
+  "cp06_pe_scope": {
+    "actual_instruction_negatives_rejected": 3,
+    "errors": [],
+    "native_runtime": false,
+    "scope_bytes": 80,
+    "scope_hex": "0f2e05bd9703007a40753e488b0596bc0200f30f5880f09800008890e6990000f30f1180f0980000488b0579bc0200f30f1080f09800000f2ec27a0d750b3890e69900007503b001c332c0c3cccccccc",
+    "scope_sha256": "6d08d28c44903efa783ede4d43ed253a7ab50dbbe74de1e4af3412ce527393eb",
+    "status": "CP06_PE_SCOPE_PASS",
+    "stores": {
+      "displaced_stores": 2,
+      "encodings": [
+        "MOVSS_F32",
+        "MOV8_REG"
+      ],
+      "imported_global_loads": 2,
+      "life_store": 1,
+      "type_store": 1
+    }
+  },
+  "dependencies": {
+    "aurora": "3227d76c60e1e782ca576610bce61c9e7744d8be",
+    "host_exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049",
+    "importlib_sha256": "4dc4a511d761e6eb52541733fa31919a2234ed9cd5b2f16f8fea91c468f30ca4",
+    "official_sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+    "win_zip_sha256": "ac63514eeb13cd4e9bd22be02dabee4952d1331a78f0496326bba2b577b12caf"
+  },
+  "dll_loaded": false,
+  "ended_utc": "2026-11-06T22:02:00.852834+00:00",
+  "formatter_sample_identical_msvc_gpp": true,
+  "game_executed": false,
+  "host_built": false,
+  "hud_reference_renders": [
+    "POST07_REFERENCE_RENDER_1080p.png",
+    "POST07_REFERENCE_RENDER_2160p.png",
+    "POST07_REFERENCE_RENDER_720p.png"
+  ],
+  "labels": [
+    "WINDOWS_MSVC_BUILD_OK",
+    "PE_NEGATIVES_REJECTED",
+    "LAB_PASS_MSVC",
+    "WINDOWS_MSVC_PASS"
+  ],
+  "ledger_files": 191,
+  "lnk01_reference_renders": [
+    "LNK01_REFERENCE_RENDER_1080p.png",
+    "LNK01_REFERENCE_RENDER_720p.png",
+    "LNK01_REFERENCE_RENDER_ultrawide_2560x1080.png"
+  ],
+  "loose_dll": {
+    "bytes": 1283072,
+    "sha256": "8473d76c31bb12531e52c9b207723dcdabebca25a5112c35a6f2cb72730df221"
+  },
+  "package": {
+    "bytes": 174626,
+    "dll_in_package_equals_loose": true,
+    "members": [
+      "mod.json",
+      "lib/",
+      "lib/windows-amd64/",
+      "lib/windows-amd64/mod.dll"
+    ],
+    "mod_id": "dev.posture.post05_selective_reactions",
+    "mod_json_equals_source": true,
+    "sha256": "7bcebf6ff442147d6741daf65d9b1e2128b524af8219296272ab64f236d15be3",
+    "version": "0.11.11"
+  },
+  "pe_audit": {
+    "errors": [],
+    "hook_thunk_bound_import": [
+      "dusklight.exe",
+      "?damage_check@daE_OC_c@@QEAAXXZ"
+    ],
+    "pinned": true,
+    "status": "PE_AUDIT_PASS"
+  },
+  "pe_negatives": {
+    "baseline": "PE_AUDIT_PASS",
+    "cases": [
+      {
+        "case": "N1 arquitectura i386 en vez de AMD64",
+        "first_error": "machine is not AMD64",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N2 import nuevo del juego (fopAcM_SearchByID alterado)",
+        "first_error": "unreviewed game import ?fopAcM_SearchByIE@@YAHIPEAPEAVfopAc_ac_c@@@Z",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N3 import mutador del sistema (WriteProcessMemory)",
+        "first_error": "forbidden symbol WriteProcessMemory in imports/exports: ['WriteProcessMemory']",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N4 import CRT nuevo (memset -> memmov)",
+        "first_error": "PIN_MISMATCH imports: got {'dusklight.exe': ['??0J2DOrthoGraph@@QEAA@MMMMMM@Z', '?_delete@",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N5 export alterado (mod_update)",
+        "first_error": "PIN_MISMATCH exports: got ['mod_ctx', 'mod_initialize', 'mod_meta', 'mod_shutdown', 'mod_u",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N6 el registro HOOK_MEM apunta a otro metodo (nombre en modmeta)",
+        "first_error": "unexpected hook target set",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N6b hook reenlazado a otro simbolo importado (thunk)",
+        "first_error": "hook thunk bound to ('dusklight.exe', '?damage_chexk@daE_OC_c@@QEAAXXZ')",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N7 dependencia alterada (KERNEL32.dll)",
+        "first_error": "PIN_MISMATCH imports: got {'dusklight.exe': ['??0J2DOrthoGraph@@QEAA@MMMMMM@Z', '?_delete@",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N8 import del juego no revisado (getStartStageName -> otro)",
+        "first_error": "unreviewed game import ?dComIfGp_getStartStageNamX@@YAPEBDXZ",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N9 archivo truncado",
+        "first_error": "expected exactly 15 HOOK_MEM + 9 audited Link HOOK_MEM_EXT (inherited22 + CP04 execute and",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N10 cabecera MZ corrupta",
+        "first_error": "ValueError",
+        "rejected": true,
+        "status": "REJECTED_BY_EXCEPTION"
+      },
+      {
+        "case": "N15 native Link PMF size corrupted",
+        "first_error": "extended PMF rejected: unapproved extended member target/layout",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N16 null Link materializer",
+        "first_error": "extended PMF rejected: unmapped rva -0x180000000",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N17 arbitrary materializer code",
+        "first_error": "extended PMF rejected: unsupported materializer opcode at 0x1800263a0: cc83ec28488d05ff5c0",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N18 unexpected extended hook flags",
+        "first_error": "extended PMF rejected: unapproved extended member target/layout",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N19 extended target name changed",
+        "first_error": "unexpected hook target set",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N14 transicion nativa de Link no revisada (procGuardBreakInit -> otro metodo)",
+        "first_error": "unreviewed game import ?procGuardBreakInix@daAlink_c@@QEAAHXZ",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N11 hook virtual renombrado (dMeterButton_c::draw -> otro metodo)",
+        "first_error": "unexpected hook target set",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N12 vtable del hook virtual alterada",
+        "first_error": "hook names ['??_7dMeterButtoN_c@@6B@', 'dMeterButton_c::draw']",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      },
+      {
+        "case": "N13 thunk vcall del hook virtual alterado (otro slot / salto directo)",
+        "first_error": "virtual hook dMeterButton_c::draw: PMF is not a slot-0 vcall thunk (got None)",
+        "rejected": true,
+        "status": "PE_AUDIT_FAIL"
+      }
+    ],
+    "passed_unexpectedly": 0
+  },
+  "phases": [
+    {
+      "command": [
+        "cl",
+        "/Bv",
+        "/c",
+        "<WORK>\\build\\version.cpp",
+        "/Fo<WORK>\\build\\version.obj"
+      ],
+      "exit": 0,
+      "label": "compiler",
+      "seconds": 2.234
+    },
+    {
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "exit": 0,
+      "label": "cmake-version",
+      "seconds": 0.75
+    },
+    {
+      "command": [
+        "ninja",
+        "--version"
+      ],
+      "exit": 0,
+      "label": "ninja-version",
+      "seconds": 0.531
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_post04_tools.py"
+      ],
+      "exit": 0,
+      "label": "tool-tests",
+      "seconds": 0.438
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_pmf_audit.py"
+      ],
+      "exit": 0,
+      "label": "pmf-static-tests",
+      "seconds": 0.047
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_hudfix_adapter.py"
+      ],
+      "exit": 0,
+      "label": "hudfix-production-adapter",
+      "seconds": 9.578
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\fix03_audit.py",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05"
+      ],
+      "exit": 0,
+      "label": "fix03-parity",
+      "seconds": 0.109
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_fix03_source_negatives.py"
+      ],
+      "exit": 0,
+      "label": "fix03-source-negatives",
+      "seconds": 16.75
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp04_pe_names.py"
+      ],
+      "exit": 0,
+      "label": "cp04-pe-name-policy",
+      "seconds": 0.063
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\cp04_reference_audit.py",
+        "<OFFICIAL>"
+      ],
+      "exit": 0,
+      "label": "cp04-native-reference",
+      "seconds": 0.047
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_pe_policy.py"
+      ],
+      "exit": 0,
+      "label": "cp05-pe-policy",
+      "seconds": 0.062
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\cp05_reference_audit.py",
+        "<OFFICIAL>"
+      ],
+      "exit": 0,
+      "label": "cp05-native-reference",
+      "seconds": 0.047
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\cp05_fix01_reference_audit.py",
+        "<OFFICIAL>"
+      ],
+      "exit": 0,
+      "label": "cp05-fix01-native-reference",
+      "seconds": 0.047
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\cp05_fix02_reference_audit.py",
+        "<OFFICIAL>"
+      ],
+      "exit": 0,
+      "label": "cp05-fix02-native-reference",
+      "seconds": 0.047
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\store_audit.py",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05"
+      ],
+      "exit": 0,
+      "label": "source-barrier",
+      "seconds": 0.437
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\source_audit.py",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05"
+      ],
+      "exit": 0,
+      "label": "source-audit",
+      "seconds": 1.125
+    },
+    {
+      "command": [
+        "cmake",
+        "-S",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05",
+        "-B",
+        "<WORK>\\build",
+        "-G",
+        "Ninja",
+        "-DCMAKE_BUILD_TYPE=Release",
+        "-DDUSK_SOURCE=<OFFICIAL>",
+        "-DDUSK_GAME_EXE=<WORK>\\windows-amd64.lib",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DPOST05_SOURCE_COMMIT=0ef0ad2824832c9e03d899c298b5f9a8e860d590"
+      ],
+      "exit": 0,
+      "label": "configure",
+      "seconds": 8.344
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_selective_reactions",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-mod",
+      "seconds": 12.906
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/headers",
+        "<WORK>\\build\\post05_selective_reactions.dll"
+      ],
+      "exit": 0,
+      "label": "dumpbin-headers",
+      "seconds": 0.063
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/imports",
+        "<WORK>\\build\\post05_selective_reactions.dll"
+      ],
+      "exit": 0,
+      "label": "dumpbin-imports",
+      "seconds": 0.015
+    },
+    {
+      "command": [
+        "dumpbin",
+        "/exports",
+        "<WORK>\\build\\post05_selective_reactions.dll"
+      ],
+      "exit": 0,
+      "label": "dumpbin-exports",
+      "seconds": 0.032
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\store_audit.py",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05",
+        "--dll",
+        "<WORK>\\build\\post05_selective_reactions.dll",
+        "--map",
+        "<WORK>\\build\\post05_selective_reactions.map"
+      ],
+      "exit": 0,
+      "label": "store-audit",
+      "seconds": 0.453
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\cp04_pe_audit.py",
+        "<WORK>\\build\\post05_selective_reactions.dll",
+        "<WORK>\\build\\post05_selective_reactions.map"
+      ],
+      "exit": 0,
+      "label": "cp04-native-writer-scopes",
+      "seconds": 0.094
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\cp05_pe_audit.py",
+        "<WORK>\\build\\post05_selective_reactions.dll",
+        "<WORK>\\build\\post05_selective_reactions.map"
+      ],
+      "exit": 0,
+      "label": "cp05-native-writer-scopes",
+      "seconds": 0.078
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\cp06_pe_audit.py",
+        "<WORK>\\build\\post05_selective_reactions.dll",
+        "<WORK>\\build\\post05_selective_reactions.map"
+      ],
+      "exit": 0,
+      "label": "cp06-native-writer-scope",
+      "seconds": 0.063
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\pe_negatives.py",
+        "<WORK>\\build\\post05_selective_reactions.dll",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\ci\\expected_pe.json"
+      ],
+      "exit": 0,
+      "label": "pe-negatives",
+      "seconds": 1.828
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_hudfix02_adapter.py"
+      ],
+      "exit": 0,
+      "label": "hudfix02-production-adapter",
+      "seconds": 2.984
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp04_adapter.py"
+      ],
+      "exit": 0,
+      "label": "cp04-production-adapter",
+      "seconds": 1.25
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp04_mutations.py"
+      ],
+      "exit": 0,
+      "label": "cp04-mutations",
+      "seconds": 19.844
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp04_source_negatives.py"
+      ],
+      "exit": 0,
+      "label": "cp04-source-negatives",
+      "seconds": 15.156
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_adapter.py"
+      ],
+      "exit": 0,
+      "label": "cp05-production-adapter",
+      "seconds": 2.094
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_mutations.py"
+      ],
+      "exit": 0,
+      "label": "cp05-mutations",
+      "seconds": 31.39
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_source_negatives.py"
+      ],
+      "exit": 0,
+      "label": "cp05-source-negatives",
+      "seconds": 23.625
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_fix01_native.py"
+      ],
+      "exit": 0,
+      "label": "cp05-fix01-native",
+      "seconds": 2.922
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_fix01_geometry.py"
+      ],
+      "exit": 0,
+      "label": "cp05-fix01-geometry",
+      "seconds": 1.094
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_fix01_mutations.py"
+      ],
+      "exit": 0,
+      "label": "cp05-fix01-mutations",
+      "seconds": 43.547
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_fix01_source_negatives.py"
+      ],
+      "exit": 0,
+      "label": "cp05-fix01-source-negatives",
+      "seconds": 18.219
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_fix02_native.py"
+      ],
+      "exit": 0,
+      "label": "cp05-fix02-native",
+      "seconds": 1.437
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_fix02_guard.py"
+      ],
+      "exit": 0,
+      "label": "cp05-fix02-guard",
+      "seconds": 1.438
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_fix02_mutations.py"
+      ],
+      "exit": 0,
+      "label": "cp05-fix02-mutations",
+      "seconds": 24.843
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp05_fix02_source_negatives.py"
+      ],
+      "exit": 0,
+      "label": "cp05-fix02-source-negatives",
+      "seconds": 36.578
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp06_combat.py"
+      ],
+      "exit": 0,
+      "label": "cp06-combat",
+      "seconds": 1.938
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp06_mutations.py"
+      ],
+      "exit": 0,
+      "label": "cp06-mutations",
+      "seconds": 27.531
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp06_source_negatives.py"
+      ],
+      "exit": 0,
+      "label": "cp06-source-negatives",
+      "seconds": 48.844
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\bench_cp06.py",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05",
+        "--cp06",
+        "16",
+        "3000",
+        "15"
+      ],
+      "exit": 0,
+      "label": "cp06-bench-with-cp06",
+      "seconds": 6.328
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\bench_cp06.py",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05",
+        "16",
+        "3000",
+        "15"
+      ],
+      "exit": 0,
+      "label": "cp06-bench-without-cp06-callbacks",
+      "seconds": 5.5
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp0203_adapter.py"
+      ],
+      "exit": 0,
+      "label": "cp0203-production-adapter",
+      "seconds": 0.813
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp0203_reference.py"
+      ],
+      "exit": 0,
+      "label": "cp0203-independent-reference",
+      "seconds": 0.921
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_cp0203_mutations.py"
+      ],
+      "exit": 0,
+      "label": "cp0203-mutations",
+      "seconds": 13.813
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_alignment_pair.py"
+      ],
+      "exit": 0,
+      "label": "cp06-authentic-pair",
+      "seconds": 6.453
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_hit_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab1",
+      "seconds": 3.016
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_hit_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab1",
+      "seconds": 0.015
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lifecycle_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab2",
+      "seconds": 2.422
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lifecycle_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab2",
+      "seconds": 0.094
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_collider_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab3",
+      "seconds": 1.094
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_collider_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab3",
+      "seconds": 0.015
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_posture_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab4",
+      "seconds": 4.969
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_posture_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab4",
+      "seconds": 0.109
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_reaction_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab5",
+      "seconds": 4.0
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_reaction_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab5",
+      "seconds": 0.204
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_compat_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab6",
+      "seconds": 4.609
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_compat_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab6",
+      "seconds": 0.234
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_rb_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab7",
+      "seconds": 3.969
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_rb_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab7",
+      "seconds": 0.25
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_general_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab8",
+      "seconds": 3.156
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_general_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab8",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_break_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab9",
+      "seconds": 4.453
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_break_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab9",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_hud_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab10",
+      "seconds": 6.0
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_hud_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab10",
+      "seconds": 0.062
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_parry_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab11",
+      "seconds": 8.016
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_parry_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab11",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lnk_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab12",
+      "seconds": 5.031
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnk_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab12",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lnks1_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab13",
+      "seconds": 3.89
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnks1_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab13",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_fix01_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab14",
+      "seconds": 5.344
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_fix01_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab14",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lnks2_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab15",
+      "seconds": 4.734
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnks2_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab15",
+      "seconds": 0.594
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_lnks2fix_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab16",
+      "seconds": 4.844
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnks2fix_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab16",
+      "seconds": 0.734
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_balance_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab17",
+      "seconds": 10.75
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_balance_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab17",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_hudfix_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab18",
+      "seconds": 1.812
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_hudfix_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab18",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_cp0203_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab19",
+      "seconds": 2.579
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_cp0203_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab19",
+      "seconds": 0.015
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_cp04_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab20",
+      "seconds": 1.453
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_cp04_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab20",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_cp05_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab21",
+      "seconds": 0.75
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_cp05_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab21",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_cp05_fix02_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab22",
+      "seconds": 1.125
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_cp05_fix02_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab22",
+      "seconds": 0.015
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_cp06_lab",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-lab23",
+      "seconds": 1.313
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_cp06_lab.exe"
+      ],
+      "exit": 0,
+      "label": "run-lab23",
+      "seconds": 0.031
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_fix03_mutations.py"
+      ],
+      "exit": 0,
+      "label": "fix03-mutations",
+      "seconds": 29.531
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\test_fix02_mutations.py"
+      ],
+      "exit": 0,
+      "label": "fix02-mutations",
+      "seconds": 58.453
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\run_mutations.py"
+      ],
+      "exit": 0,
+      "label": "rework-mutations",
+      "seconds": 521.5
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_hud_lab.exe",
+        "--render",
+        "<WORK>\\evidence"
+      ],
+      "exit": 0,
+      "label": "hud-reference-renders",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_lnk_lab.exe",
+        "--render",
+        "<WORK>\\evidence"
+      ],
+      "exit": 0,
+      "label": "lnk01-reference-renders",
+      "seconds": 0.25
+    },
+    {
+      "command": [
+        "<WORK>\\build\\post05_posture_lab.exe",
+        "--emit-sample",
+        "<WORK>\\evidence\\sample-msvc.log"
+      ],
+      "exit": 0,
+      "label": "emit-sample",
+      "seconds": 0.016
+    },
+    {
+      "command": [
+        "C:\\hostedtoolcache\\windows\\Python\\3.12.10\\x64\\python.exe",
+        "-I",
+        "<WORKSPACE>\\POSTURE_SYSTEM\\POST05\\tests\\extract_post04_evidence.py",
+        "--log",
+        "<WORK>\\evidence\\sample-msvc.log",
+        "--output-dir",
+        "<WORK>\\sample-extract"
+      ],
+      "exit": 0,
+      "label": "extract-sample",
+      "seconds": 0.062
+    },
+    {
+      "command": [
+        "cmake",
+        "--build",
+        "<WORK>\\build",
+        "--target",
+        "post05_selective_reactions_package",
+        "--parallel",
+        "2"
+      ],
+      "exit": 0,
+      "label": "build-package",
+      "seconds": 0.297
+    }
+  ],
+  "production_units": [
+    "game_feature.cpp",
+    "hm_bridge.cpp",
+    "mod.cpp",
+    "tracker.cpp"
+  ],
+  "run_id": "42298979283",
+  "source_audit": {
+    "define_hook_count": 22,
+    "errors": [],
+    "files": [
+      "alignment_core.hpp",
+      "balance_adapter.hpp",
+      "balance_core.hpp",
+      "break_core.hpp",
+      "cp04_combo_core.hpp",
+      "cp05_combo_core.hpp",
+      "cp05_fix02_core.hpp",
+      "cp05_fix02_monitor.hpp",
+      "cp06_combat_core.hpp",
+      "engine.hpp",
+      "fix01_core.hpp",
+      "helm_core.hpp",
+      "hit_core.hpp",
+      "hud_core.hpp",
+      "hudfix_core.hpp",
+      "lifecycle_core.hpp",
+      "lnk_core.hpp",
+      "lnks2_core.hpp",
+      "lnks2fix_core.hpp",
+      "mod.cpp",
+      "parry_core.hpp",
+      "posture_core.hpp",
+      "reaction_core.hpp",
+      "shield_chain_core.hpp"
+    ],
+    "status": "SOURCE_AUDIT_PASS"
+  },
+  "source_commit": "0ef0ad2824832c9e03d899c298b5f9a8e860d590",
+  "source_repo": "iscoremusic26-maker/Mods-Duskligh",
+  "started_utc": "2026-11-06T21:43:43.438625+00:00",
+  "status": "POST05_PACKAGE_PASS_DOWNLOAD_PENDING",
+  "toolchain_env": {
+    "VCToolsVersion": "14.51.36231",
+    "VSCMD_ARG_TGT_ARCH": "x64",
+    "VisualStudioVersion": "18.0",
+    "WindowsSDKVersion": "10.0.26100.0\\"
+  }
+}

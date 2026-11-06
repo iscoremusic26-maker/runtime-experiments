@@ -1,0 +1,22 @@
+{
+  "status": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "errors": [],
+  "package_sha256": "7bcebf6ff442147d6741daf65d9b1e2128b524af8219296272ab64f236d15be3",
+  "package_bytes": 174626,
+  "dll_sha256": "8473d76c31bb12531e52c9b207723dcdabebca25a5112c35a6f2cb72730df221",
+  "mod_id": "dev.posture.post05_selective_reactions",
+  "version": "0.11.11",
+  "members": [
+    "mod.json",
+    "lib/",
+    "lib/windows-amd64/",
+    "lib/windows-amd64/mod.dll"
+  ],
+  "pe_audit_status": "PE_AUDIT_PASS",
+  "hook_thunk_bound_import": [
+    "dusklight.exe",
+    "?damage_check@daE_OC_c@@QEAAXXZ"
+  ],
+  "filename": "LIGHT_FADES_TWICE_CP06_0_11_11_PRIVATE_TEST_windows-amd64_0ef0ad282483.dusk",
+  "runtime_tested": false
+}

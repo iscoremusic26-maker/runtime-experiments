@@ -1,0 +1,40 @@
+CP05_FIX01_GUARD_AB source=0.11.8 controller=NATIVE_PLUS_EXPANSION kind=RED4 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=NATIVE_PLUS_EXPANSION kind=RED4 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP04_PLUS_EXPANSION kind=RED4 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP04_PLUS_EXPANSION kind=RED4 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP05_PLUS_EXPANSION kind=RED4 release_R_at=NEVER first_AT=12 second_AT=190 interval=178 max_CP05_gap_ticks=152 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP05_PLUS_EXPANSION kind=RED4 release_R_at=50 first_AT=12 second_AT=190 interval=178 max_CP05_gap_ticks=152 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=NATIVE_PLUS_EXPANSION kind=BLACK8 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=NATIVE_PLUS_EXPANSION kind=BLACK8 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP04_PLUS_EXPANSION kind=BLACK8 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP04_PLUS_EXPANSION kind=BLACK8 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP05_PLUS_EXPANSION kind=BLACK8 release_R_at=NEVER first_AT=12 second_AT=146 interval=134 max_CP05_gap_ticks=107 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP05_PLUS_EXPANSION kind=BLACK8 release_R_at=50 first_AT=12 second_AT=146 interval=134 max_CP05_gap_ticks=107 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=NATIVE_PLUS_EXPANSION kind=BLACK7 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=NATIVE_PLUS_EXPANSION kind=BLACK7 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP04_PLUS_EXPANSION kind=BLACK7 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP04_PLUS_EXPANSION kind=BLACK7 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP05_PLUS_EXPANSION kind=BLACK7 release_R_at=NEVER first_AT=12 second_AT=50 interval=38 max_CP05_gap_ticks=11 native_game_executed=false
+CP05_FIX01_GUARD_AB source=0.11.8 controller=CP05_PLUS_EXPANSION kind=BLACK7 release_R_at=50 first_AT=12 second_AT=50 interval=38 max_CP05_gap_ticks=11 native_game_executed=false
+CP05_FIX01_NATIVE checks=2656 failures=0 RESULT=LAB_PASS old_source=1 premature_cancel_reproduced=3 zero_hp_native_continuations=0 native_game_executed=false visual=HUMAN_RUNTIME_PENDING
+
+CP05_FIX01_GUARD_AB source=FIX01 controller=NATIVE_PLUS_EXPANSION kind=RED4 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=NATIVE_PLUS_EXPANSION kind=RED4 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP04_PLUS_EXPANSION kind=RED4 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP04_PLUS_EXPANSION kind=RED4 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP05_PLUS_EXPANSION kind=RED4 release_R_at=NEVER first_AT=16 second_AT=76 interval=60 max_CP05_gap_ticks=32 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP05_PLUS_EXPANSION kind=RED4 release_R_at=50 first_AT=16 second_AT=76 interval=60 max_CP05_gap_ticks=32 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=NATIVE_PLUS_EXPANSION kind=BLACK8 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=NATIVE_PLUS_EXPANSION kind=BLACK8 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP04_PLUS_EXPANSION kind=BLACK8 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP04_PLUS_EXPANSION kind=BLACK8 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP05_PLUS_EXPANSION kind=BLACK8 release_R_at=NEVER first_AT=16 second_AT=78 interval=62 max_CP05_gap_ticks=31 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP05_PLUS_EXPANSION kind=BLACK8 release_R_at=50 first_AT=16 second_AT=78 interval=62 max_CP05_gap_ticks=31 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=NATIVE_PLUS_EXPANSION kind=BLACK7 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=NATIVE_PLUS_EXPANSION kind=BLACK7 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP04_PLUS_EXPANSION kind=BLACK7 release_R_at=NEVER first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP04_PLUS_EXPANSION kind=BLACK7 release_R_at=50 first_AT=15 second_AT=46 interval=31 max_CP05_gap_ticks=0 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP05_PLUS_EXPANSION kind=BLACK7 release_R_at=NEVER first_AT=13 second_AT=51 interval=38 max_CP05_gap_ticks=10 native_game_executed=false
+CP05_FIX01_GUARD_AB source=FIX01 controller=CP05_PLUS_EXPANSION kind=BLACK7 release_R_at=50 first_AT=13 second_AT=51 interval=38 max_CP05_gap_ticks=10 native_game_executed=false
+CP05_FIX01_NATIVE checks=31235 failures=0 RESULT=LAB_PASS old_source=0 premature_cancel_reproduced=0 zero_hp_native_continuations=3 native_game_executed=false visual=HUMAN_RUNTIME_PENDING
+

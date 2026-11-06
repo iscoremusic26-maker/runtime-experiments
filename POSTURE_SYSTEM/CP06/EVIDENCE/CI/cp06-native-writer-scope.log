@@ -1,0 +1,19 @@
+{
+  "status": "CP06_PE_SCOPE_PASS",
+  "scope_bytes": 80,
+  "scope_sha256": "6d08d28c44903efa783ede4d43ed253a7ab50dbbe74de1e4af3412ce527393eb",
+  "scope_hex": "0f2e05bd9703007a40753e488b0596bc0200f30f5880f09800008890e6990000f30f1180f0980000488b0579bc0200f30f1080f09800000f2ec27a0d750b3890e69900007503b001c332c0c3cccccccc",
+  "stores": {
+    "life_store": 1,
+    "type_store": 1,
+    "displaced_stores": 2,
+    "imported_global_loads": 2,
+    "encodings": [
+      "MOVSS_F32",
+      "MOV8_REG"
+    ]
+  },
+  "actual_instruction_negatives_rejected": 3,
+  "errors": [],
+  "native_runtime": false
+}

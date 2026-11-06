@@ -1,0 +1,2 @@
+CP06_BENCH actors=16 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=732.5/739.0/932.4 native_model_only(min/med/max)=287.7/291.3/458.2 callback_cost_median_ns=447.7 per_tick_us_all_actors=7.164 evidence=SYNTHETIC_LAB_NOT_FPS
+

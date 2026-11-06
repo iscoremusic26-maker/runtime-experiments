@@ -1,0 +1,18 @@
+BASE_0_11_10 CP06_BENCH actors=16 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=403.3/417.0/464.8 native_model_only(min/med/max)=165.2/169.3/180.8 callback_cost_median_ns=247.7 per_tick_us_all_actors=3.964 evidence=SYNTHETIC_LAB_NOT_FPS
+CAND_NO_CP06 CP06_BENCH actors=16 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=399.4/424.7/712.8 native_model_only(min/med/max)=165.2/171.7/206.4 callback_cost_median_ns=253.0 per_tick_us_all_actors=4.049 evidence=SYNTHETIC_LAB_NOT_FPS
+CAND_FULL CP06_BENCH actors=16 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=415.4/434.3/581.3 native_model_only(min/med/max)=165.7/169.9/194.5 callback_cost_median_ns=264.4 per_tick_us_all_actors=4.230 evidence=SYNTHETIC_LAB_NOT_FPS
+BASE_0_11_10 CP06_BENCH actors=16 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=403.8/423.4/437.8 native_model_only(min/med/max)=167.0/172.5/176.5 callback_cost_median_ns=250.9 per_tick_us_all_actors=4.015 evidence=SYNTHETIC_LAB_NOT_FPS
+CAND_NO_CP06 CP06_BENCH actors=16 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=403.1/406.9/462.5 native_model_only(min/med/max)=168.2/170.8/214.9 callback_cost_median_ns=236.1 per_tick_us_all_actors=3.777 evidence=SYNTHETIC_LAB_NOT_FPS
+CAND_FULL CP06_BENCH actors=16 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=414.9/438.9/476.4 native_model_only(min/med/max)=165.6/176.5/213.3 callback_cost_median_ns=262.5 per_tick_us_all_actors=4.200 evidence=SYNTHETIC_LAB_NOT_FPS
+BASE_0_11_10 CP06_BENCH actors=64 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=514.6/527.3/590.0 native_model_only(min/med/max)=197.9/202.8/237.1 callback_cost_median_ns=324.5 per_tick_us_all_actors=20.767 evidence=SYNTHETIC_LAB_NOT_FPS
+CAND_NO_CP06 CP06_BENCH actors=64 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=507.3/514.3/583.8 native_model_only(min/med/max)=196.7/202.9/219.8 callback_cost_median_ns=311.4 per_tick_us_all_actors=19.929 evidence=SYNTHETIC_LAB_NOT_FPS
+CAND_FULL CP06_BENCH actors=64 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=519.8/553.4/615.0 native_model_only(min/med/max)=195.3/211.1/245.2 callback_cost_median_ns=342.2 per_tick_us_all_actors=21.903 evidence=SYNTHETIC_LAB_NOT_FPS
+BASE_0_11_10 CP06_BENCH actors=64 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=512.6/540.9/635.7 native_model_only(min/med/max)=200.9/213.4/286.8 callback_cost_median_ns=327.5 per_tick_us_all_actors=20.961 evidence=SYNTHETIC_LAB_NOT_FPS
+CAND_NO_CP06 CP06_BENCH actors=64 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=507.2/524.5/590.5 native_model_only(min/med/max)=199.3/205.0/226.2 callback_cost_median_ns=319.5 per_tick_us_all_actors=20.447 evidence=SYNTHETIC_LAB_NOT_FPS
+CAND_FULL CP06_BENCH actors=64 ticks=3000 reps=15 ns_per_actor_tick_with_callbacks(min/med/max)=525.2/560.6/623.7 native_model_only(min/med/max)=198.3/217.3/250.4 callback_cost_median_ns=343.3 per_tick_us_all_actors=21.972 evidence=SYNTHETIC_LAB_NOT_FPS
+NO_GATE CP06_BENCH actors=64 callback_cost_median_ns=399.5 per_tick_us_all_actors=25.570 
+WITH_GATE CP06_BENCH actors=64 callback_cost_median_ns=352.0 per_tick_us_all_actors=22.531 
+NO_GATE CP06_BENCH actors=64 callback_cost_median_ns=396.0 per_tick_us_all_actors=25.346 
+WITH_GATE CP06_BENCH actors=64 callback_cost_median_ns=347.4 per_tick_us_all_actors=22.232 
+NO_GATE CP06_BENCH actors=64 callback_cost_median_ns=400.6 per_tick_us_all_actors=25.636 
+WITH_GATE CP06_BENCH actors=64 callback_cost_median_ns=358.3 per_tick_us_all_actors=22.929 

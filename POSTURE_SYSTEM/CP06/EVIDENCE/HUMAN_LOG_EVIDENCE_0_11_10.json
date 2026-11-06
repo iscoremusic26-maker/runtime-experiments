@@ -1,0 +1,155 @@
+{
+ "log": "dusklight-20261104-104803 (0.11.10, eight mods, user-authorized reference named in the CP06 order)",
+ "input_sha256": "2e4e15fbf31cd006cdd6f8aae98209a6e66f3d232a46bcb4c29a9b6600a0a87d",
+ "bytes": 4555574,
+ "lines": 15047,
+ "post08_event_lines_by_result": {
+  "CONFIRMED": 82,
+  "MISSED_EARLY": 2,
+  "NORMAL_GUARD": 16,
+  "NOT_BLOCKED": 8
+ },
+ "post08_shutdown_part2": [
+  "POST08_SUMMARY v=0.8.2 tag=SHUTDOWN part=2/4 candidates=82 normal_guard=16 not_blocked=8 missed_early=2 missed_late=0 duplicate=0 latched=0 fury_chip_refused=0 not_attacking=0 untracked=0 link_invalid=0 no_pass_snapshot=0 event_running=0"
+ ],
+ "x2_contacts": [
+  {
+   "line": 3825,
+   "judge_tick": 1715,
+   "result": "NOT_BLOCKED",
+   "enemy_rate": 2.0,
+   "atp": 2,
+   "pass_proc": 33,
+   "pass_shield_attack": 0,
+   "enemy_frame": 18.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": []
+  },
+  {
+   "line": 5118,
+   "judge_tick": 2929,
+   "result": "NORMAL_GUARD",
+   "enemy_rate": 2.0,
+   "atp": 2,
+   "pass_proc": 7,
+   "pass_shield_attack": 0,
+   "enemy_frame": 20.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": [
+    0,
+    4
+   ]
+  },
+  {
+   "line": 5616,
+   "judge_tick": 3707,
+   "result": "NORMAL_GUARD",
+   "enemy_rate": 2.0,
+   "atp": 2,
+   "pass_proc": 6,
+   "pass_shield_attack": 0,
+   "enemy_frame": 18.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": [
+    0,
+    5
+   ]
+  },
+  {
+   "line": 8834,
+   "judge_tick": 9677,
+   "result": "NORMAL_GUARD",
+   "enemy_rate": 2.0,
+   "atp": 2,
+   "pass_proc": 6,
+   "pass_shield_attack": 0,
+   "enemy_frame": 18.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": [
+    1,
+    5
+   ]
+  },
+  {
+   "line": 9769,
+   "judge_tick": 12048,
+   "result": "NORMAL_GUARD",
+   "enemy_rate": 2.0,
+   "atp": 2,
+   "pass_proc": 6,
+   "pass_shield_attack": 0,
+   "enemy_frame": 18.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": [
+    2,
+    6
+   ]
+  },
+  {
+   "line": 10177,
+   "judge_tick": 13212,
+   "result": "NORMAL_GUARD",
+   "enemy_rate": 2.0,
+   "atp": 2,
+   "pass_proc": 6,
+   "pass_shield_attack": 0,
+   "enemy_frame": 20.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": []
+  },
+  {
+   "line": 12197,
+   "judge_tick": 15060,
+   "result": "NOT_BLOCKED",
+   "enemy_rate": 2.0,
+   "atp": 6,
+   "pass_proc": 7,
+   "pass_shield_attack": 0,
+   "enemy_frame": 18.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": []
+  },
+  {
+   "line": 12316,
+   "judge_tick": 15360,
+   "result": "NORMAL_GUARD",
+   "enemy_rate": 2.0,
+   "atp": 6,
+   "pass_proc": 7,
+   "pass_shield_attack": 0,
+   "enemy_frame": 16.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": []
+  },
+  {
+   "line": 14081,
+   "judge_tick": 17851,
+   "result": "NORMAL_GUARD",
+   "enemy_rate": 2.0,
+   "atp": 2,
+   "pass_proc": 7,
+   "pass_shield_attack": 0,
+   "enemy_frame": 18.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": []
+  },
+  {
+   "line": 14641,
+   "judge_tick": 19386,
+   "result": "NORMAL_GUARD",
+   "enemy_rate": 2.0,
+   "atp": 2,
+   "pass_proc": 6,
+   "pass_shield_attack": 0,
+   "enemy_frame": 18.0,
+   "shield_attack_start_rel": [],
+   "new_R_B_input_rel": []
+  }
+ ],
+ "finding": "Every rate-2.00 contact (Red Expansion special atp2 and Black fury atp6) was judged with Link NOT in PROC_GUARD_ATTACK during the resolving pass (pass_shield_attack=0). Where a new R+B edge exists nearby it arrives 0..2 ticks AFTER the judge tick, i.e. 1..3 ticks after the collision pass that already resolved the blow as NORMAL_GUARD/NOT_BLOCKED. No POST08 exclusion applies to atp2; fury_chip_refused=0 in this session (no Shield Attack ever met a fury blow).",
+ "limits": [
+  "Detail lines are budget-limited subsets; counts above are logged lines, not session totals except the SHUTDOWN summary.",
+  "Input ticks come from the CP04 own LNK snapshot; contact and judge order are as documented in POST08 FIX01.",
+  "No raw log content or private path is stored."
+ ]
+}

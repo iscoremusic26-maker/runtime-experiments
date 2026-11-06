@@ -1,0 +1,180 @@
+{
+ "scope": "LOCAL Linux g++ 15.2 (-O1 ASan/UBSan for harnesses, -O2 labs), source 0ef0ad28 tree; Windows/MSVC results are in the CI evidence",
+ "labs": {
+  "cp05_lab": {
+   "exit": 0,
+   "checks": 1083969
+  },
+  "cp05_fix02_lab": {
+   "exit": 0,
+   "checks": 214053
+  },
+  "cp06_lab": {
+   "exit": 0,
+   "checks": 431172
+  },
+  "hudfix_lab": {
+   "exit": 0,
+   "checks": 1567941
+  },
+  "cp04_lab": {
+   "exit": 0,
+   "checks": 288279
+  },
+  "break_lab": {
+   "exit": 0,
+   "checks": 243624
+  },
+  "collider_lab": {
+   "exit": 0,
+   "checks": 12826
+  },
+  "cp0203_lab": {
+   "exit": 0,
+   "checks": 52432
+  },
+  "fix01_lab": {
+   "exit": 0,
+   "checks": 21570
+  },
+  "lnks2_lab": {
+   "exit": 0,
+   "checks": 103431
+  },
+  "hit_lab": {
+   "exit": 0,
+   "checks": 1660
+  },
+  "balance_lab": {
+   "exit": 0,
+   "checks": 8623
+  },
+  "lifecycle_lab": {
+   "exit": 0,
+   "checks": 29558
+  },
+  "parry_lab": {
+   "exit": 0,
+   "checks": 1579
+  },
+  "lnks1_lab": {
+   "exit": 0,
+   "checks": 174
+  },
+  "general_lab": {
+   "exit": 0,
+   "checks": 5560
+  },
+  "reaction_lab": {
+   "exit": 0,
+   "checks": 36933
+  },
+  "lnks2fix_lab": {
+   "exit": 0,
+   "checks": 103187
+  },
+  "lnk_lab": {
+   "exit": 0,
+   "checks": 528
+  },
+  "compat_lab": {
+   "exit": 0,
+   "checks": 55992,
+   "note": "rerun after by-design version expectation 0.11.10->0.11.11"
+  },
+  "posture_lab": {
+   "exit": 0,
+   "checks": 556878
+  },
+  "rb_lab": {
+   "exit": 0,
+   "checks": 21313
+  },
+  "hud_lab": {
+   "exit": 0,
+   "checks": 57742
+  }
+ },
+ "lab_checks_total": 4899024,
+ "python_and_audits": {
+  "test_pmf_audit.py": "exit=0",
+  "test_cp04_pe_names.py": "exit=0",
+  "test_cp05_pe_policy.py": "exit=0",
+  "test_post04_tools.py": "exit=0",
+  "test_cp0203_reference.py": "exit=0",
+  "test_cp0203_adapter.py": "exit=0 checks=4325",
+  "test_hudfix_adapter.py": "exit=0 checks=47702",
+  "test_alignment_pair.py": "exit=0 checks=2468746",
+  "test_cp05_fix01_geometry.py": "exit=0 checks=19868",
+  "test_cp04_adapter.py": "exit=0 checks=11719",
+  "test_hudfix02_adapter.py": "exit=0 checks=67218",
+  "test_cp05_fix02_guard.py": "exit=0 checks=57184",
+  "test_cp05_fix02_native.py": "exit=0 checks=2656",
+  "test_cp06_combat.py": "exit=0 checks=58692",
+  "test_cp04_source_negatives.py": "exit=0",
+  "test_cp05_fix01_source_negatives.py": "exit=0",
+  "test_fix03_source_negatives.py": "exit=0",
+  "test_cp05_adapter.py": "exit=0 checks=121215",
+  "test_cp05_source_negatives.py": "exit=0",
+  "test_cp05_fix02_source_negatives.py": "exit=0",
+  "test_cp05_fix01_native.py": "exit=0 checks=31235",
+  "test_cp06_source_negatives.py": "exit=0",
+  "fix03_audit=0": "",
+  "store=0": "",
+  "source=0": "",
+  "ref_cp04=0": "",
+  "ref_cp05=0": "",
+  "ref_cp05_fix01=0": "",
+  "ref_cp05_fix02=0": ""
+ },
+ "mutations": {
+  "run_mutations": {
+   "count": 393,
+   "detected": 393,
+   "timeouts": 0
+  },
+  "test_cp0203_mutations": {
+   "count": 22,
+   "detected": 22,
+   "timeouts": 0
+  },
+  "test_cp04_mutations": {
+   "count": 34,
+   "detected": 34,
+   "timeouts": 0
+  },
+  "test_cp05_fix01_mutations": {
+   "count": 23,
+   "detected": 23,
+   "timeouts": 0
+  },
+  "test_cp05_fix02_mutations": {
+   "count": 25,
+   "detected": 25,
+   "timeouts": 0
+  },
+  "test_cp05_mutations": {
+   "count": 34,
+   "detected": 34,
+   "timeouts": 0
+  },
+  "test_cp06_mutations": {
+   "count": 29,
+   "detected": 29,
+   "timeouts": 0
+  },
+  "test_fix02_mutations": {
+   "count": 11,
+   "detected": 11,
+   "timeouts": 0
+  },
+  "test_fix03_mutations": {
+   "count": 8,
+   "detected": 8,
+   "timeouts": 0
+  }
+ },
+ "mutations_total": 579,
+ "mutations_detected": 579,
+ "native_game_executed": false
+}

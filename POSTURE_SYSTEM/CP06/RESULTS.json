@@ -1,0 +1,192 @@
+{
+ "version": "0.11.11",
+ "mod_id": "dev.posture.post05_selective_reactions",
+ "package": "LIGHT_FADES_TWICE_CP06_0_11_11_PRIVATE_TEST_windows-amd64_0ef0ad282483.dusk",
+ "package_bytes": 174626,
+ "package_sha256": "7bcebf6ff442147d6741daf65d9b1e2128b524af8219296272ab64f236d15be3",
+ "dll_sha256": "8473d76c31bb12531e52c9b207723dcdabebca25a5112c35a6f2cb72730df221",
+ "source_commit": "0ef0ad2824832c9e03d899c298b5f9a8e860d590",
+ "base_compiled_source": "d6e4c2179c2c42a7aa807ce862290de728abb396",
+ "ci_commit": "06c64426de52fc8268e5499e1780c2ce5d4f89f7",
+ "ci_run": 42298979283,
+ "artifact": 13543119520,
+ "artifact_expires_utc": "2026-12-06T22:02:03Z",
+ "labels": [
+  "SOURCE_IMPLEMENTED",
+  "SOURCE_AUDIT_PASS",
+  "LAB_PASS",
+  "WINDOWS_MSVC_PASS",
+  "PE_AUDIT_PASS",
+  "CP06_PE_SCOPE_PASS",
+  "INDEPENDENT_DOWNLOAD_PASS",
+  "ARTIFACT_DOWNLOADED_VERIFIED"
+ ],
+ "objectives": {
+  "A_rhythm": "LAB_PASS_HUMAN_RUNTIME_PENDING",
+  "B_parry_all_combo_swings": "LAB_PASS_HUMAN_RUNTIME_PENDING",
+  "B_red_special_x2": "NO_CODE_EXCLUSION_FOUND_TIMING_LIMITED_LAB_PASS_HUMAN_RUNTIME_PENDING",
+  "B_black_fury_x2_parry": "LAB_PASS_HUMAN_RUNTIME_PENDING",
+  "B_fury_chip_on_perfect_parry": "LIFE_CHIP_NEUTRALIZED_IN_LAB_EXPANSION_FLASH_NOT_CONTROLLED_HUMAN_RUNTIME_PENDING",
+  "C_optimization": "ONE_CP06_GATE_MEASURED_MINUS12PCT_OF_CALLBACK_COST_AT_64; NET_PLUS5PCT_SYNTHETIC; FPS_HUMAN_RUNTIME_PENDING",
+  "D_preservation": "INHERITED_SUITES_PASS_HUMAN_RUNTIME_PENDING"
+ },
+ "at_measured_clip_B": {
+  "BLUE": {
+   "base": [
+    54,
+    50,
+    31
+   ],
+   "cp06": [
+    47,
+    44,
+    31
+   ]
+  },
+  "RED4": {
+   "base": [
+    68,
+    46,
+    72
+   ],
+   "cp06": [
+    60,
+    36,
+    62
+   ]
+  },
+  "BLACK8": {
+   "base": [
+    65,
+    67,
+    46,
+    46,
+    46,
+    46,
+    70
+   ],
+   "cp06": [
+    62,
+    62,
+    38,
+    38,
+    38,
+    38,
+    64
+   ]
+  },
+  "BLACK7": {
+   "base": [
+    46,
+    68,
+    70,
+    56,
+    56,
+    56
+   ],
+   "cp06": [
+    38,
+    62,
+    64,
+    47,
+    47,
+    47
+   ]
+  }
+ },
+ "at_measured_clip_C": {
+  "BLUE": {
+   "base": [
+    59,
+    55,
+    34
+   ],
+   "cp06": [
+    51,
+    48,
+    34
+   ]
+  },
+  "RED4": {
+   "cp06": [
+    60,
+    38,
+    62
+   ]
+  },
+  "BLACK8": {
+   "cp06": [
+    62,
+    62,
+    39,
+    39,
+    39,
+    39,
+    64
+   ]
+  },
+  "BLACK7": {
+   "cp06": [
+    39,
+    62,
+    64,
+    47,
+    47,
+    47
+   ]
+  }
+ },
+ "labs": 23,
+ "lab_checks": 4899024,
+ "cp06_combat_checks": 58692,
+ "mutations": {
+  "inherited": 550,
+  "cp06": 29,
+  "detected": 579,
+  "timeouts": 0
+ },
+ "cp06_source_negatives": 34,
+ "game_imports": 63,
+ "hook_targets": 24,
+ "new_hook_targets": 0,
+ "new_native_writers": [
+  "cp06_native_chip_restore"
+ ],
+ "performance_synthetic_ns_per_actor_tick_callbacks_median": {
+  "16_actors": {
+   "base": [
+    247.7,
+    250.9
+   ],
+   "cp06": [
+    264.4,
+    262.5
+   ]
+  },
+  "64_actors": {
+   "base": [
+    324.5,
+    327.5
+   ],
+   "cp06": [
+    342.2,
+    343.3
+   ]
+  },
+  "cp06_gate_64": {
+   "without_gate": [
+    399.5,
+    396.0,
+    400.6
+   ],
+   "with_gate": [
+    352.0,
+    347.4,
+    358.3
+   ]
+  },
+  "environment": "local WSL2 g++15.2 -O2, 3000 ticks x15 reps, median; synthetic, not FPS"
+ },
+ "human_runtime": "HUMAN_RUNTIME_PENDING",
+ "pr_merge_tag_release": false
+}

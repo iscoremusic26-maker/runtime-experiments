@@ -1,0 +1,240 @@
+{
+  "positive_controls": "CP06_CORE_CP04_COMBAT_PASS",
+  "count": 29,
+  "detected": 29,
+  "timeouts": 0,
+  "mutations": [
+    {
+      "mutation": "fury_without_power6",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "fury_any_rate",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "fury_without_LNK07_class",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "fury_without_E_OC2",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_absorbs_double_damage",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_ignores_life_change",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_ignores_type_change",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_without_engine_shield_pair",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_without_capture",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_capture_any_tick",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_repeat_same_token",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_cross_slot_duplicate",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_restores_two_units",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_link_invalid_accepted",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "late_reported_twice",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "late_horizon_unbounded",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "legacy_fury_gate_disabled",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "fury_gate_ignored",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_window_armed_without_commit",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "chip_window_for_unverified",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "capture_after_expansion",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "restore_written_twice",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "fury_verified_ignores_rate",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "late_contact_any_verdict",
+      "lab": "combat",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "Blue_opening_pair_unchanged",
+      "lab": "cp04",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "Blue_gap_back_to_twelve",
+      "lab": "cp04",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "Red_pair_slowed",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "Black7_closing_unaccelerated",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    },
+    {
+      "mutation": "Black8_burst_target_old",
+      "lab": "core",
+      "detected": true,
+      "status": "KILLED",
+      "timeout": false,
+      "failure_tail": null
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+CP06_COMBO_PARRY runs=152 per_index_and_consecutive_pairs=ALL clips=B/C orders=both native_game_executed=false
+CP06_FURY cases=8 orders=2 expansion_chip_source=TRANSCRIBED_fe47c8b_cp19f2 native_game_executed=false
+CP06_COMBAT checks=58692 failures=0 RESULT=LAB_PASS native_attack_find_ccset_exact=true expansion_policies_exact=true link_motion_and_contacts=MODELED native_game_executed=false visual=HUMAN_RUNTIME_PENDING
+

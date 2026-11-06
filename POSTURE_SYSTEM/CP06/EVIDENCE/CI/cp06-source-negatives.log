@@ -1,0 +1,178 @@
+{
+  "status": "NEGATIVES_PASS",
+  "positive_clone": "SOURCE_AUDIT_PASS",
+  "count": 34,
+  "timeouts": 0,
+  "cases": [
+    {
+      "case": "fury_bit_not_bound_in_judge",
+      "rejected": true,
+      "expected_cause": "CP06 exact integration changed: mod.cpp"
+    },
+    {
+      "case": "chip_window_not_armed_after_commit",
+      "rejected": true,
+      "expected_cause": "CP06 exact integration changed: mod.cpp"
+    },
+    {
+      "case": "late_contact_not_recorded",
+      "rejected": true,
+      "expected_cause": "CP06 exact integration changed: mod.cpp"
+    },
+    {
+      "case": "install_failure_ignored",
+      "rejected": true,
+      "expected_cause": "CP06 exact integration changed: mod.cpp"
+    },
+    {
+      "case": "second_life_writer",
+      "rejected": true,
+      "expected_cause": "exactly one attributed pending-life restore writer"
+    },
+    {
+      "case": "global_life_clear",
+      "rejected": true,
+      "expected_cause": "forbidden native operation: clearItemLifeCount"
+    },
+    {
+      "case": "enemy_rate_writer",
+      "rejected": true,
+      "expected_cause": "forbidden native operation: setPlaySpeed("
+    },
+    {
+      "case": "enemy_HP_writer",
+      "rejected": true,
+      "expected_cause": "native pointer assignment forbidden"
+    },
+    {
+      "case": "Link_proc_read_or_write",
+      "rejected": true,
+      "expected_cause": "forbidden native operation: mProcID"
+    },
+    {
+      "case": "extra_pre_hook",
+      "rejected": true,
+      "expected_cause": "must add exactly two POST callbacks"
+    },
+    {
+      "case": "chip_window_order_swapped",
+      "rejected": true,
+      "expected_cause": "proof/binding missing"
+    },
+    {
+      "case": "restore_unit_guard_removed",
+      "rejected": true,
+      "expected_cause": "lost its exact-unit guard"
+    },
+    {
+      "case": "restore_readback_removed",
+      "rejected": true,
+      "expected_cause": "lost its exact-unit guard"
+    },
+    {
+      "case": "restore_without_layout",
+      "rejected": true,
+      "expected_cause": "proof/binding missing"
+    },
+    {
+      "case": "fury_variant_ignored",
+      "rejected": true,
+      "expected_cause": "proof/binding missing"
+    },
+    {
+      "case": "shield_pair_reverse_check_removed",
+      "rejected": true,
+      "expected_cause": "proof/binding missing"
+    },
+    {
+      "case": "core_atp_check_removed",
+      "rejected": true,
+      "expected_cause": "attribution rule missing"
+    },
+    {
+      "case": "core_absorbs_any_delta",
+      "rejected": true,
+      "expected_cause": "attribution rule missing"
+    },
+    {
+      "case": "core_life_change_ignored",
+      "rejected": true,
+      "expected_cause": "attribution rule missing"
+    },
+    {
+      "case": "core_native_address",
+      "rejected": true,
+      "expected_cause": "value core contains native address"
+    },
+    {
+      "case": "parry_window_widened",
+      "rejected": true,
+      "expected_cause": "parry window/legacy fury bound changed"
+    },
+    {
+      "case": "parry_age_widened",
+      "rejected": true,
+      "expected_cause": "parry window/legacy fury bound changed"
+    },
+    {
+      "case": "legacy_fury_bound_relaxed",
+      "rejected": true,
+      "expected_cause": "parry window/legacy fury bound changed"
+    },
+    {
+      "case": "fury_gate_unconditional",
+      "rejected": true,
+      "expected_cause": "CP06 exact integration changed: parry_core.hpp"
+    },
+    {
+      "case": "Red_profile_changed",
+      "rejected": true,
+      "expected_cause": "approved Red/Black profile changed"
+    },
+    {
+      "case": "Black_normal_at_fury_rate",
+      "rejected": true,
+      "expected_cause": "0.11.10 production changed outside exact authorized edits"
+    },
+    {
+      "case": "AT_targets_changed",
+      "rejected": true,
+      "expected_cause": "approved Red/Black profile changed"
+    },
+    {
+      "case": "Blue_gap_changed",
+      "rejected": true,
+      "expected_cause": "approved Blue profile changed"
+    },
+    {
+      "case": "e2_rate_known_widened",
+      "rejected": true,
+      "expected_cause": "0.11.10 production changed outside exact authorized edits: src/reaction_core.hpp"
+    },
+    {
+      "case": "anti_stagger_terminal_proof_changed",
+      "rejected": true,
+      "expected_cause": "0.11.10 production changed outside exact authorized edits: src/cp05_fix02_core.hpp"
+    },
+    {
+      "case": "extra_production_unit",
+      "rejected": true,
+      "expected_cause": "production file set differs"
+    },
+    {
+      "case": "chip_reference_tampered",
+      "rejected": true,
+      "expected_cause": "reviewed new module changed"
+    },
+    {
+      "case": "files_inventory_removed",
+      "rejected": true,
+      "expected_cause": "CP06 exact two-module + Expansion chip reference inventory required"
+    },
+    {
+      "case": "baseline_files_inventory_removed",
+      "rejected": true,
+      "expected_cause": "CP06 frozen 0.11.10 production inventory count changed"
+    }
+  ]
+}
