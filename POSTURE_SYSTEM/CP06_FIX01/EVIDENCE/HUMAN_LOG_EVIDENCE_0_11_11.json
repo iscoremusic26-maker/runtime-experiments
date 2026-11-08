@@ -1,0 +1,221 @@
+{
+ "source": "two human Dusklight 2.0.3 logs of Light Fades Twice 0.11.11 (2026-11-07 20:55:38 and 21:32:31); metrics only, no paths/accounts",
+ "sessions": [
+  {
+   "session": "S1",
+   "cp06": {
+    "fury_parry_offered": "49",
+    "fury_unverified_atp6_refused": "5582",
+    "chip_windows_armed": "49",
+    "neutralized": "49",
+    "readback_failed": "0",
+    "late_inputs": "56",
+    "late_contacts": "146",
+    "late_rate2": "38"
+   },
+   "expansion_black": {
+    "blows_x1_15": "25",
+    "blows_x2_fury": "69",
+    "contact_link": "66",
+    "shield_block_native": "63",
+    "detail_suppressed": "166"
+   },
+   "expansion_chip": {
+    "chip_applied": "48",
+    "chip_not_fury": "15",
+    "flash_started": "48",
+    "flash_draw_writes": "5760",
+    "flash_restores": "5760"
+   },
+   "black_fury_x2_blow_end": {
+    "LINK_CONTACT_SHIELD_RECOIL": 48,
+    "NO_NATIVE_CONTACT_FLAG": 27,
+    "LINK_CONTACT_NATIVE_DAMAGE_PATH": 10
+   },
+   "black_normal_x1_15_blow_end": {
+    "LINK_CONTACT_SHIELD_RECOIL": 16,
+    "NO_NATIVE_CONTACT_FLAG": 14,
+    "LINK_CONTACT_NATIVE_DAMAGE_PATH": 1
+   },
+   "black_fury_no_contact_min_dist": {
+    "n": 27,
+    "lt_120": 9,
+    "120_160": 7,
+    "ge_160": 11,
+    "min": 55.4
+   },
+   "black_normal_no_contact_min_dist": {
+    "n": 14,
+    "lt_160": 0,
+    "min": 233.5
+   },
+   "black_fury_no_contact_after_recent_damage_le40_own_ticks": 8,
+   "black_fury_no_contact_close_lt160_without_recent_damage": 13,
+   "red_blow_end": {
+    "X1_15": {
+     "LINK_CONTACT_SHIELD_RECOIL": 68,
+     "NO_NATIVE_CONTACT_FLAG": 28
+    },
+    "X2_RANDOM_OPPORTUNITY": {
+     "NO_NATIVE_CONTACT_FLAG": 5,
+     "LINK_CONTACT_SHIELD_RECOIL": 9,
+     "LINK_CONTACT_DAMAGE_PENDING_CP14_CONFIRMATION": 1
+    },
+    "X2_JUMP_ATTACK_INTERCEPT": {
+     "NO_NATIVE_CONTACT_FLAG": 1
+    },
+    "X2_SPIN_OR_GREAT_SPIN_CHARGE": {
+     "LINK_CONTACT_DAMAGE_PENDING_CP14_CONFIRMATION": 1
+    },
+    "X2_JUMP_STRIKE_CHARGE": {
+     "LINK_CONTACT_DAMAGE_PENDING_CP14_CONFIRMATION": 1
+    }
+   },
+   "red_cause_summary": [
+    {
+     "cause": "NORMAL_NATIVE_BLOW",
+     "native_blows": "110",
+     "rate_x2_readbacks": "0",
+     "contact_link": "78",
+     "shield_block_native": "78",
+     "sweep_ticks": "0"
+    },
+    {
+     "cause": "RANDOM_OPPORTUNITY",
+     "native_blows": "11",
+     "rate_x2_readbacks": "11",
+     "contact_link": "9",
+     "shield_block_native": "9",
+     "sweep_ticks": "2"
+    }
+   ],
+   "cp05_combo_miss": {
+    "n": 12,
+    "xz_lt_160": 0,
+    "by_kind_rate": {
+     "RED4@1.050": 2,
+     "RED4@1.350": 1,
+     "BLACK7@1.300": 6,
+     "BLACK8@1.050": 3
+    }
+   },
+   "calc_divide_info_warnings": 9209,
+   "post08_shutdown": {
+    "candidates": "210",
+    "normal_guard": "105",
+    "not_blocked": "41",
+    "missed_early": "20",
+    "missed_late": "0",
+    "duplicate": "0",
+    "latched": "0",
+    "fury_chip_refused": "1",
+    "parries_committed": "210",
+    "breaks_by_parry": "44",
+    "stale_contacts_ignored": "0",
+    "ai_stall_suspected": "0"
+   }
+  },
+  {
+   "session": "S2",
+   "cp06": {
+    "fury_parry_offered": "33",
+    "fury_unverified_atp6_refused": "1919",
+    "chip_windows_armed": "33",
+    "neutralized": "33",
+    "readback_failed": "0",
+    "late_inputs": "28",
+    "late_contacts": "65",
+    "late_rate2": "12"
+   },
+   "expansion_black": {
+    "blows_x1_15": "28",
+    "blows_x2_fury": "59",
+    "contact_link": "71",
+    "shield_block_native": "67",
+    "detail_suppressed": "89"
+   },
+   "expansion_chip": {
+    "chip_applied": "45",
+    "chip_not_fury": "22",
+    "flash_started": "45",
+    "flash_draw_writes": "5388",
+    "flash_restores": "5388"
+   },
+   "black_fury_x2_blow_end": {
+    "LINK_CONTACT_SHIELD_RECOIL": 29,
+    "LINK_CONTACT_NATIVE_DAMAGE_PATH": 2,
+    "NO_NATIVE_CONTACT_FLAG": 4
+   },
+   "black_normal_x1_15_blow_end": {
+    "NO_NATIVE_CONTACT_FLAG": 2,
+    "LINK_CONTACT_SHIELD_RECOIL": 20
+   },
+   "black_fury_no_contact_min_dist": {
+    "n": 4,
+    "lt_120": 3,
+    "120_160": 1,
+    "ge_160": 0,
+    "min": 47.0
+   },
+   "black_normal_no_contact_min_dist": {
+    "n": 2,
+    "lt_160": 1,
+    "min": 61.0
+   },
+   "black_fury_no_contact_after_recent_damage_le40_own_ticks": 2,
+   "black_fury_no_contact_close_lt160_without_recent_damage": 2,
+   "red_blow_end": {
+    "X1_15": {
+     "LINK_CONTACT_SHIELD_RECOIL": 46,
+     "NO_NATIVE_CONTACT_FLAG": 5
+    },
+    "X2_RANDOM_OPPORTUNITY": {
+     "LINK_CONTACT_SHIELD_RECOIL": 7,
+     "NO_NATIVE_CONTACT_FLAG": 2
+    }
+   },
+   "red_cause_summary": [
+    {
+     "cause": "NORMAL_NATIVE_BLOW",
+     "native_blows": "73",
+     "rate_x2_readbacks": "0",
+     "contact_link": "57",
+     "shield_block_native": "56",
+     "sweep_ticks": "0"
+    },
+    {
+     "cause": "RANDOM_OPPORTUNITY",
+     "native_blows": "9",
+     "rate_x2_readbacks": "8",
+     "contact_link": "8",
+     "shield_block_native": "8",
+     "sweep_ticks": "2"
+    }
+   ],
+   "cp05_combo_miss": {
+    "n": 4,
+    "xz_lt_160": 1,
+    "by_kind_rate": {
+     "BLACK8@1.050": 1,
+     "RED4@1.050": 2,
+     "BLACK7@1.300": 1
+    }
+   },
+   "calc_divide_info_warnings": 6189,
+   "post08_shutdown": {
+    "candidates": "147",
+    "normal_guard": "46",
+    "not_blocked": "19",
+    "missed_early": "10",
+    "missed_late": "0",
+    "duplicate": "0",
+    "latched": "0",
+    "fury_chip_refused": "1",
+    "parries_committed": "147",
+    "breaks_by_parry": "36",
+    "stale_contacts_ignored": "0",
+    "ai_stall_suspected": "0"
+   }
+  }
+ ]
+}

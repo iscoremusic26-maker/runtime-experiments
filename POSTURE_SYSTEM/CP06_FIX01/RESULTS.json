@@ -1,0 +1,125 @@
+{
+ "version": "0.11.12",
+ "mod_id": "dev.posture.post05_selective_reactions",
+ "status": [
+  "SOURCE_IMPLEMENTED",
+  "SOURCE_AUDIT_PASS",
+  "LAB_PASS_GPP_AND_MSVC",
+  "WINDOWS_MSVC_PASS",
+  "PE_AUDIT_PASS",
+  "CP06F1_PE_SCOPE_PASS",
+  "INDEPENDENT_DOWNLOAD_PASS",
+  "HUMAN_RUNTIME_PENDING"
+ ],
+ "artifact": {
+  "file": "LIGHT_FADES_TWICE_CP06_FIX01_0_11_12_PRIVATE_TEST_windows-amd64_2a57ebeeafe6.dusk",
+  "bytes": 188838,
+  "sha256": "82f678a8ffacf197d7828721513597fe1b4d3c6752ca07ce2d6a6c9c2797d2ed",
+  "dll_bytes": 1318912,
+  "dll_sha256": "691497410787b8d90093ac3d47c0adc1e5663c6f50db9202681f276c132ee7c9",
+  "members": [
+   "mod.json",
+   "lib/windows-amd64/mod.dll"
+  ],
+  "artifact_id": 13618428357,
+  "artifact_url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/42482972682/artifacts/13618428357",
+  "expires": "2026-12-08T13:29:03Z"
+ },
+ "commits": {
+  "source_compiled": "2a57ebeeafe6ec48ee5b63b5f614b6a0fff95b5e",
+  "source_branch": "feature/light-fades-twice-cp06-fix01-0-11-12",
+  "source_first": "dcd6a8653a8c2234e9496551b314cb4465f3c53a",
+  "ci_head": "e87aa7e3476d484ff94eb350e7f7570e22ee8cf8",
+  "ci_branch": "ci/light-fades-twice-cp06-fix01-0-11-12",
+  "base_0_11_11": "0ef0ad2824832c9e03d899c298b5f9a8e860d590",
+  "docs": "this commit (after source and CI)"
+ },
+ "ci": {
+  "run": 42482972682,
+  "url": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/42482972682",
+  "build": "success",
+  "independent_download": "success",
+  "download_verification": "ARTIFACT_DOWNLOADED_VERIFIED",
+  "previous_failed_run": {
+   "run": 42482710995,
+   "cause": "cp06f1 PE scope audit did not admit the MSVC /GS __security_check_cookie call in the sphere writer; fixed in 2a57ebee (only that local helper admitted)"
+  }
+ },
+ "pe": {
+  "game_imports": 67,
+  "new_game_imports": [
+   "?modelDraw@daAlink_c@@QEAAXPEAVJ3DModel@@H@Z",
+   "?modelCalc@mDoExt_McaMorfSO@@QEAAXXZ",
+   "?SetC@cM3dGSph@@QEAAXAEBUcXyz@@@Z",
+   "?SetR@cM3dGSph@@QEAAXM@Z"
+  ],
+  "hook_targets": 25,
+  "hook_meta_kinds": {
+   "HOOK_MEM": 15,
+   "HOOK_MEM_EXT": 10
+  },
+  "writer_scopes_msvc": {
+   "cp06f1_native_kcolor": "3 byte stores +0x550/1/2 one base, no call",
+   "cp06f1_native_pose_frame": "1 movss +0x2c, 1 call modelCalc",
+   "cp06f1_native_sphere_place": "no non-stack store; calls SetC, SetR, __security_check_cookie"
+  },
+  "writer_import_calls_outside_scopes": 0,
+  "real_instruction_negatives_rejected": 4
+ },
+ "labs_msvc": {
+  "count": 25,
+  "checks_total": 1396715851,
+  "inherited_23_checks": 4899024,
+  "cp06f1_lab": 16134833,
+  "cp06f1_world_lab": 1375681994
+ },
+ "mutations_msvc": {
+  "cp06f1": "41/41",
+  "cp06": "29/29",
+  "cp05_fix02": "25/25",
+  "cp05_fix01": "23/23",
+  "cp05": "34/34",
+  "cp04": "34/34",
+  "cp0203": "22/22",
+  "fix03": "8/8",
+  "fix02": "11/11",
+  "rework": "393/393",
+  "total": "620/620",
+  "timeouts": 0
+ },
+ "source_negatives": {
+  "cp06f1": 26,
+  "inherited": "all pass"
+ },
+ "world_lab": {
+  "scenarios": 78624,
+  "robust_vanilla_contacts": 14027,
+  "ghosts_0_11_11": 90,
+  "ghosts_0_11_11_x2": 60,
+  "ghosts_0_11_12": 0,
+  "added_contacts": 1380,
+  "added_contacts_outside_vanilla_volume": 0,
+  "written_centres_checked": 1923,
+  "vanilla_x1_parity_even_phase_clipC": "164/164",
+  "parry": "113/113 timely, 0 late",
+  "iframes": "0 contacts 0 writes",
+  "flash_sequences": "10 x 2 registration orders, colour == Expansion without neutralized chips, 0 mismatches",
+  "modeled": [
+   "sword kinematics",
+   "Link cylinder placement",
+   "Link reaction",
+   "shield front angle"
+  ]
+ },
+ "bench_msvc_synthetic": {
+  "idle_execute_callbacks_ns": 53.5,
+  "link_draw_callbacks_ns_no_flash": 15.7,
+  "extra_modelCalc_per_armed_tick_near_vulnerable_link": 1.182,
+  "note": "MODELED WORLD, NOT FPS"
+ },
+ "rollback": {
+  "0_11_11": "7bcebf6ff442147d6741daf65d9b1e2128b524af8219296272ab64f236d15be3",
+  "0_11_10": "9c8f0074962386d7f46984cab43c0cff8fb429911d731e846aa52bef44e4bb4f"
+ },
+ "human": "HUMAN_RUNTIME_PENDING (contact visuals, sparks/SFX, flash pixels, FPS)"
+}

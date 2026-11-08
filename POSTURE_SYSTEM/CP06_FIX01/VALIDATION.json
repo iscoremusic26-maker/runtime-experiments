@@ -1,0 +1,27 @@
+{
+ "version": "0.11.12",
+ "legend": {"PASS": "verified by the named evidence", "INCONCLUSIVE": "not verifiable without the game; HUMAN_RUNTIME_PENDING", "FAIL": "verified failure"},
+ "evidence_kinds": ["LOG = human 0.11.11 logs (2026-11-07)", "SRC = native source read (Dusklight 40457c6, Expansion fe47c8b)", "LAB = cp06f1_lab / cp06f1_world_lab (modeled kinematics)", "CI = GitHub Actions MSVC build + independent download", "HUMAN = in-game observation (pending)"],
+ "objectives": {
+  "P0A_cause_identified": {"status": "PASS", "evidence": ["SRC executeAttack/action/cc_set/play ordering", "LOG fury x2 no-contact at <160 u without recent damage: 13 + 2", "LOG Red x2 sweep writes 2+2 ticks in 11+9 blows", "LAB 0.11.11 pipeline: 90 robust ghosts (60 at x2) in 78 624 scenarios"]},
+  "P0A_every_robust_vanilla_contact_reaches_engine": {"status": "PASS", "scope": "LAB modeled kinematics, all variants/rates/clips/phases", "evidence": ["cand_ghost=0 of 14 027", "vanilla x1 parity 164/164 (x2 even phase, clip C)", "Link lean vs Expansion reach model: 0 ghosts, native pose restored"]},
+  "P0A_no_contact_outside_vanilla_volume": {"status": "PASS", "evidence": ["1 380 added contacts all inside the vanilla swept volume", "1 923 written centres equal the vanilla registration of their pose"]},
+  "P0A_engine_resolves_guard_parry_damage_iframes": {"status": "PASS", "scope": "LAB transcribed pipeline", "evidence": ["front guard blocks", "back hits", "i-frames 0 contacts 0 writes", "parry 113/113 only with timely Shield Attack, none late", "no double damage", "NoConHit classified"]},
+  "P0A_visual_ghosts_gone_in_game": {"status": "INCONCLUSIVE", "reason": "HUMAN_RUNTIME_PENDING: real B/C animation curves are commercial assets not available to the lab"},
+  "P0B_cause_identified": {"status": "PASS", "evidence": ["SRC Expansion cp19f2_chip_post -> flash_start, modelDraw PRE/POST TevKColor", "LOG S1 chips 48 vs CP06 neutralized 49"]},
+  "P0B_no_red_attributable_to_neutralized_chip": {"status": "PASS", "scope": "LAB with Expansion's real schedule header and transcribed draw hooks", "evidence": ["10 sequences x 2 registration orders", "colour drawn == Expansion's colour without neutralized chips"]},
+  "P0B_legit_red_preserved": {"status": "PASS", "scope": "LAB", "evidence": ["guard chip red identical to Expansion", "parry->guard, guard->parry, two Blacks, native damage red, foreign writer, third party on shield, Expansion POST absent"]},
+  "P0B_pixels_in_game": {"status": "INCONCLUSIVE", "reason": "HUMAN_RUNTIME_PENDING"},
+  "rhythms_probabilities_parry_window_unchanged": {"status": "PASS", "evidence": ["all 39 0.11.11 production files reproduced byte for byte by the FIX01 inverse patch (ci/cp06f1_audit.py)", "CP06 approved profiles audit unchanged"]},
+  "inherited_suite": {"status": "PASS_LOCAL", "evidence": ["23 inherited labs same counts (g++)", "inherited mutation suites all killed (local)", "inherited source negatives/adapters/references pass"], "ci": "see RESULTS.json"},
+  "performance": {"status": "INCONCLUSIVE", "evidence": ["synthetic: ~55 ns per idle E_OC execute, ~20 ns per Link draw, ~1.2 engine modelCalc per armed tick near a vulnerable Link"], "reason": "FPS/frame time HUMAN_RUNTIME_PENDING"}
+ },
+ "matrix_by_variant_lab": {
+  "BLUE":            {"hit_body": "PASS", "shield_block": "PASS", "parry": "PASS", "legit_miss": "PASS", "invulnerability": "PASS", "runtime": "HUMAN_RUNTIME_PENDING"},
+  "RED_NORMAL_RED4": {"hit_body": "PASS", "shield_block": "PASS", "parry": "PASS", "legit_miss": "PASS", "invulnerability": "PASS", "runtime": "HUMAN_RUNTIME_PENDING"},
+  "RED_SPECIAL_X2":  {"hit_body": "PASS", "shield_block": "PASS", "parry": "PASS", "legit_miss": "PASS", "invulnerability": "PASS", "runtime": "HUMAN_RUNTIME_PENDING"},
+  "BLACK_NORMAL":    {"hit_body": "PASS", "shield_block": "PASS", "parry": "PASS", "legit_miss": "PASS", "invulnerability": "PASS", "runtime": "HUMAN_RUNTIME_PENDING"},
+  "BLACK_FURY_X2":   {"hit_body": "PASS", "shield_block": "PASS", "parry": "PASS", "chip_and_flash": "PASS", "legit_miss": "PASS", "invulnerability": "PASS", "runtime": "HUMAN_RUNTIME_PENDING"}
+ },
+ "note": "LAB rows exercise the production adapter with transcribed native collision and modeled kinematics; no row is a human or visual pass."
+}
