@@ -1,0 +1,52 @@
+{
+ "version": "0.12.1",
+ "mod_id": "dev.posture.post05_selective_reactions",
+ "status": "HUMAN_RUNTIME_PENDING",
+ "artifact": {
+  "file": "LIGHT_FADES_TWICE_LIZALFOS_FIX01_0_12_1_PRIVATE_TEST_windows-amd64_5c8ac17e75ed.dusk",
+  "bytes": 220683,
+  "sha256": "08b18329128041b9b4bec99d10e2736fbd942fe58d4a1b037e7b88aef4480e23",
+  "dll": {"path": "lib/windows-amd64/mod.dll", "bytes": 1384960, "sha256": "911a85ae02496c9f4cfdc5796e7f8e29a83968bdd925b7a8514e9e02ecea09b6", "crc32": "0x687a7063", "machine": "AMD64"},
+  "mod_json": {"bytes": 819, "sha256": "dbe930a4bc1a319d2e175881002fac380b39ebd0d97cd4514cb4625c0c942dba", "crc32": "0x10536bf2"},
+  "download": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/42531603399/artifacts/13639325429"
+ },
+ "provenance": {
+  "base_compiled_source": "03111c85b449da0a727b0848f1b70bb555855b60",
+  "source_branch": "feature/light-fades-twice-lizalfos-duelist-fix01-0-12-1",
+  "compiled_source": "5c8ac17e75ed2c8d2b9995277edec59e3ea8360d",
+  "ci_branch": "ci/light-fades-twice-lizalfos-0-12-1",
+  "ci_commit": "6dc7fcafdb51414a08953efe6b863dfca0624fdf",
+  "ci_run": 42531603399,
+  "jobs": {"build": "success", "independent-download": "success"},
+  "toolchain": "MSVC 14.51.36231 x64",
+  "earlier_failed_run": {"run": 42531084421, "cause": "inherited CP06F1 PE scope did not know the two new writers calling its imports; fixed, not a behaviour failure"},
+  "human_log_used": "dusklight-20261108-132436 (local temporary copy, deleted, not published)"
+ },
+ "evidence": {
+  "labs": 27,
+  "checks_total": 1400296233,
+  "checks_inherited_identical": 1396715851,
+  "checks_liz_lab": 3576201,
+  "checks_liz_world_lab": 4181,
+  "mutants": {"total": 824, "killed": 824, "timeouts": 0, "inherited": 620, "liz_brain": 161, "liz_production_adapter": 43},
+  "source_negatives_liz": {"count": 41, "rejected": 41},
+  "native_contract_lines": 74,
+  "writer_scope_audit": "LIZ_PE_SCOPE_PASS (12 writers; bounded encoding scan, not a proof of every memory effect)",
+  "pe_audit": "PE_AUDIT_PASS",
+  "game_imports": 73,
+  "hook_records": {"HOOK_MEM": 15, "HOOK_MEM_EXT": 12, "HOOK_NAME": 11},
+  "rhythm_lab_vs_0_12_0": "LIZ_RHYTHM output identical to run 42506745010",
+  "synthetic_ns_per_tick_brain_only_not_fps": {"0.12.0_run_42506745010": {"1": 110, "4": 365, "8": 4310}, "0.12.1_run_42531603399": {"1": 94, "4": 395, "8": 835}, "note": "single noisy runner, mean only; pose probe cost is not in this bench because it needs the engine"}
+ },
+ "lab_reproductions": {
+  "mute_d2_native_transcription": {"native_gate_only": 3, "with_fix": 0, "scenario": "P3, R held, D2 x3"},
+  "skipped_pose_paths": {"touching_paths": 154, "missed_without_coverage": 8, "missed_with_coverage": 0, "clear_paths": 242, "false_contacts": 0, "pose_model": "arcs fitted to logged center steps, not commercial BCK"}
+ },
+ "p0": {
+  "P0-1 standing break": ["SOURCE_IMPLEMENTED", "LAB_PASS", "WINDOWS_CI_PASS", "INDEPENDENT_DOWNLOAD_PASS", "HUMAN_RUNTIME_PENDING"],
+  "P0-2 balance": ["SOURCE_IMPLEMENTED", "LAB_PASS", "WINDOWS_CI_PASS", "INDEPENDENT_DOWNLOAD_PASS", "HUMAN_RUNTIME_PENDING"],
+  "P0-3 AI": ["SOURCE_IMPLEMENTED", "LAB_PASS", "WINDOWS_CI_PASS", "INDEPENDENT_DOWNLOAD_PASS", "HUMAN_RUNTIME_PENDING"],
+  "P0-4 contacts": ["SOURCE_IMPLEMENTED", "LAB_PASS", "WINDOWS_CI_PASS", "INDEPENDENT_DOWNLOAD_PASS", "HUMAN_RUNTIME_PENDING"]
+ },
+ "not_executed": ["the real game", "sound, spark, animation, real collision, FPS", "A/B runs with the other eight mods", "both mod orders", "p50/p95/p99 latency"]
+}

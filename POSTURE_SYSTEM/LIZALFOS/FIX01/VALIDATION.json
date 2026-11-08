@@ -1,0 +1,34 @@
+{
+ "version": "0.12.1",
+ "matrix": {
+  "windows_per_combo": {"P1": 4, "P2": 7, "P3": 9, "P4": 6, "counter_normal": 1, "counter_double": 2},
+  "held_guard": "P1-P4: every impact blocked, exactly one guard SE each, combo complete (w_held_guard); counters: both windows (w_counter)",
+  "no_shield": "P1-P4: body damage, or legitimate i-frames; no fake shield SE (w_body)",
+  "parry_rows": "26 impacts x 4 press timings = 104 rows through the production adapter (w_parry_matrix)",
+  "d1_d2": "two presses two credits; D1 blocked then D2 parried; one press one credit; AT open never re-arms; untrusted clip never parries (w_double_pair)",
+  "back_and_front": "shield facing away: damage; lateral arcs in front at 5 biases: never through (w_front_range)",
+  "distance_and_steps": "864 runs over N, D1, tail: 6 distances, 3 lateral offsets, 2 phases, 3 heights (w_coverage)",
+  "group": "3 Lizalfos: attribution and independent bars (w_multi). Bokoblins are NOT simulated in this lab: inherited labs cover them, no new hook is on an E_OC path"
+ },
+ "invariants": {
+  "patterns": "P1 N-D-C, P2 N-N-N-D-N-C, P3 D-N-D-N-N-D, P4 C-C-N-D-C",
+  "impacts": [4, 7, 9, 6],
+  "rates": {"N": 1.25, "D": 1.10, "C_slow": 1.10, "C_fast": 1.20},
+  "draw": "25/25/25/25",
+  "start_frames_and_windups": "value-by-value equal to 0.12.0 (lab_frozen_rhythm)",
+  "hp": 370, "hp_regen": 0, "posture_cap": 100, "posture_regen": [10, 7, 4, 2, 1], "regen_delay_ticks": 60,
+  "gains": {"sword": 9, "link_parry": 15, "own_block": 5, "iron_ball": 30, "to_link_on_enemy_parry": 25},
+  "pressure": {"A": 12, "B": [35, "3 swings in 75 ticks"], "C": [45, "4 swings in 150 ticks"]},
+  "cooldowns": {"A": 120, "B": 90, "C": 60},
+  "counter": {"two_blocks_pct": 80, "kind": "Normal or Double 50/50"},
+  "link_posture_rows": "unchanged"
+ },
+ "limits": [
+  "liz_world_lab runs the production adapter on stub engine types with a transcription of the engine paths; it proves the logic and call order, not that the transcription equals the running game",
+  "pose path is a fitted arc model; commercial BCK data was not read",
+  "ANM_DRAWBACK length was not read: lab sweeps 25..140 frames",
+  "the spark cannot be read back: effect=ENGINE_NOT_OBSERVED",
+  "audio receipt means Link's setGuardSe ran, not that it was heard"
+ ],
+ "runtime": "HUMAN_RUNTIME_PENDING"
+}
