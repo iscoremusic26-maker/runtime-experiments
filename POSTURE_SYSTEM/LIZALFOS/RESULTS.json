@@ -1,0 +1,44 @@
+{
+ "version": "0.12.0",
+ "mod_id": "dev.posture.post05_selective_reactions",
+ "base": {"version": "0.11.12", "compiled_source": "2a57ebeeafe6ec48ee5b63b5f614b6a0fff95b5e", "sha256_dusk": "82f678a8ffacf197d7828721513597fe1b4d3c6752ca07ce2d6a6c9c2797d2ed", "run": 42482972682, "artifact": 13618428357},
+ "compiled_source": "03111c85b449da0a727b0848f1b70bb555855b60",
+ "source_branch": "feature/light-fades-twice-lizalfos-full-combat-private-test",
+ "ci_commit": "f99fded64345ce70298e1321bf5306fbd9ad43ba",
+ "ci_branch": "ci/light-fades-twice-lizalfos-0-12-0",
+ "run": 42506745010,
+ "jobs": {"build": "success", "independent-download": "success"},
+ "toolchain_msvc": "14.51.36231",
+ "artifact": 13628437919,
+ "filename": "LIGHT_FADES_TWICE_LIZALFOS_0_12_0_PRIVATE_TEST_windows-amd64_03111c85b449.dusk",
+ "dusk_bytes": 210379,
+ "dusk_sha256": "0565555c45f683684a60b6c796f18c474604751468b682e8596c4396136b1b99",
+ "dll_bytes": 1388544,
+ "dll_sha256": "bd1d80acf6df6cd983ea3f9fcdc45006fbd6524940cdd5fc6cd9a0cf7970940b",
+ "dll_crc32": "0x222d95c0",
+ "mod_json_sha256": "c4baeb5bc5b87607e867b758fd2edd3ceff6b74b8d035e3d2eebe771a7760ade",
+ "hooks": {"HOOK_MEM": 15, "HOOK_MEM_EXT": 11, "HOOK_NAME": 11, "new_targets": 12},
+ "game_imports": 69,
+ "new_game_imports": ["?setCutType@daAlink_c@@QEAAXE@Z", "?ClrHit@cCcD_ObjTg@@QEAAXXZ"],
+ "evidence_msvc": {
+  "labs": 26, "lab_checks_total": 1400318676, "lab_checks_inherited": 1396715851, "lab_checks_new_liz": 3602825,
+  "mutants_total": 711, "mutants_killed": 711, "mutants_new_liz": 91, "mutants_timeouts": 0,
+  "source_negatives_new_liz": 24, "native_contract_lines": 53, "ledger_files": 212,
+  "pe_audit": "PE_AUDIT_PASS", "pe_negatives": "ALL_REJECTED", "writer_scopes": "LIZ_PE_SCOPE_PASS", "download": "ARTIFACT_DOWNLOADED_VERIFIED"
+ },
+ "synthetic_bench_not_fps_ns_per_tick": {"1_actor": 110, "4_actors": 365, "8_actors": 4310, "note": "single noisy run on a shared runner; 8 actors measured 298 ns locally with g++. Mean only, no p50/p95/p99. Not a game measurement."},
+ "deviations": {
+  "d1_d2": "0.367 s open to open (recorded 0.10-0.13 s): 12 clip frames at the fixed x1.10",
+  "entry_frames": "intermediate actions enter their native clip at frame 4-19 and trim recovery to reach the recorded gaps",
+  "link_posture_from_lizalfos": "existing LNK07 rows by AtAtp (20/30, 25/35): not specified by the commission, provisional"
+ },
+ "not_executed": [
+  "real game, DX12, visuals, sound, FPS",
+  "adapter callbacks at runtime: liz_adapter.inc is compiled and audited but no lab runs it; the lab runs the brain",
+  "real clip lengths (swept, not read), reach and stand-off distances",
+  "integration lab with the eight companion mods",
+  "comparative workload against 0.11.12 and percentile latency"
+ ],
+ "audio": "AAC header rhythm corroboration only, not waveform decoding; see AUDIO_RHYTHM_ANALYSIS.md",
+ "runtime": "HUMAN_RUNTIME_PENDING"
+}

@@ -1,0 +1,15 @@
+{
+ "P0-01": {"state": "IMPLEMENTED+TESTED_LAB", "human": "NEEDS_HUMAN_TEST"},
+ "P0-02": {"state": "IMPLEMENTED+TESTED_LAB", "human": "NEEDS_HUMAN_TEST"},
+ "P0-03": {"state": "IMPLEMENTED+TESTED_LAB", "human": "NEEDS_HUMAN_TEST"},
+ "P0-04": {"state": "IMPLEMENTED+TESTED_LAB", "deviation": "D1->D2 physical gap", "human": "NEEDS_HUMAN_TEST"},
+ "P0-05": {"state": "IMPLEMENTED+TESTED_LAB", "human": "NEEDS_HUMAN_TEST"},
+ "P0-06": {"state": "IMPLEMENTED+TESTED_LAB", "human": "NEEDS_HUMAN_TEST"},
+ "P0-07": {"state": "IMPLEMENTED+TESTED_LAB", "human": "NEEDS_HUMAN_TEST"},
+ "P0-08": {"state": "IMPLEMENTED+TESTED_LAB", "human": "NEEDS_HUMAN_TEST"},
+ "P0-09": {"state": "IMPLEMENTED+TESTED_LAB", "hud": "compiled only", "human": "NEEDS_HUMAN_TEST"},
+ "P0-10": {"state": "INHERITED_E_OC_REGRESSION_PASS", "matrix_A_B": "NOT_EXECUTED", "human": "NEEDS_HUMAN_TEST"},
+ "P0-11": {"state": "PASS", "run": 42506745010},
+ "P0-12": {"state": "PASS"},
+ "game_executed": false
+}
