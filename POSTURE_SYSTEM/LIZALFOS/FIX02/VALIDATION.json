@@ -1,0 +1,119 @@
+{
+ "version": "0.12.2",
+ "matrix": {
+  "shield": "block HP 0 +5 once no rebound; parry HP 0 +0 self +25 Link native rebound; rear/uncovered/pre-shield damage; shield and body in one pass: shield (lab_shield, w_shield_rebound)",
+  "two_blocks": "one 80% roll per pair; prepares only; third real swing in new window is parry; otherwise block; expiry bounded (lab_deflect, w_shield_rebound)",
+  "wound_guard": "45/80/certain preparation, frequencies from independent streams, duplicates and zero damage do not roll, reaction 6 ticks, one decision per swing (lab_wound_guard)",
+  "counter": "only after real parry, 50/50, then four combos (lab_counter, w_counter)",
+  "nine_parries": "96 at the 8th, break at the 9th, with P3 timing and regen (lab_nine_parries)",
+  "decisive_bonus": "powers 1,2,4,30,60; strong; helm; lethal by bonus; not crossing hit; not shield attack (lab_break_bonus)",
+  "link_damage": "5 attacker names x 6 amounts through the production hook; outside episode; non saturated; phases; floor; throw; own bomb; env; ghost; projectile; dead; armor; blocked (w_link_damage, lab_link_rule)",
+  "plugin_order": "foreign observer first and last on 11 targets, identical result (w_plugin_order)",
+  "recycle": "delete mid combo drains, retires, no later answer; reused address inherits nothing (w_delete, address reuse section of the world lifecycle test)",
+  "group": "multi Lizalfos from FIX01 retained (w_multi)"
+ },
+ "invariants": {
+  "patterns": "P1 N-D-C, P2 N-N-N-D-N-C, P3 D-N-D-N-N-D, P4 C-C-N-D-C",
+  "impacts": [
+   4,
+   7,
+   9,
+   6
+  ],
+  "rates": {
+   "N": 1.25,
+   "D": 1.1,
+   "C_slow": 1.1,
+   "C_fast": 1.2
+  },
+  "draw": "25/25/25/25",
+  "rhythm": "LIZ_RHYTHM output identical to run 42531603399",
+  "hp": 370,
+  "hp_regen": 0,
+  "posture_cap": 100,
+  "posture_regen": [
+   10,
+   7,
+   4,
+   2,
+   1
+  ],
+  "regen_delay_ticks": 60,
+  "gains": {
+   "sword": 6,
+   "link_parry": 12,
+   "own_block": 5,
+   "own_parry": 0,
+   "iron_ball": 30,
+   "to_link_on_enemy_parry": 25
+  },
+  "wound_guard_pct": [
+   45,
+   80,
+   100
+  ],
+  "deflect_pct": 80,
+  "deflect_lease_ticks": 45,
+  "pressure": {
+   "A": 12,
+   "B": [
+    35,
+    "3 swings in 75 ticks"
+   ],
+   "C": [
+    45,
+    "4 swings in 150 ticks"
+   ]
+  },
+  "cooldowns": {
+   "A": 120,
+   "B": 90,
+   "C": 60
+  },
+  "counter": {
+   "kind": "Normal 1.25 or Double 1.10, 50/50",
+   "source": "real enemy parry only"
+  },
+  "link_posture_rows": "unchanged",
+  "bokoblins": "unchanged (no hook target on an E_OC path; audited)"
+ },
+ "required_mutants_present": [
+  "block_takes_hp",
+  "block_rebounds",
+  "every_block_rebounds",
+  "parry_adds_2",
+  "parry_adds_5",
+  "two_blocks_counter",
+  "wound1_always",
+  "duplicate_swing_credits",
+  "gain_sword_old",
+  "gain_link_parry_old",
+  "break_at_seventh_parry",
+  "link_bonus_x2_25",
+  "link_compounds",
+  "link_outside_episode",
+  "link_episode_any_break",
+  "bonus_on_crossing_hit",
+  "rate_n",
+  "rate_d",
+  "rate_cfast",
+  "gap_p2",
+  "gap_p4",
+  "ghost_block_no_contact",
+  "ghost_block_native_not_accepted",
+  "orphan_slot_after_delete",
+  "orphan_events_lost_on_delete",
+  "new_e_oc_hook (source negative)",
+  "touches_bokoblin (source negative)"
+ ],
+ "limits": [
+  "liz_world_lab runs the production adapter on stub engine types with a transcription of the engine paths; it proves logic and call order, not the game",
+  "pose path is a fitted arc model; commercial BCK data was not read",
+  "clip lengths swept, not read",
+  "spark and audio cannot be read back",
+  "Link x1.5 does not cover direct life writes or setPlayerDamage; throw, landing and scene are native (SKIP_UNATTRIBUTED)",
+  "interaction with other mods reading life deltas not executed",
+  "P3 impact 1 has a 12 tick wind-up with the frozen rhythm"
+ ],
+ "runtime": "HUMAN_RUNTIME_PENDING"
+}

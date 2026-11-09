@@ -1,0 +1,178 @@
+{
+ "version": "0.12.2",
+ "mod_id": "dev.posture.post05_selective_reactions",
+ "status": "HUMAN_RUNTIME_PENDING",
+ "artifact": {
+  "file": "LIGHT_FADES_TWICE_LIZALFOS_FIX02_0_12_2_PRIVATE_TEST_windows-amd64_c242770e4f15.dusk",
+  "bytes": 226348,
+  "sha256": "87725c176e595b7c69e20fff5bdd4b44764d050f2cb6b248a8b8dd32092f94ad",
+  "crc32": "0xa66f4044",
+  "dll": {
+   "path": "lib/windows-amd64/mod.dll",
+   "bytes": 1398272,
+   "sha256": "a86b3804e15ccefee447bf2977334bc606b33e1d21644c950817a0fd0764a9ce",
+   "crc32": "0x918b84e3"
+  },
+  "mod_json": {
+   "bytes": 765,
+   "sha256": "9695bbf324e39f5663f922c958a169878fba71ea9a8b71533061130a42c8efbf",
+   "crc32": "0xaac776d7"
+  },
+  "download": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/42556628271/artifacts/13649337870"
+ },
+ "provenance": {
+  "base_compiled_source": "5c8ac17e75ed2c8d2b9995277edec59e3ea8360d",
+  "base_docs": "e691a9e08b0c2ca9d3783d9950fafbe24948bd18",
+  "source_branch": "feature/light-fades-twice-lizalfos-duelist-fix02-0-12-2",
+  "compiled_source": "c242770e4f155e206590be978a800c461ae4ebc6",
+  "ci_branch": "ci/light-fades-twice-lizalfos-0-12-2",
+  "ci_commit": "f459e1234ad66f89eab963e5bbf4d02999cb354e",
+  "ci_run": 42556628271,
+  "jobs": {
+   "build": "success",
+   "independent-download": "success"
+  },
+  "toolchain": "MSVC 14.51.36231 x64",
+  "superseded_run": {
+   "run": 42552921810,
+   "source": "a555acc2e4292bf7a40b50600cfc0fcfd8998760",
+   "why": "green, but it declared new_game_imports=9 when the measured value is 10; rebuilt so the delivered manifest is exact. Not for use."
+  },
+  "human_log_used": "dusklight-20261108-190755 (local temporary copy, deleted, not published)"
+ },
+ "evidence": {
+  "source": "parsed from the logs of this CI run",
+  "labs": 27,
+  "checks_total": 1400243731,
+  "checks_liz_lab": 3523516,
+  "checks_liz_world_lab": 4364,
+  "checks_inherited": 1396715851,
+  "mutants": {
+   "total": 922,
+   "killed": 922,
+   "timeouts": 0,
+   "by_suite": {
+    "cp0203": 22,
+    "cp04": 34,
+    "cp05-fix01": 23,
+    "cp05-fix02": 25,
+    "cp05": 34,
+    "cp06": 29,
+    "cp06f1": 41,
+    "fix02": 11,
+    "fix03": 8,
+    "liz": 235,
+    "liz-world": 67,
+    "rework": 393
+   }
+  },
+  "source_negatives": {
+   "cp04": 11,
+   "cp05-fix01": 12,
+   "cp05-fix02": 18,
+   "cp05": 16,
+   "cp06": 34,
+   "cp06f1": 26,
+   "fix03": 12,
+   "liz": 49
+  },
+  "native_contract_lines": 81,
+  "writer_scope_audit": "LIZ_PE_SCOPE_PASS (14 writers; bounded encoding scan, not a proof of every memory effect)",
+  "pe_audit": "PE_AUDIT_PASS",
+  "game_imports": 77,
+  "hook_records": {
+   "HOOK_MEM": 15,
+   "HOOK_MEM_EXT": 14,
+   "HOOK_NAME": 12
+  },
+  "rhythm_lab_vs_0_12_1": "LIZ_RHYTHM output identical to run 42531603399",
+  "synthetic_bench_not_fps": [
+   "LIZ_BENCH actors=0 native_model_ns=0 with_brain_ns=0 brain_cost_ns=0 brain_ns_per_actor=0",
+   "LIZ_BENCH actors=1 native_model_ns=17 with_brain_ns=123 brain_cost_ns=106 brain_ns_per_actor=106",
+   "LIZ_BENCH actors=4 native_model_ns=64 with_brain_ns=542 brain_cost_ns=478 brain_ns_per_actor=119",
+   "LIZ_BENCH actors=8 native_model_ns=130 with_brain_ns=1110 brain_cost_ns=980 brain_ns_per_actor=122",
+   "LIZ_BENCH actors=16 native_model_ns=250 with_brain_ns=2078 brain_cost_ns=1827 brain_ns_per_actor=114"
+  ],
+  "synthetic_brain_ns_per_tick_same_method_local_gcc": {
+   "0.12.1": {
+    "1": 33,
+    "4": 134,
+    "8": 253
+   },
+   "0.12.2": {
+    "1": 38,
+    "4": 150,
+    "8": 286,
+    "16": 602
+   }
+  },
+  "msvc_brain_ns_per_tick_previous_run_0_12_1": {
+   "1": 94,
+   "4": 395,
+   "8": 835
+  }
+ },
+ "independent_download": {
+  "ci_job": "independent-download success",
+  "local_second_download": "gh api artifact zip, recomputed sha256/crc/size, mod.json id and version, DLL hash, compared to DOWNLOAD_MANIFEST"
+ },
+ "p0": {
+  "balance 6/12/5/+0/+25/30": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "no rebound on ordinary block": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "parry only in a new prepared window": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "progressive wound guard 45/80/certain preparation": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "counter only after real parry": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "decisive x1.5": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "global x1.5 on Link during posture break": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ]
+ },
+ "not_executed": [
+  "the real game",
+  "sound, spark, animation, real collision, FPS",
+  "A/B runs with the other eight mods",
+  "real plugin order (observer order covered only in lab)",
+  "p50/p95/p99 latency in game",
+  "boss certification"
+ ]
+}
