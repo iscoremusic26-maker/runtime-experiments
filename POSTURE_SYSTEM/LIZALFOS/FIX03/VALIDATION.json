@@ -1,0 +1,98 @@
+{
+ "version": "0.12.3",
+ "legend": "LAB = production code on modelled engine types, compiled by MSVC in CI. SOURCE = text rule with a proven negative. BINARY = PE audit of the delivered DLL. HUMAN = only the user can confirm it on Windows/DX12.",
+ "matrix": {
+  "A_parry": {
+   "LAB": [
+    "the 26 impacts of P1/P2/P3/P4 parried one by one, each with its own new press and its own native clip, two press leads (w_fix03_chain)",
+    "six D1->D2 pairs: two native activations, input_new 2, native_starts 2, matched 2, posture 24 (w_fix03_chain)",
+    "the same pairs under the 0.12.2 gate reproduce the exact log arithmetic matched+gap_arms==cancelled and D2 unparried (w_fix03_chain)",
+    "P3 breaks exactly on its ninth parry; no earlier",
+    "P3-1: press on the contact tick or after it pays nothing; the window was not widened",
+    "ordinary block without press never parries (rearm_after_no_press, immobile_shield_parry)",
+    "Bokoblin and Black fury parry: inherited CP04/CP05/CP06/POST08 labs"
+   ],
+   "NOT_EXECUTED": "the lazy layout check in post08_step (a parry that is the first contact with an E_OC) is source inspection only: mod.cpp is not compiled by the labs",
+   "HUMAN": "physical timing of R+B on each impact; a Bokoblin parry as the very first contact of a session"
+  },
+  "B_shield": {
+   "LAB": [
+    "12 angles around a guarding actor with shield and body hit in one pass: covered = HP 0, +5 once, no rebound; uncovered = HP loss, no credit (w_fix03_shield)",
+    "a shield held out to the side never covers past +-112.5 deg",
+    "guard turns toward Link at most 0x800 per tick, never a snap; the body is protected only once the shield faces him",
+    "own parry +0, Link +25, native rebound; counter 50/50; multi Lizalfos (inherited w_shield_rebound, w_counter, w_multi)"
+   ],
+   "HUMAN": "real shield pose: the BCK animation was not read, the lab models two arm positions; LIZ_SHIELD event=CONTACT logs the real geometry"
+  },
+  "C_spark": {
+   "LAB": [
+    "same emitter instances of the native hit mark; colour fields only; alpha unchanged; first drawn frame fully orange (w_fix03_fx)",
+    "blocks keep the resource colours; a reverted preview returns to them",
+    "two callbacks of one contact: one record; two enemies: two records; scene change and shutdown leave no pointer or callback"
+   ],
+   "SOURCE": "a new emitter or any shared resource write is rejected (lft03 negatives)",
+   "HUMAN": "the colour actually seen. If the blue lived in the HITNG texture pixels, the change would be partial; the resource was not read"
+  },
+  "D_audio": {
+   "LAB": "one playback pitched x1.12 per parry contact, same call, blocks untouched, reverted preview restores the pitch (w_fix03_fx)",
+   "NOT_EXECUTED": "other hook orders on the five new FX hooks and the presence of other mods: w_plugin_order does not include them; they stay for the A/B run",
+   "HUMAN": "the pitch actually heard; the log distinguishes an applied pitch from real listening only by NATIVE_AUDIO_PITCHED, not by ear"
+  },
+  "E_lockon": {
+   "LAB": "option default ON, ConfigService round trip, UI binding and label; press locks, release keeps, second press releases and hides; one change per flick with hysteresis; no candidate; lost target; NPC, wolf, horse, event; camera side; OFF writes nothing (lft03_lab, w_fix03_lockon)",
+   "HUMAN": "real pad mapping, stick feel, camera, restart persistence with the real host, coexistence of R+B and the lock button"
+  },
+  "F_regressions": {
+   "LAB": "LIZ_RHYTHM byte-identical to 0.12.2; 370 HP, 6/12/30/5/25, +0, regen, A/B/C, 45/80, 80%, counter, breaks, x1.5, Helm, HUD, Black fury, manual R+B",
+   "SOURCE": "cp04/cp05/cp06 combo cores unchanged since c242770 (empty diff); all frozen constants pinned by ci/liz_audit.py",
+   "HUMAN": "other mods, p50/p95/p99, FPS, pause/resume and SHUTDOWN in the real game"
+  },
+  "G_security": {
+   "BINARY": "PE_AUDIT_PASS, 86 reviewed game imports; 5 new writers each bounded to its own stores (FIX03_PE_SCOPE_PASS); bounded encoding scan, not a proof of every memory effect",
+   "SOURCE": "offsets pinned by static_assert against the SDK headers; offsets also read from the 2.0.3 EXE import library",
+   "LAB": "reentrancy of callbacks, install all-or-nothing, teardown, stale records"
+  }
+ },
+ "required_mutants": {
+  "D2 never parryable": ["rearm_never", "no_rearm_after_block", "rearm_outside_gap"],
+  "guard rate": {
+   "mutants": ["motion_foreign_speed", "s2f_anim_rate"],
+   "note": "the chain gate rate==1 stays, because the Shield Attack rate stays x1.00. Those mutants remove the gate and change Link's clip rate. A mutant of a gate left rigid after a rate change does not apply: no rate changed"
+  },
+  "double credit": ["duplicate_swing_credits", "fx_no_dedupe_in_pass", "book_no_dedupe", "bonus_double"],
+  "deflect without press": ["rearm_after_no_press", "immobile_shield_parry", "peek_ignores_input"],
+  "shield covers the back": ["back_covered", "fix03_cover_always", "fix03_no_back_limit"],
+  "body damage despite the shield": ["fix03_invuln_body_yaw", "fix03_cover_body_yaw", "lowering_shield_uncovered"],
+  "orange on ordinary blocks": ["fx_orange_on_ordinary_blocks", "fx_revert_keeps_orange", "book_reverted_still_orange"],
+  "second fake emitter": ["lft03 source negative: dComIfGp_particle_set in the adapter", "lft03 source negative: setGlobalPrmColor"],
+  "global pitch": ["fx_high_clash_on_every_block", "fx_clash_pitched_twice", "fx_pitch_not_reverted", "lft03 source negative: movePitch outside its writer"],
+  "toggle without persistence": ["lk_no_persistence", "lk_hardcoded_on", "lk_change_not_seen", "lk_toggle_not_bound"],
+  "stick moves several targets": ["stick_no_rearm", "stick_engage_low"],
+  "wrong behaviour when OFF": ["option_off_still_writes", "unsafe_still_writes", "lk_unsafe_writes"]
+ },
+ "invariants": {
+  "patterns": "P1 N-D-C, P2 N-N-N-D-N-C, P3 D-N-D-N-N-D, P4 C-C-N-D-C",
+  "impacts": [4, 7, 9, 6],
+  "rates": {"N": 1.25, "D": 1.1, "C_slow": 1.1, "C_fast": 1.2},
+  "draw": "25/25/25/25",
+  "shield_attack_rate": 1.0,
+  "rhythm": "LIZ_RHYTHM output identical to run 42556628271",
+  "hp": 370,
+  "posture_regen": [10, 7, 4, 2, 1],
+  "gains": {"sword": 6, "link_parry": 12, "iron_ball": 30, "own_block": 5, "own_parry": 0, "to_link_on_enemy_parry": 25},
+  "wound_guard_pct": [45, 80, 100],
+  "deflect_pct": 80,
+  "pressure_pct": {"A": 12, "B": 35, "C": 45}
+ },
+ "limits": [
+  "the labs run the production adapters on stub engine types with a transcription of the engine paths; they prove logic and call order, not the game",
+  "an individual parry per impact is demonstrated in the lab, not in the game",
+  "shield pose is a fitted model; commercial BCK data was not read",
+  "spark and audio cannot be read back; the HITNG texture was not read",
+  "the E_OC preview does not reproduce every condition of its commit: a mismatch is reverted and counted, but that first frame was already orange",
+  "child particles drawn before their parents could show one frame without recolour",
+  "P3 impact 1 keeps its 12 tick wind-up: frozen rhythm, window not widened",
+  "zero bugs is not claimed"
+ ],
+ "runtime": "HUMAN_RUNTIME_PENDING"
+}
