@@ -43,4 +43,4 @@ Until the first two clips of each kind have been measured, the first combo of th
 1. Spawn a Chilfos and let it attack.
 2. In the log, find the line `CHILFOS_ANIM event=TRAJECTORY` that settles the identity.
 3. Watch which motion the module calls D and which E.
-4. If the screen and the log disagree, report the two lines. The fix is one constant.
+4. If the screen and the log disagree, report the trajectory lines together with a video and the native clip IDs. Do not blindly flip a constant: actor yaw, tip samples and mapping stability must be checked. The automatic classification is geometric evidence, not visual certification.

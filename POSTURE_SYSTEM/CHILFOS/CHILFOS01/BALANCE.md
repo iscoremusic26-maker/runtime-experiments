@@ -10,7 +10,7 @@
 | The Chilfos blocks a sword hit | +3 |
 | The spear breaks without HP loss (native CLASH) | +5, once per real break |
 | The Chilfos parries Link | +0 to the Chilfos, +25 to Link, native sword rebound, no HP on that contact |
-| Iron Ball | native and lethal (the native branch kills). The +30 value exists in the core but has no non-lethal native route to credit. |
+| Iron Ball | Native lethal behavior is preserved. An owned Iron Ball contact accepted into native damage (timer 8 and damage action), surviving the call, receives +30. Player status 0x400 is the native exception; no health or lethal branch is overridden. |
 | Regeneration | starts after 60 eligible ticks without a genuine gain. By current HP: 256..340 → 12/s, 171..255 → 8/s, 86..170 → 5/s, 35..85 → 2/s, 1..34 → 1/s. Never while latched or staggered, never in a damage reaction, never at 0 HP. HP never regenerates. |
 | Break | at 100: a native stagger (Yoroke, held 90 ticks absolute) |
 
@@ -28,9 +28,9 @@ At 100, LNK05's native guard break request (unchanged).
 - **Parry intent:**
   - A 12%;
   - B 35% (3 swings in 75 ticks);
-  - C 45% (6 swings in 150 ticks and 2 own wounds since its last defense);
+  - C 45% (4 aimed swings in 150 ticks, no wound prerequisite);
   - after two blocks of two different swings within 45 ticks: 80% on the continuation.
-- **No parry:** without the spear, while its own AT is open, from the flank (> 67.5°), during the 120-tick cooldown after a parry, or while staggered.
+- **No parry:** without the spear, while its own AT is open, from the flank (> 67.5°), during the A/B/C 120/90/60-tick cooldown after a parry, or while staggered.
 - **Presenting the parry:** a prepared parry presents the body cylinder as a shield (TgShield) for that swing only. This replaces the native auto-deflect of the 4th+ cut and of spins/jumps. Link's rebound is native (`checkCutReverseAt` / `changeCutReverseProc`), and it is kept only for a real parry.
 - **Guard prepared by wounds:** after 1/2/3 consecutive wounds the guard roll is 45/80/100%. It is up only 6 ticks after the wound (never retroactive) and is forgotten after 90 ticks.
 - **[BALANCE_PROVISIONAL]** The guard roll of a frontal, ready Chilfos with no wound streak is **30%**. The request gives no value. Without one the native Chilfos would block 100% of sword hits while it holds the spear.
@@ -45,7 +45,7 @@ At 100, LNK05's native guard break request (unchanged).
   - The Shield Attack alone does not kill. It does not renew the 90 ticks.
 - **B) A new sword swing:** any NEW sword swing that connects runs the native lethal branch (`health <= 1` after `cc_at_check`, then `executeDead`).
   - The module writes `health = 2` and `field_0x67d = 1` for that one call.
-  - A logged fallback (`health 0`, `action 10`) exists, but the laboratory never needed it.
+  - No fallback death is allowed. Without native death the temporary HP cap is rolled back; no finisher is counted. A zero-damage collision regression reproduces the old false death.
 - **Timeout:** after 90 ticks without a kill: posture 0, same HP, HeadLock off, back to the fight (with its spear: the native wait; without it: the native backstep that restores it).
 - **Outside the stagger:** a Shield Attack staggers natively, but the module removes the HeadLock, so Helm Splitter stays the finisher, not a shortcut.
 - **Other native lethal routes stay native at any time:**

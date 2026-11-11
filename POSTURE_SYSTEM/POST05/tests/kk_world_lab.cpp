@@ -335,7 +335,7 @@ void daE_KK_c::damage_check() {
       } else {
         ++ice;
         if (field_0x67d == 0) {
-          if (o->strong) setActionMode(7, 0);
+          if (o->strong || W.status_400) setActionMode(7, 0);
           else ++guard_se7, setActionMode(6, 0);
         } else {
           health = s16(health - o->power);  // cc_at_check
@@ -708,6 +708,21 @@ static void lab_crossing() {
   CHECK(c4.snap && c4.frame == 23.0f);
   const kk::Cross c5 = kk::crossing(23.0f, 23.4f, kk::kThrowEvents, 4, 3);  // 23 again after it fired: flagged duplicate, never snapped
   CHECK(c5.duplicate && !c5.snap);
+  reset_world();
+  W.link.current.pos = {0, 0, 400}, W.reach = 0;
+  a = spawn(301);
+  until(a, 60, [](daE_KK_c* x) { return slot_of(x) && slot_of(x)->ep.active; });
+  s = slot_of(a);
+  s->ep.counter = true;
+  a->mMoveMode = 3, a->field_0x764 = 6;
+  s->clip.tracked = true, s->clip.last_read = 22.0f, s->clip.fired = 0;
+  a->morf.rate = 1.5f, a->morf.mFrameCtrl.mFrame = 24.0f;
+  a->executeAttack();
+  const auto native_count = W.native_opens.size();
+  const int sounds = a->se_attack03;
+  a->executeAttack();
+  CHECK(W.native_opens.size() == native_count && a->se_attack03 == sounds);
+  CHECK(a->morf.getFrame() == 24.0f && a->field_0x67e == 0);
 }
 // ---------------------------------------------------------------- D: C3 tail with a wall, with Link near, with death
 static daE_KK_c* run_to_pattern(unsigned want, std::uint32_t id_base) {
@@ -930,6 +945,18 @@ static void lab_break() {
   CHECK(a->mActionMode == 10 && s->dead && s->st.decisive_sword == 1 && s->st.fallback_deaths == 0);
   step(80);
   CHECK(a->deleted && count_log("event=NATIVE_DEATH") == 1);
+  // A collision whose native damage is zero must not manufacture a death or consume HP.
+  a = broken(1350);
+  s = slot_of(a);
+  const int ignored_hp = a->health;
+  cCcD_Obj zero_hit;
+  zero_hit.at_type = kAtSword, zero_hit.owner = &W.link, zero_hit.power = 0;
+  ++kz.swing_serial;
+  a->mDamageTimer = 0;
+  a->mCyl.tg_hit = &zero_hit;
+  a->damage_check();
+  CHECK(a->health == ignored_hp && a->mActionMode != 10 && !s->dead);
+  CHECK(s->st.decisive_sword == 0 && s->st.fallback_deaths == 0);
   // A) Shield Attack then Helm Splitter: a Shield Attack alone does not kill, the Helm Splitter that follows does
   a = broken(1400);
   s = slot_of(a);
@@ -966,6 +993,27 @@ static void lab_break() {
   link_swing();
   step(6);
   CHECK(a->mActionMode != 10 && s->p.points() == pts0 + kk::policy::kGainIron && count_log("source=IRON_BALL") == 1);
+  // Repeated callbacks within the native invulnerability interval cannot credit again.
+  cCcD_Obj iron;
+  iron.at_type = kAtIron, iron.owner = &W.link;
+  for (int i = 0; i < 7; ++i) {
+    a->mCyl.tg_hit = &iron;
+    a->damage_check();
+  }
+  CHECK(s->p.points() == pts0 + 30 && count_log("source=IRON_BALL") == 1);
+  // A different hook skipping the original must not count a PRE contact as a receipt.
+  a = fight(1660);
+  s = slot_of(a);
+  a->mCyl.tg_hit = &iron;
+  daE_KK_c* me = a;
+  void* args[] = {&me};
+  on_kk_damage_pre(nullptr, args, nullptr, nullptr);
+  on_kk_damage_post(nullptr, args, nullptr, nullptr);
+  CHECK(s->p.points() == 0 && a->health == 340);
+  // The ordinary lethal route remains native, with no +30.
+  W.status_400 = false;
+  a->damage_check();
+  CHECK(a->mActionMode == 10 && a->health == 0 && s->p.points() == 0 && s->dead);
   W.status_400 = false, W.sword_type = kAtSword;
   // normal death at 0 HP without a break
   a = fight(1700);
