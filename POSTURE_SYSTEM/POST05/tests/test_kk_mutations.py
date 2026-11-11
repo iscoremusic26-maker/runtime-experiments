@@ -49,6 +49,7 @@ cases = [
  ('hidden_never_joins', A, '    else if (s->excl == kk::Excl::HiddenIronBall) kk_admit(*s, a);\n', ''),
  # posture (F)
  ('link_parry_gain_wrong', C, 'kGainLinkParry = 13', 'kGainLinkParry = 12'),
+ ('iron_gain_lost', A, '    kk_posture_gain(*s, a, kk::policy::kGainIron, "IRON_BALL", kz.swing_serial);', '    (void)0;'),
  ('sword_gain_wrong', C, 'kGainSwordHp = 5', 'kGainSwordHp = 6'),
  ('block_gain_wrong', C, 'kGainBlock = 3', 'kGainBlock = 5'),
  ('enemy_parry_self_gain', A, '  kk_link_gain(s, kk::policy::kLinkEnemyParry, false, s.parry_serial, "ENEMY_PARRY");', '  kk_link_gain(s, kk::policy::kLinkEnemyParry, false, s.parry_serial, "ENEMY_PARRY");\n  kk_posture_gain(s, a, 13, "WRONG", s.parry_serial);'),

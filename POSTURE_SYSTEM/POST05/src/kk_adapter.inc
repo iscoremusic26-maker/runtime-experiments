@@ -50,7 +50,7 @@ struct KkSlot {
   std::uint64_t rest_until = 0, counter_until = 0, parry_pending_tick = 0, parry_serial = 0;
   bool counter_pending = false, parry_pending = false;
   // damage_check scope (PRE -> POST of one call)
-  bool in_dc = false, conv = false, decisive = false, shield_atk = false, spear_credit_lock = false;
+  bool in_dc = false, conv = false, decisive = false, shield_atk = false, spear_credit_lock = false, iron_hit = false;
   std::uint8_t saved_67d = 0;
   int hp_before = 0, act_before = 0, mode_before = 0;
   kk::V cur_v = kk::V::None;
@@ -451,7 +451,7 @@ HookAction on_kk_damage_pre(ModContext*, void* args, void*, void*) noexcept {
   auto* a = mods::arg<daE_KK_c*>(args, 0);
   KkSlot* s = a ? kk_find(a) : nullptr;
   if (!s || !s->admitted) return HOOK_CONTINUE;
-  s->in_dc = true, s->conv = s->decisive = s->shield_atk = false, s->cur_v = kk::V::None;
+  s->in_dc = true, s->conv = s->decisive = s->shield_atk = s->iron_hit = false, s->cur_v = kk::V::None;
   s->hp_before = a->health, s->act_before = a->mActionMode, s->mode_before = a->mMoveMode, s->saved_67d = a->field_0x67d;
   if (a->health <= 1 || a->mActionMode == kk::kDead) return HOOK_CONTINUE;  // the native returns at once too
   daAlink_c* k = kkb_link();
@@ -474,6 +474,7 @@ HookAction on_kk_damage_pre(ModContext*, void* args, void*, void*) noexcept {
     }
     return HOOK_CONTINUE;
   }
+  s->iron_hit = o->ChkAtType(kkb_iron_mask()) && k && const_cast<cCcD_Obj*>(o)->GetAc() == static_cast<fopAc_ac_c*>(k);  // native: lethal unless Link's status 0x400
   if (!o->ChkAtType(kkb_sword_mask()) || !k || const_cast<cCcD_Obj*>(o)->GetAc() != static_cast<fopAc_ac_c*>(k)) {
     if (s->ep.active && !o->ChkAtType(kkb_iron_mask())) kk_end_episode(*s, a, kk::End::NativePriority);  // arrows, boomerang, hookshot, bombs: native
     return HOOK_CONTINUE;
@@ -540,6 +541,10 @@ void on_kk_damage_post(ModContext*, void* args, void*, void*) noexcept {
     if (s->ep.active) kk_end_episode(*s, a, kk::End::Death);
     if (s->brk.active()) s->brk.st = kk::Bk::Dead;
     s->dead = true;
+  }
+  if (!died && s->iron_hit) {  // an Iron Ball contact the native branch did not kill with: +30 once for that contact
+    s->iron_hit = false;
+    kk_posture_gain(*s, a, kk::policy::kGainIron, "IRON_BALL", kz.swing_serial);
   }
   if (!died) {
     switch (s->cur_v) {
