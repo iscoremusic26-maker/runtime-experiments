@@ -1,6 +1,6 @@
 # CHILFOS01 continuation implementation
 
-This extends cf78e3a; the architecture and native targets are inherited. No Lizalfos production file or shared integration hunk was changed. Runtime status: HUMAN_RUNTIME_PENDING.
+This extends cf78e3a, Codex's 2adb7fd and the final-session commit; the architecture and native targets are inherited. No Lizalfos production file or shared integration hunk was changed. Runtime status: HUMAN_RUNTIME_PENDING.
 
 ## Corrections
 
@@ -9,6 +9,12 @@ This extends cf78e3a; the architecture and native targets are inherited. No Liza
 * Defense: four aimed swings within 150 ticks reach C, without requiring two wounds. Cooldown is A/B/C 120/90/60 ticks at confirmed parry, matching the requested pressure behavior. Native rebound remains necessary. Guard baseline 30% remains provisional; no new guaranteed parries were added.
 * Frame events: repeated accelerated attack event frames skip the repeated original call, preserving the visible frame and open collider while preventing duplicate native opening/sound. A production-adapter regression fails before this change. Native spawn-frame duplicate protection is retained.
 * Throw: the inherited temporary eye-height sentinel is now limited to frames before 23; it is absent when the native child is created and during later recovery. POST restores it. No new native writer or hook target was added.
+
+## Corrections after 2adb7fd (final session)
+
+* **Crossing swing reused during the stagger (P0).** `kk_decide` returned the verdict cached for a swing before checking the stagger. The swing that raised posture to 100 keeps its cached `Damage`/`Block`/parry verdict. If that same swing contacted again after the native 8-tick `mDamageTimer` (long swings, spins), it ran the spear-less damage branch and could kill with the crossing swing. A cached `Block` would push the Chilfos from Yoroke into the native guard. During the stagger a cached verdict is now reused only when it is `Decisive` or `Ignored`; any other is decided again, and that swing becomes `Ignored`. A NEW swing still finishes. Lab: `lab_break` re-contacts with each cached verdict at 3 HP. Mutant: `stagger_reuses_crossing_verdict`.
+* **Decisive contact without a native death kept the native spear-less reaction (P0).** A sword contact with zero native damage could still be decisive. Codex had already restored its HP. The native had also chosen the spear-less reaction `(7,1)` from our temporary spear-less state, and that reaction ended the 90-tick stagger early, so attacks became possible while broken. `damage_check` runs first in `action()`, so the POST now puts back the stagger action before `executeDamage` starts. It also logs `CHILFOS_BREAK event=DECISIVE_NO_RECEIPT` and counts `decisive_no_receipt` in the summary. Mutant: `decisive_no_receipt_leaves_stagger`.
+* **Throw eye-height sentinel, residual risk re-measured.** The native `cc_set()` recomputes `eyePos` from the head joint in every `execute`, after `action()`. A POST skipped by another hook therefore cannot leave the sentinel past the current Execute. While the native `executeSpearThrow` is running (frames < 23 only), anything that reads `eyePos.y` sees the sentinel. No code change was needed.
 
 ## Evidence and limits
 

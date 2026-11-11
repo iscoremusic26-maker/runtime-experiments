@@ -37,7 +37,7 @@ At 100, LNK05's native guard break request (unchanged).
 - **Counter:** only after a confirmed parry. One real D or E (50/50) at x1.25/x1.30, within 60 ticks.
 
 ## Stagger and finishers
-- **The crossing contact never kills:** the swing that raised posture to 100 is ignored during the stagger.
+- **The crossing contact never kills:** the swing that raised posture to 100 is ignored during the stagger. This holds even when that swing contacts again after the native 8-tick timer: its pre-stagger verdict is never reused.
 - **A) Shield Attack, then Helm Splitter:**
   - another Shield Attack during the stagger gives the native HeadLock;
   - Link's native Helm Splitter then hits;
@@ -46,6 +46,7 @@ At 100, LNK05's native guard break request (unchanged).
 - **B) A new sword swing:** any NEW sword swing that connects runs the native lethal branch (`health <= 1` after `cc_at_check`, then `executeDead`).
   - The module writes `health = 2` and `field_0x67d = 1` for that one call.
   - No fallback death is allowed. Without native death the temporary HP cap is rolled back; no finisher is counted. A zero-damage collision regression reproduces the old false death.
+  - In that case the stagger action is also put back before the native spear-less reaction runs, so the stagger keeps its 90 ticks (`CHILFOS_BREAK event=DECISIVE_NO_RECEIPT`).
 - **Timeout:** after 90 ticks without a kill: posture 0, same HP, HeadLock off, back to the fight (with its spear: the native wait; without it: the native backstep that restores it).
 - **Outside the stagger:** a Shield Attack staggers natively, but the module removes the HeadLock, so Helm Splitter stays the finisher, not a shortcut.
 - **Other native lethal routes stay native at any time:**

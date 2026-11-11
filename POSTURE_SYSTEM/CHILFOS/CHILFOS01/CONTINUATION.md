@@ -1,5 +1,7 @@
 # Continuation inventory
 
+**Current state (final session, 2026-11-11):** the remote feature branch was at `2adb7fde995aa8d7722a56a23b9c1f7ba52dbc0a` (Codex), with a clean worktree. The CI branch was at `d7aa998` (FAST run 43076718571, source 2adb7fd), and its ledger matched the source (237/237 files). That FAST run is superseded by the final source and its FULL run. The text below is the historical inventory made at cf78e3a.
+
 Baseline: `cf78e3a167330aecdff5343c77f967ad717fd9ac`, verified directly through the GitHub connector and git ls-remote on 2026-11-11. The remote feature branch points at this commit. Parent: `8425ce3b31273a93ce12c26acf66e065346c942c`. No WSL access was needed or attempted; the user confirmed all pending work was published.
 
 The cloud checkout initially had no checked-out files or local modifications. FETCH_HEAD contained older entries; an initial branch selected an older CP00 commit, detected immediately before editing. No merge was possible (unrelated/shallow history); the exclusive local branch `codex/chilfos01-continuation` was created explicitly at cf78e3a. No reset, clean, force push or other-mod edits were performed.
