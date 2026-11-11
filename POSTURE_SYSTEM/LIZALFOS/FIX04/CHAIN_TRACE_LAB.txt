@@ -1,0 +1,22 @@
+# LAB trace, not the game: FIX04 commit 334ec89 compiled locally with g++ plus one print-only line. One run of w_fix04_mash, first pose, 80% roll forced to YES.
+LIZ_GUARD event=WOUND_ROLL actor=100 generation=1 wound=1 pct=45 prepare=1 hp=366 tick=4
+LIZ_TRACE actor=100 generation=1 epoch=0 swing=1 tick=1005 action=3 mode=2 frame=4.0 shape_y=0 search_y=0 presented=0 covers=1 body_hit=1 shield_hit=0 verdict=BODY_DAMAGE hp=370->366 posture=0->6 ut2=0 shield_dx=-23500.0 shield_dz=-30000.0 link_dx=0.0 link_dz=
+LIZ_GUARD event=ENTER source=WOUND actor=100 generation=1 level=0 waited=6 dist=160.0 tick=10
+LIZ_DEFLECT event=SWORD_NO_REBOUND_ORDINARY_BLOCK actor=100 generation=1 swing=2 mode=7 tick=1032
+LIZ_GUARD event=BLOCK actor=100 generation=1 gain=+5 posture_before=6 hp=366 rebound=0 tick=32
+LIZ_TRACE actor=100 generation=1 epoch=0 swing=2 tick=1032 action=7 mode=7 frame=8.0 shape_y=0 search_y=0 presented=1 covers=1 body_hit=0 shield_hit=1 verdict=BLOCK hp=366->366 posture=6->11 ut2=10 shield_dx=40.0 shield_dz=4.0 link_dx=0.0 link_dz=160.0
+LIZ_DEFLECT event=SWORD_NO_REBOUND_ORDINARY_BLOCK actor=100 generation=1 swing=3 mode=7 tick=1044
+LIZ_GUARD event=BLOCK actor=100 generation=1 gain=+5 posture_before=11 hp=366 rebound=0 tick=44
+LIZ_DEFLECT event=PREPARE_ROLL actor=100 generation=1 armed=1 pct=80 tick=44
+LIZ_TRACE actor=100 generation=1 epoch=0 swing=3 tick=1044 action=7 mode=7 frame=8.0 shape_y=0 search_y=0 presented=1 covers=1 body_hit=0 shield_hit=1 verdict=BLOCK hp=366->366 posture=11->16 ut2=10 shield_dx=40.0 shield_dz=4.0 link_dx=0.0 link_dz=160.0
+LIZ_DEFLECT event=NEW_WINDOW actor=100 generation=1 token=1 level=2 waited=0 mode=5 tick=44
+LIZ_DEFLECT event=SWORD_REBOUND_NATIVE actor=100 generation=1 swing=4 mode=6 tick=1047
+LIZ_DEFLECT event=ENEMY_PARRY actor=100 generation=1 link_gain=+25 liz_gain=+0 rebound=NATIVE level=2 guard_age=4 hp=366 tick=47 cooldown_until=107
+LIZ_COUNTER event=COUNTER_SELECTED actor=100 generation=1 token=1 kind=NORMAL_X1_25 source=ENEMY_PARRY tick=47 dist=160.0
+LIZ_TRACE actor=100 generation=1 epoch=0 swing=4 tick=1047 action=7 mode=6 frame=2.0 shape_y=0 search_y=0 presented=1 covers=1 body_hit=0 shield_hit=1 verdict=ENEMY_PARRY hp=366->366 posture=16->16 ut2=10 shield_dx=40.0 shield_dz=4.0 link_dx=0.0 link_dz=160.0
+LIZ_COUNTER event=GUARD_EXIT actor=100 token=1 from_mode=6 tick=47
+LIZ_COUNTER event=ATTACK_COMMITTED actor=100 token=1 kind=NORMAL_X1_25 source=ENEMY_PARRY waited_ticks=20 tick=67 dist=160.0
+LIZ_COMBO event=START actor=100 generation=1 pattern=5 acts=1 impacts=1 token=1 tick=67 posture=16 hp=366
+LIZ_COUNTER event=AT_OPEN actor=100 token=1 tick=86
+LIZ_COUNTER event=CONTACT actor=100 token=1 result=DIRECT tick=88
+LIZ_COMBO event=START actor=100 generation=1 pattern=4 acts=5 impacts=6 token=2 tick=137 posture=4 hp=366

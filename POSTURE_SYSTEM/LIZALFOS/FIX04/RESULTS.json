@@ -1,0 +1,170 @@
+{
+ "version": "0.12.4",
+ "mod_id": "dev.posture.post05_selective_reactions",
+ "status": "HUMAN_RUNTIME_PENDING",
+ "artifact": {
+  "file": "LIGHT_FADES_TWICE_LIZALFOS_FIX04_0_12_4_PRIVATE_TEST_windows-amd64_334ec89ad84d.dusk",
+  "bytes": 240709,
+  "sha256": "e75a3ff05db32042a12c7abb2dde1218cf7e84585ebffb371cd41dd745fa7330",
+  "crc32": "0x5ce6a9c0",
+  "dll": {
+   "path": "lib/windows-amd64/mod.dll",
+   "bytes": 1428480,
+   "sha256": "c6da997148a4ed365286d933055476cb8718b9e80f767655ca224d52882a8669",
+   "crc32": "0x131461be"
+  },
+  "mod_json": {
+   "bytes": 599,
+   "sha256": "787c2b9586360ea9f527bc9d22371fdd8aba6d1798412b215f670aaf413ff653",
+   "crc32": "0x0abedce8"
+  },
+  "members": [
+   "mod.json",
+   "lib/",
+   "lib/windows-amd64/",
+   "lib/windows-amd64/mod.dll"
+  ],
+  "download": "https://github.com/iscoremusic26-maker/codex-cp00-inputs/actions/runs/42950612778/artifacts/13826757793"
+ },
+ "provenance": {
+  "base_compiled_source": "2aa4abe2e3b4c420dc67c3588e7ba8427eab9b71",
+  "base_docs": "aeb7f94f21e2601e11291e4ed040736a3092d71f",
+  "source_branch": "feature/light-fades-twice-lizalfos-fix04-0-12-4",
+  "compiled_source": "334ec89ad84d171fe8317653e19e15ffc93b8b0e",
+  "ci_branch": "ci/light-fades-twice-lizalfos-0-12-4",
+  "ci_commit": "7ccb82d928568c12a859c214ed258f086ae2edcf",
+  "ci_run": 42950612778,
+  "jobs": {
+   "build": "success",
+   "independent-download": "success"
+  },
+  "toolchain": "MSVC 14.51.36231 x64",
+  "official_sdk": "40457c6adb381928e4b5fef6ed459ed291edd5e2",
+  "failed_runs_not_for_use": {
+   "42949961904": "PE audit pin: an expected HOOK_FN count of 0 where no such record exists"
+  },
+  "human_log_used": "dusklight-20261110-204237 (authorized, local temporary copy, not published)"
+ },
+ "evidence": {
+  "source": "parsed from the logs of this CI run",
+  "labs": 28,
+  "checks_total": 1400615950,
+  "checks_liz_lab": 3514108,
+  "checks_liz_world_lab": 217596,
+  "checks_lft03_lab": 168395,
+  "fix03_properties": {
+   "peek_equals_observe": 67855,
+   "preview_equals_verdict": 1516,
+   "of_which_parries": 184
+  },
+  "mutants": {
+   "total": 1028,
+   "killed": 1028,
+   "timeouts": 0,
+   "by_suite": {
+    "cp0203": 22,
+    "cp04": 34,
+    "cp05-fix01": 23,
+    "cp05-fix02": 25,
+    "cp05": 34,
+    "cp06": 29,
+    "cp06f1": 41,
+    "fix02": 11,
+    "fix03": 8,
+    "lft03": 34,
+    "liz": 236,
+    "liz-world": 138,
+    "rework": 393
+   }
+  },
+  "source_negatives": {
+   "cp04": 11,
+   "cp05-fix01": 12,
+   "cp05-fix02": 18,
+   "cp05": 16,
+   "cp06": 34,
+   "cp06f1": 26,
+   "fix03": 12,
+   "liz": 49,
+   "lft03": 17
+  },
+  "native_contract_lines": 81,
+  "hook_prologue_audit": "HOOK_PROLOGUE_PASS",
+  "ci_units": {
+   "phases": 128,
+   "seconds": 2760
+  },
+  "writer_scope_audit": {
+   "lizalfos": "LIZ_PE_SCOPE_PASS",
+   "fix03": "FIX03_PE_SCOPE_PASS",
+   "fix03_writers": [
+    "lockon_native_attention",
+    "lockon_native_pad",
+    "pfx_native_callback",
+    "pfx_native_colors",
+    "pfx_native_pitch"
+   ],
+   "note": "bounded encoding scan, not a proof of every memory effect"
+  },
+  "pe_audit": "PE_AUDIT_PASS",
+  "game_imports": 86,
+  "hook_records": {
+   "HOOK_NAME": 13,
+   "HEADER": 1,
+   "IMPORT": 9,
+   "HOOK_MEM": 18,
+   "HOOK_MEM_EXT": 14
+  },
+  "rhythm_lab_vs_0_12_3_and_0_12_2": "LIZ_RHYTHM output byte-identical to runs 42932174664 and 42556628271",
+  "rhythm_sha256": "4ba70c4a5f04ba26cc116766a47e422d54aef505050b8ec8e6d1e615e386411b",
+  "synthetic_bench_not_fps": [
+   "LIZ_BENCH actors=0 native_model_ns=0 with_brain_ns=0 brain_cost_ns=0 brain_ns_per_actor=0",
+   "LIZ_BENCH actors=1 native_model_ns=12 with_brain_ns=92 brain_cost_ns=80 brain_ns_per_actor=80",
+   "LIZ_BENCH actors=4 native_model_ns=47 with_brain_ns=362 brain_cost_ns=315 brain_ns_per_actor=79",
+   "LIZ_BENCH actors=8 native_model_ns=88 with_brain_ns=732 brain_cost_ns=644 brain_ns_per_actor=80",
+   "LIZ_BENCH actors=16 native_model_ns=172 with_brain_ns=1547 brain_cost_ns=1375 brain_ns_per_actor=86"
+  ]
+ },
+ "independent_download": {
+  "ci_job": "independent-download success",
+  "local_second_download": "gh api artifact zip into a new directory, python -I: recomputed sha256/crc/size, members, mod.json id and version, DLL hash, compared to DOWNLOAD_MANIFEST and SHA256SUMS"
+ },
+ "objectives": {
+  "P0 real frontal guard: no HP, +5 per distinct block": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "P0 two blocks, 80% preparation, physical parry, rebound, N/D counter, four combos": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "P1 PARRY_FX repaired: native spark orange, native clash pitch x1.12, parry only": [
+   "SOURCE_IMPLEMENTED",
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "HUMAN_RUNTIME_PENDING"
+  ],
+  "Z-target unchanged, source byte-identical to 0.12.3": [
+   "LAB_PASS",
+   "WINDOWS_CI_PASS",
+   "INDEPENDENT_DOWNLOAD_PASS",
+   "USER_APPROVED_ON_0_12_3",
+   "RESTART_PERSISTENCE_HUMAN_PENDING"
+  ]
+ },
+ "not_executed": [
+  "the real game (dll_loaded false, game_executed false)",
+  "seen spark colour, heard pitch, shield animation, real collision",
+  "physical input: R+B timing, L toggle, right stick on a real pad",
+  "option persistence across real restarts of the host",
+  "A/B runs with the other mods; real plugin order (observer order covered only in lab)",
+  "p50/p95/p99 latency and FPS in game"
+ ]
+}

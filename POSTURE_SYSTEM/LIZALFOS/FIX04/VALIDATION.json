@@ -1,0 +1,54 @@
+{
+ "version": "0.12.4",
+ "legend": "LAB = production code on modelled engine types, compiled by MSVC in CI. SOURCE = text rule with a proven negative. BINARY = audit of the delivered DLL or the pinned host EXE. HUMAN = only the user can confirm it on Windows/DX12.",
+ "matrix": {
+  "A_wounds": {"LAB": "45/80/certain preparation, legal transition only, rear wounds (lab_wound_guard); first wound then guard through the real hooks (w_fix04_mash)"},
+  "B_guard": {"LAB": "12 angles with shield and body in one pass (w_fix03_shield); three held arm poses (w_fix04_mash); rising and lowered shield give real damage; three capsules = one verdict; a swing the aim test misses still finds the sphere", "HUMAN": "real ANM_GUARD pose: BCK not read; LIZ_TRACE logs the real sphere offset"},
+  "C_hp_posture": {"LAB": "covered: HP intact, +5 once per distinct swing; uncovered: HP lost, +6"},
+  "D_two_blocks": {"LAB": "two blocks detected, one 80% roll, both outcomes forced by seed, frequencies in lab_deflect, new window, contact in and out of window"},
+  "E_after_parry": {"LAB": "+25 Link, +0 itself, native rebound, N/D 50/50 with real At, back to the four combos (w_counter, w_fix04_mash)", "HUMAN": "the counter as seen and defended"},
+  "F_parry_fx": {"LAB": "every hook failure named and isolated by function; every callback counted; only confirmed parries orange and high; Link->Lizalfos, Link->Bokoblin (first contact included), Lizalfos->Link; revert, duplicates, scene change, deleted owner", "BINARY": "hook prologue audit on the pinned EXE", "HUMAN": "colour seen, pitch heard. Telemetry proves the route ran, not how it looks or sounds"},
+  "G_bokoblins": {"LAB": "inherited CP04/CP05/CP06/POST08 labs; cores unchanged"},
+  "H_link": {"LAB": "inherited LNK and POST08 labs"},
+  "I_lockon": {"LAB": "lft03 and w_fix03_lockon unchanged; lockon_core.hpp and lockon_adapter.inc byte-identical to 0.12.3", "HUMAN": "persistence across real restarts"},
+  "J_stress": {"LAB": "16 slots, generations, delete, reuse, reentry; ASan clean locally on liz_world_lab", "NOT_EXECUTED": "real 16 actor scene, FPS"}
+ },
+ "before_after_mutants": {
+  "held pose not covered, the real 0.12.3 failure": ["fix04_held_contact_rejected", "fix04_held_credit_rejected", "fix04_held_body_open"],
+  "stored verdict discarded": ["fix04_verdict_not_reused"],
+  "shield arc": ["fix04_shield_side_too_wide", "fix04_shield_side_too_narrow", "fix04_open_side_too_wide", "fix04_open_side_too_narrow", "fix04_cover_always", "fix04_cover_ignores_shield_side"],
+  "presentation": ["fix04_not_presented_blocks"],
+  "parry arc": ["fix04_parry_uses_block_arc"],
+  "shield sphere per swing": ["fix04_sphere_only_for_aimed_swing"],
+  "trace": ["fix04_trace_lost", "fix04_trace_block_as_repeat", "fix04_trace_damage_as_repeat"],
+  "hook failures": ["fx_decision_hook_failure_ignored", "fx_spark_hook_failure_ignored", "fx_sound_hook_failure_ignored", "fx_all_or_nothing_again", "fx_hook_failure_not_named", "fx_callback_not_counted"],
+  "clash recognition": ["fx_enemy_shield_se_not_pitched", "fx_enemy_clash_any_owner", "fx_bash_se_taken_for_shield"],
+  "audio readback": ["fx_readback_after_owner_deleted", "fx_pitch_readback_lost"],
+  "first Bokoblin contact": ["fx_oc_first_contact_no_preview"],
+  "colour": ["orange_no_saturation_floor", "orange_floor_on_white"],
+  "def_se_set hooked again": ["lft03 source negative"]
+ },
+ "invariants": {
+  "patterns": "P1 N-D-C, P2 N-N-N-D-N-C, P3 D-N-D-N-N-D, P4 C-C-N-D-C",
+  "impacts": [4, 7, 9, 6],
+  "rates": {"N": 1.25, "D": 1.1, "C_slow": 1.1, "C_fast": 1.2},
+  "draw": "25/25/25/25",
+  "shield_attack_rate": 1.0,
+  "hp": 370,
+  "posture_regen": [10, 7, 4, 2, 1],
+  "gains": {"sword": 6, "link_parry": 12, "iron_ball": 30, "own_block": 5, "own_parry": 0, "to_link_on_enemy_parry": 25},
+  "wound_guard_pct": [45, 80, 100],
+  "deflect_pct": 80,
+  "pressure_pct": {"A": 12, "B": 35, "C": 45},
+  "p3_impact_1": "no specific work, by order of the user"
+ },
+ "limits": [
+  "the labs run the production adapters on stub engine types; they prove logic and call order, not the game",
+  "the block arc is a design decision on the body's facing; the real shield pose was not read",
+  "a shield contact while the shield is still rising is not a block, by design",
+  "the HITNG texture was not read: if the blue lives in its pixels the orange will be partial; the log reports it",
+  "by-name hook targets are outside the prologue audit; the 0.12.3 log shows no failure for them",
+  "zero bugs is not claimed"
+ ],
+ "runtime": "HUMAN_RUNTIME_PENDING"
+}

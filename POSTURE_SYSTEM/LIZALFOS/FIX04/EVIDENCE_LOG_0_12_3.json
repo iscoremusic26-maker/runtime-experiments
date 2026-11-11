@@ -1,0 +1,73 @@
+{
+ "source": "dusklight-20261110-204237 (authorized; the raw log is not published)",
+ "lines": 28720,
+ "bytes": 6925638,
+ "hook_failure": {
+  "host_warning": "funchook failed (prepare=5 install=-1): Could not fix ip-relative address. The size is not 32.",
+  "count": 2,
+  "resolved_rva": "0x818d80",
+  "symbol": "?def_se_set@@YAXPEAVZ2Creature@@PEAVcCcD_Obj@@IPEAVfopAc_ac_c@@@Z",
+  "how": "ASLR base from the same log: named warning setRStatus minus its RVA 0x8e95b0 in the pinned EXE",
+  "prologue": [
+   "test rcx,rcx",
+   "je short (rel8)"
+  ],
+  "why": "the rel8 branch lies inside the 5 bytes funchook must relocate; PRE and POST each tried once",
+  "exe_sha256": "ffa992038d04290654b8907a7663f4dcf62083beaad2b35014fdfd901d390049"
+ },
+ "parry_fx_summary": {
+  "enabled": "0",
+  "preview": "0/0/0",
+  "confirmed": "0/0/0",
+  "emitters": "0",
+  "sounds": "0"
+ },
+ "fix02": {
+  "swings_detected": "124",
+  "wounds": "109",
+  "guard_enters": "26",
+  "block_pairs": "0",
+  "deflect_roll": "0",
+  "shield_won_body": "4",
+  "block_rear_rejected": "49",
+  "rebound_kept": "2",
+  "rebound_suppressed": "62",
+  "counter_started": "0/2",
+  "counter_contact": "2"
+ },
+ "fix03": {
+  "shield_not_covering": "48",
+  "guard_cover_ticks": "86",
+  "guard_open_ticks": "1098",
+  "guard_turn_ticks": "1357",
+  "chain_input_new": "478",
+  "dpair": "50"
+ },
+ "blocks_total": "5",
+ "shield_contact_lines_LIZ_SHIELD": 0,
+ "sword_on_shield_by_guard_mode_and_outcome": {
+  "mode6:BLOCK": 3,
+  "mode6:BODY_DAMAGE_SAME_SWING": 7,
+  "mode6:ENEMY_PARRY": 2,
+  "mode6:NO_CREDIT_NO_DAMAGE": 6,
+  "mode7:BLOCK": 1,
+  "mode7:BODY_DAMAGE_SAME_SWING": 25,
+  "mode7:NO_CREDIT_NO_DAMAGE": 14,
+  "mode8:BLOCK": 1,
+  "mode8:BODY_DAMAGE_SAME_SWING": 3,
+  "mode8:NO_CREDIT_NO_DAMAGE": 2
+ },
+ "reading": "The engine recorded 64 sword contacts on the shield sphere; only 5 were credited. In the held pose (mode 7), 25 of the 40 ended as body damage from the same swing. LIZ_SHIELD printed 0 lines because of the same off-by-one that discarded the stored verdict.",
+ "link_parry_native_receipts": {
+  "impacts_with_link_parry_logged": 181,
+  "without_native_receipt": 0
+ },
+ "lockon": {
+  "available": "1",
+  "ui": "1",
+  "option": "1",
+  "toggled": "44",
+  "cancelled": "16",
+  "switched": "26"
+ }
+}

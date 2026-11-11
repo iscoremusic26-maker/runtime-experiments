@@ -1,0 +1,226 @@
+{
+ "status": "HOOK_PROLOGUE_PASS",
+ "window": 5,
+ "targets": {
+  "?ProcAtTgHitmark@dCcS@@QEAAX_N0PEAVcCcD_Obj@@1PEAVdCcD_GObjInf@@2PEAVcCcD_Stts@@3PEAVdCcD_GStts@@4PEAUcXyz@@0@Z": {
+   "rva": "0x816da0",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+10h],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?setHitMark@dPa_control_c@@QEAAXGPEAVfopAc_ac_c@@PEBUcXyz@@PEBVcsXyz@@1I@Z": {
+   "rva": "0x7bde10",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+8],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?set@dPa_control_c@@QEAAPEAVJPABaseEmitter@@EGPEBUcXyz@@PEBVdKy_tevstr_c@@PEBVcsXyz@@0EPEAVdPa_levelEcallBack@@CPEBUGXColor@@40M@Z": {
+   "rva": "0x7bcd90",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+8],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?setGuardSe@daAlink_c@@QEAAXPEAVdCcD_GObjInf@@@Z": {
+   "rva": "0x8d8990",
+   "window_bytes": 5,
+   "instructions": [
+    "push        rbx",
+    "push        rbp",
+    "push        rsi",
+    "push        rdi"
+   ],
+   "rel8_in_window": []
+  },
+  "?startCollisionSE@Z2SoundObjBase@@QEAAPEAVZ2SoundHandlePool@@IIPEAV1@@Z": {
+   "rva": "0xaa4120",
+   "window_bytes": 5,
+   "instructions": [
+    "push        rbx",
+    "push        rbp",
+    "push        rsi",
+    "push        rdi"
+   ],
+   "rel8_in_window": []
+  },
+  "?checkCutReverseAt@daAlink_c@@QEAAHPEAVdCcD_GObjInf@@@Z": {
+   "rva": "0x843c50",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+8],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?setDamagePoint@daAlink_c@@QEAAHHHHH@Z": {
+   "rva": "0x8cdcb0",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+8],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?setCutType@daAlink_c@@QEAAXE@Z": {
+   "rva": "0x8cd980",
+   "window_bytes": 10,
+   "instructions": [
+    "and         dword ptr [rcx+0000000000000680h],0F7FFFFFFh"
+   ],
+   "rel8_in_window": []
+  },
+  "?checkDamageAction@daAlink_c@@QEAAHXZ": {
+   "rva": "0x843e80",
+   "window_bytes": 6,
+   "instructions": [
+    "push        rbp",
+    "push        rbx",
+    "push        rdi",
+    "push        r12"
+   ],
+   "rel8_in_window": []
+  },
+  "?checkMoveDoAction@daAlink_c@@QEAAHXZ": {
+   "rva": "0x84b870",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+8],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?setCollision@daAlink_c@@QEAAXXZ": {
+   "rva": "0x8cb320",
+   "window_bytes": 5,
+   "instructions": [
+    "push        rbx",
+    "push        rbp",
+    "push        rsi",
+    "push        rdi"
+   ],
+   "rel8_in_window": []
+  },
+  "?setRStatus@daAlink_c@@QEAAXE@Z": {
+   "rva": "0x8e95b0",
+   "window_bytes": 5,
+   "instructions": [
+    "movzx       ecx,dl",
+    "xor         edx,edx"
+   ],
+   "rel8_in_window": []
+  },
+  "?setShieldGuard@daAlink_c@@QEAAXXZ": {
+   "rva": "0x8eac70",
+   "window_bytes": 6,
+   "instructions": [
+    "push        rbx",
+    "sub         rsp,20h"
+   ],
+   "rel8_in_window": []
+  },
+  "?setStickData@daAlink_c@@QEAAXXZ": {
+   "rva": "0x8edf10",
+   "window_bytes": 6,
+   "instructions": [
+    "push        rdi",
+    "sub         rsp,30h"
+   ],
+   "rel8_in_window": []
+  },
+  "?spActionTrigger@daAlink_c@@QEAAHXZ": {
+   "rva": "0x8f93f0",
+   "window_bytes": 7,
+   "instructions": [
+    "mov         dl,40h",
+    "jmp         000000014002F4F0"
+   ],
+   "rel8_in_window": []
+  },
+  "?modelDraw@daAlink_c@@QEAAXPEAVJ3DModel@@H@Z": {
+   "rva": "0x872880",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+8],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?damage_check@daE_OC_c@@QEAAXXZ": {
+   "rva": "0xe06390",
+   "window_bytes": 7,
+   "instructions": [
+    "push        rbx",
+    "push        rsi",
+    "sub         rsp,58h"
+   ],
+   "rel8_in_window": []
+  },
+  "?execute@daE_OC_c@@QEAAHXZ": {
+   "rva": "0xe06bf0",
+   "window_bytes": 9,
+   "instructions": [
+    "push        rdi",
+    "sub         rsp,80h"
+   ],
+   "rel8_in_window": []
+  },
+  "?executeAttack@daE_OC_c@@QEAAXXZ": {
+   "rva": "0xe06f90",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         rax,rsp",
+    "push        rbp",
+    "push        rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?executeDamage@daE_OC_c@@QEAAXXZ": {
+   "rva": "0xe08000",
+   "window_bytes": 6,
+   "instructions": [
+    "push        rdi",
+    "sub         rsp,50h"
+   ],
+   "rel8_in_window": []
+  },
+  "?_draw@dMeter2_c@@QEAAHXZ": {
+   "rva": "0xa25270",
+   "window_bytes": 6,
+   "instructions": [
+    "push        rbx",
+    "sub         rsp,20h"
+   ],
+   "rel8_in_window": []
+  },
+  "?_execute@dMeter2_c@@QEAAHXZ": {
+   "rva": "0xa25410",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+8],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?_delete@dMeter2_c@@QEAAHXZ": {
+   "rva": "0xa24f80",
+   "window_bytes": 5,
+   "instructions": [
+    "mov         qword ptr [rsp+10h],rbx"
+   ],
+   "rel8_in_window": []
+  },
+  "?def_se_set@@YAXPEAVZ2Creature@@PEAVcCcD_Obj@@IPEAVfopAc_ac_c@@@Z": {
+   "rva": "0x818d80",
+   "window_bytes": 5,
+   "instructions": [
+    "test        rcx,rcx",
+    "je          0000000140818DDD"
+   ],
+   "rel8_in_window": [
+    "je          0000000140818DDD"
+   ]
+  }
+ },
+ "errors": [],
+ "scope": "exported hook targets only; execution of the hooks is only proven by the human log"
+}
