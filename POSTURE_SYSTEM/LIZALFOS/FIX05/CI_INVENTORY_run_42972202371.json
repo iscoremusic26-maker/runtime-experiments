@@ -1,0 +1,817 @@
+{
+ "profile": "full",
+ "status": "FULL_PASS",
+ "stages": {
+  "gate": {
+   "status": "FAST_PASS",
+   "seconds_in_phases": 196.4,
+   "phases": [
+    {
+     "label": "compiler",
+     "seconds": 2.859,
+     "exit": 0
+    },
+    {
+     "label": "cmake-version",
+     "seconds": 0.984,
+     "exit": 0
+    },
+    {
+     "label": "ninja-version",
+     "seconds": 0.172,
+     "exit": 0
+    },
+    {
+     "label": "tool-tests",
+     "seconds": 0.594,
+     "exit": 0
+    },
+    {
+     "label": "pmf-static-tests",
+     "seconds": 0.078,
+     "exit": 0
+    },
+    {
+     "label": "hudfix-production-adapter",
+     "seconds": 13.11,
+     "exit": 0
+    },
+    {
+     "label": "fix03-parity",
+     "seconds": 0.14,
+     "exit": 0
+    },
+    {
+     "label": "cp04-pe-name-policy",
+     "seconds": 0.063,
+     "exit": 0
+    },
+    {
+     "label": "cp05-pe-policy",
+     "seconds": 0.093,
+     "exit": 0
+    },
+    {
+     "label": "cp04-native-reference",
+     "seconds": 0.063,
+     "exit": 0
+    },
+    {
+     "label": "cp05-native-reference",
+     "seconds": 0.047,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix01-native-reference",
+     "seconds": 0.062,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix02-native-reference",
+     "seconds": 0.047,
+     "exit": 0
+    },
+    {
+     "label": "source-barrier",
+     "seconds": 0.531,
+     "exit": 0
+    },
+    {
+     "label": "source-audit",
+     "seconds": 1.969,
+     "exit": 0
+    },
+    {
+     "label": "mutant-anchors",
+     "seconds": 0.25,
+     "exit": 0
+    },
+    {
+     "label": "fix03-source-negatives",
+     "seconds": 22.141,
+     "exit": 0
+    },
+    {
+     "label": "liz-source-negatives",
+     "seconds": 93.687,
+     "exit": 0
+    },
+    {
+     "label": "lft03-source-negatives",
+     "seconds": 0.078,
+     "exit": 0
+    },
+    {
+     "label": "configure",
+     "seconds": 7.0,
+     "exit": 0
+    },
+    {
+     "label": "build-mod",
+     "seconds": 18.938,
+     "exit": 0
+    },
+    {
+     "label": "dumpbin-headers",
+     "seconds": 0.062,
+     "exit": 0
+    },
+    {
+     "label": "dumpbin-imports",
+     "seconds": 0.032,
+     "exit": 0
+    },
+    {
+     "label": "dumpbin-exports",
+     "seconds": 0.015,
+     "exit": 0
+    },
+    {
+     "label": "hook-prologue-audit",
+     "seconds": 0.891,
+     "exit": 0
+    },
+    {
+     "label": "store-audit",
+     "seconds": 0.515,
+     "exit": 0
+    },
+    {
+     "label": "cp04-native-writer-scopes",
+     "seconds": 0.11,
+     "exit": 0
+    },
+    {
+     "label": "cp05-native-writer-scopes",
+     "seconds": 0.109,
+     "exit": 0
+    },
+    {
+     "label": "cp06-native-writer-scope",
+     "seconds": 0.078,
+     "exit": 0
+    },
+    {
+     "label": "cp06f1-native-writer-scopes",
+     "seconds": 0.063,
+     "exit": 0
+    },
+    {
+     "label": "liz-native-contract",
+     "seconds": 0.078,
+     "exit": 0
+    },
+    {
+     "label": "liz-native-writer-scopes",
+     "seconds": 0.062,
+     "exit": 0
+    },
+    {
+     "label": "lft03-native-writer-scopes",
+     "seconds": 0.063,
+     "exit": 0
+    },
+    {
+     "label": "pe-negatives",
+     "seconds": 6.031,
+     "exit": 0
+    },
+    {
+     "label": "build-compat_lab",
+     "seconds": 5.047,
+     "exit": 0
+    },
+    {
+     "label": "run-compat_lab",
+     "seconds": 0.25,
+     "exit": 0
+    },
+    {
+     "label": "build-liz_lab",
+     "seconds": 5.688,
+     "exit": 0
+    },
+    {
+     "label": "run-liz_lab",
+     "seconds": 0.187,
+     "exit": 0
+    },
+    {
+     "label": "build-liz_world_lab",
+     "seconds": 12.797,
+     "exit": 0
+    },
+    {
+     "label": "run-liz_world_lab",
+     "seconds": 0.156,
+     "exit": 0
+    },
+    {
+     "label": "build-lft03_lab",
+     "seconds": 1.0,
+     "exit": 0
+    },
+    {
+     "label": "run-lft03_lab",
+     "seconds": 0.0,
+     "exit": 0
+    },
+    {
+     "label": "build-package",
+     "seconds": 0.297,
+     "exit": 0
+    }
+   ]
+  },
+  "labs": {
+   "status": "LABS_PASS",
+   "seconds_in_phases": 340.1,
+   "phases": [
+    {
+     "label": "configure",
+     "seconds": 11.312,
+     "exit": 0
+    },
+    {
+     "label": "hudfix02-production-adapter",
+     "seconds": 3.172,
+     "exit": 0
+    },
+    {
+     "label": "cp04-production-adapter",
+     "seconds": 0.969,
+     "exit": 0
+    },
+    {
+     "label": "cp04-source-negatives",
+     "seconds": 15.844,
+     "exit": 0
+    },
+    {
+     "label": "cp05-production-adapter",
+     "seconds": 1.64,
+     "exit": 0
+    },
+    {
+     "label": "cp05-source-negatives",
+     "seconds": 25.125,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix01-native",
+     "seconds": 2.391,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix01-geometry",
+     "seconds": 0.937,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix01-source-negatives",
+     "seconds": 18.922,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix02-native",
+     "seconds": 1.219,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix02-guard",
+     "seconds": 1.266,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix02-source-negatives",
+     "seconds": 28.343,
+     "exit": 0
+    },
+    {
+     "label": "cp06-combat",
+     "seconds": 1.594,
+     "exit": 0
+    },
+    {
+     "label": "cp06-source-negatives",
+     "seconds": 71.078,
+     "exit": 0
+    },
+    {
+     "label": "cp06f1-source-negatives",
+     "seconds": 42.282,
+     "exit": 0
+    },
+    {
+     "label": "cp0203-production-adapter",
+     "seconds": 0.718,
+     "exit": 0
+    },
+    {
+     "label": "cp0203-independent-reference",
+     "seconds": 0.844,
+     "exit": 0
+    },
+    {
+     "label": "cp06-authentic-pair",
+     "seconds": 5.297,
+     "exit": 0
+    },
+    {
+     "label": "build-hit_lab",
+     "seconds": 2.562,
+     "exit": 0
+    },
+    {
+     "label": "run-hit_lab",
+     "seconds": 0.032,
+     "exit": 0
+    },
+    {
+     "label": "build-lifecycle_lab",
+     "seconds": 1.89,
+     "exit": 0
+    },
+    {
+     "label": "run-lifecycle_lab",
+     "seconds": 0.063,
+     "exit": 0
+    },
+    {
+     "label": "build-collider_lab",
+     "seconds": 0.906,
+     "exit": 0
+    },
+    {
+     "label": "run-collider_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-posture_lab",
+     "seconds": 3.984,
+     "exit": 0
+    },
+    {
+     "label": "run-posture_lab",
+     "seconds": 0.109,
+     "exit": 0
+    },
+    {
+     "label": "build-reaction_lab",
+     "seconds": 3.204,
+     "exit": 0
+    },
+    {
+     "label": "run-reaction_lab",
+     "seconds": 0.156,
+     "exit": 0
+    },
+    {
+     "label": "build-rb_lab",
+     "seconds": 3.156,
+     "exit": 0
+    },
+    {
+     "label": "run-rb_lab",
+     "seconds": 0.188,
+     "exit": 0
+    },
+    {
+     "label": "build-general_lab",
+     "seconds": 2.515,
+     "exit": 0
+    },
+    {
+     "label": "run-general_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-break_lab",
+     "seconds": 3.14,
+     "exit": 0
+    },
+    {
+     "label": "run-break_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-hud_lab",
+     "seconds": 5.281,
+     "exit": 0
+    },
+    {
+     "label": "run-hud_lab",
+     "seconds": 0.063,
+     "exit": 0
+    },
+    {
+     "label": "build-parry_lab",
+     "seconds": 6.719,
+     "exit": 0
+    },
+    {
+     "label": "run-parry_lab",
+     "seconds": 0.0,
+     "exit": 0
+    },
+    {
+     "label": "build-lnk_lab",
+     "seconds": 3.703,
+     "exit": 0
+    },
+    {
+     "label": "run-lnk_lab",
+     "seconds": 0.015,
+     "exit": 0
+    },
+    {
+     "label": "build-lnks1_lab",
+     "seconds": 3.203,
+     "exit": 0
+    },
+    {
+     "label": "run-lnks1_lab",
+     "seconds": 0.032,
+     "exit": 0
+    },
+    {
+     "label": "build-fix01_lab",
+     "seconds": 4.187,
+     "exit": 0
+    },
+    {
+     "label": "run-fix01_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-lnks2_lab",
+     "seconds": 3.75,
+     "exit": 0
+    },
+    {
+     "label": "run-lnks2_lab",
+     "seconds": 0.484,
+     "exit": 0
+    },
+    {
+     "label": "build-lnks2fix_lab",
+     "seconds": 3.297,
+     "exit": 0
+    },
+    {
+     "label": "run-lnks2fix_lab",
+     "seconds": 0.516,
+     "exit": 0
+    },
+    {
+     "label": "build-balance_lab",
+     "seconds": 7.343,
+     "exit": 0
+    },
+    {
+     "label": "run-balance_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-hudfix_lab",
+     "seconds": 1.156,
+     "exit": 0
+    },
+    {
+     "label": "run-hudfix_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-cp0203_lab",
+     "seconds": 1.75,
+     "exit": 0
+    },
+    {
+     "label": "run-cp0203_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-cp04_lab",
+     "seconds": 1.218,
+     "exit": 0
+    },
+    {
+     "label": "run-cp04_lab",
+     "seconds": 0.0,
+     "exit": 0
+    },
+    {
+     "label": "build-cp05_lab",
+     "seconds": 0.516,
+     "exit": 0
+    },
+    {
+     "label": "run-cp05_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-cp05_fix02_lab",
+     "seconds": 0.875,
+     "exit": 0
+    },
+    {
+     "label": "run-cp05_fix02_lab",
+     "seconds": 0.015,
+     "exit": 0
+    },
+    {
+     "label": "build-cp06_lab",
+     "seconds": 0.906,
+     "exit": 0
+    },
+    {
+     "label": "run-cp06_lab",
+     "seconds": 0.016,
+     "exit": 0
+    },
+    {
+     "label": "build-cp06f1_lab",
+     "seconds": 1.328,
+     "exit": 0
+    },
+    {
+     "label": "run-cp06f1_lab",
+     "seconds": 0.235,
+     "exit": 0
+    },
+    {
+     "label": "build-cp06f1_world_lab",
+     "seconds": 4.281,
+     "exit": 0
+    },
+    {
+     "label": "run-cp06f1_world_lab",
+     "seconds": 16.781,
+     "exit": 0
+    },
+    {
+     "label": "cp06f1-bench",
+     "seconds": 3.672,
+     "exit": 0
+    },
+    {
+     "label": "liz-bench",
+     "seconds": 4.344,
+     "exit": 0
+    },
+    {
+     "label": "cp06-bench-with-cp06",
+     "seconds": 4.718,
+     "exit": 0
+    },
+    {
+     "label": "cp06-bench-without-cp06-callbacks",
+     "seconds": 4.454,
+     "exit": 0
+    },
+    {
+     "label": "hud-reference-renders",
+     "seconds": 0.015,
+     "exit": 0
+    },
+    {
+     "label": "lnk01-reference-renders",
+     "seconds": 0.172,
+     "exit": 0
+    },
+    {
+     "label": "emit-sample",
+     "seconds": 0.0,
+     "exit": 0
+    },
+    {
+     "label": "extract-sample",
+     "seconds": 0.063,
+     "exit": 0
+    }
+   ]
+  },
+  "mutants:cp06": {
+   "status": "MUTANTS_PASS",
+   "seconds_in_phases": 296.5,
+   "phases": [
+    {
+     "label": "cp06f1-mutations",
+     "seconds": 239.734,
+     "exit": 0
+    },
+    {
+     "label": "cp06-mutations",
+     "seconds": 32.453,
+     "exit": 0
+    },
+    {
+     "label": "lft03-mutations",
+     "seconds": 24.297,
+     "exit": 0
+    }
+   ]
+  },
+  "mutants:liz0": {
+   "status": "MUTANTS_PASS",
+   "seconds_in_phases": 450.8,
+   "phases": [
+    {
+     "label": "liz-mutations-0",
+     "seconds": 450.781,
+     "exit": 0
+    }
+   ]
+  },
+  "mutants:liz1": {
+   "status": "MUTANTS_PASS",
+   "seconds_in_phases": 221.0,
+   "phases": [
+    {
+     "label": "liz-mutations-1",
+     "seconds": 220.969,
+     "exit": 0
+    }
+   ]
+  },
+  "mutants:misc": {
+   "status": "MUTANTS_PASS",
+   "seconds_in_phases": 230.3,
+   "phases": [
+    {
+     "label": "cp04-mutations",
+     "seconds": 30.5,
+     "exit": 0
+    },
+    {
+     "label": "cp05-mutations",
+     "seconds": 38.312,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix01-mutations",
+     "seconds": 52.984,
+     "exit": 0
+    },
+    {
+     "label": "cp05-fix02-mutations",
+     "seconds": 30.704,
+     "exit": 0
+    },
+    {
+     "label": "cp0203-mutations",
+     "seconds": 17.546,
+     "exit": 0
+    },
+    {
+     "label": "fix03-mutations",
+     "seconds": 21.594,
+     "exit": 0
+    },
+    {
+     "label": "fix02-mutations",
+     "seconds": 38.656,
+     "exit": 0
+    }
+   ]
+  },
+  "mutants:rework": {
+   "status": "MUTANTS_PASS",
+   "seconds_in_phases": 512.0,
+   "phases": [
+    {
+     "label": "rework-mutations",
+     "seconds": 512.031,
+     "exit": 0
+    }
+   ]
+  },
+  "mutants:world0": {
+   "status": "MUTANTS_PASS",
+   "seconds_in_phases": 502.8,
+   "phases": [
+    {
+     "label": "liz-world-mutations-0",
+     "seconds": 502.766,
+     "exit": 0
+    }
+   ]
+  },
+  "mutants:world1": {
+   "status": "MUTANTS_PASS",
+   "seconds_in_phases": 420.0,
+   "phases": [
+    {
+     "label": "liz-world-mutations-1",
+     "seconds": 419.969,
+     "exit": 0
+    }
+   ]
+  },
+  "mutants:world2": {
+   "status": "MUTANTS_PASS",
+   "seconds_in_phases": 538.2,
+   "phases": [
+    {
+     "label": "liz-world-mutations-2",
+     "seconds": 538.203,
+     "exit": 0
+    }
+   ]
+  }
+ },
+ "omitted": [],
+ "cache_hits": [],
+ "cache_policy": "no test or audit result is ever cached; every suite ran in this run on this source",
+ "mutants": {
+  "cp06-mutations": {
+   "total": 29,
+   "count": 29,
+   "detected": 29,
+   "timeouts": 0
+  },
+  "cp06f1-mutations": {
+   "total": 41,
+   "count": 41,
+   "detected": 41,
+   "timeouts": 0
+  },
+  "lft03-mutations": {
+   "total": 49,
+   "count": 49,
+   "detected": 49,
+   "timeouts": 0
+  },
+  "liz-mutations": {
+   "total": 236,
+   "count": 236,
+   "detected": 236,
+   "timeouts": 0
+  },
+  "cp0203-mutations": {
+   "total": 22,
+   "count": 22,
+   "detected": 22,
+   "timeouts": 0
+  },
+  "cp04-mutations": {
+   "total": 34,
+   "count": 34,
+   "detected": 34,
+   "timeouts": 0
+  },
+  "cp05-fix01-mutations": {
+   "total": 23,
+   "count": 23,
+   "detected": 23,
+   "timeouts": 0
+  },
+  "cp05-fix02-mutations": {
+   "total": 25,
+   "count": 25,
+   "detected": 25,
+   "timeouts": 0
+  },
+  "cp05-mutations": {
+   "total": 34,
+   "count": 34,
+   "detected": 34,
+   "timeouts": 0
+  },
+  "fix02-mutations": {
+   "total": 11,
+   "count": 11,
+   "detected": 11,
+   "timeouts": 0
+  },
+  "fix03-mutations": {
+   "total": 8,
+   "count": 8,
+   "detected": 8,
+   "timeouts": 0
+  },
+  "rework-mutations": {
+   "total": 393,
+   "count": 393,
+   "detected": 393,
+   "timeouts": 0
+  },
+  "liz-world-mutations": {
+   "total": 176,
+   "count": 176,
+   "detected": 176,
+   "timeouts": 0
+  }
+ },
+ "mutants_total": 1081,
+ "mutants_detected": 1081,
+ "errors": []
+}

@@ -1,0 +1,35 @@
+{
+ "version": "0.12.5",
+ "legend": "LAB = production code on modelled engine types, compiled by MSVC in CI. SOURCE = text rule with a proven negative. BINARY = audit of the delivered DLL or the pinned host EXE. CI = staged run. HUMAN = only the user can confirm it on Windows/DX12.",
+ "matrix": {
+  "A_combo_reach": {"SOURCE": "native clip data in LINK_COMBO_MAP.md", "LAB": "nine native cuts at three sweep offsets (w_fix05_chain)", "HUMAN": "real combo, rebound without glitches"},
+  "B_chain": {"LAB": "two blocks, 80% both seeds, parry mid combo, native proc, counter, back to P1..P4; 60 seeded streaks; all rolls lost breaks posture", "HUMAN": "the exchange as played"},
+  "C_atomic": {"LAB": "the five traces literally, frames 1 and 2, body and shield-only; parry and block with both spheres; damage wins conflict; no rebound no parry", "HUMAN": "no wound on a parry"},
+  "D_flanks": {"LAB": "inherited w_fix03_shield and w_fix04_mash"},
+  "E_fx": {"LAB": "per-particle, child, flash, siblings, retro, revert, block untouched, shared tables untouched, with and without the port's capture", "BINARY": "three writers scoped, two imports reviewed", "HUMAN": "no blue on screen"},
+  "F_sound": {"LAB": "x1.22 once per playback, block untouched", "HUMAN": "audibly higher"},
+  "G_regressions": {"LAB": "28 labs; LIZ_RHYTHM identical to 0.12.4", "SOURCE": "lockon, shield chain, parry and combo cores byte identical to 0.12.4"},
+  "H_stress": {"LAB": "ASan and UBSan clean locally on liz_world_lab; synthetic benches", "NOT_EXECUTED": "real p50/p95/p99, FPS"},
+  "I_ci": {"CI": "FAST, INTEGRATION and FULL passed on the same source; CI_INVENTORY_run_42972202371.json"}
+ },
+ "invariants": {
+  "patterns": "P1 N-D-C, P2 N-N-N-D-N-C, P3 D-N-D-N-N-D, P4 C-C-N-D-C",
+  "impacts": [4, 7, 9, 6],
+  "rates": {"N": 1.25, "D": 1.1, "C_slow": 1.1, "C_fast": 1.2},
+  "hp": 370,
+  "gains": {"sword": 6, "link_parry": 12, "iron_ball": 30, "own_block": 5, "own_parry": 0, "to_link_on_enemy_parry": 25},
+  "deflect_pct": 80,
+  "parry_window": [3, 7],
+  "pressure_pct": {"A": 12, "B": 35, "C": 45},
+  "p3_impact_1": "no specific work, by order of the user"
+ },
+ "limits": [
+  "the labs run the production adapters on stub engine types; they prove logic and call order, not the game",
+  "which colour route each HITNG resource uses was not read from the original file: PARRY_FX event=RESOURCE reports it",
+  "if blue lives in the pixels of a colour texture the tint cannot change it; the log reports TEXTURE_BLUE_UNRESOLVED",
+  "the two-tick lead comes from native clip data and the log's timing; the real sweep of each cut is not measured",
+  "the pressure path (12/35/45%) is not timed against the clip: a parry there needs the shield up in time",
+  "zero bugs is not claimed"
+ ],
+ "runtime": "HUMAN_RUNTIME_PENDING"
+}

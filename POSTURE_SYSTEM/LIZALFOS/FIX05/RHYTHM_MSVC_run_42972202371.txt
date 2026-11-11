@@ -1,0 +1,23 @@
+LIZ_RHYTHM pattern recorded_s achieved_s entry_frames
+LIZ_RHYTHM P1 impact1->2 recorded=0.50 achieved=0.500 entry=5 rate=1.10
+LIZ_RHYTHM P1 impact2->3 D1->D2 recorded=0.13 achieved_open_to_open=0.367 min_contact_gap=0.182 physical_clip_limit=1
+LIZ_RHYTHM P1 impact3->4 recorded=0.63 achieved=0.633 entry=19 rate=1.20
+LIZ_RHYTHM P2 impact1->2 recorded=0.58 achieved=0.567 entry=10 rate=1.25
+LIZ_RHYTHM P2 impact2->3 recorded=0.60 achieved=0.600 entry=9 rate=1.25
+LIZ_RHYTHM P2 impact3->4 recorded=0.54 achieved=0.533 entry=4 rate=1.10
+LIZ_RHYTHM P2 impact4->5 D1->D2 recorded=0.10 achieved_open_to_open=0.367 min_contact_gap=0.182 physical_clip_limit=1
+LIZ_RHYTHM P2 impact5->6 recorded=0.66 achieved=0.667 entry=6 rate=1.25
+LIZ_RHYTHM P2 impact6->7 recorded=0.67 achieved=0.667 entry=18 rate=1.20
+LIZ_RHYTHM P3 impact1->2 D1->D2 recorded=0.12 achieved_open_to_open=0.367 min_contact_gap=0.182 physical_clip_limit=1
+LIZ_RHYTHM P3 impact2->3 recorded=0.52 achieved=0.533 entry=11 rate=1.25
+LIZ_RHYTHM P3 impact3->4 recorded=0.53 achieved=0.533 entry=4 rate=1.10
+LIZ_RHYTHM P3 impact4->5 D1->D2 recorded=0.10 achieved_open_to_open=0.367 min_contact_gap=0.182 physical_clip_limit=1
+LIZ_RHYTHM P3 impact5->6 recorded=0.54 achieved=0.533 entry=11 rate=1.25
+LIZ_RHYTHM P3 impact6->7 recorded=0.61 achieved=0.600 entry=9 rate=1.25
+LIZ_RHYTHM P3 impact7->8 recorded=0.52 achieved=0.533 entry=4 rate=1.10
+LIZ_RHYTHM P3 impact8->9 D1->D2 recorded=0.11 achieved_open_to_open=0.367 min_contact_gap=0.182 physical_clip_limit=1
+LIZ_RHYTHM P4 impact1->2 recorded=1.34 achieved=1.333 entry=0 rate=1.10
+LIZ_RHYTHM P4 impact2->3 recorded=1.26 achieved=1.267 entry=0 rate=1.25
+LIZ_RHYTHM P4 impact3->4 recorded=0.52 achieved=0.533 entry=4 rate=1.10
+LIZ_RHYTHM P4 impact4->5 D1->D2 recorded=0.11 achieved_open_to_open=0.367 min_contact_gap=0.182 physical_clip_limit=1
+LIZ_RHYTHM P4 impact5->6 recorded=0.63 achieved=0.633 entry=19 rate=1.20

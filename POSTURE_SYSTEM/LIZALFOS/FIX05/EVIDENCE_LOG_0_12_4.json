@@ -1,0 +1,124 @@
+{
+ "source": "human log of 0.12.4, relevant lines only, no paths or identifiers",
+ "window_open_to_first_contact_ticks": {
+  "block": {
+   "6": 1,
+   "7": 2,
+   "8": 1,
+   "9": 13,
+   "10": 2,
+   "12": 1,
+   "19": 1
+  },
+  "parry": {
+   "5": 5,
+   "6": 1
+  }
+ },
+ "note_retained_lines": "LIZ_DEFLECT was budgeted to 240 lines, so this is a sample",
+ "contradictory_traces": [
+  {
+   "swing": "35",
+   "action": "7",
+   "mode": "6",
+   "frame": "1.0",
+   "shape_y": "-11233",
+   "search_y": "-10978",
+   "presented": "0",
+   "covers": "1",
+   "body_hit": "1",
+   "shield_hit": "1",
+   "verdict": "ENEMY_PARRY",
+   "hp": "350->330",
+   "posture": "6->12",
+   "ut2": "10"
+  },
+  {
+   "swing": "59",
+   "action": "7",
+   "mode": "6",
+   "frame": "1.0",
+   "shape_y": "25992",
+   "search_y": "22181",
+   "presented": "0",
+   "covers": "1",
+   "body_hit": "1",
+   "shield_hit": "1",
+   "verdict": "ENEMY_PARRY",
+   "hp": "370->350",
+   "posture": "23->29",
+   "ut2": "10"
+  },
+  {
+   "swing": "403",
+   "action": "7",
+   "mode": "6",
+   "frame": "1.0",
+   "shape_y": "-23582",
+   "search_y": "-20939",
+   "presented": "0",
+   "covers": "1",
+   "body_hit": "1",
+   "shield_hit": "1",
+   "verdict": "ENEMY_PARRY",
+   "hp": "230->210",
+   "posture": "74->80",
+   "ut2": "10"
+  },
+  {
+   "swing": "450",
+   "action": "7",
+   "mode": "6",
+   "frame": "1.0",
+   "shape_y": "18210",
+   "search_y": "22707",
+   "presented": "0",
+   "covers": "1",
+   "body_hit": "1",
+   "shield_hit": "1",
+   "verdict": "ENEMY_PARRY",
+   "hp": "310->290",
+   "posture": "40->46",
+   "ut2": "10"
+  },
+  {
+   "swing": "451",
+   "action": "7",
+   "mode": "6",
+   "frame": "1.0",
+   "shape_y": "-564",
+   "search_y": "-1686",
+   "presented": "0",
+   "covers": "1",
+   "body_hit": "1",
+   "shield_hit": "1",
+   "verdict": "ENEMY_PARRY",
+   "hp": "290->270",
+   "posture": "38->44",
+   "ut2": "10"
+  }
+ ],
+ "emitters_per_parry": {
+  "LINK_PARRY_LIZALFOS": 2,
+  "LIZALFOS_PARRY_LINK": 4
+ },
+ "emitter_initial_colours": {
+  "0x0117": {
+   "prm": "606c6f",
+   "env": "0d88b6"
+  },
+  "0x0118": {
+   "prm": "132e44",
+   "env": "ffffff"
+  }
+ },
+ "summaries": {
+  "blocks": 216,
+  "pairs": 85,
+  "rolls80": 85,
+  "prepared": 66,
+  "new_windows": 63,
+  "enemy_parry": 45,
+  "break_standing": 42
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "version": "0.12.5",
+ "mod_id": "dev.posture.post05_selective_reactions",
+ "status": "CI_FULL_PASS_HUMAN_RUNTIME_PENDING",
+ "artifact": {"name": "LIGHT_FADES_TWICE_LIZALFOS_FIX05_0_12_5_PRIVATE_TEST_windows-amd64_eade22d6b94d.dusk", "bytes": 248528, "sha256": "8d62780bc0782ce68dc88cd86b930915933892eb2f25919791a9edfed21c6775", "dll_bytes": 1441792, "dll_sha256": "4d6cc6e5bbca8e7251dd5da88107d6385e0baaec6e826978292e179677ddb198", "run": 42972202371, "artifact_id": 13834442142, "expires": "2026-12-11"},
+ "provenance": {"source_commit": "eade22d6b94d3dc3cfcad94812463aed76c18e5d", "base_compiled": "334ec89ad84d171fe8317653e19e15ffc93b8b0e"},
+ "ci_timing": {"fast": {"run": 42970077541, "wall": "4m07s"}, "integration": {"run": 42970618761, "wall": "12m50s"}, "full": {"run": 42972202371, "wall": "14m35s"}, "previous_serial": {"fix04": "47m", "fix03": "62m"}},
+ "evidence": {"labs": 28, "checks": 1400401219, "failures": 0, "mutants": "1081/1081", "mutant_timeouts": 0, "negatives": 224, "pe": "PE_AUDIT_PASS, 88 imports", "prologues": "HOOK_PROLOGUE_PASS", "rhythm_sha256": "4ba70c4a5f04ba26cc116766a47e422d54aef505050b8ec8e6d1e615e386411b"},
+ "independent_download": "ARTIFACT_DOWNLOADED_VERIFIED, and recomputed outside CI",
+ "not_executed": ["the game", "visual colour", "audible pitch", "real FPS"]
+}
