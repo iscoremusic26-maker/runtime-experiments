@@ -1,0 +1,33 @@
+file=c1.wav sr=48000 dur=7.3839 floor_db=-57.1 max_flux=50.4
+{'t': 0.679, 'peak_db': -9.1, 'rise_db': 28.6, 'bright': -20.4, 'zcr': 0.01, 'decay20_ms': 135, 'dt': None}
+{'t': 1.8637, 'peak_db': -8.0, 'rise_db': 40.5, 'bright': -23.7, 'zcr': 0.01, 'decay20_ms': 95, 'dt': 1.1847}
+{'t': 3.0735, 'peak_db': -6.7, 'rise_db': 50.4, 'bright': -26.3, 'zcr': 0.019, 'decay20_ms': 90, 'dt': 1.2098}
+{'t': 4.0901, 'peak_db': -7.5, 'rise_db': 46.2, 'bright': -20.5, 'zcr': 0.021, 'decay20_ms': 90, 'dt': 1.0166}
+{'t': 4.3504, 'peak_db': -8.7, 'rise_db': 37.3, 'bright': -20.3, 'zcr': 0.023, 'decay20_ms': 65, 'dt': 0.2603}
+{'t': 5.2978, 'peak_db': -10.0, 'rise_db': 32.6, 'bright': -28.5, 'zcr': 0.008, 'decay20_ms': 85, 'dt': 0.9474}
+{'t': 5.7405, 'peak_db': -31.3, 'rise_db': 17.9, 'bright': -15.7, 'zcr': 0.033, 'decay20_ms': 95, 'dt': 0.4427}
+file=c2.wav sr=48000 dur=5.4799 floor_db=-66.4 max_flux=58.2
+{'t': 0.5882, 'peak_db': -10.9, 'rise_db': 50.8, 'bright': -27.3, 'zcr': 0.013, 'decay20_ms': 135, 'dt': None}
+{'t': 1.5617, 'peak_db': -10.4, 'rise_db': 53.0, 'bright': -15.6, 'zcr': 0.029, 'decay20_ms': 170, 'dt': 0.9735}
+{'t': 1.9325, 'peak_db': -11.2, 'rise_db': 46.6, 'bright': -16.0, 'zcr': 0.035, 'decay20_ms': 95, 'dt': 0.3708}
+{'t': 2.6237, 'peak_db': -10.2, 'rise_db': 58.2, 'bright': -16.5, 'zcr': 0.042, 'decay20_ms': 125, 'dt': 0.6912}
+{'t': 3.0129, 'peak_db': -13.7, 'rise_db': 38.4, 'bright': -22.2, 'zcr': 0.027, 'decay20_ms': 60, 'dt': 0.3892}
+{'t': 3.7575, 'peak_db': -13.2, 'rise_db': 49.5, 'bright': -20.2, 'zcr': 0.013, 'decay20_ms': 145, 'dt': 0.7446}
+file=c3.wav sr=48000 dur=8.4985 floor_db=-71.4 max_flux=58.3
+{'t': 0.9966, 'peak_db': -11.3, 'rise_db': 54.2, 'bright': -20.7, 'zcr': 0.017, 'decay20_ms': 130, 'dt': None}
+{'t': 1.21, 'peak_db': -9.2, 'rise_db': 30.6, 'bright': -19.1, 'zcr': 0.021, 'decay20_ms': 65, 'dt': 0.2134}
+{'t': 2.6556, 'peak_db': -12.3, 'rise_db': 49.6, 'bright': -18.1, 'zcr': 0.023, 'decay20_ms': 140, 'dt': 1.4456}
+{'t': 2.8884, 'peak_db': -9.4, 'rise_db': 41.9, 'bright': -15.5, 'zcr': 0.044, 'decay20_ms': 110, 'dt': 0.2328}
+{'t': 4.3105, 'peak_db': -12.8, 'rise_db': 48.7, 'bright': -18.7, 'zcr': 0.027, 'decay20_ms': 130, 'dt': 1.4221}
+{'t': 4.9375, 'peak_db': -17.8, 'rise_db': 45.0, 'bright': -17.4, 'zcr': 0.062, 'decay20_ms': 130, 'dt': 0.627}
+{'t': 5.5415, 'peak_db': -9.5, 'rise_db': 51.4, 'bright': -20.6, 'zcr': 0.077, 'decay20_ms': 95, 'dt': 0.604}
+{'t': 6.9487, 'peak_db': -10.1, 'rise_db': 58.3, 'bright': -11.7, 'zcr': 0.119, 'decay20_ms': 205, 'dt': 1.4072}
+file=c4.wav sr=48000 dur=9.2880 floor_db=-70.3 max_flux=49.6
+{'t': 0.7304, 'peak_db': -15.8, 'rise_db': 49.6, 'bright': -24.8, 'zcr': 0.008, 'decay20_ms': 185, 'dt': None}
+{'t': 1.8575, 'peak_db': -13.3, 'rise_db': 47.5, 'bright': -18.6, 'zcr': 0.015, 'decay20_ms': 130, 'dt': 1.1271}
+{'t': 3.6551, 'peak_db': -12.5, 'rise_db': 47.6, 'bright': -11.6, 'zcr': 0.056, 'decay20_ms': 130, 'dt': 1.7976}
+{'t': 4.6174, 'peak_db': -14.8, 'rise_db': 45.7, 'bright': -12.1, 'zcr': 0.05, 'decay20_ms': 165, 'dt': 0.9623}
+{'t': 5.9804, 'peak_db': -10.3, 'rise_db': 45.6, 'bright': -14.5, 'zcr': 0.027, 'decay20_ms': 120, 'dt': 1.363}
+{'t': 6.1171, 'peak_db': -7.7, 'rise_db': 30.7, 'bright': -14.5, 'zcr': 0.054, 'decay20_ms': 70, 'dt': 0.1367}
+{'t': 7.0501, 'peak_db': -14.6, 'rise_db': 46.1, 'bright': -16.3, 'zcr': 0.029, 'decay20_ms': 145, 'dt': 0.933}
+{'t': 7.4249, 'peak_db': -39.8, 'rise_db': 18.2, 'bright': -14.6, 'zcr': 0.042, 'decay20_ms': 165, 'dt': 0.3748}
