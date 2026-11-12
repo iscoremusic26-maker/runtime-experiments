@@ -70,3 +70,14 @@ At 100, LNK05's native guard break request (unchanged).
   - the Iron Ball keeps its native branch;
   - a strong hit that natively breaks a held spear keeps its CLASH reaction (+5 once).
 - **C3 tail:** BACKSTEP / THROW / RESTORE is committed: no guard and no prepared parry.
+
+## FIX02 0.13.2
+- **Spear:** a contact the Chilfos blocks or parries never breaks or drops its spear. The native strong-hit spear break (7,0) becomes the native guard reaction (6,0), and the "spear break +5" credit for a block is gone (a block is +3).
+  - The Iron Ball under Link's status 0x400 keeps its native branch: it is not a sword block.
+- **Guard:** grows with pressure, 30/50/70/85 % by aimed swings in 150 ticks, and a block no longer resets it.
+  - **Guarantee:** after 2 ready frontal swings in a row that still wounded it, the next ready frontal swing is blocked.
+  - **Parry cooldowns:** 45/35/25 ticks (were 120/90/60).
+  - **Parry chances:** unchanged, 12/35/45 %, and 80 % after two blocks.
+- **Committed episodes:** inside its own combo, C3 tail or counter the Chilfos never guards or parries.
+- **Counter:** dispatched 6 ticks after every confirmed parry, still within the 60-tick lifetime.
+- **Rate:** fast E-E double thrusts at ×1.10 (were ×1.50).
