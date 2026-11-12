@@ -60,3 +60,13 @@ At 100, LNK05's native guard break request (unchanged).
 - Regeneration: 10/7/4/2/1 after 2 s.
 - Stagger 3 s, pitch x1.22, adaptive guard.
 - `src/liz_core.hpp` and `src/liz_adapter.inc` are hash-pinned to FIX05 by `tests/test_kk_source.py`.
+
+## FIX01 0.13.1: posture below 100 never staggers (FIX05 rule)
+- **Sword hits:** a non-lethal contact removes HP and credits +5 once per swing, but never leaves the Chilfos in a native damage reaction. Its action, mode and heading are kept, in every phase including the C3 tail.
+- **Link's Shield Attack on the body:** below 100 it is absorbed. No DRAWBACK, no HeadLock, no HP, no posture, the combo goes on, and one native contact SE plays per press. During the stagger it still prepares Helm Splitter.
+- **At 100:** the stagger starts in the same contact.
+- **Native exceptions, unchanged:**
+  - arrows, boomerang, hookshot and bombs keep their native reaction (the FIX05 rule for non-sword weapons);
+  - the Iron Ball keeps its native branch;
+  - a strong hit that natively breaks a held spear keeps its CLASH reaction (+5 once).
+- **C3 tail:** BACKSTEP / THROW / RESTORE is committed: no guard and no prepared parry.

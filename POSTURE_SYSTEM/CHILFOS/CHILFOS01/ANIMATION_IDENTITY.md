@@ -44,3 +44,11 @@ Until the first two clips of each kind have been measured, the first combo of th
 2. In the log, find the line `CHILFOS_ANIM event=TRAJECTORY` that settles the identity.
 3. Watch which motion the module calls D and which E.
 4. If the screen and the log disagree, report the trajectory lines together with a video and the native clip IDs. Do not blindly flip a constant: actor yaw, tip samples and mapping stability must be checked. The automatic classification is geometric evidence, not visual certification.
+
+## FIX01 0.13.1: runtime evidence from the user's 0.13.0 session
+- The engine's own pose in Dusklight 2.0.3 (`CHILFOS_ANIM event=TRAJECTORY`, 41 samples) measured two different shapes:
+  - **BCK5 tip:** 320..357 units sideways for 325..441 forward, a sweep;
+  - **BCK6 tip:** 0..23 sideways for 60..169 forward, a thrust.
+- The 0.13.0 diagonal rule (sideways > 1.2 × forward) left 13 of 14 BCK5 samples UNSURE, so the identity never settled.
+- FIX01 classifies a sweep as a sideways/vertical motion of at least 100 units and 0.6 × the forward one. With those real vectors the identity settles on `MEASURED_DEFAULT`: D = BCK5, E = BCK6, the shipped default. No constant was flipped.
+- This is geometric runtime evidence, not a visual certificate: confirm on video.
