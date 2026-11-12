@@ -1,4 +1,4 @@
-"""Enemy Spawner 0.1.1 FIX01: executed mutants of the PRODUCTION core, adapter and Mods panel against tests/core_lab.cpp, tests/adapter_lab.cpp
+"""Enemy Spawner 0.1.2: executed mutants of the PRODUCTION core, adapter and Mods panel against tests/core_lab.cpp, tests/adapter_lab.cpp
 and tests/panel_lab.cpp (the last one compiled against the real SDK UI header: env ES_SDK_INCLUDE = <dusklight>/sdk/include).
 Core/adapter mutants run core_lab + adapter_lab; panel mutants run panel_lab. A mutant counts as detected only when a lab reports ES_LAB_FAIL.
 Compile errors and timeouts are failures, never credited. The positive control runs all three labs first."""
@@ -43,6 +43,36 @@ cases = [
  ('appeared_announced_early', A, '    case es::Ev::Created: std::snprintf(body, sizeof(body), "Spawn request submitted: %s.", label);', '    case es::Ev::Created: std::snprintf(body, sizeof(body), "Enemy spawned: %s.", label);'),
  ('lizalfos_stay', K, '{"Lizalfos", Profile::E_DN, 0xff0000ffu', '{"Lizalfos", Profile::E_DN, 0xff000000u'),
  ('e_oc2_subtype_lost', K, '{"Bokoblin Red (Expansion)", Profile::E_OC, 0x00ff0000u, -1, 0x0100,', '{"Bokoblin Red (Expansion)", Profile::E_OC, 0x00ff0000u, -1, 0x0000,'),
+ # 0.1.2: the appended variants, their decoding and the read-only telemetry
+ ('stalfos_alt_as_base', K, '{"Stalfos (Alternate Attack)", Profile::E_SF, 0x0100ff00u', '{"Stalfos (Alternate Attack)", Profile::E_SF, 0x0000ff00u'),
+ ('stalfos_alt_type_2', K, '{"Stalfos (Alternate Attack)", Profile::E_SF, 0x0100ff00u', '{"Stalfos (Alternate Attack)", Profile::E_SF, 0x0200ff00u'),
+ ('stalfos_alt_sentinel_lost', K, '0x0100ff00u, -1, 0, 0xff,', '0x0100ff00u, -1, 0, 0,'),
+ ('stalfos_alt_wait_type', K, '{"Stalfos (Alternate Attack)", Profile::E_SF, 0x0100ff00u', '{"Stalfos (Alternate Attack)", Profile::E_SF, 0x0100ff01u'),
+ ('stalfos_base_changed', K, '{"Stalfos", Profile::E_SF, 0x0000ff00u', '{"Stalfos", Profile::E_SF, 0x0100ff00u'),
+ ('darknut_sword_is_mace', K, '{"Darknut (Sword)", Profile::B_TN, 0x010001ffu', '{"Darknut (Sword)", Profile::B_TN, 0x000001ffu'),
+ ('darknut_mace_changed', K, '{"Darknut", Profile::B_TN, 0x000001ffu', '{"Darknut", Profile::B_TN, 0x010001ffu'),
+ ('darknut_sword_brk_frame', K, '{"Darknut (Sword)", Profile::B_TN, 0x010001ffu', '{"Darknut (Sword)", Profile::B_TN, 0x010101ffu'),
+ ('shield_variant_lost', K, '{"Stalfos (Breakable Shield)", Profile::E_SF, 0x1000ff00u', '{"Stalfos (Breakable Shield)", Profile::E_SF, 0x0000ff00u'),
+ ('bulblin_bow_as_club', K, '{"Bulblin (Bow)", Profile::E_RD, 0xff000200u', '{"Bulblin (Bow)", Profile::E_RD, 0xff000100u'),
+ ('fire_bow_as_bow', K, '{"Bulblin (Fire Bow)", Profile::E_RD, 0xff000300u', '{"Bulblin (Fire Bow)", Profile::E_RD, 0xff000200u'),
+ ('variant_tail_reordered', K, '    {"Bulblin (Bow)", Profile::E_RD, 0xff000200u, -1, 0, 0, false, Route::Native, Adapt::None},\n    {"Bulblin (Fire Bow)", Profile::E_RD, 0xff000300u, -1, 0, 0, false, Route::Native, Adapt::None},\n',
+  '    {"Bulblin (Fire Bow)", Profile::E_RD, 0xff000300u, -1, 0, 0, false, Route::Native, Adapt::None},\n    {"Bulblin (Bow)", Profile::E_RD, 0xff000200u, -1, 0, 0, false, Route::Native, Adapt::None},\n'),
+ ('sf_decode_no_clamp', K, '    if (s.a > 1) s.a = 0;\n', ''),
+ ('sf_decode_shield_shift', K, '    s.b = static_cast<std::uint8_t>(p >> 28);', '    s.b = static_cast<std::uint8_t>((p >> 24) & 0xF);'),
+ ('tn_decode_type2_shift', K, '    s.b = static_cast<std::uint8_t>((p >> 24) & 0xFFFFFF);', '    s.b = static_cast<std::uint8_t>((p >> 16) & 0xFFFF);'),
+ ('rd_decode_shift', K, '    s.a = static_cast<std::uint8_t>((p & 0xF00) >> 8);', '    s.a = static_cast<std::uint8_t>((p & 0xF000) >> 12);'),
+ ('selector_reported_every_frame', C, '    if (!x.selector_reported && p.selector_read) {', '    if (p.selector_read) {'),
+ ('attack_logged_every_frame', C, '    if (bit == 0 || (x.attacks_seen & bit)) return;', '    if (bit == 0) return;'),
+ ('selector_compare_a_only', C, '      const bool match = want.a == p.sel_a && want.b == p.sel_b;', '      const bool match = want.a == p.sel_a;'),
+ ('attack_expectation_inverted', C, 'return type == 0 ? kActionAttack : kActionAttack0; }', 'return type == 0 ? kActionAttack0 : kActionAttack; }'),
+ ('attack_unexpected_counted_as_alt', C, '    if (!expected) ++c.attack_unexpected;\n    else ++(bit == 1 ? c.attack_alt : c.attack_base);', '    ++(bit == 1 ? c.attack_alt : c.attack_base);'),
+ ('telemetry_for_every_profile', C, '    if (!want.known) return;\n', ''),
+ ('probe_shield_as_type', A, 'p.sel_a = s->mType, p.sel_b = s->arg3;', 'p.sel_a = s->arg3, p.sel_b = s->mType;'),
+ ('probe_type2_not_read', A, 'p.sel_a = d->mType, p.sel_b = d->mType2;', 'p.sel_a = d->mType, p.sel_b = 0;'),
+ ('probe_weapon_not_read', A, 'p.sel_a = reinterpret_cast<const e_rd_class*>(a)->weapon_type, p.sel_b = 0;', 'p.sel_a = 1, p.sel_b = 0;'),
+ ('probe_action_not_read', A, 'p.stalfos = true, p.sf_action = s->mAction, p.sf_anm = s->mAnm;', 'p.stalfos = true, p.sf_action = 0, p.sf_anm = s->mAnm;'),
+ ('native_line_toasts', A, '  es_log(line);\n}\n\nvoid es_report(', '  es_log(line);\n  es_toast("Enemy Spawner", line, false);\n}\n\nvoid es_report('),
+ ('native_line_wrong_match_text', A, 'ev.why ? "YES" : "NO",\n                  static_cast<unsigned long long>(ev.tick));\n  } else {', '"YES",\n                  static_cast<unsigned long long>(ev.tick));\n  } else {'),
 ]
 cases = [c + (CORE,) for c in cases] + [c + (PANEL,) for c in [
  ('panel_select_again', U, 'chooser.kind = UI_CONTROL_DROPDOWN;', 'chooser.kind = UI_CONTROL_SELECT;'),
@@ -69,6 +99,8 @@ cases = [c + (CORE,) for c in cases] + [c + (PANEL,) for c in [
  ('catalog_label_spanish', K, '"Bokoblin (E_OC, native)"', '"Bokoblin (E_OC, nativo)"'),
  ('catalog_black_label_spanish', K, '"Bokoblin Black (Expansion): integration unavailable"', '"Bokoblin Black (Expansion): integracion no disponible"'),
  ('default_not_lizalfos', K, '    {"Lizalfos",', '    {"Lizalfos_",'),
+ ('panel_variant_label_spanish', K, '"Stalfos (Alternate Attack)"', '"Stalfos (Ataque alternativo)"'),
+ ('panel_variant_label_changed', K, '"Darknut (Sword)"', '"Darknut (Greatsword)"'),
 ]]
 def build(p, lab):
     exe = p / (lab + ('.exe' if os.name == 'nt' else ''))

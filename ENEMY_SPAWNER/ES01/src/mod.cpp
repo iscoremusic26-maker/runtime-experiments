@@ -1,4 +1,4 @@
-// Enemy Spawner (Standalone) 0.1.1 FIX01 for Dusklight 2.0.3. One job: create real native enemies in front of Link from the Mods window.
+// Enemy Spawner (Standalone) 0.1.2 for Dusklight 2.0.3. One job: create real native enemies in front of Link from the Mods window.
 //
 // Based on the Enemy Spawner of Dawnlight by BeZide93 (https://github.com/BeZide93/dawnlight, CC0 1.0 Universal), commit
 // b5e9046cd98bdd8593ab2cf219d72a0f61ef7213. Not Dawnlight, not affiliated with it, none of its other features. See docs/ATTRIBUTION.md.
@@ -13,7 +13,10 @@
 #include <mods/svc/ui.h>
 #include "SSystem/SComponent/c_math.h"
 #include "d/actor/d_a_alink.h"
+#include "d/actor/d_a_b_tn.h"
 #include "d/actor/d_a_e_oc.h"
+#include "d/actor/d_a_e_rd.h"
+#include "d/actor/d_a_e_sf.h"
 #include "d/actor/d_a_e_tk.h"
 #include "d/actor/d_a_e_tk2.h"
 #include "d/d_com_inf_game.h"
@@ -52,6 +55,13 @@ static_assert(sizeof(ActorSpawnParams::parameters) == 4 && sizeof(ActorSpawnPara
 static_assert(std::is_same_v<decltype(fopEn_enemy_c::field_0x560), s16> && std::is_same_v<decltype(fopEn_enemy_c::health), s16>, "enemy health fields");
 static_assert(std::is_same_v<decltype(daE_OC_c::mName), const char*>, "daE_OC_c::mName");
 static_assert(std::is_same_v<decltype(e_tk_class::mExecuteState), s16> && std::is_same_v<decltype(e_tk2_class::mActionTimer), s16[4]>, "Toadpoli fields");
+// 0.1.2 telemetry reads (never writes): the native selector fields and the Stalfos action / animation, by name. e_sf_class and e_rd_class hold their
+// fopEn_enemy_c as the first member (the native code casts fopAc_ac_c* to them); daB_TN_c derives from fopEn_enemy_c.
+static_assert(std::is_same_v<decltype(e_sf_class::actor), fopEn_enemy_c> && std::is_same_v<decltype(e_sf_class::mType), u8> && std::is_same_v<decltype(e_sf_class::arg3), u8> &&
+                  std::is_same_v<decltype(e_sf_class::mAction), s16> && std::is_same_v<decltype(e_sf_class::mAnm), int>,
+              "e_sf_class telemetry fields");
+static_assert(std::is_base_of_v<fopEn_enemy_c, daB_TN_c> && std::is_same_v<decltype(daB_TN_c::mType), u8> && std::is_same_v<decltype(daB_TN_c::mType2), u8>, "daB_TN_c selector fields");
+static_assert(std::is_same_v<decltype(e_rd_class::enemy), fopEn_enemy_c> && std::is_same_v<decltype(e_rd_class::weapon_type), u8>, "e_rd_class selector field");
 
 // es::Profile -> native profile name, in enum order.
 constexpr s16 kProfileName[] = {fpcNm_B_TN_e, fpcNm_E_OC_e, fpcNm_E_FZ_e, fpcNm_E_BA_e, fpcNm_E_TT_e, fpcNm_E_GI_e, fpcNm_B_GG_e, fpcNm_E_KK_e, fpcNm_E_FB_e, fpcNm_E_BS_e, fpcNm_E_BU_e,
@@ -129,8 +139,10 @@ MOD_EXPORT ModResult mod_initialize(ModError* error) {
   if (svc_ui->register_mods_panel(mod_ctx, &p) != MOD_OK) return mods::set_error(error, MOD_ERROR, "Enemy Spawner: Mods panel rejected");
   esr.ui = true;
   char line[200];
-  std::snprintf(line, sizeof(line), "ENEMY_SPAWNER event=INSTALL version=%s entries=%u max_live=%u hooks=0 black=UNAVAILABLE_NO_PUBLIC_CONTRACT runtime=HUMAN_RUNTIME_PENDING", es::kVersion,
-                unsigned(es::kCatalogSize), es::policy::kMaxLive);
+  std::snprintf(line, sizeof(line),
+                "ENEMY_SPAWNER event=INSTALL version=%s entries=%u original_entries=%u max_live=%u hooks=0 black=UNAVAILABLE_NO_PUBLIC_CONTRACT temple_of_time_darknut=NOT_OFFERED "
+                "runtime=HUMAN_RUNTIME_PENDING",
+                es::kVersion, unsigned(es::kCatalogSize), unsigned(es::kOriginalCount), es::policy::kMaxLive);
   es_log(line);
   return MOD_OK;
 }
@@ -143,12 +155,14 @@ MOD_EXPORT ModResult mod_update(ModError*) {
 MOD_EXPORT ModResult mod_shutdown(ModError*) {
   const auto& c = esr.sp.c;
   const auto u = [](std::uint64_t v) { return static_cast<unsigned long long>(v); };
-  char line[400];
+  char line[560];
   std::snprintf(line, sizeof(line),
                 "ENEMY_SPAWNER_SUMMARY version=%s presses=%llu accepted=%llu refused=%llu expired=%llu rejected_ground=%llu created=%llu failed=%llu appeared=%llu gone=%llu timeouts=%llu "
-                "expansion_classified=%llu expansion_not_classified=%llu id_reused=%llu layer_restores=%llu adapt_writes=%llu expansion=%s lines_dropped=%llu runtime=HUMAN_RUNTIME_PENDING",
+                "expansion_classified=%llu expansion_not_classified=%llu id_reused=%llu layer_restores=%llu adapt_writes=%llu expansion=%s selector_match=%llu selector_mismatch=%llu "
+                "stalfos_attack0_seen=%llu stalfos_attack_seen=%llu stalfos_attack_unexpected=%llu lines_dropped=%llu runtime=HUMAN_RUNTIME_PENDING",
                 es::kVersion, u(c.presses), u(c.accepted), u(c.refused), u(c.expired), u(c.rejected), u(c.created), u(c.failed), u(c.appeared), u(c.gone), u(c.timeouts), u(c.classified),
-                u(c.not_classified), u(c.id_reused), u(esr.layer_restores), u(esr.adapt_writes), es::name(esr.sp.expansion), u(es_lines_dropped + c.events_dropped));
+                u(c.not_classified), u(c.id_reused), u(esr.layer_restores), u(esr.adapt_writes), es::name(esr.sp.expansion), u(c.selector_match), u(c.selector_mismatch), u(c.attack_alt),
+                u(c.attack_base), u(c.attack_unexpected), u(es_lines_dropped + c.events_dropped));
   es_lines = 0;
   es_log(line);
   esr.sp.forget_all();  // no id is looked up after this; the actors stay in their scene, owned by the engine

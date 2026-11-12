@@ -1,4 +1,4 @@
-"""Enemy Spawner 0.1.1 FIX01: source rules, each proven by negatives (the rule must PASS on the tree and FAIL on every mutated copy).
+"""Enemy Spawner 0.1.2: source rules, each proven by negatives (the rule must PASS on the tree and FAIL on every mutated copy).
 Usage: source_rules.py <project>"""
 import json, re, sys
 from pathlib import Path
@@ -65,7 +65,7 @@ def rules(s):
         e.append('Black refusal lost')
     # 7. identity of this mod, never another mod's
     mj = json.loads(s['mod.json'])
-    if mj.get('id') in ('dev.bezide.dawnlight', 'dev.bokoblin.expansion', 'dev.devf.cp06_native_config_dual', 'dev.posture.post05_selective_reactions') or mj.get('id') != 'dev.enemyspawner.standalone' or mj.get('version') != '0.1.1':
+    if mj.get('id') in ('dev.bezide.dawnlight', 'dev.bokoblin.expansion', 'dev.devf.cp06_native_config_dual', 'dev.posture.post05_selective_reactions') or mj.get('id') != 'dev.enemyspawner.standalone' or mj.get('version') != '0.1.2' or mj.get('name') != 'Enemy Spawner (Standalone)':
         e.append('mod id/version')
     if 'Goron' in code(cat).replace('""', '') or re.search(r'\{"(Goron|Staltroop)"', cat):
         e.append('an excluded entry is offered')
@@ -97,6 +97,31 @@ def rules(s):
     init = body(m, 'MOD_EXPORT ModResult mod_initialize(')
     if 'd.default_int = 6;' not in init or 'd.type = CONFIG_VAR_INT;' not in init or '&esui.var' not in init or 'p.build = build_panel;' not in init:
         e.append('the config var or the panel registration changed')
+    # 10. 0.1.2: the Temple of Time Darknut can never be offered. The compile-time guard stays, and no B_TN row decodes to mType 0.
+    if 'static_assert(no_temple_of_time_darknut(),' not in code(cat) or 'if (s.a != 1) s.a = 0;' not in code(cat):
+        e.append('the Temple of Time guard is gone')
+    for par in re.findall(r'\{"[^"]*", Profile::B_TN, (0x[0-9a-f]+)u', cat):
+        if (int(par, 16) >> 8) & 0xFF != 1:
+            e.append('a B_TN row decodes to mType 0 (Temple of Time Darknut): ' + par)
+    if re.search(r'\{"[^"]*(Temple of Time|Aeralfos \(|Bomb Arrows)', cat):
+        e.append('a variant ruled out in 0.1.2 is offered')
+    # 11. 0.1.2 telemetry: read only (const casts, after the profile check), log only (no toast), and nothing else reads those classes.
+    probe = body(a, 'es::Probe es_probe(')
+    for need in ('reinterpret_cast<const e_sf_class*>(a)', 'static_cast<const daB_TN_c*>(a)', 'reinterpret_cast<const e_rd_class*>(a)', 'if (profile == fpcNm_E_SF_e)',
+                 'else if (profile == fpcNm_B_TN_e)', 'else if (profile == fpcNm_E_RD_e)', 'if (p.found && !p.creating) {\n    const s16 profile = fopAcM_GetName(a);'):
+        if need not in probe:
+            e.append('telemetry read lost its guard: ' + need)
+    if re.search(r'(reinterpret|static|const)_cast<(?!const )\s*(e_sf_class|daB_TN_c|e_rd_class)\s*\*>', allc) or re.search(r'\((e_sf_class|daB_TN_c|e_rd_class)\s*\*\)', allc):
+        e.append('a non-const cast to a telemetry class')
+    if len(re.findall(r'(e_sf_class|daB_TN_c|e_rd_class)\s*\*', a)) != 3:
+        e.append('telemetry classes used outside es_probe')
+    rn = body(a, 'void es_report_native(')
+    if 'es_toast' in rn or 'es_log(line);' not in rn:
+        e.append('the native telemetry must be log only')
+    core = code(s['src/spawner_core.hpp'])
+    tl = body(core, 'void telemetry(')
+    if re.search(r'\bp\.\w+\s*=(?!=)', tl) or 'if (!x.selector_reported && p.selector_read) {' not in tl or '(x.attacks_seen & bit)' not in tl:
+        e.append('telemetry must only read the probe, once per actor and kind')
     return e
 
 NEG = [
@@ -137,7 +162,22 @@ NEG = [
     ('src/spawner_core.hpp', '    if (e.route == Route::BlackUnavailable) return Press::BlackUnavailable;  // never a Red with a black label\n', ''),
     ('mod.json', '"dev.enemyspawner.standalone"', '"dev.bezide.dawnlight"'),
     ('mod.json', '"dev.enemyspawner.standalone"', '"dev.bokoblin.expansion"'),
-    ('mod.json', '"version": "0.1.1"', '"version": "0.1.0"'),
+    ('mod.json', '"version": "0.1.2"', '"version": "0.1.1"'),
+    ('mod.json', '"name": "Enemy Spawner (Standalone)"', '"name": "Enemy Spawner (Standalone) 0.1.2"'),
+    # 0.1.2
+    ('src/catalog.hpp', '{"Darknut (Sword)", Profile::B_TN, 0x010001ffu', '{"Darknut (Sword)", Profile::B_TN, 0x000000ffu'),
+    ('src/catalog.hpp', '    // ---- 0.1.2: appended', '    {"Darknut (Temple of Time)", Profile::B_TN, 0x000001ffu, -1, 0, 0, false, Route::Native, Adapt::None},\n    // ---- 0.1.2: appended'),
+    ('src/catalog.hpp', 'static_assert(no_temple_of_time_darknut(),', 'static_assert(true ||no_temple_of_time_darknut(),'),
+    ('src/catalog.hpp', '    if (s.a != 1) s.a = 0;\n', ''),
+    ('src/catalog.hpp', '    // ---- 0.1.2: appended', '    {"Bulblin (Bomb Arrows)", Profile::E_RD, 0xff000300u, -1, 0, 0, false, Route::Native, Adapt::None},\n    // ---- 0.1.2: appended'),
+    ('src/spawner_adapter.inc', 'reinterpret_cast<const e_sf_class*>(a);', 'reinterpret_cast<e_sf_class*>(a);'),
+    ('src/spawner_adapter.inc', '      p.selector_read = true, p.sel_a = s->mType, p.sel_b = s->arg3;', '      p.selector_read = true, p.sel_a = s->mType, p.sel_b = s->arg3;\n      const_cast<e_sf_class*>(s)->mType = 1;'),
+    ('src/spawner_adapter.inc', '    if (profile == fpcNm_E_SF_e) {', '    if (true) {'),
+    ('src/spawner_adapter.inc', '  if (p.found && !p.creating) {\n    const s16 profile', '  if (p.found) {\n    const s16 profile'),
+    ('src/spawner_adapter.inc', '  es_log(line);\n}\n\nvoid es_report(', '  es_log(line);\n  es_toast("Enemy Spawner", line, false);\n}\n\nvoid es_report('),
+    ('src/spawner_adapter.inc', 'void es_adapt(const es::Tracked& x) noexcept {', 'void es_peek(fopAc_ac_c* a) noexcept { (void)reinterpret_cast<const e_sf_class*>(a)->mAction; }\nvoid es_adapt(const es::Tracked& x) noexcept {'),
+    ('src/spawner_core.hpp', '    if (!x.selector_reported && p.selector_read) {', '    if (p.selector_read) {'),
+    ('src/spawner_core.hpp', '    if (bit == 0 || (x.attacks_seen & bit)) return;', '    if (bit == 0) return;'),
 ]
 
 def main():

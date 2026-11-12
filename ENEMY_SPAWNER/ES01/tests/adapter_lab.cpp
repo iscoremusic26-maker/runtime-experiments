@@ -1,11 +1,14 @@
-// Enemy Spawner (Standalone) 0.1.1: the PRODUCTION adapter (src/spawner_adapter.inc, included verbatim) over a model of the engine rules it depends on.
+// Enemy Spawner (Standalone) 0.1.2: the PRODUCTION adapter (src/spawner_adapter.inc, included verbatim) over a model of the engine rules it depends on.
 // Model, from TwilitRealm/dusklight@40457c6 (inspection, not execution):
 //  * ActorService::create_actor -> fopAcM_create -> fpcM_Create records fpcLy_CurrentLayer() in the asynchronous request (src/dusk/mods/svc/actor.cpp,
 //    f_pc_manager). The actor is later owned by that layer.
 //  * A layer's actors are deleted with it; a root-owned actor survives the play scene. The play scene draws its actors through the actor queue,
 //    and the root traversal draws root-owned processes too: a root-owned enemy is drawn twice (Dawnlight docs/darknut-arena-spawner.md).
 //  * fopAcM_SearchByID finds a process once it is in the actor queue (first create step); fpcM_IsCreating stays true until its create completes.
-// Declared limits: no renderer, no collision, no real actor: a model of the rules above, not a run of the game.
+//  * 0.1.2: the native create() of E_SF, B_TN and E_RD decodes its selector from the parameters (d_a_e_sf.cpp L1774-1782, d_a_b_tn.cpp L5034-5066,
+//    d_a_e_rd.cpp L7375-7378). The model decodes them with its OWN copy of those lines (below), not with the catalog's decode_selector.
+// Declared limits: no renderer, no collision, no real actor, no AI: a model of the rules above, not a run of the game. Which attack a Stalfos runs
+// is set by the scenario, not by the model: only the game shows it.
 #include <cmath>
 #include <cstdint>
 #include <cstdio>
@@ -74,7 +77,13 @@ struct daAlink_c : fopAc_ac_c { layer_tag_t layer_tag; };
 struct e_tk_class : fopAc_ac_c { s16 mExecuteState = 20; };
 struct e_tk2_class : fopAc_ac_c { s16 mActionTimer[4] = {0, 0, 0, 20}; };
 struct daE_OC_c : fopAc_ac_c { const char* mName = "E_OC"; s16 field_0x560 = 40, health = 40; };
-constexpr s16 fpcNm_E_OC_e = 510, fpcNm_E_TK_e = 600, fpcNm_E_TK2_e = 601, fpcNm_E_DN_e = 435;
+// 0.1.2 telemetry targets. The production adapter reinterpret_casts to e_sf_class / e_rd_class like the native code; here they derive from the
+// model actor so that the address is the same.
+using u8 = std::uint8_t;
+struct e_sf_class : fopAc_ac_c { u8 mWaitType = 0, arg1 = 0, mType = 0, arg3 = 0; int mAnm = 0xC; s16 mAction = 0; };
+struct daB_TN_c : fopAc_ac_c { u8 mBrkAnmFrame = 0, mSwitchNo = 0, mType = 0, mType2 = 0; };
+struct e_rd_class : fopAc_ac_c { u8 arg0 = 0, weapon_type = 0; };
+constexpr s16 fpcNm_E_OC_e = 510, fpcNm_E_TK_e = 600, fpcNm_E_TK2_e = 601, fpcNm_E_DN_e = 435, fpcNm_E_SF_e = 520, fpcNm_B_TN_e = 300, fpcNm_E_RD_e = 515;
 static daAlink_c g_link_obj;
 static daAlink_c* g_link = &g_link_obj;
 static daAlink_c* daAlink_getAlinkActorClass() { return g_link; }
@@ -125,6 +134,26 @@ static fopAc_ac_c* materialize(const Request& r, bool creating) {
     b->mName = e_oc2 ? "E_OC2" : "E_OC";
     b->field_0x560 = b->health = e_oc2 ? 220 : 40;
     a = b;
+  } else if (r.profile == fpcNm_E_SF_e) {  // daE_SF_Create
+    auto* s = new e_sf_class;
+    const u32 prm = r.p.parameters;
+    s->mWaitType = u8(prm), s->arg1 = u8(prm >> 8), s->mType = u8((prm >> 24) & 0xF), s->arg3 = u8(prm >> 28);
+    if (s->mType > 1) s->mType = 0;
+    if (s->arg3 > 1) s->arg3 = 0;
+    a = s;
+  } else if (r.profile == fpcNm_B_TN_e) {  // daB_TN_c::create
+    auto* d = new daB_TN_c;
+    const u32 prm = r.p.parameters;
+    d->mSwitchNo = u8(prm), d->mType = u8((prm >> 8) & 0xFF), d->mBrkAnmFrame = u8((prm >> 16) & 0xFFFF), d->mType2 = u8((prm >> 24) & 0xFFFFFF);
+    if (d->mType != 1) d->mType = 0;
+    if (d->mBrkAnmFrame > 4) d->mBrkAnmFrame = 4;
+    if (d->mType2 != 1) d->mType2 = 0;
+    a = d;
+  } else if (r.profile == fpcNm_E_RD_e) {  // daE_RD_Create
+    auto* b = new e_rd_class;
+    b->arg0 = u8(r.p.parameters), b->weapon_type = u8((r.p.parameters & 0xF00) >> 8);
+    if (b->weapon_type == 15) b->weapon_type = 0;
+    a = b;
   } else if (r.profile == fpcNm_E_TK_e) {
     a = new e_tk_class;
   } else if (r.profile == fpcNm_E_TK2_e) {
@@ -156,7 +185,10 @@ static unsigned draws_of(const fopAc_ac_c* a) {  // actor queue of the play scen
 }
 // Includer-provided names of the production adapter
 #define ES_NOINLINE
-static s16 es_profile(es::Profile p) { return p == es::Profile::E_OC ? fpcNm_E_OC_e : p == es::Profile::E_TK ? fpcNm_E_TK_e : p == es::Profile::E_TK2 ? fpcNm_E_TK2_e : fpcNm_E_DN_e; }
+static s16 es_profile(es::Profile p) {
+  return p == es::Profile::E_OC ? fpcNm_E_OC_e : p == es::Profile::E_TK ? fpcNm_E_TK_e : p == es::Profile::E_TK2 ? fpcNm_E_TK2_e : p == es::Profile::E_SF ? fpcNm_E_SF_e
+       : p == es::Profile::B_TN ? fpcNm_B_TN_e : p == es::Profile::E_RD ? fpcNm_E_RD_e : fpcNm_E_DN_e;
+}
 static es::GroundSample g_ground;
 static int g_ground_calls = 0;
 static es::GroundSample es_sample_ground(daAlink_c* link, const cXyz&) {
@@ -390,6 +422,105 @@ static void lab_adaptations() {
   CHECK(esr.adapt_writes == 0);
 }
 
+static unsigned count_logged(const char* part) {
+  unsigned n = 0;
+  for (auto& t : g_log) n += t.find(part) != std::string::npos;
+  return n;
+}
+// 0.1.2: the appended variants reach the engine with their native parameters, and the telemetry reads back what the actor decoded.
+static void lab_variants_and_telemetry() {
+  struct V { const char* label; s16 profile; u32 parameters; s16 angle_z; const char* selector; } vs[] = {
+      {"Stalfos", fpcNm_E_SF_e, 0x0000ff00u, 0xff, "observed=mType:0,arg3:0 match=YES"},
+      {"Stalfos (Alternate Attack)", fpcNm_E_SF_e, 0x0100ff00u, 0xff, "observed=mType:1,arg3:0 match=YES"},
+      {"Stalfos (Breakable Shield)", fpcNm_E_SF_e, 0x1000ff00u, 0xff, "observed=mType:0,arg3:1 match=YES"},
+      {"Darknut", fpcNm_B_TN_e, 0x000001ffu, 0, "observed=mType:1,mType2:0 match=YES"},
+      {"Darknut (Sword)", fpcNm_B_TN_e, 0x010001ffu, 0, "observed=mType:1,mType2:1 match=YES"},
+      {"Bulblin", fpcNm_E_RD_e, 0xff000100u, 0, "observed=weapon_type:1,unused:0 match=YES"},
+      {"Bulblin (Bow)", fpcNm_E_RD_e, 0xff000200u, 0, "observed=weapon_type:2,unused:0 match=YES"},
+      {"Bulblin (Fire Bow)", fpcNm_E_RD_e, 0xff000300u, 0, "observed=weapon_type:3,unused:0 match=YES"},
+  };
+  for (const V& v : vs) {
+    reset();
+    es_press(index_of(v.label));
+    es_update();
+    CHECK(g_requests.size() == 1 && g_requests[0].profile == v.profile && g_requests[0].p.parameters == v.parameters && g_requests[0].p.angle.z == v.angle_z);
+    CHECK(g_requests[0].p.angle.y == static_cast<s16>(0x4000 + 0x8000) && g_requests[0].owner == &g_play && g_current == &g_root);
+    engine_create_all(false);
+    es_update();
+    CHECK(!logged("event=NATIVE_SELECTOR"));  // nothing is read while the create still runs
+    for (auto& l : g_live) l.creating = false;
+    es_update();
+    CHECK(logged("event=ACTOR_APPEARED") && logged("event=NATIVE_SELECTOR") && logged(v.selector) && count_logged("event=NATIVE_SELECTOR") == 1);
+    for (int k = 0; k < 5; ++k) es_update();
+    CHECK(count_logged("event=NATIVE_SELECTOR") == 1 && !toasted("NATIVE") && !toasted("mType"));  // log only, once
+    CHECK(esr.sp.c.selector_match == 1 && esr.sp.c.selector_mismatch == 0);
+  }
+  // Stalfos (Alternate Attack): when its native attack runs, the log names ACTION_ATTACK_0 and BCK_SF_ATTACK02. Never written by the spawner.
+  reset();
+  es_press(index_of("Stalfos (Alternate Attack)"));
+  es_update();
+  engine_create_all();
+  auto* sf = static_cast<e_sf_class*>(g_made);
+  es_update();
+  CHECK(sf->mType == 1 && !logged("NATIVE_ATTACK_OBSERVED"));
+  sf->mAction = 4, sf->mAnm = 5;  // e_sf_attack_0 running (set by the scenario: the model has no AI)
+  for (int k = 0; k < 4; ++k) es_update();
+  CHECK(count_logged("event=NATIVE_ATTACK_OBSERVED") == 1 && logged("action=ACTION_ATTACK_0(4) anm=BCK_SF_ATTACK02(5) expected_bck=5 mType=1 match=YES"));
+  CHECK(sf->mAction == 4 && sf->mAnm == 5 && sf->mType == 1 && sf->arg3 == 0 && esr.sp.c.attack_alt == 1);
+  sf->mAction = 3;  // back to fight_run, then the same attack again: still one line
+  es_update();
+  sf->mAction = 4;
+  es_update();
+  CHECK(count_logged("event=NATIVE_ATTACK_OBSERVED") == 1);
+  // An actor that decoded something else than the catalog asked for (a host or another mod changed it): reported as a mismatch, with both values.
+  reset();
+  es_press(index_of("Stalfos (Alternate Attack)"));
+  es_update();
+  engine_create_all(false);
+  static_cast<e_sf_class*>(g_made)->mType = 0;
+  for (auto& l : g_live) l.creating = false;
+  es_update();
+  CHECK(logged("expected=mType:1,arg3:0 observed=mType:0,arg3:0 match=NO") && !logged("match=YES") && esr.sp.c.selector_mismatch == 1 && esr.sp.c.selector_match == 0);
+  static_cast<e_sf_class*>(g_made)->mAction = 5, static_cast<e_sf_class*>(g_made)->mAnm = 4;  // the base attack running on an entry that asked for mType 1
+  es_update();
+  CHECK(logged("action=ACTION_ATTACK(5) anm=BCK_SF_ATTACK01(4) expected_bck=4 mType=1 match=NO") && esr.sp.c.attack_unexpected == 1);
+  // A shield that breaks later (arg3 -> 0xFF) does not re-report the selector.
+  reset();
+  es_press(index_of("Stalfos (Breakable Shield)"));
+  es_update();
+  engine_create_all();
+  es_update();
+  static_cast<e_sf_class*>(g_made)->arg3 = 0xFF;
+  for (int k = 0; k < 3; ++k) es_update();
+  CHECK(count_logged("event=NATIVE_SELECTOR") == 1 && esr.sp.c.selector_mismatch == 0);
+  // The base Stalfos: ACTION_ATTACK / BCK_SF_ATTACK01.
+  reset();
+  es_press(index_of("Stalfos"));
+  es_update();
+  engine_create_all();
+  es_update();
+  static_cast<e_sf_class*>(g_made)->mAction = 5, static_cast<e_sf_class*>(g_made)->mAnm = 4;
+  es_update();
+  CHECK(logged("action=ACTION_ATTACK(5) anm=BCK_SF_ATTACK01(4) expected_bck=4 mType=0 match=YES"));
+  // An id of ours that names another profile: the fields of that other actor are never read as Stalfos fields.
+  reset();
+  es_press(index_of("Stalfos (Alternate Attack)"));
+  es_update();
+  g_requests[0].profile = fpcNm_E_DN_e;
+  engine_create_all();
+  for (int k = 0; k < 3; ++k) es_update();
+  CHECK(logged("event=ACTOR_APPEARED") && !logged("event=NATIVE_SELECTOR") && !logged("NATIVE_ATTACK_OBSERVED"));
+  // The 12 limit counts the new entries like any other.
+  reset();
+  for (unsigned i = 0; i < es::policy::kMaxLive; ++i) {
+    es_press(index_of(i % 2 ? "Darknut (Sword)" : "Stalfos (Alternate Attack)"));
+    es_update();
+  }
+  es_press(index_of("Bulblin (Bow)"));
+  es_update();
+  CHECK(g_requests.size() == es::policy::kMaxLive && toasted("Maximum of 12 active spawned enemies reached"));
+}
+
 static void lab_limit_and_shutdown() {
   reset();
   for (unsigned i = 0; i < es::policy::kMaxLive; ++i) {
@@ -414,6 +545,7 @@ int main() {
   lab_refusals();
   lab_expansion_observation();
   lab_adaptations();
+  lab_variants_and_telemetry();
   lab_limit_and_shutdown();
   reset();
   std::printf("ES_ADAPTER_LAB version=%s checks=%llu failures=0 RESULT=LAB_PASS scope=PRODUCTION_ADAPTER_OVER_ENGINE_LAYER_MODEL runtime=HUMAN_RUNTIME_PENDING\n", es::kVersion, g_checks);

@@ -1,4 +1,4 @@
-// Enemy Spawner (Standalone) 0.1.1: laboratory of the pure core (catalog, presses, scene and ground rules, tracking, Expansion observation).
+// Enemy Spawner (Standalone) 0.1.2: laboratory of the pure core (catalog, presses, scene and ground rules, tracking, Expansion observation).
 // Also checks the spawner's reading of Bokoblin Expansion 0.17.0 against Expansion's own identity code (vendored, unmodified).
 #include <cstdio>
 #include <cstdlib>
@@ -30,7 +30,7 @@ static Scene good_scene() {
 }
 
 static void lab_catalog() {
-  CHECK(kCatalogSize == 45);
+  CHECK(kCatalogSize == 50 && kOriginalCount == 45);
   unsigned black = 0, blue = 0, red = 0;
   for (std::size_t i = 0; i < kCatalogSize; ++i) {
     const Entry& e = kCatalog[i];
@@ -55,6 +55,127 @@ static void lab_catalog() {
   CHECK((kCatalog[index_of("Dynalfos")].parameters & 0xff) == 0xff);
   CHECK(kCatalog[index_of("Helmasaurus")].argument == 1 && kCatalog[index_of("Helmasaur")].argument == -1);
   CHECK(kCatalog[index_of("Stalfos")].angle_z == 0xff && kCatalog[index_of("Kargarok")].angle_z == 0xff);
+}
+
+// 0.1.2: the appended native variants, decoded exactly as their native create() does (catalog.hpp decode_selector, d_a_e_sf.cpp / d_a_b_tn.cpp / d_a_e_rd.cpp).
+static void lab_variants() {
+  // The 0.1.1 entries keep their indices: the persisted chooser index still names the same enemy.
+  CHECK(index_of("Darknut") == 0 && index_of("Bokoblin Black (Expansion): integration unavailable") == 5 && index_of("Lizalfos") == 6 && index_of("Stalfos") == 9 &&
+        index_of("Bulblin") == 8 && index_of("Black Chu") == 44);
+  CHECK(index_of("Stalfos (Alternate Attack)") == 45 && index_of("Darknut (Sword)") == 46 && index_of("Stalfos (Breakable Shield)") == 47 && index_of("Bulblin (Bow)") == 48 &&
+        index_of("Bulblin (Fire Bow)") == 49);
+  for (std::size_t i = kOriginalCount; i < kCatalogSize; ++i) CHECK(kCatalog[i].route == Route::Native && kCatalog[i].adapt == Adapt::None && kCatalog[i].argument == -1);
+  // Stalfos: base mType 0 (ACTION_ATTACK, BCK_SF_ATTACK01) and the alternate mType 1 (ACTION_ATTACK_0, BCK_SF_ATTACK02). Same switch sentinel.
+  const Entry& sf = kCatalog[index_of("Stalfos")];
+  const Entry& sf1 = kCatalog[index_of("Stalfos (Alternate Attack)")];
+  CHECK(sf.parameters == 0x0000ff00u && sf1.parameters == 0x0100ff00u && sf.profile == Profile::E_SF && sf1.profile == Profile::E_SF);
+  CHECK(sf.angle_z == 0xff && sf1.angle_z == 0xff && sf1.angle_x == 0 && !sf1.flying);
+  CHECK(decode_selector(Profile::E_SF, sf.parameters).a == 0 && decode_selector(Profile::E_SF, sf.parameters).b == 0);
+  CHECK(decode_selector(Profile::E_SF, sf1.parameters).a == 1 && decode_selector(Profile::E_SF, sf1.parameters).b == 0);
+  CHECK(stalfos::expected_action(0) == stalfos::kActionAttack && stalfos::expected_bck(stalfos::kActionAttack) == stalfos::kBckAttack01);
+  CHECK(stalfos::expected_action(1) == stalfos::kActionAttack0 && stalfos::expected_bck(stalfos::kActionAttack0) == stalfos::kBckAttack02);
+  CHECK(stalfos::kActionAttack0 == 4 && stalfos::kActionAttack == 5 && stalfos::kBckAttack01 == 4 && stalfos::kBckAttack02 == 5);
+  // Low bytes as the base: mWaitType 0 (ACTION_NORMAL), arg1 0xFF (-> 3). Only the high nibble selects.
+  CHECK((sf1.parameters & 0x00ffffffu) == (sf.parameters & 0x00ffffffu));
+  // Native clamps: mType > 1 -> 0, arg3 > 1 -> 0.
+  CHECK(decode_selector(Profile::E_SF, 0x0700ff00u).a == 0 && decode_selector(Profile::E_SF, 0x3000ff00u).b == 0);
+  // Breakable shield: arg3 1 (BMDR_SF_SHIELDB, durability), mType 0.
+  const Entry& sfs = kCatalog[index_of("Stalfos (Breakable Shield)")];
+  CHECK(sfs.parameters == 0x1000ff00u && sfs.angle_z == 0xff && decode_selector(Profile::E_SF, sfs.parameters).a == 0 && decode_selector(Profile::E_SF, sfs.parameters).b == 1);
+  // Darknut: the existing entry IS the mace Darknut (mType 1, mType2 0 -> BMDR_TN2_MACE). The sword one differs only by mType2.
+  const Entry& dn = kCatalog[index_of("Darknut")];
+  const Entry& dn2 = kCatalog[index_of("Darknut (Sword)")];
+  CHECK(dn.parameters == 0x000001ffu && dn2.parameters == 0x010001ffu && dn2.profile == Profile::B_TN && dn2.angle_z == 0 && !dn2.flying);
+  CHECK(decode_selector(Profile::B_TN, dn.parameters).a == 1 && decode_selector(Profile::B_TN, dn.parameters).b == 0);
+  CHECK(decode_selector(Profile::B_TN, dn2.parameters).a == 1 && decode_selector(Profile::B_TN, dn2.parameters).b == 1);
+  CHECK((dn2.parameters & 0xffu) == 0xffu);  // mSwitchNo 0xFF: no defeated-switch
+  CHECK(std::uint8_t((dn2.parameters >> 16) & 0xffffu) == 0 && std::uint8_t((dn.parameters >> 16) & 0xffffu) == 0);  // mBrkAnmFrame (u8): the same armour colour frame
+  unsigned maces = 0;
+  for (std::size_t i = 0; i < kCatalogSize; ++i)
+    if (kCatalog[i].profile == Profile::B_TN) {
+      const Selector s = decode_selector(Profile::B_TN, kCatalog[i].parameters);
+      CHECK(s.a == 1);  // never the Temple of Time Darknut (mType 0)
+      maces += s.b == 0;
+    }
+  CHECK(maces == 1);  // the mace Darknut is offered once, not duplicated
+  CHECK(no_temple_of_time_darknut());
+  CHECK(decode_selector(Profile::B_TN, 0x000000ffu).a == 0 && decode_selector(Profile::B_TN, 0x000002ffu).a == 0);  // what would be the Temple of Time one
+  // Bulblin: club 1 (base), bow 2, fire bow 3; 4 (bomb arrows) is refused by the native create and is not offered.
+  CHECK(decode_selector(Profile::E_RD, kCatalog[index_of("Bulblin")].parameters).a == 1);
+  CHECK(decode_selector(Profile::E_RD, kCatalog[index_of("Bulblin (Bow)")].parameters).a == 2 && kCatalog[index_of("Bulblin (Bow)")].parameters == 0xff000200u);
+  CHECK(decode_selector(Profile::E_RD, kCatalog[index_of("Bulblin (Fire Bow)")].parameters).a == 3 && kCatalog[index_of("Bulblin (Fire Bow)")].parameters == 0xff000300u);
+  CHECK(bulblin_weapons_creatable() && decode_selector(Profile::E_RD, 0xff000f00u).a == 0);
+  for (const char* b : {"Bulblin (Bow)", "Bulblin (Fire Bow)"}) CHECK((kCatalog[index_of(b)].parameters & 0xff0000ffu) == (kCatalog[index_of("Bulblin")].parameters & 0xff0000ffu));
+  CHECK(!decode_selector(Profile::E_DN, 0xff0000ffu).known);
+  // Not offered in 0.1.2.
+  CHECK(index_of("Darknut (Temple of Time)") < 0 && index_of("Darknut (Mace)") < 0 && index_of("Darknut (Greatsword)") < 0 && index_of("Bulblin (Bomb Arrows)") < 0);
+  for (std::size_t i = 0; i < kCatalogSize; ++i) CHECK(std::strstr(kCatalog[i].label, "Aeralfos") == nullptr || std::strcmp(kCatalog[i].label, "Aeralfos") == 0);
+}
+
+// 0.1.2: read-only telemetry. What the actor decoded is compared with the catalog; a Stalfos attack is noted once per kind, with its expectation.
+static void lab_telemetry() {
+  Event ev[Spawner::kEvents];
+  Spawner sp;
+  CHECK(sp.press(index_of("Stalfos (Alternate Attack)"), 1) == Press::Accepted);
+  sp.created(true, 300, 1);
+  Probe p;
+  p.found = true, p.creating = true;  // not yet: nothing is read while the create runs
+  p.selector_read = false;
+  sp.observe(0, p, 2);
+  p.creating = false, p.selector_read = true, p.sel_a = 1, p.sel_b = 0, p.stalfos = true, p.sf_action = 0, p.sf_anm = stalfos::kBckAttack01;
+  sp.observe(0, p, 3);
+  unsigned n = sp.drain(ev, Spawner::kEvents);
+  CHECK(n == 3 && ev[1].kind == Ev::Appeared && ev[2].kind == Ev::NativeSelector && ev[2].why == 1 && ev[2].a == 1 && ev[2].b == 0 && sp.c.selector_match == 1);
+  sp.observe(0, p, 4);
+  CHECK(sp.drain(ev, Spawner::kEvents) == 0);  // reported once
+  p.sf_action = stalfos::kActionAttack0, p.sf_anm = stalfos::kBckAttack02;
+  for (std::uint64_t t = 5; t < 15; ++t) sp.observe(0, p, t);
+  n = sp.drain(ev, Spawner::kEvents);
+  CHECK(n == 1 && ev[0].kind == Ev::NativeAttack && ev[0].why == 1 && ev[0].action == stalfos::kActionAttack0 && ev[0].anm == stalfos::kBckAttack02 && ev[0].a == 1);
+  CHECK(sp.c.attack_alt == 1 && sp.c.attack_base == 0 && sp.c.attack_unexpected == 0);
+  p.sf_action = stalfos::kActionAttack;  // the other attack running on an mType 1 Stalfos would be reported, never hidden
+  sp.observe(0, p, 20);
+  n = sp.drain(ev, Spawner::kEvents);
+  CHECK(n == 1 && ev[0].kind == Ev::NativeAttack && ev[0].why == 0 && sp.c.attack_unexpected == 1);
+  // The base Stalfos: ACTION_ATTACK expected.
+  Spawner s2;
+  CHECK(s2.press(index_of("Stalfos"), 1) == Press::Accepted);
+  s2.created(true, 301, 1);
+  Probe q = p;
+  q.sel_a = 0, q.sf_action = stalfos::kActionAttack, q.sf_anm = stalfos::kBckAttack01;
+  s2.observe(0, q, 2);
+  n = s2.drain(ev, Spawner::kEvents);
+  CHECK(n == 4 && ev[2].kind == Ev::NativeSelector && ev[2].why == 1 && ev[3].kind == Ev::NativeAttack && ev[3].why == 1 && s2.c.attack_base == 1);
+  // A mismatch is reported as one.
+  Spawner s3;
+  CHECK(s3.press(index_of("Darknut (Sword)"), 1) == Press::Accepted);
+  s3.created(true, 302, 1);
+  Probe d;
+  d.found = true, d.selector_read = true, d.sel_a = 1, d.sel_b = 0;
+  s3.observe(0, d, 2);
+  n = s3.drain(ev, Spawner::kEvents);
+  CHECK(ev[n - 1].kind == Ev::NativeSelector && ev[n - 1].why == 0 && s3.c.selector_mismatch == 1 && s3.c.selector_match == 0);
+  // The mace Darknut and the Bulblin bow: matches. No attack telemetry outside Stalfos.
+  for (const char* label : {"Darknut", "Bulblin (Bow)", "Bulblin (Fire Bow)", "Stalfos (Breakable Shield)"}) {
+    Spawner s4;
+    CHECK(s4.press(index_of(label), 1) == Press::Accepted);
+    s4.created(true, 303, 1);
+    const Selector want = decode_selector(kCatalog[index_of(label)].profile, kCatalog[index_of(label)].parameters);
+    Probe r;
+    r.found = true, r.selector_read = true, r.sel_a = want.a, r.sel_b = want.b, r.sf_action = stalfos::kActionAttack0;
+    s4.observe(0, r, 2);
+    n = s4.drain(ev, Spawner::kEvents);
+    CHECK(n == 3 && ev[2].kind == Ev::NativeSelector && ev[2].why == 1);
+  }
+  // Profiles without a decoded selector: no telemetry at all.
+  Spawner s5;
+  CHECK(s5.press(index_of("Lizalfos"), 1) == Press::Accepted);
+  s5.created(true, 304, 1);
+  Probe z;
+  z.found = true, z.selector_read = true, z.stalfos = true, z.sf_action = stalfos::kActionAttack0;
+  s5.observe(0, z, 2);
+  n = s5.drain(ev, Spawner::kEvents);
+  CHECK(n == 2 && s5.c.selector_match + s5.c.selector_mismatch + s5.c.attack_alt + s5.c.attack_unexpected == 0);
 }
 
 static void lab_scene_and_ground() {
@@ -241,6 +362,8 @@ static void lab_expansion_contract() {
 
 int main() {
   lab_catalog();
+  lab_variants();
+  lab_telemetry();
   lab_scene_and_ground();
   lab_presses();
   lab_lifecycle();

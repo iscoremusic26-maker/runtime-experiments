@@ -1,16 +1,18 @@
 #pragma once
-// Enemy Spawner (Standalone) 0.1.1: the decisions of the spawner. PURE: no game header. mod.cpp reads the engine into these
+// Enemy Spawner (Standalone) 0.1.2: the decisions of the spawner. PURE: no game header. mod.cpp reads the engine into these
 // small structs, calls the core and acts on its answer. tests/spawner_lab.cpp drives the same core.
 //
 // The only job of this mod is to CREATE actors. What happens afterwards (AI, HP, parry, posture, effects, death, deletion) belongs to
 // the engine and to the mods that own those systems. The core therefore never decides anything about an actor after its creation,
 // except the two Toadpoli adaptations of the catalog and reading, without writing, whether Bokoblin Expansion classified a Bokoblin.
+// 0.1.2 adds, read only and log only: the native selector the created actor really decoded (E_SF, B_TN, E_RD), compared with the catalog's
+// expectation (decode_selector), and for Stalfos the first time each native attack action is seen running (ACTION_ATTACK_0 / ACTION_ATTACK).
 #include <cstddef>
 #include <cstdint>
 #include "catalog.hpp"
 
 namespace es {
-inline constexpr const char* kVersion = "0.1.1";
+inline constexpr const char* kVersion = "0.1.2";
 
 namespace policy {
 inline constexpr unsigned kMaxLive = 12;                 // live actors created by this mod (requests included); never frees capacity by deleting
@@ -89,6 +91,18 @@ inline Variant classify(bool e_oc2, int field_0x560, int health) noexcept {
   return Variant::Unexpected;  // another mod changed the native creation value, or the actor is not what was asked
 }
 
+// ---------------------------------------------------------------- native telemetry (read only, log only)
+// Stalfos action and animation ids, from the file-local enums of d_a_e_sf.cpp (TwilitRealm/dusklight@40457c6): enum Action L68-80, E_sf_RES_File_ID L16-37.
+namespace stalfos {
+inline constexpr std::int16_t kActionAttack0 = 4;  // ACTION_ATTACK_0: e_sf_attack_0, the mType 1 attack
+inline constexpr std::int16_t kActionAttack = 5;   // ACTION_ATTACK: e_sf_attack, the mType 0 attack
+inline constexpr int kBckAttack01 = 4;             // BCK_SF_ATTACK01 (hit window frames 81..86)
+inline constexpr int kBckAttack02 = 5;             // BCK_SF_ATTACK02 (hit window frames 15..22)
+// The attack action the native fight_run chooses for a decoded mType (d_a_e_sf.cpp L515-519).
+inline constexpr std::int16_t expected_action(std::uint8_t type) noexcept { return type == 0 ? kActionAttack : kActionAttack0; }
+inline constexpr int expected_bck(std::int16_t action) noexcept { return action == kActionAttack0 ? kBckAttack02 : action == kActionAttack ? kBckAttack01 : -1; }
+}  // namespace stalfos
+
 // ---------------------------------------------------------------- the presses and the actors
 enum class Press : std::uint8_t { Accepted, InvalidIndex, Busy, Full, BlackUnavailable, ExpansionAbsent, ExpansionRefuted, Count };
 inline const char* name(Press p) noexcept {
@@ -96,19 +110,23 @@ inline const char* name(Press p) noexcept {
   return unsigned(p) < unsigned(Press::Count) ? n[unsigned(p)] : "?";
 }
 enum class Ev : std::uint8_t {
-  None, Requested, Expired, Rejected, Created, CreateFailed, Appeared, Vanished, CreateTimeout, Classified, NotClassified, IdReused, Count
+  None, Requested, Expired, Rejected, Created, CreateFailed, Appeared, Vanished, CreateTimeout, Classified, NotClassified, IdReused, NativeSelector, NativeAttack, Count
 };
 inline const char* name(Ev e) noexcept {
   static constexpr const char* n[] = {"NONE", "REQUEST_SENT", "PRESS_EXPIRED", "SPAWN_REJECTED", "CREATE_REQUEST_ACCEPTED", "CREATE_REQUEST_FAILED", "ACTOR_APPEARED",
-                                      "ACTOR_GONE", "CREATION_TIMEOUT", "EXPANSION_CLASSIFIED", "EXPANSION_DID_NOT_CLASSIFY", "ID_REUSED"};
+                                      "ACTOR_GONE", "CREATION_TIMEOUT", "EXPANSION_CLASSIFIED", "EXPANSION_DID_NOT_CLASSIFY", "ID_REUSED", "NATIVE_SELECTOR",
+                                      "NATIVE_ATTACK_OBSERVED"};
   return unsigned(e) < unsigned(Ev::Count) ? n[unsigned(e)] : "?";
 }
 struct Event {
   Ev kind = Ev::None;
   std::uint16_t entry = 0;
   std::uint32_t id = 0;
-  std::uint8_t why = 0;    // Wait or Ground or Variant, by kind
+  std::uint8_t why = 0;    // Wait or Ground or Variant, by kind; NativeSelector / NativeAttack: 1 = matches the catalog's expectation
   std::uint64_t tick = 0;
+  std::uint8_t a = 0, b = 0;  // NativeSelector: the selector the actor decoded; NativeAttack: a = expected mType
+  std::int16_t action = 0;    // NativeAttack: the native action seen
+  int anm = 0;                // NativeAttack: the native animation id seen
 };
 // What mod_update learned about one tracked id this tick (from the engine, read only).
 struct Probe {
@@ -117,6 +135,12 @@ struct Probe {
   bool bokoblin = false;   // found, profile E_OC: the two values below are valid
   bool e_oc2 = false;      // its native resource name is "E_OC2"
   int field_0x560 = 0, health = 0;
+  // 0.1.2, read only. found and not creating, and the actor's profile is E_SF, B_TN or E_RD (by its process name, never by our catalog):
+  bool selector_read = false;
+  std::uint8_t sel_a = 0, sel_b = 0;  // e_sf_class mType/arg3, daB_TN_c mType/mType2, e_rd_class weapon_type/0
+  bool stalfos = false;               // E_SF: the two values below are valid
+  std::int16_t sf_action = 0;         // e_sf_class::mAction
+  int sf_anm = 0;                     // e_sf_class::mAnm
 };
 enum class Life : std::uint8_t { Free, Creating, Alive };
 struct Tracked {
@@ -126,6 +150,8 @@ struct Tracked {
   std::uint64_t since = 0, generation = 0;
   bool verify = false;     // an Expansion route still waiting for its answer
   std::uint64_t alive_tick = 0;
+  bool selector_reported = false;  // 0.1.2: NATIVE_SELECTOR logged once, at the first observation of the live actor
+  std::uint8_t attacks_seen = 0;   // 0.1.2: bit 1 ACTION_ATTACK_0, bit 2 ACTION_ATTACK, each logged once per actor
 };
 
 class Spawner {
@@ -135,6 +161,7 @@ class Spawner {
   Tracked t[policy::kMaxLive];
   struct Counters {
     std::uint64_t presses = 0, accepted = 0, refused = 0, expired = 0, rejected = 0, created = 0, failed = 0, appeared = 0, gone = 0, timeouts = 0, classified = 0, not_classified = 0, id_reused = 0, events_dropped = 0;
+    std::uint64_t selector_match = 0, selector_mismatch = 0, attack_alt = 0, attack_base = 0, attack_unexpected = 0;
   } c;
 
   void set_framework_present(bool present) noexcept {
@@ -251,6 +278,7 @@ class Spawner {
       } else if (x.verify && !p.bokoblin) {
         x.verify = false;
       }
+      telemetry(x, p, now);
     }
   }
   // Scene teardown or mod shutdown: ids of a gone scene are never looked up again.
@@ -277,12 +305,32 @@ class Spawner {
     if (live() >= policy::kMaxLive) return Press::Full;
     return Press::Accepted;
   }
-  void emit(Ev k, std::uint16_t entry, std::uint32_t id, std::uint8_t why, std::uint64_t now) noexcept {
+  // 0.1.2: compares what the live actor decoded with what the catalog asked for, and notes the first Stalfos attack of each kind. Reads a Probe only.
+  void telemetry(Tracked& x, const Probe& p, std::uint64_t now) noexcept {
+    const Entry& e = kCatalog[x.entry];
+    const Selector want = decode_selector(e.profile, e.parameters);
+    if (!want.known) return;
+    if (!x.selector_reported && p.selector_read) {
+      x.selector_reported = true;
+      const bool match = want.a == p.sel_a && want.b == p.sel_b;
+      ++(match ? c.selector_match : c.selector_mismatch);
+      emit(Ev::NativeSelector, x.entry, x.id, match ? 1 : 0, now, p.sel_a, p.sel_b);
+    }
+    if (e.profile != Profile::E_SF || !p.stalfos) return;
+    const std::uint8_t bit = p.sf_action == stalfos::kActionAttack0 ? 1 : p.sf_action == stalfos::kActionAttack ? 2 : 0;
+    if (bit == 0 || (x.attacks_seen & bit)) return;
+    x.attacks_seen |= bit;
+    const bool expected = p.sf_action == stalfos::expected_action(want.a);
+    if (!expected) ++c.attack_unexpected;
+    else ++(bit == 1 ? c.attack_alt : c.attack_base);
+    emit(Ev::NativeAttack, x.entry, x.id, expected ? 1 : 0, now, want.a, 0, p.sf_action, p.sf_anm);
+  }
+  void emit(Ev k, std::uint16_t entry, std::uint32_t id, std::uint8_t why, std::uint64_t now, std::uint8_t a = 0, std::uint8_t b = 0, std::int16_t action = 0, int anm = 0) noexcept {
     if (nev_ >= kEvents) {
       ++c.events_dropped;
       return;
     }
-    ev_[nev_++] = Event{k, entry, id, why, now};
+    ev_[nev_++] = Event{k, entry, id, why, now, a, b, action, anm};
   }
   bool pending_ = false;
   std::uint16_t pending_entry_ = 0;

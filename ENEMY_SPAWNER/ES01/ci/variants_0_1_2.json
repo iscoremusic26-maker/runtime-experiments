@@ -1,0 +1,16 @@
+{
+ "note": "Enemy Spawner 0.1.2: the only rows allowed beyond Dawnlight's catalog. Native evidence: TwilitRealm/dusklight@40457c6adb381928e4b5fef6ed459ed291edd5e2. Full analysis: docs/VARIANTS_0_1_2.md.",
+ "appended": [
+  {"label": "Stalfos (Alternate Attack)", "derives_from": "Stalfos", "profile": "E_SF", "parameters": "0x0100ff00", "argument": -1, "angle_z": 255, "flying": false,
+   "evidence": "d_a_e_sf.cpp L1774 mType = (p >> 24) & 0xF = 1; L515-519 fight_run -> ACTION_ATTACK_0; L556 BCK_SF_ATTACK02; L561 hit frames 15..22; L1716 BMDR_SF_SWORDB"},
+  {"label": "Darknut (Sword)", "derives_from": "Darknut", "profile": "B_TN", "parameters": "0x010001ff", "argument": -1, "angle_z": 0, "flying": false,
+   "evidence": "d_a_b_tn.cpp L5034 mType = 1 (B_tnp2), L5062 mType2 = 1, L4967 part 13 = BMDR_TN2_SWORD_A instead of BMDR_TN2_MACE; no other use of mType2"},
+  {"label": "Stalfos (Breakable Shield)", "derives_from": "Stalfos", "profile": "E_SF", "parameters": "0x1000ff00", "argument": -1, "angle_z": 255, "flying": false,
+   "evidence": "d_a_e_sf.cpp L1775 arg3 = p >> 28 = 1; L1732 BMDR_SF_SHIELDB; L1626-1637 durability field_0x5c0 (30) then arg3 = 0xFF; L1126 no guard without shield"},
+  {"label": "Bulblin (Bow)", "derives_from": "Bulblin", "profile": "E_RD", "parameters": "0xff000200", "argument": -1, "angle_z": 0, "flying": false,
+   "evidence": "d_a_e_rd.cpp L7375 weapon_type = 2 (WEAPON_TYPE_BOW); L1252 ACTION_BOW_RUN; L6910 E_ARROW child; L7267 BMDR_RD_BOW"},
+  {"label": "Bulblin (Fire Bow)", "derives_from": "Bulblin", "profile": "E_RD", "parameters": "0xff000300", "argument": -1, "angle_z": 0, "flying": false,
+   "evidence": "d_a_e_rd.cpp L7375 weapon_type = 3 (WEAPON_TYPE_FIRE_BOW); L6899 fire arrow sound; L6904 E_ARROW parameter |= 1"}
+ ],
+ "not_offered": ["Darknut (Temple of Time)", "Darknut (Mace)", "Darknut (Greatsword)", "Bulblin (Bomb Arrows)", "Aeralfos (City in the Sky)", "Lizalfos (Skull Helmet)"]
+}

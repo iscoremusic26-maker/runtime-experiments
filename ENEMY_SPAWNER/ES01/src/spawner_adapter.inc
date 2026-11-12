@@ -1,4 +1,4 @@
-// Enemy Spawner (Standalone) 0.1.1: the part that touches the engine. Included once by mod.cpp, and by tests/adapter_lab.cpp over a model of
+// Enemy Spawner (Standalone) 0.1.2: the part that touches the engine. Included once by mod.cpp, and by tests/adapter_lab.cpp over a model of
 // the engine's layer and creation rules. The includer provides: the SDK names used below, es_profile(), es_sample_ground(), es_log(), es_toast().
 //
 // Scene ownership is Dawnlight's rule (BeZide93, CC0, b5e9046 src/enemy_spawner.cpp create_test_actor_in_player_layer, user-confirmed
@@ -9,7 +9,8 @@
 // Native writes of this file (all on actors this mod created, all through the named writers below):
 //  es_native_layer      fpcLy_SetCurrentLayer, set and restored around one create_actor call
 //  es_native_keep_ground  e_tk mExecuteState / e_tk2 mActionTimer[3], each frame before the actor's Execute (catalog Adapt)
-// Everything else is read only.
+// Everything else is read only. 0.1.2 adds READS only (es_probe): e_sf_class mType/arg3/mAction/mAnm, daB_TN_c mType/mType2, e_rd_class weapon_type,
+// each by name through the SDK headers and only after fopAcM_GetName says the actor is of that profile.
 struct EsRuntime {
   es::Spawner sp;
   std::uint64_t tick = 0, framework_checked = ~0ull;
@@ -102,6 +103,20 @@ es::Probe es_probe(std::uint32_t id) noexcept {
     p.e_oc2 = n && n[0] == 'E' && n[1] == '_' && n[2] == 'O' && n[3] == 'C' && n[4] == '2' && n[5] == 0;
     p.field_0x560 = b->field_0x560, p.health = b->health;
   }
+  // 0.1.2 telemetry: the selector the actor itself decoded in its create(), and the Stalfos action / animation running now. Read only.
+  if (p.found && !p.creating) {
+    const s16 profile = fopAcM_GetName(a);
+    if (profile == fpcNm_E_SF_e) {  // e_sf_class has its fopEn_enemy_c first; the native code casts the same way ((e_sf_class*)a_this)
+      const auto* s = reinterpret_cast<const e_sf_class*>(a);
+      p.selector_read = true, p.sel_a = s->mType, p.sel_b = s->arg3;
+      p.stalfos = true, p.sf_action = s->mAction, p.sf_anm = s->mAnm;
+    } else if (profile == fpcNm_B_TN_e) {
+      const auto* d = static_cast<const daB_TN_c*>(a);
+      p.selector_read = true, p.sel_a = d->mType, p.sel_b = d->mType2;
+    } else if (profile == fpcNm_E_RD_e) {  // e_rd_class has its fopEn_enemy_c first, like e_sf_class
+      p.selector_read = true, p.sel_a = reinterpret_cast<const e_rd_class*>(a)->weapon_type, p.sel_b = 0;
+    }
+  }
   return p;
 }
 
@@ -116,8 +131,33 @@ void es_adapt(const es::Tracked& x) noexcept {
   ++esr.adapt_writes;
 }
 
+// 0.1.2: the two telemetry events are log lines only (no toast): evidence for the human test, never a claim that the game was observed by CI.
+void es_report_native(const es::Event& ev, const char* label) noexcept {
+  const es::Profile prof = ev.entry < es::kCatalogSize ? es::kCatalog[ev.entry].profile : es::Profile::Count;
+  const es::Selector want = ev.entry < es::kCatalogSize ? es::decode_selector(prof, es::kCatalog[ev.entry].parameters) : es::Selector{};
+  const char* fa = prof == es::Profile::E_SF ? "mType" : prof == es::Profile::B_TN ? "mType" : "weapon_type";
+  const char* fb = prof == es::Profile::E_SF ? "arg3" : prof == es::Profile::B_TN ? "mType2" : "unused";
+  char line[320];
+  if (ev.kind == es::Ev::NativeSelector) {
+    std::snprintf(line, sizeof(line), "ENEMY_SPAWNER event=NATIVE_SELECTOR version=%s entry=%u label=\"%s\" actor_id=%u expected=%s:%u,%s:%u observed=%s:%u,%s:%u match=%s tick=%llu", es::kVersion,
+                  unsigned(ev.entry), label, ev.id, fa, unsigned(want.a), fb, unsigned(want.b), fa, unsigned(ev.a), fb, unsigned(ev.b), ev.why ? "YES" : "NO",
+                  static_cast<unsigned long long>(ev.tick));
+  } else {
+    const char* action = ev.action == es::stalfos::kActionAttack0 ? "ACTION_ATTACK_0" : ev.action == es::stalfos::kActionAttack ? "ACTION_ATTACK" : "?";
+    const char* anm = ev.anm == es::stalfos::kBckAttack02 ? "BCK_SF_ATTACK02" : ev.anm == es::stalfos::kBckAttack01 ? "BCK_SF_ATTACK01" : "OTHER";
+    std::snprintf(line, sizeof(line), "ENEMY_SPAWNER event=NATIVE_ATTACK_OBSERVED version=%s entry=%u label=\"%s\" actor_id=%u action=%s(%d) anm=%s(%d) expected_bck=%d mType=%u match=%s tick=%llu",
+                  es::kVersion, unsigned(ev.entry), label, ev.id, action, int(ev.action), anm, ev.anm, es::stalfos::expected_bck(ev.action), unsigned(ev.a), ev.why ? "YES" : "NO",
+                  static_cast<unsigned long long>(ev.tick));
+  }
+  es_log(line);
+}
+
 void es_report(const es::Event& ev) noexcept {
   const char* label = ev.entry < es::kCatalogSize ? es::kCatalog[ev.entry].label : "?";
+  if (ev.kind == es::Ev::NativeSelector || ev.kind == es::Ev::NativeAttack) {
+    es_report_native(ev, label);
+    return;
+  }
   const char* why = ev.kind == es::Ev::Expired ? es::name(es::Wait(ev.why)) : ev.kind == es::Ev::Rejected ? es::name(es::Ground(ev.why))
                     : ev.kind == es::Ev::Classified || ev.kind == es::Ev::NotClassified ? (ev.why == std::uint8_t(es::Variant::Blue) ? "BLUE" : ev.why == std::uint8_t(es::Variant::Red) ? "RED" : ev.why == std::uint8_t(es::Variant::Native) ? "NATIVE_HP_UNCHANGED" : "UNEXPECTED_VALUES")
                     : ev.kind == es::Ev::CreateFailed ? (ev.why ? "ENDED_WITHOUT_ACTOR" : "SERVICE_REFUSED") : "-";

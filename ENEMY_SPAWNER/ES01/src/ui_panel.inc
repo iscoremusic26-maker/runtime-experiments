@@ -1,4 +1,4 @@
-// Enemy Spawner (Standalone) 0.1.1 FIX01: the panel in this mod's tab of the host Mods window. Included once by mod.cpp, and by tests/panel_lab.cpp
+// Enemy Spawner (Standalone) 0.1.2 (panel unchanged since 0.1.1 FIX01): the panel in this mod's tab of the host Mods window. Included once by mod.cpp, and by tests/panel_lab.cpp
 // against the real SDK UI header and a model of the host's ui_pane_add_control.
 // The includer provides: svc_ui, svc_config, mod_ctx, es_press(), es_log().
 //
@@ -8,7 +8,7 @@
 //    text the host would show in that pane; setting it creates no pane, so a SELECT can never be built here. 0.1.0 failed exactly there
 //    ("pane_add_control: SELECT controls need a help pane (mod window tabs)" -> "mod UI panel build failed").
 //  * case UI_CONTROL_DROPDOWN (UI service minor 3, which this mod already imports) builds a DropdownButton with the option labels and no help pane,
-//    and wire_config_var_binding accepts it with an int config var, exactly like SELECT. Same var, same 45 indices, same order.
+//    and wire_config_var_binding accepts it with an int config var, exactly like SELECT. Same var, same order: 0.1.1's 45 indices, then 0.1.2's 5.
 
 struct EsUi {
   ConfigVarHandle var = 0;  // the persisted index of the chosen enemy ("enemy", default 6 = Lizalfos)

@@ -1,4 +1,4 @@
-"""Enemy Spawner 0.1.1 FIX01: everything this mod shows or ships for people to read is English.
+"""Enemy Spawner 0.1.2: everything this mod shows or ships for people to read is English.
 Enumerates every string literal of the production source (catalog labels, panel, toasts, errors, logs), the manifest, and every first-party
 document under ES01/ (README, docs). Fails on any non-ASCII character in production strings, any Spanish word from the 0.1.0 texts, and any
 missing expected English label. Proven by its own negatives. Usage: english_audit.py <project>"""
@@ -10,10 +10,13 @@ DOCS = ['README.md'] + sorted(p.relative_to(root).as_posix() for p in (root / 'd
 SPANISH = ['solicitud', 'enviada', 'aparecido', 'invoco', 'invocar', 'invocacion', 'invocación', 'creacion', 'creación', 'clasifico', 'clasificó', 'cargado', 'integracion',
            'integración', 'disponible', 'ya hay', 'limite', 'límite', 'seleccion', 'selección', 'valida', 'válida', 'enemigo', 'enemigos', 'suelo', 'seguro', 'sesion', 'sesión',
            'nativo', 'noche', 'juego', 'delante', 'prueba', 'pruebas', 'instalacion', 'instalación', 'estado', 'entrada', 'entradas', 'aviso', 'cerrado', 'carpeta', 'borra',
-           'pestaña', 'busca', 'repite', 'esperado', 'depende', 'sin garantia', 'sin garantía', 'qué', 'por qué', 'también', 'según', 'hasta', 'cuando', 'porque', 'mientras']
+           'pestaña', 'busca', 'repite', 'esperado', 'depende', 'sin garantia', 'sin garantía', 'qué', 'por qué', 'también', 'según', 'hasta', 'cuando', 'porque', 'mientras',
+           # 0.1.2: the words a Spanish variant label would use
+           'ataque', 'alternativo', 'espada', 'escudo', 'rompible', 'arco', 'fuego', 'templo', 'tiempo', 'maza', 'variante', 'patron', 'patrón']
 EXPECTED = ['"Enemy Spawner"', '"Enemy"', '"Spawn Enemy"', '"Bokoblin Black (Expansion): integration unavailable"', 'Spawn request submitted', 'Enemy spawned',
             'no safe spawn location', 'not in a safe state', 'did not classify the spawned enemy', 'Bokoblin Black integration is unavailable', 'A spawn request is already pending',
-            'active spawned enemies reached', 'Invalid enemy selection', 'Bokoblin Expansion is not loaded']
+            'active spawned enemies reached', 'Invalid enemy selection', 'Bokoblin Expansion is not loaded',
+            '"Stalfos (Alternate Attack)"', '"Darknut (Sword)"', '"Stalfos (Breakable Shield)"', '"Bulblin (Bow)"', '"Bulblin (Fire Bow)"']
 LIT = re.compile(r'"(?:\\.|[^"\\])*"')
 
 def strip_comments(t):
@@ -74,7 +77,13 @@ def main():
             ('src/catalog.hpp', '"Stalhound (night only)"', '"Stalhound (solo de noche)"'),
             ('mod.json', '"Creates real native enemies', '"Crea enemigos nativos reales'),
             ('docs/TEST_GUIDE.md', '# ', '# Prueba humana\n# '),
-            ('src/ui_panel.inc', '"Enemy Spawner";', '"Enemy Spawner á";')]
+            ('src/ui_panel.inc', '"Enemy Spawner";', '"Enemy Spawner á";'),
+            ('src/catalog.hpp', '"Stalfos (Alternate Attack)"', '"Stalfos (Ataque alternativo)"'),
+            ('src/catalog.hpp', '"Darknut (Sword)"', '"Darknut (Espada)"'),
+            ('src/catalog.hpp', '"Stalfos (Breakable Shield)"', '"Stalfos (Escudo rompible)"'),
+            ('src/catalog.hpp', '"Bulblin (Fire Bow)"', '"Bulblin (Arco de fuego)"'),
+            ('src/catalog.hpp', '"Bulblin (Bow)"', '"Bulblin (Arco)"'),
+            ('docs/VARIANTS_0_1_2.md', '# ', '# Ataque alternativo del Stalfos\n# ')]
     rejected = 0
     for rel, old, new in negs:
         if files[rel].count(old) < 1:

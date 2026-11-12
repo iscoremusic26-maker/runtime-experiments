@@ -108,7 +108,9 @@
  ],
  "required_strings": [
   "dev.twilitrealm.dusklight.actor",
-  "dev.devf.encounter_placement.v11"
+  "dev.devf.encounter_placement.v11",
+  "Stalfos (Alternate Attack)",
+  "event=NATIVE_SELECTOR"
  ],
- "note": "Enemy Spawner 0.1.1 FIX01 (same reviewed game imports as 0.1.0: the panel change touches only the UI service). game_imports: every game symbol the DLL may import, pinned from the first build; all are reads or native creation helpers except fpcLy_SetCurrentLayer (scene ownership, set and restored around one create_actor call). No hook, no HookService."
+ "note": "Enemy Spawner 0.1.2 (same reviewed game imports as 0.1.0 and 0.1.1: the 0.1.2 variants are catalog rows, and its telemetry only reads actor fields by name, which needs no import). game_imports: every game symbol the DLL may import, pinned from the first build; all are reads or native creation helpers except fpcLy_SetCurrentLayer (scene ownership, set and restored around one create_actor call). No hook, no HookService."
 }

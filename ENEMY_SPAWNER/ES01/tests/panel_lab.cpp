@@ -1,4 +1,4 @@
-// Enemy Spawner (Standalone) 0.1.1 FIX01: the PRODUCTION Mods panel (src/ui_panel.inc, included verbatim) built against the REAL SDK UI header
+// Enemy Spawner (Standalone) 0.1.2: the PRODUCTION Mods panel (src/ui_panel.inc, included verbatim) built against the REAL SDK UI header
 // (sdk/include/mods/svc/ui.h of TwilitRealm/dusklight@40457c6) and a model of the host's ui_pane_add_control (src/dusk/mods/svc/ui.cpp, same commit).
 // Modelled host facts, read in the source:
 //  * ui_register_mods_panel: wrap_pane(mod, pane, nullptr) -> the Mods panel has no help pane. A window tab's left pane has one (wrap_pane(.., &right)).
@@ -184,10 +184,13 @@ static void lab_production_panel() {
   CHECK(g_elems[0].kind == -1 && g_elems[0].label == "Enemy Spawner");
   const Elem* chooser = elem_of(UI_CONTROL_DROPDOWN);
   CHECK(chooser && chooser == &g_elems[1] && chooser->label == "Enemy" && chooser->var == esui.var && elem_of(UI_CONTROL_SELECT) == nullptr);
-  CHECK(chooser->options.size() == es::kCatalogSize && chooser->options.size() == 45 && chooser->option_ptr == es::kLabels.v);
+  CHECK(chooser->options.size() == es::kCatalogSize && chooser->options.size() == 50 && chooser->option_ptr == es::kLabels.v);
   for (std::size_t i = 0; i < es::kCatalogSize; ++i) CHECK(chooser->options[i] == es::kCatalog[i].label);
   CHECK(chooser->options[6] == "Lizalfos");  // the default index of the "enemy" var
   CHECK(chooser->options[5] == "Bokoblin Black (Expansion): integration unavailable");
+  CHECK(chooser->options[0] == "Darknut" && chooser->options[9] == "Stalfos" && chooser->options[44] == "Black Chu");  // 0.1.1 indices kept
+  CHECK(chooser->options[45] == "Stalfos (Alternate Attack)" && chooser->options[46] == "Darknut (Sword)" && chooser->options[47] == "Stalfos (Breakable Shield)" &&
+        chooser->options[48] == "Bulblin (Bow)" && chooser->options[49] == "Bulblin (Fire Bow)");  // 0.1.2, appended
   const Elem* button = elem_of(UI_CONTROL_BUTTON);
   CHECK(button && button == &g_elems[2] && button->label == "Spawn Enemy" && button->pressed == on_invoke);
   CHECK(g_elems[3].kind == -2 && g_elems[3].label.find("Bokoblin Black") != std::string::npos && g_elems[3].label.find("unavailable") != std::string::npos);
@@ -211,6 +214,10 @@ static void lab_selection_and_press() {
   }
   CHECK(g_presses.size() == es::kCatalogSize + 1);
   // A damaged persisted value or an unreadable var reaches the core as an invalid index (refused there, tests/core_lab.cpp).
+  find_var(0x77)->value = std::int64_t(es::kCatalogSize);  // one past the last entry: still only a press of that number
+  button->pressed(mod_ctx, nullptr);
+  CHECK(g_presses.back() == 50);
+  g_presses.pop_back();
   find_var(0x77)->value = 99;
   button->pressed(mod_ctx, nullptr);
   CHECK(g_presses.back() == 99);
