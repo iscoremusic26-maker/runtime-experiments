@@ -64,7 +64,7 @@ One FIX01 contract changed on purpose: a wound **outside** its own attack now ra
 | Game imports | 102 | Same, checked with clang locally and MSVC in CI |
 | New writers | — | `kk_native_at_clear`, `kk_native_face` |
 
-`kkb_guard_mark` calls the already-imported `dPa_control_c::setHitMark`.
+`kkb_guard_mark` (noinline) calls the already-imported `dPa_control_c::setHitMark` through its hook, so the parry FX hooks see it. Until 0.13.3 `ci/pe_audit.py` listed setHitMark as a hook-only import (never called). FIX04 moves it to a reviewed caller count: exactly **one** code reference, counted in the DLL (`FIX04_CALLED_ONCE`, synthetic negatives in `tests/test_cp04_pe_names.py`). The FAST run 43295056092 failed on exactly this rule before the change.
 
 ## Limitations
 
