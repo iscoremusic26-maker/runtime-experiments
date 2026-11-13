@@ -40,7 +40,7 @@ Solo PRE/POST.
   - `daB_TN_c::executeZakoEnding` (PRE y POST);
   - `daB_TN_c::_delete` (PRE).
 - **Llamadas y servicio nuevos:**
-  - +3 llamadas nativas: `setSwordAtBit`, `mDoExt_McaMorfSO::setAnm` y `J3DAnmLoaderDataBase::setResource`;
+  - +4 llamadas nativas: `setSwordAtBit`, `mDoExt_McaMorfSO::setAnm`, `J3DAnmLoaderDataBase::setResource` y `J3DFrameCtrl::setFrame` (fuera de línea en PC; solo en la descarga). Total de imports del juego: 108;
   - +1 servicio opcional: `ResourceService 1.1`.
 - **Comprobaciones en el EXE 2.0.3:**
   - `action()` llama de verdad a `executeZakoEnding` (thunk `0x4c11d`) y a `damage_check`;
