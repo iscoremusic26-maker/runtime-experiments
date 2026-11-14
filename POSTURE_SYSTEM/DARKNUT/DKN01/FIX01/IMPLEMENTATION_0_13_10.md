@@ -106,3 +106,14 @@ Offsets nuevos leídos, medidos en el EXE 2.0.3 y fijados con `static_assert` (`
 - Valores [PROVISIONAL] listados en `dkn_core.hpp`.
 - Naturalidad de F1, del segundo tambaleo y del levantamiento hacia atrás: medidas por pose, **pendientes de juicio humano**. Si el levantamiento resultara poco natural, la alternativa documentada es un clip propio (no FIX02, reservado a la resurrección).
 - El Helm Splitter requiere fijar al Darknut (Z) y tener la técnica aprendida. El Mortal Draw no requiere envainar: un tajo con B cerca del Darknut roto se convierte en el Mortal Draw nativo, como en Chilfos.
+
+## CI (windows-build-lab, rama `ci/light-fades-twice-darknut-miniboss-fix01-0-13-10`)
+| Perfil | Run | Fuente | Resultado |
+|---|---|---|---|
+| FAST | 43647437923 | 41e6a2f | PASS (MSVC, PE: sin imports nuevos del juego) |
+| INTEGRATION | 43647898447 | c1020a7 | PASS (todos los laboratorios) |
+| FULL | 43648730941 | c1020a7 | **PASS**: todos los shards de mutantes (DKN 79/79, DKR 65/65), finalize, descarga independiente verificada |
+
+Entre 41e6a2f y c1020a7: un clip de tambaleo sostenido ya no se reproduce a velocidad 0 (el `isStop()` nativo terminaría el segundo tambaleo y la extensión del remate).
+
+Entregable: `LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_FIX01_0_13_10_PRIVATE_TEST_windows-amd64_c1020a7f48ee.dusk`, 372 216 B, SHA-256 `2baaab066f185ea27cad6e2d9a2692cc09cf18dc2378e70731828a4ed3552148` (artefacto 14135033845, caduca 2026-12-14; recalculado tras descargarlo). DLL `c5299fb5…cacca`; FIX02 sin cambios (`f96356fb…1524`). Estado: **HUMAN_RUNTIME_PENDING**.
