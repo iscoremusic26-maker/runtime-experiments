@@ -127,3 +127,14 @@ El tracker de Enemy Health Bars no presenta `B_TN` (perfil 531 = minijefe del ca
 - No hay laboratorio "world" del adaptador DKN01 contra una transcripción nativa (sí lo hay del núcleo); la lógica del adaptador se valida por auditoría de fuente y por la compilación MSVC.
 - Los efectos de parry naranjas de FIX03/FIX05 (pfx) no se extienden al Darknut: se ve la chispa/sonido nativos del escudo.
 - Valores [PROVISIONAL]: 40 % combos, 120 ticks entre combos, 240 ticks de enfriamiento de pasividad, 45 ticks de guardia tras la ruptura.
+
+## CI (windows-build-lab, rama `ci/light-fades-twice-darknut-miniboss-0-13-9`)
+| Perfil | Run | Fuente | Resultado |
+|---|---|---|---|
+| FAST | 43624280880 | 90eb4d5 | FAIL: `liz-native-writer-scopes`, falso positivo del escáner de bytes (`movss xmm0,[rip+rel32]` cuyo rel32 deletreaba `88 55 05`); corregido en 8370cfc |
+| FAST | 43624778616 | 8370cfc | PASS (MSVC, PE: 118 imports del juego, 38 HOOK_MEM, exactamente los previstos) |
+| INTEGRATION | 43625261396 | 8370cfc | PASS (todos los laboratorios) |
+| FULL | 43626187199 | 8370cfc | gate/labs/mutantes PASS; `finalize` FAIL: la suite DKN emitía claves distintas; corregido en 2bbc7c8 |
+| FULL | 43627586151 | 2bbc7c8 | **PASS**: 1410/1410 mutantes (DKN 45/45, DKR 50/50), finalize, descarga independiente verificada |
+
+Entregable: `LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_0_13_9_PRIVATE_TEST_windows-amd64_2bbc7c81b8b9.dusk`, 360 689 B, SHA-256 `bc9b0b07fc69e3ba08d7762dc03fe273d93ae789d810be5c17fa48cef18dc601` (artefacto 14127380045, recalculado tras descarga). Contenido: `mod.json` 0.13.9, `lib/windows-amd64/mod.dll` (1 631 744 B, `5a4687dc…d152`), `res/darknut/resurrection_A_agil_natural_FIX02.bck` (45 024 B, `f96356fb…1524`). Ningún otro clip.
