@@ -53,7 +53,7 @@ Error por par ≤ 1 tick, acumulado ≤ 2, 0 velocidades fuera de [0,55, 2,40]. 
 - Contacto → reacción de daño (no guardia) → caída → Finish. Levantamiento FIX02 y resurrección intactos (DKR01 sin cambios; `dkr_lab` 2318, `dkr_world_lab` 5007 PASS).
 
 ## Evidencia automática local
-`dkn_lab` 167 157 comprobaciones PASS · DKN mutantes 108 (107 detectados en la 1.ª pasada; el superviviente `streak_kept_after_parry` llevó a reforzar la prueba, ahora detectado) · `liz_world_lab` PASS (AtVec) · auditorías DKN (26 negativos), DKN nativa (95 hechos), DKR, kk, kk_source, liz, fix03, source, store, anclas de mutantes (1093) PASS · DLL clang-cl: 0 imports nuevos. CI: ver registro.
+`dkn_lab` 167 157 comprobaciones PASS · mutantes locales: DKN 108/108 (en la 1.ª pasada sobrevivió `streak_kept_after_parry`: prueba reforzada), Lizalfos 239/239, Lizalfos mundo 202/202 (sobrevivía `velocity_kept`: nueva invariante «escudo alzado → vector At nulo», 4599 contactos, 0 no nulos) · `liz_world_lab` PASS (AtVec) · auditorías DKN (26 negativos), DKN nativa (95 hechos), DKR, kk, kk_source, liz, fix03, source, store, anclas de mutantes (1093) PASS · DLL clang-cl: 0 imports nuevos. CI: ver registro.
 
 ## Límites honestos
 - Sin prueba en el juego. El arreglo del Lizalfos está demostrado sobre la mecánica nativa y el laboratorio de mundo, no con física real.

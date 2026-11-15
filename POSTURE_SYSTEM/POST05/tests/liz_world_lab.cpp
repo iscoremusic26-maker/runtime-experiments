@@ -123,7 +123,7 @@ struct dCcD_GObjInf : cCcD_Obj {
   bool ChkTgSet() const noexcept { return tg_set; }
   fopAc_ac_c* GetTgHitAc() const noexcept { return tg_hit_ac; }
 };
-static unsigned long long g_atvec_contacts = 0, g_atvec_inward = 0, g_atvec_seen = 0;  // LFT 0.13.12 FIX03
+static unsigned long long g_atvec_contacts = 0, g_atvec_inward = 0, g_atvec_seen = 0, g_atvec_shield = 0, g_atvec_shield_nonzero = 0;  // LFT 0.13.12 FIX03
 struct dCcD_Sph : dCcD_GObjInf {
   cXyz c{}, vec{};
   float r = 35;
@@ -774,6 +774,11 @@ struct World {
           if (lz.atvec_written != g_atvec_seen) {  // a contact of a tick in which the module's armed sweep ran (a closed window's sphere is parked 50000 away natively)
             ++g_atvec_contacts;
             if (dl > 1.0f && (a->at_sph.vec.x * dx + a->at_sph.vec.z * dz) / dl < -0.5f) ++g_atvec_inward;
+            // shield up: the rebuilt vector is zeroed again (the engine's StartCAt state: the block test uses the real relative position)
+            if (link.mTgCyls[0].ChkTgShield() || link.mTgCyls[0].ChkTgSpShield()) {
+              ++g_atvec_shield;
+              if (a->at_sph.vec.x != 0.0f || a->at_sph.vec.y != 0.0f || a->at_sph.vec.z != 0.0f) ++g_atvec_shield_nonzero;
+            }
           }
         }
         const bool shield = chk_shield(*a, c);
@@ -5026,8 +5031,9 @@ int main() {
   w_lifecycle();
   CHECK(g_peek_checks > 10000 && g_preview_checks > 100 && g_preview_parries > 50);
   std::printf("LIZ_WORLD_FIX03 peek_vs_observe=%llu preview_vs_verdict=%llu of_which_parries=%llu\n", (unsigned long long)g_peek_checks, (unsigned long long)g_preview_checks, (unsigned long long)g_preview_parries);
-  std::printf("LIZ_WORLD_ATVEC contacts=%llu inward=%llu\n", g_atvec_contacts, g_atvec_inward);
+  std::printf("LIZ_WORLD_ATVEC contacts=%llu inward=%llu shield_up=%llu shield_up_nonzero=%llu\n", g_atvec_contacts, g_atvec_inward, g_atvec_shield, g_atvec_shield_nonzero);
   CHECK(g_atvec_contacts > 0 && g_atvec_inward == 0);
+  CHECK(g_atvec_shield > 0 && g_atvec_shield_nonzero == 0);
   (void)g_atvec_contacts_dummy;
   std::printf("LIZ_WORLD_LAB version=%s checks=%llu failures=0 RESULT=LAB_PASS scope=PRODUCTION_ADAPTER_AND_BRAIN_TRANSCRIBED_E_DN_LINK_COLLIDER pose=FITTED_ARC_MODEL_NOT_BCK runtime=HUMAN_RUNTIME_PENDING\n", liz::kVersion, g_checks);
   return 0;
