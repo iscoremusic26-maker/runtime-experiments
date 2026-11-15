@@ -1,6 +1,6 @@
 # LIGHT FADES TWICE 0.13.13 — DARKNUT MINIBOSS DKN01 FIX04
 
-Estado: **HUMAN_RUNTIME_PENDING**. Pasa laboratorios, mutantes y auditorías; la compilación MSVC real y los tres perfiles CI se registran al final. Nadie lo ha jugado todavía: nada de este documento afirma que algo se vea, se oiga o se sienta bien en el juego.
+Estado: **HUMAN_RUNTIME_PENDING**. Compila (MSVC en CI), pasa laboratorios, mutantes, auditorías y FAST / INTEGRATION / FULL. Nadie lo ha jugado todavía: nada de este documento afirma que algo se vea, se oiga o se sienta bien en el juego.
 
 ## Base
 - Fuente compilada de 0.13.12 FIX03: `00b3ce6b13877e443ab093bfff8357acbf0ad893` (+ `af4f64d`, registro CI). Entrega FIX03 verificada de nuevo: 376 343 B, SHA-256 `075db091f9bb11c890c0fe8996f513cc35a78a44b0d6f3f78c9b711b53f9eec9`.
@@ -75,3 +75,15 @@ Mortal Draw, Helm Splitter, StaggerA/B (`TNB_DAMAGE_R`), Finish, levantamiento 6
 - Sin prueba en el juego: rebote visible, legibilidad del tempo, color/pitch real, física del retroceso y sensación de iniciativa requieren al usuario.
 - [PROVISIONAL] nuevos: `kChainWhiffs` 2, `kCounterLandTicks` 24, `kCounterLateTicks` 10.
 - La compilación del DLL se hace en CI (MSVC); no hay una cadena local reproducible guardada para `mod.cpp`.
+
+## CI (windows-build-lab, rama `ci/light-fades-twice-darknut-miniboss-fix04-0-13-13`, fuente compilada `eec943c7563611cbb8830f9cc3d6b217c8f3c057`)
+| Perfil | Run | Commit CI | Resultado |
+|---|---|---|---|
+| FAST | 43684531089 | 5a216aa | PASS (MSVC, PE audit, gate) |
+| INTEGRATION | 43684906990 | perfil integration | PASS (todos los laboratorios) |
+| FULL | 43685794635 | perfil full | **PASS**: 12 shards de mutantes, finalize, descarga independiente `ARTIFACT_DOWNLOADED_VERIFIED` |
+
+Mutantes FULL: DKN **145/145**, DKR 67/67, Lizalfos 239/239, Lizalfos mundo 202/202, Chilfos 210/210, rework 393/393, CP06 29/29, CP06F1 41/41, LFT03 49/49, CP0203 22/22, CP04 34/34, CP05 34/34, CP05 FIX01 23/23, CP05 FIX02 25/25, FIX02 11/11, FIX03 8/8.
+PE: 118 imports de juego y 53 objetivos de hook, idénticos a FIX03 (0 nuevos).
+
+Entregable: `LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_FIX04_0_13_13_PRIVATE_TEST_windows-amd64_eec943c75636.dusk`, 379 609 B, SHA-256 `f04fec6507a595948737d1501d1b15098c36a23c44e1a03155a3795c03c28bf5` (recalculado tras la descarga independiente). Miembros: `mod.json` 0.13.13 (718 B), `lib/windows-amd64/mod.dll` (1 687 040 B, `7aeece2d…0e18`), `res/darknut/resurrection_A_agil_natural_FIX02.bck` (45 024 B, `f96356fb…1524`, idéntico a FIX03). Artefacto `LIZ_TEST_43685794635_1` (id 14151090957), caduca 2026-12-15T06:43:21Z. Rollback: 0.13.12 `075db091…9eec9`. Estado: **HUMAN_RUNTIME_PENDING**.
