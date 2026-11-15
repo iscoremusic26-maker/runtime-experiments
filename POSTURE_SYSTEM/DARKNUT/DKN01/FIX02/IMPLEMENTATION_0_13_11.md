@@ -55,3 +55,12 @@ Ramas: (A) 6 s sin Finish con vida → FIX02 como levantamiento; (B) Finish F2 �
 - Sin prueba en el juego. La causa raíz del crash está demostrada por desensamblado + logs; que no queden **otros** crashes solo lo dirá tu prueba.
 - No hay laboratorio "world" del adaptador DKN; el tope de deslizamiento de Link y el gobernador del Lizalfos se prueban en núcleo/lab, no con física real (paredes, escaleras, alturas): pendiente humano.
 - Valores [PROVISIONAL]: topes 15/16/13, separación mínima 110 del Lizalfos.
+
+## CI (windows-build-lab, rama `ci/light-fades-twice-darknut-miniboss-fix02-0-13-11`, fuente compilada `dc5fe6d`)
+| Perfil | Run | Resultado |
+|---|---|---|
+| FAST | 43657437365 | PASS (MSVC, PE: 0 imports nuevos) |
+| INTEGRATION | 43657842609 | PASS (todos los laboratorios) |
+| FULL | 43658793771 | **PASS**: todos los shards (DKN 85/85, DKR 67/67, Lizalfos 239/239, Lizalfos world 200/200, resto), finalize, descarga independiente |
+
+Entregable: `LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_FIX02_0_13_11_PRIVATE_TEST_windows-amd64_dc5fe6df56a1.dusk`, 374 491 B, SHA-256 `b583445b144d7d52dbe1b187ad6f092d61696df66214f11b9cceb3f06993011a` (artefacto 14139517095, caduca 2026-12-15; recalculado tras descarga). FIX02 sin cambios. Estado: **HUMAN_RUNTIME_PENDING**.
