@@ -59,3 +59,12 @@ Error por par ≤ 1 tick, acumulado ≤ 2, 0 velocidades fuera de [0,55, 2,40]. 
 - Sin prueba en el juego. El arreglo del Lizalfos está demostrado sobre la mecánica nativa y el laboratorio de mundo, no con física real.
 - Valores [PROVISIONAL]: topes 12/12/10 y ×0,80/×0,65, hueco de racha 45, enfriamiento 60, extensión 45.
 - La patada cambia de rango de corte (12..26): es el único cambio de un movimiento.
+
+## CI (windows-build-lab, rama `ci/light-fades-twice-darknut-miniboss-fix03-0-13-12`, fuente compilada `00b3ce6`)
+| Perfil | Run | Resultado |
+|---|---|---|
+| FAST | 43673280999 | PASS (MSVC, PE: 0 imports nuevos) |
+| INTEGRATION | 43673553387 | PASS (todos los laboratorios) |
+| FULL | 43674303679 | **PASS**: todos los shards (DKN 108/108, DKR 67/67, Lizalfos 239/239, Lizalfos world 202/202, resto), finalize, descarga independiente |
+
+Entregable: `LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_FIX03_0_13_12_PRIVATE_TEST_windows-amd64_00b3ce6b1387.dusk`, 376 343 B, SHA-256 `075db091f9bb11c890c0fe8996f513cc35a78a44b0d6f3f78c9b711b53f9eec9` (artefacto 14145771534, caduca 2026-12-15; recalculado tras descarga). Clip FIX02 sin cambios. Estado: **HUMAN_RUNTIME_PENDING**.
