@@ -39,7 +39,12 @@ ALLOWED = {
     'pfx_native_pitch': set(),                                          # only the movePitch call of the returned playback
     'pfx_native_work': {0x8},                                           # FIX05: JPAEmitterWorkData::mpRes of the calc in progress
     'pfx_native_child_tev': set(),                                      # FIX05: only the two GXSetTevColor calls of the child pass
-    'pfx_native_flash': {0x978},                                        # FIX05: g_env_light.eflight.mLightType (eflight.mState read at 0x974)
+    # FIX05: g_env_light.eflight.mLightType (0x978). DKN01 FIX07: + eflight.mState (0x974, only 3 -> 4: a request the native dropped re-armed as its own
+    # restart) and eflight.field_0x8.mPosition (0x97c..0x987: x / y / z, a compiler may merge two of them): the warm flash of THIS parry mark at its contact.
+    'pfx_native_flash': {0x974, 0x978, 0x97c, 0x980, 0x984},
+    # DKN01 FIX07: fopAc_ac_c::actor_status (x64 offset 0x580, measured with the SDK headers) bit 0x40000000 cleared: the per-actor hit-mark throttle, only for
+    # the mark of an orange parry record that has no spark yet
+    'pfx_native_unthrottle': {0x580},
 }
 GX_TEV = ('dusklight.exe', 'GXSetTevColor')
 MOVE_PITCH = ('dusklight.exe', '?movePitch@JAISoundParamsMove@@QEAAXMI@Z')
