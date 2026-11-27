@@ -592,7 +592,8 @@ void on_pfx_collision_se_post(ModContext*, void* args, void* ret, void*) noexcep
       const float base = (*h)->getAuxiliary().params_.mPitch;  // the replacement's own native pitch: x1.22 of THIS playback, never compounded
       pfx_native_pitch(h, pfx::kPitch * base);  // the replacement playback only
       ++pf.repitched;
-      pf.readback = h, pf.readback_tick = g.p8.tick, pf.readback_want = base * pfx::kPitch, pf.readback_owner = pf.book.r[rr].kind == pfx::Kind::LizalfosOnLink ? pf.book.r[rr].actor : 0u;
+      pf.readback_tick = g.p8.tick, pf.readback = h, pf.readback_want = pfx::kPitch * base;  // the replacement is read back one tick later too
+      pf.readback_owner = pf.book.r[rr].kind == pfx::Kind::LizalfosOnLink ? pf.book.r[rr].actor : 0u;
       pfx_line("NATIVE_AUDIO_REPITCHED_SAME_TICK", rr, "SAME_OWNER_SAME_ID_MAP_RESTART", double(base), double(base * pfx::kPitch));
       if (args) pfx_audio_track(rr, mods::arg<u32>(args, 1), mods::arg<u32>(args, 2), static_cast<const void*>(mods::arg<Z2SoundObjBase*>(args, 0)));
     }

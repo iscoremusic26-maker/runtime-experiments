@@ -188,7 +188,7 @@ struct DknState {
 } dn;
 
 void dkn_line(bool warn, const char* line) noexcept {
-  if (dn.lines >= 6000) {
+  if (dn.lines >= 9000) {  // FIX08: 6000 -> 9000 (the 0.13.16 human session used 5375 of 6000; FIX08 adds sampled evasion / receipt / route lines)
     ++dn.dropped;
     return;
   }
@@ -530,7 +530,7 @@ unsigned dkn_fx_route_of(dkn::Move m, unsigned k) noexcept {
 }
 void dkn_fx_route(DknSlot& s, const daB_TN_c* a, unsigned route, std::uint64_t token, const char* dir) noexcept {
   ++s.fx_route[route < 10 ? route : 9];
-  if (s.st_route_lines >= 600) return;
+  if (s.st_route_lines >= 120) return;  // sampled; the per-route counters (summary) are complete
   ++s.st_route_lines;
   char ex[200];
   std::snprintf(ex, sizeof(ex), "route=%s direction=%s token=%llu fx_pass_tick=%llu expected=ORANGE_ALL_COMPONENTS+NATIVE_CLASH_x%.2f", kDknFxRoute[route < 10 ? route : 9], dir,
@@ -1506,7 +1506,7 @@ HookAction on_dkn_action_pre(ModContext*, void* args, void*, void*) noexcept {
           dkn_log("EVADE_START", s, a, ex);
           return HOOK_CONTINUE;
         }
-      } else if (er != Ev::NotEligible && er != Ev::Rerolled && s.st_evade_lines < 300) {
+      } else if (er != Ev::NotEligible && er != Ev::Rerolled && s.st_evade_lines < 120) {  // sampled; the summary counts every decision
         ++s.st_evade_lines;
         char ex[200];
         std::snprintf(ex, sizeof(ex), "swing_key=%llu ordinal=%d chance=%d result=%s parry_roll=%s cooldown_left=%llu", static_cast<unsigned long long>(s.def.cur_key), swing_ord,
@@ -1619,7 +1619,7 @@ HookAction on_dkn_action_pre(ModContext*, void* args, void*, void*) noexcept {
   const int gate_cause = s.ngate.cause;
   const std::uint64_t gate_since = s.ngate.since;
   const bool gate_ok = s.ngate.ready(now, native::neutral_chase(p2, act, mode));
-  if (s.ngate.receipts != receipts0 && s.ngate.receipts <= 400) {
+  if (s.ngate.receipts != receipts0 && s.ngate.receipts <= 80) {  // sampled; the summary counts every receipt
     char gx[200];
     std::snprintf(gx, sizeof(gx), "cause=%s defense_tick=%llu neutral_ticks=%u receipt_tick=%llu next=ORDINARY_INIT_ALLOWED gap_left=%llu", nr_cause(gate_cause),
                   static_cast<unsigned long long>(gate_since), policy::kGuardLeaveTicks, static_cast<unsigned long long>(now),
