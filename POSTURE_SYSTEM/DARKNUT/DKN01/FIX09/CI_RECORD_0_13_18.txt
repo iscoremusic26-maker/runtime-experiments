@@ -1,0 +1,10 @@
+DKN01 FIX09 0.13.18 — registro de CI (fuente compilada 3221981c18f3bcf00d18d78d34e94b1f3ecc8a33)
+FAST        46022040170  CI 08ae361cefd0d9233fbb6cb18af3e8cce15d05c3  success
+INTEGRATION 46022901980  CI 7259a622f7a8e36cb91b0bffad6725ce41d26fcb  success
+FULL        46024705027  CI 5b8e3d2b5a01763e9a1e1af9a4e14b42586346cc  success (16 jobs; 1803/1803 mutantes, DKN 408/408; finalize; independent-download)
+Artefacto LIZ_TEST_46024705027_1 id 15213961576, ZIP 448574 bytes, caduca 2026-12-27T15:59:03Z
+.dusk 419376 bytes SHA-256 b3d54656df1910c67ead20cd5e593d6be01057302840e008ba8620dc0bf97ff7
+Intentos fallidos:
+  FAST 46015452979 (fuente 2ae1c27d): PE pin, import CRT strcmp nuevo -> eliminado en 7b396251
+  FAST 46016435795 / INTEGRATION 46017129035 (fuente 7b396251): success (sustituidos por la cadena del SHA final)
+  FULL 46019495657 (fuente 7b396251): shard dkn PermissionError WinError 32 al limpiar temporal -> arnés endurecido en 3221981c

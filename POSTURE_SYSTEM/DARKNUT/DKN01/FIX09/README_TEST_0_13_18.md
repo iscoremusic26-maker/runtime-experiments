@@ -1,6 +1,6 @@
 # Prueba humana — LIGHT FADES TWICE 0.13.18 (DKN01 FIX09)
 
-Archivo a usar: `LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_FIX09_0_13_18_PRIVATE_TEST_windows-amd64_<sha>.dusk` (el nombre exacto está en `MANIFEST.txt` de la entrega). **Un solo LFT activo**: quita el .dusk de 0.13.17 de la carpeta `mods` (guárdalo aparte como rollback) y pon el de 0.13.18. No cambies dificultad ni ajustes. Para confirmar que cargó la versión correcta, el log debe contener `found 'Light Fades Twice ...' v0.13.18` y `DKN01 event=INSTALL_FIX09`.
+Archivo a usar: `LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_FIX09_0_13_18_PRIVATE_TEST_windows-amd64_3221981c18f3.dusk` (419 376 bytes, SHA-256 `b3d54656…bf97ff7`). **Un solo LFT activo**: quita el .dusk de 0.13.17 de la carpeta `mods` (guárdalo aparte como rollback) y pon el de 0.13.18. No cambies dificultad ni ajustes. Para confirmar que cargó la versión correcta, el log debe contener `found 'Light Fades Twice ...' v0.13.18` y `DKN01 event=INSTALL_FIX09`.
 
 No hace falta precisión de ticks: el log la tiene. Anota fase (F1/F2/F3), ataque/combo y hora aproximada de lo raro; un clip corto ayuda solo si algo persiste.
 
