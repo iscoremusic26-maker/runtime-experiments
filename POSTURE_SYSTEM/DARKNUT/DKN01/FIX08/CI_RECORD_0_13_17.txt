@@ -1,0 +1,31 @@
+LIGHT FADES TWICE 0.13.17 — DKN01 FIX08 — PRIVADO
+Estado: AUTOMATED_PASS / HUMAN_RUNTIME_PENDING / PERF_RUNTIME_PENDING
+Fuente compilada: 460429f68207b6588f2568eae2626131543c9f27 (commits documentales posteriores: solo docs, ninguna entrada de build)
+Base: FIX07 0.13.16 0ef82a51590b6339fc1bd142d42e3ed3d25a3c1d (HEAD documental FIX07 a7bb0594ce6488b7168dad259ec0c2ae4be2e764)
+Rama fuente: feature/light-fades-twice-darknut-miniboss-fix08-0-13-17
+Rama CI: ci/light-fades-twice-darknut-miniboss-fix08-0-13-17
+FAST: run 45958431582 CI d0caa933ba2fbcbb698e718923c6d0e518e2efce PASS https://github.com/iscoremusic26-maker/windows-build-lab/actions/runs/45958431582
+INTEGRATION: run 45959054928 CI 5b52fbc559bc23fd3dff10f0d0e3cb8553a0bc70 PASS https://github.com/iscoremusic26-maker/windows-build-lab/actions/runs/45959054928
+FULL: run 45960411116 CI cfc9aa312be99d382672ac67daf14de7b6366a80 PASS (16 jobs, 12 shards de mutantes) https://github.com/iscoremusic26-maker/windows-build-lab/actions/runs/45960411116
+Archivo: LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_FIX08_0_13_17_PRIVATE_TEST_windows-amd64_460429f68207.dusk
+Bytes del .dusk: 411709
+SHA-256 .dusk: c7f210cdaedb684adfb406a7356e79e8af88d1fa32cb509ed0178e2e8fdd7b4b
+GitHub artifact id: 15182385339 (LIZ_TEST_45960411116_1)
+Enlace directo (requiere sesión GitHub; descarga un ZIP que contiene el .dusk): https://github.com/iscoremusic26-maker/windows-build-lab/actions/runs/45960411116/artifacts/15182385339
+Expira: 2026-12-27T08:06:16Z
+Bytes ZIP GitHub (NO .dusk): 439452
+DLL MSVC Windows amd64: 1804288 bytes; SHA-256 ffcfe95fb457edc0c4138ad6ffb8a2dd1554325a605d6b50cc552eb84946f749
+BCK FIX02: res/darknut/resurrection_A_agil_natural_FIX02.bck 45024 bytes; SHA-256 f96356fb6096f1ced7db8e6e3b4d21b39f9c4ea6b7a30de0cd46b1f2a2321524 (byte a byte)
+mod.json: dev.posture.post05_selective_reactions 0.13.17 (1122 bytes, idéntico a la fuente)
+Miembros exactos: mod.json; lib/windows-amd64/mod.dll; res/darknut/resurrection_A_agil_natural_FIX02.bck
+Imports juego: 129 (igual que FIX07); HOOK_MEM 41 (igual); HOOK_MEM_EXT 16; HOOK_NAME 13. Destinos de hook nuevos: 0. Imports nuevos: 0.
+Escritores DKN nuevos: dkn_native_neck, dkn_native_recover_clip (23 -> 25)
+Mutantes FULL: 1755/1755 (dkn 360/360, liz 239/239, liz-world 202/202, kk 210/210, dkr 67/67, lft03 57/57, resto según ci/CI_INVENTORY.json); 0 supervivientes, 0 timeouts
+Verificador: ARTIFACT_DOWNLOADED_VERIFIED remoto (FULL) y local; 6/6 paquetes manipulados rechazados (ci/download_negatives.json)
+Rollback 0.13.16: /home/fran2607/dusklight_work/lft_0_13_16_dkn01_fix07_delivery/LIGHT_FADES_TWICE_DARKNUT_MINIBOSS_FIX07_0_13_16_PRIVATE_TEST_windows-amd64_0ef82a51590b.dusk; 403930 bytes; SHA-256 5f6ae0e775b35d81076139099853a9f210a2820a03b2de759ab0cb67c5a7c00b (intacto)
+Rollback 0.13.15: 389371 bytes; 49355484f757629e2eefa6d2f0e85f148e0eee5db4c5d6559b3af7ec5dbf8880 (intacto)
+Rollback 0.13.14: 387188 bytes; a5d546224d860d7de29e03052ef90a0f25d5723540b60836026ab23d577b0188 (intacto)
+Rollback 0.13.13: 379609 bytes; f04fec6507a595948737d1501d1b15098c36a23c44e1a03155a3795c03c28bf5 (intacto)
+WSL: /home/fran2607/dusklight_work/lft_0_13_17_dkn01_fix08_delivery
+Windows: \\wsl$\Ubuntu\home\fran2607\dusklight_work\lft_0_13_17_dkn01_fix08_delivery\  (o \\wsl.localhost\Ubuntu\...)
+No se abrió ni jugó el juego. No se midieron FPS ni latencia física de entrada.
