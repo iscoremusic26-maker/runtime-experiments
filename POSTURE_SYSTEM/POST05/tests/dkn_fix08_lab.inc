@@ -154,6 +154,15 @@ static void fix08_section() {
     CHECK(std::fabs(B.dist - 450.0f) < 2.0f && B.z[B.n - 1] < -440.0f, "back jump 450 units straight away from Link (%.1f)", B.dist);
     CHECK(L.x[L.n - 1] > 150.0f && R.x[R.n - 1] < -150.0f, "left = +x of the Darknut's frame (shape + 0x4000), right = -x (%.0f / %.0f)", L.x[L.n - 1], R.x[R.n - 1]);
     CHECK(L.dist > 230.0f && L.dist < 345.0f && std::fabs(L.dist - R.dist) < 1.0f, "side jump: an arc around Link (chord %.0f), symmetric", L.dist);
+    {  // the native speeds of executeChaseL 11 / 14 and 12 / 15, step by step: 45, 40, 35, 33 x6 in the air, then the landing 15, 8, 1 = 342 units of path
+      float arc = 0, px = 0, pz = 0;
+      for (unsigned i = 0; i < L.n; ++i) arc += std::sqrt((L.x[i] - px) * (L.x[i] - px) + (L.z[i] - pz) * (L.z[i] - pz)), px = L.x[i], pz = L.z[i];
+      CHECK(std::fabs(arc - 342.0f) < 1.0f, "side jump path length %.1f == 342 (native speeds)", arc);
+      float barc = 0;
+      px = pz = 0;
+      for (unsigned i = 0; i < B.n; ++i) barc += std::sqrt((B.x[i] - px) * (B.x[i] - px) + (B.z[i] - pz) * (B.z[i] - pz)), px = B.x[i], pz = B.z[i];
+      CHECK(std::fabs(barc - 450.0f) < 1.0f, "back jump path length %.1f == 450 (50 x 9)", barc);
+    }
     float closest = 1e9f;
     for (unsigned i = 0; i < L.n; ++i) {
       const float dx = L.x[i] - 0, dz = L.z[i] - 250;

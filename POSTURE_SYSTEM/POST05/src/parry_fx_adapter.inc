@@ -590,7 +590,7 @@ void on_pfx_collision_se_post(ModContext*, void* args, void* ret, void*) noexcep
     Z2SoundHandlePool* h = ret ? *static_cast<Z2SoundHandlePool**>(ret) : nullptr;
     if (h && h->isSoundAttached() && rr >= 0 && unsigned(rr) < pfx::kRecords && pf.book.orange_now(rr)) {
       const float base = (*h)->getAuxiliary().params_.mPitch;  // the replacement's own native pitch: x1.22 of THIS playback, never compounded
-      pfx_native_pitch(h, base * pfx::kPitch);
+      pfx_native_pitch(h, pfx::kPitch * base);  // the replacement playback only
       ++pf.repitched;
       pf.readback = h, pf.readback_tick = g.p8.tick, pf.readback_want = base * pfx::kPitch, pf.readback_owner = pf.book.r[rr].kind == pfx::Kind::LizalfosOnLink ? pf.book.r[rr].actor : 0u;
       pfx_line("NATIVE_AUDIO_REPITCHED_SAME_TICK", rr, "SAME_OWNER_SAME_ID_MAP_RESTART", double(base), double(base * pfx::kPitch));
